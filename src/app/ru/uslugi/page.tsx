@@ -3,11 +3,14 @@ import { HeroSection } from "@/components/sections/HeroSection";
 import { LossCalculator } from "@/components/sections/LossCalculator";
 import { ServicesGrid } from "@/components/services/ServicesGrid";
 import { ruServices } from "@/content/ru/services";
+import { createPageMetadata } from "@/content/seo";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = createPageMetadata({
   title: "Услуги",
-  description: "",
-};
+  description: "Услуги Kubera AI: коммуникации с клиентами, автоматизация лидов, CRM, внутренние процессы, HR, контент, финансы, ecommerce и логистика.",
+  path: "/ru/uslugi",
+  locale: "ru",
+});
 
 export default function RuServicesPage() {
   return (

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { CountryPage } from "@/components/geo/CountryPage";
 import { countries } from "@/content/countries/countries";
+import { createPageMetadata } from "@/content/seo";
 
 type Params = {
   params: Promise<{ slug: string }>;
@@ -19,13 +20,12 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
     return {};
   }
 
-  return {
+  return createPageMetadata({
     title: country.metaTitle,
     description: country.metaDescription,
-    alternates: {
-      canonical: `/en/${country.slug}`,
-    },
-  };
+    path: `/en/${country.slug}`,
+    locale: "en",
+  });
 }
 
 export default async function EnCountryRoute({ params }: Params) {
@@ -38,4 +38,3 @@ export default async function EnCountryRoute({ params }: Params) {
 
   return <CountryPage country={country} />;
 }
-

@@ -30,3 +30,16 @@ export type SiteAsset = {
   usage: string;
   notes: string;
 };
+
+export type BlogPostMeta = {
+  slug: string;
+  locale: "en" | "ru";
+  title: string;
+  description: string;
+  category: string;
+  tags: string[];
+  author: string;
+  publishedAt: string;
+  updatedAt?: string;
+  draft: boolean;
+};

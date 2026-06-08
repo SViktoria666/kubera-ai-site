@@ -3,11 +3,14 @@ import { HeroSection } from "@/components/sections/HeroSection";
 import { LossCalculator } from "@/components/sections/LossCalculator";
 import { WorkflowSection } from "@/components/sections/WorkflowSection";
 import { ruWorkflow } from "@/content/ru/workflow";
+import { createPageMetadata } from "@/content/seo";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = createPageMetadata({
   title: "Как мы работаем",
-  description: "",
-};
+  description: "Как Kubera AI проходит путь от диагностики и архитектуры решения до разработки, запуска, проверки и сопровождения автоматизации.",
+  path: "/ru/kak-my-rabotaem",
+  locale: "ru",
+});
 
 export default function RuHowWeWorkPage() {
   return (

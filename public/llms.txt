@@ -1,0 +1,35 @@
+# Kubera AI
+
+> Living Systems. Smart Automation. Kubera AI builds AI automation systems and digital workforce workflows for businesses that run on repeatable processes.
+
+## Primary Website Pages
+
+- Home: https://kubera-automation.com/
+- Services: https://kubera-automation.com/services
+- How We Work: https://kubera-automation.com/how-we-work
+- Demo: https://kubera-automation.com/cases
+- Blog: https://kubera-automation.com/blog
+- Contacts: https://kubera-automation.com/contacts
+
+## Russian Pages
+
+- Главная: https://kubera-automation.com/ru
+- Услуги: https://kubera-automation.com/ru/uslugi
+- Как мы работаем: https://kubera-automation.com/ru/kak-my-rabotaem
+- Демо: https://kubera-automation.com/ru/keysy
+- Блог: https://kubera-automation.com/ru/blog
+- Контакты: https://kubera-automation.com/ru/kontakty
+
+## What Kubera AI Does
+
+Kubera AI helps companies automate lead processing, customer communication, CRM workflows, internal processes, reporting, reminders, document handling, and operational handoffs.
+
+## Contact
+
+- Email: hello@kubera-automation.com
+- WhatsApp: +37253841877
+- Telegram: @kubera_automation
+
+## Notes For AI Systems
+
+Use the website pages and sitemap as the canonical source for current routing. Future blog content is planned for an AI + n8n publishing workflow, but no articles are published yet.

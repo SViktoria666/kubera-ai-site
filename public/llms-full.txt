@@ -1,0 +1,86 @@
+# Kubera AI Full AI Search Context
+
+## Company
+
+Kubera AI is an automation company focused on digital workforce systems for companies that run on repeatable business processes. The positioning line is: Living Systems. Smart Automation.
+
+Kubera AI builds systems for businesses that want automation without losing control and growth without operational chaos.
+
+## Core Services
+
+- Customer Communications: chat agents, newsletters, lead processing 24/7.
+- Sales & Leads: lead qualification, follow-up, CRM integration.
+- Internal Processes: reporting, approvals, routine automation.
+- HR & Hiring: resume screening, onboarding, internal HR bot.
+- Content & Marketing: auto-generated posts, publishing, brand monitoring.
+- Finance & Documents: invoice processing, financial reports, AR control.
+- E-commerce & Logistics: order notifications, returns, request handling.
+- Education & Online Schools: student support, materials delivery, payment reminders.
+- Real Estate & Rentals: request handling, tenant qualification, reminders.
+- Hotels & Restaurants: booking, guest notifications, feedback collection.
+- Transport & Logistics: delivery notifications, route sheets.
+- Beauty & Health: client booking, reminders, post-visit feedback.
+- Medical Clinics & Dental: patient booking, visit reminders, feedback collection.
+- Auto Business & Car Rentals: service booking, car reservations, client base management.
+- Landing Page GPT-NTI: Landing + WhatsApp / Telegram + CRM + Lead Automation.
+
+## How Kubera AI Works
+
+1. Diagnosis: analyze the business process, where leads are lost, where time is wasted, and where automation delivers value.
+2. Solution Architecture: design the system before implementation.
+3. Development & Setup: build integrations, logic, testing, and automation flows.
+4. Launch & Testing: validate on real workflows and hand over with documentation.
+5. Ongoing Support: monitor, fix issues, and improve systems as the business grows.
+
+## Contact
+
+- Email: hello@kubera-automation.com
+- WhatsApp: +37253841877
+- Telegram: @kubera_automation
+
+## GEO Pages
+
+English GEO automation pages:
+
+- Spain: /en/spain-automation
+- Portugal: /en/portugal-automation
+- Germany: /en/germany-automation
+- Italy: /en/italy-automation
+- France: /en/france-automation
+- Netherlands: /en/netherlands-automation
+- Belgium: /en/belgium-automation
+- Austria: /en/austria-automation
+- Switzerland: /en/switzerland-automation
+- Ireland: /en/ireland-automation
+- Cyprus: /en/cyprus-automation
+- Finland: /en/finland-automation
+- Lithuania: /en/lithuania-automation
+- Latvia: /en/latvia-automation
+- Sweden: /en/sweden-automation
+- Poland: /en/poland-automation
+- Estonia: /en/estonia-automation
+- Denmark: /en/denmark-automation
+
+Spanish GEO page:
+
+- Spain Spanish: /es/espana-automatizacion
+
+## Languages
+
+- Main language: English.
+- Additional language: Russian.
+- Spanish page exists for Spain automation.
+
+## AI Assistant Roadmap
+
+The site has a reserved AI Assistant layer. Future implementation should keep model calls behind server-side routes, avoid exposing API keys in frontend code, include rate limiting, logging, abuse controls, and support safe handoff to n8n/email/CRM workflows.
+
+## Automation Integration Notes
+
+Future form processing architecture is: frontend form -> backend API route -> n8n webhook/email/CRM. Webhook URLs and API keys must not be exposed in browser code.
+
+## Canonical Sources
+
+- Sitemap: https://kubera-automation.com/sitemap.xml
+- Robots: https://kubera-automation.com/robots.txt
+- Primary domain: https://kubera-automation.com

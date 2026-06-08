@@ -2,16 +2,32 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { Footer } from "@/components/core/Footer";
 import { Header } from "@/components/core/Header";
+import { StructuredData } from "@/components/seo/StructuredData";
+import { siteConfig } from "@/content/site";
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://kubera-automation.com"),
+  metadataBase: new URL(siteConfig.url),
   title: {
-    default: "Kubera AI",
-    template: "%s | Kubera AI",
+    default: siteConfig.name,
+    template: `%s | ${siteConfig.name}`,
   },
-  description: "Living Systems. Smart Automation.",
+  description: siteConfig.description,
   icons: {
     icon: "/assets/favicon/tildafavicon.ico",
+  },
+  openGraph: {
+    title: siteConfig.name,
+    description: siteConfig.description,
+    url: siteConfig.url,
+    siteName: siteConfig.name,
+    images: [{ url: siteConfig.defaultOgImage }],
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: siteConfig.name,
+    description: siteConfig.description,
+    images: [siteConfig.defaultOgImage],
   },
 };
 
@@ -19,6 +35,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
   return (
     <html lang="en">
       <body>
+        <StructuredData />
         <Header />
         {children}
         <Footer />

@@ -4,11 +4,14 @@ import { HeroSection } from "@/components/sections/HeroSection";
 import { LossCalculator } from "@/components/sections/LossCalculator";
 import { ServicesGrid } from "@/components/services/ServicesGrid";
 import { enServices } from "@/content/en/services";
+import { createPageMetadata } from "@/content/seo";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = createPageMetadata({
   title: "Kubera AI",
-  description: "Living Systems. Smart Automation.",
-};
+  description: "AI automation systems and digital workforce solutions for companies that run on processes and want growth without chaos.",
+  path: "/",
+  locale: "en",
+});
 
 export default function HomePage() {
   return (
