@@ -1,12 +1,17 @@
 export function Footer() {
   return (
-    <footer className="section" style={{ borderTop: "1px solid var(--color-border)" }}>
-      <div className="container">
-        <strong>KUBERA AI</strong>
-        <p className="muted">Frontend · Backend/API · Data · Security · Forms · Monitoring · AI · Automations · Integrations</p>
-        <p className="muted">hello@kubera-automation.com · +37253841877 · @kubera_automation</p>
+    <footer className="site-footer">
+      <div className="container footer-inner">
+        <div>
+          <strong>KUBERA AI</strong>
+          <p className="muted">Living Systems. Smart Automation.</p>
+        </div>
+        <div className="footer-links">
+          <a href="mailto:hello@kubera-automation.com">hello@kubera-automation.com</a>
+          <a href="https://t.me/kubera_automation">Telegram</a>
+          <a href="https://wa.me/37253841877">WhatsApp</a>
+        </div>
       </div>
     </footer>
   );
 }
-

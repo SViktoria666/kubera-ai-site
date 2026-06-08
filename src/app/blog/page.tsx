@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { BlogIndexPlaceholder } from "@/components/blog/BlogIndexPlaceholder";
+import { BlogVisualShell } from "@/components/sections/BlogVisualShell";
 
 export const metadata: Metadata = {
   title: "Blog",
@@ -7,6 +7,5 @@ export const metadata: Metadata = {
 };
 
 export default function BlogPage() {
-  return <BlogIndexPlaceholder locale="en" />;
+  return <BlogVisualShell locale="en" />;
 }
-

@@ -3,14 +3,17 @@ import { getAssetByName } from "@/content/assets";
 
 export function ServicesGrid({ services }: { services: ServiceItem[] }) {
   return (
-    <div className="grid">
+    <div className="services-grid">
       {services.map((service) => {
         const asset = service.assetName ? getAssetByName(service.assetName) : undefined;
 
         return (
-          <article className="card" key={service.title}>
-            {asset ? <img src={asset.localPath} alt="" aria-hidden="true" width={44} height={44} style={{ objectFit: "contain" }} /> : null}
-            <h2>{service.title}</h2>
+          <article className="service-card" key={service.title}>
+            {asset ? <img className="service-icon" src={asset.localPath} alt="" aria-hidden="true" /> : null}
+            <h2>
+              {service.title}
+              {service.planned ? <span className="gold-gradient-text"> · new</span> : null}
+            </h2>
             <p className="muted">{service.description}</p>
           </article>
         );

@@ -1,14 +1,12 @@
 export function AiAssistantSlot() {
   return (
-    <section className="section" aria-label="AI assistant placeholder">
+    <section className="section ai-placeholder" aria-label="AI assistant placeholder">
       <div className="container">
-        <p className="eyebrow">AI Assistant layer</p>
-        <div className="card">
-          <h2>Future AI widget boundary</h2>
-          <p className="muted">Reserved component slot for a governed assistant implementation.</p>
-        </div>
+        <p className="eyebrow">AI Assistant</p>
+        <h2 className="section-title" style={{ marginInline: "auto" }}>
+          AI Assistant Coming Soon
+        </h2>
       </div>
     </section>
   );
 }
-

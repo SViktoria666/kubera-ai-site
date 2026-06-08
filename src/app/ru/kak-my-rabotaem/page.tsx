@@ -1,27 +1,24 @@
 import type { Metadata } from "next";
+import { HeroSection } from "@/components/sections/HeroSection";
+import { LossCalculator } from "@/components/sections/LossCalculator";
+import { WorkflowSection } from "@/components/sections/WorkflowSection";
 import { ruWorkflow } from "@/content/ru/workflow";
 
 export const metadata: Metadata = {
   title: "Как мы работаем",
-  description: "От первого разговора до работающей системы.",
+  description: "",
 };
 
 export default function RuHowWeWorkPage() {
   return (
-    <main className="section">
-      <div className="container">
-        <p className="eyebrow">Как мы работаем</p>
-        <h1>От первого разговора до работающей системы.</h1>
-        <div className="grid">
-          {ruWorkflow.map((step) => (
-            <article className="card" key={step.title}>
-              <h2>{step.title}</h2>
-              <p className="muted">{step.description}</p>
-            </article>
-          ))}
+    <main>
+      <HeroSection title="От первого разговора до работающей системы — 2–5 недель" ctaLabel="Обсудить мой проект" ctaHref="/ru/kontakty" />
+      <section className="section section-soft">
+        <div className="container">
+          <WorkflowSection steps={ruWorkflow} />
         </div>
-      </div>
+      </section>
+      <LossCalculator locale="ru" />
     </main>
   );
 }
-

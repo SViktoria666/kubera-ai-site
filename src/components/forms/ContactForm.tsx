@@ -45,4 +45,3 @@ export function ContactForm({ locale }: { locale: "en" | "ru" }) {
     </form>
   );
 }
-

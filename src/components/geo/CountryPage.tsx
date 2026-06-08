@@ -15,22 +15,27 @@ export function CountryPage({ country }: { country: CountryPageContent }) {
   };
 
   return (
-    <main className="section">
+    <main>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
-      <div className="container">
-        <p className="eyebrow">GEO / AEO</p>
-        <h1>{country.heading}</h1>
-        <p className="lead">{country.summary}</p>
-        <div className="grid">
-          {country.sections.map((section) => (
-            <article className="card" key={section.title}>
-              <h2>{section.title}</h2>
-              <p className="muted">{section.body}</p>
-            </article>
-          ))}
+      <section className="hero">
+        <div className="container hero-content">
+          <p className="eyebrow">GEO / AEO</p>
+          <h1 className="hero-title">{country.heading}</h1>
+          <p className="lead">{country.summary}</p>
         </div>
-      </div>
+      </section>
+      <section className="section section-soft">
+        <div className="container">
+          <div className="services-grid">
+            {country.sections.map((section) => (
+              <article className="service-card" key={section.title}>
+                <h2>{section.title}</h2>
+                <p className="muted">{section.body}</p>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
     </main>
   );
 }
-

@@ -1,27 +1,24 @@
 import type { Metadata } from "next";
+import { HeroSection } from "@/components/sections/HeroSection";
+import { LossCalculator } from "@/components/sections/LossCalculator";
+import { WorkflowSection } from "@/components/sections/WorkflowSection";
 import { enWorkflow } from "@/content/en/workflow";
 
 export const metadata: Metadata = {
-  title: "How We Work",
-  description: "From first conversation to a working automation system.",
+  title: "How It Works",
+  description: "",
 };
 
 export default function HowWeWorkPage() {
   return (
-    <main className="section">
-      <div className="container">
-        <p className="eyebrow">How we work</p>
-        <h1>From first conversation to a working system.</h1>
-        <div className="grid">
-          {enWorkflow.map((step) => (
-            <article className="card" key={step.title}>
-              <h2>{step.title}</h2>
-              <p className="muted">{step.description}</p>
-            </article>
-          ))}
+    <main>
+      <HeroSection title="From first conversation to a working system — 2–5 weeks" ctaLabel="Discuss my project" ctaHref="/contacts" />
+      <section className="section section-soft">
+        <div className="container">
+          <WorkflowSection steps={enWorkflow} />
         </div>
-      </div>
+      </section>
+      <LossCalculator locale="en" />
     </main>
   );
 }
-

@@ -1,26 +1,24 @@
 import type { Metadata } from "next";
-import { caseAssets } from "@/content/assets";
+import { CasesGallery } from "@/components/sections/CasesGallery";
+import { HeroSection } from "@/components/sections/HeroSection";
 
 export const metadata: Metadata = {
-  title: "Cases",
-  description: "Kubera AI demo and case study architecture placeholder.",
+  title: "Demo",
+  description: "",
+  openGraph: {
+    images: ["/assets/images/cases/case-dashboard-4ac0724.png"],
+  },
 };
 
 export default function CasesPage() {
   return (
-    <main className="section">
-      <div className="container">
-        <p className="eyebrow">Cases</p>
-        <h1>Digital employees that scale your business.</h1>
-        <p className="lead">Case studies and demos will be migrated in the visual clone phase.</p>
-        <div className="grid">
-          {caseAssets.map((asset) => (
-            <article className="card" key={asset.name}>
-              <img src={asset.localPath} alt={asset.name} style={{ width: "100%", height: "auto", borderRadius: 8 }} />
-            </article>
-          ))}
+    <main>
+      <HeroSection title="Digital employees that scale your business." lead="Real solutions. Real results." />
+      <section className="section section-soft">
+        <div className="container">
+          <CasesGallery />
         </div>
-      </div>
+      </section>
     </main>
   );
 }
