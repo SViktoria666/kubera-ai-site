@@ -10,6 +10,9 @@ export const metadata: Metadata = {
     template: "%s | Kubera AI",
   },
   description: "Living Systems. Smart Automation.",
+  icons: {
+    icon: "/assets/favicon/tildafavicon.ico",
+  },
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
@@ -23,4 +26,3 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
     </html>
   );
 }
-

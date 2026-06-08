@@ -1,6 +1,7 @@
 export type ServiceItem = {
   title: string;
   description: string;
+  assetName?: string;
   planned?: boolean;
 };
 
@@ -22,3 +23,10 @@ export type CountryPageContent = {
   }>;
 };
 
+export type SiteAsset = {
+  name: string;
+  sourceUrl: string;
+  localPath: string;
+  usage: string;
+  notes: string;
+};
