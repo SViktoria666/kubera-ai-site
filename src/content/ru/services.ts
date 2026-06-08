@@ -15,5 +15,5 @@ export const ruServices: ServiceItem[] = [
   { title: "Красота и здоровье", description: "Запись клиентов, напоминания, обратная связь после визита.", assetName: "beauty-health-icon" },
   { title: "Медицинские клиники и стоматологии", description: "Запись пациентов, напоминания о визитах, сбор обратной связи.", assetName: "medical-clinics-icon" },
   { title: "Автобизнес и аренда авто", description: "Запись на сервис, бронирование авто, уведомления, работа с клиентской базой.", assetName: "auto-business-icon" },
-  { title: "Landing Page GPT-NTI", description: "Landing + WhatsApp / Telegram + CRM + Lead Automation.", assetName: "landing-page-gpt-nti-icon", planned: true },
+  { title: "Landing Page GPT-NTI", description: "Лендинг + WhatsApp / Telegram + CRM + автоматизация лидов.", assetName: "landing-page-gpt-nti-icon", planned: true },
 ];

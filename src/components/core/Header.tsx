@@ -16,6 +16,7 @@ export function Header() {
   const nav = isRu ? ruNavItems : navItems;
   const ctaHref = isRu ? "/ru/kontakty" : "/contacts";
   const ctaLabel = isRu ? "Обсудить мой проект" : "Discuss my project";
+  const brandSubtitle = isRu ? "Живые системы. Умная автоматизация." : "Living Systems. Smart Automation.";
 
   useEffect(() => {
     setIsMenuOpen(false);
@@ -31,7 +32,7 @@ export function Header() {
             </span>
             <span className="header-brand-copy">
               <strong>KUBERA AI</strong>
-              <span>Living Systems. Smart Automation.</span>
+              <span>{brandSubtitle}</span>
             </span>
           </a>
           <div className="header-mobile-tools">

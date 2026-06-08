@@ -610,7 +610,7 @@ input[type="range"] {
   stroke-linejoin: round;
 }
 
-@media (max-width: 720px) {
+@media (max-width: 900px) {
   .header-inner {
     min-height: auto;
     padding: 12px 0;
@@ -794,7 +794,7 @@ input[type="range"] {
   }
 }
 
-@media (min-width: 721px) and (max-width: 980px) {
+@media (min-width: 901px) and (max-width: 980px) {
   .services-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -830,7 +830,7 @@ input[type="range"] {
   }
 }
 
-@media (min-width: 981px) and (max-width: 1320px) {
+@media (min-width: 981px) and (max-width: 1440px) {
   .header-inner {
     flex-wrap: wrap;
     gap: 16px;
