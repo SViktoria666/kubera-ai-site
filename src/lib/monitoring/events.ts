@@ -23,3 +23,11 @@ export function recordContactRateLimit(event: { requestId: string; ip: string; r
     console.warn("contact_rate_limited", event);
   }
 }
+
+export function recordContactDeliveryFailure(event: {
+  requestId: string;
+  reason: "missing_env" | "webhook_error" | "unexpected_error";
+  status?: number;
+}) {
+  console.error("contact_delivery_failed", event);
+}

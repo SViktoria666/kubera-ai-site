@@ -50,8 +50,19 @@ export function ContactForm({ locale }: { locale: "en" | "ru" }) {
       return;
     }
 
+    const responsePayload = await response.json().catch(() => null);
     setStatus("error");
-    setErrorMessage(isRu ? "Не удалось отправить. Проверьте обязательные поля." : "Could not send. Please check the required fields.");
+    setErrorMessage(
+      response.status === 502 || response.status === 503
+        ? isRu
+          ? "Отправка временно недоступна. Попробуйте позже."
+          : "Contact delivery is temporarily unavailable. Please try again later."
+        : typeof responsePayload?.error === "string"
+          ? responsePayload.error
+          : isRu
+            ? "Не удалось отправить. Проверьте обязательные поля."
+            : "Could not send. Please check the required fields.",
+    );
   }
 
   return (

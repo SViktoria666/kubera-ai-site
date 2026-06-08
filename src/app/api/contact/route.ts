@@ -1,6 +1,11 @@
 import { NextResponse } from "next/server";
-import { createContactLeadEnvelope, isN8nConfigured } from "@/lib/integrations/n8n";
-import { recordContactRateLimit, recordContactRejection, recordContactSubmission } from "@/lib/monitoring/events";
+import { createContactLeadEnvelope, isN8nConfigured, sendContactLeadToN8n } from "@/lib/integrations/n8n";
+import {
+  recordContactDeliveryFailure,
+  recordContactRateLimit,
+  recordContactRejection,
+  recordContactSubmission,
+} from "@/lib/monitoring/events";
 import { getClientIp, getRequestId, getUserAgent, safeJson } from "@/lib/security/request";
 import { checkRateLimit } from "@/lib/rate-limit/memory";
 import { assessContactRequest } from "@/lib/security/bot-protection";
@@ -48,8 +53,23 @@ export async function POST(request: Request) {
     hasTelegram: Boolean(leadEnvelope.lead.telegram),
   });
 
-  // Future integration boundary:
-  // server-only API route -> n8n webhook/email/CRM/Telegram.
-  // Never expose webhook URLs or API keys to browser code.
+  try {
+    const delivery = await sendContactLeadToN8n(parsed.data);
+
+    if (!delivery.ok) {
+      recordContactDeliveryFailure({
+        requestId,
+        reason: delivery.reason,
+        status: delivery.reason === "webhook_error" ? delivery.status : undefined,
+      });
+
+      const status = delivery.reason === "missing_env" ? 503 : 502;
+      return NextResponse.json({ ok: false, error: "Contact delivery is temporarily unavailable", requestId }, { status });
+    }
+  } catch {
+    recordContactDeliveryFailure({ requestId, reason: "unexpected_error" });
+    return NextResponse.json({ ok: false, error: "Contact delivery is temporarily unavailable", requestId }, { status: 502 });
+  }
+
   return NextResponse.json({ ok: true, requestId });
 }
