@@ -7,6 +7,18 @@ const optionalSanitized = (maxLength: number) =>
     return sanitized.length ? sanitized : undefined;
   }, z.string().max(maxLength).optional());
 
+const whatsappSchema = z
+  .string()
+  .max(60)
+  .regex(/^\+?[0-9][0-9\s().-]{5,58}$/, "Invalid WhatsApp phone format")
+  .optional();
+
+const telegramSchema = z
+  .string()
+  .max(80)
+  .regex(/^@?[a-zA-Z0-9_]{5,32}$/, "Invalid Telegram username format")
+  .optional();
+
 export const contactFormSchema = z.object({
   locale: z.enum(["en", "ru"]),
   name: z.preprocess((value) => sanitizeText(value, 120), z.string().min(1).max(120)),
@@ -14,13 +26,13 @@ export const contactFormSchema = z.object({
   whatsapp: z.preprocess((value) => {
     const sanitized = sanitizePhone(value);
     return sanitized.length ? sanitized : undefined;
-  }, z.string().max(60).optional()),
+  }, whatsappSchema),
   telegram: z.preprocess((value) => {
     const sanitized = sanitizeTelegram(value);
     return sanitized.length ? sanitized : undefined;
-  }, z.string().max(80).optional()),
+  }, telegramSchema),
   company: optionalSanitized(160),
-  message: optionalSanitized(2000),
+  message: z.preprocess((value) => sanitizeText(value, 2000), z.string().min(1).max(2000)),
   website: z.preprocess((value) => sanitizeText(value, 120), z.string().max(120).optional()),
 });
 

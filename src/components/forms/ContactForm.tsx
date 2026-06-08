@@ -4,13 +4,31 @@ import { FormEvent, useState } from "react";
 
 export function ContactForm({ locale }: { locale: "en" | "ru" }) {
   const [status, setStatus] = useState<"idle" | "submitting" | "sent" | "error">("idle");
+  const [errorMessage, setErrorMessage] = useState("");
   const isRu = locale === "ru";
 
   async function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
-    setStatus("submitting");
+    setErrorMessage("");
 
     const formData = new FormData(event.currentTarget);
+    const whatsapp = String(formData.get("whatsapp") || "").trim();
+    const telegram = String(formData.get("telegram") || "").trim();
+
+    if (whatsapp && !/^\+?[0-9][0-9\s().-]{5,58}$/.test(whatsapp)) {
+      setStatus("error");
+      setErrorMessage(isRu ? "Проверьте формат WhatsApp номера." : "Please check the WhatsApp phone format.");
+      return;
+    }
+
+    if (telegram && !/^@?[a-zA-Z0-9_]{5,32}$/.test(telegram)) {
+      setStatus("error");
+      setErrorMessage(isRu ? "Проверьте формат Telegram username." : "Please check the Telegram username format.");
+      return;
+    }
+
+    setStatus("submitting");
+
     const response = await fetch("/api/contact", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
@@ -26,23 +44,30 @@ export function ContactForm({ locale }: { locale: "en" | "ru" }) {
       }),
     });
 
-    setStatus(response.ok ? "sent" : "error");
+    if (response.ok) {
+      setStatus("sent");
+      event.currentTarget.reset();
+      return;
+    }
+
+    setStatus("error");
+    setErrorMessage(isRu ? "Не удалось отправить. Проверьте обязательные поля." : "Could not send. Please check the required fields.");
   }
 
   return (
     <form className="form" onSubmit={handleSubmit}>
       <input className="input" name="name" placeholder={isRu ? "Ваше имя" : "Your name"} required />
       <input className="input" name="email" type="email" placeholder={isRu ? "Ваш Email" : "Your Email"} required />
-      <input className="input" name="whatsapp" type="tel" placeholder="WhatsApp" />
-      <input className="input" name="telegram" placeholder="Telegram" />
+      <input className="input" name="whatsapp" type="tel" placeholder="WhatsApp" pattern="^\+?[0-9][0-9\s().-]{5,58}$" title={isRu ? "Введите номер WhatsApp в международном формате" : "Enter a WhatsApp number in international format"} />
+      <input className="input" name="telegram" placeholder="Telegram" pattern="^@?[a-zA-Z0-9_]{5,32}$" title={isRu ? "Введите Telegram username, например @kubera_automation" : "Enter a Telegram username, for example @kubera_automation"} />
       <input className="input" name="company" placeholder={isRu ? "Компания" : "Company"} />
-      <textarea className="textarea" name="message" placeholder={isRu ? "Расскажите о вашем бизнесе" : "Tell us about your business"} />
+      <textarea className="textarea" name="message" placeholder={isRu ? "Расскажите о вашем бизнесе" : "Tell us about your business"} required />
       <input className="honeypot" name="website" tabIndex={-1} autoComplete="off" aria-hidden="true" />
       <button className="button" type="submit" disabled={status === "submitting"}>
         {status === "submitting" ? (isRu ? "Отправка..." : "Sending...") : isRu ? "Отправить" : "Send"}
       </button>
       {status === "sent" && <p className="muted">{isRu ? "Заявка принята." : "Request received."}</p>}
-      {status === "error" && <p className="muted">{isRu ? "Не удалось отправить." : "Could not send the request."}</p>}
+      {status === "error" && <p className="muted">{errorMessage || (isRu ? "Не удалось отправить." : "Could not send the request.")}</p>}
     </form>
   );
 }
