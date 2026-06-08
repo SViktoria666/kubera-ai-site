@@ -4,7 +4,6 @@ export function Footer() {
       <div className="container footer-inner">
         <div>
           <strong>KUBERA AI</strong>
-          <p className="muted">Living Systems. Smart Automation.</p>
         </div>
         <div className="footer-links">
           <a className="footer-link" href="mailto:hello@kubera-automation.com">

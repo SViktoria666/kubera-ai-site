@@ -1,6 +1,6 @@
 export function LanguageSwitcher() {
   return (
-    <div aria-label="Language switcher" style={{ display: "flex", gap: 8 }}>
+    <div aria-label="Language switcher" className="language-switcher">
       <a className="lang-button" href="/">
         EN
       </a>

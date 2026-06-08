@@ -7,7 +7,6 @@ export function ContactSection({ locale }: { locale: "en" | "ru" }) {
     <main className="section">
       <div className="container contact-layout">
         <div>
-          <p className="eyebrow">Living Systems. Smart Automation.</p>
           <h1 className="section-title">{isRu ? "Расскажите о вашем бизнесе." : "Tell us about your business."}</h1>
           <div className="contact-links">
             <a className="contact-link" href="mailto:hello@kubera-automation.com">
