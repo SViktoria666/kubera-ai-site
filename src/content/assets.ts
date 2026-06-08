@@ -156,6 +156,13 @@ export const siteAssets: SiteAsset[] = [
     notes: "Custom Tilda vector icon used in process blocks.",
   },
   {
+    name: "landing-page-gpt-nti-icon",
+    sourceUrl: "local",
+    localPath: "/assets/icons/landing-page-gpt-nti.svg",
+    usage: "services page",
+    notes: "Local visual placeholder for the new Landing Page GPT-NTI service.",
+  },
+  {
     name: "case-dashboard-579c724",
     sourceUrl: "https://static.tildacdn.net/tild3465-3030-4464-a632-666535633561/file_00000000579c724.png",
     localPath: "/assets/images/cases/case-dashboard-579c724.png",

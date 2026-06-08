@@ -20,7 +20,7 @@ export function Header() {
       <div className="container header-inner">
         <a href={isRu ? "/ru" : "/"} aria-label="Kubera AI home" className="header-logo">
           {logo ? (
-            <Image src={logo.localPath} alt="Kubera AI" width={180} height={108} priority />
+            <Image src={logo.localPath} alt="Kubera AI" width={260} height={146} priority />
           ) : (
             <strong>KUBERA AI</strong>
           )}
