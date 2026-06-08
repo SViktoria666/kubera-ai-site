@@ -19,11 +19,13 @@ export function Header() {
     <header className="site-header">
       <div className="container header-inner">
         <a href={isRu ? "/ru" : "/"} aria-label="Kubera AI home" className="header-logo">
-          {logo ? (
-            <Image src={logo.localPath} alt="Kubera AI" width={260} height={146} priority />
-          ) : (
+          <span className="header-logo-mark" aria-hidden="true">
+            {logo ? <Image src={logo.localPath} alt="" width={260} height={146} priority /> : null}
+          </span>
+          <span className="header-brand-copy">
             <strong>KUBERA AI</strong>
-          )}
+            <span>Living Systems. Smart Automation.</span>
+          </span>
         </a>
         <nav aria-label="Main navigation" className="main-nav">
           {nav.map((item) => (

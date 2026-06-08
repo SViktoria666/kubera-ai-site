@@ -59,6 +59,7 @@ main {
   font-size: clamp(2.9rem, 6.8vw, 5.8rem);
   line-height: 0.96;
   font-weight: 800;
+  white-space: pre-line;
 }
 
 .lead {
@@ -144,35 +145,77 @@ main {
   position: sticky;
   top: 0;
   z-index: 30;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
-  background: rgba(26, 5, 51, 0.92);
-  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  background: #030303;
+  backdrop-filter: none;
+}
+
+.site-header .container {
+  width: min(100% - 40px, 1280px);
 }
 
 .header-inner {
   display: flex;
   min-height: 104px;
   align-items: center;
-  gap: 26px;
+  gap: 30px;
 }
 
 .header-logo {
   display: inline-flex;
   align-items: center;
   flex: 0 0 auto;
+  gap: 14px;
+  min-width: 300px;
 }
 
-.header-logo img {
+.header-logo-mark {
+  position: relative;
   display: block;
-  height: 78px;
+  width: 76px;
+  height: 76px;
+  overflow: hidden;
+  border-radius: 999px;
+  background: #000000;
+  box-shadow: 0 0 24px rgba(255, 184, 0, 0.26);
+}
+
+.header-logo-mark img {
+  position: absolute;
+  top: 50%;
+  left: 47%;
+  display: block;
+  height: 86px;
   width: auto;
+  max-width: none;
+  transform: translate(-50%, -50%);
+}
+
+.header-brand-copy {
+  display: grid;
+  gap: 4px;
+  line-height: 1;
+}
+
+.header-brand-copy strong {
+  color: #f3cc72;
+  font-size: 26px;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+}
+
+.header-brand-copy span {
+  color: rgba(255, 255, 255, 0.78);
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.02em;
 }
 
 .main-nav {
   display: flex;
   flex: 1;
-  justify-content: center;
-  gap: 18px;
+  justify-content: flex-end;
+  gap: 25px;
   font-size: 15px;
   font-weight: 600;
   white-space: nowrap;
@@ -186,16 +229,17 @@ main {
 
 .lang-button {
   display: inline-flex;
-  min-height: 38px;
+  min-width: 52px;
+  min-height: 40px;
   align-items: center;
   justify-content: center;
-  padding: 0 16px;
-  border: 1px solid rgba(255, 255, 255, 0.88);
+  padding: 0 18px;
+  border: 1px solid rgba(255, 255, 255, 0.95);
   border-radius: 50px;
-  background: rgba(50, 122, 255, 0.92);
+  background: #327aff;
   color: #ffffff;
   font-size: 13px;
-  font-weight: 700;
+  font-weight: 800;
   line-height: 1;
   box-shadow: 0 10px 30px rgba(50, 122, 255, 0.18);
   transition: transform 0.2s ease, background-color 0.2s ease;
@@ -509,8 +553,25 @@ input[type="range"] {
     justify-content: space-between;
   }
 
-  .header-logo img {
-    height: 64px;
+  .header-logo {
+    min-width: 0;
+  }
+
+  .header-logo-mark {
+    width: 62px;
+    height: 62px;
+  }
+
+  .header-logo-mark img {
+    height: 72px;
+  }
+
+  .header-brand-copy strong {
+    font-size: 21px;
+  }
+
+  .header-brand-copy span {
+    font-size: 11px;
   }
 
   .header-actions .button {
@@ -565,8 +626,17 @@ input[type="range"] {
     padding: 14px 0;
   }
 
-  .header-logo img {
-    height: 72px;
+  .header-logo {
+    min-width: 300px;
+  }
+
+  .header-logo-mark {
+    width: 70px;
+    height: 70px;
+  }
+
+  .header-logo-mark img {
+    height: 80px;
   }
 
   .main-nav {
@@ -580,8 +650,25 @@ input[type="range"] {
     gap: 16px;
   }
 
-  .header-logo img {
-    height: 68px;
+  .header-logo {
+    min-width: 260px;
+  }
+
+  .header-logo-mark {
+    width: 64px;
+    height: 64px;
+  }
+
+  .header-logo-mark img {
+    height: 74px;
+  }
+
+  .header-brand-copy strong {
+    font-size: 22px;
+  }
+
+  .header-brand-copy span {
+    font-size: 11px;
   }
 
   .main-nav {
