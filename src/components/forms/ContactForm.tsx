@@ -18,9 +18,11 @@ export function ContactForm({ locale }: { locale: "en" | "ru" }) {
         locale,
         name: formData.get("name"),
         email: formData.get("email"),
-        messengerType: formData.get("messengerType"),
-        messengerId: formData.get("messengerId"),
+        whatsapp: formData.get("whatsapp"),
+        telegram: formData.get("telegram"),
+        company: formData.get("company"),
         message: formData.get("message"),
+        website: formData.get("website"),
       }),
     });
 
@@ -31,12 +33,11 @@ export function ContactForm({ locale }: { locale: "en" | "ru" }) {
     <form className="form" onSubmit={handleSubmit}>
       <input className="input" name="name" placeholder={isRu ? "Ваше имя" : "Your name"} required />
       <input className="input" name="email" type="email" placeholder={isRu ? "Ваш Email" : "Your Email"} required />
-      <select className="select" name="messengerType" defaultValue="telegram" required>
-        <option value="telegram">Telegram</option>
-        <option value="whatsapp">WhatsApp</option>
-      </select>
-      <input className="input" name="messengerId" placeholder="Username or phone number" required />
+      <input className="input" name="whatsapp" type="tel" placeholder="WhatsApp" />
+      <input className="input" name="telegram" placeholder="Telegram" />
+      <input className="input" name="company" placeholder={isRu ? "Компания" : "Company"} />
       <textarea className="textarea" name="message" placeholder={isRu ? "Расскажите о вашем бизнесе" : "Tell us about your business"} />
+      <input className="honeypot" name="website" tabIndex={-1} autoComplete="off" aria-hidden="true" />
       <button className="button" type="submit" disabled={status === "submitting"}>
         {status === "submitting" ? (isRu ? "Отправка..." : "Sending...") : isRu ? "Отправить" : "Send"}
       </button>
