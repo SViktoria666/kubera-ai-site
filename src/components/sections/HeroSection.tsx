@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 type HeroSectionProps = {
   eyebrow?: string;
   title: string;
@@ -14,9 +16,9 @@ export function HeroSection({ eyebrow, title, lead, ctaLabel, ctaHref }: HeroSec
         <h1 className="hero-title">{title}</h1>
         {lead ? <p className="lead">{lead}</p> : null}
         {ctaLabel && ctaHref ? (
-          <a className="button" href={ctaHref}>
+          <Link className="button" href={ctaHref}>
             {ctaLabel}
-          </a>
+          </Link>
         ) : null}
       </div>
     </section>

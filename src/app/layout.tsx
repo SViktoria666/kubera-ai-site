@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { Footer } from "@/components/core/Footer";
 import { Header } from "@/components/core/Header";
+import { RouteTransition } from "@/components/core/RouteTransition";
 import { StructuredData } from "@/components/seo/StructuredData";
 import { siteConfig } from "@/content/site";
 
@@ -37,7 +38,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
       <body>
         <StructuredData />
         <Header />
-        {children}
+        <RouteTransition>{children}</RouteTransition>
         <Footer />
       </body>
     </html>

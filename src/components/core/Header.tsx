@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import { LanguageSwitcher } from "@/components/core/LanguageSwitcher";
@@ -22,6 +23,14 @@ export function Header() {
   const navLabel = isRu ? "Основная навигация" : "Main navigation";
   const menuLabel = isRu ? "Открыть меню" : "Toggle navigation";
 
+  const isActiveNavItem = (href: string) => {
+    if (href === "/") {
+      return pathname === "/";
+    }
+
+    return pathname === href || pathname.startsWith(`${href}/`);
+  };
+
   useEffect(() => {
     setIsMenuOpen(false);
   }, [pathname]);
@@ -30,7 +39,7 @@ export function Header() {
     <header className={headerClassName} lang={isRu ? "ru" : "en"}>
       <div className="container header-inner">
         <div className="header-topline">
-          <a href={isRu ? "/ru" : "/"} aria-label="Kubera AI home" className="header-logo">
+          <Link href={isRu ? "/ru" : "/"} aria-label="Kubera AI home" className="header-logo">
             <span className="header-logo-mark" aria-hidden="true">
               {logo ? <Image src={logo.localPath} alt="" width={320} height={180} priority /> : null}
             </span>
@@ -40,7 +49,7 @@ export function Header() {
                 {brandSubtitle}
               </span>
             </span>
-          </a>
+          </Link>
           <div className="header-mobile-tools">
             <LanguageSwitcher />
             <button className="menu-toggle" type="button" aria-label={menuLabel} aria-expanded={isMenuOpen} onClick={() => setIsMenuOpen((open) => !open)}>
@@ -52,16 +61,21 @@ export function Header() {
         </div>
         <nav aria-label={navLabel} className={`main-nav${isMenuOpen ? " is-open" : ""}`}>
           {nav.map((item) => (
-            <a key={item.href} href={item.href}>
+            <Link
+              key={item.href}
+              href={item.href}
+              className={`nav-link${isActiveNavItem(item.href) ? " is-active" : ""}`}
+              aria-current={isActiveNavItem(item.href) ? "page" : undefined}
+            >
               {item.label}
-            </a>
+            </Link>
           ))}
         </nav>
         <div className={`header-actions${isMenuOpen ? " is-open" : ""}`}>
           <LanguageSwitcher />
-          <a className="button" href={ctaHref}>
+          <Link className="button" href={ctaHref}>
             {ctaLabel}
-          </a>
+          </Link>
         </div>
       </div>
     </header>

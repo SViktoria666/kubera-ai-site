@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { useMemo, useState } from "react";
 
 const leadValues = [5, 15, 30, 60];
@@ -55,9 +56,9 @@ export function LossCalculator({ locale }: { locale: "en" | "ru" }) {
             <p className="muted">{isRu ? "потерянных клиентов в месяц" : "lost clients per month"}</p>
             <strong>€{result.yearlyLoss.toLocaleString("en-US")}</strong>
             <p className="muted">{isRu ? "потерь за год" : "lost per year"}</p>
-            <a className="button" href={isRu ? "/ru/kontakty" : "/contacts"}>
+            <Link className="button" href={isRu ? "/ru/kontakty" : "/contacts"}>
               {isRu ? "➜ Обсудить мой проект" : "➜ Discuss my project"}
-            </a>
+            </Link>
             <p className="muted">{isRu ? "Бесплатная консультация · Без обязательств" : "Free consultation · No obligations"}</p>
           </div>
         </div>
