@@ -1,5 +1,10 @@
 import { NextResponse } from "next/server";
-import { createContactLeadEnvelope, isN8nConfigured, sendContactLeadToN8n } from "@/lib/integrations/n8n";
+import {
+  createContactLeadEnvelope,
+  createN8nContactLeadPayload,
+  isN8nConfigured,
+  sendContactLeadToN8n,
+} from "@/lib/integrations/n8n";
 import {
   recordContactDeliveryFailure,
   recordContactRateLimit,
@@ -42,6 +47,16 @@ export async function POST(request: Request) {
   }
 
   const leadEnvelope = createContactLeadEnvelope(parsed.data, parsed.data.page);
+  const outgoingPayload = createN8nContactLeadPayload(parsed.data, parsed.data.page);
+
+  console.info("contact_payload_debug", {
+    requestId,
+    payloadKeys: Object.keys(outgoingPayload).sort(),
+    hasCompany: Boolean(outgoingPayload.company),
+    hasMessage: Boolean(outgoingPayload.message),
+    hasPage: Boolean(outgoingPayload.page),
+    hasLocale: Boolean(outgoingPayload.locale),
+  });
 
   recordContactSubmission({
     requestId,
