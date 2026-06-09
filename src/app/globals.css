@@ -262,27 +262,27 @@ main {
   min-width: 0;
 }
 
-@media (min-width: 1440px) {
+@media (min-width: 1200px) {
   .site-header-ru .header-inner {
     display: grid;
-    grid-template-columns: minmax(0, 1fr) auto;
+    grid-template-columns: minmax(0, 330px) minmax(0, 1fr) auto;
     align-items: center;
-    gap: 12px 14px;
+    gap: 10px 12px;
     padding: 14px 0;
   }
 
   .site-header-ru .header-topline {
-    width: 100%;
+    width: auto;
   }
 
   .site-header-ru .header-logo {
-    width: min(100%, 370px);
+    width: min(100%, 330px);
     min-width: 0;
-    gap: 12px;
+    gap: 10px;
   }
 
   .site-header-ru .header-logo-mark {
-    width: 170px;
+    width: 146px;
   }
 
   .site-header-ru .header-logo-mark img {
@@ -291,39 +291,43 @@ main {
   }
 
   .site-header-ru .header-brand-copy strong {
-    font-size: 23px;
-    letter-spacing: 0.12em;
+    font-size: 20px;
+    letter-spacing: 0.11em;
   }
 
   .site-header-ru .header-brand-copy span {
-    font-size: 11px;
-    letter-spacing: 0.03em;
+    font-size: 10px;
+    letter-spacing: 0.025em;
   }
 
   .site-header-ru .main-nav {
-    grid-column: 1 / -1;
+    grid-column: 2;
     min-width: 0;
     justify-content: flex-start;
-    flex-wrap: wrap;
-    gap: 8px 12px;
-    font-size: 13px;
-    white-space: normal;
+    flex-wrap: nowrap;
+    gap: 7px 10px;
+    font-size: 11px;
+    white-space: nowrap;
+  }
+
+  .site-header-ru .main-nav a {
+    white-space: nowrap;
   }
 
   .site-header-ru .header-actions {
     justify-self: end;
-    gap: 8px;
+    gap: 6px;
   }
 
   .site-header-ru .header-actions .button {
-    min-height: 42px;
-    padding: 0 12px;
-    font-size: 12px;
+    min-height: 40px;
+    padding: 0 10px;
+    font-size: 11px;
     white-space: nowrap;
   }
 }
 
-@media (max-width: 1439px) {
+@media (max-width: 1199px) {
   .site-header-ru .header-inner {
     min-height: auto;
     padding: 12px 0;
