@@ -7,6 +7,7 @@ import { LanguageSwitcher } from "@/components/core/LanguageSwitcher";
 import { navItems } from "@/content/en/navigation";
 import { ruNavItems } from "@/content/ru/navigation";
 import { getAssetByName } from "@/content/assets";
+import { siteConfig } from "@/content/site";
 
 export function Header() {
   const pathname = usePathname();
@@ -15,15 +16,18 @@ export function Header() {
   const isRu = pathname.startsWith("/ru");
   const nav = isRu ? ruNavItems : navItems;
   const ctaHref = isRu ? "/ru/kontakty" : "/contacts";
-  const ctaLabel = isRu ? "Обсудить мой проект" : "Discuss my project";
-  const brandSubtitle = isRu ? "Живые системы. Умная автоматизация." : "Living Systems. Smart Automation.";
+  const ctaLabel = isRu ? "Обсудить проект" : "Discuss my project";
+  const brandSubtitle = siteConfig.description;
+  const headerClassName = `site-header${isRu ? " site-header-ru" : ""}`;
+  const navLabel = isRu ? "Основная навигация" : "Main navigation";
+  const menuLabel = isRu ? "Открыть меню" : "Toggle navigation";
 
   useEffect(() => {
     setIsMenuOpen(false);
   }, [pathname]);
 
   return (
-    <header className="site-header">
+    <header className={headerClassName} lang={isRu ? "ru" : "en"}>
       <div className="container header-inner">
         <div className="header-topline">
           <a href={isRu ? "/ru" : "/"} aria-label="Kubera AI home" className="header-logo">
@@ -37,14 +41,14 @@ export function Header() {
           </a>
           <div className="header-mobile-tools">
             <LanguageSwitcher />
-            <button className="menu-toggle" type="button" aria-label="Toggle navigation" aria-expanded={isMenuOpen} onClick={() => setIsMenuOpen((open) => !open)}>
+            <button className="menu-toggle" type="button" aria-label={menuLabel} aria-expanded={isMenuOpen} onClick={() => setIsMenuOpen((open) => !open)}>
               <span />
               <span />
               <span />
             </button>
           </div>
         </div>
-        <nav aria-label="Main navigation" className={`main-nav${isMenuOpen ? " is-open" : ""}`}>
+        <nav aria-label={navLabel} className={`main-nav${isMenuOpen ? " is-open" : ""}`}>
           {nav.map((item) => (
             <a key={item.href} href={item.href}>
               {item.label}
