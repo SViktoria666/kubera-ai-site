@@ -36,7 +36,9 @@ export function Header() {
             </span>
             <span className="header-brand-copy">
               <strong>KUBERA AI</strong>
-              <span>{brandSubtitle}</span>
+              <span lang="en" translate="no">
+                {brandSubtitle}
+              </span>
             </span>
           </a>
           <div className="header-mobile-tools">

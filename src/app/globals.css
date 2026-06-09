@@ -262,7 +262,7 @@ main {
   min-width: 0;
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1440px) {
   .site-header-ru .header-inner {
     display: grid;
     grid-template-columns: minmax(0, 1fr) auto;
@@ -323,7 +323,7 @@ main {
   }
 }
 
-@media (max-width: 1199px) {
+@media (max-width: 1439px) {
   .site-header-ru .header-inner {
     min-height: auto;
     padding: 12px 0;
