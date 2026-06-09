@@ -40,6 +40,7 @@ export function ContactForm({ locale }: { locale: "en" | "ru" }) {
         telegram: formData.get("telegram"),
         company: formData.get("company"),
         message: formData.get("message"),
+        page: window.location.pathname,
         website: formData.get("website"),
       }),
     });
@@ -69,9 +70,22 @@ export function ContactForm({ locale }: { locale: "en" | "ru" }) {
     <form className="form" onSubmit={handleSubmit}>
       <input className="input" name="name" placeholder={isRu ? "Ваше имя" : "Your name"} required />
       <input className="input" name="email" type="email" placeholder={isRu ? "Ваш Email" : "Your Email"} required />
-      <input className="input" name="whatsapp" type="tel" placeholder="WhatsApp" pattern="^\+?[0-9][0-9\s().-]{5,58}$" title={isRu ? "Введите номер WhatsApp в международном формате" : "Enter a WhatsApp number in international format"} />
-      <input className="input" name="telegram" placeholder="Telegram" pattern="^@?[a-zA-Z0-9_]{5,32}$" title={isRu ? "Введите Telegram username, например @kubera_automation" : "Enter a Telegram username, for example @kubera_automation"} />
-      <input className="input" name="company" placeholder={isRu ? "Компания" : "Company"} />
+      <input
+        className="input"
+        name="whatsapp"
+        type="tel"
+        placeholder="WhatsApp"
+        pattern="^\+?[0-9][0-9\s().-]{5,58}$"
+        title={isRu ? "Введите номер WhatsApp в международном формате" : "Enter a WhatsApp number in international format"}
+      />
+      <input
+        className="input"
+        name="telegram"
+        placeholder="Telegram"
+        pattern="^@?[a-zA-Z0-9_]{5,32}$"
+        title={isRu ? "Введите Telegram username, например @kubera_automation" : "Enter a Telegram username, for example @kubera_automation"}
+      />
+      <input className="input" name="company" placeholder={isRu ? "Компания" : "Company"} required />
       <textarea className="textarea" name="message" placeholder={isRu ? "Расскажите о вашем бизнесе" : "Tell us about your business"} required />
       <input className="honeypot" name="website" tabIndex={-1} autoComplete="off" aria-hidden="true" />
       <button className="button" type="submit" disabled={status === "submitting"}>

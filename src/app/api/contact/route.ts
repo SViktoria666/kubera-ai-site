@@ -41,7 +41,7 @@ export async function POST(request: Request) {
     return NextResponse.json({ ok: true });
   }
 
-  const leadEnvelope = createContactLeadEnvelope(parsed.data);
+  const leadEnvelope = createContactLeadEnvelope(parsed.data, parsed.data.page);
 
   recordContactSubmission({
     requestId,
@@ -54,7 +54,7 @@ export async function POST(request: Request) {
   });
 
   try {
-    const delivery = await sendContactLeadToN8n(parsed.data);
+    const delivery = await sendContactLeadToN8n(parsed.data, parsed.data.page);
 
     if (!delivery.ok) {
       recordContactDeliveryFailure({
