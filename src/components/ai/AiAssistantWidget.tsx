@@ -95,7 +95,7 @@ export function AiAssistantWidget({ enabled }: AiAssistantWidgetProps) {
   return (
     <div className={`ai-assistant-widget${isOpen ? " is-open" : ""}`}>
       <button className="ai-assistant-button" type="button" aria-label="Open AI assistant" aria-expanded={isOpen} onClick={() => setIsOpen((open) => !open)}>
-        AI
+        AI Assistant
       </button>
 
       <aside className="ai-assistant-panel" aria-label="Kubera AI assistant" aria-hidden={!isOpen}>
