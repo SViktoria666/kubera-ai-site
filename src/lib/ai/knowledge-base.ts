@@ -1,10 +1,8 @@
 import "server-only";
 
-import fs from "node:fs";
-import path from "node:path";
 import { enServices } from "@/content/en/services";
 import { enWorkflow } from "@/content/en/workflow";
-import { getAllGeoPages, getGeoPageByRoute } from "@/content/geo/loader";
+import { generatedGeoPages, generatedLlmsFull } from "@/content/geo/generated";
 import { siteConfig, supportedLanguages } from "@/content/site";
 import type { AssistantLocale } from "@/lib/ai/types";
 
@@ -118,15 +116,6 @@ function normalizePath(value: string) {
   return pathOnly.endsWith("/") && pathOnly !== "/" ? pathOnly.slice(0, -1) : pathOnly;
 }
 
-function readLlmsFull() {
-  const llmsPath = path.join(process.cwd(), "public", "llms-full.txt");
-  if (!fs.existsSync(llmsPath)) {
-    return "";
-  }
-
-  return fs.readFileSync(llmsPath, "utf8").trim();
-}
-
 function sourceById(sources: KnowledgeBaseSource[], id: string) {
   return sources.find((source) => source.id === id);
 }
@@ -221,7 +210,7 @@ export function buildKnowledgeBase(): KnowledgeBase {
       description: step.description,
       sourceId: "workflow-en",
     })),
-    geoPages: getAllGeoPages().map((page) => ({
+    geoPages: generatedGeoPages.map((page) => ({
       country: page.country,
       locale: page.locale,
       route: page.route,
@@ -234,7 +223,7 @@ export function buildKnowledgeBase(): KnowledgeBase {
       relatedRoutes: page.relatedRoutes,
       sourceId: "geo",
     })),
-    llmsFull: readLlmsFull(),
+    llmsFull: generatedLlmsFull,
     sources,
   };
 
@@ -244,7 +233,7 @@ export function buildKnowledgeBase(): KnowledgeBase {
 export function selectKnowledgeContext(input: KnowledgeBaseSelectionInput): SelectedKnowledgeContext {
   const knowledgeBase = buildKnowledgeBase();
   const normalizedPage = normalizePath(input.page);
-  const explicitPage = getGeoPageByRoute(normalizedPage);
+  const explicitPage = knowledgeBase.geoPages.find((page) => normalizePath(page.route) === normalizedPage) ?? null;
   const scoredPages = knowledgeBase.geoPages
     .map((page) => ({ page, score: scoreGeoPage(page, input) }))
     .filter((entry) => entry.score > 0)
