@@ -8,14 +8,14 @@ export const openAiAssistantOutputSchema = z.object({
   detectedLanguage: assistantLocaleSchema,
   collectedFields: z
     .object({
-      name: z.string().max(120).optional(),
-      company: z.string().max(160).optional(),
-      email: z.string().email().max(200).optional(),
-      telegram: z.string().max(80).optional(),
-      whatsapp: z.string().max(60).optional(),
-      need: z.string().max(2000).optional(),
-      urgency: z.string().max(240).optional(),
-      country: z.string().max(120).optional(),
+      name: z.string().max(120).nullable(),
+      company: z.string().max(160).nullable(),
+      email: z.string().email().max(200).nullable(),
+      telegram: z.string().max(120).nullable(),
+      whatsapp: z.string().max(120).nullable(),
+      need: z.string().max(1200).nullable(),
+      urgency: z.string().max(400).nullable(),
+      country: z.string().max(120).nullable(),
     })
     .strict(),
   missingFields: z.array(assistantMissingFieldSchema),

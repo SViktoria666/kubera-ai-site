@@ -42,10 +42,65 @@ function withTimeout<T>(promise: Promise<T>, timeoutMs: number): Promise<T> {
   });
 }
 
-async function getControlledAssistantResponse(request: AssistantRequest, context: AssistantProviderContext) {
+function getErrorField(error: unknown, field: "name" | "message" | "status" | "code" | "type") {
+  if (!error || typeof error !== "object" || !(field in error)) {
+    return undefined;
+  }
+
+  const value = error[field as keyof typeof error];
+  return typeof value === "string" || typeof value === "number" ? value : undefined;
+}
+
+function getProviderErrorStage(error: unknown) {
+  const name = String(getErrorField(error, "name") || "");
+  const message = String(getErrorField(error, "message") || "");
+
+  if (message === "assistant_provider_timeout") {
+    return "timeout";
+  }
+
+  if (name === "ZodError" || name === "SyntaxError") {
+    return "validation";
+  }
+
+  if (message.includes("uses `.optional()` without `.nullable()`") || message.includes("Root schema must have type")) {
+    return "schema";
+  }
+
+  if (getErrorField(error, "status") || getErrorField(error, "code") || getErrorField(error, "type")) {
+    return "api";
+  }
+
+  return "api";
+}
+
+function getSafeProviderErrorMessage(error: unknown) {
+  const message = String(getErrorField(error, "message") || "");
+
+  if (!message) {
+    return undefined;
+  }
+
+  return message.replace(/sk-[A-Za-z0-9_-]+/g, "[redacted]").slice(0, 240);
+}
+
+function logAssistantProviderError(error: unknown, requestId: string) {
+  console.error("assistant_provider_error", {
+    requestId,
+    stage: getProviderErrorStage(error),
+    name: getErrorField(error, "name"),
+    status: getErrorField(error, "status"),
+    code: getErrorField(error, "code"),
+    type: getErrorField(error, "type"),
+    message: getSafeProviderErrorMessage(error),
+  });
+}
+
+async function getControlledAssistantResponse(request: AssistantRequest, context: AssistantProviderContext, requestId: string) {
   try {
     return await withTimeout(getAssistantProvider().respond(request, context), ASSISTANT_PROVIDER_TIMEOUT_MS);
-  } catch {
+  } catch (error) {
+    logAssistantProviderError(error, requestId);
     return null;
   }
 }
@@ -89,7 +144,7 @@ export async function POST(request: Request) {
       country: parsed.data.context.country,
       keywords: getKnowledgeKeywords(parsed.data.messages),
     });
-    const assistantResponse = await getControlledAssistantResponse(parsed.data, { knowledgeContext });
+    const assistantResponse = await getControlledAssistantResponse(parsed.data, { knowledgeContext }, requestId);
 
     if (!assistantResponse) {
       return jsonError("Assistant is temporarily unavailable", requestId, 503);

@@ -5,6 +5,7 @@ import { zodTextFormat } from "openai/helpers/zod";
 import { formatKnowledgeContext } from "@/lib/ai/knowledge-base";
 import { openAiAssistantOutputSchema, requiredLeadFields } from "@/lib/ai/openai-schema";
 import type { SiteAssistantProvider } from "@/lib/ai/provider";
+import type { OpenAiAssistantOutput } from "@/lib/ai/openai-schema";
 import type { AssistantLeadDraft, AssistantProviderContext, AssistantRequest, AssistantResponse } from "@/lib/ai/types";
 
 const DEFAULT_MODEL = "gpt-5.5";
@@ -13,11 +14,11 @@ function hasContact(lead: AssistantLeadDraft) {
   return Boolean(lead.email || lead.telegram || lead.whatsapp);
 }
 
-function normalizeLead(lead: AssistantLeadDraft) {
-  return Object.fromEntries(Object.entries(lead).filter(([, value]) => value !== undefined && value !== ""));
+function normalizeLead(lead: OpenAiAssistantOutput["collectedFields"]) {
+  return Object.fromEntries(Object.entries(lead).filter(([, value]) => value !== null && value !== undefined && value !== ""));
 }
 
-function mergeLead(previous: AssistantLeadDraft | undefined, collected: AssistantLeadDraft, leadScore: number): AssistantLeadDraft {
+function mergeLead(previous: AssistantLeadDraft | undefined, collected: OpenAiAssistantOutput["collectedFields"], leadScore: number): AssistantLeadDraft {
   return {
     ...(previous || {}),
     ...normalizeLead(collected),
