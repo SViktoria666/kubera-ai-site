@@ -1,9 +1,6 @@
 import type { Metadata } from "next";
 import "./../globals.css";
-import { Footer } from "@/components/core/Footer";
-import { Header } from "@/components/core/Header";
-import { RouteTransition } from "@/components/core/RouteTransition";
-import { StructuredData } from "@/components/seo/StructuredData";
+import { SiteShell } from "@/components/core/SiteShell";
 import { siteConfig } from "@/content/site";
 
 export const metadata: Metadata = {
@@ -36,10 +33,7 @@ export default function SpanishRootLayout({ children }: Readonly<{ children: Rea
   return (
     <html lang="es">
       <body>
-        <StructuredData />
-        <Header />
-        <RouteTransition>{children}</RouteTransition>
-        <Footer />
+        <SiteShell>{children}</SiteShell>
       </body>
     </html>
   );

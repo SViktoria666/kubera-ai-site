@@ -1,4 +1,5 @@
 import type { ContactFormPayload } from "@/lib/validation/contact";
+import type { AssistantLeadDraft } from "@/lib/ai/types";
 
 export type N8nContactLeadPayload = {
   Name: string;
@@ -80,6 +81,58 @@ export async function sendContactLeadToN8n(lead: ContactFormPayload, page = "") 
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify(createN8nContactLeadPayload(lead, page)),
+  });
+
+  if (!response.ok) {
+    return { ok: false as const, reason: "webhook_error" as const, status: response.status };
+  }
+
+  return { ok: true as const };
+}
+
+export type N8nAssistantLeadPayload = {
+  createdAt: string;
+  name: string;
+  email: string;
+  telegram: string;
+  whatsapp: string;
+  company: string;
+  need: string;
+  urgency: string;
+  country: string;
+  leadScore: number;
+};
+
+export function isAssistantN8nConfigured() {
+  return Boolean(process.env.N8N_AI_LEAD_ASSISTANT_WEBHOOK_URL);
+}
+
+export function createN8nAssistantLeadPayload(lead: AssistantLeadDraft): N8nAssistantLeadPayload {
+  return {
+    createdAt: new Date().toISOString(),
+    name: lead.name || "",
+    email: lead.email || "",
+    telegram: lead.telegram || "",
+    whatsapp: lead.whatsapp || "",
+    company: lead.company || "",
+    need: lead.need || "",
+    urgency: lead.urgency || "",
+    country: lead.country || "",
+    leadScore: lead.leadScore ?? 0,
+  };
+}
+
+export async function sendAssistantLeadToN8n(lead: AssistantLeadDraft) {
+  const webhookUrl = process.env.N8N_AI_LEAD_ASSISTANT_WEBHOOK_URL;
+
+  if (!webhookUrl) {
+    return { ok: false as const, reason: "missing_env" as const };
+  }
+
+  const response = await fetch(webhookUrl, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(createN8nAssistantLeadPayload(lead)),
   });
 
   if (!response.ok) {

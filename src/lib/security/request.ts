@@ -6,6 +6,27 @@ export async function safeJson(request: Request): Promise<unknown> {
   }
 }
 
+export async function safeJsonWithLimit(request: Request, maxBytes: number): Promise<{ ok: true; data: unknown } | { ok: false; reason: "too_large" | "invalid_json" }> {
+  const contentLength = Number(request.headers.get("content-length") || 0);
+
+  if (contentLength > maxBytes) {
+    return { ok: false, reason: "too_large" };
+  }
+
+  try {
+    const text = await request.text();
+    const size = new TextEncoder().encode(text).byteLength;
+
+    if (size > maxBytes) {
+      return { ok: false, reason: "too_large" };
+    }
+
+    return { ok: true, data: JSON.parse(text) };
+  } catch {
+    return { ok: false, reason: "invalid_json" };
+  }
+}
+
 export function getUserAgent(request: Request): string {
   return request.headers.get("user-agent") || "unknown";
 }

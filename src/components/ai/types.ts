@@ -1,7 +1,15 @@
-import type { AssistantLocale } from "@/lib/ai/types";
+import type { AssistantLeadDraft, AssistantLocale, AssistantMessage } from "@/lib/ai/types";
 
 export type AiAssistantWidgetProps = {
-  locale: AssistantLocale;
-  currentPath: string;
   enabled?: boolean;
+};
+
+export type AiAssistantApiResponse = {
+  ok: boolean;
+  message?: AssistantMessage;
+  locale?: AssistantLocale;
+  lead?: AssistantLeadDraft;
+  readyToSubmit?: boolean;
+  submitted?: boolean;
+  error?: string;
 };
