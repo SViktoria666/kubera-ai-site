@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import "./globals.css";
+import "./../globals.css";
 import { Footer } from "@/components/core/Footer";
 import { Header } from "@/components/core/Header";
 import { RouteTransition } from "@/components/core/RouteTransition";
@@ -32,9 +32,9 @@ export const metadata: Metadata = {
   },
 };
 
-export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
+export default function SpanishRootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en">
+    <html lang="es">
       <body>
         <StructuredData />
         <Header />

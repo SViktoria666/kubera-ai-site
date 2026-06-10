@@ -9,8 +9,12 @@ type Params = {
 };
 
 export function generateStaticParams() {
-  return getGeoPageRoutes().map((route) => ({ geoSlug: route.replace(/^\//, "") }));
+  return getGeoPageRoutes()
+    .filter((route) => route !== "/automatizacion-ia-espana")
+    .map((route) => ({ geoSlug: route.replace(/^\//, "") }));
 }
+
+export const dynamicParams = false;
 
 export async function generateMetadata({ params }: Params): Promise<Metadata> {
   const { geoSlug } = await params;
