@@ -46,7 +46,7 @@ export function AiAssistantWidget({ enabled }: AiAssistantWidgetProps) {
     event.preventDefault();
 
     const content = input.trim();
-    if (!content || isLoading || submitted) {
+    if (!content || isLoading) {
       return;
     }
 
@@ -68,6 +68,7 @@ export function AiAssistantWidget({ enabled }: AiAssistantWidgetProps) {
           },
           messages: nextMessages,
           lead,
+          submissionCompleted: submitted,
         }),
       });
       const contentType = response.headers.get("content-type") || "";
@@ -83,7 +84,7 @@ export function AiAssistantWidget({ enabled }: AiAssistantWidgetProps) {
       }
 
       setLead(data.lead || {});
-      setSubmitted(Boolean(data.submitted));
+      setSubmitted((current) => current || Boolean(data.submitted));
       setMessages((current) => [...current, data.message as AssistantMessage]);
     } catch {
       setError(assistantUnavailableMessage);
@@ -122,14 +123,14 @@ export function AiAssistantWidget({ enabled }: AiAssistantWidgetProps) {
         <form className="ai-assistant-form" onSubmit={handleSubmit}>
           <input
             aria-label="Message for AI assistant"
-            disabled={isLoading || submitted}
+            disabled={isLoading}
             maxLength={1200}
             onChange={(event) => setInput(event.target.value)}
-            placeholder={submitted ? "Request sent" : "Type your message"}
+            placeholder="Type your message"
             type="text"
             value={input}
           />
-          <button type="submit" disabled={isLoading || submitted || !input.trim()} aria-label="Send message">
+          <button type="submit" disabled={isLoading || !input.trim()} aria-label="Send message">
             Send
           </button>
         </form>

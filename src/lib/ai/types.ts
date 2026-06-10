@@ -28,6 +28,7 @@ export type AssistantRequest = {
   context: AssistantContext;
   messages: AssistantMessage[];
   lead?: AssistantLeadDraft;
+  submissionCompleted?: boolean;
 };
 
 export type AssistantResponse = {

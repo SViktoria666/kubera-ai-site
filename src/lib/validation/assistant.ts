@@ -29,6 +29,7 @@ export const assistantRequestSchema = z.object({
   }),
   messages: z.array(assistantMessageSchema).min(1).max(20),
   lead: assistantLeadSchema.optional(),
+  submissionCompleted: z.boolean().optional(),
 });
 
 export type AssistantValidatedRequest = z.infer<typeof assistantRequestSchema>;

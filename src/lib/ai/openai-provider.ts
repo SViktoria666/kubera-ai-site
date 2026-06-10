@@ -48,6 +48,7 @@ function buildSystemPrompt(context: AssistantProviderContext | undefined) {
     "Do not ask for contact information until need, urgency, name, company, and country are known.",
     "The contact field is satisfied by one of: email, Telegram, or WhatsApp.",
     "Ask only one main qualification question at a time unless the user already gave multiple details.",
+    "If submissionCompleted is true, continue the conversation and help with corrections or extra details, but do not say that a new lead submission will be sent.",
     "Never invent pricing, timelines, guarantees, customers, or integrations that are not in the Knowledge Base.",
     "Return only the structured output requested by the schema.",
     "",
@@ -61,6 +62,7 @@ function buildUserPayload(request: AssistantRequest) {
     {
       pageContext: request.context,
       currentLeadDraft: request.lead || {},
+      submissionCompleted: request.submissionCompleted === true,
       requiredFlow: requiredLeadFields,
       messages: request.messages,
     },
