@@ -8,6 +8,9 @@ import { getClientIp, getRequestId, safeJsonWithLimit } from "@/lib/security/req
 import type { AssistantProviderContext, AssistantRequest, AssistantResponse } from "@/lib/ai/types";
 import { assistantRequestSchema } from "@/lib/validation/assistant";
 
+export const dynamic = "force-dynamic";
+export const runtime = "nodejs";
+
 const ASSISTANT_MAX_BODY_BYTES = 32 * 1024;
 const ASSISTANT_PROVIDER_TIMEOUT_MS = 20 * 1000;
 
@@ -47,70 +50,82 @@ async function getControlledAssistantResponse(request: AssistantRequest, context
   }
 }
 
+function jsonError(error: string, requestId: string, status: number) {
+  return NextResponse.json({ ok: false, error, requestId }, { status });
+}
+
 export async function POST(request: Request) {
   const requestId = getRequestId(request);
 
-  if (process.env.AI_ASSISTANT_ENABLED !== "true") {
-    return NextResponse.json({ ok: false, error: "AI assistant is disabled", requestId }, { status: 404 });
-  }
+  try {
+    if (process.env.AI_ASSISTANT_ENABLED !== "true") {
+      return jsonError("AI assistant is disabled", requestId, 404);
+    }
 
-  const ip = getClientIp(request);
-  const rateLimit = checkRateLimit(`assistant:${ip}`);
+    const ip = getClientIp(request);
+    const rateLimit = checkRateLimit(`assistant:${ip}`);
 
-  if (!rateLimit.allowed) {
-    return NextResponse.json({ ok: false, error: "Too many requests", requestId }, { status: 429 });
-  }
+    if (!rateLimit.allowed) {
+      return jsonError("Too many requests", requestId, 429);
+    }
 
-  const payload = await safeJsonWithLimit(request, ASSISTANT_MAX_BODY_BYTES);
+    const payload = await safeJsonWithLimit(request, ASSISTANT_MAX_BODY_BYTES);
 
-  if (!payload.ok) {
-    const status = payload.reason === "too_large" ? 413 : 400;
-    const error = payload.reason === "too_large" ? "Assistant payload is too large" : "Invalid assistant payload";
-    return NextResponse.json({ ok: false, error, requestId }, { status });
-  }
+    if (!payload.ok) {
+      const status = payload.reason === "too_large" ? 413 : 400;
+      const error = payload.reason === "too_large" ? "Assistant payload is too large" : "Invalid assistant payload";
+      return jsonError(error, requestId, status);
+    }
 
-  const parsed = assistantRequestSchema.safeParse(payload.data);
+    const parsed = assistantRequestSchema.safeParse(payload.data);
 
-  if (!parsed.success) {
-    return NextResponse.json({ ok: false, error: "Invalid assistant payload", requestId }, { status: 400 });
-  }
+    if (!parsed.success) {
+      return jsonError("Invalid assistant payload", requestId, 400);
+    }
 
-  const knowledgeContext = selectKnowledgeContext({
-    page: parsed.data.context.currentPath,
-    locale: parsed.data.context.locale,
-    country: parsed.data.context.country,
-    keywords: getKnowledgeKeywords(parsed.data.messages),
-  });
-  const assistantResponse = await getControlledAssistantResponse(parsed.data, { knowledgeContext });
+    const knowledgeContext = selectKnowledgeContext({
+      page: parsed.data.context.currentPath,
+      locale: parsed.data.context.locale,
+      country: parsed.data.context.country,
+      keywords: getKnowledgeKeywords(parsed.data.messages),
+    });
+    const assistantResponse = await getControlledAssistantResponse(parsed.data, { knowledgeContext });
 
-  if (!assistantResponse) {
-    return NextResponse.json({ ok: false, error: "Assistant is temporarily unavailable", requestId }, { status: 503 });
-  }
+    if (!assistantResponse) {
+      return jsonError("Assistant is temporarily unavailable", requestId, 503);
+    }
 
-  let submitted = false;
-  let duplicateSubmission = false;
+    let submitted = false;
+    let duplicateSubmission = false;
 
-  if (assistantResponse.readyToSubmit) {
-    const submissionHash = createAssistantSubmissionHash(assistantResponse.lead);
-    const reservation = reserveAssistantSubmission(submissionHash);
+    if (assistantResponse.readyToSubmit) {
+      const submissionHash = createAssistantSubmissionHash(assistantResponse.lead);
+      const reservation = reserveAssistantSubmission(submissionHash);
 
-    if (!reservation.reserved) {
-      duplicateSubmission = true;
+      if (!reservation.reserved) {
+        duplicateSubmission = true;
+        submitted = true;
+        return NextResponse.json({ ok: true, requestId, ...assistantResponse, submitted, duplicateSubmission });
+      }
+
+      const delivery = await sendAssistantLeadToN8n(assistantResponse.lead);
+
+      if (!delivery.ok) {
+        releaseAssistantSubmission(submissionHash);
+        const status = delivery.reason === "missing_env" ? 503 : 502;
+        return jsonError("Lead delivery is temporarily unavailable", requestId, status);
+      }
+
+      markAssistantSubmissionSubmitted(submissionHash);
       submitted = true;
-      return NextResponse.json({ ok: true, requestId, ...assistantResponse, submitted, duplicateSubmission });
     }
 
-    const delivery = await sendAssistantLeadToN8n(assistantResponse.lead);
-
-    if (!delivery.ok) {
-      releaseAssistantSubmission(submissionHash);
-      const status = delivery.reason === "missing_env" ? 503 : 502;
-      return NextResponse.json({ ok: false, error: "Lead delivery is temporarily unavailable", requestId }, { status });
-    }
-
-    markAssistantSubmissionSubmitted(submissionHash);
-    submitted = true;
+    return NextResponse.json({ ok: true, requestId, ...assistantResponse, submitted, duplicateSubmission });
+  } catch {
+    return jsonError("Assistant is temporarily unavailable", requestId, 503);
   }
+}
 
-  return NextResponse.json({ ok: true, requestId, ...assistantResponse, submitted, duplicateSubmission });
+export function GET(request: Request) {
+  return jsonError("Method not allowed", getRequestId(request), 405);
 }

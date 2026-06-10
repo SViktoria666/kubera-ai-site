@@ -12,6 +12,8 @@ const initialMessages: AssistantMessage[] = [
   },
 ];
 
+const assistantUnavailableMessage = "Assistant is temporarily unavailable. Please try again later.";
+
 function getBrowserLocale() {
   if (typeof navigator === "undefined") {
     return undefined;
@@ -68,17 +70,23 @@ export function AiAssistantWidget({ enabled }: AiAssistantWidgetProps) {
           lead,
         }),
       });
+      const contentType = response.headers.get("content-type") || "";
+
+      if (!contentType.toLowerCase().includes("application/json")) {
+        throw new Error(assistantUnavailableMessage);
+      }
+
       const data = (await response.json()) as AiAssistantApiResponse;
 
       if (!response.ok || !data.ok || !data.message) {
-        throw new Error(data.error || "Assistant is temporarily unavailable.");
+        throw new Error(data.error || assistantUnavailableMessage);
       }
 
       setLead(data.lead || {});
       setSubmitted(Boolean(data.submitted));
       setMessages((current) => [...current, data.message as AssistantMessage]);
-    } catch (caught) {
-      setError(caught instanceof Error ? caught.message : "Assistant is temporarily unavailable.");
+    } catch {
+      setError(assistantUnavailableMessage);
     } finally {
       setIsLoading(false);
     }
@@ -93,8 +101,7 @@ export function AiAssistantWidget({ enabled }: AiAssistantWidgetProps) {
       <aside className="ai-assistant-panel" aria-label="Kubera AI assistant" aria-hidden={!isOpen}>
         <div className="ai-assistant-panel-header">
           <div>
-            <p>Kubera AI</p>
-            <strong>Assistant</strong>
+            <strong>Kubera AI Assistant</strong>
           </div>
           <button type="button" aria-label="Close AI assistant" onClick={() => setIsOpen(false)}>
             x
