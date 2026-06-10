@@ -1,5 +1,6 @@
 import type { MetadataRoute } from "next";
 import { countries } from "@/content/countries/countries";
+import { geoRoutes } from "@/content/geo/catalog";
 
 const baseUrl = "https://kubera-automation.com";
 const lastModified = new Date();
@@ -7,6 +8,7 @@ const lastModified = new Date();
 export default function sitemap(): MetadataRoute.Sitemap {
   const staticRoutes: Array<{ route: string; priority: number }> = [
     { route: "", priority: 1 },
+    { route: "/locations", priority: 0.86 },
     { route: "/services", priority: 0.9 },
     { route: "/how-we-work", priority: 0.85 },
     { route: "/cases", priority: 0.8 },
@@ -33,6 +35,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified,
       changeFrequency: "monthly" as const,
       priority: 0.8,
+    })),
+    ...geoRoutes.map((route) => ({
+      url: `${baseUrl}${route}`,
+      lastModified,
+      changeFrequency: "monthly" as const,
+      priority: 0.82,
     })),
   ];
 }
