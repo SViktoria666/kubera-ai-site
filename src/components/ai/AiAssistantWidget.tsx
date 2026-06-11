@@ -33,10 +33,17 @@ export function AiAssistantWidget({ enabled }: AiAssistantWidgetProps) {
   const [error, setError] = useState("");
   const [submitted, setSubmitted] = useState(false);
   const messagesRef = useRef<HTMLDivElement | null>(null);
+  const inputRef = useRef<HTMLInputElement | null>(null);
 
   useEffect(() => {
     messagesRef.current?.scrollTo({ top: messagesRef.current.scrollHeight, behavior: "smooth" });
   }, [messages, isOpen]);
+
+  useEffect(() => {
+    if (isOpen && !isLoading) {
+      inputRef.current?.focus();
+    }
+  }, [isOpen, isLoading, messages]);
 
   if (!enabled) {
     return null;
@@ -127,6 +134,7 @@ export function AiAssistantWidget({ enabled }: AiAssistantWidgetProps) {
             maxLength={1200}
             onChange={(event) => setInput(event.target.value)}
             placeholder="Type your message"
+            ref={inputRef}
             type="text"
             value={input}
           />

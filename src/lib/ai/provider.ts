@@ -58,6 +58,48 @@ const prompts = {
   },
 };
 
+const consultativeTopicPattern =
+  /\b(ai|automation|agent|agents|openclaw|hermes|n8n|crm|saas|integration|integrations|workflow|workflows|chatbot|chatbots|mcp|business automation|автоматизац|агент|агенты|интеграц|воркфлоу|чатбот|чат-бот|ии)\b/i;
+
+const responseTimePattern =
+  /\b(how fast|how quickly|when (will|do)|response time|reply|contact me|свяж|ответ|как быстро|когда ответ|срок|сроки|cu[aá]ndo|rapido|respuesta|contacto)\b/i;
+
+function getConsultativeResponse(locale: AssistantResponse["locale"]) {
+  if (locale === "ru") {
+    return "Да, такие проекты находятся в зоне компетенции Kubera AI. Для точной оценки команда уточнит детали и предложит оптимальное решение. Что именно вы хотите автоматизировать или улучшить?";
+  }
+
+  if (locale === "es") {
+    return "Si, este tipo de proyectos esta dentro de la competencia de Kubera AI. Para una evaluacion precisa, el equipo aclarara los detalles y propondra la solucion optima. Que quieres automatizar o mejorar exactamente?";
+  }
+
+  return "Yes, projects like this are within Kubera AI's area of competence. For an accurate assessment, the team will clarify the details and propose the optimal solution. What exactly do you want to automate or improve?";
+}
+
+function getResponseTimeResponse(locale: AssistantResponse["locale"]) {
+  if (locale === "ru") {
+    return "Обычно команда Kubera AI связывается в течение нескольких часов. Если запрос срочный, мы стараемся ответить максимально быстро.";
+  }
+
+  if (locale === "es") {
+    return "Normalmente el equipo de Kubera AI se pone en contacto en unas pocas horas. Si la solicitud es urgente, intentamos responder lo antes posible.";
+  }
+
+  return "The Kubera AI team usually contacts clients within a few hours. If the request is urgent, we try to respond as quickly as possible.";
+}
+
+function getSalesResponse(text: string, locale: AssistantResponse["locale"]) {
+  if (responseTimePattern.test(text)) {
+    return getResponseTimeResponse(locale);
+  }
+
+  if (consultativeTopicPattern.test(text)) {
+    return getConsultativeResponse(locale);
+  }
+
+  return null;
+}
+
 function pickLocale(request: AssistantRequest) {
   const latestUserMessage = [...request.messages].reverse().find((message) => message.role === "user")?.content || "";
   const detected = localePatterns.find((entry) => entry.pattern.test(latestUserMessage))?.locale;
@@ -106,8 +148,9 @@ class DeterministicAssistantProvider implements SiteAssistantProvider {
     const latestUserMessage = [...request.messages].reverse().find((message) => message.role === "user")?.content.trim() || "";
     const lead = { ...(request.lead || {}) };
     const nextField = inferNextField(lead);
+    const salesResponse = getSalesResponse(latestUserMessage, locale);
 
-    if (latestUserMessage) {
+    if (latestUserMessage && !salesResponse) {
       if (nextField === "contact") {
         Object.assign(lead, Object.fromEntries(Object.entries(extractContact(latestUserMessage)).filter(([, value]) => value)));
       } else if (nextField !== "ready") {
@@ -126,7 +169,7 @@ class DeterministicAssistantProvider implements SiteAssistantProvider {
     return {
       message: {
         role: "assistant",
-        content: readyToSubmit ? labels.ready : labels[updatedNextField],
+        content: salesResponse || (readyToSubmit ? labels.ready : labels[updatedNextField]),
       },
       locale,
       lead,
