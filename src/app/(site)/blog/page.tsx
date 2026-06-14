@@ -1,14 +1,16 @@
 import type { Metadata } from "next";
-import { BlogVisualShell } from "@/components/sections/BlogVisualShell";
+import { BlogIndexPage } from "@/components/blog/BlogIndexPage";
+import { getAllBlogPosts } from "@/content/blog";
+import { blogConfig } from "@/content/blog/meta";
 import { createPageMetadata } from "@/content/seo";
 
 export const metadata: Metadata = createPageMetadata({
   title: "Blog",
-  description: "Kubera AI blog foundation for future articles about AI automation, n8n, CRM workflows, lead processing, and digital business systems.",
+  description: blogConfig.siteDescription,
   path: "/blog",
   locale: "en",
 });
 
 export default function BlogPage() {
-  return <BlogVisualShell locale="en" />;
+  return <BlogIndexPage locale="en" posts={getAllBlogPosts()} />;
 }

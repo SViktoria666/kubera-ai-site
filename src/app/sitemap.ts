@@ -1,4 +1,5 @@
 import type { MetadataRoute } from "next";
+import { getAllBlogPosts } from "@/content/blog";
 import { countries } from "@/content/countries/countries";
 import { geoRoutes } from "@/content/geo/catalog";
 
@@ -29,6 +30,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified,
       changeFrequency: "monthly" as const,
       priority,
+    })),
+    ...getAllBlogPosts().map((post) => ({
+      url: `${baseUrl}${post.url}`,
+      lastModified: new Date(post.frontmatter.date),
+      changeFrequency: "monthly" as const,
+      priority: 0.66,
     })),
     ...countries.map((country) => ({
       url: `${baseUrl}/en/${country.slug}`,
