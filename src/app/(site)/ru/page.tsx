@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { HeroSection } from "@/components/sections/HeroSection";
 import { LossCalculator } from "@/components/sections/LossCalculator";
 import { createPageMetadata } from "@/content/seo";
@@ -19,6 +20,11 @@ export default function RuHomePage() {
         ctaLabel="Обсудить мой проект"
         ctaHref="/ru/kontakty"
       />
+      <div className="container" style={{ marginTop: "-8px", paddingBottom: "24px" }}>
+        <p className="lead" style={{ margin: 0 }}>
+          Посмотрите блог с практикой автоматизации и решениями для AI-систем: <Link href="/ru/blog">Блог Kubera AI</Link>.
+        </p>
+      </div>
       <LossCalculator locale="ru" />
     </main>
   );

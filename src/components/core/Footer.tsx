@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export function Footer() {
   return (
     <footer className="site-footer">
@@ -6,6 +8,12 @@ export function Footer() {
           <strong>KUBERA AI</strong>
         </div>
         <div className="footer-links">
+          <Link className="footer-link" href="/blog">
+            <span>Blog</span>
+          </Link>
+          <Link className="footer-link" href="/ru/blog">
+            <span>Блог</span>
+          </Link>
           <a className="footer-link" href="mailto:hello@kubera-automation.com">
             <FooterIcon type="email" />
             <span>hello@kubera-automation.com</span>

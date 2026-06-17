@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { HeroSection } from "@/components/sections/HeroSection";
 import { LossCalculator } from "@/components/sections/LossCalculator";
 import { createPageMetadata } from "@/content/seo";
@@ -19,6 +20,11 @@ export default function HomePage() {
         ctaLabel="Discuss my project"
         ctaHref="/contacts"
       />
+      <div className="container" style={{ marginTop: "-8px", paddingBottom: "24px" }}>
+        <p className="lead" style={{ margin: 0 }}>
+          Explore the blog for practical automation guidance and AI system decisions: <Link href="/blog">Kubera AI Blog</Link>.
+        </p>
+      </div>
       <LossCalculator locale="en" />
     </main>
   );
