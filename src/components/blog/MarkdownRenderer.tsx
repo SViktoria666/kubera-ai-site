@@ -15,7 +15,12 @@ function renderInline(markdown: string) {
   const escaped = escapeHtml(markdown);
 
   return escaped
-    .replace(/\[([^\]]+)\]\((https?:\/\/[^\s)]+)\)/g, '<a href="$2" rel="noreferrer noopener" target="_blank">$1</a>')
+    .replace(/\[([^\]]+)\]\(((?:https?:\/\/|\/)[^\s)]+)\)/g, (_, label: string, href: string) => {
+      const external = href.startsWith("http://") || href.startsWith("https://");
+      return external
+        ? `<a href="${href}" rel="noreferrer noopener" target="_blank">${label}</a>`
+        : `<a href="${href}">${label}</a>`;
+    })
     .replace(/`([^`]+)`/g, "<code>$1</code>")
     .replace(/\*\*([^*]+)\*\*/g, "<strong>$1</strong>")
     .replace(/\*([^*]+)\*/g, "<em>$1</em>");
