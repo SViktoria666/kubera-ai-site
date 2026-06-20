@@ -9,7 +9,7 @@ export default function robots(): MetadataRoute.Robots {
         disallow: ["/api/"],
       },
     ],
-    host: "https://kubera-automation.com",
-    sitemap: "https://kubera-automation.com/sitemap.xml",
+    host: "https://www.kubera-automation.com",
+    sitemap: "https://www.kubera-automation.com/sitemap.xml",
   };
 }

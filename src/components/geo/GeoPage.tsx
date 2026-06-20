@@ -141,11 +141,20 @@ export function GeoPage({ page }: { page: GeoPageData }) {
           <h1 className="hero-title">{page.h1}</h1>
           <p className="lead">{page.metaDescription}</p>
           <div className="geo-hero-links">
+            <Link className="button" href="/">
+              Home
+            </Link>
             <Link className="button" href="/demo">
               Demo
             </Link>
             <Link className="button" href="/services">
               Services
+            </Link>
+            <Link className="button" href="/locations">
+              Locations
+            </Link>
+            <Link className="button" href="/blog">
+              Blog
             </Link>
             <Link className="button" href="/contacts">
               Contact

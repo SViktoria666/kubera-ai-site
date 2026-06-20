@@ -62,32 +62,9 @@ export function StructuredData() {
     },
   };
 
-  const faq = {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    mainEntity: [
-      {
-        "@type": "Question",
-        name: "What does Kubera AI do?",
-        acceptedAnswer: {
-          "@type": "Answer",
-          text: "Kubera AI builds digital workforce systems, lead automation, CRM workflows, customer communication automations, and n8n-ready business process systems.",
-        },
-      },
-      {
-        "@type": "Question",
-        name: "How can I contact Kubera AI?",
-        acceptedAnswer: {
-          "@type": "Answer",
-          text: "Kubera AI can be contacted by email at hello@kubera-automation.com, on Telegram at @kubera_automation, or on WhatsApp at +37253841877.",
-        },
-      },
-    ],
-  };
-
   return (
     <>
-      {[organization, website, service, faq].map((entity, index) => (
+      {[organization, website, service].map((entity, index) => (
         <script key={index} type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(entity) }} />
       ))}
     </>

@@ -16,7 +16,7 @@ export const blogFoundation = {
     {
       name: "Kubera AI",
       role: "Automation team",
-      url: "https://kubera-automation.com",
+      url: "https://www.kubera-automation.com",
     },
   ],
 };

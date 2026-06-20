@@ -13,8 +13,17 @@ export function GeoIndexPage() {
             Explore all Kubera AI country pages. Each page uses source-of-truth content from <code>src/content/geo/</code> and is built to match the existing site system.
           </p>
           <div className="geo-hero-links">
+            <Link className="button" href="/">
+              Home
+            </Link>
             <Link className="button" href="/services">
               Services
+            </Link>
+            <Link className="button" href="/locations">
+              Locations
+            </Link>
+            <Link className="button" href="/blog">
+              Blog
             </Link>
             <Link className="button" href="/contacts">
               Contact

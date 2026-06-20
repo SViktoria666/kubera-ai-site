@@ -81,6 +81,6 @@ Future form processing architecture is: frontend form -> backend API route -> n8
 
 ## Canonical Sources
 
-- Sitemap: https://kubera-automation.com/sitemap.xml
-- Robots: https://kubera-automation.com/robots.txt
-- Primary domain: https://kubera-automation.com
+- Sitemap: https://www.kubera-automation.com/sitemap.xml
+- Robots: https://www.kubera-automation.com/robots.txt
+- Primary domain: https://www.kubera-automation.com

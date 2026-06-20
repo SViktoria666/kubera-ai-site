@@ -1,7 +1,7 @@
 export const siteConfig = {
   name: "Kubera AI",
   legalName: "Kubera AI",
-  url: "https://kubera-automation.com",
+  url: "https://www.kubera-automation.com",
   description: "Living Systems. Smart Automation.",
   email: "hello@kubera-automation.com",
   phone: "+37253841877",

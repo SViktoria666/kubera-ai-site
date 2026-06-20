@@ -1,5 +1,6 @@
 import Link from "next/link";
 import type { BlogPost } from "@/content/blog";
+import { siteConfig } from "@/content/site";
 import { MarkdownRenderer } from "./MarkdownRenderer";
 
 type BlogArticlePageProps = {
@@ -20,9 +21,38 @@ function formatDate(date: string) {
 }
 
 export function BlogArticlePage({ post }: BlogArticlePageProps) {
+  const canonicalUrl = `${siteConfig.url}${post.url}`;
+  const author = {
+    "@type": "Organization",
+    name: siteConfig.name,
+    url: siteConfig.url,
+  };
+  const blogPosting = {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "@id": `${canonicalUrl}#blogposting`,
+    mainEntityOfPage: {
+      "@type": "WebPage",
+      "@id": canonicalUrl,
+    },
+    headline: post.frontmatter.title,
+    description: post.frontmatter.description,
+    image: `${siteConfig.url}${siteConfig.defaultOgImage}`,
+    datePublished: post.frontmatter.date,
+    dateModified: post.frontmatter.date,
+    author,
+    publisher: author,
+    inLanguage: post.frontmatter.language === "ru" ? "ru-RU" : post.frontmatter.language === "es" ? "es-ES" : "en-US",
+    articleSection: post.frontmatter.category,
+    keywords: post.frontmatter.tags.join(", "),
+    isAccessibleForFree: true,
+    url: canonicalUrl,
+  };
+
   return (
     <main className="section">
       <div className="container blog-article-layout">
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(blogPosting) }} />
         <div className="blog-article-header">
           <p className="eyebrow">{post.frontmatter.category}</p>
           <h1 className="section-title blog-article-title">{post.frontmatter.title}</h1>

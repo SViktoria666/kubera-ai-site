@@ -4,21 +4,21 @@
 
 ## Primary Website Pages
 
-- Home: https://kubera-automation.com/
-- Services: https://kubera-automation.com/services
-- How We Work: https://kubera-automation.com/how-we-work
-- Demo: https://kubera-automation.com/cases
-- Blog: https://kubera-automation.com/blog
-- Contacts: https://kubera-automation.com/contacts
+- Home: https://www.kubera-automation.com/
+- Services: https://www.kubera-automation.com/services
+- How We Work: https://www.kubera-automation.com/how-we-work
+- Demo: https://www.kubera-automation.com/cases
+- Blog: https://www.kubera-automation.com/blog
+- Contacts: https://www.kubera-automation.com/contacts
 
 ## Russian Pages
 
-- Главная: https://kubera-automation.com/ru
-- Услуги: https://kubera-automation.com/ru/uslugi
-- Как мы работаем: https://kubera-automation.com/ru/kak-my-rabotaem
-- Демо: https://kubera-automation.com/ru/keysy
-- Блог: https://kubera-automation.com/ru/blog
-- Контакты: https://kubera-automation.com/ru/kontakty
+- Главная: https://www.kubera-automation.com/ru
+- Услуги: https://www.kubera-automation.com/ru/uslugi
+- Как мы работаем: https://www.kubera-automation.com/ru/kak-my-rabotaem
+- Демо: https://www.kubera-automation.com/ru/keysy
+- Блог: https://www.kubera-automation.com/ru/blog
+- Контакты: https://www.kubera-automation.com/ru/kontakty
 
 ## What Kubera AI Does
 

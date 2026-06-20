@@ -12,7 +12,7 @@ type PageSeoInput = {
 const localeAlternates = {
   en: "/",
   ru: "/ru",
-  es: "/es/espana-automatizacion",
+  es: "/automatizacion-ia-espana",
 };
 
 export function createPageMetadata({ title, description, path, locale, image = siteConfig.defaultOgImage }: PageSeoInput): Metadata {

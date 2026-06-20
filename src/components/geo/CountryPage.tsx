@@ -1,3 +1,4 @@
+import Link from "next/link";
 import type { CountryPageContent } from "@/content/types";
 
 export function CountryPage({ country }: { country: CountryPageContent }) {
@@ -22,6 +23,23 @@ export function CountryPage({ country }: { country: CountryPageContent }) {
           <p className="eyebrow">GEO / AEO</p>
           <h1 className="hero-title">{country.heading}</h1>
           <p className="lead">{country.summary}</p>
+          <div className="geo-hero-links">
+            <Link className="button" href="/">
+              Home
+            </Link>
+            <Link className="button" href="/services">
+              Services
+            </Link>
+            <Link className="button" href="/locations">
+              Locations
+            </Link>
+            <Link className="button" href="/blog">
+              Blog
+            </Link>
+            <Link className="button" href="/contacts">
+              Contact
+            </Link>
+          </div>
         </div>
       </section>
       <section className="section section-soft">

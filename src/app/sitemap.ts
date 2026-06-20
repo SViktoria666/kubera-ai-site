@@ -3,7 +3,7 @@ import { getAllBlogPosts } from "@/content/blog";
 import { countries } from "@/content/countries/countries";
 import { geoRoutes } from "@/content/geo/catalog";
 
-const baseUrl = "https://kubera-automation.com";
+const baseUrl = "https://www.kubera-automation.com";
 const lastModified = new Date();
 
 export default function sitemap(): MetadataRoute.Sitemap {
@@ -21,7 +21,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { route: "/ru/keysy", priority: 0.75 },
     { route: "/ru/blog", priority: 0.65 },
     { route: "/ru/kontakty", priority: 0.8 },
-    { route: "/es/espana-automatizacion", priority: 0.8 },
   ];
 
   return [
