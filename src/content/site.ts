@@ -8,7 +8,7 @@ export const siteConfig = {
   telegram: "@kubera_automation",
   telegramUrl: "https://t.me/kubera_automation",
   whatsappUrl: "https://wa.me/37253841877",
-  logo: "/assets/logo/kubera-ai-logo-source.jpg",
+  logo: "/assets/logo/kubera-ai-logo-source.png",
   defaultOgImage: "/assets/images/cases/case-dashboard-4ac0724.png",
   sameAs: ["https://t.me/kubera_automation", "https://wa.me/37253841877"],
 };

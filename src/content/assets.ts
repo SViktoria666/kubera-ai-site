@@ -10,10 +10,10 @@ export const siteAssets: SiteAsset[] = [
   },
   {
     name: "kubera-logo-main",
-    sourceUrl: "https://static.tildacdn.net/tild3332-3139-4533-b933-333766666265/photo_2026-03-31_14-.jpg",
-    localPath: "/assets/logo/kubera-ai-logo-source.jpg",
+    sourceUrl: "local",
+    localPath: "/assets/logo/kubera-ai-logo-source.png",
     usage: "primary brand logo",
-    notes: "Black/gold globe logo with KUBERA AI text and Living Systems subtitle.",
+    notes: "User-provided black/gold logo with KUBERA AI text and Living Systems subtitle.",
   },
   {
     name: "arrow-right",

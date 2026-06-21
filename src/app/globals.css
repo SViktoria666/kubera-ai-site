@@ -198,13 +198,13 @@ main {
   display: inline-flex;
   align-items: center;
   flex: 0 0 auto;
-  gap: 22px;
-  min-width: 500px;
+  gap: 14px;
+  min-width: 440px;
 }
 
 .header-logo-mark {
   display: block;
-  width: 236px;
+  width: 220px;
   height: auto;
   flex: 0 0 auto;
   overflow: visible;
@@ -229,15 +229,15 @@ main {
 
 .header-brand-copy strong {
   color: #ffffff;
-  font-size: 29px;
+  font-size: 24px;
   font-weight: 800;
-  letter-spacing: 0.145em;
+  letter-spacing: 0.13em;
   text-shadow: 0 1px 0 rgba(214, 202, 255, 0.42), 0 2px 0 rgba(103, 74, 164, 0.24), 0 9px 18px rgba(58, 24, 102, 0.22);
 }
 
 .header-brand-copy span {
   color: #ffffff;
-  font-size: 13px;
+  font-size: 11px;
   font-weight: 600;
   letter-spacing: 0.05em;
   overflow-wrap: break-word;
@@ -1122,11 +1122,13 @@ input[type="range"] {
   .header-logo {
     width: 100%;
     min-width: 0;
-    gap: 12px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
   }
 
   .header-logo-mark {
-    width: clamp(138px, 42vw, 174px);
+    width: clamp(148px, 52vw, 176px);
   }
 
   .header-logo-mark img {
@@ -1135,13 +1137,13 @@ input[type="range"] {
   }
 
   .header-brand-copy strong {
-    font-size: clamp(18px, 5.2vw, 23px);
-    letter-spacing: 0.1em;
+    font-size: clamp(17px, 4.8vw, 20px);
+    letter-spacing: 0.09em;
   }
 
   .header-brand-copy span {
-    font-size: clamp(9px, 2.6vw, 11px);
-    letter-spacing: 0.025em;
+    font-size: clamp(8px, 2.4vw, 10px);
+    letter-spacing: 0.02em;
   }
 
   .header-mobile-tools {
@@ -1256,11 +1258,11 @@ input[type="range"] {
   }
 
   .header-logo {
-    min-width: 400px;
+    min-width: 360px;
   }
 
   .header-logo-mark {
-    width: 204px;
+    width: 186px;
   }
 
   .header-logo-mark img {
@@ -1288,12 +1290,12 @@ input[type="range"] {
   }
 
   .header-logo {
-    min-width: 410px;
-    gap: 16px;
+    min-width: 380px;
+    gap: 12px;
   }
 
   .header-logo-mark {
-    width: 190px;
+    width: 178px;
   }
 
   .header-logo-mark img {
@@ -1302,13 +1304,13 @@ input[type="range"] {
   }
 
   .header-brand-copy strong {
-    font-size: 23px;
-    letter-spacing: 0.13em;
+    font-size: 21px;
+    letter-spacing: 0.11em;
   }
 
   .header-brand-copy span {
-    font-size: 11px;
-    letter-spacing: 0.04em;
+    font-size: 10px;
+    letter-spacing: 0.03em;
   }
 
   .main-nav {

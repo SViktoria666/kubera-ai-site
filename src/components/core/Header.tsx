@@ -41,7 +41,7 @@ export function Header() {
         <div className="header-topline">
           <Link href={isRu ? "/ru" : "/"} aria-label="Kubera AI home" className="header-logo">
             <span className="header-logo-mark" aria-hidden="true">
-              {logo ? <Image src={logo.localPath} alt="" width={320} height={180} priority /> : null}
+              {logo ? <Image src={logo.localPath} alt="" width={1536} height={1024} priority /> : null}
             </span>
             <span className="header-brand-copy">
               <strong>KUBERA AI</strong>
