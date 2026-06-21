@@ -198,13 +198,14 @@ main {
   display: inline-flex;
   align-items: center;
   flex: 0 0 auto;
-  gap: 14px;
-  min-width: 440px;
+  gap: 24px;
+  margin-left: -8px;
+  min-width: 452px;
 }
 
 .header-logo-mark {
   display: block;
-  width: 220px;
+  width: 236px;
   height: auto;
   flex: 0 0 auto;
   overflow: visible;
@@ -1258,11 +1259,11 @@ input[type="range"] {
   }
 
   .header-logo {
-    min-width: 360px;
+    min-width: 372px;
   }
 
   .header-logo-mark {
-    width: 186px;
+    width: 198px;
   }
 
   .header-logo-mark img {
@@ -1290,12 +1291,13 @@ input[type="range"] {
   }
 
   .header-logo {
-    min-width: 380px;
-    gap: 12px;
+    min-width: 396px;
+    gap: 20px;
+    margin-left: -6px;
   }
 
   .header-logo-mark {
-    width: 178px;
+    width: 192px;
   }
 
   .header-logo-mark img {
