@@ -26,6 +26,19 @@ function renderInline(markdown: string) {
     .replace(/\*([^*]+)\*/g, "<em>$1</em>");
 }
 
+function isTableDivider(line: string) {
+  return /^\s*\|?(\s*:?-+:?\s*\|)+\s*:?-+:?\s*\|?\s*$/.test(line);
+}
+
+function parseTableRow(line: string) {
+  return line
+    .trim()
+    .replace(/^\|/, "")
+    .replace(/\|$/, "")
+    .split("|")
+    .map((cell) => cell.trim());
+}
+
 function renderBlock(lines: string[]) {
   const html: string[] = [];
   let paragraph: string[] = [];
@@ -69,6 +82,27 @@ function renderBlock(lines: string[]) {
     }
   };
 
+  const flushTable = (tableLines: string[]) => {
+    if (tableLines.length < 2) return;
+
+    const [headerLine, ...bodyLines] = tableLines;
+    const headers = parseTableRow(headerLine);
+    const rows = bodyLines.map(parseTableRow);
+
+    html.push(
+      [
+        "<table>",
+        "<thead>",
+        `<tr>${headers.map((cell) => `<th>${renderInline(cell)}</th>`).join("")}</tr>`,
+        "</thead>",
+        "<tbody>",
+        ...rows.map((row) => `<tr>${row.map((cell) => `<td>${renderInline(cell)}</td>`).join("")}</tr>`),
+        "</tbody>",
+        "</table>",
+      ].join("\n"),
+    );
+  };
+
   const flushAll = () => {
     flushParagraph();
     flushList();
@@ -77,7 +111,8 @@ function renderBlock(lines: string[]) {
     flushCode();
   };
 
-  for (const rawLine of lines) {
+  for (let index = 0; index < lines.length; index += 1) {
+    const rawLine = lines[index];
     const line = rawLine.trimEnd();
     const trimmed = line.trim();
 
@@ -130,6 +165,27 @@ function renderBlock(lines: string[]) {
       flushList();
       flushOrdered();
       quoteLines.push(trimmed.replace(/^>\s?/, ""));
+      continue;
+    }
+
+    const nextLine = lines[index + 1]?.trim() ?? "";
+    if (trimmed.includes("|") && isTableDivider(nextLine)) {
+      flushAll();
+
+      const tableLines: string[] = [trimmed];
+      index += 2;
+      while (index < lines.length) {
+        const candidate = lines[index].trim();
+        if (!candidate || !candidate.includes("|")) {
+          index -= 1;
+          break;
+        }
+
+        tableLines.push(candidate);
+        index += 1;
+      }
+
+      flushTable(tableLines);
       continue;
     }
 

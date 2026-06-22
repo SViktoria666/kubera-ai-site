@@ -629,6 +629,11 @@ input[type="range"] {
   background: rgba(255, 255, 255, 0.06);
 }
 
+.case-card-link {
+  display: block;
+  color: inherit;
+}
+
 .case-card img {
   display: block;
   width: 100%;
@@ -865,6 +870,39 @@ input[type="range"] {
   color: #ffc94b;
   text-decoration: underline;
   text-underline-offset: 2px;
+}
+
+.blog-markdown table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 0;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.blog-markdown th,
+.blog-markdown td {
+  padding: 12px 14px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+  border-right: 1px solid rgba(255, 255, 255, 0.12);
+  vertical-align: top;
+  text-align: left;
+}
+
+.blog-markdown th:last-child,
+.blog-markdown td:last-child {
+  border-right: 0;
+}
+
+.blog-markdown thead th {
+  background: rgba(255, 255, 255, 0.06);
+  color: #fff8dc;
+}
+
+.blog-markdown tbody tr:last-child td {
+  border-bottom: 0;
 }
 
 .blog-article-backlink {
