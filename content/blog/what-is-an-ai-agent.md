@@ -2,7 +2,10 @@
 title: "What Is an AI Agent? What Most Guides Get Wrong — And What Your Business Actually Needs"
 slug: "what-is-an-ai-agent"
 description: "Most AI agent guides explain the technology. This one explains the business decision. Learn what AI agents actually do — and when they create real value."
+seoTitle: "What Is an AI Agent? What Most Guides Get Wrong — And What Your Business Actually Needs"
+metaDescription: "Most AI agent guides explain the technology. This one explains the business decision. Learn what AI agents actually do — and when they create real value."
 date: "2026-06-14"
+publishedAt: "2026-06-14"
 tags: ["ai agent", "ai automation", "business operations", "n8n", "workflow design"]
 status: "published"
 language: "en"

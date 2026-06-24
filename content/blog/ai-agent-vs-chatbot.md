@@ -2,7 +2,10 @@
 title: "AI Agent vs Chatbot: What's the Difference and Which Does Your Business Need?"
 slug: "ai-agent-vs-chatbot"
 description: "Chatbots answer questions. AI agents take action. Learn the operational difference and how to choose the right system for your business."
+seoTitle: "AI Agent vs Chatbot: What's the Difference and Which Does Your Business Need?"
+metaDescription: "Chatbots answer questions. AI agents take action. Learn the operational difference and how to choose the right system for your business."
 date: "2026-06-18"
+publishedAt: "2026-06-18"
 tags: ["ai agent", "chatbot", "ai automation", "business systems", "n8n"]
 status: "published"
 language: "en"

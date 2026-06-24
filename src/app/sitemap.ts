@@ -1,5 +1,7 @@
 import type { MetadataRoute } from "next";
+import { caseStudies } from "@/content/cases";
 import { getAllBlogPosts } from "@/content/blog";
+import { getBlogPublishedDate } from "@/content/blog/helpers";
 import { countries } from "@/content/countries/countries";
 import { geoRoutes } from "@/content/geo/catalog";
 
@@ -32,9 +34,21 @@ export default function sitemap(): MetadataRoute.Sitemap {
     })),
     ...getAllBlogPosts().map((post) => ({
       url: `${baseUrl}${post.url}`,
-      lastModified: new Date(post.frontmatter.date),
+      lastModified: new Date(getBlogPublishedDate(post)),
       changeFrequency: "monthly" as const,
       priority: 0.66,
+    })),
+    ...caseStudies.map((caseStudy) => ({
+      url: `${baseUrl}/cases/${caseStudy.slug}`,
+      lastModified,
+      changeFrequency: "monthly" as const,
+      priority: 0.74,
+    })),
+    ...caseStudies.map((caseStudy) => ({
+      url: `${baseUrl}/ru/keysy/${caseStudy.slug}`,
+      lastModified,
+      changeFrequency: "monthly" as const,
+      priority: 0.7,
     })),
     ...countries.map((country) => ({
       url: `${baseUrl}/en/${country.slug}`,

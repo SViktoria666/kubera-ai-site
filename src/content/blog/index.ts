@@ -3,6 +3,7 @@ import "server-only";
 import fs from "node:fs";
 import path from "node:path";
 import { blogConfig } from "./meta";
+import { getBlogPublishedDate } from "./helpers";
 
 export type BlogLanguage = "en" | "ru" | "es" | string;
 export type BlogStatus = "draft" | "approved" | "published" | string;
@@ -11,7 +12,10 @@ export type BlogFrontmatter = {
   title: string;
   slug: string;
   description: string;
+  seoTitle: string;
+  metaDescription: string;
   date: string;
+  publishedAt: string;
   tags: string[];
   status: BlogStatus;
   language: BlogLanguage;
@@ -99,7 +103,7 @@ function parseFrontmatter(raw: string): { frontmatter: Partial<BlogFrontmatter>;
       continue;
     }
 
-    if (key === "title" || key === "slug" || key === "description" || key === "date" || key === "status" || key === "language" || key === "category") {
+    if (key === "title" || key === "slug" || key === "description" || key === "seoTitle" || key === "metaDescription" || key === "date" || key === "publishedAt" || key === "status" || key === "language" || key === "category") {
       frontmatter[key] = String(parsed);
     }
   }
@@ -127,14 +131,17 @@ function normalizePost(fileName: string, raw: string): BlogPost | null {
     title: String(parsed.frontmatter.title ?? ""),
     slug,
     description: String(parsed.frontmatter.description ?? ""),
+    seoTitle: String(parsed.frontmatter.seoTitle ?? ""),
+    metaDescription: String(parsed.frontmatter.metaDescription ?? ""),
     date: String(parsed.frontmatter.date ?? ""),
+    publishedAt: String(parsed.frontmatter.publishedAt ?? ""),
     tags: Array.isArray(parsed.frontmatter.tags) ? parsed.frontmatter.tags.map((tag) => String(tag).trim()).filter(Boolean) : [],
     status: String(parsed.frontmatter.status ?? "draft"),
     language: String(parsed.frontmatter.language ?? blogConfig.defaultLanguage),
     category: String(parsed.frontmatter.category ?? blogConfig.defaultCategory),
   };
 
-  const requiredFields: Array<keyof BlogFrontmatter> = ["title", "slug", "description", "date", "tags", "status", "language", "category"];
+  const requiredFields: Array<keyof BlogFrontmatter> = ["title", "slug", "description", "seoTitle", "metaDescription", "date", "publishedAt", "tags", "status", "language", "category"];
   const missing = requiredFields.filter((field) => {
     const value = frontmatter[field];
     return Array.isArray(value) ? value.length === 0 : String(value).trim().length === 0;
@@ -182,14 +189,16 @@ export function getAllBlogPosts() {
     }
   }
 
-  return posts.sort((left, right) => {
-    const leftDate = Date.parse(left.frontmatter.date) || 0;
-    const rightDate = Date.parse(right.frontmatter.date) || 0;
+  const sortedPosts = posts.sort((left, right) => {
+    const leftDate = Date.parse(getBlogPublishedDate(left)) || 0;
+    const rightDate = Date.parse(getBlogPublishedDate(right)) || 0;
     if (leftDate !== rightDate) {
       return rightDate - leftDate;
     }
     return left.frontmatter.title.localeCompare(right.frontmatter.title);
   });
+
+  return sortedPosts;
 }
 
 export function getBlogPostBySlug(slug: string) {

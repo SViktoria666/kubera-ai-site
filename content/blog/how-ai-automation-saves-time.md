@@ -2,7 +2,10 @@
 title: "How AI Automation Saves 20+ Hours Per Week for Small Businesses"
 slug: "how-ai-automation-saves-time"
 description: "A practical breakdown of where small businesses lose time and how AI automation can remove 20+ hours of manual work each week."
+seoTitle: "How AI Automation Saves 20+ Hours Per Week for Small Businesses"
+metaDescription: "A practical breakdown of where small businesses lose time and how AI automation can remove 20+ hours of manual work each week."
 date: "2026-06-20"
+publishedAt: "2026-06-20"
 tags: ["ai automation", "small business", "time savings", "n8n", "workflow design"]
 status: "published"
 language: "en"

@@ -5,6 +5,7 @@ slug: "claude-vs-chatgpt-vs-gemini-vs-qwen-vs-deepseek"
 description: "There is no single best AI model. Learn which model fits which business task — content, sales, support, coding, and automation — with a clear decision matrix."
 metaDescription: "There is no single best AI model. Learn which model fits which business task — content, sales, support, coding, and automation — with a clear decision matrix."
 date: "2026-06-23"
+publishedAt: "2026-06-23"
 tags: ["ai models", "claude", "chatgpt", "gemini", "qwen", "deepseek", "business automation"]
 status: "published"
 language: "en"

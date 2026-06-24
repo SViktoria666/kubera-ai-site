@@ -1,5 +1,6 @@
 import Link from "next/link";
 import type { BlogPost } from "@/content/blog";
+import { getBlogPublishedDate, getBlogSeoDescription } from "@/content/blog/helpers";
 import { siteConfig } from "@/content/site";
 import { MarkdownRenderer } from "./MarkdownRenderer";
 
@@ -36,10 +37,10 @@ export function BlogArticlePage({ post }: BlogArticlePageProps) {
       "@id": canonicalUrl,
     },
     headline: post.frontmatter.title,
-    description: post.frontmatter.description,
+    description: getBlogSeoDescription(post),
     image: `${siteConfig.url}${siteConfig.defaultOgImage}`,
-    datePublished: post.frontmatter.date,
-    dateModified: post.frontmatter.date,
+    datePublished: getBlogPublishedDate(post),
+    dateModified: getBlogPublishedDate(post),
     author,
     publisher: author,
     inLanguage: post.frontmatter.language === "ru" ? "ru-RU" : post.frontmatter.language === "es" ? "es-ES" : "en-US",
@@ -58,7 +59,7 @@ export function BlogArticlePage({ post }: BlogArticlePageProps) {
           <h1 className="section-title blog-article-title">{post.frontmatter.title}</h1>
           <p className="lead blog-article-description">{post.frontmatter.description}</p>
           <div className="blog-article-meta">
-            <time dateTime={post.frontmatter.date}>{formatDate(post.frontmatter.date)}</time>
+            <time dateTime={getBlogPublishedDate(post)}>{formatDate(getBlogPublishedDate(post))}</time>
             <span>{post.frontmatter.language.toUpperCase()}</span>
             <span>{post.frontmatter.category}</span>
           </div>

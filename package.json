@@ -4,8 +4,9 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
+    "validate:blog": "node scripts/validate-blog-content.mjs",
     "generate:geo-kb": "node scripts/generate-geo-kb.mjs",
-    "prebuild": "npm run generate:geo-kb",
+    "prebuild": "npm run validate:blog && npm run generate:geo-kb",
     "build": "next build",
     "start": "next start",
     "typecheck": "tsc --noEmit"

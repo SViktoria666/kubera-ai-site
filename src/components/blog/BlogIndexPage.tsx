@@ -1,5 +1,6 @@
 import Link from "next/link";
 import type { BlogPost } from "@/content/blog";
+import { getBlogPublishedDate } from "@/content/blog/helpers";
 
 type BlogIndexPageProps = {
   locale: "en" | "ru";
@@ -43,7 +44,7 @@ export function BlogIndexPage({ locale, posts }: BlogIndexPageProps) {
                 </h2>
                 <p className="blog-index-description">{post.frontmatter.description}</p>
                 <div className="blog-index-meta">
-                  <time dateTime={post.frontmatter.date}>{formatDate(post.frontmatter.date, locale)}</time>
+                  <time dateTime={getBlogPublishedDate(post)}>{formatDate(getBlogPublishedDate(post), locale)}</time>
                   <span>{post.frontmatter.category}</span>
                 </div>
               </article>

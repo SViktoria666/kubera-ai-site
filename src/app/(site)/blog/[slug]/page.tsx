@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { BlogArticlePage } from "@/components/blog/BlogArticlePage";
 import { getBlogPostBySlug, getBlogPostSlugs } from "@/content/blog";
-import { createPageMetadata } from "@/content/seo";
+import { buildBlogPageMetadata } from "@/content/blog/helpers";
 
 type Params = {
   params: Promise<{ slug: string }>;
@@ -20,12 +20,7 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
     return {};
   }
 
-  return createPageMetadata({
-    title: post.frontmatter.title,
-    description: post.frontmatter.description,
-    path: `/blog/${post.frontmatter.slug}`,
-    locale: post.frontmatter.language === "ru" ? "ru" : "en",
-  });
+  return buildBlogPageMetadata(post);
 }
 
 export default async function BlogArticleRoute({ params }: Params) {
