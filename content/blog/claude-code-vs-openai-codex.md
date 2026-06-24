@@ -35,6 +35,17 @@ Codex saves more time specifically when the task is well-defined, terminal-based
 
 So the honest, single-sentence version: if you had to pick one tool for general small-business technical work, Claude Code saves more time more often - but Codex saves more time on the specific slice of work it is built for, and the businesses getting the most value are not choosing one exclusively. The rest of this article explains exactly where that line sits, so you are not guessing.
 
+## Quick Decision Matrix
+
+| Situation | Better Fit | Why |
+| --- | --- | --- |
+| Long-running frontend or full-stack work | Claude Code | It keeps context across multi-file changes and iterative edits. |
+| Backend scripts and terminal-heavy automation | Codex | It is optimized for delegated shell work and isolated execution. |
+| Work that needs constant live supervision | Claude Code | You can watch changes happen locally and intervene sooner. |
+| Well-scoped tasks you want to hand off | Codex | The cloud sandbox is built for asynchronous delegation. |
+| High-risk production changes | Neither without review | Human approval is still the control that matters. |
+| General small-business development work | Claude Code | It saves more time more often across mixed project work. |
+
 ## What These Tools Actually Are
 
 Claude Code is Anthropic's coding agent, built around a terminal-first, local-first architecture. It runs in your command line, reads your actual codebase directly from your machine, and makes coordinated changes across multiple files using an understanding of the project it builds as it works - rather than requiring you to manually select which files matter. Changes happen locally, under your direct oversight, with explicit approval required for higher-risk operations.
