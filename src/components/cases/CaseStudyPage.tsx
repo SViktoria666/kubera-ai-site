@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import type { ReactNode } from "react";
 import type { CaseLocale, CaseStudy } from "@/content/cases";
 import { getCasePageContent } from "@/content/cases";
 
@@ -15,6 +16,11 @@ type ContentCardProps = {
   bullets?: string[];
   content?: string;
   preformatted?: boolean;
+};
+
+type CaseSectionProps = {
+  children: ReactNode;
+  tone?: "soft" | "dark";
 };
 
 type SectionCopy = {
@@ -63,9 +69,17 @@ const sectionCopy: Record<CaseLocale, SectionCopy> = {
   },
 };
 
+function CaseSection({ children, tone = "soft" }: CaseSectionProps) {
+  return (
+    <section className={`section section-${tone} case-study-section`}>
+      <div className="container case-study-flow">{children}</div>
+    </section>
+  );
+}
+
 function ContentCard({ eyebrow, title, intro, bullets, content, preformatted = false }: ContentCardProps) {
   return (
-    <article className="card">
+    <article className="card case-block">
       <p className="eyebrow">{eyebrow}</p>
       <h2 className="section-title" style={{ marginBottom: "12px" }}>
         {title}
@@ -256,72 +270,73 @@ function DetailedCaseStudyPage({ caseStudy, locale }: CaseStudyPageProps) {
         </div>
       </section>
 
-      <section className="section section-soft">
-        <div className="container grid case-detail-grid">
-          <ContentCard eyebrow={copy.intro.eyebrow} title={copy.intro.title} content={content.intro} />
-          <article className="case-card">
-            <Image src={caseStudy.imagePath} alt={caseStudy.imageAlt} width={1254} height={1254} sizes="(max-width: 720px) calc(100vw - 32px), 50vw" />
-          </article>
-        </div>
-      </section>
+      <CaseSection tone="soft">
+        <ContentCard eyebrow={copy.intro.eyebrow} title={copy.intro.title} content={content.intro} />
+        <figure className="case-media">
+          <Image src={caseStudy.imagePath} alt={caseStudy.imageAlt} width={1254} height={1254} sizes="(max-width: 720px) calc(100vw - 32px), 100vw" />
+        </figure>
+      </CaseSection>
 
-      <section className="section section-dark">
-        <div className="container grid case-detail-grid">
-          <ContentCard eyebrow={copy.about.eyebrow} title={copy.about.title} content={content.about} />
-          <ContentCard eyebrow={copy.startingPoint.eyebrow} title={copy.startingPoint.title} intro={content.startingPoint.intro} bullets={content.startingPoint.bullets} />
-        </div>
-      </section>
+      <CaseSection tone="dark">
+        <ContentCard eyebrow={copy.about.eyebrow} title={copy.about.title} content={content.about} />
+        <ContentCard
+          eyebrow={copy.startingPoint.eyebrow}
+          title={copy.startingPoint.title}
+          intro={content.startingPoint.intro}
+          bullets={content.startingPoint.bullets}
+        />
+      </CaseSection>
 
-      <section className="section section-soft">
-        <div className="container grid case-detail-grid">
-          <ContentCard eyebrow={copy.projectGoal.eyebrow} title={copy.projectGoal.title} intro={content.projectGoal.intro} bullets={content.projectGoal.bullets} />
-          <ContentCard eyebrow={copy.automationStrategy.eyebrow} title={copy.automationStrategy.title} intro={content.automationStrategy.intro} bullets={content.automationStrategy.bullets} />
-        </div>
-      </section>
+      <CaseSection tone="soft">
+        <ContentCard eyebrow={copy.projectGoal.eyebrow} title={copy.projectGoal.title} intro={content.projectGoal.intro} bullets={content.projectGoal.bullets} />
+        <ContentCard
+          eyebrow={copy.automationStrategy.eyebrow}
+          title={copy.automationStrategy.title}
+          intro={content.automationStrategy.intro}
+          bullets={content.automationStrategy.bullets}
+        />
+      </CaseSection>
 
-      <section className="section section-dark">
-        <div className="container grid case-detail-grid">
-          <ContentCard
-            eyebrow={copy.workflowArchitecture.eyebrow}
-            title={copy.workflowArchitecture.title}
-            content={content.workflowArchitecture.join("\n")}
-            preformatted
-          />
-          <ContentCard eyebrow={copy.implemented.eyebrow} title={copy.implemented.title} bullets={content.implemented} />
-        </div>
-      </section>
+      <CaseSection tone="dark">
+        <ContentCard
+          eyebrow={copy.workflowArchitecture.eyebrow}
+          title={copy.workflowArchitecture.title}
+          content={content.workflowArchitecture.join("\n")}
+          preformatted
+        />
+        <ContentCard eyebrow={copy.implemented.eyebrow} title={copy.implemented.title} bullets={content.implemented} />
+      </CaseSection>
 
-      <section className="section section-soft">
-        <div className="container grid case-detail-grid">
-          <ContentCard eyebrow={copy.toolsStack.eyebrow} title={copy.toolsStack.title} bullets={content.toolsStack} />
-          <ContentCard eyebrow={copy.businessEconomics.eyebrow} title={copy.businessEconomics.title} intro={content.businessEconomics.intro} bullets={content.businessEconomics.bullets} />
-        </div>
-      </section>
+      <CaseSection tone="soft">
+        <ContentCard eyebrow={copy.toolsStack.eyebrow} title={copy.toolsStack.title} bullets={content.toolsStack} />
+        <ContentCard
+          eyebrow={copy.businessEconomics.eyebrow}
+          title={copy.businessEconomics.title}
+          intro={content.businessEconomics.intro}
+          bullets={content.businessEconomics.bullets}
+        />
+      </CaseSection>
 
-      <section className="section section-dark">
-        <div className="container grid case-detail-grid">
-          <ContentCard eyebrow={copy.expectedResults.eyebrow} title={copy.expectedResults.title} bullets={content.expectedResults} />
-          <ContentCard eyebrow={copy.whatBusinessGets.eyebrow} title={copy.whatBusinessGets.title} bullets={content.whatBusinessGets} />
-        </div>
-      </section>
+      <CaseSection tone="dark">
+        <ContentCard eyebrow={copy.expectedResults.eyebrow} title={copy.expectedResults.title} bullets={content.expectedResults} />
+        <ContentCard eyebrow={copy.whatBusinessGets.eyebrow} title={copy.whatBusinessGets.title} bullets={content.whatBusinessGets} />
+      </CaseSection>
 
-      <section className="section section-soft">
-        <div className="container grid case-detail-grid">
-          <ContentCard eyebrow={copy.conclusion.eyebrow} title={copy.conclusion.title} content={content.conclusion} />
-          <article className="card" style={{ display: "grid", alignContent: "start", gap: "14px" }}>
-            <p className="eyebrow">CTA</p>
-            <h2 className="section-title" style={{ marginBottom: "0" }}>
-              {content.ctaLabel}
-            </h2>
-            <p className="muted" style={{ lineHeight: 1.7 }}>
-              {content.ctaBody}
-            </p>
-            <Link className="button case-cta-button" href={content.ctaHref}>
-              {content.ctaLabel}
-            </Link>
-          </article>
-        </div>
-      </section>
+      <CaseSection tone="soft">
+        <ContentCard eyebrow={copy.conclusion.eyebrow} title={copy.conclusion.title} content={content.conclusion} />
+        <article className="card case-cta-card">
+          <p className="eyebrow">CTA</p>
+          <h2 className="section-title" style={{ marginBottom: "0" }}>
+            {content.ctaLabel}
+          </h2>
+          <p className="muted" style={{ lineHeight: 1.7 }}>
+            {content.ctaBody}
+          </p>
+          <Link className="button case-cta-button" href={content.ctaHref}>
+            {content.ctaLabel}
+          </Link>
+        </article>
+      </CaseSection>
     </main>
   );
 }
