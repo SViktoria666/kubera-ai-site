@@ -18,48 +18,48 @@ type ContentCardProps = {
 };
 
 type SectionCopy = {
-  intro: string;
-  about: string;
-  startingPoint: string;
-  projectGoal: string;
-  automationStrategy: string;
-  workflowArchitecture: string;
-  implemented: string;
-  toolsStack: string;
-  businessEconomics: string;
-  expectedResults: string;
-  whatBusinessGets: string;
-  conclusion: string;
+  intro: { eyebrow: string; title: string };
+  about: { eyebrow: string; title: string };
+  startingPoint: { eyebrow: string; title: string };
+  projectGoal: { eyebrow: string; title: string };
+  automationStrategy: { eyebrow: string; title: string };
+  workflowArchitecture: { eyebrow: string; title: string };
+  implemented: { eyebrow: string; title: string };
+  toolsStack: { eyebrow: string; title: string };
+  businessEconomics: { eyebrow: string; title: string };
+  expectedResults: { eyebrow: string; title: string };
+  whatBusinessGets: { eyebrow: string; title: string };
+  conclusion: { eyebrow: string; title: string };
 };
 
 const sectionCopy: Record<CaseLocale, SectionCopy> = {
   en: {
-    intro: "Short intro",
-    about: "About the project",
-    startingPoint: "Initial situation",
-    projectGoal: "Project goal",
-    automationStrategy: "Automation strategy",
-    workflowArchitecture: "Workflow architecture",
-    implemented: "What was implemented",
-    toolsStack: "Tools / Stack",
-    businessEconomics: "Business economics",
-    expectedResults: "Expected results",
-    whatBusinessGets: "What the business gets",
-    conclusion: "Conclusion",
+    intro: { eyebrow: "Intro", title: "Short intro" },
+    about: { eyebrow: "About", title: "About the project" },
+    startingPoint: { eyebrow: "Starting point", title: "Initial situation" },
+    projectGoal: { eyebrow: "Goal", title: "Project goal" },
+    automationStrategy: { eyebrow: "Strategy", title: "Automation strategy" },
+    workflowArchitecture: { eyebrow: "Architecture", title: "Workflow architecture" },
+    implemented: { eyebrow: "Implemented", title: "What was implemented" },
+    toolsStack: { eyebrow: "Tools / Stack", title: "Tools / Stack" },
+    businessEconomics: { eyebrow: "Economics", title: "Business economics" },
+    expectedResults: { eyebrow: "Results", title: "Expected results" },
+    whatBusinessGets: { eyebrow: "Value", title: "What the business gets" },
+    conclusion: { eyebrow: "Conclusion", title: "Conclusion" },
   },
   ru: {
-    intro: "Краткое вступление",
-    about: "О проекте",
-    startingPoint: "Исходная точка",
-    projectGoal: "Цель проекта",
-    automationStrategy: "Стратегия автоматизации",
-    workflowArchitecture: "Архитектура процесса",
-    implemented: "Что было реализовано",
-    toolsStack: "Инструменты / стек",
-    businessEconomics: "Бизнес-экономика",
-    expectedResults: "Ожидаемые результаты",
-    whatBusinessGets: "Что получает бизнес",
-    conclusion: "Заключение",
+    intro: { eyebrow: "Вступление", title: "Краткое вступление" },
+    about: { eyebrow: "О проекте", title: "О проекте" },
+    startingPoint: { eyebrow: "Исходная точка", title: "Исходная точка" },
+    projectGoal: { eyebrow: "Цель", title: "Цель проекта" },
+    automationStrategy: { eyebrow: "Стратегия", title: "Стратегия автоматизации" },
+    workflowArchitecture: { eyebrow: "Архитектура", title: "Архитектура процесса" },
+    implemented: { eyebrow: "Реализация", title: "Что было реализовано" },
+    toolsStack: { eyebrow: "Стек", title: "Инструменты / стек" },
+    businessEconomics: { eyebrow: "Экономика", title: "Бизнес-экономика" },
+    expectedResults: { eyebrow: "Результаты", title: "Ожидаемые результаты" },
+    whatBusinessGets: { eyebrow: "Ценность", title: "Что получает бизнес" },
+    conclusion: { eyebrow: "Заключение", title: "Заключение" },
   },
 };
 
@@ -258,7 +258,7 @@ function DetailedCaseStudyPage({ caseStudy, locale }: CaseStudyPageProps) {
 
       <section className="section section-soft">
         <div className="container grid case-detail-grid">
-          <ContentCard eyebrow="Intro" title={copy.intro} content={content.intro} />
+          <ContentCard eyebrow={copy.intro.eyebrow} title={copy.intro.title} content={content.intro} />
           <article className="case-card">
             <Image src={caseStudy.imagePath} alt={caseStudy.imageAlt} width={1254} height={1254} sizes="(max-width: 720px) calc(100vw - 32px), 50vw" />
           </article>
@@ -267,47 +267,47 @@ function DetailedCaseStudyPage({ caseStudy, locale }: CaseStudyPageProps) {
 
       <section className="section section-dark">
         <div className="container grid case-detail-grid">
-          <ContentCard eyebrow="About" title={copy.about} content={content.about} />
-          <ContentCard eyebrow="Starting point" title={copy.startingPoint} intro={content.startingPoint.intro} bullets={content.startingPoint.bullets} />
+          <ContentCard eyebrow={copy.about.eyebrow} title={copy.about.title} content={content.about} />
+          <ContentCard eyebrow={copy.startingPoint.eyebrow} title={copy.startingPoint.title} intro={content.startingPoint.intro} bullets={content.startingPoint.bullets} />
         </div>
       </section>
 
       <section className="section section-soft">
         <div className="container grid case-detail-grid">
-          <ContentCard eyebrow="Goal" title={copy.projectGoal} intro={content.projectGoal.intro} bullets={content.projectGoal.bullets} />
-          <ContentCard eyebrow="Strategy" title={copy.automationStrategy} intro={content.automationStrategy.intro} bullets={content.automationStrategy.bullets} />
+          <ContentCard eyebrow={copy.projectGoal.eyebrow} title={copy.projectGoal.title} intro={content.projectGoal.intro} bullets={content.projectGoal.bullets} />
+          <ContentCard eyebrow={copy.automationStrategy.eyebrow} title={copy.automationStrategy.title} intro={content.automationStrategy.intro} bullets={content.automationStrategy.bullets} />
         </div>
       </section>
 
       <section className="section section-dark">
         <div className="container grid case-detail-grid">
           <ContentCard
-            eyebrow="Architecture"
-            title={copy.workflowArchitecture}
+            eyebrow={copy.workflowArchitecture.eyebrow}
+            title={copy.workflowArchitecture.title}
             content={content.workflowArchitecture.join("\n")}
             preformatted
           />
-          <ContentCard eyebrow="Implemented" title={copy.implemented} bullets={content.implemented} />
+          <ContentCard eyebrow={copy.implemented.eyebrow} title={copy.implemented.title} bullets={content.implemented} />
         </div>
       </section>
 
       <section className="section section-soft">
         <div className="container grid case-detail-grid">
-          <ContentCard eyebrow="Tools / Stack" title={copy.toolsStack} bullets={content.toolsStack} />
-          <ContentCard eyebrow="Economics" title={copy.businessEconomics} intro={content.businessEconomics.intro} bullets={content.businessEconomics.bullets} />
+          <ContentCard eyebrow={copy.toolsStack.eyebrow} title={copy.toolsStack.title} bullets={content.toolsStack} />
+          <ContentCard eyebrow={copy.businessEconomics.eyebrow} title={copy.businessEconomics.title} intro={content.businessEconomics.intro} bullets={content.businessEconomics.bullets} />
         </div>
       </section>
 
       <section className="section section-dark">
         <div className="container grid case-detail-grid">
-          <ContentCard eyebrow="Results" title={copy.expectedResults} bullets={content.expectedResults} />
-          <ContentCard eyebrow="Value" title={copy.whatBusinessGets} bullets={content.whatBusinessGets} />
+          <ContentCard eyebrow={copy.expectedResults.eyebrow} title={copy.expectedResults.title} bullets={content.expectedResults} />
+          <ContentCard eyebrow={copy.whatBusinessGets.eyebrow} title={copy.whatBusinessGets.title} bullets={content.whatBusinessGets} />
         </div>
       </section>
 
       <section className="section section-soft">
         <div className="container grid case-detail-grid">
-          <ContentCard eyebrow="Conclusion" title={copy.conclusion} content={content.conclusion} />
+          <ContentCard eyebrow={copy.conclusion.eyebrow} title={copy.conclusion.title} content={content.conclusion} />
           <article className="card" style={{ display: "grid", alignContent: "start", gap: "14px" }}>
             <p className="eyebrow">CTA</p>
             <h2 className="section-title" style={{ marginBottom: "0" }}>
