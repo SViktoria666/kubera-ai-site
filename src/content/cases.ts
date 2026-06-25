@@ -71,11 +71,20 @@ export const recommendedCaseImageSpec = {
 } as const;
 
 const baseCaseImages = [
-  "/assets/images/cases/case-dashboard-579c724.png",
-  "/assets/images/cases/case-dashboard-31b871f.png",
-  "/assets/images/cases/case-dashboard-1f8c724.png",
-  "/assets/images/cases/case-dashboard-947c724.png",
-  "/assets/images/cases/case-dashboard-80a071f.png",
+  "/assets/images/cases/customer-communications.png",
+  "/assets/images/cases/sales-leads.png",
+  "/assets/images/cases/internal-processes.png",
+  "/assets/images/cases/hr-hiring.png",
+  "/assets/images/cases/content-marketing.png",
+  "/assets/images/cases/finance-documents.png",
+  "/assets/images/cases/ecommerce-logistics.png",
+  "/assets/images/cases/education-online-schools.png",
+  "/assets/images/cases/real-estate-rentals.png",
+  "/assets/images/cases/hotels-restaurants.png",
+  "/assets/images/cases/transport-logistics.png",
+  "/assets/images/cases/beauty-health.png",
+  "/assets/images/cases/medical-clinics-dental.png",
+  "/assets/images/cases/auto-business-car-rentals.png",
   "/assets/images/cases/case-dashboard-4ac0724.png",
 ] as const;
 
@@ -86,15 +95,15 @@ export const caseImagePaths = [
   baseCaseImages[3],
   baseCaseImages[4],
   baseCaseImages[5],
-  baseCaseImages[0],
-  baseCaseImages[1],
-  baseCaseImages[2],
-  baseCaseImages[3],
-  baseCaseImages[4],
-  baseCaseImages[5],
-  baseCaseImages[0],
-  baseCaseImages[1],
-  baseCaseImages[2],
+  baseCaseImages[6],
+  baseCaseImages[7],
+  baseCaseImages[8],
+  baseCaseImages[9],
+  baseCaseImages[10],
+  baseCaseImages[11],
+  baseCaseImages[12],
+  baseCaseImages[13],
+  baseCaseImages[14],
 ] as const;
 
 export const caseStudies: CaseStudy[] = [
