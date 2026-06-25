@@ -17,6 +17,52 @@ type ContentCardProps = {
   preformatted?: boolean;
 };
 
+type SectionCopy = {
+  intro: string;
+  about: string;
+  startingPoint: string;
+  projectGoal: string;
+  automationStrategy: string;
+  workflowArchitecture: string;
+  implemented: string;
+  toolsStack: string;
+  businessEconomics: string;
+  expectedResults: string;
+  whatBusinessGets: string;
+  conclusion: string;
+};
+
+const sectionCopy: Record<CaseLocale, SectionCopy> = {
+  en: {
+    intro: "Short intro",
+    about: "About the project",
+    startingPoint: "Initial situation",
+    projectGoal: "Project goal",
+    automationStrategy: "Automation strategy",
+    workflowArchitecture: "Workflow architecture",
+    implemented: "What was implemented",
+    toolsStack: "Tools / Stack",
+    businessEconomics: "Business economics",
+    expectedResults: "Expected results",
+    whatBusinessGets: "What the business gets",
+    conclusion: "Conclusion",
+  },
+  ru: {
+    intro: "Краткое вступление",
+    about: "О проекте",
+    startingPoint: "Исходная точка",
+    projectGoal: "Цель проекта",
+    automationStrategy: "Стратегия автоматизации",
+    workflowArchitecture: "Архитектура процесса",
+    implemented: "Что было реализовано",
+    toolsStack: "Инструменты / стек",
+    businessEconomics: "Бизнес-экономика",
+    expectedResults: "Ожидаемые результаты",
+    whatBusinessGets: "Что получает бизнес",
+    conclusion: "Заключение",
+  },
+};
+
 function ContentCard({ eyebrow, title, intro, bullets, content, preformatted = false }: ContentCardProps) {
   return (
     <article className="card">
@@ -184,17 +230,18 @@ function LegacyCaseStudyPage({ caseStudy }: { caseStudy: CaseStudy }) {
 
 function DetailedCaseStudyPage({ caseStudy, locale }: CaseStudyPageProps) {
   const content = getCasePageContent(caseStudy, locale ?? "en");
+  const copy = sectionCopy[locale ?? "en"];
 
   if (!content) {
     return (
-      <main>
+      <main className="case-study-page">
         <LegacyCaseStudyPage caseStudy={caseStudy} />
       </main>
     );
   }
 
   return (
-    <main>
+    <main className="case-study-page">
       <section className="hero">
         <div className="container hero-content">
           <p className="eyebrow">{content.label}</p>
@@ -203,15 +250,15 @@ function DetailedCaseStudyPage({ caseStudy, locale }: CaseStudyPageProps) {
             {content.category}
           </p>
           <p className="lead">{content.short}</p>
-          <Link className="button" href={content.ctaHref}>
+          <Link className="button case-cta-button" href={content.ctaHref}>
             {content.ctaLabel}
           </Link>
         </div>
       </section>
 
       <section className="section section-soft">
-        <div className="container grid">
-          <ContentCard eyebrow="Intro" title="Short intro" content={content.intro} />
+        <div className="container grid case-detail-grid">
+          <ContentCard eyebrow="Intro" title={copy.intro} content={content.intro} />
           <article className="case-card">
             <Image src={caseStudy.imagePath} alt={caseStudy.imageAlt} width={1254} height={1254} sizes="(max-width: 720px) calc(100vw - 32px), 50vw" />
           </article>
@@ -219,48 +266,48 @@ function DetailedCaseStudyPage({ caseStudy, locale }: CaseStudyPageProps) {
       </section>
 
       <section className="section section-dark">
-        <div className="container grid">
-          <ContentCard eyebrow="About" title="About the project" content={content.about} />
-          <ContentCard eyebrow="Starting point" title="Initial situation" intro={content.startingPoint.intro} bullets={content.startingPoint.bullets} />
+        <div className="container grid case-detail-grid">
+          <ContentCard eyebrow="About" title={copy.about} content={content.about} />
+          <ContentCard eyebrow="Starting point" title={copy.startingPoint} intro={content.startingPoint.intro} bullets={content.startingPoint.bullets} />
         </div>
       </section>
 
       <section className="section section-soft">
-        <div className="container grid">
-          <ContentCard eyebrow="Goal" title="Project goal" intro={content.projectGoal.intro} bullets={content.projectGoal.bullets} />
-          <ContentCard eyebrow="Strategy" title="Automation strategy" intro={content.automationStrategy.intro} bullets={content.automationStrategy.bullets} />
+        <div className="container grid case-detail-grid">
+          <ContentCard eyebrow="Goal" title={copy.projectGoal} intro={content.projectGoal.intro} bullets={content.projectGoal.bullets} />
+          <ContentCard eyebrow="Strategy" title={copy.automationStrategy} intro={content.automationStrategy.intro} bullets={content.automationStrategy.bullets} />
         </div>
       </section>
 
       <section className="section section-dark">
-        <div className="container grid">
+        <div className="container grid case-detail-grid">
           <ContentCard
             eyebrow="Architecture"
-            title="Workflow architecture"
+            title={copy.workflowArchitecture}
             content={content.workflowArchitecture.join("\n")}
             preformatted
           />
-          <ContentCard eyebrow="Implemented" title="What was implemented" bullets={content.implemented} />
+          <ContentCard eyebrow="Implemented" title={copy.implemented} bullets={content.implemented} />
         </div>
       </section>
 
       <section className="section section-soft">
-        <div className="container grid">
-          <ContentCard eyebrow="Tools / Stack" title="Tools / Stack" bullets={content.toolsStack} />
-          <ContentCard eyebrow="Economics" title="Business economics" intro={content.businessEconomics.intro} bullets={content.businessEconomics.bullets} />
+        <div className="container grid case-detail-grid">
+          <ContentCard eyebrow="Tools / Stack" title={copy.toolsStack} bullets={content.toolsStack} />
+          <ContentCard eyebrow="Economics" title={copy.businessEconomics} intro={content.businessEconomics.intro} bullets={content.businessEconomics.bullets} />
         </div>
       </section>
 
       <section className="section section-dark">
-        <div className="container grid">
-          <ContentCard eyebrow="Results" title="Expected results" bullets={content.expectedResults} />
-          <ContentCard eyebrow="Value" title="What the business gets" bullets={content.whatBusinessGets} />
+        <div className="container grid case-detail-grid">
+          <ContentCard eyebrow="Results" title={copy.expectedResults} bullets={content.expectedResults} />
+          <ContentCard eyebrow="Value" title={copy.whatBusinessGets} bullets={content.whatBusinessGets} />
         </div>
       </section>
 
       <section className="section section-soft">
-        <div className="container grid">
-          <ContentCard eyebrow="Conclusion" title="Conclusion" content={content.conclusion} />
+        <div className="container grid case-detail-grid">
+          <ContentCard eyebrow="Conclusion" title={copy.conclusion} content={content.conclusion} />
           <article className="card" style={{ display: "grid", alignContent: "start", gap: "14px" }}>
             <p className="eyebrow">CTA</p>
             <h2 className="section-title" style={{ marginBottom: "0" }}>
@@ -269,7 +316,7 @@ function DetailedCaseStudyPage({ caseStudy, locale }: CaseStudyPageProps) {
             <p className="muted" style={{ lineHeight: 1.7 }}>
               {content.ctaBody}
             </p>
-            <Link className="button" href={content.ctaHref}>
+            <Link className="button case-cta-button" href={content.ctaHref}>
               {content.ctaLabel}
             </Link>
           </article>

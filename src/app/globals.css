@@ -640,6 +640,21 @@ input[type="range"] {
   height: auto;
 }
 
+.case-study-page .grid {
+  align-items: start;
+}
+
+.case-study-page .card {
+  min-height: auto;
+}
+
+.case-study-page .button {
+  white-space: normal;
+  text-align: center;
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+
 .contact-layout {
   display: grid;
   grid-template-columns: minmax(0, 0.9fr) minmax(320px, 1.1fr);
@@ -1248,6 +1263,13 @@ input[type="range"] {
   .hero-content .lead {
     max-width: 100%;
     margin: 22px 0 28px;
+  }
+
+  .case-study-page .button {
+    width: 100%;
+    min-height: auto;
+    padding: 14px 18px;
+    line-height: 1.2;
   }
 
   .section {
