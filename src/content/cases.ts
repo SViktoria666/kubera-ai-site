@@ -2281,33 +2281,266 @@ export const caseStudies: CaseStudy[] = [
       },
     },
   },
-  {
-    slug: "landing-page-gpt-nti",
-    title: "Landing Page GPT-NTI",
-    category: "AI Landing Page System",
-    label: "Real Kubera System",
-    short: "Landing page + AI Assistant + WhatsApp / Telegram + CRM + Lead Automation.",
-    problem: [
-      "Traffic reaches the page but follow-up is still manual.",
-      "Leads need instant routing into the right channel.",
-      "The sales team loses context when requests are spread across tools.",
-      "A landing page without automation does not own the workflow end to end.",
-    ],
-    startingPoint: "This is the real system pattern behind a high-conversion landing page: a page that captures the request, qualifies the lead, and continues the conversation automatically.",
-    solution: "Kubera AI combines the landing page, assistant, messenger channels, CRM, and automation layer into one lead-handling system.",
-    workflow: ["Landing page", "AI assistant", "CRM", "WhatsApp or Telegram", "Lead follow-up"],
-    tools: ["AI Assistant", "CRM", "n8n", "WhatsApp", "Telegram", "Email", "Calendar", "Sheets", "API", "VoIP"],
-    expectedOutcome: [
-      "fewer manual tasks",
-      "faster response",
-      "better visibility",
-      "fewer missed requests",
-      "cleaner workflow ownership",
-    ],
-    imagePath: caseImagePaths[14],
-    imageAlt: "Kubera AI landing page GPT-NTI automation system dashboard",
-  },
-];
+    {
+      slug: "landing-page-gpt-nti",
+      title: "B2B Service Provider — Estonia",
+      category: "Landing Page GPT-NTI",
+      label: "AEO-Optimized Landing Page with AI Sales Chat",
+      short:
+        "A B2B service provider was invisible to ChatGPT and Perplexity, and its existing landing pages converted poorly because visitors had no way to get a direct answer without filling out a form. We built an AEO-structured page that AI engines actually cite, paired with an AI chat that qualifies and converts visitors in real time instead of routing them through a form most never finish.",
+      problem: [
+        "AI chat engines could not confidently cite the page.",
+        "Visitors wanted direct answers without form friction.",
+        "Traditional form conversion stayed too low for early-stage researchers.",
+        "The business could not see AI-referral traffic separately from search traffic.",
+      ],
+      startingPoint:
+        "This case is about a small Estonian B2B service provider that fixed both AI visibility and low-friction conversion with one page.",
+      solution:
+        "Kubera AI restructures the landing page for AI-answer extractability and adds an AI sales chat that answers questions immediately before moving qualified visitors toward a call or contact capture step.",
+      workflow: [
+        "Landing page",
+        "AI assistant",
+        "Chat qualification",
+        "CRM",
+        "Lead follow-up",
+      ],
+      tools: ["AI Assistant", "CRM", "n8n", "Chat Widget", "Analytics", "Email", "Calendar", "API", "PostgreSQL"],
+      expectedOutcome: [
+        "AI engines can cite the page more confidently",
+        "more visitors get direct answers without forms",
+        "more qualified leads from the same traffic",
+        "clear separation of AI-referral traffic",
+        "better visibility into chat-to-lead conversion",
+      ],
+      imagePath: caseImagePaths[14],
+      imageAlt: "Kubera AI landing page GPT-NTI automation system dashboard",
+      localized: {
+        en: {
+          cardTitle: "B2B Service Provider — Estonia",
+          title: "B2B Service Provider — Estonia",
+          category: "Landing Page GPT-NTI",
+          label: "AEO-Optimized Landing Page with AI Sales Chat",
+          short:
+            "A B2B service provider was invisible to ChatGPT and Perplexity, and its existing landing pages converted poorly because visitors had no way to get a direct answer without filling out a form. We built an AEO-structured page that AI engines actually cite, paired with an AI chat that qualifies and converts visitors in real time instead of routing them through a form most never finish.",
+          heroTitle: "Your Best Customer Already Asked ChatGPT About You. It Just Didn't Mention Your Name.",
+          intro:
+            "A growing share of B2B buying research now starts in an AI chat window, not a Google search bar — and most company websites are structurally invisible to it. Worse, even the visitors who do land on a typical page convert poorly, because a contact form is a high-friction request in a moment when the visitor just wants a direct answer. This case is about a small Estonian B2B service provider that fixed both problems with one page.",
+          about:
+            "A B2B service provider in Estonia offering specialized professional / consulting services to SMBs, in a category where buyers increasingly research solutions by asking AI assistants directly rather than browsing multiple websites. The company had a standard website with a services page and a contact form — solid SEO fundamentals for traditional Google search, but written in the conventional marketing style (broad claims, no structured direct answers, no FAQ-style content) that AI answer engines have little to extract and cite from.",
+          startingPoint: {
+            intro:
+              "This is a structural gap affecting most small-business websites right now, not a content-quality failure specific to this company:",
+            bullets: [
+              "Zero AI-engine visibility: when a prospective buyer asked ChatGPT, Perplexity, or Gemini a question this company was well positioned to answer, the company's own site never surfaced in the answer because the page wasn't structured in a way these engines could extract a confident, citable answer from",
+              "Low form conversion on the existing page: of visitors who did reach the site, the contact form converted at an estimated 1.5-2.5% — typical for a generic B2B services page with no immediate value exchange",
+              "No mechanism to capture still-deciding visitors: early-stage B2B visitors want a direct answer before they're willing to hand over contact details, and a static page with a contact form gives them no way to get that answer without committing first",
+            ],
+          },
+          projectGoal: {
+            intro:
+              "The page wasn't badly designed by traditional standards — it simply wasn't built for either of the two things now driving a growing share of B2B discovery and conversion: AI-engine citation and low-friction, answer-first interaction.",
+            bullets: [
+              "Restructure the page so AI answer engines can confidently extract and cite it when a relevant buyer question is asked",
+              "Replace the form-first conversion model with an AI chat that gives visitors direct, specific answers immediately",
+              "Track and measure AI-referral traffic separately from traditional search traffic",
+              "Increase the share of visitors who get a real answer and a next step, rather than bouncing off an unanswered question",
+            ],
+          },
+          automationStrategy: {
+            intro:
+              "Two distinct mechanisms, addressing two different moments in the buyer's journey:",
+            bullets: [
+              "Mechanism 1 — AEO / GEO content structuring. The page is rewritten and restructured specifically for extractability: direct-answer sections that state a clear position in the first sentence, explicit comparison and pricing-logic sections, a genuinely useful FAQ section, and schema markup that signals to crawlers exactly what kind of content is on the page.",
+              "Mechanism 2 — AI sales chat replacing the static form. Instead of a contact form as the only conversion path, an embedded AI chat answers visitor questions directly — pricing logic, process, typical timelines, fit-for-my-situation questions — then naturally transitions a genuinely interested visitor toward booking a call or leaving contact details.",
+              "Mechanism 3 — Separated traffic tracking. AI-referral traffic is tracked as its own segment, distinct from organic Google search and paid traffic, because its behavior pattern is different enough to need its own conversion benchmark.",
+            ],
+          },
+          workflowArchitecture: [
+            "[Content Restructuring: Direct-Answer Sections / FAQ / Comparison Tables / Schema Markup]",
+            "        ↓",
+            "[Published Page — Crawlable & Citable by AI Engines]",
+            "        ↓",
+            "   ┌───────────────────┴───────────────────┐",
+            "   ↓                                       ↓",
+            "[Visitor via AI Engine Citation]    [Visitor via Search / Referral]",
+            "   ↓                                       ↓",
+            "   └───────────────────┬───────────────────┘",
+            "                       ↓",
+            "[AI Chat Widget — Answers Direct Questions Using Same Knowledge Base as Page Content]",
+            "                       ↓",
+            "[Visitor Gets Direct Answer: Pricing Logic / Process / Fit-for-Situation]",
+            "                       ↓",
+            "[Qualified Interest? → Natural Transition to Booking a Call / Contact Capture]",
+            "                       ↓",
+            "[CRM Entry: Lead + Source (AI-Referral vs Search vs Direct)]",
+            "                       ↓",
+            "[Owner Dashboard: AI-Referral Traffic Volume, Chat Engagement Rate, Chat-to-Lead Conversion, Citation Frequency Tracking]",
+          ],
+          implemented: [
+            "Full content restructuring of the landing page around direct-answer formatting, structured FAQ, and comparison / pricing-logic sections written for extractability rather than traditional persuasive copy alone",
+            "Schema markup implementation signaling content type and structure to AI crawlers and traditional search engines simultaneously",
+            "Embedded AI chat widget trained on the same knowledge base as the page content, answering visitor questions about pricing logic, process, and service fit in real time",
+            "Natural conversion path within the chat — moving from answered questions to a call-booking or contact-capture step only once the visitor has received genuine value",
+            "Referral-source tracking distinguishing AI-engine citation traffic from traditional organic and paid traffic",
+            "Periodic citation-frequency monitoring — checking whether and how the page appears in AI-engine answers for its target questions",
+            "Owner dashboard tracking AI-referral traffic volume, chat engagement rate, chat-to-lead conversion rate, and traditional form-conversion rate side by side for comparison",
+          ],
+          toolsStack: [
+            "n8n (orchestration for chat-to-CRM handoff and tracking)",
+            "OpenAI / GPT-4o (AI chat conversation engine grounded in the page's own content as its knowledge base)",
+            "Structured content / schema markup (FAQPage, Service, and Organization schema for AI-crawler and search-engine readability)",
+            "Analytics layer with referrer-pattern segmentation",
+            "PostgreSQL (lead CRM + source-attribution tracking)",
+            "Citation-monitoring process (periodic manual and tool-assisted checks of how the page surfaces in ChatGPT / Perplexity / Gemini responses to target queries)",
+          ],
+          businessEconomics: {
+            intro:
+              "Modeled on this provider's profile: B2B services to SMBs, existing site with low-converting contact form, and no prior AEO structuring. Every figure below follows a calculation any small B2B service business can re-run on its own traffic volume and average client value.",
+            bullets: [
+              "Estimated monthly site visitors (search + referral, pre-project): about 600-800 / month",
+              "Contact-form conversion rate: about 1.5-2.5% — roughly 10-18 leads / month from the existing traffic",
+              "At an average client value of about €1,800 and a lead-to-client close rate of about 20-25%, that's roughly 2-4.5 new clients / month from the existing funnel",
+              "Industry-observed AI chat widgets that provide genuine immediate value often see engagement rates of 25-35% among visitors who interact with the chat, with chat-to-lead conversion 3-5x higher than a static form",
+              "Applied conservatively to this provider's traffic, that can mean roughly 16-20 leads / month from chat alone, on top of whatever the form still captures",
+              "Net effect: total monthly leads moving from about 10-18 to an estimated 22-30 / month, without any change in traffic volume",
+              "Additional client revenue from the measurable near-term lever: roughly €3,600-6,300 / month, generated from existing traffic with no increase in traffic acquisition spend",
+            ],
+          },
+          expectedResults: [
+            "Contact-form-only conversion of about 1.5-2.5% supplemented by a chat channel converting higher among engaged visitors",
+            "Total lead volume increasing by roughly 40-60% without additional traffic spend",
+            "Page content structured for AI-engine extractability, with citation frequency tracked as an emerging metric",
+            "Clear separation between AI-referral, organic, and paid traffic in reporting",
+            "A visible distinction between visitors who get an immediate answer and convert warm, versus visitors who bounce off a page that only offered a form",
+          ],
+          whatBusinessGets: [
+            "A landing page built for both purposes a B2B page now needs to serve: traditional search visibility and AI-engine extractability",
+            "A conversion mechanism that meets early-stage researchers where they actually are, wanting an answer, not ready to commit to a callback",
+            "A genuinely new, separately tracked acquisition channel being built methodically, with realistic expectations about its build-up timeline",
+            "Source-level attribution clarity, so marketing decisions are based on which channel actually produces clients",
+          ],
+          conclusion:
+            "A growing share of B2B buyers now ask an AI assistant before they ask Google, and a page written in conventional marketing style simply isn't legible to that audience. Separately, even the visitors who do land on the page the traditional way are being asked to commit to a contact form before they've received a single direct answer. Both problems are solved by restructuring what's already on the page — once to be citable by AI engines, and once to answer the visitor's actual question before asking for anything in return.",
+          ctaLabel: "Want to know if AI engines can currently find and cite your business?",
+          ctaHref: "/contacts",
+          ctaBody:
+            "We'll check how your site currently shows up in AI-generated answers to your most common buyer questions — no commitment, no generic pitch.",
+        },
+        ru: {
+          cardTitle: "B2B-поставщик услуг — Эстония",
+          title: "B2B-поставщик услуг — Эстония",
+          category: "Лендинг GPT-NTI",
+          label: "AEO-оптимизированный лендинг с AI-чатом для продаж",
+          short:
+            "B2B-поставщик услуг был невидим для ChatGPT и Perplexity, а существующие лендинги плохо конвертировали, потому что у посетителей не было способа получить прямой ответ без заполнения формы. Мы создали страницу, структурированную под AEO, которую AI-поисковики реально цитируют, в паре с AI-чатом, который квалифицирует и конвертирует посетителей в реальном времени, вместо того чтобы направлять их через форму, которую большинство никогда не заполняет.",
+          heroTitle: "Ваш лучший клиент уже спрашивал ChatGPT о вас. Просто он не упомянул ваше название",
+          intro:
+            "Всё большая доля исследования перед B2B-покупкой начинается сейчас в окне AI-чата, а не в строке поиска Google — и большинство сайтов компаний структурно невидимы для этого. Хуже того, даже те посетители, которые попадают на обычную страницу, конвертируются плохо, потому что контактная форма — это запрос с высоким трением в момент, когда посетитель просто хочет прямой ответ. Этот кейс — о небольшом эстонском B2B-поставщике услуг, который решил обе проблемы одной страницей.",
+          about:
+            "B2B-поставщик услуг в Эстонии, предлагающий специализированные профессиональные / консалтинговые услуги для малого и среднего бизнеса. У компании был стандартный сайт со страницей услуг и контактной формой — с хорошими основами SEO для традиционного поиска в Google, но написанный в обычном маркетинговом стиле (широкие заявления, без структурированных прямых ответов, без контента в формате FAQ), из которого AI-поисковики могут извлечь и процитировать очень мало.",
+          startingPoint: {
+            intro:
+              "Это структурный разрыв, затрагивающий сейчас большинство сайтов малого бизнеса, а не провал качества контента, специфичный для этой компании:",
+            bullets: [
+              "Нулевая видимость в AI-поисковиках: когда потенциальный покупатель спрашивал ChatGPT, Perplexity или Gemini вопрос, на который эта компания была хорошо способна ответить, собственный сайт компании никогда не появлялся в ответе — не потому что контент конкурента был лучше, а потому что страница не была структурирована так, чтобы эти поисковики могли извлечь из неё уверенный, цитируемый ответ",
+              "Низкая конверсия формы на существующей странице: из посетителей, которые доходили до сайта, контактная форма конвертировала на оценочном уровне 1,5-2,5% — типично для общей B2B-страницы услуг без немедленного обмена ценностью",
+              "Отсутствие механизма захвата еще решающих посетителей: значительная часть B2B-посетителей находится на ранней стадии исследования — они хотят прямой, конкретный ответ прежде чем готовы передать контактные данные, а статичная страница с контактной формой не даёт им способа получить этот ответ без обязательства сначала пройти шаг захвата лида",
+            ],
+          },
+          projectGoal: {
+            intro:
+              "Страница не была плохо спроектирована по традиционным стандартам — она просто не была построена ни для одной из двух вещей, которые сейчас формируют всё большую долю обнаружения и конверсии в B2B: цитирование AI-поисковиками и взаимодействие с низким трением, начинающееся с ответа.",
+            bullets: [
+              "Перестроить контент страницы так, чтобы AI-поисковики могли уверенно извлекать и цитировать его при релевантном вопросе покупателя",
+              "Заменить модель конверсии форма прежде всего на AI-чат, который сразу даёт посетителям прямые, конкретные ответы",
+              "Отслеживать и измерять AI-реферальный трафик отдельно от традиционного поискового трафика",
+              "Увеличить долю посетителей, получающих реальный ответ и следующий шаг, а не уходящих с неотвеченным вопросом",
+            ],
+          },
+          automationStrategy: {
+            intro:
+              "Два отдельных механизма, обращённых к двум разным моментам в пути покупателя:",
+            bullets: [
+              "Механизм 1 — Структурирование контента под AEO / GEO. Страница переписана и перестроена специально под извлекаемость: секции с прямым ответом, формулирующие чёткую позицию в первом предложении, явные секции сравнения и логики ценообразования, действительно полезная секция FAQ, отвечающая на реальные вопросы, которые покупатели задают AI-ассистентам, и schema-разметка, которая сигнализирует краулерам точно, какой тип контента на странице.",
+              "Механизм 2 — AI-чат для продаж, заменяющий статичную форму. Вместо контактной формы как единственного пути конверсии, встроенный AI-чат отвечает на вопросы посетителей напрямую — логика ценообразования, процесс, типичные сроки, вопросы подходит ли это моей ситуации — используя ту же базу знаний, что и AEO-контент, затем естественным образом подводит реально заинтересованного посетителя к записи на звонок или оставлению контактов.",
+              "Механизм 3 — Раздельное отслеживание трафика. AI-реферальный трафик отслеживается как отдельный сегмент, отличный от органического поиска Google и платного трафика, потому что паттерн его поведения отличается достаточно, чтобы требовать собственного бенчмарка конверсии.",
+            ],
+          },
+          workflowArchitecture: [
+            "[Реструктуризация контента: секции прямого ответа / FAQ / таблицы сравнения / schema-разметка]",
+            "        ↓",
+            "[Опубликованная страница — индексируемая и цитируемая AI-поисковиками]",
+            "        ↓",
+            "   ┌───────────────────┴───────────────────┐",
+            "   ↓                                       ↓",
+            "[Посетитель через цитирование AI]   [Посетитель через поиск / рекомендацию]",
+            "   ↓                                       ↓",
+            "   └───────────────────┬───────────────────┘",
+            "                       ↓",
+            "[Виджет AI-чата — отвечает на прямые вопросы, используя ту же базу знаний, что и контент страницы]",
+            "                       ↓",
+            "[Посетитель получает прямой ответ: логика ценообразования / процесс / соответствие ситуации]",
+            "                       ↓",
+            "[Квалифицированный интерес? → естественный переход к записи на звонок / захвату контакта]",
+            "                       ↓",
+            "[Запись в CRM: лид + источник (AI-реферал vs поиск vs прямой)]",
+            "                       ↓",
+            "[Дашборд владельца: объём AI-реферального трафика, процент вовлечения в чат, конверсия чат→лид, отслеживание частоты цитирования]",
+          ],
+          implemented: [
+            "Полная реструктуризация контента лендинга вокруг формата прямого ответа, структурированного FAQ и секций сравнения / логики ценообразования, написанных под извлекаемость, а не только под традиционный убеждающий текст",
+            "Реализация schema-разметки, сигнализирующей тип и структуру контента одновременно AI-краулерам и традиционным поисковым системам",
+            "Встроенный виджет AI-чата, обученный на той же базе знаний, что и контент страницы, отвечающий на вопросы посетителей о логике ценообразования, процессе и соответствии услуги в реальном времени",
+            "Естественный путь конверсии внутри чата — переход от отвеченных вопросов к шагу записи на звонок или захвата контакта только после того, как посетитель получил реальную ценность",
+            "Отслеживание источника обращения, отличающее трафик от цитирования AI-поисковиками от традиционного органического и платного трафика",
+            "Периодический мониторинг частоты цитирования — проверка, появляется ли и как страница в ответах AI-поисковиков на целевые вопросы",
+            "Дашборд владельца, отслеживающий объём AI-реферального трафика, процент вовлечения в чат, конверсию чат→лид и традиционный процент конверсии формы рядом друг с другом для сравнения",
+          ],
+          toolsStack: [
+            "n8n (оркестрация передачи чат→CRM и трекинга)",
+            "OpenAI / GPT-4o (диалоговый движок AI-чата, основанный на собственном контенте страницы как базе знаний)",
+            "Структурированный контент / schema-разметка (FAQPage, Service и Organization schema для читаемости AI-краулерами и поисковыми системами)",
+            "Слой аналитики с сегментацией по паттернам реферера",
+            "PostgreSQL (CRM лидов + отслеживание атрибуции источника)",
+            "Процесс мониторинга цитирования (периодические ручные и инструментально-ассистированные проверки того, как страница появляется в ответах ChatGPT / Perplexity / Gemini на целевые запросы)",
+          ],
+          businessEconomics: {
+            intro:
+              "Рассчитано на профиле этого поставщика: B2B-услуги для МСБ, существующий сайт с низкоконвертирующей контактной формой, без предварительного AEO-структурирования. Каждая цифра ниже следует расчёту, который любой малый B2B-сервисный бизнес может пересчитать на своём объёме трафика и средней стоимости клиента.",
+            bullets: [
+              "Оценочные месячные посетители сайта (поиск + рекомендации, до проекта): около 600-800 / месяц",
+              "Конверсия контактной формы: около 1,5-2,5% — примерно 10-18 лидов / месяц с существующего трафика",
+              "При оценочной средней стоимости клиента около €1,800 и показателе закрытия лид→клиент около 20-25%, это примерно 2-4,5 новых клиента / месяц из существующей воронки",
+              "Наблюдаемый в отрасли паттерн для AI-чат-виджетов, дающих реальную немедленную ценность, — показатель вовлечения 25-35% среди посетителей, которые взаимодействуют с чатом, при конверсии чат→лид 3-5x выше, чем у статичной формы",
+              "Применённое консервативно к трафику этого поставщика, это может дать примерно 16-20 лидов / месяц только из чата, в дополнение к тому, что форма продолжает захватывать у посетителей, полностью пропускающих чат",
+              "Чистый эффект: общий месячный объём лидов растёт с около 10-18 до оценочных 22-30 / месяц, без какого-либо изменения объёма трафика",
+              "Дополнительная выручка от клиентов по измеримому ближайшему рычагу: примерно €3,600-6,300 / месяц, сгенерированная с существующего трафика без увеличения расходов на привлечение трафика",
+            ],
+          },
+          expectedResults: [
+            "Конверсия только контактной формы на уровне около 1,5-2,5%, дополненная каналом чата, конвертирующим заметно выше среди посетителей, которые с ним взаимодействуют",
+            "Оценочный общий объём лидов растёт с существующего трафика примерно на 40-60%, без какого-либо дополнительного расхода на привлечение трафика",
+            "Контент страницы структурирован под извлекаемость AI-поисковиками, с частотой цитирования, отслеживаемой как формирующаяся метрика",
+            "Чёткое разделение между AI-реферальным, органическим и платным трафиком в отчётности",
+            "Видимое различие между посетителями, получающими немедленный ответ и конвертирующимися тёплыми, и посетителями, уходящими со страницы, предлагавшей только форму",
+          ],
+          whatBusinessGets: [
+            "Лендинг, построенный сразу под обе цели, которым теперь должна служить B2B-страница: традиционная видимость в поиске и извлекаемость AI-поисковиками",
+            "Механизм конверсии, встречающий исследователей на ранней стадии там, где они реально находятся — хотящих ответ, а не готовых обязаться на обратный звонок",
+            "Действительно новый, отдельно отслеживаемый канал привлечения, строящийся методично, с реалистичными ожиданиями по таймингу его развития",
+            "Ясность атрибуции на уровне источника, так что маркетинговые решения основаны на том, какой канал реально приносит клиентов",
+          ],
+          conclusion:
+            "Всё большая доля B2B-покупателей сейчас сначала спрашивает AI-ассистента, а потом Google, и страница, написанная в традиционном маркетинговом стиле, просто нечитаема для этой аудитории. Отдельно от этого, даже посетители, попадающие на страницу традиционным путём, вынуждены обязываться на контактную форму до того, как получили хотя бы один прямой ответ, что является более сложным запросом, чем большинство исследователей на ранней стадии готовы совершить. Обе проблемы решаются реструктуризацией того, что уже есть на странице — один раз, чтобы быть цитируемой AI-поисковиками, и один раз, чтобы отвечать на реальный вопрос посетителя прежде, чем что-то просить в ответ.",
+          ctaLabel: "Хотите узнать, могут ли AI-поисковики сейчас найти и процитировать ваш бизнес?",
+          ctaHref: "/contacts",
+          ctaBody:
+            "Проверим, как ваш сайт сейчас появляется в AI-генерируемых ответах на самые частые вопросы ваших покупателей — без обязательств, без шаблонной презентации.",
+        },
+      },
+    },
+  ];
 
 export const caseRoutePaths = caseStudies.map((item) => `/cases/${item.slug}`);
 
