@@ -85,7 +85,7 @@ const baseCaseImages = [
   "/assets/images/cases/beauty-health.png",
   "/assets/images/cases/medical-clinics-dental.png",
   "/assets/images/cases/auto-business-car-rentals.png",
-  "/assets/images/cases/landing-page-gpt-nti-final.svg",
+  "/assets/images/cases/case-dashboard-4ac0724.png",
 ] as const;
 
 export const caseImagePaths = [
