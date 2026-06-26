@@ -1,4 +1,5 @@
 export type CaseLocale = "en" | "ru";
+export type CaseStudyType = "case" | "industry-scenario";
 
 export type CaseContentBlock = {
   intro: string;
@@ -31,6 +32,7 @@ export type CasePageContent = {
 
 export type CaseStudy = {
   slug: string;
+  type?: CaseStudyType;
   title: string;
   category: string;
   label: string;
@@ -596,6 +598,7 @@ export const caseStudies: CaseStudy[] = [
   },
   {
     slug: "internal-processes",
+    type: "industry-scenario",
     title: "Industry Scenario — Internal Processes",
     category: "Internal Processes",
     label: "AI Internal Operations & Knowledge Automation",
@@ -866,6 +869,7 @@ export const caseStudies: CaseStudy[] = [
   },
   {
     slug: "hr-hiring",
+    type: "industry-scenario",
     title: "Industry Scenario — HR & Hiring",
     category: "HR & Hiring",
     label: "AI Recruitment Screening & Onboarding Automation",
@@ -1125,6 +1129,7 @@ export const caseStudies: CaseStudy[] = [
   },
   {
     slug: "content-marketing",
+    type: "industry-scenario",
     title: "Industry Scenario — Content & Marketing",
     category: "Content & Marketing",
     label: "AI Content Production & Distribution Pipeline",

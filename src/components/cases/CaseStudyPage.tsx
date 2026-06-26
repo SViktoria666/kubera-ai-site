@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import type { ReactNode } from "react";
-import type { CaseLocale, CaseStudy } from "@/content/cases";
+import type { CaseLocale, CaseStudy, CaseStudyType } from "@/content/cases";
 import { getCasePageContent } from "@/content/cases";
 
 type CaseStudyPageProps = {
@@ -38,6 +38,11 @@ type SectionCopy = {
   conclusion: { eyebrow: string; title: string };
 };
 
+type SectionTitleSet = {
+  eyebrow: string;
+  title: string;
+};
+
 const sectionCopy: Record<CaseLocale, SectionCopy> = {
   en: {
     intro: { eyebrow: "Intro", title: "Short intro" },
@@ -68,6 +73,27 @@ const sectionCopy: Record<CaseLocale, SectionCopy> = {
     conclusion: { eyebrow: "Заключение", title: "Заключение" },
   },
 };
+
+const implementedSectionCopy: Record<
+  CaseLocale,
+  Record<CaseStudyType, SectionTitleSet>
+> = {
+  en: {
+    case: { eyebrow: "Implemented", title: "What was implemented" },
+    "industry-scenario": { eyebrow: "Recommendation", title: "Recommended Architecture" },
+  },
+  ru: {
+    case: { eyebrow: "Реализация", title: "Что было реализовано" },
+    "industry-scenario": { eyebrow: "Рекомендация", title: "Рекомендуемая архитектура" },
+  },
+};
+
+function getSectionCopy(locale: CaseLocale, type: CaseStudyType): SectionCopy {
+  return {
+    ...sectionCopy[locale],
+    implemented: implementedSectionCopy[locale][type],
+  };
+}
 
 function CaseSection({ children, tone = "soft" }: CaseSectionProps) {
   return (
@@ -244,7 +270,7 @@ function LegacyCaseStudyPage({ caseStudy }: { caseStudy: CaseStudy }) {
 
 function DetailedCaseStudyPage({ caseStudy, locale }: CaseStudyPageProps) {
   const content = getCasePageContent(caseStudy, locale ?? "en");
-  const copy = sectionCopy[locale ?? "en"];
+  const copy = getSectionCopy(locale ?? "en", caseStudy.type ?? "case");
 
   if (!content) {
     return (
