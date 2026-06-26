@@ -2813,9 +2813,9 @@ export const caseStudies: CaseStudy[] = [
             "A fleet operation that can take on more delivery volume without proportionally growing dispatch headcount",
           ],
           conclusion: "This setup makes the most sense for an operator that has grown past the point where one or two dispatchers coordinating by phone and spreadsheet still keep pace — usually somewhere past 15–20 vehicles, where route planning starts taking a visible chunk of the morning and the phone doesn't stop ringing with status checks. The tell is usually a dispatcher who can't take a break because they're the only source of truth for where every vehicle is, or a client relationship that runs on trust built through frequent reassurance calls rather than visibility the client could check themselves.",
-          ctaLabel: "Получить бесплатный аудит автоматизации",
+          ctaLabel: "Get a Free Automation Audit",
           ctaHref: "/contacts",
-          ctaBody: "Хотите узнать, сколько эффективности маршрутов и времени диспетчера ваш парк может терять на ручной координации? Посчитаем размер вашего парка и объём доставок относительно этого сценария — без обязательств, без шаблонной презентации.",
+          ctaBody: "Want to know how much route efficiency and dispatcher time your fleet might be losing to manual coordination? We'll map your fleet size and delivery volume against this scenario — no commitment, no generic pitch.",
         },
         ru: {
           cardTitle: "Отраслевой сценарий — Транспорт и логистика",
