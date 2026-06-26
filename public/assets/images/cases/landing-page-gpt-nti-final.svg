@@ -1,0 +1,124 @@
+<svg width="1254" height="1254" viewBox="0 0 1254 1254" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Landing Page GPT-NTI automation system</title>
+  <desc id="desc">Dark futuristic landing page dashboard with AI assistant, CRM, messenger routing, and lead automation flow.</desc>
+  <defs>
+    <linearGradient id="bg" x1="160" y1="80" x2="1120" y2="1180" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#07111E"/>
+      <stop offset="0.48" stop-color="#0A1830"/>
+      <stop offset="1" stop-color="#04101D"/>
+    </linearGradient>
+    <linearGradient id="panel" x1="294" y1="238" x2="970" y2="952" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#112A50"/>
+      <stop offset="1" stop-color="#071423"/>
+    </linearGradient>
+    <linearGradient id="gold" x1="356" y1="370" x2="876" y2="812" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F3D7A2"/>
+      <stop offset="1" stop-color="#B98A3B"/>
+    </linearGradient>
+    <linearGradient id="blue" x1="330" y1="320" x2="910" y2="890" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#69C9FF"/>
+      <stop offset="1" stop-color="#2E7DFF"/>
+    </linearGradient>
+    <filter id="shadow" x="0" y="0" width="1254" height="1254" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="20" stdDeviation="28" flood-color="#000000" flood-opacity="0.42"/>
+    </filter>
+    <filter id="glow" x="0" y="0" width="1254" height="1254" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <pattern id="grid" width="48" height="48" patternUnits="userSpaceOnUse">
+      <path d="M 48 0 H 0 V 48" stroke="#244468" stroke-opacity="0.18" stroke-width="1"/>
+    </pattern>
+  </defs>
+
+  <rect width="1254" height="1254" rx="48" fill="url(#bg)"/>
+  <rect width="1254" height="1254" rx="48" fill="url(#grid)"/>
+
+  <circle cx="210" cy="210" r="146" fill="#14355F" fill-opacity="0.28" filter="url(#glow)"/>
+  <circle cx="1088" cy="1100" r="188" fill="#1E5FFF" fill-opacity="0.16" filter="url(#glow)"/>
+  <circle cx="1010" cy="218" r="120" fill="#C59A49" fill-opacity="0.12" filter="url(#glow)"/>
+
+  <g filter="url(#shadow)">
+    <rect x="164" y="170" width="926" height="910" rx="42" fill="url(#panel)" stroke="#5CA9FF" stroke-opacity="0.32" stroke-width="2"/>
+    <rect x="196" y="202" width="862" height="846" rx="30" fill="#081321" fill-opacity="0.8" stroke="#8DC8FF" stroke-opacity="0.16"/>
+  </g>
+
+  <rect x="232" y="250" width="790" height="82" rx="20" fill="#0E213A" stroke="#73B9FF" stroke-opacity="0.28"/>
+  <circle cx="279" cy="291" r="13" fill="#FFCB6B"/>
+  <circle cx="319" cy="291" r="13" fill="#74E2FF"/>
+  <circle cx="359" cy="291" r="13" fill="#8EF0A9"/>
+  <rect x="450" y="269" width="280" height="42" rx="14" fill="#112B49" stroke="#69C9FF" stroke-opacity="0.25"/>
+  <rect x="468" y="282" width="108" height="16" rx="8" fill="#D9ECFF" fill-opacity="0.66"/>
+  <rect x="594" y="282" width="118" height="16" rx="8" fill="#D9ECFF" fill-opacity="0.32"/>
+
+  <g filter="url(#glow)">
+    <rect x="232" y="372" width="420" height="544" rx="28" fill="#0B1A2C" stroke="url(#blue)" stroke-width="2"/>
+    <rect x="684" y="372" width="338" height="544" rx="28" fill="#0B1A2C" stroke="url(#gold)" stroke-width="2"/>
+  </g>
+
+  <rect x="268" y="414" width="348" height="56" rx="18" fill="#102640" stroke="#6ED2FF" stroke-opacity="0.24"/>
+  <rect x="268" y="490" width="286" height="18" rx="9" fill="#D8ECFF" fill-opacity="0.52"/>
+  <rect x="268" y="524" width="318" height="18" rx="9" fill="#D8ECFF" fill-opacity="0.28"/>
+  <rect x="268" y="558" width="246" height="18" rx="9" fill="#D8ECFF" fill-opacity="0.28"/>
+  <rect x="268" y="620" width="348" height="156" rx="22" fill="#081423" stroke="#73B9FF" stroke-opacity="0.22"/>
+  <rect x="290" y="648" width="78" height="20" rx="10" fill="#69C9FF" fill-opacity="0.8"/>
+  <rect x="290" y="686" width="284" height="16" rx="8" fill="#BFE6FF" fill-opacity="0.34"/>
+  <rect x="290" y="718" width="238" height="16" rx="8" fill="#BFE6FF" fill-opacity="0.26"/>
+  <rect x="290" y="750" width="198" height="16" rx="8" fill="#BFE6FF" fill-opacity="0.2"/>
+
+  <circle cx="376" cy="918" r="60" fill="#111D2F" stroke="#69C9FF" stroke-opacity="0.38" stroke-width="2"/>
+  <circle cx="376" cy="918" r="34" fill="url(#blue)" fill-opacity="0.88"/>
+  <path d="M360 918 C360 902 392 902 392 918 C392 934 360 934 360 918Z" fill="#081423"/>
+  <path d="M355 893 C359 882 369 876 376 876 C383 876 393 882 397 893" stroke="#D8ECFF" stroke-opacity="0.72" stroke-width="5" stroke-linecap="round"/>
+
+  <rect x="720" y="414" width="270" height="92" rx="22" fill="#0F2239" stroke="#D4A94B" stroke-opacity="0.36"/>
+  <rect x="748" y="442" width="126" height="18" rx="9" fill="#F7E1B0" fill-opacity="0.8"/>
+  <rect x="748" y="468" width="186" height="14" rx="7" fill="#F7E1B0" fill-opacity="0.34"/>
+  <circle cx="952" cy="460" r="26" fill="#11233B" stroke="#D4A94B" stroke-opacity="0.7" stroke-width="2"/>
+  <path d="M942 460H962" stroke="#F7E1B0" stroke-width="4" stroke-linecap="round"/>
+  <path d="M952 450V470" stroke="#F7E1B0" stroke-width="4" stroke-linecap="round"/>
+
+  <rect x="720" y="538" width="270" height="118" rx="22" fill="#0F2239" stroke="#69C9FF" stroke-opacity="0.3"/>
+  <rect x="748" y="568" width="164" height="18" rx="9" fill="#D8ECFF" fill-opacity="0.58"/>
+  <rect x="748" y="600" width="194" height="14" rx="7" fill="#D8ECFF" fill-opacity="0.28"/>
+  <circle cx="952" cy="596" r="26" fill="#11233B" stroke="#69C9FF" stroke-opacity="0.7" stroke-width="2"/>
+  <path d="M940 590L952 602L964 590" stroke="#74E2FF" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M944 606H960" stroke="#74E2FF" stroke-width="4" stroke-linecap="round"/>
+
+  <rect x="720" y="684" width="270" height="152" rx="22" fill="#0F2239" stroke="#8EF0A9" stroke-opacity="0.28"/>
+  <rect x="748" y="716" width="194" height="18" rx="9" fill="#D8ECFF" fill-opacity="0.58"/>
+  <rect x="748" y="748" width="136" height="14" rx="7" fill="#D8ECFF" fill-opacity="0.28"/>
+  <rect x="748" y="778" width="164" height="14" rx="7" fill="#D8ECFF" fill-opacity="0.18"/>
+  <circle cx="952" cy="760" r="26" fill="#11233B" stroke="#8EF0A9" stroke-opacity="0.7" stroke-width="2"/>
+  <path d="M944 760H960" stroke="#8EF0A9" stroke-width="4" stroke-linecap="round"/>
+  <path d="M952 752V768" stroke="#8EF0A9" stroke-width="4" stroke-linecap="round"/>
+
+  <g filter="url(#glow)">
+    <circle cx="627" cy="606" r="88" stroke="url(#gold)" stroke-width="5"/>
+    <circle cx="627" cy="606" r="54" fill="#101E32" stroke="#69C9FF" stroke-opacity="0.55"/>
+  </g>
+  <path d="M603 608C603 592 616 580 632 580H650C662 580 671 589 671 600C671 611 662 620 650 620H628C616 620 607 629 607 641C607 652 616 661 628 661H654" stroke="url(#blue)" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M634 558V558" stroke="#D8ECFF" stroke-width="13" stroke-linecap="round"/>
+  <path d="M620 654H650" stroke="#D8ECFF" stroke-width="8" stroke-linecap="round"/>
+
+  <path d="M512 592 C545 574, 564 564, 592 560" stroke="#69C9FF" stroke-opacity="0.42" stroke-width="4" stroke-linecap="round"/>
+  <path d="M741 592 C708 574, 688 564, 660 560" stroke="#D4A94B" stroke-opacity="0.4" stroke-width="4" stroke-linecap="round"/>
+  <path d="M512 621 C545 631, 565 638, 594 644" stroke="#69C9FF" stroke-opacity="0.28" stroke-width="4" stroke-linecap="round"/>
+  <path d="M741 621 C708 631, 686 638, 658 644" stroke="#D4A94B" stroke-opacity="0.28" stroke-width="4" stroke-linecap="round"/>
+
+  <path d="M240 956 C360 1026, 534 1062, 673 1048 C790 1036, 884 999, 994 924" stroke="url(#blue)" stroke-width="6" stroke-opacity="0.72" stroke-linecap="round"/>
+  <path d="M240 956 C360 1026, 534 1062, 673 1048 C790 1036, 884 999, 994 924" stroke="#D4A94B" stroke-width="2" stroke-opacity="0.34" stroke-linecap="round" stroke-dasharray="4 16"/>
+
+  <g filter="url(#glow)">
+    <rect x="260" y="1008" width="734" height="58" rx="18" fill="#0C1B2D" stroke="#69C9FF" stroke-opacity="0.24"/>
+    <rect x="292" y="1027" width="234" height="18" rx="9" fill="#D8ECFF" fill-opacity="0.54"/>
+    <rect x="544" y="1027" width="198" height="18" rx="9" fill="#D8ECFF" fill-opacity="0.28"/>
+    <rect x="760" y="1027" width="178" height="18" rx="9" fill="#D8ECFF" fill-opacity="0.18"/>
+  </g>
+
+  <text x="250" y="118" fill="#D8ECFF" fill-opacity="0.86" font-family="Arial, Helvetica, sans-serif" font-size="24" letter-spacing="2">LANDING PAGE GPT-NTI</text>
+  <text x="250" y="150" fill="#8FCBFF" fill-opacity="0.7" font-family="Arial, Helvetica, sans-serif" font-size="15" letter-spacing="1.5">AI LANDING, MESSENGER ROUTING, CRM, AUTOMATION</text>
+</svg>
