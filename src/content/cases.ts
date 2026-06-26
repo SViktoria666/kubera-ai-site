@@ -1125,29 +1125,262 @@ export const caseStudies: CaseStudy[] = [
   },
   {
     slug: "content-marketing",
-    title: "Content & Marketing Automation",
+    title: "Industry Scenario — Content & Marketing",
     category: "Content & Marketing",
-    label: "Example Use Case",
-    short: "Auto-generated posts, publishing workflows, brand monitoring, and analytics.",
+    label: "AI Content Production & Distribution Pipeline",
+    short:
+      "Most small marketing teams write something good once, publish it once, and never touch it again. This scenario shows how Kubera AI would design a system that turns one piece of content into a week's worth of material — without hiring anyone new.",
     problem: [
-      "Content production moves slower than the campaign calendar.",
-      "Publishing steps are repeated manually across channels.",
-      "Brand mentions and engagement signals are easy to miss.",
-      "Reporting is split across several platforms.",
+      "Content gets written once and used once.",
+      "Publishing happens in bursts, not on a schedule.",
+      "Every post gets shared once and forgotten.",
+      "Nobody knows what's actually working.",
     ],
-    startingPoint: "Marketing teams usually have good ideas and too many repetitive execution steps: drafting, scheduling, posting, monitoring, and reporting.",
-    solution: "Kubera AI connects content generation, review, publishing, monitoring, and performance reporting into one automation flow.",
-    workflow: ["Content brief", "AI draft", "Review", "Publish", "Analytics update"],
-    tools: ["AI Assistant", "CRM", "n8n", "Email", "Calendar", "Sheets", "API"],
+    startingPoint:
+      "This scenario is built around a profile we see constantly: a company with one person handling marketing — either a dedicated marketer or a founder doing it on the side — running a blog, a LinkedIn page, and an email list. Output usually sits at 1–3 long articles a month, with social posts going out whenever there's time, which isn't often.",
+    solution:
+      "Kubera AI would design a repurposing and distribution system that turns one good article into several platform-ready assets, schedules them on a real calendar, resurfaces them over the following weeks, and feeds performance back into topic planning.",
+    workflow: ["Long-form article", "AI repurposing", "Human review", "Scheduled publishing", "Reshare + analytics feedback"],
+    tools: ["AI Assistant", "CMS", "n8n", "Email", "Calendar", "Sheets", "API"],
     expectedOutcome: [
-      "fewer manual tasks",
-      "faster response",
-      "better visibility",
-      "fewer missed requests",
-      "cleaner workflow ownership",
+      "more content from the same writing effort",
+      "a publishing rhythm that holds up when the week gets busy",
+      "more value from each article over several weeks",
+      "clearer answers on which topics perform best",
+      "no need to hire a second marketer",
     ],
     imagePath: caseImagePaths[4],
     imageAlt: "Kubera AI case dashboard for content and marketing automation",
+    localized: {
+      en: {
+        cardTitle: "Industry Scenario — Content & Marketing",
+        title: "Industry Scenario — Content & Marketing",
+        category: "Content & Marketing",
+        label: "AI Content Production & Distribution Pipeline",
+        short:
+          "Most small marketing teams write something good once, publish it once, and never touch it again. This scenario shows how Kubera AI would design a system that turns one piece of content into a week's worth of material — without hiring anyone new.",
+        heroTitle:
+          "You Already Wrote the Best Post You'll Write This Month. It's Sitting on Page Two of Your Blog, Used Exactly Once.",
+        intro:
+          "A founder or a single marketer writes a genuinely good article, posts it, shares it once on LinkedIn, and moves on. Three weeks later nobody remembers it exists. Meanwhile the same research and the same insight could have become a newsletter section, a short video script, and four more social posts — at almost no extra cost, because the hard part (the thinking) was already done. This Industry Scenario shows how Kubera AI would build the system that makes that happen automatically.",
+        about:
+          "This scenario is built around a profile we see constantly: a company with one person handling marketing — either a dedicated marketer or a founder doing it on the side — running a blog, a LinkedIn page, and an email list. Output usually sits at 1–3 long articles a month, with social posts going out whenever there's time, which isn't often. This isn't a description of one specific client. It's the pattern Kubera AI sees across most small and mid-size B2B companies with under-resourced marketing.",
+        startingPoint: {
+          intro:
+            "None of what follows is a marketing-skill problem. It's a structural one, and it shows up the same way in almost every small team:",
+          bullets: [
+            "Content gets written once and used once. A solid article takes real research and a real point of view to produce. That same article almost never becomes a LinkedIn post, a newsletter, or a short video — not because the ideas inside it aren't good enough, but because turning it into five other formats takes almost as long as writing the original.",
+            "Publishing happens in bursts, not on a schedule. Without a system forcing consistency, output tracks how busy the marketer's week is, not a plan. Industry research is consistent on this point: companies that publish on a steady rhythm grow organic traffic faster than companies that publish the same total volume in irregular bursts — even when the writing quality is identical.",
+            "Every post gets shared once and forgotten. A LinkedIn post goes up, gets shared, and that's it. Most platforms only show that post to a fraction of the audience who happened to be online at that exact moment. The same content, reshared with a different angle two weeks later, would reach a different slice of the same audience — but almost nobody does this manually, because remembering to do it competes with everything else on a one-person team's plate.",
+            "Nobody knows what's actually working. Without consolidated data across channels, content planning runs on gut feeling. The topics that get written about are the ones that feel interesting to write, not the ones that have already proven to bring in traffic or leads.",
+          ],
+        },
+        projectGoal: {
+          intro:
+            "None of this means the content is bad. It means one person's calendar is the ceiling on output, and there's no system turning one good idea into everything it could become.",
+          bullets: [
+            "Get five to six pieces of usable content out of every long article, instead of one",
+            "Make publishing happen on a schedule, not whenever the week allows it",
+            "Reshare and repurpose every piece of content for several weeks after it goes live, instead of treating publish day as the only day it matters",
+            "Build a simple feedback loop so future topics are chosen based on what's actually worked, not just instinct",
+          ],
+        },
+        automationStrategy: {
+          intro:
+            "The expensive part of content marketing is the thinking — the research, the specific point of view, the argument worth making. That part can't be automated, and shouldn't be. Everything after that — reformatting for different channels, scheduling, and reposting — is repetitive work, and that's exactly where this system would focus.",
+          bullets: [
+            "Step one — one article becomes six pieces of content. A long article becomes the source. From it, the system would draft a LinkedIn post, a short Twitter/X thread, a section for the email newsletter, and a short video or audio script — all written in the right tone for each platform, not copy-pasted. A human reviews and edits every draft before it goes out.",
+            "Step two — a real publishing calendar. Content gets drafted ahead of time and scheduled, so output doesn't depend on whether this particular week was busy. The system tracks what's written, what's being reviewed, and what's ready to publish.",
+            "Step three — every piece gets a second, third, and fourth life. Instead of sharing something once, the system would reshare it with a different framing over the following weeks, mention it again in the newsletter, and adapt it into whatever format hasn't been tried yet — getting more total reach from content that's already been written.",
+            "Step four — a feedback loop. Engagement and traffic data from everything published feeds back into a simple report showing which topics and formats actually performed, so the next month's plan is built on evidence instead of a hunch.",
+          ],
+        },
+        workflowArchitecture: [
+          "[Source: Long-Form Article / Guide / Research Piece]",
+          "        ↓",
+          "[AI Agent — Pulls Out Key Points, Arguments, Data]",
+          "        ↓",
+          "   ┌──────────────┬──────────────┬──────────────┬──────────────┐",
+          "   ↓              ↓              ↓              ↓",
+          "[LinkedIn Post Draft] [Short Thread Draft] [Newsletter Section Draft] [Video/Audio Script Draft]",
+          "   ↓              ↓             ↓               ↓",
+          "   └──────────────┴──────────────┴──────────────┘",
+          "                       ↓",
+          "        [Human Reviews & Edits Every Draft]",
+          "                       ↓",
+          "        [Publishing Calendar — Scheduled Across Channels]",
+          "                       ↓",
+          "        [Goes Live + Scheduled Reshares Over the Next 2-4 Weeks]",
+          "                       ↓",
+          "        [Performance Tracking — Engagement by Channel & Topic]",
+          "                       ↓",
+          "        [Feedback Loop → Informs Next Month's Topics]",
+        ],
+        implemented: [
+          "A repurposing engine that takes one long article and drafts a LinkedIn post, a short social thread, a newsletter section, and a short-form script from it — ready for a human to edit, not written from scratch every time",
+          "A publishing calendar that runs independently of how busy any given week is, so content goes out on schedule",
+          "An automatic reshare schedule that brings each piece back into circulation over the following weeks instead of letting it disappear after day one",
+          "One dashboard pulling engagement numbers from every channel into a single view, instead of checking five different platforms separately",
+          "A simple feedback step where next month's topics get chosen based on what already worked, not guesswork",
+        ],
+        toolsStack: [
+          "n8n (runs the whole pipeline — generation, scheduling, reposting)",
+          "OpenAI / GPT-4o (drafts every repurposed format from the source article)",
+          "CMS integration (WordPress, Webflow, or similar — wherever the long-form content already lives)",
+          "Social scheduling API (LinkedIn, Twitter/X, Instagram, depending on the channel mix)",
+          "Email platform integration (Mailchimp or similar, for newsletter drafting and sending)",
+          "Analytics aggregation (pulls engagement data from every platform into one place)",
+          "PostgreSQL (stores the content calendar and performance history)",
+          "A simple dashboard for publishing rhythm and what's actually performing",
+        ],
+        businessEconomics: {
+          intro:
+            "This is a conservative model based on a one-person marketing team producing 1–3 long articles a month with inconsistent social and email output. The numbers below come from publicly available content-marketing benchmarks and general research on publishing consistency and content repurposing — not from a specific client. Every company should check these against its own numbers before relying on them.",
+          bullets: [
+            "A solid, well-researched article (1,500–2,000 words) usually takes one person 6–10 hours — research, writing, editing.",
+            "Writing each repurposed format separately from a blank page — a LinkedIn post, a newsletter section, a script — typically adds another 3–5 hours per article. Producing everything from scratch can mean 9–15 hours of work for a single topic.",
+            "Generating those formats from the source article instead of writing each one cold could reasonably cut that extra time by an estimated 50–60%, saving roughly 1.5–3 hours per article. Across 1–3 articles a month, that's a modeled 2–9 hours of marketing time freed up monthly — worth somewhere around €80–360/month at a typical marketing labor cost of €35–40/hour.",
+            "Industry research on content marketing consistently links steady publishing with stronger long-term organic growth than the same total output published in bursts.",
+            "A single share at publish time usually reaches only a fraction of a channel's full audience. Resharing the same piece with a fresh angle over the following weeks could reasonably lift total reach per piece by an estimated 40–70%, compared to sharing it once and moving on.",
+            "These numbers are a conservative planning estimate based on general industry benchmarks, not a promise — they should be checked against the specific company's real content volume, audience size, and existing conversion numbers before anyone relies on them.",
+          ],
+        },
+        expectedResults: [
+          "Social posts, newsletter sections, and short scripts produced in an estimated 50–60% less time than writing each one separately",
+          "A publishing schedule that holds up even during a busy week",
+          "An estimated 40–70% more total reach per article, from resharing the same content instead of writing more of it",
+          "A monthly view of what's actually working, so future topics aren't picked blind",
+          "One dashboard instead of five separate platform logins to check how things performed",
+        ],
+        whatBusinessGets: [
+          "More content out of the same writing effort, instead of needing to write more from scratch to get more output",
+          "A publishing rhythm that doesn't fall apart the moment things get busy",
+          "More value pulled from everything that's already been written, instead of letting good content disappear after one post",
+          "A clear, data-backed answer to \"what should we write about next,\" instead of relying on a hunch",
+          "The ability to run a more ambitious content calendar without hiring anyone new",
+        ],
+        conclusion:
+          "This setup makes the most sense for a company where the real bottleneck is hours, not ideas — usually a single marketer or a founder doing double duty, producing far less content than the business could actually use. The tell is usually a content calendar that exists in a spreadsheet but rarely gets fully executed, social accounts that go quiet for weeks at a time, or a genuinely strong article that never becomes anything else. Kubera AI recommends this approach because content has an unusual property: the expensive part — the original thinking — only has to happen once, and everything built on top of it is reusable almost for free.",
+        ctaLabel: "Get a Free Automation Audit",
+        ctaHref: "/contacts",
+        ctaBody:
+          "We'll map your current content output and channels against this scenario — no commitment, no generic pitch.",
+      },
+      ru: {
+        cardTitle: "Отраслевой сценарий — Контент и маркетинг",
+        title: "Отраслевой сценарий — Контент и маркетинг",
+        category: "Контент и маркетинг",
+        label: "AI-система производства и распространения контента",
+        short:
+          "Большинство маркетинговых команд из одного человека пишут хороший материал, публикуют его один раз и больше к нему не возвращаются. Этот сценарий показывает, как Kubera AI спроектировала бы систему, превращающую одну статью в недельный запас контента — без найма нового сотрудника.",
+        heroTitle:
+          "Вы уже написали лучший пост этого месяца. Он лежит на второй странице блога — использованный один раз.",
+        intro:
+          "Основатель или единственный маркетолог в компании пишет действительно хорошую статью, публикует её, делится один раз в LinkedIn и идёт дальше. Через три недели об этой статье уже никто не помнит. А ведь то же исследование и та же мысль могли стать письмом для рассылки, сценарием короткого видео и ещё четырьмя постами в соцсетях — почти бесплатно, потому что самая сложная часть, обдумывание, уже была сделана. Этот отраслевой сценарий показывает, как Kubera AI построила бы систему, которая делает это автоматически.",
+        about:
+          "Этот сценарий строится на профиле, который встречается постоянно: в компании маркетингом занимается один человек — либо отдельный маркетолог, либо основатель в свободное от других дел время — ведёт блог, страницу в LinkedIn и email-рассылку. Обычно выходит 1–3 крупные статьи в месяц, а посты в соцсетях появляются, когда находится время — то есть нечасто. Это не описание конкретного клиента. Это паттерн, который Kubera AI видит в большинстве малых и средних B2B-компаний с недозагруженным маркетингом.",
+        startingPoint: {
+          intro:
+            "Ничего из перечисленного ниже не связано с нехваткой маркетинговых навыков. Это структурная проблема, и она проявляется одинаково почти в каждой небольшой команде:",
+          bullets: [
+            "Контент пишется один раз и используется один раз. Хорошая статья требует реального исследования и реальной точки зрения. Та же статья почти никогда не превращается в пост LinkedIn, письмо для рассылки или короткое видео — не потому что идеи в ней недостаточно хороши, а потому что превратить её в пять других форматов занимает почти столько же времени, сколько написать оригинал.",
+            "Публикации выходят рывками, а не по графику. Без системы, которая держит ритм, объём контента зависит от того, насколько занята неделя маркетолога, а не от плана. Отраслевые данные на этот счёт однозначны: компании, публикующие материалы регулярно, растут в органическом трафике быстрее, чем компании, выпускающие тот же объём, но рывками — даже при одинаковом качестве текстов.",
+            "Каждый пост публикуют один раз и забывают. Пост в LinkedIn вышел, его кто-то увидел, и всё. Большинство платформ показывают этот пост только тем, кто оказался онлайн именно в этот момент. Тот же контент, опубликованный заново с другим заголовком через две недели, дошёл бы до другой части той же аудитории — но почти никто этого не делает вручную, потому что в команде из одного человека на это просто не остаётся времени.",
+            "Никто не знает, что реально работает. Без сведённой в одно место аналитики по всем каналам план контента строится на интуиции. Темы выбираются те, которые интересно писать, а не те, которые уже доказали, что приводят трафик или заявки.",
+          ],
+        },
+        projectGoal: {
+          intro:
+            "Всё это не означает, что контент плохой. Это означает, что календарь одного человека — это потолок объёма, а системы, превращающей одну хорошую идею во всё, чем она могла бы стать, просто нет.",
+          bullets: [
+            "Получать пять-шесть готовых единиц контента из каждой крупной статьи вместо одной",
+            "Сделать так, чтобы публикации выходили по графику, а не когда получится",
+            "Возвращать каждый материал в оборот несколько недель после выхода, а не считать день публикации единственным днём, когда он имеет значение",
+            "Построить простую обратную связь, чтобы будущие темы выбирались по тому, что реально сработало, а не только по интуиции",
+          ],
+        },
+        automationStrategy: {
+          intro:
+            "Самая дорогая часть контент-маркетинга — это мышление: исследование, конкретная точка зрения, аргумент, который стоит привести. Эту часть нельзя и не нужно автоматизировать. А вот всё, что идёт после — переформатирование под разные каналы, планирование, повторные публикации — это рутинная работа, и именно на ней сфокусирована эта система.",
+          bullets: [
+            "Шаг первый — одна статья превращается в шесть материалов. Крупная статья становится источником. На её основе система готовит черновик поста для LinkedIn, короткий тред для Twitter/X, секцию для email-рассылки и сценарий короткого видео или аудио — каждый в правильном тоне для своей платформы, а не скопированный напрямую. Человек проверяет и редактирует каждый черновик перед публикацией.",
+            "Шаг второй — настоящий календарь публикаций. Материалы пишутся заранее и ставятся в план, поэтому выпуск контента не зависит от того, насколько загружена конкретная неделя. Система отслеживает, что написано, что на проверке и что готово к публикации.",
+            "Шаг третий — у каждого материала есть вторая, третья и четвёртая жизнь. Вместо одной публикации система возвращает материал в оборот с новым заголовком в последующие недели, упоминает его снова в рассылке и адаптирует в формат, который ещё не пробовали — давая больше общего охвата из уже написанного контента.",
+            "Шаг четвёртый — обратная связь. Данные о вовлечённости и трафике со всех публикаций собираются в простой отчёт, показывающий, какие темы и форматы реально сработали — чтобы план на следующий месяц строился на фактах, а не на догадках.",
+          ],
+        },
+        workflowArchitecture: [
+          "[Источник: крупная статья / гайд / материал исследования]",
+          "        ↓",
+          "[AI-агент — выделяет ключевые мысли, аргументы, данные]",
+          "        ↓",
+          "   ┌──────────────┬──────────────┬──────────────┬──────────────┐",
+          "   ↓              ↓              ↓              ↓",
+          "[Черновик поста LinkedIn] [Черновик короткого треда] [Черновик секции для рассылки] [Черновик сценария видео/аудио]",
+          "   ↓              ↓               ↓               ↓",
+          "   └──────────────┴──────────────┴──────────────┴──────────────┘",
+          "                       ↓",
+          "        [Человек проверяет и редактирует каждый черновик]",
+          "                       ↓",
+          "        [Календарь публикаций — расписание по всем каналам]",
+          "                       ↓",
+          "        [Публикация + повторные выходы в течение 2-4 недель]",
+          "                       ↓",
+          "        [Отслеживание результатов — вовлечённость по каналу и теме]",
+          "                       ↓",
+          "        [Обратная связь → влияет на темы следующего месяца]",
+        ],
+        implemented: [
+          "Система повторного использования контента, которая берёт одну крупную статью и готовит из неё пост LinkedIn, короткий тред, секцию для рассылки и короткий сценарий — готовые для редактирования человеком, а не написанные с нуля каждый раз",
+          "Календарь публикаций, который работает независимо от того, насколько загружена конкретная неделя, чтобы материалы выходили по графику",
+          "Автоматический график повторных публикаций, возвращающий каждый материал в оборот в последующие недели, вместо того чтобы он исчезал после первого дня",
+          "Единый дашборд, собирающий показатели вовлечённости со всех каналов в одном месте, вместо проверки пяти разных платформ по отдельности",
+          "Простой шаг обратной связи, где темы на следующий месяц выбираются по тому, что уже сработало, а не наугад",
+        ],
+        toolsStack: [
+          "n8n (управляет всем процессом — генерация, планирование, повторные публикации)",
+          "OpenAI / GPT-4o (готовит черновики всех форматов на основе исходной статьи)",
+          "интеграция с CMS (WordPress, Webflow или похожая система — там, где уже хранится крупный контент)",
+          "API планирования публикаций в соцсетях (LinkedIn, Twitter/X, Instagram — в зависимости от используемых каналов)",
+          "интеграция с платформой email-рассылок (Mailchimp или аналог — для подготовки и отправки писем)",
+          "сбор аналитики (объединяет показатели вовлечённости со всех платформ в одном месте)",
+          "PostgreSQL (хранит календарь контента и историю результатов)",
+          "простой дашборд для ритма публикаций и того, что реально работает",
+        ],
+        businessEconomics: {
+          intro:
+            "Это консервативная модель, построенная на маркетинге силами одного человека, выпускающего 1–3 крупные статьи в месяц с нерегулярным распространением в соцсетях и рассылке. Цифры ниже основаны на открытых отраслевых ориентирах по контент-маркетингу и общих исследованиях о пользе регулярности публикаций и повторного использования контента — не на данных конкретного клиента. Каждая компания должна проверить эти цифры на своих реальных показателях, прежде чем на них опираться.",
+          bullets: [
+            "Хорошо исследованная статья объёмом 1,500–2,000 слов обычно занимает у одного человека 6–10 часов — на исследование, написание и редактирование.",
+            "Написание каждого производного формата отдельно, с чистого листа — пост в LinkedIn, секция рассылки, сценарий — обычно добавляет ещё 3–5 часов на статью. Если делать всё с нуля, на одну тему может уйти 9–15 часов.",
+            "Если генерировать эти форматы из исходной статьи, а не писать каждый заново, можно разумно ожидать сокращения этого дополнительного времени на оценочные 50–60% — то есть экономию около 1,5–3 часов на статью. При 1–3 статьях в месяц это расчётные 2–9 часов маркетингового времени, освобождённых ежемесячно — что эквивалентно примерно €80–360 в месяц при типичной стоимости маркетингового труда €35–40 в час.",
+            "Отраслевые исследования по контент-маркетингу стабильно показывают связь между регулярностью публикаций и более сильным долгосрочным органическим ростом — по сравнению с тем же объёмом, выпущенным рывками.",
+            "Один показ материала в момент публикации обычно достигает только части аудитории канала. Повторная публикация того же материала с новым заголовком в течение следующих недель может разумно поднять общий охват на материал на оценочные 40–70% по сравнению с одной публикацией.",
+            "Эти цифры — консервативная плановая оценка на основе общих отраслевых ориентиров, а не обещание. Их нужно проверить на реальном объёме контента, размере аудитории и текущих показателях конверсии конкретной компании, прежде чем на них опираться.",
+          ],
+        },
+        expectedResults: [
+          "Посты в соцсетях, секции рассылок и короткие сценарии, готовящиеся за оценочно на 50–60% меньшее время, чем написание каждого отдельно",
+          "График публикаций, который не рассыпается даже в загруженную неделю",
+          "Оценочный рост общего охвата на материал на 40–70% за счёт повторных публикаций уже существующего контента, без написания нового",
+          "Месячная картина того, что реально работает, чтобы темы выбирались не наугад",
+          "Один дашборд вместо пяти отдельных входов на разные платформы для проверки результатов",
+        ],
+        whatBusinessGets: [
+          "Больше контента из тех же усилий на написание, вместо необходимости писать больше с нуля, чтобы получить больше материалов",
+          "Ритм публикаций, который не разваливается, как только становится много дел",
+          "Больше пользы из всего, что уже написано, вместо того чтобы хороший материал исчезал после одной публикации",
+          "Чёткий, подтверждённый данными ответ на вопрос «о чём писать дальше», вместо догадок",
+          "Возможность вести более амбициозный календарь контента без найма нового сотрудника",
+        ],
+        conclusion:
+          "Такая система имеет наибольший смысл для компании, где реальное узкое место — это часы, а не идеи. Обычно это один маркетолог или основатель, совмещающий контент с другими обязанностями, и производящий заметно меньше материалов, чем бизнесу реально нужно. Признать это легко: календарь контента существует в таблице, но почти никогда полностью не выполняется, аккаунты в соцсетях замолкают на недели, а действительно сильная статья так никогда и не превращается в что-то ещё. Kubera AI рекомендует этот подход, потому что у контента есть редкое свойство: самая дорогая часть — оригинальное мышление — нужна только один раз, а всё, что строится на её основе, переиспользуется почти бесплатно.",
+        ctaLabel: "Получить бесплатный аудит автоматизации",
+        ctaHref: "/contacts",
+        ctaBody:
+          "Посчитаем ваш текущий объём публикаций и каналы относительно этого сценария — без обязательств, без шаблонной презентации.",
+      },
+    },
   },
   {
     slug: "finance-documents",
