@@ -235,7 +235,7 @@ export const caseStudies: CaseStudy[] = [
           "Full visibility into where the communication system is actually under strain — by channel, by urgency tier, by time of day — instead of a general feeling that we're always behind on messages",
         ],
         conclusion: "This company wasn't failing to respond to customers — it was responding in the order four disconnected systems happened to surface requests, rather than in the order those requests actually needed attention. That distinction matters more than it sounds: an emergency sitting unread on WhatsApp while a routine invoice question gets handled by phone isn't a communication failure in the usual sense, it's a triage failure, and it's invisible until it costs a client. Unifying the channels and triaging by urgency rather than arrival order doesn't require more staff — it requires the four existing channels to report to one system instead of competing separately for the same limited attention.",
-        ctaLabel: "Get Your Free Automation Audit →",
+        ctaLabel: "Get a Free Automation Audit",
         ctaHref: "/contacts",
         ctaBody: "Want to know how much staff time your business spends on channel triage instead of client work? We'll map your actual inquiry volume and response times across channels — no commitment, no generic pitch.",
       },
@@ -342,7 +342,7 @@ export const caseStudies: CaseStudy[] = [
           "Полную видимость того, где система коммуникации реально испытывает нагрузку — по каналу, по уровню срочности, по времени суток — вместо общего ощущения мы всегда отстаём по сообщениям",
         ],
         conclusion: "Эта компания не проваливала ответы клиентам — она отвечала в том порядке, в котором четыре несвязанные системы случайно выводили обращения на поверхность, а не в том порядке, в котором эти обращения реально требовали внимания. Это различие важнее, чем звучит: авария, лежащая непрочитанной в WhatsApp, пока обычный вопрос по счёту обрабатывается по телефону, — это не провал коммуникации в обычном смысле, это провал сортировки, и он невидим до тех пор, пока не стоит компании клиента. Объединение каналов и сортировка по срочности, а не по порядку поступления, не требует больше персонала — требуется, чтобы четыре существующих канала отчитывались перед одной системой, а не конкурировали отдельно за одно и то же ограниченное внимание.",
-        ctaLabel: "Получить бесплатный аудит автоматизации →",
+        ctaLabel: "Получить бесплатный аудит автоматизации",
         ctaHref: "/contacts",
         ctaBody: "Хотите узнать, сколько времени персонала уходит на сортировку каналов вместо работы с клиентами? Посчитаем на ваших реальных данных по объёму обращений и времени ответа по каналам — без обязательств, без шаблонной презентации.",
       },
@@ -479,7 +479,7 @@ export const caseStudies: CaseStudy[] = [
           "A measurable, recoverable revenue source — deals stalled in the existing pipeline — that doesn't require any additional marketing spend or lead generation to access",
         ],
         conclusion: "In B2B sales, the deal that gets lost rarely loses to a competitor's pitch — it loses to silence. A prospect who doesn't hear back on schedule doesn't necessarily go elsewhere out of preference; they simply stop being actively pursued and quietly deprioritize the decision, often without ever formally saying no. This supplier's sales team wasn't underperforming on skill — they were managing more simultaneous opportunities than manual follow-up discipline can reliably sustain, and the gap showed up exactly where it's hardest to see: not in lost pitches, but in the fourth follow-up that quietly never got sent. Fixing the cadence, not the pitch, is what recovers deals that were already most of the way to closing.",
-        ctaLabel: "Get Your Free Automation Audit →",
+        ctaLabel: "Get a Free Automation Audit",
         ctaHref: "/contacts",
         ctaBody: "Want to know how much pipeline revenue your team is losing to follow-up gaps? We'll map your actual lead volume, deal cycle, and follow-up compliance against industry benchmarks — no commitment, no generic pitch.",
       },
@@ -588,7 +588,7 @@ export const caseStudies: CaseStudy[] = [
           "Измеримый, восстанавливаемый источник выручки — сделки, застрявшие в существующей воронке — доступ к которому не требует дополнительного маркетингового бюджета или генерации лидов",
         ],
         conclusion: "В B2B-продажах сделка, которая теряется, редко теряется из-за предложения конкурента — она теряется из-за молчания. Клиент, не получивший ответ по графику, не обязательно уходит к конкуренту из предпочтения — он просто перестаёт быть активно сопровождаемым и тихо снижает приоритет решения, часто без формального отказа. Отдел продаж этого поставщика не отставал по навыкам — он управлял большим количеством одновременных возможностей, чем ручная дисциплина сопровождения может надёжно выдержать, и разрыв проявлялся именно там, где его сложнее всего увидеть: не в проигранных подачах, а в четвёртом сопровождении, которое тихо так и не было отправлено. Исправление ритма, а не подачи, — это то, что возвращает сделки, которые уже были на большей части пути к закрытию.",
-        ctaLabel: "Получить бесплатный аудит автоматизации →",
+        ctaLabel: "Получить бесплатный аудит автоматизации",
         ctaHref: "/contacts",
         ctaBody: "Хотите узнать, сколько выручки из воронки теряет ваша команда из-за пробелов в сопровождении? Посчитаем на ваших реальных данных по объёму лидов, циклу сделки и соблюдению сопровождения относительно отраслевых показателей — без обязательств, без шаблонной презентации.",
       },
@@ -737,8 +737,7 @@ export const caseStudies: CaseStudy[] = [
         ],
         conclusion:
           "This architecture is most appropriate for service businesses that have grown past the point where informal, ad hoc coordination still works — typically once headcount passes 10-15 people and a meaningful share of management time visibly shifts from decision-making to status-relaying. Kubera AI recommends this approach because the underlying problem — repetitive, low-judgment coordination work consuming senior staff time — is structurally separable from genuine decision-making, and separating the two doesn't require replacing any existing system, only connecting them through a classification and routing layer. Businesses earlier than this growth stage typically don't yet generate enough repetitive internal request volume to justify the build; businesses well past it, with dedicated operations or business-systems staff already in place, may have already solved parts of this informally and would benefit most from the approval-tiering and knowledge-capture layers specifically, rather than the full architecture.",
-        ctaLabel:
-          "Want to know how much management time a business like yours might be spending on coordination instead of decisions?",
+        ctaLabel: "Get a Free Automation Audit",
         ctaHref: "/contacts",
         ctaBody:
           "We'll map your internal request volume and approval patterns against this scenario — no commitment, no generic pitch.",
@@ -858,8 +857,7 @@ export const caseStudies: CaseStudy[] = [
         ],
         conclusion:
           "Эта архитектура наиболее подходит сервисным бизнесам, которые выросли за точку, в которой неформальная, ситуативная координация всё ещё работает — обычно после того, как штат превышает 10–15 человек, и значительная доля времени менеджмента заметно смещается от принятия решений к передаче статусов. Kubera AI рекомендует именно этот подход, потому что лежащая в основе проблема — повторяющаяся, не требующая решения координационная работа, потребляющая время старших сотрудников — структурно отделима от реального принятия решений, и разделение этих двух вещей не требует замены каких-либо существующих систем, только их соединения через слой классификации и маршрутизации. Бизнесы на более ранней стадии роста обычно ещё не генерируют достаточный объём повторяющихся внутренних запросов, чтобы оправдать разработку; бизнесы значительно дальше этой стадии, с уже выделенным персоналом по операциям или бизнес-системам, возможно, уже решили часть этого неформально и больше всего выиграли бы конкретно от уровней многоступенчатых согласований и захвата знаний, а не от полной архитектуры.",
-        ctaLabel:
-          "Хотите узнать, сколько времени менеджмента бизнес, похожий на ваш, может тратить на координацию вместо решений?",
+        ctaLabel: "Получить бесплатный аудит автоматизации",
         ctaHref: "/contacts",
         ctaBody:
           "Посчитаем объём ваших внутренних запросов и паттерны согласований относительно этого сценария — без обязательств, без шаблонной презентации.",
@@ -1004,7 +1002,7 @@ export const caseStudies: CaseStudy[] = [
         ],
         conclusion:
           "This architecture is most appropriate for companies that have grown past the point where ad hoc, founder-or-generalist-managed hiring still keeps pace — typically once a business is sustaining multiple simultaneous open roles and the HR or hiring-responsible staff member is visibly spending more time on screening and scheduling logistics than on the interviews and decisions that actually require judgment. The signal is usually a growing applicant backlog, a time-to-hire that keeps extending, or anecdotal feedback that strong candidates are accepting other offers during the company's own process. Kubera AI recommends this approach because recruitment, more than most internal functions, has an unusually clean separation between high-volume, structurable coordination (screening volume, scheduling logistics, status communication) and genuinely judgment-dependent moments (the interview, the final decision) — meaning the automation can meaningfully compress the former without touching the latter at all.",
-        ctaLabel: "Want to know how much HR time a hiring volume like yours might be spending on screening and scheduling instead of interviewing?",
+        ctaLabel: "Get a Free Automation Audit",
         ctaHref: "/contacts",
         ctaBody:
           "We'll map your current hiring pipeline and time-to-hire against this scenario — no commitment, no generic pitch.",
@@ -1118,7 +1116,7 @@ export const caseStudies: CaseStudy[] = [
         ],
         conclusion:
           "Эта архитектура наиболее подходит компаниям, которые выросли за точку, в которой ситуативный найм, управляемый основателем или универсальным сотрудником, всё ещё успевает — обычно после того, как бизнес поддерживает несколько одновременных открытых вакансий, и сотрудник, отвечающий за HR или найм, заметно тратит больше времени на логистику скрининга и планирования, чем на интервью и решения, которые реально требуют решения. Сигнал обычно — растущий бэклог заявителей, время найма, которое продолжает расширяться, или анекдотическая обратная связь о том, что сильные кандидаты принимают другие предложения во время собственного процесса компании. Kubera AI рекомендует именно этот подход, потому что подбор персонала, больше большинства внутренних функций, имеет необычно чёткое разделение между высокообъёмной, структурируемой координацией (объём скрининга, логистика планирования, коммуникация статуса) и реально зависящими от решения моментами (интервью, финальное решение) — то есть автоматизация может значимо сжать первое, вообще не касаясь второго.",
-        ctaLabel: "Хотите узнать, сколько HR-времени бизнес с объёмом найма, похожим на ваш, может тратить на скрининг и планирование вместо интервьюирования?",
+        ctaLabel: "Получить бесплатный аудит автоматизации",
         ctaHref: "/contacts",
         ctaBody:
           "Посчитаем вашу текущую воронку найма и время найма относительно этого сценария — без обязательств, без шаблонной презентации.",
@@ -1346,7 +1344,7 @@ export const caseStudies: CaseStudy[] = [
         ],
         conclusion:
           "This school didn't have a lead generation problem — the ads were working fine. It had a multi-stage leak spread across three points most schools never separate: leads that cooled before booking a trial, trials that ended without a timely enrollment offer, and paying students who quietly disengaged mid-program with nobody noticing until it was too late. Combined, these leaks roughly doubled the revenue the school could extract from ad spend it was already paying for.",
-        ctaLabel: "Want to see exactly where your enrollment funnel is leaking?",
+        ctaLabel: "Get a Free Automation Audit",
         ctaHref: "/contacts",
         ctaBody:
           "We'll map your lead-to-trial, trial-to-enrollment, and retention rates against industry benchmarks — no commitment, no generic pitch.",
@@ -1465,7 +1463,7 @@ export const caseStudies: CaseStudy[] = [
         ],
         conclusion:
           "У этой школы не было проблемы с генерацией лидов — реклама работала нормально. У неё была многоэтапная утечка, размытая по трём точкам, которые большинство школ никогда не разделяют: лиды, остывшие до записи на пробник, пробники, закончившиеся без своевременного предложения зачисления, и оплатившие ученики, тихо потерявшие вовлечённость в середине программы. По отдельности ни одна из этих утечек не выглядит драматично. В сумме они примерно удвоили выручку, которую школа могла извлечь из рекламного бюджета, который она уже платила.",
-        ctaLabel: "Хотите увидеть, где именно протекает ваша воронка зачислений?",
+        ctaLabel: "Получить бесплатный аудит автоматизации",
         ctaHref: "/contacts",
         ctaBody:
           "Посчитаем показатели лид→пробник, пробник→зачисление и удержания относительно отраслевых показателей — без обязательств, без шаблонной презентации.",
@@ -1610,7 +1608,7 @@ export const caseStudies: CaseStudy[] = [
           "A scalable structure — adding listings or a third agent doesn't require a proportional increase in administrative overhead",
         ],
         conclusion: "In German real estate, the commission math is unforgiving: a handful of hot leads lost to slow response can outweigh months of marketing spend, and one missed resale inquiry can be worth four or five rental deals combined. This agency wasn't losing because its listings were weak — it was losing the response-time race on a portion of its highest-value leads before an agent ever opened the message, while agent hours quietly drained into viewings that were never going to close. Fixing response speed and qualification — not adding more listings — is what moves the monthly commission number, and it's the one lever most agencies can't pull manually no matter how disciplined the back office is.",
-        ctaLabel: "Get Your Free Automation Audit →",
+        ctaLabel: "Get a Free Automation Audit",
         ctaHref: "/contacts",
         ctaBody: "Want to know your agency's real cost of slow response and qualification gap? We'll map it against your actual portal inquiry volume, listing mix, and average commission — no commitment, no generic pitch.",
       },
@@ -1726,7 +1724,7 @@ export const caseStudies: CaseStudy[] = [
           "Масштабируемую структуру — добавление объявлений или третьего агента не требует пропорционального роста административной нагрузки",
         ],
         conclusion: "В немецкой недвижимости математика комиссий безжалостна: несколько горячих лидов, потерянных из-за медленного ответа, могут перевесить месяцы маркетинговых расходов, а одно упущенное обращение по продаже может стоить четырёх-пяти сделок по аренде вместе взятых. Это агентство теряло не из-за слабых объявлений — оно проигрывало гонку за скорость ответа на часть своих самых ценных лидов ещё до того, как агент открывал сообщение, в то время как часы агентов тихо утекали в просмотры, которые никогда не должны были закрыться. Не добавление новых объявлений, а исправление скорости ответа и квалификации двигает месячную цифру комиссии — и это именно тот рычаг, который большинство агентств не могут потянуть вручную, как бы дисциплинированно ни работал офис-менеджер.",
-        ctaLabel: "Получить бесплатный аудит автоматизации →",
+        ctaLabel: "Получить бесплатный аудит автоматизации",
         ctaHref: "/ru/kontakty",
         ctaBody: "Хотите узнать реальную стоимость медленного ответа и разрыв в квалификации вашего агентства? Посчитаем на ваших реальных данных по объёму обращений с порталов, составу объявлений и средней комиссии — без обязательств, без шаблонной презентации.",
       },
@@ -1874,7 +1872,7 @@ export const caseStudies: CaseStudy[] = [
           "One system giving the owner visibility across both halves of the business — rooms and restaurant — instead of two disconnected operations reporting separately, or not reporting at all",
         ],
         conclusion: "Independent hotels rarely lose because demand is weak — this property runs near capacity in season. They lose because every OTA booking quietly hands away 15–18% that a direct booking wouldn't have cost, every undeposited no-show sells the same room twice on paper and zero times in reality, and every upsell pitched at a tired guest at check-in converts at half the rate of the same offer sent calmly a week earlier. Add a restaurant phone that goes unanswered during the only two hours a night that actually matter, and a profitable property is still leaking margin on both sides of the building. None of these fixes require more guests. They require the booking-to-arrival window, and the dinner-service phone line, to do work that was previously left entirely to chance.",
-        ctaLabel: "Get Your Free Automation Audit →",
+        ctaLabel: "Get a Free Automation Audit",
         ctaHref: "/contacts",
         ctaBody: "Want to know your property's real OTA commission exposure and upsell gap? We'll map it against your actual booking mix, occupancy, and seasonal volume — no commitment, no generic pitch.",
       },
@@ -1995,7 +1993,7 @@ export const caseStudies: CaseStudy[] = [
           "Единую систему, дающую владельцу видимость по обеим половинам бизнеса — номера и ресторан — вместо двух разрозненных операций, отчитывающихся отдельно или не отчитывающихся вовсе",
         ],
         conclusion: "Независимые отели редко теряют деньги из-за слабого спроса — этот объект работает почти на полную загрузку в сезон. Они теряют, потому что каждое бронирование через OTA тихо отдаёт 15–18%, которые прямое бронирование не стоило бы, каждая незадепонированная неявка продаёт один и тот же номер дважды на бумаге и ноль раз в реальности, а каждая допродажа, предложенная уставшему гостю на стойке при заселении, конвертируется вдвое хуже, чем то же предложение, отправленное спокойно за неделю раньше. Добавьте телефон ресторана, остающийся без ответа в единственные два часа за вечер, которые реально имеют значение, — и прибыльный объект всё равно теряет маржу с обеих сторон здания. Ни одно из этих решений не требует больше гостей. Они требуют, чтобы окно между бронированием и заездом, и телефонная линия во время ужина, делали работу, которую раньше полностью оставляли на волю случая.",
-        ctaLabel: "Получить бесплатный аудит автоматизации →",
+        ctaLabel: "Получить бесплатный аудит автоматизации",
         ctaHref: "/contacts",
         ctaBody: "Хотите узнать реальную зависимость вашего объекта от комиссии OTA и разрыв в допродажах? Посчитаем на ваших реальных данных по структуре бронирований, загрузке и сезонному объёму — без обязательств, без шаблонной презентации.",
       },
@@ -2153,7 +2151,7 @@ export const caseStudies: CaseStudy[] = [
           "Owner-level visibility into the metrics that actually predict revenue: completion rate, rebooking rate, revenue per client — not just \"how many DMs did we get this week\"",
         ],
         conclusion: "Beauty clinics rarely have a marketing problem — they have a memory problem. Clients who already trust the brand and already paid for a course quietly stop coming because nobody reminded them at the right moment. That's not lost demand, it's unfinished revenue the clinic already earned the right to collect. Structuring the follow-up — by treatment type, by timing, by client status — turns that unfinished revenue into a predictable monthly number instead of a guess.",
-        ctaLabel: "Get Your Free Automation Audit →",
+        ctaLabel: "Get a Free Automation Audit",
         ctaHref: "/contacts",
         ctaBody: "Want to see how much unfinished revenue is sitting in your client list? We'll map your course completion and re-booking rates against industry benchmarks — no commitment.",
       },
@@ -2257,7 +2255,7 @@ export const caseStudies: CaseStudy[] = [
           "Видимость на уровне владельца по метрикам, которые реально предсказывают выручку: процент завершения, процент повторной записи, выручка на клиента — а не просто \"сколько сообщений в Direct пришло на этой неделе\"",
         ],
         conclusion: "У бьюти-клиник редко есть проблема с маркетингом — у них есть проблема с памятью. Клиенты, которые уже доверяют бренду и уже заплатили за курс, тихо перестают приходить, потому что никто не напомнил им в нужный момент. Это не упущенный спрос — это незавершённая выручка, право на которую клиника уже заработала. Структурирование сопровождения — по типу процедуры, по таймингу, по статусу клиента — превращает эту незавершённую выручку в предсказуемую ежемесячную цифру вместо догадки.",
-        ctaLabel: "Получить бесплатный аудит автоматизации →",
+        ctaLabel: "Получить бесплатный аудит автоматизации",
         ctaHref: "/ru/kontakty",
         ctaBody: "Хотите узнать, сколько незавершённой выручки лежит в вашей базе клиентов? Посчитаем процент завершения курсов и повторной записи относительно отраслевых показателей — без обязательств.",
       },
@@ -2385,7 +2383,7 @@ export const caseStudies: CaseStudy[] = [
           "A system that scales with the clinic — adding a 4th or 5th dentist doesn't require hiring another receptionist",
         ],
         conclusion: "This clinic didn't have a demand problem. It had a leak. Most clinics do — they just don't have the data to see it, because nobody logs a call that was never answered. The fix isn't \"more marketing.\" It's closing the gap between the patients already trying to book and the patients who actually get an appointment confirmed. That gap, once closed, pays for the system many times over.",
-        ctaLabel: "Get Your Free Automation Audit →",
+        ctaLabel: "Get a Free Automation Audit",
         ctaHref: "/contacts",
         ctaBody: "Want to know your clinic's actual missed-call and no-show cost? We'll map it using your real numbers — no commitment, no generic pitch.",
       },
@@ -2487,7 +2485,7 @@ export const caseStudies: CaseStudy[] = [
           "Систему, которая масштабируется вместе с клиникой — добавление 4-го или 5-го врача не требует найма нового администратора",
         ],
         conclusion: "У этой клиники не было проблемы со спросом. У неё была утечка. Так у большинства клиник — просто нет данных, чтобы это увидеть, потому что никто не фиксирует звонок, на который никто не ответил. Решение — не \"больше маркетинга\". Решение — закрыть разрыв между пациентами, которые уже пытаются записаться, и пациентами, которые реально получают подтверждённую запись. Закрыв этот разрыв один раз, система окупает себя многократно.",
-        ctaLabel: "Получить бесплатный аудит автоматизации →",
+        ctaLabel: "Получить бесплатный аудит автоматизации",
         ctaHref: "/ru/kontakty",
         ctaBody: "Хотите узнать реальную стоимость пропущенных звонков и неявок в вашей клинике? Посчитаем на ваших реальных цифрах — без обязательств, без шаблонной презентации.",
       },
@@ -2636,7 +2634,7 @@ export const caseStudies: CaseStudy[] = [
         ],
         conclusion:
           "Car rental in a tourist market like Costa del Sol doesn't suffer from a lack of demand — Málaga's airport traffic already guarantees booking volume. It suffers from the gap between a booking and a confirmed, monetized, document-ready pickup: the no-shows nobody saw coming, the upsell nobody had time to pitch properly, and the fifteen minutes per pickup that turns a manageable arrival wave into a queue with falling reviews.",
-        ctaLabel: "Want to know your fleet's real utilization rate and upsell gap?",
+        ctaLabel: "Get a Free Automation Audit",
         ctaHref: "/contacts",
         ctaBody:
           "We'll map it against your actual booking mix and seasonal volume — no commitment, no generic pitch.",
@@ -2753,7 +2751,7 @@ export const caseStudies: CaseStudy[] = [
         ],
         conclusion:
           "Прокат автомобилей на туристическом рынке вроде Коста-дель-Соль не страдает от нехватки спроса — один трафик аэропорта Малаги уже гарантирует объём бронирований. Страдает он от разрыва между бронированием и подтверждённой, монетизированной, готовой по документам выдачей: неявки, которые никто не предвидел, допродажи, которые никто не успел грамотно предложить, и пятнадцать минут на выдачу, которые превращают управляемую волну прилёта в очередь с падающими отзывами.",
-        ctaLabel: "Хотите узнать реальную загрузку вашего автопарка и разрыв в допродажах?",
+        ctaLabel: "Получить бесплатный аудит автоматизации",
         ctaHref: "/ru/kontakty",
         ctaBody:
           "Посчитаем на ваших реальных данных по составу бронирований и сезонному объёму — без обязательств, без шаблонной презентации.",
@@ -2901,7 +2899,7 @@ export const caseStudies: CaseStudy[] = [
           ],
           conclusion:
             "A growing share of B2B buyers now ask an AI assistant before they ask Google, and a page written in conventional marketing style simply isn't legible to that audience. Separately, even the visitors who do land on the page the traditional way are being asked to commit to a contact form before they've received a single direct answer. Both problems are solved by restructuring what's already on the page — once to be citable by AI engines, and once to answer the visitor's actual question before asking for anything in return.",
-          ctaLabel: "Want to know if AI engines can currently find and cite your business?",
+          ctaLabel: "Get a Free Automation Audit",
           ctaHref: "/contacts",
           ctaBody:
             "We'll check how your site currently shows up in AI-generated answers to your most common buyer questions — no commitment, no generic pitch.",
@@ -3012,7 +3010,7 @@ export const caseStudies: CaseStudy[] = [
           ],
           conclusion:
             "Всё большая доля B2B-покупателей сейчас сначала спрашивает AI-ассистента, а потом Google, и страница, написанная в традиционном маркетинговом стиле, просто нечитаема для этой аудитории. Отдельно от этого, даже посетители, попадающие на страницу традиционным путём, вынуждены обязываться на контактную форму до того, как получили хотя бы один прямой ответ, что является более сложным запросом, чем большинство исследователей на ранней стадии готовы совершить. Обе проблемы решаются реструктуризацией того, что уже есть на странице — один раз, чтобы быть цитируемой AI-поисковиками, и один раз, чтобы отвечать на реальный вопрос посетителя прежде, чем что-то просить в ответ.",
-          ctaLabel: "Хотите узнать, могут ли AI-поисковики сейчас найти и процитировать ваш бизнес?",
+          ctaLabel: "Получить бесплатный аудит автоматизации",
           ctaHref: "/contacts",
           ctaBody:
             "Проверим, как ваш сайт сейчас появляется в AI-генерируемых ответах на самые частые вопросы ваших покупателей — без обязательств, без шаблонной презентации.",
