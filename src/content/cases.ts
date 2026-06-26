@@ -596,29 +596,275 @@ export const caseStudies: CaseStudy[] = [
   },
   {
     slug: "internal-processes",
-    title: "Internal Process Automation",
+    title: "Industry Scenario — Internal Processes",
     category: "Internal Processes",
-    label: "Example Use Case",
-    short: "Reporting, approvals, routine tasks, and operational workflows.",
+    label: "AI Internal Operations & Knowledge Automation",
+    short:
+      "Growing service businesses routinely lose significant management time to repetitive internal coordination — status updates, document requests, onboarding checklists, approval chains — handled manually because no single system ties them together. This scenario outlines how Kubera AI would design an internal-operations automation layer to absorb that coordination load.",
     problem: [
-      "Recurring reports are rebuilt by hand every week.",
-      "Approvals move slowly because requests get lost in chat threads.",
-      "Routine tasks are repeated by multiple people.",
-      "Operational ownership is unclear when a workflow spans several tools.",
+      "Managers keep answering the same status questions over and over.",
+      "Document, access, and onboarding requests are handled case by case.",
+      "Routine approvals move through the same manual chain as real decisions.",
+      "Operational knowledge stays in people's heads instead of a shared source.",
     ],
-    startingPoint: "Operations teams often spend too much time collecting, checking, and forwarding internal information instead of moving work forward.",
-    solution: "Kubera AI automates recurring internal workflows with structured approvals, scheduled reports, task routing, and audit-friendly notifications.",
-    workflow: ["Internal request", "AI triage", "Task routing", "Approval or update", "Status notification"],
-    tools: ["AI Assistant", "CRM", "n8n", "Email", "Calendar", "Sheets", "API"],
+    startingPoint:
+      "This scenario models a common internal-operations pattern across growing service businesses: coordination work is scattered across chat, email, and verbal follow-up, with no single system tracking what is pending, with whom, or for how long.",
+    solution:
+      "Kubera AI would build an internal-operations automation layer that classifies requests, routes status and document questions, handles routine approvals, and captures repeat knowledge into a structured internal source.",
+    workflow: ["Internal request", "AI classification", "Routing", "Resolution or approval", "Internal update"],
+    tools: ["AI Assistant", "Project data", "n8n", "Internal chat", "Email", "Documents", "API"],
     expectedOutcome: [
-      "fewer manual tasks",
-      "faster response",
-      "better visibility",
-      "fewer missed requests",
-      "cleaner workflow ownership",
+      "less coordination overhead",
+      "faster status answers",
+      "more self-service for recurring requests",
+      "faster low-risk approvals",
+      "clearer internal ownership",
     ],
     imagePath: caseImagePaths[2],
     imageAlt: "Kubera AI case dashboard for internal process automation",
+    localized: {
+      en: {
+        cardTitle: "Industry Scenario — Internal Processes",
+        title: "Industry Scenario — Internal Processes",
+        category: "Internal Processes",
+        label: "AI Internal Operations & Knowledge Automation",
+        short:
+          "Growing service businesses routinely lose significant management time to repetitive internal coordination — status updates, document requests, onboarding checklists, approval chains — handled manually because no single system ties them together. This scenario outlines how Kubera AI would design an internal-operations automation layer to absorb that coordination load.",
+        heroTitle:
+          "The Work Isn't Hard. It's Just Asked and Answered the Same Way, By Hand, Forty Times a Week",
+        intro:
+          "Most internal inefficiency doesn't look like a crisis — it looks like a manager answering 'where are we on this?' for the sixth time today, or a new hire waiting two days for someone to remember which document they need next. None of it shows up on a P&L as a line item. All of it adds up to real hours that never touch a client or a deal. This Industry Scenario outlines how Kubera AI would design an internal-operations automation layer for a business carrying this kind of coordination overhead.",
+        about:
+          "This scenario is modeled on a common profile across professional and operational service businesses: a company of roughly 15-30 staff, organized into 3-5 functional teams, where internal coordination — status checks, document requests, task handoffs between teams, recurring approval steps — is typically handled through a mix of email, Slack / Teams messages, and verbal check-ins, with no single system tracking what's actually pending, with whom, or for how long. This is not a description of a specific client; it represents a structural pattern Kubera AI sees consistently across businesses of this size.",
+        startingPoint: {
+          intro:
+            "This is a structural pattern across growing service businesses once headcount passes roughly 10-15 people — well documented in operations literature, not unique to any one company:",
+          bullets: [
+            "Status-check overhead: managers in businesses of this size typically spend an estimated 20-25% of their working time on status inquiries and follow-ups — asking where something stands, chasing an overdue task, or relaying information between two team members who didn't talk to each other directly — none of which is decision-making or value creation, just coordination friction",
+            "Repetitive document and access requests: new client onboarding, new hire setup, and recurring compliance / admin tasks generate a steady stream of 'can you send me X' requests that are functionally identical each time, but get handled as one-off conversations rather than a standing, self-service process",
+            "Approval-chain delay: routine approvals that don't require real judgment still pass through the same manual chain as genuinely complex decisions, adding days of latency to low-risk items simply because there's no tier system separating 'needs a human decision' from 'needs a rubber stamp'",
+            "Tribal knowledge instead of documented process: a meaningful share of 'how do we do X' questions get answered by whichever senior staff member happens to be free, rather than from a documented source — meaning the same question gets answered fresh, slightly differently, multiple times a month, and institutional knowledge stays trapped in a handful of people's heads",
+          ],
+        },
+        projectGoal: {
+          intro:
+            "For a business matching this profile, the relevant automation objectives would be:",
+          bullets: [
+            "Remove repetitive status-check and document-request traffic from managers' and senior staff's direct attention",
+            "Create a self-service layer for the most common recurring internal requests",
+            "Separate low-risk routine approvals from genuinely judgment-requiring decisions",
+            "Capture institutional knowledge into a structured, queryable source instead of leaving it dependent on whoever happens to be available",
+          ],
+        },
+        automationStrategy: {
+          intro:
+            "The core distinction driving this strategy: most internal requests are either informational or procedural — and almost none of them actually require the senior person currently fielding them to personally handle each instance.",
+          bullets: [
+            "Layer 1 — Status visibility without asking. Task and project status would be tracked in one system that any team member can query directly — through a chat interface connected to the underlying project / task data — removing the need to interrupt a manager to ask 'where are we on this' when the answer is already structured data sitting in a tool nobody's checking.",
+            "Layer 2 — Self-service for recurring requests. The most common document, access, and onboarding requests would be converted into a structured request flow: the requester describes what they need through a simple chat or form interface, the system pulls the correct template / checklist / access tier automatically, and routes only genuinely non-standard requests to a human.",
+            "Layer 3 — Tiered approval routing. Approval requests would be automatically classified by risk / value tier. Low-risk, within-policy items would be auto-approved or fast-tracked with a notification rather than a required action; only items outside policy or above threshold would route to a human decision-maker.",
+            "Layer 4 — Knowledge capture. Common 'how do we handle X' questions would be captured into a structured internal knowledge base as they're asked, with an AI layer answering repeat questions directly from that base going forward.",
+          ],
+        },
+        workflowArchitecture: [
+          "[Internal Request: Status Question / Document Request / Access Request / Approval / \"How Do We...\" Question]",
+          "        ↓",
+          "[AI Agent — Classify Request Type]",
+          "        ↓",
+          "   ┌──────────────┬──────────────┬──────────────┬──────────────┐",
+          "   ↓              ↓              ↓              ↓",
+          "[Status Query] [Doc / Access   [Approval      [Knowledge",
+          "   ↓            Request]       Request]       Question]",
+          "[Pull from         ↓              ↓              ↓",
+          " Project / Task   [Auto-Generate [Risk / Value   [Check Knowledge",
+          " System,          from Template   Classification] Base First]",
+          " Answer           + Route if          ↓              ↓",
+          " Directly]        Non-Standard]  ┌────┴────┐    [Found? → Answer",
+          "                                ↓         ↓      Directly]",
+          "                          [Within     [Outside       ↓",
+          "                           Policy →    Policy →  [Not Found? →",
+          "                           Auto-       Route to    Route to",
+          "                           Approve]    Human]      Human, Then",
+          "                                                    Add Answer to",
+          "                                                    Knowledge Base]",
+          "        ↓",
+          "[Internal Dashboard: Request Volume by Type, Auto-Resolution Rate, Average Resolution Time, Manager Time Reclaimed]",
+        ],
+        implemented: [
+          "AI-driven request classification routing every internal inquiry to the correct handling path instead of landing generically in a manager's inbox or chat",
+          "A direct-query interface connected to the company's existing project / task management data, allowing any staff member to ask 'where are we on X' and receive an immediate, accurate answer without interrupting whoever's actually responsible for it",
+          "A self-service request flow for the most common recurring document and access needs, auto-generating standard outputs from templates and routing only true exceptions to a human",
+          "Tiered approval logic auto-clearing low-risk, within-policy requests and routing only above-threshold or out-of-policy items to an actual decision-maker",
+          "A growing internal knowledge base capturing answers to recurring 'how do we handle X' questions, with an AI layer answering repeat questions directly from that base once it's been built up",
+          "An internal dashboard tracking request volume by category, auto-resolution rate, average time-to-resolution, and estimated manager / senior-staff hours reclaimed",
+        ],
+        toolsStack: [
+          "n8n (orchestration across request types and routing logic)",
+          "OpenAI / GPT-4o (request classification, knowledge-base Q&A, and document auto-generation)",
+          "Project / task management system integration for status queries",
+          "Internal chat platform integration (Slack / Teams, as the primary interface for requests and answers)",
+          "Document template engine",
+          "Approval workflow logic with policy-threshold rules",
+          "PostgreSQL (knowledge base + request-history layer)",
+          "Internal dashboard for request analytics",
+        ],
+        businessEconomics: {
+          intro:
+            "This is a conservative, illustrative model based on a company of about 20 staff, with 4-5 people in roles carrying meaningful coordination / management responsibility. The figures below are estimated from industry-standard patterns in operations management research, not from a specific implementation — every business would need to validate these against its own headcount, loaded labor cost, and request volume.",
+          bullets: [
+            "Status-check overhead, modeled: at 20-25% of management time spent on status inquiries and coordination chasing, this represents a modeled €1,400-2,200 / week, or €5,600-8,800 / month, in management time spent on coordination friction rather than decision-making or strategic work",
+            "Removing a conservatively estimated 30-40% of this load would represent a potential €1,700-3,500 / month in redirected management capacity",
+            "Estimated recurring document / access / onboarding request volume: about 60-80 requests / month across a 20-person company",
+            "At an estimated 15-20 minutes of staff time per request when handled manually, this represents a modeled 15-25 staff-hours / month spent on requests that are functionally identical each time",
+            "Deflecting an estimated 60-70% of these to self-service represents a potential 9-17 staff-hours / month recovered, worth approximately €300-650 / month at a blended staff cost of about €30 / hour",
+            "Routine approvals that currently take an estimated 1-3 days to clear a manual chain could clear in minutes once auto-approved within policy",
+            "Combined illustrative estimate: roughly €2,000-4,150 / month in internal capacity that this architecture could recover, without adding headcount",
+          ],
+        },
+        expectedResults: [
+          "Management time spent on status inquiries and coordination chasing reduced by an estimated 30-40%",
+          "60-70% of recurring document / access / onboarding requests handled through self-service, with only genuine exceptions reaching a human",
+          "Routine, within-policy approvals clearing in minutes rather than days",
+          "A growing internal knowledge base that may reduce repeat 'how do we do X' questions over time",
+          "An internal dashboard giving leadership visibility into where coordination time is actually going",
+        ],
+        whatBusinessGets: [
+          "A structural reduction in coordination overhead that scales with headcount, without proportionally scaling the management layer needed to absorb it",
+          "A self-service layer for the requests that are genuinely repetitive, freeing senior staff attention for the requests that genuinely need it",
+          "A faster approval process for low-risk decisions, without removing human judgment from decisions that actually require it",
+          "Institutional knowledge that survives staff turnover and time off, instead of being concentrated in whichever senior person happens to remember the answer",
+          "Visibility into internal operational friction that's normally invisible until it's acute — measured and addressable rather than just felt",
+        ],
+        conclusion:
+          "This architecture is most appropriate for service businesses that have grown past the point where informal, ad hoc coordination still works — typically once headcount passes 10-15 people and a meaningful share of management time visibly shifts from decision-making to status-relaying. Kubera AI recommends this approach because the underlying problem — repetitive, low-judgment coordination work consuming senior staff time — is structurally separable from genuine decision-making, and separating the two doesn't require replacing any existing system, only connecting them through a classification and routing layer. Businesses earlier than this growth stage typically don't yet generate enough repetitive internal request volume to justify the build; businesses well past it, with dedicated operations or business-systems staff already in place, may have already solved parts of this informally and would benefit most from the approval-tiering and knowledge-capture layers specifically, rather than the full architecture.",
+        ctaLabel:
+          "Want to know how much management time a business like yours might be spending on coordination instead of decisions?",
+        ctaHref: "/contacts",
+        ctaBody:
+          "We'll map your internal request volume and approval patterns against this scenario — no commitment, no generic pitch.",
+      },
+      ru: {
+        cardTitle: "Отраслевой сценарий — Внутренние процессы",
+        title: "Отраслевой сценарий — Внутренние процессы",
+        category: "Внутренние процессы",
+        label: "AI-автоматизация внутренних операций и знаний",
+        short:
+          "Растущие сервисные бизнесы регулярно теряют значительное время менеджмента на повторяющуюся внутреннюю координацию — статус-апдейты, запросы документов, чек-листы онбординга, цепочки согласований — обрабатываемую вручную, потому что нет единой системы, связывающей всё это. Этот сценарий описывает, как Kubera AI спроектировала бы слой автоматизации внутренних операций для поглощения этой координационной нагрузки.",
+        heroTitle:
+          "Работа не сложная. Её просто задают и на неё отвечают одинаково, вручную, сорок раз в неделю",
+        intro:
+          "Большинство внутренней неэффективности не выглядит как кризис — это выглядит как менеджер, отвечающий \"на каком этапе мы сейчас?\" в шестой раз за день, или новый сотрудник, ждущий два дня, пока кто-то вспомнит, какой документ ему нужен дальше. Ничего из этого не отображается в P&L отдельной строкой. Всё это в сумме даёт реальные часы, которые никогда не касаются клиента или сделки. Этот отраслевой сценарий описывает, как Kubera AI спроектировала бы слой автоматизации внутренних операций для бизнеса с такой координационной нагрузкой.",
+        about:
+          "Этот сценарий смоделирован на типичном профиле, общем для профессиональных и операционных сервисных бизнесов: компания примерно 15–30 сотрудников, организованная в 3–5 функциональных команд, где внутренняя координация — проверки статуса, запросы документов, передача задач между командами, повторяющиеся шаги согласования — обычно ведётся через смесь email, Slack / Teams и устных уточнений, без единой системы, отслеживающей, что реально находится в ожидании, у кого и как долго. Это не описание конкретного клиента — это структурный паттерн, который Kubera AI стабильно наблюдает в бизнесах такого размера.",
+        startingPoint: {
+          intro:
+            "Это структурный паттерн в растущих сервисных бизнесах после того, как штат превышает примерно 10–15 человек — хорошо документированный в литературе по операционному менеджменту, не уникальный для какой-то одной компании:",
+          bullets: [
+            "Накладные расходы на проверку статуса: менеджеры в компаниях такого размера обычно тратят оценочно 20–25% рабочего времени на запросы о статусе и сопровождение — уточнение, на каком этапе что-то находится, напоминание о просроченной задаче или передачу информации между двумя сотрудниками, которые не говорили друг с другом напрямую — ничего из этого не является принятием решений или созданием ценности, только координационное трение",
+            "Повторяющиеся запросы документов и доступа: онбординг новых клиентов, настройка нового сотрудника и повторяющиеся комплаенс / административные задачи создают стабильный поток запросов \"можешь отправить мне X\", функционально идентичных каждый раз, но обрабатываемых как разовые разговоры, а не как постоянный, самообслуживаемый процесс",
+            "Задержка цепочки согласований: рутинные согласования, не требующие реального решения, всё равно проходят через ту же ручную цепочку, что и реально сложные решения, добавляя дни задержки к малорисковым пунктам просто потому, что нет системы уровней, разделяющей \"требует решения человека\" от \"требует штампа\"",
+            "Племенные знания вместо документированного процесса: значительная часть вопросов \"как мы делаем X\" получает ответ от того старшего сотрудника, который случайно оказался свободен, а не из документированного источника — то есть на один и тот же вопрос отвечают заново, слегка по-разному, несколько раз в месяц, и институциональные знания остаются заперты в головах нескольких человек",
+          ],
+        },
+        projectGoal: {
+          intro:
+            "Для бизнеса с таким профилем релевантные цели автоматизации были бы такими:",
+          bullets: [
+            "Убрать поток запросов на проверку статуса и документов из прямого внимания менеджеров и старших сотрудников",
+            "Создать слой самообслуживания для самых частых повторяющихся внутренних запросов",
+            "Разделить малорисковые рутинные согласования от реально требующих решения, чтобы только последние занимали время принимающего решения",
+            "Зафиксировать институциональные знания в структурированном, запрашиваемом источнике, а не оставлять их зависимыми от того, кто случайно доступен",
+          ],
+        },
+        automationStrategy: {
+          intro:
+            "Ключевое различие, лежащее в основе стратегии: большинство внутренних запросов — либо информационные, либо процедурные — и почти ни один из них реально не требует, чтобы старший сотрудник, отвечающий на них сейчас, лично обрабатывал каждый случай.",
+          bullets: [
+            "Уровень 1 — Видимость статуса без необходимости спрашивать. Статус задач и проектов отслеживался бы в одной системе, которую любой сотрудник может запросить напрямую — через чат-интерфейс, подключённый к данным о проектах и задачах — устраняя необходимость прерывать менеджера, чтобы спросить \"на каком этапе мы сейчас\", когда ответ уже представляет собой структурированные данные, лежащие в инструменте, который никто не проверяет.",
+            "Уровень 2 — Самообслуживание для повторяющихся запросов. Самые частые запросы документов, доступа и онбординга превращались бы в структурированный поток запросов: запрашивающий описывает, что ему нужно через простой чат или форму, система автоматически подбирает правильный шаблон, чек-лист или уровень доступа, и направляет человеку только реально нестандартные запросы.",
+            "Уровень 3 — Многоуровневая маршрутизация согласований. Запросы на согласование автоматически классифицировались бы по уровню риска / ценности. Малорисковые пункты в рамках политики автоматически одобрялись бы или ускорялись с уведомлением вместо требуемого действия; только пункты, выходящие за рамки политики или выше порога, направлялись бы принимающему решение человеку.",
+            "Уровень 4 — Захват знаний. Частые вопросы \"как нам решить X\" фиксировались бы в структурированную внутреннюю базу знаний по мере их возникновения, с AI-слоем, отвечающим на повторяющиеся вопросы напрямую из этой базы в дальнейшем.",
+          ],
+        },
+        workflowArchitecture: [
+          "[Внутренний запрос: вопрос о статусе / запрос документа / запрос доступа / согласование / вопрос \"как мы делаем...\"]",
+          "        ↓",
+          "[AI-агент — классификация типа запроса]",
+          "        ↓",
+          "   ┌──────────────┬──────────────┬──────────────┬──────────────┐",
+          "   ↓              ↓              ↓              ↓",
+          "[Запрос статуса] [Запрос       [Запрос на     [Вопрос по",
+          "   ↓             документа /   согласование]  знаниям]",
+          "[Получить из      доступа]         ↓              ↓",
+          " системы           ↓          [Классификация  [Сначала проверить",
+          " проектов / задач, [Авто-       риска / ценности]  базу знаний]",
+          " ответить         генерация         ↓              ↓",
+          " напрямую]        из шаблона   ┌────┴────┐    [Найдено? →",
+          "                  + маршрутизация ↓        ↓     ответить",
+          "                  если          [В рамках  [Вне рамок →   напрямую]",
+          "                  нестандартный] политики →  маршрутизация      ↓",
+          "                                автоодобрение]  человеку]   [Не найдено? →",
+          "                                                              маршрутизация",
+          "                                                              человеку, затем",
+          "                                                              добавление ответа",
+          "                                                              в базу знаний]",
+          "        ↓",
+          "[Внутренний дашборд: объём запросов по типу, процент авто-решения, среднее время решения, возвращённое время менеджеров]",
+        ],
+        implemented: [
+          "Классификация запросов на основе AI, направляющая каждое внутреннее обращение на правильный путь обработки вместо общего попадания в почту или чат менеджера",
+          "Интерфейс прямого запроса, подключённый к существующим данным компании по управлению проектами и задачами, позволяющий любому сотруднику спросить \"на каком этапе X\" и получить немедленный, точный ответ без прерывания того, кто реально за это отвечает",
+          "Поток самообслуживания для самых частых повторяющихся потребностей в документах и доступе, автоматически генерирующий стандартные результаты из шаблонов и направляющий человеку только реальные исключения",
+          "Многоуровневая логика согласований, автоматически закрывающая малорисковые запросы в рамках политики и направляющая принимающему решение человеку только пункты выше порога или вне политики",
+          "Растущая внутренняя база знаний, фиксирующая ответы на повторяющиеся вопросы \"как нам решить X\", с AI-слоем, отвечающим на повторяющиеся вопросы напрямую из этой базы после её накопления",
+          "Внутренний дашборд, отслеживающий объём запросов по категориям, процент авто-решения, среднее время решения и оценочные возвращённые часы менеджеров / старших сотрудников",
+        ],
+        toolsStack: [
+          "n8n (оркестрация по типам запросов и логике маршрутизации)",
+          "OpenAI / GPT-4o (классификация запросов, Q&A по базе знаний и авто-генерация документов)",
+          "Интеграция с системой управления проектами / задачами для запросов статуса",
+          "Интеграция с внутренней чат-платформой (Slack / Teams как основной интерфейс для запросов и ответов)",
+          "Движок шаблонов документов",
+          "Логика workflow согласований с правилами пороговых значений политики",
+          "PostgreSQL (база знаний + слой истории запросов)",
+          "Внутренний дашборд для аналитики запросов",
+        ],
+        businessEconomics: {
+          intro:
+            "Это консервативная, иллюстративная модель, основанная на компании из около 20 сотрудников, с 4–5 людьми на ролях, несущих значимую координационную / управленческую ответственность. Цифры ниже оценены на основе отраслевых паттернов из исследований по операционному менеджменту, а не из конкретной реализации — каждый бизнес должен проверить их на своём штате, полной стоимости труда и объёме запросов.",
+          bullets: [
+            "Накладные расходы на проверку статуса, моделирование: при оценочных 20–25% времени менеджмента, потраченных на запросы статуса и координационное сопровождение, и 4–5 людях на ролях со значимой координационной ответственностью при полной стоимости труда примерно €35–45 / час, это представляет смоделированные €1,400–2,200 / неделю, или €5,600–8,800 / месяц времени менеджмента, потраченного на координационное трение, а не на принятие решений или стратегическую работу",
+            "Удаление консервативно оценённых 30–40% этой нагрузки представляло бы потенциальные €1,700–3,500 / месяц перенаправленной управленческой мощности",
+            "Отвлечение на самообслуживание по повторяющимся запросам, оценка: оценочный объём повторяющихся запросов документов / доступа / онбординга — около 60–80 запросов / месяц на компанию из 20 человек",
+            "При оценочных 15–20 минутах времени сотрудника на запрос при ручной обработке это представляет смоделированные 15–25 часов сотрудников / месяц, потраченных на запросы, функционально идентичные каждый раз",
+            "Перенаправление оценочных 60–70% этого на самообслуживание представляет потенциальные 9–17 часов сотрудников / месяц возвращённых, эквивалентных примерно €300–650 / месяц при смешанной стоимости сотрудника около €30 / час",
+            "Задержка цепочки согласований: рутинные согласования в рамках политики, которые сейчас занимают оценочно 1–3 дня для прохождения ручной цепочки, могли бы пройти за минуты после авто-одобрения в рамках политики",
+            "Совокупный месячный эффект — консервативная модель: примерно €2,000–4,150 / месяц внутренней мощности, которую могла бы вернуть эта архитектура, без расширения штата",
+          ],
+        },
+        expectedResults: [
+          "Сокращение времени менеджмента, потраченного на запросы статуса и координационное сопровождение, оценочно на 30–40%",
+          "60–70% повторяющихся запросов документов / доступа / онбординга обработаны через самообслуживание",
+          "Рутинные согласования в рамках политики проходят за минуты, а не дни",
+          "Растущая внутренняя база знаний снижает повторяющиеся вопросы \"как нам делать X\" со временем",
+          "Внутренний дашборд даёт руководству видимость того, куда реально уходит координационное время",
+        ],
+        whatBusinessGets: [
+          "Структурное снижение координационных накладных расходов, масштабирующихся со штатом, без пропорционального масштабирования управленческого слоя",
+          "Слой самообслуживания для запросов, которые реально повторяющиеся",
+          "Более быстрый процесс согласования для малорисковых решений, без удаления человеческого решения из решений, которые реально его требуют",
+          "Институциональные знания, переживающие смену сотрудников и отпуска",
+          "Видимость внутреннего операционного трения, обычно невидимого до тех пор, пока оно не становится острым",
+        ],
+        conclusion:
+          "Эта архитектура наиболее подходит сервисным бизнесам, которые выросли за точку, в которой неформальная, ситуативная координация всё ещё работает — обычно после того, как штат превышает 10–15 человек, и значительная доля времени менеджмента заметно смещается от принятия решений к передаче статусов. Kubera AI рекомендует именно этот подход, потому что лежащая в основе проблема — повторяющаяся, не требующая решения координационная работа, потребляющая время старших сотрудников — структурно отделима от реального принятия решений, и разделение этих двух вещей не требует замены каких-либо существующих систем, только их соединения через слой классификации и маршрутизации. Бизнесы на более ранней стадии роста обычно ещё не генерируют достаточный объём повторяющихся внутренних запросов, чтобы оправдать разработку; бизнесы значительно дальше этой стадии, с уже выделенным персоналом по операциям или бизнес-системам, возможно, уже решили часть этого неформально и больше всего выиграли бы конкретно от уровней многоступенчатых согласований и захвата знаний, а не от полной архитектуры.",
+        ctaLabel:
+          "Хотите узнать, сколько времени менеджмента бизнес, похожий на ваш, может тратить на координацию вместо решений?",
+        ctaHref: "/contacts",
+        ctaBody:
+          "Посчитаем объём ваших внутренних запросов и паттерны согласований относительно этого сценария — без обязательств, без шаблонной презентации.",
+      },
+    },
   },
   {
     slug: "hr-hiring",
