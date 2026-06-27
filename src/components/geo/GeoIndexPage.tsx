@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { geoCatalog } from "@/content/geo/catalog";
 import { siteConfig } from "@/content/site";
+import { normalizeGeoRoute } from "@/content/geo/routes";
 
 export function GeoIndexPage() {
   return (
@@ -41,10 +42,10 @@ export function GeoIndexPage() {
             <h2 className="section-title">All GEO pages</h2>
             <div className="grid geo-location-grid">
               {geoCatalog.map((item) => (
-                <Link className="card geo-location-card" href={item.route} key={item.route}>
+                <Link className="card geo-location-card" href={normalizeGeoRoute(item.route)} key={item.route}>
                   <strong>{item.country}</strong>
                   <span className="muted">{item.locale === "es" ? "Spanish page" : "English page"}</span>
-                  <span className="geo-location-path">{item.route}</span>
+                  <span className="geo-location-path">{normalizeGeoRoute(item.route)}</span>
                 </Link>
               ))}
             </div>

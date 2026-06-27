@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { GeoPage } from "@/components/geo/GeoPage";
-import { getGeoPageByRoute, getGeoPageRoutes } from "@/content/geo/loader";
+import { getGeoPageByRoute } from "@/content/geo/loader";
 import { siteConfig } from "@/content/site";
 
 type Params = {
@@ -9,9 +9,7 @@ type Params = {
 };
 
 export function generateStaticParams() {
-  return getGeoPageRoutes()
-    .filter((route) => route !== "/automatizacion-ia-espana")
-    .map((route) => ({ geoSlug: route.replace(/^\//, "") }));
+  return [];
 }
 
 export const dynamicParams = false;

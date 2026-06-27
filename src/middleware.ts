@@ -1,4 +1,5 @@
 import { NextResponse, type NextRequest } from "next/server";
+import { legacyGeoRoutes, normalizeGeoRoute } from "@/content/geo/routes";
 
 const CANONICAL_HOST = "www.kubera-automation.com";
 
@@ -6,6 +7,7 @@ const legacyPathRedirects: Record<string, string> = {
   "/en-services": "/services",
   "/en-kontakty": "/contacts",
   "/es/espana-automatizacion": "/automatizacion-ia-espana",
+  ...Object.fromEntries(legacyGeoRoutes.map((route) => [route, normalizeGeoRoute(route)])),
 };
 
 export function middleware(request: NextRequest) {

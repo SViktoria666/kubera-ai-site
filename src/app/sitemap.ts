@@ -4,6 +4,7 @@ import { getAllBlogPosts } from "@/content/blog";
 import { getBlogPublishedDate } from "@/content/blog/helpers";
 import { countries } from "@/content/countries/countries";
 import { geoRoutes } from "@/content/geo/catalog";
+import { legacyGeoRoutes } from "@/content/geo/routes";
 
 const baseUrl = "https://www.kubera-automation.com";
 const lastModified = new Date();
@@ -56,7 +57,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "monthly" as const,
       priority: 0.8,
     })),
-    ...geoRoutes.map((route) => ({
+    ...geoRoutes.filter((route) => !legacyGeoRoutes.includes(route)).map((route) => ({
       url: `${baseUrl}${route}`,
       lastModified,
       changeFrequency: "monthly" as const,

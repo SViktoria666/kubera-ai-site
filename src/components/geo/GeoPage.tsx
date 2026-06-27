@@ -3,6 +3,7 @@ import type { ReactNode } from "react";
 import type { GeoPageData } from "@/content/geo/types";
 import { siteConfig } from "@/content/site";
 import { getGeoCatalogItemByRoute } from "@/content/geo/catalog";
+import { normalizeGeoRoute } from "@/content/geo/routes";
 
 function cleanTitle(title: string) {
   return title.replace(/^\d+\.\s*/, "");
@@ -217,7 +218,7 @@ export function GeoPage({ page }: { page: GeoPageData }) {
                 <span className="muted">View all 18 GEO pages in one place.</span>
               </Link>
               {page.relatedRoutes.map((route) => (
-              <Link className="card geo-link-card" href={route} key={route}>
+                <Link className="card geo-link-card" href={normalizeGeoRoute(route)} key={route}>
                   <strong>{getGeoCatalogItemByRoute(route)?.country ?? route}</strong>
                   <span className="muted">Open this market page.</span>
                 </Link>
