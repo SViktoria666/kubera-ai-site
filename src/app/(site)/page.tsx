@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { HeroSection } from "@/components/sections/HeroSection";
+import { PricingPackages } from "@/components/sections/PricingPackages";
 import { LossCalculator } from "@/components/sections/LossCalculator";
 import { createPageMetadata } from "@/content/seo";
 
@@ -25,6 +26,7 @@ export default function HomePage() {
           Explore the blog for practical automation guidance and AI system decisions: <Link href="/blog">Kubera AI Blog</Link>.
         </p>
       </div>
+      <PricingPackages locale="en" />
       <LossCalculator locale="en" />
     </main>
   );
