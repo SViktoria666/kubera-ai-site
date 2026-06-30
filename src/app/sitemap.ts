@@ -2,6 +2,7 @@ import type { MetadataRoute } from "next";
 import { caseStudies } from "@/content/cases";
 import { getAllBlogPosts } from "@/content/blog";
 import { getBlogPublishedDate } from "@/content/blog/helpers";
+import { industrySolutions } from "@/content/industry-solutions";
 import { countries } from "@/content/countries/countries";
 import { geoRoutes } from "@/content/geo/catalog";
 import { legacyGeoRoutes } from "@/content/geo/routes";
@@ -62,6 +63,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified,
       changeFrequency: "monthly" as const,
       priority: 0.82,
+    })),
+    ...industrySolutions.map((solution) => ({
+      url: `${baseUrl}${solution.url}`,
+      lastModified,
+      changeFrequency: "monthly" as const,
+      priority: 0.79,
     })),
   ];
 }
