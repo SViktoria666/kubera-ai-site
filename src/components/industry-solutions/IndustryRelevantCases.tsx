@@ -1,5 +1,6 @@
 import Link from "next/link";
 import type { IndustrySolution } from "@/content/industry-solutions";
+import { IndustryArrowIcon } from "./IndustryArrowIcon";
 
 export function IndustryRelevantCases({ solution }: { solution: IndustrySolution }) {
   return (
@@ -14,7 +15,9 @@ export function IndustryRelevantCases({ solution }: { solution: IndustrySolution
           <Link className="solution-card solution-card--link solution-card--case" href={item.href} key={item.title}>
             <h3>{item.title}</h3>
             <p className="muted">{item.description}</p>
-            <span className="solution-card-link">View case {"->"}</span>
+            <span className="solution-card-link">
+              View case <IndustryArrowIcon className="solution-arrow-icon" />
+            </span>
           </Link>
         ))}
       </div>

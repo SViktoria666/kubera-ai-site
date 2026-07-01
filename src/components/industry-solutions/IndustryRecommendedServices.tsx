@@ -1,5 +1,6 @@
 import Link from "next/link";
 import type { IndustrySolution } from "@/content/industry-solutions";
+import { IndustryArrowIcon } from "./IndustryArrowIcon";
 
 export function IndustryRecommendedServices({ solution }: { solution: IndustrySolution }) {
   return (
@@ -15,7 +16,9 @@ export function IndustryRecommendedServices({ solution }: { solution: IndustrySo
           <Link className="solution-card solution-card--link" href={service.href} key={service.title}>
             <h3>{service.title}</h3>
             <p className="muted">{service.description}</p>
-            <span className="solution-card-link">Open service hub {"->"}</span>
+            <span className="solution-card-link">
+              Open service hub <IndustryArrowIcon className="solution-arrow-icon" />
+            </span>
           </Link>
         ))}
       </div>

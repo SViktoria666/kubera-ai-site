@@ -613,18 +613,12 @@ main {
 }
 
 .solution-grid--problems,
-.solution-grid--modules,
-.solution-grid--results,
-.solution-grid--services,
-.solution-grid--cases {
+.solution-grid--modules {
   grid-template-columns: repeat(12, minmax(0, 1fr));
 }
 
 .solution-grid--problems > *,
-.solution-grid--modules > *,
-.solution-grid--results > *,
-.solution-grid--services > *,
-.solution-grid--cases > * {
+.solution-grid--modules > * {
   grid-column: span 12;
 }
 
@@ -663,29 +657,14 @@ main {
   grid-column: span 3;
 }
 
-.solution-grid--results > *:nth-child(1),
-.solution-grid--results > *:nth-child(4) {
-  grid-column: span 5;
+.solution-grid--results {
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
 }
 
-.solution-grid--results > *:nth-child(2),
-.solution-grid--results > *:nth-child(3) {
-  grid-column: span 7;
-}
-
-.solution-grid--services > *:nth-child(1),
-.solution-grid--cases > *:nth-child(1) {
-  grid-column: span 5;
-}
-
-.solution-grid--services > *:nth-child(2),
-.solution-grid--cases > *:nth-child(2) {
-  grid-column: span 4;
-}
-
-.solution-grid--services > *:nth-child(3),
-.solution-grid--cases > *:nth-child(3) {
-  grid-column: span 3;
+.solution-grid--services,
+.solution-grid--cases,
+.solution-reading-links {
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
 }
 
 .solution-card,
@@ -756,10 +735,20 @@ main {
 }
 
 .solution-card-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
   color: var(--color-accent);
   font-size: 0.95rem;
   font-weight: 800;
   transition: transform 0.2s ease;
+}
+
+.solution-arrow-icon {
+  width: 16px;
+  height: 16px;
+  flex: 0 0 auto;
+  transform: translateY(0.5px);
 }
 
 .solution-card--link:hover .solution-card-link {
@@ -785,6 +774,11 @@ main {
   display: grid;
   gap: 12px;
   min-width: 0;
+}
+
+.solution-comparison-body {
+  display: grid;
+  gap: 12px;
 }
 
 .solution-comparison-head,
@@ -1012,7 +1006,24 @@ main {
   display: none;
 }
 
-.solution-faq-item p {
+.solution-faq-content {
+  display: grid;
+  grid-template-rows: 0fr;
+  opacity: 0;
+  transition: grid-template-rows 240ms ease, opacity 240ms ease;
+}
+
+.solution-faq-content-inner {
+  overflow: hidden;
+  min-height: 0;
+}
+
+.solution-faq-item[open] .solution-faq-content {
+  grid-template-rows: 1fr;
+  opacity: 1;
+}
+
+.solution-faq-content p {
   margin: 12px 0 0;
   line-height: 1.65;
 }
@@ -2166,9 +2177,7 @@ input[type="range"] {
 
   .solution-grid--problems > *,
   .solution-grid--modules > *,
-  .solution-grid--results > *,
-  .solution-grid--services > *,
-  .solution-grid--cases > * {
+  .solution-grid--results > * {
     grid-column: auto;
   }
 
@@ -2204,6 +2213,20 @@ input[type="range"] {
 
   .solution-comparison-cell-label {
     display: inline-flex;
+  }
+
+  .solution-grid--services,
+  .solution-grid--cases,
+  .solution-reading-links {
+    grid-template-columns: 1fr;
+  }
+
+  .solution-comparison-row {
+    gap: 12px;
+  }
+
+  .solution-card-link {
+    font-size: 0.9rem;
   }
 
   .workflow-card {

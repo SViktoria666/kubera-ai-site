@@ -12,7 +12,11 @@ export function IndustryFAQ({ solution }: { solution: IndustrySolution }) {
         {solution.faq.map((item) => (
           <details className="solution-faq-item" key={item.question}>
             <summary>{item.question}</summary>
-            <p className="muted">{item.answer}</p>
+            <div className="solution-faq-content">
+              <div className="solution-faq-content-inner">
+                <p className="muted">{item.answer}</p>
+              </div>
+            </div>
           </details>
         ))}
       </div>

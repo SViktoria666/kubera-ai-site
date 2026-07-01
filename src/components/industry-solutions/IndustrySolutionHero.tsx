@@ -1,5 +1,6 @@
 import Link from "next/link";
 import type { IndustrySolution } from "@/content/industry-solutions";
+import { IndustryArrowIcon } from "./IndustryArrowIcon";
 
 export function IndustrySolutionHero({ solution }: { solution: IndustrySolution }) {
   return (
@@ -29,7 +30,11 @@ export function IndustrySolutionHero({ solution }: { solution: IndustrySolution 
           {solution.hero.previewNodes.map((node, index) => (
             <div className="solution-flow-node" key={node}>
               <span>{node}</span>
-              {index < solution.hero.previewNodes.length - 1 ? <span className="solution-flow-arrow">{"->"}</span> : null}
+              {index < solution.hero.previewNodes.length - 1 ? (
+                <span className="solution-flow-arrow" aria-hidden="true">
+                  <IndustryArrowIcon className="solution-arrow-icon" />
+                </span>
+              ) : null}
             </div>
           ))}
         </div>
