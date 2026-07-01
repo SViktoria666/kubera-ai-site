@@ -5,8 +5,8 @@ export function IndustryRecommendedServices({ solution }: { solution: IndustrySo
   return (
     <section className="solution-section">
       <div className="solution-section-heading">
-        <p className="eyebrow">Recommended services</p>
-        <h2 className="section-title">Use the existing service hub to scope the work</h2>
+        <p className="eyebrow">Service alignment</p>
+        <h2 className="section-title">How the service stack fits together</h2>
       </div>
 
       <div className="solution-grid solution-grid--services">
@@ -14,7 +14,7 @@ export function IndustryRecommendedServices({ solution }: { solution: IndustrySo
           <Link className="solution-card solution-card--link" href={service.href} key={service.title}>
             <h3>{service.title}</h3>
             <p className="muted">{service.description}</p>
-            <span className="solution-card-link">Open service hub →</span>
+            <span className="solution-card-link">Explore service hub {"->"}</span>
           </Link>
         ))}
       </div>
@@ -33,4 +33,3 @@ export function IndustryRecommendedServices({ solution }: { solution: IndustrySo
     </section>
   );
 }
-

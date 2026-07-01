@@ -5,7 +5,7 @@ export function IndustryBusinessResults({ solution }: { solution: IndustrySoluti
     <section className="solution-section">
       <div className="solution-section-heading">
         <p className="eyebrow">Business results</p>
-        <h2 className="section-title">What this can improve</h2>
+        <h2 className="section-title">Operational gains to aim for</h2>
       </div>
 
       <div className="solution-grid solution-grid--results">
@@ -19,4 +19,3 @@ export function IndustryBusinessResults({ solution }: { solution: IndustrySoluti
     </section>
   );
 }
-

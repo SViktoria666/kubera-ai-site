@@ -29,7 +29,7 @@ export function IndustrySolutionHero({ solution }: { solution: IndustrySolution 
           {solution.hero.previewNodes.map((node, index) => (
             <div className="solution-flow-node" key={node}>
               <span>{node}</span>
-              {index < solution.hero.previewNodes.length - 1 ? <span className="solution-flow-arrow">→</span> : null}
+              {index < solution.hero.previewNodes.length - 1 ? <span className="solution-flow-arrow">{"->"}</span> : null}
             </div>
           ))}
         </div>
@@ -41,4 +41,3 @@ export function IndustrySolutionHero({ solution }: { solution: IndustrySolution 
     </section>
   );
 }
-

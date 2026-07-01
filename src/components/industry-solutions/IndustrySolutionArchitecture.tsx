@@ -5,19 +5,20 @@ export function IndustrySolutionArchitecture({ solution }: { solution: IndustryS
     <section className="solution-section">
       <div className="solution-section-heading">
         <p className="eyebrow">Recommended architecture</p>
-        <h2 className="section-title">{solution.architecture.title}</h2>
+        <h2 className="section-title">How the workflow fits together</h2>
         <p className="lead solution-section-lead">{solution.architecture.description}</p>
       </div>
 
       <div className="solution-architecture">
-        <div className="solution-architecture-flow">
+        <ol className="solution-architecture-flow">
           {solution.architecture.flow.map((step, index) => (
-            <div className="solution-architecture-step" key={step}>
-              <span>{step}</span>
-              {index < solution.architecture.flow.length - 1 ? <span className="solution-architecture-arrow">→</span> : null}
-            </div>
+            <li className="solution-architecture-step" key={step}>
+              <span className="solution-architecture-index">{String(index + 1).padStart(2, "0")}</span>
+              <span className="solution-architecture-step-label">{step}</span>
+              {index < solution.architecture.flow.length - 1 ? <span className="solution-architecture-connector" aria-hidden="true" /> : null}
+            </li>
           ))}
-        </div>
+        </ol>
 
         <div className="solution-architecture-notes">
           {solution.architecture.notes.map((note) => (
@@ -30,4 +31,3 @@ export function IndustrySolutionArchitecture({ solution }: { solution: IndustryS
     </section>
   );
 }
-

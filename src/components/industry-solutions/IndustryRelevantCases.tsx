@@ -6,7 +6,7 @@ export function IndustryRelevantCases({ solution }: { solution: IndustrySolution
     <section className="solution-section">
       <div className="solution-section-heading">
         <p className="eyebrow">Relevant demo cases</p>
-        <h2 className="section-title">Closest-fit examples in the existing site</h2>
+        <h2 className="section-title">Closest matches from the current site</h2>
       </div>
 
       <div className="solution-grid solution-grid--cases">
@@ -14,11 +14,10 @@ export function IndustryRelevantCases({ solution }: { solution: IndustrySolution
           <Link className="solution-card solution-card--link solution-card--case" href={item.href} key={item.title}>
             <h3>{item.title}</h3>
             <p className="muted">{item.description}</p>
-            <span className="solution-card-link">Open case →</span>
+            <span className="solution-card-link">View case {"->"}</span>
           </Link>
         ))}
       </div>
     </section>
   );
 }
-

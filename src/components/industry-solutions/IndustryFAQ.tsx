@@ -5,7 +5,7 @@ export function IndustryFAQ({ solution }: { solution: IndustrySolution }) {
     <section className="solution-section">
       <div className="solution-section-heading">
         <p className="eyebrow">FAQ</p>
-        <h2 className="section-title">Questions teams usually ask first</h2>
+        <h2 className="section-title">Questions teams usually ask before starting</h2>
       </div>
 
       <div className="solution-faq-grid">
@@ -19,4 +19,3 @@ export function IndustryFAQ({ solution }: { solution: IndustrySolution }) {
     </section>
   );
 }
-

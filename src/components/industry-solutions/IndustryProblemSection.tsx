@@ -4,8 +4,8 @@ export function IndustryProblemSection({ solution }: { solution: IndustrySolutio
   return (
     <section className="solution-section">
       <div className="solution-section-heading">
-        <p className="eyebrow">Industry problems</p>
-        <h2 className="section-title">What usually breaks first</h2>
+        <p className="eyebrow">Common pressure points</p>
+        <h2 className="section-title">Where WhatsApp operations usually slow down</h2>
       </div>
 
       <div className="solution-grid solution-grid--problems">
@@ -18,8 +18,8 @@ export function IndustryProblemSection({ solution }: { solution: IndustrySolutio
       </div>
 
       <div className="solution-section-heading solution-section-heading--spaced">
-        <p className="eyebrow">Problem to automation</p>
-        <h2 className="section-title">What the workflow should do instead</h2>
+        <p className="eyebrow">Target workflow</p>
+        <h2 className="section-title">What the system should handle automatically</h2>
       </div>
 
       <div className="solution-matrix">
@@ -37,4 +37,3 @@ export function IndustryProblemSection({ solution }: { solution: IndustrySolutio
     </section>
   );
 }
-
