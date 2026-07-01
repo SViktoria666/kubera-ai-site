@@ -563,6 +563,49 @@ main {
   margin: 0;
 }
 
+.solution-explainer-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(260px, 0.85fr);
+  gap: 18px;
+  min-width: 0;
+}
+
+.solution-explainer-copy {
+  display: grid;
+  align-content: start;
+  gap: 14px;
+  min-width: 0;
+}
+
+.solution-explainer-text {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.84);
+  font-size: 1.02rem;
+  line-height: 1.7;
+}
+
+.solution-explainer-card {
+  display: grid;
+  align-content: start;
+  gap: 12px;
+  min-width: 0;
+  padding: 22px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 18px;
+  background:
+    linear-gradient(180deg, rgba(255, 184, 0, 0.08), transparent 40%),
+    rgba(255, 255, 255, 0.05);
+}
+
+.solution-explainer-points {
+  margin-top: 2px;
+}
+
+.solution-explainer-note {
+  margin: 0;
+  line-height: 1.6;
+}
+
 .solution-grid {
   display: grid;
   gap: 16px;
@@ -738,6 +781,65 @@ main {
   gap: 16px;
 }
 
+.solution-comparison {
+  display: grid;
+  gap: 12px;
+  min-width: 0;
+}
+
+.solution-comparison-head,
+.solution-comparison-row {
+  display: grid;
+  grid-template-columns:
+    minmax(0, 1.05fr)
+    minmax(0, 1.05fr)
+    minmax(0, 1.2fr)
+    minmax(0, 0.95fr);
+  gap: 14px;
+}
+
+.solution-comparison-head {
+  padding: 0 12px;
+  color: var(--color-accent);
+  font-size: 0.74rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.solution-comparison-row {
+  min-width: 0;
+  padding: 18px 20px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 18px;
+  background:
+    linear-gradient(180deg, rgba(50, 122, 255, 0.08), transparent 38%),
+    rgba(255, 255, 255, 0.05);
+  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.16);
+}
+
+.solution-comparison-cell {
+  display: grid;
+  gap: 8px;
+  min-width: 0;
+}
+
+.solution-comparison-cell p {
+  margin: 0;
+  color: var(--color-text);
+  line-height: 1.58;
+  overflow-wrap: anywhere;
+}
+
+.solution-comparison-cell-label {
+  display: none;
+  color: var(--color-accent);
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
 .solution-matrix-card {
   display: grid;
   gap: 10px;
@@ -830,6 +932,22 @@ main {
 .solution-reading {
   display: grid;
   gap: 12px;
+}
+
+.solution-mid-cta {
+  display: grid;
+  gap: 12px;
+  padding: 30px;
+  border: 1px solid rgba(255, 184, 0, 0.28);
+  border-radius: 22px;
+  background:
+    linear-gradient(180deg, rgba(255, 184, 0, 0.09), rgba(255, 255, 255, 0.04)),
+    linear-gradient(180deg, rgba(17, 7, 32, 0.96), rgba(7, 3, 18, 0.96));
+  box-shadow: 0 24px 52px rgba(0, 0, 0, 0.26);
+}
+
+.solution-mid-cta .button {
+  width: fit-content;
 }
 
 .solution-reading-links {
@@ -2033,10 +2151,16 @@ input[type="range"] {
   }
 
   .solution-hero,
+  .solution-explainer-grid,
   .solution-architecture-notes,
   .solution-faq-grid,
   .solution-matrix,
   .solution-architecture-flow {
+    grid-template-columns: 1fr;
+  }
+
+  .solution-comparison-head,
+  .solution-comparison-row {
     grid-template-columns: 1fr;
   }
 
@@ -2049,6 +2173,11 @@ input[type="range"] {
   }
 
   .solution-hero {
+    padding: 22px;
+  }
+
+  .solution-explainer-card,
+  .solution-mid-cta {
     padding: 22px;
   }
 
@@ -2067,6 +2196,14 @@ input[type="range"] {
 
   .pricing-card--featured {
     transform: none;
+  }
+
+  .solution-comparison-head {
+    display: none;
+  }
+
+  .solution-comparison-cell-label {
+    display: inline-flex;
   }
 
   .workflow-card {

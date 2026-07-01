@@ -4,11 +4,14 @@ import { IndustryAutomationModules } from "./IndustryAutomationModules";
 import { IndustryBusinessResults } from "./IndustryBusinessResults";
 import { IndustryFAQ } from "./IndustryFAQ";
 import { IndustryFinalCTA } from "./IndustryFinalCTA";
+import { IndustryMidCTA } from "./IndustryMidCTA";
 import { IndustryProblemSection } from "./IndustryProblemSection";
 import { IndustryRecommendedServices } from "./IndustryRecommendedServices";
 import { IndustryRelevantCases } from "./IndustryRelevantCases";
+import { IndustrySolutionExplainer } from "./IndustrySolutionExplainer";
 import { IndustrySolutionArchitecture } from "./IndustrySolutionArchitecture";
 import { IndustrySolutionHero } from "./IndustrySolutionHero";
+import { PricingPackages } from "../sections/PricingPackages";
 
 export function IndustrySolutionTemplate({
   solution,
@@ -24,10 +27,13 @@ export function IndustrySolutionTemplate({
       <section className="solution-shell">
         <div className="container solution-container">
           <IndustrySolutionHero solution={solution} />
+          <IndustrySolutionExplainer solution={solution} />
           <IndustryProblemSection solution={solution} />
           <IndustrySolutionArchitecture solution={solution} />
           <IndustryAutomationModules solution={solution} />
           <IndustryBusinessResults solution={solution} />
+          <IndustryMidCTA solution={solution} />
+          <PricingPackages locale="en" />
           <IndustryRecommendedServices solution={solution} />
           <IndustryRelevantCases solution={solution} />
           <IndustryFAQ solution={solution} />
@@ -37,4 +43,3 @@ export function IndustrySolutionTemplate({
     </main>
   );
 }
-

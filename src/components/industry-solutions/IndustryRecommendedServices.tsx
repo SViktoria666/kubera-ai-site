@@ -6,7 +6,8 @@ export function IndustryRecommendedServices({ solution }: { solution: IndustrySo
     <section className="solution-section">
       <div className="solution-section-heading">
         <p className="eyebrow">Service alignment</p>
-        <h2 className="section-title">How the service stack fits together</h2>
+        <h2 className="section-title">Recommended Kubera AI Stack</h2>
+        <p className="lead solution-section-lead">Each service below has a role in the architecture shown above.</p>
       </div>
 
       <div className="solution-grid solution-grid--services">
@@ -14,13 +15,13 @@ export function IndustryRecommendedServices({ solution }: { solution: IndustrySo
           <Link className="solution-card solution-card--link" href={service.href} key={service.title}>
             <h3>{service.title}</h3>
             <p className="muted">{service.description}</p>
-            <span className="solution-card-link">Explore service hub {"->"}</span>
+            <span className="solution-card-link">Open service hub {"->"}</span>
           </Link>
         ))}
       </div>
 
       <div className="solution-reading">
-        <p className="solution-reading-label">Further reading</p>
+        <p className="solution-reading-label">Recommended Reading</p>
         <div className="solution-reading-links">
           {solution.reading.map((item) => (
             <Link className="solution-reading-link" href={item.href} key={item.title}>

@@ -4,8 +4,9 @@ export function IndustryBusinessResults({ solution }: { solution: IndustrySoluti
   return (
     <section className="solution-section">
       <div className="solution-section-heading">
-        <p className="eyebrow">Business results</p>
-        <h2 className="section-title">Operational gains to aim for</h2>
+        <p className="eyebrow">ROI / business impact</p>
+        <h2 className="section-title">Expected Business Impact</h2>
+        <p className="lead solution-section-lead">Typical improvements may include:</p>
       </div>
 
       <div className="solution-grid solution-grid--results">

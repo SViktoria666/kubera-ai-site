@@ -5,7 +5,7 @@ export function IndustryProblemSection({ solution }: { solution: IndustrySolutio
     <section className="solution-section">
       <div className="solution-section-heading">
         <p className="eyebrow">Common pressure points</p>
-        <h2 className="section-title">Where WhatsApp operations usually slow down</h2>
+        <h2 className="section-title">Where {solution.industryLabel.toLowerCase()} workflows usually slow down</h2>
       </div>
 
       <div className="solution-grid solution-grid--problems">
@@ -18,21 +18,40 @@ export function IndustryProblemSection({ solution }: { solution: IndustrySolutio
       </div>
 
       <div className="solution-section-heading solution-section-heading--spaced">
-        <p className="eyebrow">Target workflow</p>
-        <h2 className="section-title">What the system should handle automatically</h2>
+        <p className="eyebrow">Manual vs AI</p>
+        <h2 className="section-title">Manual Process vs AI Automation</h2>
       </div>
 
-      <div className="solution-matrix">
-        {solution.problemSolution.map((item) => (
-          <article className="solution-matrix-card" key={item.problem}>
-            <span className="solution-matrix-label">Problem</span>
-            <p>{item.problem}</p>
-            <span className="solution-matrix-label">Automation</span>
-            <p>{item.automation}</p>
-            <span className="solution-matrix-label">Result</span>
-            <p>{item.result}</p>
-          </article>
-        ))}
+      <div className="solution-comparison">
+        <div className="solution-comparison-head" aria-hidden="true">
+          <span>Business Process</span>
+          <span>Without Automation</span>
+          <span>With AI Automation</span>
+          <span>Business Impact</span>
+        </div>
+
+        <div className="solution-comparison-body">
+          {solution.problemSolution.map((item) => (
+            <article className="solution-comparison-row" key={item.problem}>
+              <div className="solution-comparison-cell">
+                <span className="solution-comparison-cell-label">Business Process</span>
+                <p>{item.problem}</p>
+              </div>
+              <div className="solution-comparison-cell">
+                <span className="solution-comparison-cell-label">Without Automation</span>
+                <p>{item.problem}</p>
+              </div>
+              <div className="solution-comparison-cell">
+                <span className="solution-comparison-cell-label">With AI Automation</span>
+                <p>{item.automation}</p>
+              </div>
+              <div className="solution-comparison-cell">
+                <span className="solution-comparison-cell-label">Business Impact</span>
+                <p>{item.result}</p>
+              </div>
+            </article>
+          ))}
+        </div>
       </div>
     </section>
   );
