@@ -2512,6 +2512,821 @@ export const industrySolutions: IndustrySolution[] = [
       },
     },
   },
+  {
+    locale: "en",
+    country: "germany",
+    countryLabel: "Germany",
+    industry: "dental-automation",
+    industryLabel: "Dental Automation",
+    url: "/en/solutions/germany/dental-automation",
+    seo: {
+      title: "AI Automation for Dental Practices in Germany | Kubera AI",
+      description:
+        "AI automation for dental practices in Germany. Automate appointment booking, patient communication, and reminders with Kubera AI.",
+      canonical: "https://www.kubera-automation.com/en/solutions/germany/dental-automation",
+      type: "service",
+    },
+    hero: {
+      label: "Dental Automation - Germany",
+      title: "AI Automation for Dental Practices in Germany",
+      subtitle:
+        "Kubera AI builds AI-powered systems that handle appointment requests, confirmations, and reminders for dental practices in Germany - reducing front-desk workload and no-shows.",
+      trustLine: "Built for private dental practices - WhatsApp + calendar integration - GDPR-compliant infrastructure",
+      primaryCta: {
+        title: "Book a strategy call",
+        description: "Start with one workflow and define fallback rules before anything is built.",
+        href: "/contacts",
+      },
+      secondaryCta: {
+        title: "See how it works",
+        description: "Review the service hub before scoping the workflow.",
+        href: "/services",
+      },
+      previewNodes: ["Website / Landing Page", "WhatsApp / Telegram", "AI Assistant", "CRM / Practice Management Integration", "Email/SMS Follow-up", "Analytics Dashboard"],
+    },
+    problems: [
+      {
+        title: "Front desk staff overwhelmed by appointment requests",
+        description: "Phone calls and messages for booking, rescheduling, and cancellations consume significant staff time daily.",
+      },
+      {
+        title: "No-shows and late cancellations affect schedule efficiency",
+        description: "Without consistent reminders, practices lose revenue to missed appointments.",
+      },
+      {
+        title: "Patients expect fast responses outside office hours",
+        description: "Inquiries sent in the evening or on weekends go unanswered until the practice reopens.",
+      },
+      {
+        title: "Repetitive patient questions consume staff time",
+        description: "Questions about insurance coverage, opening hours, and treatment basics repeat constantly.",
+      },
+      {
+        title: "No structured follow-up for treatment plans",
+        description: "Patients who need to schedule follow-up treatments are sometimes lost without a system to track and remind them.",
+      },
+    ],
+    problemSolution: [
+      {
+        problem: "High appointment request volume",
+        automation: "AI assistant handles booking, rescheduling, cancellations",
+        result: "Can help reduce front-desk workload",
+      },
+      {
+        problem: "No-shows and late cancellations",
+        automation: "Automated appointment reminders via WhatsApp/SMS",
+        result: "Designed to reduce no-show rates",
+      },
+      {
+        problem: "After-hours patient inquiries",
+        automation: "24/7 AI assistant with human handoff",
+        result: "May improve responsiveness outside office hours",
+      },
+      {
+        problem: "Repetitive patient questions",
+        automation: "AI handles FAQs on insurance, hours, treatments",
+        result: "Supports reduced repetitive workload on staff",
+      },
+      {
+        problem: "Missed follow-up treatments",
+        automation: "Automated follow-up scheduling reminders",
+        result: "Helps automate treatment plan follow-up",
+      },
+    ],
+    architecture: {
+      title: "Recommended dental automation architecture",
+      description:
+        "Website / Landing Page is the appointment request entry point. WhatsApp / Telegram is the primary patient communication channel. The AI Assistant handles booking requests, FAQs, and reminders. CRM / Practice Management Integration syncs appointment data and patient status. Email/SMS Follow-up sends reminders and follow-up treatment prompts, Internal Notifications alert the front desk for complex requests or cancellations, and the Analytics Dashboard tracks appointment volume, no-show rate, and response time.",
+      flow: ["Website / Landing Page", "WhatsApp / Telegram", "AI Assistant", "CRM / Practice Management Integration", "Email/SMS Follow-up", "Internal Notifications", "Analytics Dashboard"],
+      notes: [
+        "Website forms and messaging all feed the same dental workflow.",
+        "The AI Assistant handles first response, drafting and routing, not unchecked final decisions.",
+        "Practice management records stay synchronized with patient status and appointment history.",
+        "Notifications and analytics close the loop with confirmations, summaries and performance tracking.",
+      ],
+    },
+    modules: [
+      {
+        title: "AI Appointment Assistant",
+        description: "Handles booking, rescheduling, and cancellation requests.",
+        bullets: ["Booking requests", "Rescheduling", "Cancellation handling"],
+      },
+      {
+        title: "WhatsApp Patient Channel",
+        description: "Centralizes patient communication.",
+        bullets: ["Unified messaging", "Message history", "Patient continuity"],
+      },
+      {
+        title: "Appointment Reminder Module",
+        description: "Sends automated reminders to reduce no-shows.",
+        bullets: ["Reminder timing", "Confirmation nudges", "No-show reduction"],
+      },
+      {
+        title: "Practice Management Sync",
+        description: "Connects AI assistant to practice management software.",
+        bullets: ["Calendar sync", "Status updates", "Practice records"],
+      },
+      {
+        title: "Follow-up Treatment Sequencer",
+        description: "Reminds patients of recommended follow-up treatments.",
+        bullets: ["Treatment reminders", "Timing rules", "Re-engagement"],
+      },
+      {
+        title: "Practice Reporting Module",
+        description: "Dashboard on appointment volume and no-show trends.",
+        bullets: ["Appointment volume", "No-show trends", "Response visibility"],
+      },
+    ],
+    results: [
+      {
+        title: "Can help reduce front-desk workload from appointment requests",
+        description: "Can help reduce front-desk workload from appointment requests.",
+      },
+      {
+        title: "Designed to reduce no-show and late-cancellation rates",
+        description: "Designed to reduce no-show and late-cancellation rates.",
+      },
+      {
+        title: "May improve responsiveness to patient inquiries outside office hours",
+        description: "May improve responsiveness to patient inquiries outside office hours.",
+      },
+      {
+        title: "Supports reduced repetitive workload on practice staff",
+        description: "Supports reduced repetitive workload on practice staff.",
+      },
+      {
+        title: "Helps automate follow-up for recommended treatments",
+        description: "Helps automate follow-up for recommended treatments.",
+      },
+      {
+        title: "Can support better visibility into appointment and no-show trends",
+        description: "Can support better visibility into appointment and no-show trends.",
+      },
+    ],
+    services: [
+      {
+        title: "AI Assistants",
+        description: "Core engine behind patient communication and appointment handling.",
+        href: "/services",
+      },
+      {
+        title: "WhatsApp Automation",
+        description: "Primary channel for patient communication and reminders.",
+        href: "/services",
+      },
+      {
+        title: "Booking Automation",
+        description: "Automates reminders and appointment workflows.",
+        href: "/services",
+      },
+      {
+        title: "CRM Automation",
+        description: "Syncs appointment data and patient status.",
+        href: "/services",
+      },
+    ],
+    cases: [
+      {
+        title: "AI appointment assistant for healthcare-adjacent services",
+        description: "Closest-fit case for booking, reminders and patient communication.",
+        href: "/cases/medical-clinics-dental",
+      },
+      {
+        title: "Booking request -> AI qualification -> calendar sync architecture",
+        description: "Useful proxy for triage, response and routing logic across channels.",
+        href: "/cases/customer-communications",
+      },
+      {
+        title: "Appointment reminder and no-show reduction automation",
+        description: "Relevant for scheduling and follow-up patterns.",
+        href: "/cases/internal-processes",
+      },
+    ],
+    reading: [
+      {
+        title: "How AI Automation Saves 20+ Hours Per Week for Small Businesses",
+        description: "A practical guide to the first workflows that free up real time.",
+        href: "/blog/how-ai-automation-saves-time",
+      },
+      {
+        title: "What Is AI Automation?",
+        description: "Useful context for understanding the operational model behind these systems.",
+        href: "/blog/what-is-ai-automation",
+      },
+      {
+        title: "What Is an AI Agent?",
+        description: "Useful context for deciding when a workflow needs an assistant versus a full agent layer.",
+        href: "/blog/what-is-an-ai-agent",
+      },
+      {
+        title: "AI Agent vs Chatbot",
+        description: "A comparison for teams deciding how much intelligence the workflow actually needs.",
+        href: "/blog/ai-agent-vs-chatbot",
+      },
+    ],
+    faq: [
+      {
+        question: "Can the AI assistant book appointments directly into our practice management system?",
+        answer:
+          "When connected to your practice management software, the assistant can check availability and request bookings.",
+      },
+      {
+        question: "Will this work for a single practice or only larger dental groups?",
+        answer:
+          "It is designed for both single practices and multi-location dental groups.",
+      },
+      {
+        question: "Can it send appointment reminders automatically?",
+        answer:
+          "Yes, automated reminders can be sent via WhatsApp, SMS, or email ahead of scheduled appointments.",
+      },
+      {
+        question: "Does this comply with patient data protection requirements?",
+        answer:
+          "The system runs on GDPR-compliant infrastructure with controlled access to patient communication data.",
+      },
+      {
+        question: "Will patients know they're messaging an AI?",
+        answer:
+          "Yes, the assistant is presented transparently as an AI assistant, with human handoff available.",
+      },
+      {
+        question: "What languages can the assistant use?",
+        answer:
+          "The assistant can be configured for German, English, and other languages relevant to your patient base.",
+      },
+      {
+        question: "Will this replace my front desk staff?",
+        answer:
+          "No, it is designed to handle repetitive scheduling requests so staff can focus on in-person patient interactions.",
+      },
+      {
+        question: "How long does implementation take?",
+        answer:
+          "Most dental automation setups can be implemented within a few weeks, depending on practice management system integration.",
+      },
+    ],
+    cta: {
+      label: "Final CTA",
+      title: "Fewer No-Shows, Less Front-Desk Workload",
+      body: "Let Kubera AI build an appointment automation system for your dental practice in Germany.",
+      primary: {
+        title: "Book a strategy call",
+        description: "Go to the existing contact page for project discussion.",
+        href: "/contacts",
+      },
+      secondary: {
+        title: "Explore services",
+        description: "Review the current service hub before scoping the workflow.",
+        href: "/services",
+      },
+    },
+  },
+  {
+    locale: "en",
+    country: "germany",
+    countryLabel: "Germany",
+    industry: "legal-tech-automation",
+    industryLabel: "Legal Tech Automation",
+    url: "/en/solutions/germany/legal-tech-automation",
+    seo: {
+      title: "AI Automation for Law Firms in Germany | Kubera AI",
+      description:
+        "AI automation for law firms and legal practices in Germany. Automate client intake, document workflows, and follow-up with Kubera AI.",
+      canonical: "https://www.kubera-automation.com/en/solutions/germany/legal-tech-automation",
+      type: "service",
+    },
+    hero: {
+      label: "Legal Tech Automation - Germany",
+      title: "AI Automation for Law Firms in Germany",
+      subtitle:
+        "Kubera AI builds AI-powered systems that handle client intake, initial inquiries, and document workflow coordination for law firms in Germany.",
+      trustLine: "Built for private law firms - CRM-integrated - GDPR-compliant infrastructure",
+      primaryCta: {
+        title: "Book a strategy call",
+        description: "Start with one workflow and define fallback rules before anything is built.",
+        href: "/contacts",
+      },
+      secondaryCta: {
+        title: "See how it works",
+        description: "Review the service hub before scoping the workflow.",
+        href: "/services",
+      },
+      previewNodes: ["Website / Landing Page", "WhatsApp / Telegram", "AI Assistant", "CRM", "Email Follow-up", "Analytics Dashboard"],
+    },
+    problems: [
+      {
+        title: "Client intake consumes significant administrative time",
+        description: "Initial inquiries require gathering case details before a lawyer can assess fit, often done manually.",
+      },
+      {
+        title: "Unqualified inquiries reach lawyers directly",
+        description: "Without pre-qualification, lawyers spend time on inquiries outside their practice area or budget range.",
+      },
+      {
+        title: "Slow response to new inquiries reduces conversion",
+        description: "Prospective clients comparing firms often choose whoever responds first with a clear next step.",
+      },
+      {
+        title: "Document collection workflows are manual",
+        description: "Gathering required documents from clients involves repeated follow-up emails and reminders.",
+      },
+      {
+        title: "No structured visibility into intake-to-client conversion",
+        description: "Firm owners often do not know how many inquiries convert to engaged clients.",
+      },
+    ],
+    problemSolution: [
+      {
+        problem: "Manual client intake",
+        automation: "AI assistant gathers case details before lawyer review",
+        result: "Can help reduce administrative time on intake",
+      },
+      {
+        problem: "Unqualified inquiries",
+        automation: "AI pre-qualification by practice area and case type",
+        result: "Designed to reduce time spent on out-of-scope inquiries",
+      },
+      {
+        problem: "Slow inquiry response",
+        automation: "Instant AI response with clear next steps",
+        result: "May improve inquiry-to-consultation conversion",
+      },
+      {
+        problem: "Manual document collection",
+        automation: "Automated document request and reminder sequences",
+        result: "Supports more consistent document collection",
+      },
+      {
+        problem: "No conversion visibility",
+        automation: "CRM + reporting dashboard",
+        result: "Helps automate visibility into intake performance",
+      },
+    ],
+    architecture: {
+      title: "Recommended legal tech automation architecture",
+      description:
+        "Website / Landing Page is the entry point for new client inquiries. WhatsApp / Telegram is the initial client communication channel. The AI Assistant gathers case details and qualifies practice area fit. CRM stores client intake data and case status. Email Follow-up handles document collection reminders and consultation confirmations, Internal Notifications alert lawyers of qualified, ready-to-review inquiries, and the Analytics Dashboard tracks intake volume, qualification rate, and conversion.",
+      flow: ["Website / Landing Page", "WhatsApp / Telegram", "AI Assistant", "CRM", "Email Follow-up", "Internal Notifications", "Analytics Dashboard"],
+      notes: [
+        "Website forms and messaging all feed the same intake workflow.",
+        "The AI Assistant handles first response, drafting and routing, not unchecked legal decisions.",
+        "CRM keeps intake status and client history visible to the team.",
+        "Notifications and analytics close the loop with confirmations, summaries and performance tracking.",
+      ],
+    },
+    modules: [
+      {
+        title: "AI Client Intake Assistant",
+        description: "Gathers case details and practice area before lawyer involvement.",
+        bullets: ["Case details", "Practice area fit", "Qualification prompts"],
+      },
+      {
+        title: "WhatsApp Intake Channel",
+        description: "Centralizes initial client communication.",
+        bullets: ["Unified inbox", "Message continuity", "Fast replies"],
+      },
+      {
+        title: "Document Collection Module",
+        description: "Automates requests and reminders for required documents.",
+        bullets: ["Document requests", "Reminder logic", "Follow-up"],
+      },
+      {
+        title: "CRM for Client Pipeline",
+        description: "Tracks every inquiry from intake to engaged client.",
+        bullets: ["Client records", "Status updates", "Pipeline visibility"],
+      },
+      {
+        title: "Consultation Scheduler",
+        description: "Automates booking of initial consultations.",
+        bullets: ["Calendar prompts", "Consultation booking", "Confirmation logic"],
+      },
+      {
+        title: "Intake Performance Reporting",
+        description: "Shows qualification and conversion rates by practice area.",
+        bullets: ["Qualification rate", "Conversion rate", "Practice area reporting"],
+      },
+    ],
+    results: [
+      {
+        title: "Can help reduce administrative time spent on client intake",
+        description: "Can help reduce administrative time spent on client intake.",
+      },
+      {
+        title: "Designed to reduce time spent on out-of-scope or unqualified inquiries",
+        description: "Designed to reduce time spent on out-of-scope or unqualified inquiries.",
+      },
+      {
+        title: "May improve inquiry-to-consultation conversion",
+        description: "May improve inquiry-to-consultation conversion.",
+      },
+      {
+        title: "Supports more consistent document collection workflows",
+        description: "Supports more consistent document collection workflows.",
+      },
+      {
+        title: "Helps centralize client communication during the intake stage",
+        description: "Helps centralize client communication during the intake stage.",
+      },
+      {
+        title: "Can support better visibility into intake and conversion performance",
+        description: "Can support better visibility into intake and conversion performance.",
+      },
+    ],
+    services: [
+      {
+        title: "AI Assistants",
+        description: "Core engine behind client intake and inquiry handling.",
+        href: "/services",
+      },
+      {
+        title: "Lead Generation Automation",
+        description: "Supports initial inquiry capture and qualification.",
+        href: "/services",
+      },
+      {
+        title: "Internal Process Automation",
+        description: "Automates document collection and reminders.",
+        href: "/services",
+      },
+      {
+        title: "CRM Automation",
+        description: "Tracks every inquiry from intake to engaged client.",
+        href: "/services",
+      },
+      {
+        title: "Booking Automation",
+        description: "Automates consultations and scheduling.",
+        href: "/services",
+      },
+    ],
+    cases: [
+      {
+        title: "AI client intake assistant for professional services",
+        description: "Closest-fit case for client intake and qualification handling.",
+        href: "/cases/customer-communications",
+      },
+      {
+        title: "Inquiry -> qualification -> consultation scheduling architecture",
+        description: "Useful proxy for triage, response and routing logic across channels.",
+        href: "/cases/sales-leads",
+      },
+      {
+        title: "Document collection and reminder automation",
+        description: "Relevant for document workflows and internal follow-up patterns.",
+        href: "/cases/internal-processes",
+      },
+    ],
+    reading: [
+      {
+        title: "How AI Automation Saves 20+ Hours Per Week for Small Businesses",
+        description: "A practical guide to the first workflows that free up real time.",
+        href: "/blog/how-ai-automation-saves-time",
+      },
+      {
+        title: "What Is AI Automation?",
+        description: "Useful context for understanding the operational model behind these systems.",
+        href: "/blog/what-is-ai-automation",
+      },
+      {
+        title: "What Is an AI Agent?",
+        description: "Useful context for deciding when a workflow needs an assistant versus a full agent layer.",
+        href: "/blog/what-is-an-ai-agent",
+      },
+      {
+        title: "AI Agent vs Chatbot",
+        description: "A comparison for teams deciding how much intelligence the workflow actually needs.",
+        href: "/blog/ai-agent-vs-chatbot",
+      },
+    ],
+    faq: [
+      {
+        question: "Can the AI assistant assess legal merit of a case?",
+        answer:
+          "No. It is designed to gather case details and practice area information so a qualified lawyer can make that assessment.",
+      },
+      {
+        question: "Will this replace initial client consultations with lawyers?",
+        answer:
+          "No, it is designed to qualify and prepare inquiries before a lawyer conducts the consultation.",
+      },
+      {
+        question: "Can it handle confidential client information securely?",
+        answer:
+          "The system runs on GDPR-compliant infrastructure with controlled access; specific confidentiality requirements are reviewed during the strategy call.",
+      },
+      {
+        question: "Can the AI assistant collect documents from clients?",
+        answer:
+          "Yes, it can be configured to send structured document requests and automated reminders.",
+      },
+      {
+        question: "Will clients know they're interacting with an AI?",
+        answer:
+          "Yes, the assistant is presented transparently as an AI assistant, with human handoff available.",
+      },
+      {
+        question: "What practice areas is this suitable for?",
+        answer:
+          "It can be configured for most practice areas with structured intake needs, such as employment, family, real estate, and immigration law.",
+      },
+      {
+        question: "What languages can the assistant use?",
+        answer:
+          "The assistant can be configured for German, English, and other languages relevant to your client base.",
+      },
+      {
+        question: "How long does implementation take?",
+        answer:
+          "Most legal intake automation setups can be implemented within a few weeks, depending on CRM integration requirements.",
+      },
+    ],
+    cta: {
+      label: "Final CTA",
+      title: "Spend Less Time on Intake, More Time on Cases",
+      body: "Let Kubera AI build a client intake automation system for your law firm in Germany.",
+      primary: {
+        title: "Book a strategy call",
+        description: "Go to the existing contact page for project discussion.",
+        href: "/contacts",
+      },
+      secondary: {
+        title: "Explore services",
+        description: "Review the current service hub before scoping the workflow.",
+        href: "/services",
+      },
+    },
+  },
+  {
+    locale: "en",
+    country: "germany",
+    countryLabel: "Germany",
+    industry: "whatsapp-automation",
+    industryLabel: "WhatsApp Automation",
+    url: "/en/solutions/germany/whatsapp-automation",
+    seo: {
+      title: "WhatsApp Automation for Businesses in Germany | Kubera AI",
+      description:
+        "AI-powered WhatsApp automation built for German business standards - structured, compliant, and efficient. Automate replies, bookings, and lead qualification.",
+      canonical: "https://www.kubera-automation.com/en/solutions/germany/whatsapp-automation",
+      type: "service",
+    },
+    hero: {
+      label: "WhatsApp Automation - Germany",
+      title: "WhatsApp Automation for Businesses in Germany",
+      subtitle:
+        "WhatsApp Business adoption is accelerating among the German Mittelstand, but expectations are different here: customers and partners expect a structured, reliable process - not an informal chatbot. Kubera AI builds AI-powered WhatsApp systems engineered for German standards of efficiency, consistency, and data protection.",
+      trustLine: "Built on WhatsApp Business API - GDPR-compliant infrastructure - Designed for the German Mittelstand",
+      primaryCta: {
+        title: "Book a strategy call",
+        description: "Start with one workflow and define fallback rules before anything is built.",
+        href: "/contacts",
+      },
+      secondaryCta: {
+        title: "See how it works",
+        description: "Review the service hub before scoping the workflow.",
+        href: "/services",
+      },
+      previewNodes: ["Website / Landing Page", "WhatsApp Business API", "AI Assistant", "CRM", "Email Follow-up", "Analytics Dashboard"],
+    },
+    problems: [
+      {
+        title: "Customers expect precise, reliable answers - not approximate ones",
+        description: "German business culture places a premium on accuracy and clear next steps, which is difficult to maintain consistently with manual replies.",
+      },
+      {
+        title: "WhatsApp is adopted but rarely integrated into business systems",
+        description: "Many Mittelstand businesses use WhatsApp informally, without connecting it to a CRM or structured workflow.",
+      },
+      {
+        title: "Staff time consumed by repetitive questions",
+        description: "Hours, pricing, and availability questions repeat daily, even in highly process-oriented businesses.",
+      },
+      {
+        title: "Data protection expectations are strict",
+        description: "Both customers and businesses expect clear, demonstrable compliance with German and EU data protection standards.",
+      },
+      {
+        title: "No after-hours coverage",
+        description: "Messages sent outside business hours go unanswered until the next working day, even as more customers expect prompt digital responses.",
+      },
+    ],
+    problemSolution: [
+      {
+        problem: "Need for precise, reliable answers",
+        automation: "AI assistant trained on a structured, accurate knowledge base",
+        result: "Can help improve consistency and accuracy of customer responses",
+      },
+      {
+        problem: "WhatsApp used informally, not integrated",
+        automation: "AI assistant connected directly to CRM and internal workflows",
+        result: "Designed to bring structure to an already-adopted channel",
+      },
+      {
+        problem: "Repetitive questions",
+        automation: "AI handles FAQs, pricing, hours, availability",
+        result: "May reduce staff workload on routine inquiries",
+      },
+      {
+        problem: "Strict data protection expectations",
+        automation: "GDPR-compliant infrastructure with transparent AI labeling",
+        result: "Supports demonstrable compliance in customer communication",
+      },
+      {
+        problem: "No after-hours coverage",
+        automation: "24/7 AI assistant with human handoff",
+        result: "Helps automate coverage outside business hours",
+      },
+    ],
+    architecture: {
+      title: "Recommended WhatsApp automation architecture",
+      description:
+        "Website / Landing Page captures initial interest and routes visitors to WhatsApp. WhatsApp Business API is the primary, structured communication channel. The AI Assistant answers questions, qualifies leads, handles bookings, and escalates to a human when needed. CRM Integration logs every conversation automatically, Email Follow-up handles leads who do not convert immediately, Internal Notifications alert staff in real time for human handoff cases, and the Analytics Dashboard shows response times, conversion rates, and conversation volume.",
+      flow: ["Website / Landing Page", "WhatsApp Business API", "AI Assistant", "CRM Integration", "Email Follow-up", "Internal Notifications", "Analytics Dashboard"],
+      notes: [
+        "Website forms can trigger the same workflow as a WhatsApp message.",
+        "The AI Assistant handles classification, drafting and routing, not unchecked final decisions.",
+        "CRM remains the source of truth for leads, status and follow-up ownership.",
+        "Email and analytics close the loop with confirmations, summaries and performance tracking.",
+      ],
+    },
+    modules: [
+      {
+        title: "AI WhatsApp Assistant",
+        description: "Handles inbound messages, FAQs, and lead qualification in German (and other languages).",
+        bullets: ["German language handling", "Inbox triage", "Lead qualification"],
+      },
+      {
+        title: "Booking & Availability Module",
+        description: "Lets customers check and request bookings directly in chat.",
+        bullets: ["Availability prompts", "Booking requests", "Calendar handoff"],
+      },
+      {
+        title: "CRM Sync Module",
+        description: "Pushes every WhatsApp lead into the CRM with context and tags.",
+        bullets: ["Automatic logging", "Tagging", "Context sync"],
+      },
+      {
+        title: "Human Handoff Module",
+        description: "Routes complex conversations to staff.",
+        bullets: ["Escalation rules", "Staff alerts", "Fallback handling"],
+      },
+      {
+        title: "Compliance & Accuracy Module",
+        description: "Ensures responses draw from a verified, structured knowledge base.",
+        bullets: ["Verified knowledge", "Compliance controls", "Accuracy rules"],
+      },
+      {
+        title: "Reporting Module",
+        description: "Weekly summary of conversation volume, response times, and conversion.",
+        bullets: ["Conversation volume", "Response times", "Conversion summary"],
+      },
+    ],
+    results: [
+      {
+        title: "Can help improve consistency and accuracy of WhatsApp responses",
+        description: "Can help improve consistency and accuracy of WhatsApp responses.",
+      },
+      {
+        title: "Designed to bring structure to a channel often used informally",
+        description: "Designed to bring structure to a channel often used informally.",
+      },
+      {
+        title: "May reduce staff workload on repetitive customer questions",
+        description: "May reduce staff workload on repetitive customer questions.",
+      },
+      {
+        title: "Supports demonstrable, GDPR-compliant data handling",
+        description: "Supports demonstrable, GDPR-compliant data handling.",
+      },
+      {
+        title: "Helps maintain communication coverage outside business hours",
+        description: "Helps maintain communication coverage outside business hours.",
+      },
+      {
+        title: "Can support better visibility into conversation and lead volume",
+        description: "Can support better visibility into conversation and lead volume.",
+      },
+    ],
+    services: [
+      {
+        title: "AI Assistants",
+        description: "Core engine behind WhatsApp qualification and response handling.",
+        href: "/services",
+      },
+      {
+        title: "WhatsApp Automation",
+        description: "Primary channel modernization for German SMBs.",
+        href: "/services",
+      },
+      {
+        title: "CRM Automation",
+        description: "Tracks every conversation and lead automatically.",
+        href: "/services",
+      },
+      {
+        title: "Customer Support Automation",
+        description: "Structures human handoff and escalation logic.",
+        href: "/services",
+      },
+    ],
+    cases: [
+      {
+        title: "AI assistant for service-business customer inquiries",
+        description: "Closest-fit case for WhatsApp-heavy support and lead handling.",
+        href: "/cases/customer-communications",
+      },
+      {
+        title: "WhatsApp lead qualification -> CRM architecture",
+        description: "Good proxy for lead capture, qualification and CRM logging.",
+        href: "/cases/sales-leads",
+      },
+      {
+        title: "Structured, compliance-oriented WhatsApp setup for Mittelstand businesses",
+        description: "Useful for booking, request handling and response pattern design.",
+        href: "/cases/internal-processes",
+      },
+    ],
+    reading: [
+      {
+        title: "How AI Automation Saves 20+ Hours Per Week for Small Businesses",
+        description: "A practical guide to the first workflows that free up real time.",
+        href: "/blog/how-ai-automation-saves-time",
+      },
+      {
+        title: "What Is AI Automation?",
+        description: "Useful context for understanding the operational model behind these systems.",
+        href: "/blog/what-is-ai-automation",
+      },
+      {
+        title: "What Is an AI Agent?",
+        description: "Useful context for deciding when a workflow needs an assistant versus a full agent layer.",
+        href: "/blog/what-is-an-ai-agent",
+      },
+      {
+        title: "AI Agent vs Chatbot",
+        description: "A comparison for teams deciding how much intelligence the workflow actually needs.",
+        href: "/blog/ai-agent-vs-chatbot",
+      },
+    ],
+    faq: [
+      {
+        question: "What is WhatsApp automation for a business?",
+        answer:
+          "WhatsApp automation uses an AI assistant connected to the WhatsApp Business API to handle customer messages automatically - answering questions, qualifying leads, and routing complex cases to staff.",
+      },
+      {
+        question: "Is this compliant with German and EU data protection requirements?",
+        answer:
+          "Yes. Kubera AI builds on GDPR-compliant infrastructure, with attention to how conversation and customer data are stored and accessed.",
+      },
+      {
+        question: "Will customers know they're talking to an AI?",
+        answer:
+          "Yes, the assistant is clearly labeled as an AI assistant rather than presented as a human.",
+      },
+      {
+        question: "Can the AI assistant escalate to a real person?",
+        answer:
+          "Yes, the system includes human handoff logic so staff are notified when a conversation needs personal attention.",
+      },
+      {
+        question: "How long does implementation take?",
+        answer:
+          "Most WhatsApp automation setups can be implemented within a few weeks, depending on workflow complexity.",
+      },
+      {
+        question: "Does this work in German and other languages?",
+        answer:
+          "Yes, the AI assistant can be configured to communicate in German, English, or other relevant languages.",
+      },
+      {
+        question: "Will this replace my customer service staff?",
+        answer:
+          "No, it is designed to handle repetitive, high-volume questions, freeing staff for complex interactions.",
+      },
+      {
+        question: "What CRM systems can this integrate with?",
+        answer:
+          "The automation can connect to most common CRM platforms used by German SMBs; exact integrations are confirmed during the strategy call.",
+      },
+    ],
+    cta: {
+      label: "Final CTA",
+      title: "Structured WhatsApp Automation, Built for German Standards",
+      body: "See how Kubera AI can design a WhatsApp automation system for your business in Germany.",
+      primary: {
+        title: "Book a strategy call",
+        description: "Go to the existing contact page for project discussion.",
+        href: "/contacts",
+      },
+      secondary: {
+        title: "Explore services",
+        description: "Review the current service hub before scoping the workflow.",
+        href: "/services",
+      },
+    },
+  },
 ];
 
 export function getIndustrySolutionByRoute(country: string, industry: string) {
