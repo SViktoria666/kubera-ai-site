@@ -1008,9 +1008,12 @@ main {
 
 .solution-faq-content {
   display: grid;
-  grid-template-rows: 0fr;
+  grid-template-rows: 1fr;
+  max-height: 0;
   opacity: 0;
-  transition: grid-template-rows 240ms ease, opacity 240ms ease;
+  transform: translateY(-2px);
+  transition: max-height 280ms ease, opacity 220ms ease, transform 280ms ease;
+  will-change: max-height, opacity, transform;
 }
 
 .solution-faq-content-inner {
@@ -1019,8 +1022,9 @@ main {
 }
 
 .solution-faq-item[open] .solution-faq-content {
-  grid-template-rows: 1fr;
+  max-height: 420px;
   opacity: 1;
+  transform: translateY(0);
 }
 
 .solution-faq-content p {
@@ -2178,7 +2182,7 @@ input[type="range"] {
   .solution-grid--problems > *,
   .solution-grid--modules > *,
   .solution-grid--results > * {
-    grid-column: auto;
+    grid-column: 1 / -1 !important;
   }
 
   .solution-hero {
@@ -2227,6 +2231,32 @@ input[type="range"] {
 
   .solution-card-link {
     font-size: 0.9rem;
+  }
+
+  .solution-shell {
+    padding: 56px 0 72px;
+  }
+
+  .solution-container {
+    gap: 20px;
+  }
+
+  .solution-hero,
+  .solution-section,
+  .solution-final-cta {
+    padding: 24px;
+  }
+
+  .solution-section {
+    gap: 20px;
+  }
+
+  .solution-section-heading {
+    gap: 8px;
+  }
+
+  .section {
+    padding: 40px 0;
   }
 
   .workflow-card {
@@ -2280,6 +2310,21 @@ input[type="range"] {
 
   .solution-final-cta {
     padding-bottom: 124px;
+  }
+
+  .solution-comparison-row {
+    padding: 16px 16px 18px;
+  }
+
+  .solution-card {
+    padding: 20px;
+  }
+
+  .solution-reading-links,
+  .solution-grid--services,
+  .solution-grid--cases,
+  .pricing-packages-grid {
+    grid-template-columns: 1fr;
   }
 }
 
