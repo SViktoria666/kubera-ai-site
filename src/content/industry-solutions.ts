@@ -87,77 +87,82 @@ export const industrySolutions: IndustrySolution[] = [
     seo: {
       title: "WhatsApp Automation for Businesses in Spain | Kubera AI",
       description:
-        "Build AI-powered WhatsApp automation for Spanish businesses. Automate customer messages, lead qualification, CRM updates and follow-ups with Kubera AI.",
+        "AI-powered WhatsApp automation for businesses in Spain. Automate customer replies, booking confirmations, and lead qualification with a 24/7 AI assistant.",
       canonical: "https://www.kubera-automation.com/en/solutions/spain/whatsapp-automation",
-      type: "website",
+      type: "service",
     },
     hero: {
-      label: "Industry Solution Pages",
+      label: "WhatsApp Automation · Spain",
       title: "WhatsApp Automation for Businesses in Spain",
       subtitle:
-        "Designed for Spanish businesses that need faster replies, cleaner lead routing and less manual follow-up across WhatsApp, forms and CRM systems.",
-      trustLine: "Built around human review, existing tools and scalable automation architecture.",
+        "In Spain, WhatsApp is not a secondary channel - for most consumers it is the default way to contact a business, ahead of phone or email. Kubera AI builds AI-powered WhatsApp systems that qualify leads, confirm bookings, and answer customer questions instantly, in a market where slow replies are noticed immediately. Best fit for independent retailers and local shops, small and mid-size hospitality businesses, real estate agencies and individual agents, clinics and beauty/wellness studios, service businesses, and e-commerce brands selling to Spanish customers.",
+      trustLine: "Built on WhatsApp Business API · GDPR-compliant infrastructure · Designed for Spanish SMBs",
       primaryCta: {
-        title: "Discuss the project",
+        title: "Book a strategy call",
         description: "Start with one workflow and define the fallback rules before anything is built.",
         href: "/contacts",
       },
       secondaryCta: {
-        title: "View Spain GEO page",
-        description: "Open the existing Spain market page for broader location context.",
-        href: "/automatizacion-ia-espana",
+        title: "See how it works",
+        description: "Review the service hub before scoping the workflow.",
+        href: "/services",
       },
-      previewNodes: ["Website / Form", "WhatsApp", "AI Assistant", "CRM", "Email", "Analytics"],
+      previewNodes: ["Website / Landing Page", "WhatsApp Business API", "AI Assistant", "CRM", "Email Follow-up", "Analytics Dashboard"],
     },
     problems: [
       {
-        title: "Replies arrive too slowly",
-        description: "WhatsApp enquiries are checked by hand, so the first response often depends on who is online.",
+        title: "Consumers compare and switch fast on WhatsApp",
+        description: "A slow reply sends the prospect straight to a competitor's chat window.",
       },
       {
-        title: "Leads are not qualified consistently",
-        description: "Sales teams lose time triaging the same questions instead of moving good leads forward.",
+        title: "Evening and weekend volume spikes",
+        description: "Spanish consumer behavior skews toward evening and weekend inquiries, exactly when many small businesses are least staffed.",
       },
       {
-        title: "CRM updates happen late",
-        description: "Important contact details and next steps stay in chat threads instead of a system of record.",
+        title: "No structured lead capture",
+        description: "Conversations happen in WhatsApp but never reach a CRM, so leads are lost or followed up inconsistently.",
       },
       {
-        title: "Handoffs break down",
-        description: "A message may need sales, support or booking follow-up, but the owner is not always obvious.",
+        title: "Inconsistent answers across staff",
+        description: "Different employees give different information, creating confusion and a weaker brand impression.",
       },
       {
-        title: "No visibility into messaging performance",
-        description: "Teams can see messages, but not response times, resolution rate or where requests stall.",
+        title: "Repetitive questions dominate staff time",
+        description: "Hours, pricing, availability, and location questions repeat daily, pulling staff away from higher-value work.",
       },
     ],
     problemSolution: [
       {
-        problem: "WhatsApp enquiries arrive after hours or during busy periods.",
-        automation: "AI Assistant captures intent, creates the right task and routes the message to the correct queue.",
-        result: "Faster first response and fewer dropped opportunities.",
+        problem: "Fast-switching consumer behavior",
+        automation: "AI assistant replies instantly on WhatsApp Business API",
+        result: "Can help reduce response time from hours to seconds",
       },
       {
-        problem: "Sales teams repeat the same qualification questions manually.",
-        automation: "The workflow asks structured follow-up questions and scores the lead before handoff.",
-        result: "Cleaner qualification and less time spent on low-fit enquiries.",
+        problem: "Evening/weekend volume spikes",
+        automation: "24/7 AI assistant absorbs off-hours inquiries",
+        result: "Designed to reduce missed inquiries outside business hours",
       },
       {
-        problem: "CRM records are updated later or not at all.",
-        automation: "Conversation data is written back to CRM automatically with source and status tags.",
-        result: "Cleaner records and fewer follow-up mistakes.",
+        problem: "Leads not captured",
+        automation: "Automatic lead capture into CRM with tagging",
+        result: "Supports more consistent lead follow-up",
       },
       {
-        problem: "Booking and sales follow-up depends on one person's memory.",
-        automation: "The workflow triggers reminders, confirmation messages and next-step tasks automatically.",
-        result: "More reliable handoffs and more consistent follow-through.",
+        problem: "Inconsistent answers",
+        automation: "Centralized AI knowledge base",
+        result: "May improve consistency of customer communication",
+      },
+      {
+        problem: "Repetitive questions",
+        automation: "AI handles FAQs, pricing, hours, availability",
+        result: "Designed to reduce staff workload on routine inquiries",
       },
     ],
     architecture: {
       title: "Recommended automation architecture",
       description:
-        "A practical stack for WhatsApp-heavy businesses: capture the request once, let AI classify it, and move it into the right system without manual copying.",
-      flow: ["Website / Form", "WhatsApp / Telegram", "AI Assistant", "CRM", "Email", "Analytics"],
+        "Website / Landing Page captures initial interest and routes visitors to WhatsApp. WhatsApp Business API is the primary communication channel. The AI Assistant answers questions, qualifies leads, handles bookings, and escalates complex cases to a human. CRM Integration logs every conversation automatically, Email Follow-up covers leads that do not convert immediately, Internal Notifications alert staff when human handoff is needed, and the Analytics Dashboard shows response times, conversion rates, and conversation volume.",
+      flow: ["Website / Landing Page", "WhatsApp Business API", "AI Assistant", "CRM Integration", "Email Follow-up", "Internal Notifications", "Analytics Dashboard"],
       notes: [
         "Website forms can trigger the same workflow as a WhatsApp enquiry.",
         "The AI Assistant handles classification, drafting and routing, not unchecked final decisions.",
@@ -167,85 +172,98 @@ export const industrySolutions: IndustrySolution[] = [
     },
     modules: [
       {
-        title: "AI Assistant",
-        description: "Classifies incoming messages, drafts replies and decides which route the request should take next.",
-        bullets: ["Intent detection", "Draft responses", "Exception routing"],
+        title: "AI WhatsApp Assistant",
+        description: "Handles inbound messages, FAQs, and lead qualification in Spanish.",
+        bullets: ["Spanish language handling", "Inbox triage", "Lead qualification"],
       },
       {
-        title: "CRM Automation",
-        description: "Creates or updates records so the team never has to copy chat details by hand.",
-        bullets: ["Lead creation", "Status updates", "Source tagging"],
+        title: "Booking & Availability Module",
+        description: "Lets customers check and request bookings directly in chat.",
+        bullets: ["Availability prompts", "Booking requests", "Calendar handoff"],
       },
       {
-        title: "WhatsApp / Telegram Automation",
-        description: "Keeps conversations moving with structured replies, handoffs and follow-up prompts.",
-        bullets: ["Channel routing", "Follow-up triggers", "Message history"],
+        title: "CRM Sync Module",
+        description: "Pushes every WhatsApp lead into the CRM with context and tags.",
+        bullets: ["Automatic logging", "Tagging", "Context sync"],
       },
       {
-        title: "Lead Qualification",
-        description: "Filters low-fit enquiries early so the team spends time on leads that match the offer.",
-        bullets: ["Fit scoring", "Question flow", "Priority queues"],
+        title: "Human Handoff Module",
+        description: "Detects complex conversations and routes them to staff.",
+        bullets: ["Escalation rules", "Staff alerts", "Fallback handling"],
       },
       {
-        title: "Booking / Sales Flow",
-        description: "Turns interested leads into next steps with confirmation and scheduling logic.",
-        bullets: ["Appointment prompts", "Sales handoff", "Reminder logic"],
+        title: "Off-Hours Coverage Module",
+        description: "Maintains response capability during evenings and weekends.",
+        bullets: ["24/7 coverage", "Missed inquiry recovery", "Queue protection"],
       },
       {
-        title: "Analytics / Reporting",
-        description: "Measures response speed, resolution rate and where the workflow needs tuning.",
-        bullets: ["Response time", "Resolution rate", "Queue visibility"],
+        title: "Reporting Module",
+        description: "Weekly summary of conversation volume, response times, and conversion.",
+        bullets: ["Conversation volume", "Response times", "Conversion summary"],
       },
     ],
     results: [
       {
-        title: "Potential faster response times",
-        description: "Can help reduce first-response delays by routing enquiries immediately instead of waiting for manual review.",
+        title: "Faster response times",
+        description: "Can help reduce response time from hours to seconds.",
       },
       {
-        title: "Potentially cleaner CRM data",
-        description: "Can help keep records aligned with live conversations so the team is not working from stale information.",
+        title: "Reduced off-hours misses",
+        description: "Designed to reduce missed inquiries outside business hours.",
       },
       {
-        title: "Less repetitive manual work",
-        description: "Can help reduce the time spent on copying messages, tagging leads and writing the same follow-ups.",
+        title: "More consistent lead capture",
+        description: "Supports more consistent lead follow-up and CRM logging.",
       },
       {
-        title: "Better queue visibility",
-        description: "Can help teams see where requests are stuck and which workflows need attention.",
+        title: "More consistent communication",
+        description: "May improve consistency of customer communication through a centralized AI knowledge base.",
+      },
+      {
+        title: "Lower routine workload",
+        description: "Designed to reduce staff workload on repetitive questions.",
+      },
+      {
+        title: "Better coverage during peak hours",
+        description: "Helps maintain response capability during the evening and weekend peaks common in Spain.",
       },
     ],
     services: [
       {
-        title: "Customer Communications",
-        description: "Use the existing service hub to map WhatsApp, email and chat workflows into one operating model.",
+        title: "AI Assistants",
+        description: "Core engine behind the WhatsApp automation.",
         href: "/services",
       },
       {
-        title: "Sales & Leads",
-        description: "Explore lead qualification, routing and follow-up systems in the current services page.",
+        title: "WhatsApp Automation",
+        description: "Full WhatsApp Business API integration and workflow build.",
         href: "/services",
       },
       {
-        title: "Internal Processes",
-        description: "Use the services hub to review automation for handoffs, reporting and task coordination.",
+        title: "CRM Automation",
+        description: "Connects WhatsApp conversations to the client's CRM.",
+        href: "/services",
+      },
+      {
+        title: "Customer Support Automation",
+        description: "Structures human handoff and escalation logic.",
         href: "/services",
       },
     ],
     cases: [
       {
-        title: "Service Company - Finland",
-        description: "An omnichannel communication and triage system that is a good proxy for WhatsApp-heavy customer operations.",
+        title: "AI assistant for service-business customer inquiries",
+        description: "Closest-fit case for WhatsApp-heavy support and lead handling.",
         href: "/cases/customer-communications",
       },
       {
-        title: "Real Estate & Rentals",
-        description: "A closest-fit case for lead handling, booking requests and follow-up automation.",
+        title: "WhatsApp lead qualification -> CRM architecture",
+        description: "Good proxy for lead capture, qualification and CRM logging.",
         href: "/cases/real-estate-rentals",
       },
       {
-        title: "Hotels & Restaurants",
-        description: "Useful for booking, request handling and time-sensitive customer communication patterns.",
+        title: "Off-hours and weekend coverage automation for consumer-facing SMBs",
+        description: "Useful for booking, request handling and peak-hour response patterns.",
         href: "/cases/hotels-restaurants",
       },
     ],
@@ -265,51 +283,60 @@ export const industrySolutions: IndustrySolution[] = [
         description: "A comparison for teams deciding how much intelligence the workflow actually needs.",
         href: "/blog/ai-agent-vs-chatbot",
       },
+      {
+        title: "What Is AI Automation?",
+        description: "A practical explanation of the operational model behind these systems.",
+        href: "/blog/what-is-ai-automation",
+      },
     ],
     faq: [
       {
-        question: "What does WhatsApp automation mean for a business in Spain?",
+        question: "What is WhatsApp automation for a business?",
         answer:
-          "It means incoming messages can be classified, routed and logged automatically instead of being handled only by manual inbox checking. The result is a more consistent process across sales, support and booking flows.",
+          "WhatsApp automation uses an AI assistant connected to the WhatsApp Business API to handle customer messages automatically - answering questions, qualifying leads, and routing complex cases to staff.",
       },
       {
-        question: "Do we need the WhatsApp Business API?",
+        question: "Is this compliant with WhatsApp's business policies?",
         answer:
-          "In most production setups, yes. The API is the reliable path for structured automation, message delivery and system integration.",
+          "Yes. Kubera AI builds on the official WhatsApp Business API, which is the approved channel for business automation at scale.",
       },
       {
-        question: "Can this connect to our CRM?",
+        question: "Can it handle the evening and weekend message volume typical in Spain?",
         answer:
-          "Yes. The architecture is designed to write lead status, conversation context and follow-up tasks into the CRM so the team keeps one source of truth.",
+          "Yes, the assistant operates 24/7, which is particularly relevant given how much consumer inquiry traffic arrives outside standard office hours.",
       },
       {
-        question: "Does AI make final decisions without review?",
+        question: "Will customers know they're talking to an AI?",
         answer:
-          "No. The recommended model uses AI for classification, drafting and routing, while exceptions still move to a human owner.",
+          "Yes. Kubera AI labels the assistant clearly as an AI assistant rather than presenting it as a human.",
       },
       {
-        question: "Can the workflow support Spanish and English messages?",
+        question: "Can the AI assistant escalate to a real person?",
         answer:
-          "Yes. The workflow can detect language, route the request correctly and keep the customer experience consistent in both languages.",
+          "Yes. The system is designed with human handoff logic so staff are notified when a conversation needs personal attention.",
       },
       {
-        question: "What happens when the AI is unsure?",
+        question: "How long does implementation take?",
         answer:
-          "The workflow should escalate to a person instead of guessing. That keeps the system safe and prevents low-quality automation from creating errors.",
+          "Most WhatsApp automation setups can be implemented within a few weeks, depending on the complexity of the required workflows.",
       },
       {
-        question: "Is this only useful for one industry?",
+        question: "Will this replace my customer service staff?",
         answer:
-          "No. The same pattern can support hospitality, real estate, retail and any business that gets repeat enquiries through WhatsApp or similar channels.",
+          "No. It is designed to handle repetitive, high-volume questions, freeing staff to focus on complex or high-value interactions.",
+      },
+      {
+        question: "What CRM systems can this integrate with?",
+        answer:
+          "The automation can be connected to most common CRM platforms used by Spanish SMBs; exact integrations are confirmed during the strategy call.",
       },
     ],
     cta: {
       label: "Final CTA",
-      title: "Want to map the right automation workflow?",
-      body:
-        "Start with one real process. We can map the message flow, define fallback rules and outline the system before anything is built.",
+      title: "Turn WhatsApp Into a 24/7 Sales Channel",
+      body: "See how Kubera AI can design a WhatsApp automation system for your business in Spain.",
       primary: {
-        title: "Contact Kubera AI",
+        title: "Book a strategy call",
         description: "Go to the existing contact page for project discussion.",
         href: "/contacts",
       },
@@ -328,79 +355,84 @@ export const industrySolutions: IndustrySolution[] = [
     industryLabel: "Hospitality Automation",
     url: "/en/solutions/spain/hospitality-automation",
     seo: {
-      title: "Hospitality Automation for Businesses in Spain | Kubera AI",
+      title: "Hospitality Automation for Hotels & Guesthouses in Spain | Kubera AI",
       description:
-        "Automate guest messages, booking confirmations, upsells and review requests for Spanish hotels and vacation rentals with AI automation.",
+        "AI automation for hotels, guesthouses, and apartment hotels in Spain. Automate booking inquiries, guest communication, and reporting with Kubera AI.",
       canonical: "https://www.kubera-automation.com/en/solutions/spain/hospitality-automation",
       type: "service",
     },
     hero: {
-      label: "Industry Solution Pages",
-      title: "Hospitality Automation for Hotels and Vacation Rentals in Spain",
+      label: "Hospitality Automation · Spain",
+      title: "Hospitality Automation for Hotels and Guesthouses in Spain",
       subtitle:
-        "Built for Spanish hospitality teams that need faster guest responses, fewer missed bookings and cleaner handoffs across WhatsApp, email, PMS and CRM systems.",
-      trustLine: "Designed for seasonal volume, multilingual guests and human-in-the-loop service.",
+        "From booking inquiries to guest follow-up, Kubera AI builds automation systems that help independent hotels and guesthouses in Spain respond faster and run leaner operations. Best suited for independent hotels, boutique hotels, apartment hotels and aparthotels, guest houses and B&Bs, small hotel groups, and vacation rental management companies.",
+      trustLine: "Built for independent hospitality businesses · WhatsApp + CRM integration · GDPR-compliant infrastructure",
       primaryCta: {
-        title: "Discuss the project",
+        title: "Book a strategy call",
         description: "Start with one workflow and define fallback rules before anything is built.",
         href: "/contacts",
       },
       secondaryCta: {
-        title: "View Spain GEO page",
-        description: "Open the existing Spain market page for broader location context.",
-        href: "/automatizacion-ia-espana",
+        title: "See how it works",
+        description: "Review the service hub before scoping the workflow.",
+        href: "/services",
       },
-      previewNodes: ["Booking / Website", "WhatsApp", "AI Assistant", "PMS / CRM", "Notifications", "Analytics"],
+      previewNodes: ["Booking / Website", "WhatsApp", "AI Assistant", "PMS / CRM", "Email Follow-up", "Analytics Dashboard"],
     },
     problems: [
       {
-        title: "Guest responses arrive too slowly",
-        description: "Guest questions often sit in inboxes until a staff member has time to reply.",
+        title: "Booking inquiries arrive across too many channels",
+        description: "WhatsApp, email, Booking.com messages, and phone calls all need separate handling - nothing is centralized.",
       },
       {
-        title: "Seasonal volume creates bottlenecks",
-        description: "Peak periods force teams to handle a much higher message load without proportional headcount.",
+        title: "Front desk staff are overloaded with repetitive questions",
+        description: "Check-in times, parking, amenities, and availability questions consume time that could go to guests on-site.",
       },
       {
-        title: "Booking questions are repetitive",
-        description: "Availability, check-in, parking, upgrades and policy questions take time away from real service moments.",
+        title: "Slow replies reduce conversion",
+        description: "Prospective guests comparing multiple properties often book wherever they get the fastest, clearest answer.",
       },
       {
-        title: "Guest details live in too many places",
-        description: "Reservation notes, WhatsApp threads and CRM data are not always synchronized.",
+        title: "Guest communication after booking is inconsistent",
+        description: "Pre-arrival information, upsells, and post-stay follow-up are inconsistent or skipped entirely.",
       },
       {
-        title: "Review follow-up is inconsistent",
-        description: "Post-stay requests and loyalty messages are often handled manually or skipped entirely.",
+        title: "Limited visibility into inquiry-to-booking performance",
+        description: "Owners often do not know how many inquiries convert, or where leads are lost.",
       },
     ],
     problemSolution: [
       {
-        problem: "Guest messages arrive before and during busy service windows.",
-        automation: "AI Assistant captures the request, classifies it and routes it to the right queue instantly.",
-        result: "Faster guest response without adding pressure to the front desk.",
+        problem: "Multi-channel inquiries",
+        automation: "Unified AI assistant across WhatsApp and web chat",
+        result: "Can help centralize guest communication",
       },
       {
-        problem: "Staff repeat the same booking and policy explanations all day.",
-        automation: "The workflow answers routine questions and keeps the conversation moving with structured prompts.",
-        result: "Less repetitive work and more time for high-value guest moments.",
+        problem: "Front desk overload",
+        automation: "AI handles FAQs and routine booking questions",
+        result: "Designed to reduce repetitive front-desk workload",
       },
       {
-        problem: "Upsell opportunities are easy to miss in manual communication.",
-        automation: "The workflow triggers pre-arrival and in-stay offers based on reservation context.",
-        result: "More consistent upsell and add-on conversion.",
+        problem: "Slow inquiry replies",
+        automation: "Instant AI response to booking inquiries",
+        result: "May improve inquiry-to-booking conversion",
       },
       {
-        problem: "Post-stay review requests depend on staff memory.",
-        automation: "The system sends review and repeat-guest follow-up automatically after check-out.",
-        result: "More consistent reputation management and retention.",
+        problem: "Inconsistent guest communication",
+        automation: "Automated pre-arrival and post-stay sequences",
+        result: "Supports more consistent guest experience",
+      },
+      {
+        problem: "No performance visibility",
+        automation: "Reporting dashboard on inquiries and conversions",
+        result: "Helps automate visibility into booking funnel performance",
       },
     ],
     architecture: {
-      title: "Recommended hospitality automation architecture",
+      title: "Recommended automation architecture",
       description:
-        "A practical stack for hotels and rentals: capture every inquiry, answer routine questions instantly and keep the team focused on exceptions and service moments.",
-      flow: ["Booking / Website", "WhatsApp", "AI Assistant", "PMS / CRM", "Notifications", "Analytics"],
+        "Website / Landing Page captures booking inquiries. WhatsApp / Telegram is the primary guest communication channel. The AI Assistant answers inquiries, checks availability, and qualifies booking requests. CRM stores guest data, inquiry status, and booking history. Email Follow-up handles pre-arrival info and post-stay review requests, Internal Notifications alert front desk for confirmed bookings or issues, and the Analytics Dashboard tracks inquiry volume, conversion rate, and response time.",
+      flow: ["Website / Landing Page", "WhatsApp / Telegram", "AI Assistant", "PMS / CRM", "Email Follow-up", "Internal Notifications", "Analytics Dashboard"],
       notes: [
         "Website forms, booking engines and WhatsApp can all trigger the same guest workflow.",
         "The AI Assistant handles first response, drafting and routing, not unchecked final decisions.",
@@ -410,84 +442,102 @@ export const industrySolutions: IndustrySolution[] = [
     },
     modules: [
       {
-        title: "Guest Messaging Assistant",
-        description: "Responds to standard guest questions and keeps service requests organized.",
+        title: "AI Booking Assistant",
+        description: "Answers availability, pricing, and amenity questions in real time.",
         bullets: ["Instant first reply", "Multi-language handling", "Exception routing"],
       },
       {
-        title: "Booking / Reservation Automation",
-        description: "Turns inquiries into confirmations, reminders and structured next steps.",
-        bullets: ["Availability flow", "Confirmation logic", "Reminder prompts"],
+        title: "WhatsApp Guest Channel",
+        description: "Centralizes guest messages from inquiry to check-out.",
+        bullets: ["Unified messaging", "Message history", "Guest continuity"],
       },
       {
-        title: "Upsell and Pre-arrival Flow",
-        description: "Uses reservation context to trigger relevant offers and guest preparation messages.",
-        bullets: ["Upgrade offers", "Arrival info", "Ancillary services"],
+        title: "CRM for Guest Data",
+        description: "Tracks each guest's inquiry, booking, and stay history.",
+        bullets: ["Guest records", "Source tagging", "Stay history"],
       },
       {
-        title: "PMS / CRM Sync",
-        description: "Writes guest data back to the system of record so nothing is trapped in chat threads.",
-        bullets: ["Guest records", "Status updates", "Ownership tracking"],
+        title: "Pre-Arrival Sequencer",
+        description: "Sends automated check-in instructions and upsell offers.",
+        bullets: ["Arrival info", "Upsell prompts", "Timing rules"],
       },
       {
-        title: "Review and Loyalty Automation",
-        description: "Automates post-stay review requests and repeat-guest nurturing.",
-        bullets: ["Review prompts", "Return-stay sequences", "Follow-up timing"],
+        title: "Post-Stay Follow-up",
+        description: "Automated review requests and rebooking offers.",
+        bullets: ["Review prompts", "Rebooking offers", "Follow-up timing"],
       },
       {
-        title: "Analytics / Reporting",
-        description: "Shows response speed, request volume and where the guest journey needs improvement.",
-        bullets: ["Response time", "Resolution rate", "Channel visibility"],
+        title: "Booking Funnel Reporting",
+        description: "Dashboard showing inquiry-to-booking conversion.",
+        bullets: ["Inquiry volume", "Conversion rate", "Funnel visibility"],
       },
     ],
     results: [
       {
-        title: "Potential faster guest response times",
-        description: "Can help reduce wait times by routing common questions immediately instead of after manual review.",
+        title: "Faster response times",
+        description: "Can help reduce response time to booking inquiries.",
       },
       {
-        title: "Potentially fewer missed bookings",
-        description: "Can help keep new inquiries moving through the booking path instead of stalling in inboxes.",
+        title: "Lower front-desk workload",
+        description: "Designed to reduce repetitive front-desk workload.",
+      },
+      {
+        title: "Higher booking conversion",
+        description: "May improve inquiry-to-booking conversion rates.",
       },
       {
         title: "More consistent guest communication",
-        description: "Can help standardize pre-arrival, in-stay and post-stay messaging across the team.",
+        description: "Supports more consistent pre-arrival and post-stay guest communication.",
       },
       {
-        title: "Better review generation and retention",
-        description: "Can help automate the follow-up that encourages reviews and repeat visits.",
+        title: "Better funnel visibility",
+        description: "Helps centralize guest communication across channels and expose performance data.",
+      },
+      {
+        title: "More staff time for service",
+        description: "Typical setups free staff time for in-person guest service.",
       },
     ],
     services: [
       {
-        title: "Customer Communications",
-        description: "Use the existing service hub to map guest communication across WhatsApp, email and chat.",
+        title: "AI Assistants",
+        description: "Core engine behind the guest communication system.",
         href: "/services",
       },
       {
-        title: "Internal Processes",
-        description: "Review automation for handoffs, reporting and team coordination.",
+        title: "WhatsApp Automation",
+        description: "Full guest messaging flow across WhatsApp and related channels.",
         href: "/services",
       },
       {
-        title: "Sales & Leads",
-        description: "Connect guest inquiries and upsell flows to a cleaner pipeline.",
+        title: "Booking Automation",
+        description: "Structured booking confirmations and reservation handling.",
+        href: "/services",
+      },
+      {
+        title: "CRM Automation",
+        description: "Stores guest history, inquiry status, and booking data.",
+        href: "/services",
+      },
+      {
+        title: "Reporting & Analytics Automation",
+        description: "Tracks inquiry volume, response time, and conversion metrics.",
         href: "/services",
       },
     ],
     cases: [
       {
-        title: "Hotels & Restaurants",
+        title: "Hospitality booking assistant on WhatsApp",
         description: "The closest-fit case for booking, guest communication and service operations.",
         href: "/cases/hotels-restaurants",
       },
       {
-        title: "Service Company - Finland",
+        title: "Guest inquiry -> AI qualification -> CRM architecture",
         description: "Useful proxy for omnichannel communication and triage patterns.",
         href: "/cases/customer-communications",
       },
       {
-        title: "Real Estate & Rentals",
+        title: "Pre-arrival and post-stay guest communication sequence",
         description: "Relevant where guest stays and rentals overlap with booking workflows.",
         href: "/cases/real-estate-rentals",
       },
@@ -511,43 +561,52 @@ export const industrySolutions: IndustrySolution[] = [
     ],
     faq: [
       {
-        question: "Can this work for hotels, vacation rentals and boutique stays?",
+        question: "Can this replace my booking engine?",
         answer:
-          "Yes. The same automation pattern can support hotels, vacation rentals, resorts and smaller hospitality operators that need consistent guest communication.",
+          "No. It works alongside your existing booking engine or PMS, handling inquiry communication and guest follow-up rather than payment processing.",
       },
       {
-        question: "Can you connect booking engines and PMS tools?",
+        question: "Does it work with Booking.com or Airbnb messages?",
         answer:
-          "Yes. The workflow can be designed to sync with booking systems and the PMS or CRM the business already uses.",
+          "Channel integrations are assessed individually; the architecture is designed to centralize messages from supported channels into one system.",
       },
       {
-        question: "Can guests be handled in multiple languages?",
+        question: "Can the AI assistant check real-time availability?",
         answer:
-          "Yes. The workflow can detect language and respond in the guest's preferred language while keeping the process consistent.",
+          "Yes, when connected to your booking system or PMS, the assistant can reference live availability data.",
       },
       {
-        question: "Does the system replace staff at the front desk?",
+        question: "Is this suitable for a single guesthouse, or only larger hotels?",
         answer:
-          "No. It removes repetitive admin so the team can focus on service, exceptions and high-value guest interactions.",
+          "It is designed for independent hotels, guesthouses, and small hotel groups - not only large chains.",
       },
       {
-        question: "Can it handle review requests automatically?",
+        question: "How does guest data stay secure?",
         answer:
-          "Yes. Review follow-up and repeat-guest sequences can be triggered automatically after check-out.",
+          "The system runs on GDPR-compliant infrastructure with controlled access to guest data.",
       },
       {
-        question: "How fast can this be implemented?",
+        question: "Will guests know they're messaging an AI?",
         answer:
-          "Most focused projects can go live in 2-4 weeks once scope, fallback rules and connected systems are clear.",
+          "Yes, the assistant is presented transparently as an AI assistant, with human handoff available.",
+      },
+      {
+        question: "What languages can the assistant communicate in?",
+        answer:
+          "The assistant can be configured for Spanish, English, and other languages relevant to your guest base.",
+      },
+      {
+        question: "How is success measured after launch?",
+        answer:
+          "Through the reporting dashboard tracking inquiry volume, response times, and conversion to confirmed bookings.",
       },
     ],
     cta: {
       label: "Final CTA",
-      title: "Want to map hospitality automation for your property or group?",
-      body:
-        "Start with one real guest process. We can map the message flow, define fallback rules and outline the system before anything is built.",
+      title: "Automate Guest Communication, Not Guest Experience",
+      body: "Let Kubera AI design a hospitality automation system for your property in Spain.",
       primary: {
-        title: "Contact Kubera AI",
+        title: "Book a strategy call",
         description: "Go to the existing contact page for project discussion.",
         href: "/contacts",
       },
@@ -566,79 +625,84 @@ export const industrySolutions: IndustrySolution[] = [
     industryLabel: "Real Estate Automation",
     url: "/en/solutions/spain/real-estate-automation",
     seo: {
-      title: "Real Estate Automation for Businesses in Spain | Kubera AI",
+      title: "Real Estate Automation for Agencies in Spain | Kubera AI",
       description:
-        "Automate property inquiries, multilingual follow-up, viewing scheduling and CRM updates for Spanish real estate teams with AI automation.",
+        "AI automation for real estate agencies in Spain. Automate lead qualification, viewing scheduling, and follow-up with Kubera AI's AI assistants.",
       canonical: "https://www.kubera-automation.com/en/solutions/spain/real-estate-automation",
       type: "service",
     },
     hero: {
-      label: "Industry Solution Pages",
-      title: "Real Estate Automation for Agencies and Developers in Spain",
+      label: "Real Estate Automation · Spain",
+      title: "Real Estate Automation for Agencies in Spain",
       subtitle:
-        "Built for Spanish real estate teams handling international buyer demand across WhatsApp, email, web forms and CRM systems.",
-      trustLine: "Designed to keep inquiries moving, records clean and viewing requests organized.",
+        "Property inquiries move fast. Kubera AI builds AI-powered systems that qualify leads, schedule viewings, and keep agents focused on closing - not chasing. Best suited for independent real estate agencies, individual real estate agents, property management companies, new-build and development sales teams, and short-term rental agencies handling owner and tenant inquiries.",
+      trustLine: "Built for independent agencies and agents · CRM-integrated · GDPR-compliant infrastructure",
       primaryCta: {
-        title: "Discuss the project",
+        title: "Book a strategy call",
         description: "Start with one workflow and define the fallback rules before anything is built.",
         href: "/contacts",
       },
       secondaryCta: {
-        title: "View Spain GEO page",
-        description: "Open the existing Spain market page for broader location context.",
-        href: "/automatizacion-ia-espana",
+        title: "See how it works",
+        description: "Review the service hub before scoping the workflow.",
+        href: "/services",
       },
-      previewNodes: ["Property Portal", "WhatsApp", "AI Assistant", "CRM", "Calendar", "Analytics"],
+      previewNodes: ["Property Site", "WhatsApp", "AI Assistant", "CRM", "Calendar", "Analytics"],
     },
     problems: [
       {
-        title: "Property inquiries arrive slowly into the pipeline",
-        description: "Enquiries from portals, forms and WhatsApp can sit untouched until someone manually reviews them.",
+        title: "Property inquiries arrive faster than agents can respond",
+        description: "Portals like Idealista generate volume that overwhelms manual follow-up.",
       },
       {
-        title: "Buyer qualification is inconsistent",
-        description: "The same questions get asked repeatedly, but not always in the same order or with the same detail.",
+        title: "Unqualified leads waste agent time",
+        description: "Agents spend hours on inquiries that never convert because qualification happens too late or not at all.",
       },
       {
-        title: "Viewing scheduling creates back-and-forth",
-        description: "Calendar coordination takes time and often delays the handoff from interest to appointment.",
+        title: "Viewing scheduling is manual and error-prone",
+        description: "Coordinating availability between buyers, sellers, and agents by phone or message is slow.",
       },
       {
-        title: "CRM updates are delayed",
-        description: "Critical buyer context is trapped in chat history instead of being written into the system of record.",
+        title: "Leads go cold without structured follow-up",
+        description: "Without a system, agents forget to follow up at the right intervals.",
       },
       {
-        title: "International follow-up is hard to keep consistent",
-        description: "Multilingual buyers need prompt, coordinated follow-up that manual teams struggle to maintain.",
+        title: "No centralized view of pipeline performance",
+        description: "Agency owners cannot easily see which listings generate the most qualified leads.",
       },
     ],
     problemSolution: [
       {
-        problem: "Property leads arrive from portals, web forms and WhatsApp at the same time.",
-        automation: "AI Assistant captures each inquiry, classifies it and creates the right CRM record instantly.",
-        result: "Faster first response and less lead leakage.",
+        problem: "High inquiry volume",
+        automation: "AI assistant responds instantly to portal and WhatsApp inquiries",
+        result: "Can help reduce response time to new inquiries",
       },
       {
-        problem: "Agents repeat the same qualification questions manually.",
-        automation: "The workflow asks structured follow-up questions and scores the buyer before handoff.",
-        result: "Cleaner qualification and more time spent on serious buyers.",
+        problem: "Unqualified leads",
+        automation: "AI qualification flow (budget, timeline, property type)",
+        result: "Designed to reduce time spent on low-fit leads",
       },
       {
-        problem: "Viewing coordination depends on manual calendar work.",
-        automation: "The workflow sends scheduling prompts and confirmation messages automatically.",
-        result: "Less admin and quicker movement from inquiry to viewing.",
+        problem: "Manual viewing scheduling",
+        automation: "Automated scheduling synced with agent calendars",
+        result: "May improve viewing scheduling efficiency",
       },
       {
-        problem: "International follow-up is difficult to keep consistent.",
-        automation: "The system sends multilingual sequences aligned to the buyer's intent and stage.",
-        result: "More reliable follow-through across domestic and international leads.",
+        problem: "Cold leads",
+        automation: "Automated follow-up sequences at set intervals",
+        result: "Supports more consistent lead nurturing",
+      },
+      {
+        problem: "No pipeline visibility",
+        automation: "CRM + reporting dashboard",
+        result: "Helps automate visibility into lead and listing performance",
       },
     ],
     architecture: {
-      title: "Recommended real estate automation architecture",
+      title: "Recommended automation architecture",
       description:
-        "A practical stack for agencies and developers: capture every inquiry, qualify the buyer, and move the opportunity into the right stage without manual copying.",
-      flow: ["Property Portal", "WhatsApp", "AI Assistant", "CRM", "Calendar", "Analytics"],
+        "Website / Landing Page captures inquiries from listings and ads. WhatsApp / Telegram is the primary channel for buyer and tenant communication. The AI Assistant qualifies leads before agent involvement. CRM stores lead profile, qualification data, and listing interest. Email Follow-up nurtures leads that are not ready to view immediately, Internal Notifications alert agents when a qualified lead is ready, and the Analytics Dashboard tracks lead volume, qualification rate, and conversion by listing.",
+      flow: ["Website / Landing Page", "WhatsApp / Telegram", "AI Assistant", "CRM", "Email Follow-up", "Internal Notifications", "Analytics Dashboard"],
       notes: [
         "Portals, forms and WhatsApp can all feed the same property workflow.",
         "The AI Assistant handles qualification, drafting and routing, not unchecked final decisions.",
@@ -648,43 +712,43 @@ export const industrySolutions: IndustrySolution[] = [
     },
     modules: [
       {
-        title: "Inquiry Intake",
-        description: "Captures leads from portals, forms and chat into a single workflow.",
-        bullets: ["Multi-source capture", "Lead normalization", "Instant logging"],
+        title: "AI Lead Qualification Assistant",
+        description: "Pre-qualifies inquiries on budget, timeline, and property type.",
+        bullets: ["Budget capture", "Timeline capture", "Property type filtering"],
       },
       {
-        title: "Buyer Qualification",
-        description: "Asks the right questions and separates serious buyers from general interest.",
-        bullets: ["Intent scoring", "Budget context", "Timeline capture"],
+        title: "WhatsApp Inquiry Channel",
+        description: "Centralizes buyer and tenant messages.",
+        bullets: ["Unified communication", "Fast replies", "Thread continuity"],
       },
       {
-        title: "Viewing Scheduling",
-        description: "Turns interest into appointments without endless back-and-forth.",
+        title: "Viewing Scheduler",
+        description: "Automates booking of property viewings.",
         bullets: ["Calendar prompts", "Confirmation logic", "Reminder flows"],
       },
       {
-        title: "CRM Sync",
-        description: "Writes inquiry, intent and ownership details back to the CRM.",
-        bullets: ["Status updates", "Contact records", "Source tagging"],
+        title: "CRM Pipeline",
+        description: "Tracks every lead from first contact to closing.",
+        bullets: ["Status updates", "Source tagging", "Contact records"],
       },
       {
-        title: "Multilingual Follow-up",
-        description: "Keeps the buyer journey moving in the right language and at the right stage.",
-        bullets: ["Language-aware sequences", "Stage-based messaging", "Human handoff"],
+        title: "Follow-up Sequencer",
+        description: "Nurtures leads not ready to act immediately.",
+        bullets: ["Stage-based messaging", "Delay rules", "Re-engagement"],
       },
       {
-        title: "Pipeline Analytics",
-        description: "Measures response times, conversion stages and where leads are stalling.",
-        bullets: ["Response time", "Viewing conversion", "Stage visibility"],
+        title: "Listing Performance Reporting",
+        description: "Shows which listings generate the most qualified leads.",
+        bullets: ["Lead quality", "Listing performance", "Pipeline visibility"],
       },
     ],
     results: [
       {
-        title: "Potential faster response to inquiries",
+        title: "Faster response to inquiries",
         description: "Can help ensure every listing inquiry gets an immediate first touch instead of waiting in inboxes.",
       },
       {
-        title: "Potentially cleaner buyer qualification",
+        title: "Cleaner buyer qualification",
         description: "Can help the team spend more time with serious buyers and less time on low-intent leads.",
       },
       {
@@ -695,37 +759,55 @@ export const industrySolutions: IndustrySolution[] = [
         title: "Stronger CRM hygiene and visibility",
         description: "Can help keep pipeline data aligned with actual buyer conversations and next steps.",
       },
+      {
+        title: "More consistent follow-up",
+        description: "Supports more consistent lead follow-up over time.",
+      },
+      {
+        title: "More time for higher-value conversations",
+        description: "Typical setups allow agents to focus on higher-value, qualified conversations.",
+      },
     ],
     services: [
       {
-        title: "Sales & Leads",
-        description: "Use the current services page to map qualification, routing and follow-up systems.",
+        title: "AI Assistants",
+        description: "Pre-qualifies inquiries before agent involvement.",
         href: "/services",
       },
       {
-        title: "Customer Communications",
-        description: "Review automation for WhatsApp, email and buyer communication workflows.",
+        title: "Lead Generation Automation",
+        description: "Supports portal and WhatsApp lead intake.",
         href: "/services",
       },
       {
-        title: "Internal Processes",
-        description: "Connect the handoffs, approvals and reporting that keep the pipeline moving.",
+        title: "Booking Automation",
+        description: "Automates viewing scheduling.",
+        href: "/services",
+      },
+      {
+        title: "CRM Automation",
+        description: "Tracks every lead from first contact to closing.",
+        href: "/services",
+      },
+      {
+        title: "Marketing Automation",
+        description: "Nurtures leads that are not ready to view immediately.",
         href: "/services",
       },
     ],
     cases: [
       {
-        title: "Real Estate & Rentals",
+        title: "AI lead qualification assistant for property inquiries",
         description: "The closest-fit case for buyer handling, viewings and follow-up automation.",
         href: "/cases/real-estate-rentals",
       },
       {
-        title: "Service Company - Finland",
+        title: "Inquiry -> qualification -> viewing scheduling architecture",
         description: "Useful proxy for triage, response and routing logic across channels.",
         href: "/cases/customer-communications",
       },
       {
-        title: "Sales & Leads",
+        title: "Real estate CRM and follow-up automation",
         description: "Relevant for qualification and pipeline management patterns.",
         href: "/cases/sales-leads",
       },
@@ -749,43 +831,52 @@ export const industrySolutions: IndustrySolution[] = [
     ],
     faq: [
       {
-        question: "Can this connect to our CRM and property pipeline?",
+        question: "Can the AI assistant qualify leads before an agent speaks with them?",
         answer:
-          "Yes. The workflow can write records, update stages and keep the team aligned with live buyer conversations.",
+          "Yes, the assistant is designed to gather budget, timeline, and property preferences before handing the lead to an agent.",
       },
       {
-        question: "Can it handle multilingual international buyers?",
+        question: "Does this integrate with property portals like Idealista?",
         answer:
-          "Yes. The workflow can detect language and keep the response and follow-up consistent across buyer markets.",
+          "Integration depends on the portal's available channels (such as email or WhatsApp notifications); this is assessed during the strategy call.",
       },
       {
-        question: "Can viewing scheduling be automated?",
+        question: "Can it schedule property viewings automatically?",
         answer:
-          "Yes. Appointment prompts, confirmations and reminder messages can be handled automatically.",
+          "Yes, when connected to agent calendars, the assistant can propose and confirm viewing times.",
       },
       {
-        question: "Does the system replace the agent?",
+        question: "Will this replace my agents?",
         answer:
-          "No. It removes repetitive admin and speeds up the early-stage process so agents can focus on serious buyers.",
+          "No. It is designed to handle inquiry intake and qualification so agents spend their time on viewings and closing.",
       },
       {
-        question: "Can the workflow support portal leads and web forms?",
+        question: "How is lead data stored?",
         answer:
-          "Yes. Portal submissions, forms and WhatsApp messages can all feed the same intake flow.",
+          "Lead and qualification data is stored in your CRM on GDPR-compliant infrastructure.",
       },
       {
-        question: "How fast can implementation happen?",
+        question: "Can the system handle both buyers and sellers?",
         answer:
-          "Most focused projects can go live in 2-4 weeks once scope, fallback rules and connected systems are clear.",
+          "Yes, separate qualification flows can be built for buyer, tenant, and seller inquiries.",
+      },
+      {
+        question: "What languages does the assistant support?",
+        answer:
+          "The assistant can be configured for Spanish, English, and other languages relevant to your client base.",
+      },
+      {
+        question: "How long does setup take?",
+        answer:
+          "Most real estate automation setups can be implemented within a few weeks depending on CRM and portal integrations required.",
       },
     ],
     cta: {
       label: "Final CTA",
-      title: "Want to map real estate automation for your agency or development team?",
-      body:
-        "Start with one real process. We can map the lead flow, define fallback rules and outline the system before anything is built.",
+      title: "Spend Less Time Qualifying, More Time Closing",
+      body: "Let Kubera AI build a lead automation system for your real estate agency in Spain.",
       primary: {
-        title: "Contact Kubera AI",
+        title: "Book a strategy call",
         description: "Go to the existing contact page for project discussion.",
         href: "/contacts",
       },
