@@ -1697,6 +1697,821 @@ export const industrySolutions: IndustrySolution[] = [
       },
     },
   },
+  {
+    locale: "en",
+    country: "france",
+    countryLabel: "France",
+    industry: "hospitality-automation",
+    industryLabel: "Hospitality Automation",
+    url: "/en/solutions/france/hospitality-automation",
+    seo: {
+      title: "Hospitality Automation for Hotels & Guesthouses in France | Kubera AI",
+      description:
+        "AI automation for independent hotels, guesthouses, and apart-hotels in France. Automate booking inquiries, guest communication, and reporting with Kubera AI.",
+      canonical: "https://www.kubera-automation.com/en/solutions/france/hospitality-automation",
+      type: "service",
+    },
+    hero: {
+      label: "Hospitality Automation - France",
+      title: "Hospitality Automation for Hotels and Guesthouses in France",
+      subtitle:
+        "From booking inquiries to guest follow-up, Kubera AI builds automation systems that help independent hotels and guesthouses in France respond faster and run leaner operations.",
+      trustLine: "Built for independent hospitality businesses - WhatsApp + CRM integration - GDPR-compliant infrastructure",
+      primaryCta: {
+        title: "Book a strategy call",
+        description: "Start with one workflow and define fallback rules before anything is built.",
+        href: "/contacts",
+      },
+      secondaryCta: {
+        title: "See how it works",
+        description: "Review the service hub before scoping the workflow.",
+        href: "/services",
+      },
+      previewNodes: ["Website / Landing Page", "WhatsApp / Telegram", "AI Assistant", "CRM", "Email Follow-up", "Analytics Dashboard"],
+    },
+    problems: [
+      {
+        title: "Booking inquiries arrive across too many channels",
+        description: "WhatsApp, email, Booking.com messages, and phone calls all need separate handling, with nothing centralized.",
+      },
+      {
+        title: "Front desk staff are overloaded with repetitive questions",
+        description: "Check-in times, parking, amenities, and availability questions consume time that could go to guests on-site.",
+      },
+      {
+        title: "Slow replies to inquiries reduce conversion",
+        description: "Prospective guests comparing multiple properties often book wherever they get the fastest, clearest answer.",
+      },
+      {
+        title: "No structured guest communication after booking",
+        description: "Pre-arrival information, upsells, and post-stay follow-up are inconsistent or skipped entirely.",
+      },
+      {
+        title: "Limited visibility into inquiry-to-booking performance",
+        description: "Owners often do not know how many inquiries convert, or where leads are lost.",
+      },
+    ],
+    problemSolution: [
+      {
+        problem: "Multi-channel inquiries",
+        automation: "Unified AI assistant across WhatsApp and web chat",
+        result: "Can help centralize guest communication",
+      },
+      {
+        problem: "Front desk overload",
+        automation: "AI handles FAQs and routine booking questions",
+        result: "Designed to reduce repetitive front-desk workload",
+      },
+      {
+        problem: "Slow inquiry replies",
+        automation: "Instant AI response to booking inquiries",
+        result: "May improve inquiry-to-booking conversion",
+      },
+      {
+        problem: "Inconsistent guest communication",
+        automation: "Automated pre-arrival and post-stay sequences",
+        result: "Supports more consistent guest experience",
+      },
+      {
+        problem: "No performance visibility",
+        automation: "Reporting dashboard on inquiries and conversions",
+        result: "Helps automate visibility into booking funnel performance",
+      },
+    ],
+    architecture: {
+      title: "Recommended hospitality automation architecture",
+      description:
+        "Website / Landing Page is the booking inquiry entry point. WhatsApp / Telegram is the primary guest communication channel. The AI Assistant answers inquiries, checks availability, and qualifies booking requests. CRM stores guest data, inquiry status, and booking history. Email Follow-up handles pre-arrival info and post-stay review requests, Internal Notifications alert front desk for confirmed bookings or issues requiring attention, and the Analytics Dashboard tracks inquiry volume, conversion rate, and response time for the owner.",
+      flow: ["Website / Landing Page", "WhatsApp / Telegram", "AI Assistant", "CRM", "Email Follow-up", "Internal Notifications", "Analytics Dashboard"],
+      notes: [
+        "Website forms and booking flows feed the same hospitality workflow.",
+        "The AI Assistant handles first response, drafting and routing, not unchecked final decisions.",
+        "CRM keeps guest history and ownership visible to the team.",
+        "Notifications and analytics close the loop with confirmations, summaries and performance tracking.",
+      ],
+    },
+    modules: [
+      {
+        title: "AI Booking Assistant",
+        description: "Answers availability, pricing, and amenity questions in real time.",
+        bullets: ["Instant first reply", "Multi-language handling", "Exception routing"],
+      },
+      {
+        title: "WhatsApp Guest Channel",
+        description: "Centralizes guest messages from inquiry to check-out.",
+        bullets: ["Unified messaging", "Message history", "Guest continuity"],
+      },
+      {
+        title: "CRM for Guest Data",
+        description: "Tracks each guest's inquiry, booking, and stay history.",
+        bullets: ["Guest records", "Source tagging", "Stay history"],
+      },
+      {
+        title: "Pre-Arrival Sequencer",
+        description: "Sends automated check-in instructions and upsell offers.",
+        bullets: ["Arrival info", "Upsell prompts", "Timing rules"],
+      },
+      {
+        title: "Post-Stay Follow-up",
+        description: "Automated review requests and rebooking offers.",
+        bullets: ["Review prompts", "Rebooking offers", "Follow-up timing"],
+      },
+      {
+        title: "Booking Funnel Reporting",
+        description: "Dashboard showing inquiry-to-booking conversion.",
+        bullets: ["Inquiry volume", "Conversion rate", "Funnel visibility"],
+      },
+    ],
+    results: [
+      {
+        title: "Can help reduce response time to booking inquiries",
+        description: "Can help reduce response time to booking inquiries.",
+      },
+      {
+        title: "Designed to reduce repetitive front-desk workload",
+        description: "Designed to reduce repetitive front-desk workload.",
+      },
+      {
+        title: "May improve inquiry-to-booking conversion rates",
+        description: "May improve inquiry-to-booking conversion rates.",
+      },
+      {
+        title: "Supports more consistent pre-arrival and post-stay guest communication",
+        description: "Supports more consistent pre-arrival and post-stay guest communication.",
+      },
+      {
+        title: "Helps centralize guest communication across channels",
+        description: "Helps centralize guest communication across channels.",
+      },
+      {
+        title: "Can support better visibility into booking funnel performance",
+        description: "Can support better visibility into booking funnel performance.",
+      },
+    ],
+    services: [
+      {
+        title: "AI Assistants",
+        description: "Core engine behind the guest communication system.",
+        href: "/services",
+      },
+      {
+        title: "WhatsApp Automation",
+        description: "Full guest messaging flow across WhatsApp and related channels.",
+        href: "/services",
+      },
+      {
+        title: "Booking Automation",
+        description: "Structured booking confirmations and reservation handling.",
+        href: "/services",
+      },
+      {
+        title: "CRM Automation",
+        description: "Stores guest history, inquiry status, and booking data.",
+        href: "/services",
+      },
+      {
+        title: "Reporting & Analytics Automation",
+        description: "Tracks inquiry volume, response time, and conversion metrics.",
+        href: "/services",
+      },
+    ],
+    cases: [
+      {
+        title: "Hospitality booking assistant on WhatsApp",
+        description: "Closest-fit case for booking, guest communication and service operations.",
+        href: "/cases/hotels-restaurants",
+      },
+      {
+        title: "Guest inquiry -> AI qualification -> CRM architecture",
+        description: "Useful proxy for omnichannel communication and triage patterns.",
+        href: "/cases/customer-communications",
+      },
+      {
+        title: "Pre-arrival and post-stay guest communication sequence",
+        description: "Relevant where guest stays and rentals overlap with booking workflows.",
+        href: "/cases/internal-processes",
+      },
+    ],
+    reading: [
+      {
+        title: "How AI Automation Saves 20+ Hours Per Week for Small Businesses",
+        description: "A practical guide to the first workflows that free up real time.",
+        href: "/blog/how-ai-automation-saves-time",
+      },
+      {
+        title: "What Is AI Automation?",
+        description: "Useful context for understanding the operational model behind these systems.",
+        href: "/blog/what-is-ai-automation",
+      },
+      {
+        title: "What Is an AI Agent?",
+        description: "Useful context for deciding when a workflow needs an assistant versus a full agent layer.",
+        href: "/blog/what-is-an-ai-agent",
+      },
+      {
+        title: "AI Agent vs Chatbot",
+        description: "A comparison for teams deciding how much intelligence the workflow actually needs.",
+        href: "/blog/ai-agent-vs-chatbot",
+      },
+    ],
+    faq: [
+      {
+        question: "Can this replace my booking engine?",
+        answer:
+          "No. It works alongside your existing booking engine or PMS, handling inquiry communication and guest follow-up rather than payment processing.",
+      },
+      {
+        question: "Does it work with Booking.com or Airbnb messages?",
+        answer:
+          "Channel integrations are assessed individually; the architecture is designed to centralize messages from supported channels into one system.",
+      },
+      {
+        question: "Can the AI assistant check real-time availability?",
+        answer:
+          "Yes, when connected to your booking system or PMS, the assistant can reference live availability data.",
+      },
+      {
+        question: "Is this suitable for a single guesthouse, or only larger hotels?",
+        answer:
+          "It is designed for independent hotels, guesthouses, and small hotel groups - not only large chains.",
+      },
+      {
+        question: "How does guest data stay secure?",
+        answer:
+          "The system runs on GDPR-compliant infrastructure with controlled access to guest data.",
+      },
+      {
+        question: "Will guests know they're messaging an AI?",
+        answer:
+          "Yes, the assistant is presented transparently as an AI assistant, with human handoff available.",
+      },
+      {
+        question: "What languages can the assistant communicate in?",
+        answer:
+          "The assistant can be configured for French, English, and other languages relevant to your guest base.",
+      },
+      {
+        question: "How is success measured after launch?",
+        answer:
+          "Through the reporting dashboard tracking inquiry volume, response times, and conversion to confirmed bookings.",
+      },
+    ],
+    cta: {
+      label: "Final CTA",
+      title: "Automate Guest Communication, Not Guest Experience",
+      body: "Let Kubera AI design a hospitality automation system for your property in France.",
+      primary: {
+        title: "Book a strategy call",
+        description: "Go to the existing contact page for project discussion.",
+        href: "/contacts",
+      },
+      secondary: {
+        title: "Explore services",
+        description: "Review the current service hub before scoping the workflow.",
+        href: "/services",
+      },
+    },
+  },
+  {
+    locale: "en",
+    country: "france",
+    countryLabel: "France",
+    industry: "retail-automation",
+    industryLabel: "Retail Automation",
+    url: "/en/solutions/france/retail-automation",
+    seo: {
+      title: "Retail Automation for Independent Stores in France | Kubera AI",
+      description:
+        "AI automation for independent retailers in France. Automate customer questions, order updates, and follow-up with Kubera AI's AI assistants.",
+      canonical: "https://www.kubera-automation.com/en/solutions/france/retail-automation",
+      type: "service",
+    },
+    hero: {
+      label: "Retail Automation - France",
+      title: "Retail Automation for Independent Stores in France",
+      subtitle:
+        "Kubera AI builds AI-powered systems that handle customer questions, order status updates, and follow-up for independent retailers in France - freeing staff to focus on the shop floor.",
+      trustLine: "Built for independent retailers - WhatsApp + CRM integration - GDPR-compliant infrastructure",
+      primaryCta: {
+        title: "Book a strategy call",
+        description: "Start with one workflow and define fallback rules before anything is built.",
+        href: "/contacts",
+      },
+      secondaryCta: {
+        title: "See how it works",
+        description: "Review the service hub before scoping the workflow.",
+        href: "/services",
+      },
+      previewNodes: ["Website / Landing Page", "WhatsApp / Telegram", "AI Assistant", "CRM", "Email Follow-up", "Analytics Dashboard"],
+    },
+    problems: [
+      {
+        title: "Customer questions overwhelm small teams",
+        description: "Stock availability, opening hours, and product questions arrive constantly via WhatsApp, phone, and social media.",
+      },
+      {
+        title: "No centralized view of customer inquiries",
+        description: "Questions are scattered across channels with no record of who asked what, or whether it was resolved.",
+      },
+      {
+        title: "Order and delivery status questions consume staff time",
+        description: "Customers frequently ask for updates that staff must look up manually.",
+      },
+      {
+        title: "Inconsistent answers across staff and locations",
+        description: "Different employees or stores may give different information about stock or policies.",
+      },
+      {
+        title: "No structured follow-up after a sale or inquiry",
+        description: "Opportunities for repeat purchases or reviews are missed without a system to prompt them.",
+      },
+    ],
+    problemSolution: [
+      {
+        problem: "High inquiry volume",
+        automation: "AI assistant answers stock, hours, and product questions instantly",
+        result: "Can help reduce response time to customer questions",
+      },
+      {
+        problem: "Scattered inquiries",
+        automation: "Centralized WhatsApp + web chat channel",
+        result: "Designed to consolidate customer communication",
+      },
+      {
+        problem: "Manual order status lookups",
+        automation: "AI assistant connected to order system for status updates",
+        result: "May reduce staff time spent on status inquiries",
+      },
+      {
+        problem: "Inconsistent answers",
+        automation: "Centralized AI knowledge base across locations",
+        result: "Supports more consistent customer communication",
+      },
+      {
+        problem: "No post-sale follow-up",
+        automation: "Automated review and repeat-purchase sequences",
+        result: "Helps automate customer retention touchpoints",
+      },
+    ],
+    architecture: {
+      title: "Recommended retail automation architecture",
+      description:
+        "Website / Landing Page is the entry point for online inquiries. WhatsApp / Telegram is the primary customer communication channel. The AI Assistant answers product, stock, and order questions, escalating complex issues. CRM stores customer interaction history and purchase data. Email Follow-up handles post-purchase review requests and repeat-purchase offers, Internal Notifications alert staff for complaints or complex requests, and the Analytics Dashboard tracks inquiry volume, response time, and resolution rate.",
+      flow: ["Website / Landing Page", "WhatsApp / Telegram", "AI Assistant", "CRM", "Email Follow-up", "Internal Notifications", "Analytics Dashboard"],
+      notes: [
+        "Website forms, chat and messaging all feed the same retail workflow.",
+        "The AI Assistant handles first response, drafting and routing, not unchecked final decisions.",
+        "CRM keeps customer history and ownership visible to the team.",
+        "Notifications and analytics close the loop with confirmations, summaries and performance tracking.",
+      ],
+    },
+    modules: [
+      {
+        title: "AI Customer Assistant",
+        description: "Answers product, stock, and store information questions.",
+        bullets: ["Product questions", "Stock questions", "Store info"],
+      },
+      {
+        title: "WhatsApp Retail Channel",
+        description: "Centralizes customer messages across locations.",
+        bullets: ["Unified inbox", "Message continuity", "Location coverage"],
+      },
+      {
+        title: "Order Status Module",
+        description: "Connects to order and inventory systems for real-time updates.",
+        bullets: ["Order lookups", "Inventory updates", "Status replies"],
+      },
+      {
+        title: "CRM for Customer History",
+        description: "Tracks customer interactions and purchase history.",
+        bullets: ["Customer records", "Source tagging", "Purchase history"],
+      },
+      {
+        title: "Post-Sale Follow-up Sequencer",
+        description: "Sends review requests and repeat-purchase prompts.",
+        bullets: ["Review prompts", "Repeat offers", "Timing rules"],
+      },
+      {
+        title: "Inquiry Reporting Module",
+        description: "Dashboard on inquiry volume and resolution rate.",
+        bullets: ["Volume tracking", "Resolution rate", "Channel visibility"],
+      },
+    ],
+    results: [
+      {
+        title: "Can help reduce response time to customer questions",
+        description: "Can help reduce response time to customer questions.",
+      },
+      {
+        title: "Designed to consolidate inquiries across channels and locations",
+        description: "Designed to consolidate inquiries across channels and locations.",
+      },
+      {
+        title: "May reduce staff time spent on manual order status lookups",
+        description: "May reduce staff time spent on manual order status lookups.",
+      },
+      {
+        title: "Supports more consistent customer communication across stores",
+        description: "Supports more consistent customer communication across stores.",
+      },
+      {
+        title: "Helps automate post-sale follow-up and review collection",
+        description: "Helps automate post-sale follow-up and review collection.",
+      },
+      {
+        title: "Can support better visibility into inquiry volume and resolution",
+        description: "Can support better visibility into inquiry volume and resolution.",
+      },
+    ],
+    services: [
+      {
+        title: "AI Assistants",
+        description: "Core engine behind customer communication and qualification.",
+        href: "/services",
+      },
+      {
+        title: "WhatsApp Automation",
+        description: "Primary channel for retail inquiries and order updates.",
+        href: "/services",
+      },
+      {
+        title: "CRM Automation",
+        description: "Tracks customer history and interaction data.",
+        href: "/services",
+      },
+      {
+        title: "Internal Process Automation",
+        description: "Connects order, stock, and internal lookup workflows.",
+        href: "/services",
+      },
+    ],
+    cases: [
+      {
+        title: "AI assistant for retail customer inquiries",
+        description: "Closest-fit case for customer communication and support handling.",
+        href: "/cases/customer-communications",
+      },
+      {
+        title: "WhatsApp customer support -> CRM architecture",
+        description: "Useful proxy for lead capture, qualification and CRM logging.",
+        href: "/cases/sales-leads",
+      },
+      {
+        title: "Post-sale follow-up and review automation",
+        description: "Relevant for order follow-up and retention patterns.",
+        href: "/cases/ecommerce-logistics",
+      },
+    ],
+    reading: [
+      {
+        title: "How AI Automation Saves 20+ Hours Per Week for Small Businesses",
+        description: "A practical guide to the first workflows that free up real time.",
+        href: "/blog/how-ai-automation-saves-time",
+      },
+      {
+        title: "What Is AI Automation?",
+        description: "Useful context for understanding the operational model behind these systems.",
+        href: "/blog/what-is-ai-automation",
+      },
+      {
+        title: "What Is an AI Agent?",
+        description: "Useful context for deciding when a workflow needs an assistant versus a full agent layer.",
+        href: "/blog/what-is-an-ai-agent",
+      },
+      {
+        title: "AI Agent vs Chatbot",
+        description: "A comparison for teams deciding how much intelligence the workflow actually needs.",
+        href: "/blog/ai-agent-vs-chatbot",
+      },
+    ],
+    faq: [
+      {
+        question: "Can the AI assistant check real product stock levels?",
+        answer:
+          "When connected to your inventory or POS system, the assistant can reference live stock data.",
+      },
+      {
+        question: "Will this work across multiple store locations?",
+        answer:
+          "Yes, the system can be configured to handle multi-location inquiries with location-specific information.",
+      },
+      {
+        question: "Can it handle order status questions?",
+        answer:
+          "Yes, when connected to your order management system, the assistant can provide real-time status updates.",
+      },
+      {
+        question: "Will this replace my in-store staff?",
+        answer:
+          "No, it is designed to handle repetitive remote inquiries so staff can focus on in-person customer service.",
+      },
+      {
+        question: "Does this work with WhatsApp and Instagram messages?",
+        answer:
+          "The architecture is designed primarily around WhatsApp Business API; other channels are reviewed individually during the strategy call.",
+      },
+      {
+        question: "How is customer data protected?",
+        answer:
+          "Customer interaction data is stored in your CRM on GDPR-compliant infrastructure.",
+      },
+      {
+        question: "What languages can the assistant use?",
+        answer:
+          "The assistant can be configured for French, English, and other languages relevant to your customer base.",
+      },
+      {
+        question: "How long does implementation take?",
+        answer:
+          "Most retail automation setups can be implemented within a few weeks, depending on integration requirements.",
+      },
+    ],
+    cta: {
+      label: "Final CTA",
+      title: "Spend Less Time Answering, More Time Selling",
+      body: "Let Kubera AI build a retail automation system for your store in France.",
+      primary: {
+        title: "Book a strategy call",
+        description: "Go to the existing contact page for project discussion.",
+        href: "/contacts",
+      },
+      secondary: {
+        title: "Explore services",
+        description: "Review the current service hub before scoping the workflow.",
+        href: "/services",
+      },
+    },
+  },
+  {
+    locale: "en",
+    country: "france",
+    countryLabel: "France",
+    industry: "whatsapp-automation",
+    industryLabel: "WhatsApp Automation",
+    url: "/en/solutions/france/whatsapp-automation",
+    seo: {
+      title: "WhatsApp Automation for Businesses in France | Kubera AI",
+      description:
+        "AI-powered WhatsApp automation built for French businesses, with attention to formal communication standards and data privacy expectations.",
+      canonical: "https://www.kubera-automation.com/en/solutions/france/whatsapp-automation",
+      type: "service",
+    },
+    hero: {
+      label: "WhatsApp Automation - France",
+      title: "WhatsApp Automation for Businesses in France",
+      subtitle:
+        "WhatsApp adoption among French businesses is growing quickly, but many still rely on phone and email out of habit - even when customers would prefer to message. Kubera AI builds AI-powered WhatsApp systems that modernize this channel while respecting the data privacy standards French customers expect.",
+      trustLine: "Built on WhatsApp Business API - GDPR-compliant infrastructure - Designed for French SMBs",
+      primaryCta: {
+        title: "Book a strategy call",
+        description: "Start with one workflow and define fallback rules before anything is built.",
+        href: "/contacts",
+      },
+      secondaryCta: {
+        title: "See how it works",
+        description: "Review the service hub before scoping the workflow.",
+        href: "/services",
+      },
+      previewNodes: ["Website / Landing Page", "WhatsApp Business API", "AI Assistant", "CRM", "Email Follow-up", "Analytics Dashboard"],
+    },
+    problems: [
+      {
+        title: "Customers expect WhatsApp as an option, but many businesses still aren't there",
+        description: "Phone and email remain the default for many French SMBs, even as customer preference shifts toward messaging.",
+      },
+      {
+        title: "Where WhatsApp is used, it's rarely structured",
+        description: "A business owner or single employee often replies manually, with no qualification flow, no CRM logging, and no consistency.",
+      },
+      {
+        title: "Data privacy expectations are high",
+        description: "French customers are attentive to how their data is handled, and businesses need a clearly compliant setup rather than an informal chatbot.",
+      },
+      {
+        title: "Repetitive questions consume staff time",
+        description: "Hours, pricing, and availability questions repeat daily regardless of channel.",
+      },
+      {
+        title: "No after-hours coverage",
+        description: "Messages sent outside business hours go unanswered until the next working day.",
+      },
+    ],
+    problemSolution: [
+      {
+        problem: "Underused WhatsApp channel",
+        automation: "Structured AI-powered WhatsApp setup on the official Business API",
+        result: "Can help modernize customer communication without added headcount",
+      },
+      {
+        problem: "Unstructured manual replies",
+        automation: "AI assistant with consistent qualification and CRM logging",
+        result: "Designed to bring structure and consistency to WhatsApp conversations",
+      },
+      {
+        problem: "Data privacy expectations",
+        automation: "GDPR-compliant infrastructure with transparent AI labeling",
+        result: "Supports compliant, trustworthy customer communication",
+      },
+      {
+        problem: "Repetitive questions",
+        automation: "AI handles FAQs, pricing, hours, availability",
+        result: "May reduce staff workload on routine inquiries",
+      },
+      {
+        problem: "No after-hours coverage",
+        automation: "24/7 AI assistant with human handoff",
+        result: "Helps automate coverage outside business hours",
+      },
+    ],
+    architecture: {
+      title: "Recommended WhatsApp automation architecture",
+      description:
+        "Website / Landing Page captures initial interest and routes visitors to WhatsApp. WhatsApp Business API is the primary, GDPR-compliant communication channel. The AI Assistant answers questions, qualifies leads, handles bookings, and escalates complex cases to a human. CRM Integration logs every conversation automatically, Email Follow-up covers leads that do not convert immediately, Internal Notifications alert staff when human handoff is needed, and the Analytics Dashboard shows response times, conversion rates, and conversation volume.",
+      flow: ["Website / Landing Page", "WhatsApp Business API", "AI Assistant", "CRM Integration", "Email Follow-up", "Internal Notifications", "Analytics Dashboard"],
+      notes: [
+        "Website forms can trigger the same workflow as a WhatsApp message.",
+        "The AI Assistant handles classification, drafting and routing, not unchecked final decisions.",
+        "CRM remains the source of truth for leads, status and follow-up ownership.",
+        "Email and analytics close the loop with confirmations, summaries and performance tracking.",
+      ],
+    },
+    modules: [
+      {
+        title: "AI WhatsApp Assistant",
+        description: "Handles inbound messages, FAQs, and lead qualification in French (and other languages).",
+        bullets: ["French language handling", "Inbox triage", "Lead qualification"],
+      },
+      {
+        title: "Booking & Availability Module",
+        description: "Lets customers check and request bookings directly in chat.",
+        bullets: ["Availability prompts", "Booking requests", "Calendar handoff"],
+      },
+      {
+        title: "CRM Sync Module",
+        description: "Pushes every WhatsApp lead into the CRM with context and tags.",
+        bullets: ["Automatic logging", "Tagging", "Context sync"],
+      },
+      {
+        title: "Human Handoff Module",
+        description: "Routes complex conversations to staff.",
+        bullets: ["Escalation rules", "Staff alerts", "Fallback handling"],
+      },
+      {
+        title: "Compliant Data Handling Module",
+        description: "Structures conversation data storage on GDPR-compliant infrastructure.",
+        bullets: ["GDPR storage", "Transparent labeling", "Data handling rules"],
+      },
+      {
+        title: "Reporting Module",
+        description: "Weekly summary of conversation volume, response times, and conversion.",
+        bullets: ["Conversation volume", "Response times", "Conversion summary"],
+      },
+    ],
+    results: [
+      {
+        title: "Can help modernize WhatsApp communication without adding headcount",
+        description: "Can help modernize WhatsApp communication without adding headcount.",
+      },
+      {
+        title: "Designed to bring structure and consistency to a channel often handled informally",
+        description: "Designed to bring structure and consistency to a channel often handled informally.",
+      },
+      {
+        title: "Supports compliant, transparent handling of customer data",
+        description: "Supports compliant, transparent handling of customer data.",
+      },
+      {
+        title: "May reduce staff workload on repetitive customer questions",
+        description: "May reduce staff workload on repetitive customer questions.",
+      },
+      {
+        title: "Helps maintain communication coverage outside business hours",
+        description: "Helps maintain communication coverage outside business hours.",
+      },
+      {
+        title: "Can support better visibility into conversation and lead volume",
+        description: "Can support better visibility into conversation and lead volume.",
+      },
+    ],
+    services: [
+      {
+        title: "AI Assistants",
+        description: "Core engine behind WhatsApp qualification and response handling.",
+        href: "/services",
+      },
+      {
+        title: "WhatsApp Automation",
+        description: "Primary channel modernization for French SMBs.",
+        href: "/services",
+      },
+      {
+        title: "CRM Automation",
+        description: "Tracks every conversation and lead automatically.",
+        href: "/services",
+      },
+      {
+        title: "Customer Support Automation",
+        description: "Structures human handoff and escalation logic.",
+        href: "/services",
+      },
+    ],
+    cases: [
+      {
+        title: "AI assistant for service-business customer inquiries",
+        description: "Closest-fit case for WhatsApp-heavy support and lead handling.",
+        href: "/cases/customer-communications",
+      },
+      {
+        title: "WhatsApp lead qualification -> CRM architecture",
+        description: "Good proxy for lead capture, qualification and CRM logging.",
+        href: "/cases/sales-leads",
+      },
+      {
+        title: "Structured, GDPR-compliant WhatsApp setup for SMBs new to the channel",
+        description: "Useful for booking, request handling and response pattern design.",
+        href: "/cases/internal-processes",
+      },
+    ],
+    reading: [
+      {
+        title: "How AI Automation Saves 20+ Hours Per Week for Small Businesses",
+        description: "A practical guide to the first workflows that free up real time.",
+        href: "/blog/how-ai-automation-saves-time",
+      },
+      {
+        title: "What Is AI Automation?",
+        description: "Useful context for understanding the operational model behind these systems.",
+        href: "/blog/what-is-ai-automation",
+      },
+      {
+        title: "What Is an AI Agent?",
+        description: "Useful context for deciding when a workflow needs an assistant versus a full agent layer.",
+        href: "/blog/what-is-an-ai-agent",
+      },
+      {
+        title: "AI Agent vs Chatbot",
+        description: "A comparison for teams deciding how much intelligence the workflow actually needs.",
+        href: "/blog/ai-agent-vs-chatbot",
+      },
+    ],
+    faq: [
+      {
+        question: "We currently use mostly phone and email - is WhatsApp worth adding?",
+        answer:
+          "For many businesses, yes - customer preference is shifting toward messaging, and a structured AI-powered setup makes the transition manageable without added staff time.",
+      },
+      {
+        question: "Is this compliant with French and EU data protection requirements?",
+        answer:
+          "Yes. Kubera AI builds on GDPR-compliant infrastructure, with attention to how conversation and customer data are stored and accessed.",
+      },
+      {
+        question: "Will customers know they're talking to an AI?",
+        answer:
+          "Yes, the assistant is clearly labeled as an AI assistant rather than presented as a human.",
+      },
+      {
+        question: "Can the AI assistant escalate to a real person?",
+        answer:
+          "Yes, the system includes human handoff logic so staff are notified when a conversation needs personal attention.",
+      },
+      {
+        question: "How long does implementation take?",
+        answer:
+          "Most WhatsApp automation setups can be implemented within a few weeks, depending on workflow complexity.",
+      },
+      {
+        question: "Does this work in French and other languages?",
+        answer:
+          "Yes, the AI assistant can be configured to communicate in French, English, or other relevant languages.",
+      },
+      {
+        question: "Will this replace my customer service staff?",
+        answer:
+          "No, it is designed to handle repetitive, high-volume questions, freeing staff for complex interactions.",
+      },
+      {
+        question: "What CRM systems can this integrate with?",
+        answer:
+          "The automation can connect to most common CRM platforms used by French SMBs; exact integrations are confirmed during the strategy call.",
+      },
+    ],
+    cta: {
+      label: "Final CTA",
+      title: "Modernize WhatsApp, Without the Compliance Guesswork",
+      body: "See how Kubera AI can design a WhatsApp automation system for your business in France.",
+      primary: {
+        title: "Book a strategy call",
+        description: "Go to the existing contact page for project discussion.",
+        href: "/contacts",
+      },
+      secondary: {
+        title: "Explore services",
+        description: "Review the current service hub before scoping the workflow.",
+        href: "/services",
+      },
+    },
+  },
 ];
 
 export function getIndustrySolutionByRoute(country: string, industry: string) {
