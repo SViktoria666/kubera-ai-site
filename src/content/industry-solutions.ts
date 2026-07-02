@@ -3327,6 +3327,816 @@ export const industrySolutions: IndustrySolution[] = [
       },
     },
   },
+  {
+    locale: "en",
+    country: "netherlands",
+    countryLabel: "Netherlands",
+    industry: "logistics-automation",
+    industryLabel: "Logistics Automation",
+    url: "/en/solutions/netherlands/logistics-automation",
+    seo: {
+      title: "Logistics Automation for SMBs in the Netherlands | Kubera AI",
+      description:
+        "AI automation for logistics and freight businesses in the Netherlands. Automate shipment status updates, customer communication, and warehousing coordination.",
+      canonical: "https://www.kubera-automation.com/en/solutions/netherlands/logistics-automation",
+      type: "service",
+    },
+    hero: {
+      label: "Logistics Automation - Netherlands",
+      title: "Logistics Automation for SMBs in the Netherlands",
+      subtitle:
+        "Kubera AI builds AI-powered systems that handle shipment status updates, customer inquiries, and internal coordination for logistics and freight businesses in the Netherlands.",
+      trustLine: "Built for independent logistics and freight SMBs - CRM-integrated - GDPR-compliant infrastructure",
+      primaryCta: {
+        title: "Book a strategy call",
+        description: "Start with one workflow and define fallback rules before anything is built.",
+        href: "/contacts",
+      },
+      secondaryCta: {
+        title: "See how it works",
+        description: "Review the service hub before scoping the workflow.",
+        href: "/services",
+      },
+      previewNodes: ["Website / Landing Page", "WhatsApp / Telegram", "AI Assistant", "CRM / TMS Integration", "Email Follow-up", "Analytics Dashboard"],
+    },
+    problems: [
+      {
+        title: "Customers and partners constantly ask for shipment status",
+        description: "Staff spend significant time manually looking up and relaying status updates.",
+      },
+      {
+        title: "Internal coordination between dispatch, warehouse, and drivers is manual",
+        description: "Information often passes through phone calls and unstructured messages.",
+      },
+      {
+        title: "Repetitive inquiries about pricing, capacity, and timelines consume staff time",
+        description: "New and existing customers ask similar questions repeatedly.",
+      },
+      {
+        title: "No structured visibility into delays or exceptions",
+        description: "Issues are often discovered late because there's no automated alerting system.",
+      },
+      {
+        title: "Warehousing coordination tasks rely on manual communication",
+        description: "Inventory status, receiving, and dispatch updates require constant back-and-forth.",
+      },
+    ],
+    problemSolution: [
+      {
+        problem: "Manual status lookups",
+        automation: "AI assistant provides automated shipment status updates",
+        result: "Can help reduce time spent on status inquiries",
+      },
+      {
+        problem: "Manual internal coordination",
+        automation: "Automated internal notifications between dispatch and warehouse",
+        result: "Designed to improve coordination efficiency",
+      },
+      {
+        problem: "Repetitive customer questions",
+        automation: "AI handles pricing, capacity, and timeline FAQs",
+        result: "May reduce repetitive workload on staff",
+      },
+      {
+        problem: "Late detection of delays",
+        automation: "Automated exception alerts",
+        result: "Supports more proactive issue handling",
+      },
+      {
+        problem: "Manual warehousing coordination",
+        automation: "Automated inventory and dispatch status notifications",
+        result: "Helps automate warehousing communication as part of logistics workflow",
+      },
+    ],
+    architecture: {
+      title: "Recommended logistics automation architecture",
+      description:
+        "Website / Landing Page is the entry point for new customer and partner inquiries. WhatsApp / Telegram is the primary communication channel for status updates and inquiries. The AI Assistant answers status, pricing, and capacity questions while routing complex issues. CRM / TMS Integration syncs shipment and customer data. Email Follow-up handles automated status and exception notifications, Internal Notifications alert dispatch and warehouse teams to coordination needs and exceptions, and the Analytics Dashboard tracks inquiry volume, response time, and exception frequency.",
+      flow: ["Website / Landing Page", "WhatsApp / Telegram", "AI Assistant", "CRM / TMS Integration", "Email Follow-up", "Internal Notifications", "Analytics Dashboard"],
+      notes: [
+        "Website forms, messaging and partner requests all feed the same logistics workflow.",
+        "The AI Assistant handles first response, drafting and routing, not unchecked final decisions.",
+        "CRM and TMS records stay synchronized with shipment status and ownership.",
+        "Notifications and analytics close the loop with exceptions, summaries and performance tracking.",
+      ],
+    },
+    modules: [
+      {
+        title: "AI Shipment Status Assistant",
+        description: "Answers shipment and delivery status questions automatically.",
+        bullets: ["Status lookups", "Customer replies", "Partner updates"],
+      },
+      {
+        title: "WhatsApp Customer & Partner Channel",
+        description: "Centralizes status and inquiry communication.",
+        bullets: ["Unified inbox", "Message continuity", "Fast replies"],
+      },
+      {
+        title: "Internal Coordination Module",
+        description: "Automates notifications between dispatch, warehouse, and drivers.",
+        bullets: ["Internal alerts", "Coordination flow", "Exception routing"],
+      },
+      {
+        title: "TMS/CRM Sync",
+        description: "Connects AI assistant to transport management or CRM systems.",
+        bullets: ["Shipment records", "Customer records", "Data sync"],
+      },
+      {
+        title: "Exception Alert Sequencer",
+        description: "Sends automated alerts for delays or issues.",
+        bullets: ["Delay alerts", "Exception handling", "Staff notifications"],
+      },
+      {
+        title: "Logistics Reporting Module",
+        description: "Dashboard on inquiry volume, response time, and exception trends.",
+        bullets: ["Volume tracking", "Response time", "Exception frequency"],
+      },
+    ],
+    results: [
+      {
+        title: "Can help reduce time spent on manual shipment status inquiries",
+        description: "Can help reduce time spent on manual shipment status inquiries.",
+      },
+      {
+        title: "Designed to improve coordination efficiency between dispatch and warehouse teams",
+        description: "Designed to improve coordination efficiency between dispatch and warehouse teams.",
+      },
+      {
+        title: "May reduce repetitive workload from pricing and capacity questions",
+        description: "May reduce repetitive workload from pricing and capacity questions.",
+      },
+      {
+        title: "Supports more proactive handling of delays and exceptions",
+        description: "Supports more proactive handling of delays and exceptions.",
+      },
+      {
+        title: "Helps automate warehousing-related communication as part of the broader workflow",
+        description: "Helps automate warehousing-related communication as part of the broader workflow.",
+      },
+      {
+        title: "Can support better visibility into inquiry and exception trends",
+        description: "Can support better visibility into inquiry and exception trends.",
+      },
+    ],
+    services: [
+      {
+        title: "AI Assistants",
+        description: "Core engine behind shipment status and inquiry handling.",
+        href: "/services",
+      },
+      {
+        title: "WhatsApp Automation",
+        description: "Primary channel for customer and partner communication.",
+        href: "/services",
+      },
+      {
+        title: "Internal Process Automation",
+        description: "Automates dispatch, warehouse, and driver coordination.",
+        href: "/services",
+      },
+      {
+        title: "Workflow Automation",
+        description: "Connects exception alerts and internal workflow logic.",
+        href: "/services",
+      },
+    ],
+    cases: [
+      {
+        title: "AI assistant for operational status inquiries",
+        description: "Closest-fit case for shipment status and communication handling.",
+        href: "/cases/transport-logistics",
+      },
+      {
+        title: "Customer inquiry -> AI response -> internal notification architecture",
+        description: "Useful proxy for triage, response and routing logic across channels.",
+        href: "/cases/customer-communications",
+      },
+      {
+        title: "Internal coordination and exception alerting automation",
+        description: "Relevant for dispatch and warehousing coordination patterns.",
+        href: "/cases/internal-processes",
+      },
+    ],
+    reading: [
+      {
+        title: "How AI Automation Saves 20+ Hours Per Week for Small Businesses",
+        description: "A practical guide to the first workflows that free up real time.",
+        href: "/blog/how-ai-automation-saves-time",
+      },
+      {
+        title: "What Is AI Automation?",
+        description: "Useful context for understanding the operational model behind these systems.",
+        href: "/blog/what-is-ai-automation",
+      },
+      {
+        title: "What Is an AI Agent?",
+        description: "Useful context for deciding when a workflow needs an assistant versus a full agent layer.",
+        href: "/blog/what-is-an-ai-agent",
+      },
+      {
+        title: "AI Agent vs Chatbot",
+        description: "A comparison for teams deciding how much intelligence the workflow actually needs.",
+        href: "/blog/ai-agent-vs-chatbot",
+      },
+    ],
+    faq: [
+      {
+        question: "Can the AI assistant provide real-time shipment status?",
+        answer:
+          "When connected to your transport management system, the assistant can reference live shipment data.",
+      },
+      {
+        question: "Does this work for both customer-facing and internal communication?",
+        answer:
+          "Yes, separate workflows can be built for customer status updates and internal team coordination.",
+      },
+      {
+        question: "Can warehousing tasks be included in this automation?",
+        answer:
+          "Yes, warehousing-related communication is handled as a subtopic within the broader logistics automation architecture.",
+      },
+      {
+        question: "Will this replace dispatch staff?",
+        answer:
+          "No, it is designed to handle repetitive status and coordination communication so staff can focus on exceptions and planning.",
+      },
+      {
+        question: "How does this handle delay or exception alerts?",
+        answer:
+          "The system can be configured to automatically alert relevant staff when shipments are delayed or flagged.",
+      },
+      {
+        question: "What languages can the assistant use?",
+        answer:
+          "The assistant can be configured for Dutch, English, and other languages relevant to your customer and partner base.",
+      },
+      {
+        question: "How is shipment and customer data protected?",
+        answer:
+          "Data is stored on GDPR-compliant infrastructure with controlled access.",
+      },
+      {
+        question: "How long does implementation take?",
+        answer:
+          "Most logistics automation setups can be implemented within a few weeks, depending on TMS/CRM integration requirements.",
+      },
+    ],
+    cta: {
+      label: "Final CTA",
+      title: "Less Time Chasing Status, More Time Moving Freight",
+      body: "Let Kubera AI build a logistics automation system for your business in the Netherlands.",
+      primary: {
+        title: "Book a strategy call",
+        description: "Go to the existing contact page for project discussion.",
+        href: "/contacts",
+      },
+      secondary: {
+        title: "Explore services",
+        description: "Review the current service hub before scoping the workflow.",
+        href: "/services",
+      },
+    },
+  },
+  {
+    locale: "en",
+    country: "netherlands",
+    countryLabel: "Netherlands",
+    industry: "e-commerce-automation",
+    industryLabel: "E-commerce Automation",
+    url: "/en/solutions/netherlands/e-commerce-automation",
+    seo: {
+      title: "E-commerce Automation for Online Retailers in the Netherlands | Kubera AI",
+      description:
+        "AI automation for e-commerce businesses in the Netherlands. Automate customer support, order status, and follow-up with Kubera AI.",
+      canonical: "https://www.kubera-automation.com/en/solutions/netherlands/e-commerce-automation",
+      type: "service",
+    },
+    hero: {
+      label: "E-commerce Automation - Netherlands",
+      title: "E-commerce Automation for Online Retailers in the Netherlands",
+      subtitle:
+        "Kubera AI builds AI-powered systems that handle customer support, order status questions, and post-purchase follow-up for online retailers in the Netherlands.",
+      trustLine: "Built for independent e-commerce brands - WhatsApp + CRM integration - GDPR-compliant infrastructure",
+      primaryCta: {
+        title: "Book a strategy call",
+        description: "Start with one workflow and define fallback rules before anything is built.",
+        href: "/contacts",
+      },
+      secondaryCta: {
+        title: "See how it works",
+        description: "Review the service hub before scoping the workflow.",
+        href: "/services",
+      },
+      previewNodes: ["Website / Landing Page", "WhatsApp / Telegram", "AI Assistant", "CRM / Order System Integration", "Email Follow-up", "Analytics Dashboard"],
+    },
+    problems: [
+      {
+        title: "Customer support volume grows faster than the team can scale",
+        description: "Order, shipping, and return questions increase with sales but support headcount lags behind.",
+      },
+      {
+        title: "Order status questions consume disproportionate support time",
+        description: "A large share of inquiries are simple 'where is my order' questions.",
+      },
+      {
+        title: "Returns and exchange requests are handled manually",
+        description: "Without a structured flow, return requests create back-and-forth and delays.",
+      },
+      {
+        title: "No structured post-purchase engagement",
+        description: "Opportunities for reviews, repeat purchases, and upsells are missed without automated follow-up.",
+      },
+      {
+        title: "Inconsistent support across channels",
+        description: "Email, WhatsApp, and social media inquiries are handled separately, with no unified view of the customer.",
+      },
+    ],
+    problemSolution: [
+      {
+        problem: "Support volume outpacing team capacity",
+        automation: "AI assistant handles high-volume routine inquiries",
+        result: "Can help reduce strain on support team as order volume grows",
+      },
+      {
+        problem: "Order status inquiries",
+        automation: "AI assistant connected to order system for instant status updates",
+        result: "Designed to reduce time spent on status questions",
+      },
+      {
+        problem: "Manual returns handling",
+        automation: "Automated return/exchange request flow",
+        result: "May reduce manual back-and-forth on returns",
+      },
+      {
+        problem: "No post-purchase engagement",
+        automation: "Automated review requests and repeat-purchase offers",
+        result: "Supports more consistent post-purchase engagement",
+      },
+      {
+        problem: "Inconsistent cross-channel support",
+        automation: "Centralized AI assistant across WhatsApp and web chat",
+        result: "Helps automate consistent support across channels",
+      },
+    ],
+    architecture: {
+      title: "Recommended e-commerce automation architecture",
+      description:
+        "Website / Landing Page is the entry point for customer support chat. WhatsApp / Telegram is the primary customer communication channel. The AI Assistant answers order status, shipping, and return questions while escalating complex cases. CRM / Order System Integration syncs order data and customer history. Email Follow-up handles post-purchase review requests and repeat-purchase sequences, Internal Notifications alert support teams for complex or escalated cases, and the Analytics Dashboard tracks inquiry volume, resolution rate, and response time.",
+      flow: ["Website / Landing Page", "WhatsApp / Telegram", "AI Assistant", "CRM / Order System Integration", "Email Follow-up", "Internal Notifications", "Analytics Dashboard"],
+      notes: [
+        "Website forms, chat and messaging all feed the same support workflow.",
+        "The AI Assistant handles first response, drafting and routing, not unchecked final decisions.",
+        "CRM and order records stay synchronized with customer history and order status.",
+        "Notifications and analytics close the loop with confirmations, summaries and performance tracking.",
+      ],
+    },
+    modules: [
+      {
+        title: "AI Customer Support Assistant",
+        description: "Handles order status, shipping, and return questions.",
+        bullets: ["Order status", "Shipping questions", "Return handling"],
+      },
+      {
+        title: "WhatsApp Support Channel",
+        description: "Centralizes customer support communication.",
+        bullets: ["Unified inbox", "Message continuity", "Fast replies"],
+      },
+      {
+        title: "Order Status Module",
+        description: "Connects to order management system for real-time updates.",
+        bullets: ["Order lookups", "Live status", "Automatic replies"],
+      },
+      {
+        title: "Returns & Exchange Flow",
+        description: "Automates structured return and exchange requests.",
+        bullets: ["Return requests", "Exchange requests", "Routing logic"],
+      },
+      {
+        title: "Post-Purchase Sequencer",
+        description: "Sends review requests and repeat-purchase offers.",
+        bullets: ["Review prompts", "Repeat offers", "Timing rules"],
+      },
+      {
+        title: "Support Reporting Module",
+        description: "Dashboard on inquiry volume and resolution rate.",
+        bullets: ["Volume tracking", "Resolution rate", "Channel visibility"],
+      },
+    ],
+    results: [
+      {
+        title: "Can help reduce strain on support teams as order volume grows",
+        description: "Can help reduce strain on support teams as order volume grows.",
+      },
+      {
+        title: "Designed to reduce time spent on routine order status questions",
+        description: "Designed to reduce time spent on routine order status questions.",
+      },
+      {
+        title: "May reduce manual back-and-forth on returns and exchanges",
+        description: "May reduce manual back-and-forth on returns and exchanges.",
+      },
+      {
+        title: "Supports more consistent post-purchase engagement and review collection",
+        description: "Supports more consistent post-purchase engagement and review collection.",
+      },
+      {
+        title: "Helps automate consistent support across WhatsApp and web channels",
+        description: "Helps automate consistent support across WhatsApp and web channels.",
+      },
+      {
+        title: "Can support better visibility into support volume and resolution rate",
+        description: "Can support better visibility into support volume and resolution rate.",
+      },
+    ],
+    services: [
+      {
+        title: "AI Assistants",
+        description: "Core engine behind customer support and order handling.",
+        href: "/services",
+      },
+      {
+        title: "WhatsApp Automation",
+        description: "Primary support channel for customer communication.",
+        href: "/services",
+      },
+      {
+        title: "Customer Support Automation",
+        description: "Automates routine support and escalations.",
+        href: "/services",
+      },
+      {
+        title: "Marketing Automation",
+        description: "Supports post-purchase engagement and retention flows.",
+        href: "/services",
+      },
+    ],
+    cases: [
+      {
+        title: "AI assistant for e-commerce customer support",
+        description: "Closest-fit case for customer support and order handling.",
+        href: "/cases/ecommerce-logistics",
+      },
+      {
+        title: "Order inquiry -> AI resolution -> CRM logging architecture",
+        description: "Useful proxy for triage, response and routing logic across channels.",
+        href: "/cases/customer-communications",
+      },
+      {
+        title: "Post-purchase follow-up and review automation",
+        description: "Relevant for retention and post-sale communication patterns.",
+        href: "/cases/sales-leads",
+      },
+    ],
+    reading: [
+      {
+        title: "How AI Automation Saves 20+ Hours Per Week for Small Businesses",
+        description: "A practical guide to the first workflows that free up real time.",
+        href: "/blog/how-ai-automation-saves-time",
+      },
+      {
+        title: "What Is AI Automation?",
+        description: "Useful context for understanding the operational model behind these systems.",
+        href: "/blog/what-is-ai-automation",
+      },
+      {
+        title: "What Is an AI Agent?",
+        description: "Useful context for deciding when a workflow needs an assistant versus a full agent layer.",
+        href: "/blog/what-is-an-ai-agent",
+      },
+      {
+        title: "AI Agent vs Chatbot",
+        description: "A comparison for teams deciding how much intelligence the workflow actually needs.",
+        href: "/blog/ai-agent-vs-chatbot",
+      },
+    ],
+    faq: [
+      {
+        question: "Can the AI assistant check real order status?",
+        answer:
+          "When connected to your order management or e-commerce platform, the assistant can reference live order data.",
+      },
+      {
+        question: "Can it handle return and exchange requests?",
+        answer:
+          "Yes, a structured flow can be built to collect return/exchange details and route them appropriately.",
+      },
+      {
+        question: "Does this work with platforms like Shopify or WooCommerce?",
+        answer:
+          "Integration depends on the platform's available APIs; this is assessed during the strategy call.",
+      },
+      {
+        question: "Will this replace my customer support team?",
+        answer:
+          "No, it is designed to handle high-volume routine inquiries so the team can focus on complex cases.",
+      },
+      {
+        question: "Can it send post-purchase follow-up messages?",
+        answer:
+          "Yes, automated sequences can be configured for review requests and repeat-purchase offers.",
+      },
+      {
+        question: "What languages can the assistant use?",
+        answer:
+          "The assistant can be configured for Dutch, English, and other languages relevant to your customer base.",
+      },
+      {
+        question: "How is customer data protected?",
+        answer:
+          "Customer and order data is stored on GDPR-compliant infrastructure with controlled access.",
+      },
+      {
+        question: "How long does implementation take?",
+        answer:
+          "Most e-commerce automation setups can be implemented within a few weeks, depending on platform integration requirements.",
+      },
+    ],
+    cta: {
+      label: "Final CTA",
+      title: "Scale Support Without Scaling Headcount",
+      body: "Let Kubera AI build an e-commerce automation system for your online store in the Netherlands.",
+      primary: {
+        title: "Book a strategy call",
+        description: "Go to the existing contact page for project discussion.",
+        href: "/contacts",
+      },
+      secondary: {
+        title: "Explore services",
+        description: "Review the current service hub before scoping the workflow.",
+        href: "/services",
+      },
+    },
+  },
+  {
+    locale: "en",
+    country: "netherlands",
+    countryLabel: "Netherlands",
+    industry: "whatsapp-automation",
+    industryLabel: "WhatsApp Automation",
+    url: "/en/solutions/netherlands/whatsapp-automation",
+    seo: {
+      title: "WhatsApp Automation for Businesses in the Netherlands | Kubera AI",
+      description:
+        "AI-powered WhatsApp automation built for the Netherlands' direct, digital-first business culture. Automate replies, bookings, and lead qualification.",
+      canonical: "https://www.kubera-automation.com/en/solutions/netherlands/whatsapp-automation",
+      type: "service",
+    },
+    hero: {
+      label: "WhatsApp Automation - Netherlands",
+      title: "WhatsApp Automation for Businesses in the Netherlands",
+      subtitle:
+        "Dutch consumers are direct, digitally fluent, and expect a quick, no-nonsense answer - not small talk and not silence. Kubera AI builds AI-powered WhatsApp systems that match that expectation: fast, to-the-point, and integrated directly into the rest of your digital stack.",
+      trustLine: "Built on WhatsApp Business API - GDPR-compliant infrastructure - Designed for Dutch SMBs",
+      primaryCta: {
+        title: "Book a strategy call",
+        description: "Start with one workflow and define fallback rules before anything is built.",
+        href: "/contacts",
+      },
+      secondaryCta: {
+        title: "See how it works",
+        description: "Review the service hub before scoping the workflow.",
+        href: "/services",
+      },
+      previewNodes: ["Website / Landing Page", "WhatsApp Business API", "AI Assistant", "CRM", "Email Follow-up", "Analytics Dashboard"],
+    },
+    problems: [
+      {
+        title: "Customers expect a direct, efficient answer - not a long exchange",
+        description: "Dutch communication culture favors brevity and clarity, and a slow or roundabout reply reads as unprofessional.",
+      },
+      {
+        title: "High existing digital literacy raises the bar",
+        description: "Customers already compare your WhatsApp response speed and clarity to other digital-first businesses, not just direct competitors.",
+      },
+      {
+        title: "No structured lead capture",
+        description: "WhatsApp conversations rarely make it into a CRM, so leads are lost or inconsistently followed up.",
+      },
+      {
+        title: "Repetitive questions consume staff time",
+        description: "Hours, pricing, and availability questions repeat daily.",
+      },
+      {
+        title: "No after-hours coverage",
+        description: "Messages sent outside business hours go unanswered until the next working day, even though Dutch consumers are highly active digitally outside 9-to-5.",
+      },
+    ],
+    problemSolution: [
+      {
+        problem: "Expectation of direct, efficient answers",
+        automation: "AI assistant trained to give clear, concise responses",
+        result: "Can help match the communication style Dutch customers expect",
+      },
+      {
+        problem: "High digital-literacy comparison bar",
+        automation: "AI assistant integrated with existing digital tools and systems",
+        result: "Designed to keep pace with a digitally sophisticated customer base",
+      },
+      {
+        problem: "Leads not captured",
+        automation: "Automatic lead capture into CRM with tagging",
+        result: "Supports more consistent lead follow-up",
+      },
+      {
+        problem: "Repetitive questions",
+        automation: "AI handles FAQs, pricing, hours, availability",
+        result: "May reduce staff workload on routine inquiries",
+      },
+      {
+        problem: "No after-hours coverage",
+        automation: "24/7 AI assistant with human handoff",
+        result: "Helps automate coverage outside business hours",
+      },
+    ],
+    architecture: {
+      title: "Recommended WhatsApp automation architecture",
+      description:
+        "Website / Landing Page captures initial interest and routes visitors to WhatsApp. WhatsApp Business API is the primary communication channel. The AI Assistant answers questions, qualifies leads, handles bookings, and escalates to a human when needed. CRM Integration logs every conversation automatically, Email Follow-up handles leads that do not convert immediately, Internal Notifications alert staff in real time for human handoff cases, and the Analytics Dashboard shows response times, conversion rates, and conversation volume.",
+      flow: ["Website / Landing Page", "WhatsApp Business API", "AI Assistant", "CRM Integration", "Email Follow-up", "Internal Notifications", "Analytics Dashboard"],
+      notes: [
+        "Website forms can trigger the same workflow as a WhatsApp message.",
+        "The AI Assistant handles classification, drafting and routing, not unchecked final decisions.",
+        "CRM remains the source of truth for leads, status and follow-up ownership.",
+        "Email and analytics close the loop with confirmations, summaries and performance tracking.",
+      ],
+    },
+    modules: [
+      {
+        title: "AI WhatsApp Assistant",
+        description: "Handles inbound messages, FAQs, and lead qualification in Dutch (and other languages).",
+        bullets: ["Dutch language handling", "Inbox triage", "Lead qualification"],
+      },
+      {
+        title: "Booking & Availability Module",
+        description: "Lets customers check and request bookings directly in chat.",
+        bullets: ["Availability prompts", "Booking requests", "Calendar handoff"],
+      },
+      {
+        title: "CRM Sync Module",
+        description: "Pushes every WhatsApp lead into the CRM with context and tags.",
+        bullets: ["Automatic logging", "Tagging", "Context sync"],
+      },
+      {
+        title: "Human Handoff Module",
+        description: "Routes complex conversations to staff.",
+        bullets: ["Escalation rules", "Staff alerts", "Fallback handling"],
+      },
+      {
+        title: "Digital Stack Integration Module",
+        description: "Connects the assistant to existing tools (order systems, calendars, e-commerce platforms).",
+        bullets: ["Tool connections", "Digital stack fit", "System integration"],
+      },
+      {
+        title: "Reporting Module",
+        description: "Weekly summary of conversation volume, response times, and conversion.",
+        bullets: ["Conversation volume", "Response times", "Conversion summary"],
+      },
+    ],
+    results: [
+      {
+        title: "Can help match the direct, efficient communication style Dutch customers expect",
+        description: "Can help match the direct, efficient communication style Dutch customers expect.",
+      },
+      {
+        title: "Designed to keep pace with a digitally sophisticated customer base",
+        description: "Designed to keep pace with a digitally sophisticated customer base.",
+      },
+      {
+        title: "Supports more consistent lead capture and follow-up",
+        description: "Supports more consistent lead capture and follow-up.",
+      },
+      {
+        title: "May reduce staff workload on repetitive customer questions",
+        description: "May reduce staff workload on repetitive customer questions.",
+      },
+      {
+        title: "Helps maintain communication coverage outside business hours",
+        description: "Helps maintain communication coverage outside business hours.",
+      },
+      {
+        title: "Can support better visibility into conversation and lead volume",
+        description: "Can support better visibility into conversation and lead volume.",
+      },
+    ],
+    services: [
+      {
+        title: "AI Assistants",
+        description: "Core engine behind WhatsApp qualification and response handling.",
+        href: "/services",
+      },
+      {
+        title: "WhatsApp Automation",
+        description: "Primary channel modernization for Dutch SMBs.",
+        href: "/services",
+      },
+      {
+        title: "CRM Automation",
+        description: "Tracks every conversation and lead automatically.",
+        href: "/services",
+      },
+      {
+        title: "Customer Support Automation",
+        description: "Structures human handoff and escalation logic.",
+        href: "/services",
+      },
+    ],
+    cases: [
+      {
+        title: "AI assistant for service-business customer inquiries",
+        description: "Closest-fit case for WhatsApp-heavy support and lead handling.",
+        href: "/cases/customer-communications",
+      },
+      {
+        title: "WhatsApp lead qualification -> CRM architecture",
+        description: "Good proxy for lead capture, qualification and CRM logging.",
+        href: "/cases/sales-leads",
+      },
+      {
+        title: "Digitally-integrated WhatsApp automation for e-commerce or logistics",
+        description: "Useful for booking, request handling and response pattern design.",
+        href: "/cases/ecommerce-logistics",
+      },
+    ],
+    reading: [
+      {
+        title: "How AI Automation Saves 20+ Hours Per Week for Small Businesses",
+        description: "A practical guide to the first workflows that free up real time.",
+        href: "/blog/how-ai-automation-saves-time",
+      },
+      {
+        title: "What Is AI Automation?",
+        description: "Useful context for understanding the operational model behind these systems.",
+        href: "/blog/what-is-ai-automation",
+      },
+      {
+        title: "What Is an AI Agent?",
+        description: "Useful context for deciding when a workflow needs an assistant versus a full agent layer.",
+        href: "/blog/what-is-an-ai-agent",
+      },
+      {
+        title: "AI Agent vs Chatbot",
+        description: "A comparison for teams deciding how much intelligence the workflow actually needs.",
+        href: "/blog/ai-agent-vs-chatbot",
+      },
+    ],
+    faq: [
+      {
+        question: "What is WhatsApp automation for a business?",
+        answer:
+          "WhatsApp automation uses an AI assistant connected to the WhatsApp Business API to handle customer messages automatically - answering questions, qualifying leads, and routing complex cases to staff.",
+      },
+      {
+        question: "Is this compliant with WhatsApp's business policies?",
+        answer:
+          "Yes. Kubera AI builds on the official WhatsApp Business API, which is the approved channel for business automation at scale.",
+      },
+      {
+        question: "Can the assistant give short, direct answers rather than long replies?",
+        answer:
+          "Yes, response style can be configured to match the concise, direct communication Dutch customers expect.",
+      },
+      {
+        question: "Will customers know they're talking to an AI?",
+        answer:
+          "Yes, the assistant is clearly labeled as an AI assistant rather than presented as a human.",
+      },
+      {
+        question: "Can the AI assistant escalate to a real person?",
+        answer:
+          "Yes, the system includes human handoff logic so staff are notified when a conversation needs personal attention.",
+      },
+      {
+        question: "How long does implementation take?",
+        answer:
+          "Most WhatsApp automation setups can be implemented within a few weeks, depending on workflow complexity.",
+      },
+      {
+        question: "Does this work in Dutch and other languages?",
+        answer:
+          "Yes, the AI assistant can be configured to communicate in Dutch, English, or other relevant languages.",
+      },
+      {
+        question: "What CRM and digital tools can this integrate with?",
+        answer:
+          "The automation can connect to most common CRM, order management, and scheduling platforms used by Dutch SMBs; exact integrations are confirmed during the strategy call.",
+      },
+    ],
+    cta: {
+      label: "Final CTA",
+      title: "Fast, Direct, and Always-On - the Way Dutch Customers Expect",
+      body: "See how Kubera AI can design a WhatsApp automation system for your business in the Netherlands.",
+      primary: {
+        title: "Book a strategy call",
+        description: "Go to the existing contact page for project discussion.",
+        href: "/contacts",
+      },
+      secondary: {
+        title: "Explore services",
+        description: "Review the current service hub before scoping the workflow.",
+        href: "/services",
+      },
+    },
+  },
 ];
 
 export function getIndustrySolutionByRoute(country: string, industry: string) {
