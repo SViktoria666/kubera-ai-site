@@ -1,4 +1,5 @@
 import { irelandIndustrySolutions } from "./industry-solutions-ireland";
+import { estoniaIndustrySolutions } from "./industry-solutions-estonia";
 
 export type IndustrySolutionProblem = {
   title: string;
@@ -4140,6 +4141,7 @@ export const industrySolutions: IndustrySolution[] = [
     },
   },
   ...irelandIndustrySolutions,
+  ...estoniaIndustrySolutions,
 ];
 
 export function getIndustrySolutionByRoute(country: string, industry: string) {
