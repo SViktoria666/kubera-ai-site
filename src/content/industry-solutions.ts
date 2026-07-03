@@ -3,6 +3,7 @@ import { estoniaIndustrySolutions } from "./industry-solutions-estonia";
 import { denmarkIndustrySolutions } from "./industry-solutions-denmark";
 import { belgiumIndustrySolutions } from "./industry-solutions-belgium";
 import { italyIndustrySolutions } from "./industry-solutions-italy";
+import { switzerlandIndustrySolutions } from "./industry-solutions-switzerland";
 
 export type IndustrySolutionProblem = {
   title: string;
@@ -4148,6 +4149,7 @@ export const industrySolutions: IndustrySolution[] = [
   ...denmarkIndustrySolutions,
   ...belgiumIndustrySolutions,
   ...italyIndustrySolutions,
+  ...switzerlandIndustrySolutions,
 ];
 
 export function getIndustrySolutionByRoute(country: string, industry: string) {
