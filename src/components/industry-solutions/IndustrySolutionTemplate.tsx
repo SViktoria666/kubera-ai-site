@@ -8,6 +8,7 @@ import { IndustryMidCTA } from "./IndustryMidCTA";
 import { IndustryProblemSection } from "./IndustryProblemSection";
 import { IndustryRecommendedServices } from "./IndustryRecommendedServices";
 import { IndustryRelevantCases } from "./IndustryRelevantCases";
+import { IndustryInternalLinks } from "./IndustryInternalLinks";
 import { IndustrySolutionExplainer } from "./IndustrySolutionExplainer";
 import { IndustrySolutionArchitecture } from "./IndustrySolutionArchitecture";
 import { IndustrySolutionHero } from "./IndustrySolutionHero";
@@ -36,6 +37,7 @@ export function IndustrySolutionTemplate({
           <PricingPackages locale="en" />
           <IndustryRecommendedServices solution={solution} />
           <IndustryRelevantCases solution={solution} />
+          <IndustryInternalLinks solution={solution} />
           <IndustryFAQ solution={solution} />
           <IndustryFinalCTA solution={solution} />
         </div>

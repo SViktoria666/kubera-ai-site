@@ -3,6 +3,7 @@ import Link from "next/link";
 import type { ReactNode } from "react";
 import type { CaseLocale, CaseStudy, CaseStudyType } from "@/content/cases";
 import { getCasePageContent } from "@/content/cases";
+import { getCaseSolutionLinks } from "@/content/internal-linking";
 
 type CaseStudyPageProps = {
   caseStudy: CaseStudy;
@@ -271,6 +272,7 @@ function LegacyCaseStudyPage({ caseStudy }: { caseStudy: CaseStudy }) {
 function DetailedCaseStudyPage({ caseStudy, locale }: CaseStudyPageProps) {
   const content = getCasePageContent(caseStudy, locale ?? "en");
   const copy = getSectionCopy(locale ?? "en", caseStudy.type ?? "case");
+  const relatedSolutionLinks = locale === "en" ? getCaseSolutionLinks(caseStudy.slug) : [];
 
   if (!content) {
     return (
@@ -363,6 +365,28 @@ function DetailedCaseStudyPage({ caseStudy, locale }: CaseStudyPageProps) {
           </Link>
         </article>
       </CaseSection>
+
+      {relatedSolutionLinks.length ? (
+        <section className="section section-dark">
+          <div className="container">
+            <div className="solution-section-heading">
+              <p className="eyebrow">Related industry solution pages</p>
+              <h2 className="section-title">Where this architecture applies</h2>
+              <p className="lead solution-section-lead">These links stay at the same level of intent as the case study without claiming the case happened in those markets.</p>
+            </div>
+
+            <div className="solution-grid solution-grid--services">
+              {relatedSolutionLinks.map((item) => (
+                <Link className="solution-card solution-card--link" href={item.href} key={item.href}>
+                  <h3>{item.title}</h3>
+                  <p className="muted">{item.description}</p>
+                  <span className="solution-card-link">Open solution page</span>
+                </Link>
+              ))}
+            </div>
+          </div>
+        </section>
+      ) : null}
     </main>
   );
 }

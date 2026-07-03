@@ -1,6 +1,7 @@
 import Link from "next/link";
 import type { BlogPost } from "@/content/blog";
 import { getBlogPublishedDate, getBlogSeoDescription } from "@/content/blog/helpers";
+import { getBlogSolutionLinks } from "@/content/internal-linking";
 import { siteConfig } from "@/content/site";
 import { MarkdownRenderer } from "./MarkdownRenderer";
 
@@ -23,6 +24,7 @@ function formatDate(date: string) {
 
 export function BlogArticlePage({ post }: BlogArticlePageProps) {
   const canonicalUrl = `${siteConfig.url}${post.url}`;
+  const relatedSolutionLinks = post.frontmatter.language === "en" ? getBlogSolutionLinks(post.frontmatter.slug) : [];
   const author = {
     "@type": "Organization",
     name: siteConfig.name,
@@ -75,6 +77,26 @@ export function BlogArticlePage({ post }: BlogArticlePageProps) {
         <article className="blog-article-body card">
           <MarkdownRenderer content={post.body} />
         </article>
+
+        {relatedSolutionLinks.length ? (
+          <section className="section section-soft" style={{ paddingTop: "12px" }}>
+            <div className="solution-section-heading">
+              <p className="eyebrow">Related solution pages</p>
+              <h2 className="section-title">Commercial pages connected to this topic</h2>
+              <p className="lead solution-section-lead">These links keep the article connected to the solution architecture without turning the post into a sales page.</p>
+            </div>
+
+            <div className="solution-grid solution-grid--services">
+              {relatedSolutionLinks.map((item) => (
+                <Link className="solution-card solution-card--link" href={item.href} key={item.href}>
+                  <h3>{item.title}</h3>
+                  <p className="muted">{item.description}</p>
+                  <span className="solution-card-link">Open solution page</span>
+                </Link>
+              ))}
+            </div>
+          </section>
+        ) : null}
 
         <div className="blog-article-backlink">
           <Link className="button" href="/blog">
