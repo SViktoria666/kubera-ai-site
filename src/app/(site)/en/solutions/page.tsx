@@ -119,12 +119,12 @@ export default function SolutionsHubPage() {
             <p className="lead solution-section-lead">These clusters keep the commercial pages connected by theme instead of leaving them as isolated landing pages.</p>
           </div>
 
-          <div className="solution-grid solution-grid--services">
+          <div className="solution-grid solution-grid--hub">
             {hubClusters.map((cluster) => (
               <article className="solution-card" key={cluster.title}>
                 <h3>{cluster.title}</h3>
                 <p className="muted">{cluster.description}</p>
-                <div className="solution-reading-links">
+                <div className="solution-reading-links solution-reading-links--stacked">
                   {cluster.links.map((link) => (
                     <Link className="solution-reading-link" href={link.href} key={link.href}>
                       <strong>{link.title}</strong>
@@ -146,12 +146,12 @@ export default function SolutionsHubPage() {
             <p className="lead solution-section-lead">Each country section links to the GEO page and its three commercial solution pages.</p>
           </div>
 
-          <div className="solution-grid solution-grid--services">
+          <div className="solution-grid solution-grid--hub">
             {countryBuckets.map(({ country, geoLink, solutions }) => (
               <article className="solution-card" key={country.slug}>
                 <h3>{country.country}</h3>
                 <p className="muted">{country.metaDescription}</p>
-                <div className="solution-reading-links">
+                <div className="solution-reading-links solution-reading-links--stacked">
                   <Link className="solution-reading-link" href={geoLink.href}>
                     <strong>{geoLink.title}</strong>
                     <span>{geoLink.description}</span>
