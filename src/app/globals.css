@@ -2310,6 +2310,134 @@ input[type="range"] {
   }
 }
 
+@media (max-width: 767px) {
+  main {
+    padding-bottom: 96px;
+  }
+
+  .services-grid,
+  .calculator-panel,
+  .pricing-packages-grid,
+  .cases-grid,
+  .contact-layout,
+  .geo-location-grid,
+  .geo-links-grid,
+  .solution-grid--problems,
+  .solution-grid--modules,
+  .solution-grid--results,
+  .solution-grid--hub,
+  .solution-grid--services,
+  .solution-grid--cases,
+  .solution-reading-links {
+    grid-template-columns: 1fr;
+  }
+
+  .solution-grid--problems > *,
+  .solution-grid--modules > *,
+  .solution-grid--results > * {
+    grid-column: 1 / -1 !important;
+  }
+
+  .solution-grid--problems,
+  .solution-grid--modules {
+    gap: 14px;
+  }
+
+  .service-card,
+  .slider-box,
+  .loss-result,
+  .pricing-card,
+  .case-card,
+  .blog-card,
+  .blog-article-body {
+    padding: 22px;
+  }
+
+  .service-card h2,
+  .service-card h3 {
+    font-size: 1.25rem;
+  }
+
+  .contact-layout {
+    gap: 18px;
+  }
+
+  .slider-row label {
+    overflow-wrap: anywhere;
+    line-height: 1.45;
+  }
+
+  .range-labels {
+    font-size: 12px;
+    gap: 8px;
+  }
+
+  .loss-number {
+    font-size: clamp(1.9rem, 11vw, 3.15rem);
+  }
+
+  .loss-result strong {
+    display: block;
+    color: var(--color-accent);
+    font-size: clamp(1.5rem, 7vw, 2.35rem);
+    line-height: 1.05;
+    font-weight: 800;
+  }
+
+  .loss-result .button {
+    width: 100%;
+  }
+
+  .blog-article-layout {
+    gap: 20px;
+  }
+
+  .blog-article-body {
+    padding: 22px;
+  }
+
+  .blog-markdown table {
+    display: block;
+    max-width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .blog-markdown th,
+  .blog-markdown td {
+    min-width: 140px;
+  }
+
+  .ai-assistant-widget {
+    right: 8px;
+    bottom: 8px;
+  }
+
+  .ai-assistant-button {
+    width: 120px;
+    height: 50px;
+    font-size: 0.82rem;
+  }
+
+  .ai-assistant-panel {
+    width: min(340px, calc(100vw - 16px));
+    height: min(66vh, 480px);
+  }
+
+  .ai-assistant-form {
+    grid-template-columns: 1fr;
+  }
+
+  .ai-assistant-form button {
+    width: 100%;
+    min-height: 42px;
+  }
+
+  .ai-assistant-message {
+    max-width: 100%;
+  }
+}
+
 @media (max-width: 560px) {
   .ai-assistant-widget {
     right: 10px;
