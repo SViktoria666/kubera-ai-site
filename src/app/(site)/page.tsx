@@ -4,7 +4,7 @@ import { HeroSection } from "@/components/sections/HeroSection";
 import { PricingPackages } from "@/components/sections/PricingPackages";
 import { LossCalculator } from "@/components/sections/LossCalculator";
 import { createPageMetadata } from "@/content/seo";
-import { getHomeFeaturedSolutionLinks, solutionHubRoute } from "@/content/internal-linking";
+import { buildSolutionLinks, solutionHubRoute } from "@/content/internal-linking";
 
 export const metadata: Metadata = createPageMetadata({
   title: "Kubera AI",
@@ -14,7 +14,14 @@ export const metadata: Metadata = createPageMetadata({
 });
 
 export default function HomePage() {
-  const featuredSolutionLinks = getHomeFeaturedSolutionLinks().slice(0, 5);
+  const featuredSolutionLinks = buildSolutionLinks([
+    "/en/solutions/spain/hospitality-automation",
+    "/en/solutions/germany/dental-automation",
+    "/en/solutions/netherlands/e-commerce-automation",
+    "/en/solutions/ireland/recruitment-automation",
+    "/en/solutions/switzerland/luxury-hotel-automation",
+    "/en/solutions/poland/e-commerce-automation",
+  ]);
 
   return (
     <main>
@@ -36,9 +43,9 @@ export default function HomePage() {
           <div className="home-solution-nav-card">
             <div className="solution-section-heading">
               <p className="eyebrow">Featured solution pages</p>
-              <h2 className="section-title">Industry automation across Europe</h2>
+              <h2 className="section-title">Explore AI automation solutions</h2>
               <p className="lead solution-section-lead">
-                Kubera AI provides industry automation across Europe, with direct paths into the most relevant solution pages.
+                Browse country-specific automation pages for hotels, real estate, recruitment, e-commerce, SaaS, clinics, and more.
               </p>
             </div>
 

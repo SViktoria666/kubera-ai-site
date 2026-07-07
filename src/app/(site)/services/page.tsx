@@ -4,7 +4,7 @@ import { HeroSection } from "@/components/sections/HeroSection";
 import { LossCalculator } from "@/components/sections/LossCalculator";
 import { ServicesGrid } from "@/components/services/ServicesGrid";
 import { enServices } from "@/content/en/services";
-import { getServicesFeaturedSolutionLinks, solutionHubRoute } from "@/content/internal-linking";
+import { buildSolutionLinks, solutionHubRoute } from "@/content/internal-linking";
 import { createPageMetadata } from "@/content/seo";
 
 export const metadata: Metadata = createPageMetadata({
@@ -15,7 +15,14 @@ export const metadata: Metadata = createPageMetadata({
 });
 
 export default function ServicesPage() {
-  const featuredSolutionLinks = getServicesFeaturedSolutionLinks();
+  const featuredSolutionLinks = buildSolutionLinks([
+    "/en/solutions/spain/hospitality-automation",
+    "/en/solutions/germany/dental-automation",
+    "/en/solutions/netherlands/e-commerce-automation",
+    "/en/solutions/switzerland/luxury-hotel-automation",
+    "/en/solutions/poland/e-commerce-automation",
+    "/en/solutions/cyprus/real-estate-automation",
+  ]);
 
   return (
     <main>
@@ -25,31 +32,35 @@ export default function ServicesPage() {
           <ServicesGrid services={enServices} />
         </div>
       </section>
-      <section className="section section-dark">
+      <LossCalculator locale="en" />
+      <section className="section section-soft home-solution-nav">
         <div className="container">
-          <div className="solution-section-heading">
-            <p className="eyebrow">Popular industry solutions</p>
-            <h2 className="section-title">Selected solution pages</h2>
-            <p className="lead solution-section-lead">A curated set of commercial pages gives the service hub a direct path into the solution architecture.</p>
-          </div>
+          <div className="home-solution-nav-card">
+            <div className="solution-section-heading">
+              <p className="eyebrow">Industry-specific automation examples</p>
+              <h2 className="section-title">See how these services apply in real markets</h2>
+              <p className="lead solution-section-lead">
+                See how Kubera AI applies these services across specific industries and countries.
+              </p>
+            </div>
 
-          <div className="solution-grid solution-grid--services">
-            {featuredSolutionLinks.map((item) => (
-              <Link className="solution-card solution-card--link" href={item.href} key={item.href}>
-                <h3>{item.title}</h3>
-                <p className="muted">{item.description}</p>
-                <span className="solution-card-link">Open solution page</span>
+            <div className="home-solution-nav-grid">
+              {featuredSolutionLinks.map((item) => (
+                <Link className="home-solution-nav-link" href={item.href} key={item.href}>
+                  <strong>{item.title}</strong>
+                  <span>{item.description}</span>
+                </Link>
+              ))}
+            </div>
+
+            <div className="home-solution-nav-actions">
+              <Link className="button home-solution-nav-button" href={solutionHubRoute}>
+                View all industry solutions
               </Link>
-            ))}
-            <Link className="solution-card solution-card--link" href={solutionHubRoute}>
-              <h3>View all solutions</h3>
-              <p className="muted">Open the full solution hub with all 54 commercial pages.</p>
-              <span className="solution-card-link">Open hub</span>
-            </Link>
+            </div>
           </div>
         </div>
       </section>
-      <LossCalculator locale="en" />
     </main>
   );
 }
