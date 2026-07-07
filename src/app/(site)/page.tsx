@@ -14,7 +14,7 @@ export const metadata: Metadata = createPageMetadata({
 });
 
 export default function HomePage() {
-  const featuredSolutionLinks = getHomeFeaturedSolutionLinks();
+  const featuredSolutionLinks = getHomeFeaturedSolutionLinks().slice(0, 5);
 
   return (
     <main>
@@ -29,32 +29,36 @@ export default function HomePage() {
           Explore the blog for practical automation guidance and AI system decisions: <Link href="/blog">Kubera AI Blog</Link>.
         </p>
       </div>
-      <section className="section section-soft">
+      <PricingPackages locale="en" />
+      <LossCalculator locale="en" />
+      <section className="section section-soft home-solution-nav">
         <div className="container">
-          <div className="solution-section-heading">
-            <p className="eyebrow">Explore AI Automation Solutions by Industry</p>
-            <h2 className="section-title">Popular commercial solution pages</h2>
-            <p className="lead solution-section-lead">A small set of direct links keeps the homepage uncluttered while giving crawlers and users a clear path into the solution hub.</p>
-          </div>
+          <div className="home-solution-nav-card">
+            <div className="solution-section-heading">
+              <p className="eyebrow">Featured solution pages</p>
+              <h2 className="section-title">Industry automation across Europe</h2>
+              <p className="lead solution-section-lead">
+                Kubera AI provides industry automation across Europe, with direct paths into the most relevant solution pages.
+              </p>
+            </div>
 
-          <div className="solution-grid solution-grid--services">
-            {featuredSolutionLinks.map((item) => (
-              <Link className="solution-card solution-card--link" href={item.href} key={item.href}>
-                <h3>{item.title}</h3>
-                <p className="muted">{item.description}</p>
-                <span className="solution-card-link">Open solution page</span>
+            <div className="home-solution-nav-grid">
+              {featuredSolutionLinks.map((item) => (
+                <Link className="home-solution-nav-link" href={item.href} key={item.href}>
+                  <strong>{item.title}</strong>
+                  <span>{item.description}</span>
+                </Link>
+              ))}
+            </div>
+
+            <div className="home-solution-nav-actions">
+              <Link className="button home-solution-nav-button" href={solutionHubRoute}>
+                View all AI Automation Solutions
               </Link>
-            ))}
-            <Link className="solution-card solution-card--link" href={solutionHubRoute}>
-              <h3>View all industry solutions</h3>
-              <p className="muted">Open the hub that links to all 54 commercial solution pages.</p>
-              <span className="solution-card-link">Open hub</span>
-            </Link>
+            </div>
           </div>
         </div>
       </section>
-      <PricingPackages locale="en" />
-      <LossCalculator locale="en" />
     </main>
   );
 }
