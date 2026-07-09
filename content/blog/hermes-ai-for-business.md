@@ -35,7 +35,7 @@ Persistent cross-session memory. Using SQLite with FTS5 full-text search, Hermes
 
 Multi-agent orchestration with Kanban. Hermes can spawn isolated subagents to handle parallel workstreams, coordinate them through a built-in Kanban system (parent agent posts cards, child subagents pull them, work in parallel, report back), and aggregate outputs through a Mixture of Agents (MoA) approach where multiple models run simultaneously and outputs are combined. For complex, multi-phase projects, this is a meaningful architectural capability.
 
-70+ tools across 28 toolsets. Terminal backends (local, Docker, SSH, Singularity, Modal, Daytona), browser automation across 5 backends, file operations, web search and extraction, vision analysis, code execution, and [MCP](https://modelcontextprotocol.io/) integration for connecting to external services. The toolset is comprehensive enough to handle the majority of operational business tasks without custom development.
+70+ tools across 28 toolsets. Terminal backends (local, Docker, SSH, Singularity, Modal, Daytona), browser automation across 5 backends, file operations, web search and extraction, vision analysis, code execution, and [MCP](https://modelcontextprotocol.io/) integration for connecting to external services. Many teams keep their code and automation assets in [GitHub](https://github.com/), and the toolset is broad enough to support that style of workflow without custom development.
 
 Profile isolation. Each Hermes profile has its own memory store, session database, skills directory, and configuration. A business running Hermes as a service can maintain a completely isolated profile per client — separate skills, separate memory, separate context — with no cross-contamination between clients.
 
@@ -250,7 +250,7 @@ The key distinction is the type of value each creates. OpenClaw creates value th
 
 Conclusion: The Right Infrastructure for the Right Type of Work
 
-Hermes is not the most powerful AI agent in every category. OpenClaw has more messaging channels. Managed platforms deploy faster. Custom LangGraph builds offer more architectural flexibility for specialised use cases.
+Hermes is not the most powerful AI agent in every category. OpenClaw has more messaging channels. Managed platforms deploy faster. Custom LangGraph builds offer more architectural flexibility for specialised use cases. If your stack is already centered on [Anthropic](https://www.anthropic.com/) or OpenAI models, the right answer may be a managed platform or a hybrid build instead.
 
 What Hermes offers specifically — a self-improving loop, persistent cross-session memory, profile isolation, and serverless economics — is a precise answer to a precise type of business problem: ongoing, relationship-based work that benefits from an agent that knows your clients, your content, and your exceptions better every week it operates.
 
