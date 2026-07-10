@@ -50,6 +50,25 @@ type UseCaseLandingPageProps = {
   ogDescription: string;
 };
 
+type WorkflowStep = {
+  title: string;
+  description?: string;
+};
+
+const workflowSteps: WorkflowStep[] = [
+  { title: "Incoming call" },
+  { title: "Telephony platform" },
+  { title: "AI voice agent" },
+  { title: "n8n workflow layer" },
+  { title: "Validation and business rules", description: "service type, urgency, service area" },
+  { title: "Classification", description: "routine, time-sensitive, follow-up" },
+  { title: "CRM / field-service system update", description: "where supported" },
+  { title: "Calendar / booking update", description: "where supported" },
+  { title: "Human approval or escalation", description: "safety-related transfer, incomplete data" },
+  { title: "Customer confirmation and internal notification", description: "SMS/email, where permitted" },
+  { title: "Logging, alerts and reporting" },
+];
+
 function SchemaScripts({ canonical, description, faq, title }: Pick<UseCaseLandingPageProps, "canonical" | "description" | "faq"> & { title: string }) {
   const webPage = {
     "@context": "https://schema.org",
@@ -157,6 +176,27 @@ function PreSection({ title, bodyLines }: { title: string; bodyLines: string[] }
   );
 }
 
+function WorkflowSection() {
+  return (
+    <Section title="Target Workflow" lead="The exact architecture is adapted during discovery based on the client's existing phone system, CRM, and service structure.">
+      <div className="workflow-steps">
+        {workflowSteps.map((step, index) => (
+          <div className="workflow-step-wrap" key={step.title}>
+            <article className="card workflow-step-card">
+              <span className="workflow-step-index">{String(index + 1).padStart(2, "0")}</span>
+              <div className="workflow-step-copy">
+                <h3>{step.title}</h3>
+                {step.description ? <p className="muted">{step.description}</p> : null}
+              </div>
+            </article>
+            {index < workflowSteps.length - 1 ? <div className="workflow-connector" aria-hidden="true" /> : null}
+          </div>
+        ))}
+      </div>
+    </Section>
+  );
+}
+
 function LinkGridSection({ title, links, lead }: { title: string; links: UseCaseLinkCard[]; lead?: string }) {
   return (
     <Section title={title} lead={lead}>
@@ -170,6 +210,38 @@ function LinkGridSection({ title, links, lead }: { title: string; links: UseCase
         ))}
       </div>
     </Section>
+  );
+}
+
+function WorkflowPreview() {
+  return (
+    <aside className="solution-hero-card solution-hero-card--workflow">
+      <div className="solution-hero-card-top">
+        <span className="solution-card-kicker">Recommended flow</span>
+        <strong>Home services calls</strong>
+      </div>
+      <div className="workflow-preview" aria-label="Use case workflow preview">
+        <div className="workflow-preview-rail" aria-hidden="true" />
+        <div className="workflow-preview-steps">
+          <div className="workflow-preview-step">Incoming call</div>
+          <div className="workflow-preview-step">Telephony platform</div>
+          <div className="workflow-preview-step">AI voice agent</div>
+          <div className="workflow-preview-step">n8n workflow</div>
+          <div className="workflow-preview-step">CRM / calendar</div>
+        </div>
+        <div className="workflow-preview-outcome-block">
+          <span className="solution-card-kicker">Outcome block</span>
+          <div className="workflow-preview-outcome">
+            <div className="workflow-preview-step workflow-preview-step--outcome">Human-in-the-loop automation</div>
+            <div className="workflow-preview-step workflow-preview-step--outcome">Call handling and booking</div>
+          </div>
+        </div>
+      </div>
+      <div className="solution-hero-card-bottom">
+        <span>Clear handoff rules</span>
+        <span>Visible routing and outcome blocks</span>
+      </div>
+    </aside>
   );
 }
 
@@ -235,14 +307,6 @@ export function UseCaseLandingPage({
   ogTitle,
   ogDescription,
 }: UseCaseLandingPageProps) {
-  const workflowPreview = [
-    "Incoming call",
-    "Telephony platform",
-    "AI voice agent",
-    "n8n workflow",
-    "CRM / calendar",
-  ];
-
   return (
     <main className="solutions-page use-case-page" lang="en">
       <SchemaScripts canonical={canonical} description={description} faq={faq} title={h1} />
@@ -265,31 +329,18 @@ export function UseCaseLandingPage({
               </div>
             </div>
 
-            <aside className="solution-hero-card">
-              <div className="solution-hero-card-top">
-                <span className="solution-card-kicker">Recommended flow</span>
-                <strong>Home services calls</strong>
-              </div>
-              <div className="solution-flow-preview" aria-label="Use case workflow preview">
-                {workflowPreview.map((node, index) => (
-                  <div className="solution-flow-node" key={node}>
-                    <span>{node}</span>
-                    {index < workflowPreview.length - 1 ? <span className="solution-flow-arrow" aria-hidden="true">-&gt;</span> : null}
-                  </div>
-                ))}
-              </div>
-              <div className="solution-hero-card-bottom">
-                <span>Human-in-the-loop automation</span>
-                <span>Call handling and booking</span>
-              </div>
-            </aside>
+            <WorkflowPreview />
           </section>
 
           {sections.map((section) =>
             section.kind === "markdown" ? (
               <MarkdownSection key={section.title} title={section.title} body={section.body} />
             ) : (
-              <PreSection key={section.title} title={section.title} bodyLines={section.bodyLines} />
+              section.title === "Target Workflow" ? (
+                <WorkflowSection key={section.title} />
+              ) : (
+                <PreSection key={section.title} title={section.title} bodyLines={section.bodyLines} />
+              )
             ),
           )}
 

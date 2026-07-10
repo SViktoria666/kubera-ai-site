@@ -545,6 +545,205 @@ main {
   font-weight: 900;
 }
 
+.use-case-page .solution-hero-card--workflow {
+  align-content: start;
+}
+
+.workflow-preview {
+  position: relative;
+  display: grid;
+  gap: 14px;
+  min-width: 0;
+}
+
+.workflow-preview-steps,
+.workflow-preview-outcome {
+  display: grid;
+  gap: 10px;
+  min-width: 0;
+}
+
+.workflow-preview-outcome-block {
+  display: grid;
+  gap: 10px;
+  min-width: 0;
+  padding: 14px;
+  border: 1px solid rgba(255, 184, 0, 0.14);
+  border-radius: 16px;
+  background:
+    linear-gradient(180deg, rgba(50, 122, 255, 0.08), rgba(255, 255, 255, 0.03)),
+    rgba(255, 255, 255, 0.04);
+}
+
+.workflow-preview-rail {
+  position: absolute;
+  inset: 64px auto 64px 50%;
+  width: 1px;
+  background: linear-gradient(180deg, transparent, rgba(255, 184, 0, 0.7), rgba(50, 122, 255, 0.7), transparent);
+  transform: translateX(-50%);
+  pointer-events: none;
+}
+
+.workflow-preview-step {
+  position: relative;
+  min-width: 0;
+  padding: 14px 16px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.05);
+  color: #ffffff;
+  line-height: 1.35;
+  overflow-wrap: anywhere;
+}
+
+.workflow-preview-step::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -11px;
+  width: 12px;
+  height: 12px;
+  border-right: 2px solid rgba(255, 184, 0, 0.7);
+  border-bottom: 2px solid rgba(255, 184, 0, 0.7);
+  transform: translateX(-50%) rotate(45deg);
+  z-index: 1;
+}
+
+.workflow-preview-outcome .workflow-preview-step::after {
+  display: none;
+}
+
+.workflow-preview-step--outcome {
+  background:
+    linear-gradient(180deg, rgba(50, 122, 255, 0.12), transparent 45%),
+    rgba(255, 255, 255, 0.05);
+}
+
+.workflow-steps {
+  display: grid;
+  gap: 12px;
+  min-width: 0;
+}
+
+.workflow-step-wrap {
+  display: grid;
+  gap: 12px;
+}
+
+.workflow-step-card {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  gap: 14px;
+  align-items: start;
+  min-width: 0;
+}
+
+.workflow-step-index {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 44px;
+  min-height: 44px;
+  padding: 0 10px;
+  border-radius: 999px;
+  background: rgba(255, 184, 0, 0.12);
+  color: var(--color-accent);
+  font-size: 0.82rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+}
+
+.workflow-step-copy {
+  display: grid;
+  gap: 6px;
+  min-width: 0;
+}
+
+.workflow-step-copy h3 {
+  margin: 0;
+  font-size: 1.08rem;
+  line-height: 1.25;
+  overflow-wrap: anywhere;
+}
+
+.workflow-step-copy p {
+  margin: 0;
+  line-height: 1.55;
+}
+
+.workflow-connector {
+  position: relative;
+  justify-self: center;
+  width: 2px;
+  min-height: 18px;
+  background: linear-gradient(180deg, rgba(255, 184, 0, 0.9), rgba(50, 122, 255, 0.55));
+}
+
+.workflow-connector::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -3px;
+  width: 9px;
+  height: 9px;
+  border-right: 2px solid rgba(50, 122, 255, 0.65);
+  border-bottom: 2px solid rgba(50, 122, 255, 0.65);
+  transform: translateX(-50%) rotate(45deg);
+}
+
+.use-case-page .solution-final-cta .section-title {
+  max-width: 18ch;
+  font-size: clamp(1.95rem, 3.8vw, 3.1rem);
+  line-height: 1.04;
+  overflow-wrap: anywhere;
+}
+
+.use-case-page .solution-final-cta .lead {
+  max-width: 56rem;
+}
+
+.use-case-page .solution-hero-card-bottom {
+  flex-wrap: wrap;
+}
+
+.use-case-page .solution-hero-card-bottom span {
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+@media (max-width: 900px) {
+  .workflow-preview-rail {
+    display: none;
+  }
+
+  .workflow-step-card {
+    grid-template-columns: 1fr;
+  }
+
+  .workflow-step-index {
+    width: fit-content;
+    min-width: 0;
+  }
+}
+
+@media (max-width: 560px) {
+  .use-case-page .solution-final-cta .section-title {
+    font-size: clamp(1.55rem, 7vw, 2.1rem);
+  }
+
+  .workflow-preview-step {
+    padding: 12px 14px;
+  }
+
+  .workflow-preview-step::after {
+    bottom: -10px;
+  }
+
+  .workflow-connector {
+    min-height: 16px;
+  }
+}
+
 .solution-section {
   display: grid;
   gap: 24px;
