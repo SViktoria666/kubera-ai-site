@@ -228,7 +228,7 @@ function renderWorkflowSteps(steps: WorkflowStep[], startIndex: { current: numbe
 
         {step.branches ? (
           <div className="workflow-branch-panel">
-            <div className="workflow-connector workflow-connector--split" aria-hidden="true" />
+            <div className="workflow-branch-split" aria-hidden="true" />
             <div className="workflow-branch-grid">
               {step.branches.map((branch) => (
                 <div className="workflow-branch-column" key={`${step.title}-${branch.label}`}>

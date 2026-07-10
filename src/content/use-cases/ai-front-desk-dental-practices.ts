@@ -159,7 +159,7 @@ Business outcome: New patient administrative intake completed before the first a
         title: "Decision branch: clinical or urgent?",
         branches: [
           {
-            label: "Clinical or urgent",
+            label: "CLINICAL OR URGENT",
             steps: [
               {
                 title: "Immediate transfer to staff",
@@ -168,7 +168,7 @@ Business outcome: New patient administrative intake completed before the first a
             ],
           },
           {
-            label: "Administrative",
+            label: "ADMINISTRATIVE",
             steps: [
               { title: "Configured handling logic" },
               { title: "Scheduling-system check where supported" },
