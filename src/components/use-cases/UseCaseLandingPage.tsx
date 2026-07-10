@@ -39,6 +39,12 @@ type UseCaseLandingPageProps = {
         title: string;
       }
     | {
+        kind: "workflow";
+        lead: string;
+        steps: WorkflowStep[];
+        title: string;
+      }
+    | {
         bodyLines: string[];
         kind: "pre";
         title: string;
@@ -48,6 +54,20 @@ type UseCaseLandingPageProps = {
   h1: string;
   ogTitle: string;
   ogDescription: string;
+  workflowPreview?: {
+    bottomLabels: [string, string];
+    kicker: string;
+    outcomeDetail: string;
+    outcomeLabel: string;
+    outcomeTitle: string;
+    steps: string[];
+    title: string;
+  };
+  workflowSection?: {
+    lead: string;
+    steps: WorkflowStep[];
+    title: string;
+  };
 };
 
 type WorkflowStep = {
@@ -55,7 +75,7 @@ type WorkflowStep = {
   description?: string;
 };
 
-const workflowSteps: WorkflowStep[] = [
+const defaultWorkflowSteps: WorkflowStep[] = [
   { title: "Incoming call" },
   { title: "Telephony platform" },
   { title: "AI voice agent" },
@@ -68,6 +88,16 @@ const workflowSteps: WorkflowStep[] = [
   { title: "Customer confirmation and internal notification", description: "SMS/email, where permitted" },
   { title: "Logging, alerts and reporting" },
 ];
+
+const defaultWorkflowPreview = {
+  kicker: "Recommended flow",
+  title: "Home services calls",
+  steps: ["Incoming call", "Telephony platform", "AI voice agent", "n8n workflow", "CRM / calendar"],
+  outcomeDetail: "Human-in-the-loop automation",
+  outcomeLabel: "Outcome block",
+  outcomeTitle: "Human-in-the-loop automation",
+  bottomLabels: ["Clear handoff rules", "Visible routing and outcome blocks"] as [string, string],
+};
 
 function SchemaScripts({ canonical, description, faq, title }: Pick<UseCaseLandingPageProps, "canonical" | "description" | "faq"> & { title: string }) {
   const webPage = {
@@ -176,11 +206,11 @@ function PreSection({ title, bodyLines }: { title: string; bodyLines: string[] }
   );
 }
 
-function WorkflowSection() {
+function WorkflowSection({ title, lead, steps }: { title: string; lead: string; steps: WorkflowStep[] }) {
   return (
-    <Section title="Target Workflow" lead="The exact architecture is adapted during discovery based on the client's existing phone system, CRM, and service structure.">
+    <Section title={title} lead={lead}>
       <div className="workflow-steps">
-        {workflowSteps.map((step, index) => (
+        {steps.map((step, index) => (
           <div className="workflow-step-wrap" key={step.title}>
             <article className="card workflow-step-card">
               <span className="workflow-step-index">{String(index + 1).padStart(2, "0")}</span>
@@ -189,7 +219,7 @@ function WorkflowSection() {
                 {step.description ? <p className="muted">{step.description}</p> : null}
               </div>
             </article>
-            {index < workflowSteps.length - 1 ? <div className="workflow-connector" aria-hidden="true" /> : null}
+            {index < steps.length - 1 ? <div className="workflow-connector" aria-hidden="true" /> : null}
           </div>
         ))}
       </div>
@@ -213,33 +243,51 @@ function LinkGridSection({ title, links, lead }: { title: string; links: UseCase
   );
 }
 
-function WorkflowPreview() {
+function WorkflowPreview({
+  kicker,
+  title,
+  steps,
+  outcomeLabel,
+  outcomeDetail,
+  outcomeTitle,
+  bottomLabels,
+}: {
+  bottomLabels: [string, string];
+  kicker: string;
+  outcomeDetail: string;
+  outcomeLabel: string;
+  outcomeTitle: string;
+  steps: string[];
+  title: string;
+}) {
   return (
     <aside className="solution-hero-card solution-hero-card--workflow">
       <div className="solution-hero-card-top">
-        <span className="solution-card-kicker">Recommended flow</span>
-        <strong>Home services calls</strong>
+        <span className="solution-card-kicker">{kicker}</span>
+        <strong>{title}</strong>
       </div>
       <div className="workflow-preview" aria-label="Use case workflow preview">
         <div className="workflow-preview-rail" aria-hidden="true" />
         <div className="workflow-preview-steps">
-          <div className="workflow-preview-step">Incoming call</div>
-          <div className="workflow-preview-step">Telephony platform</div>
-          <div className="workflow-preview-step">AI voice agent</div>
-          <div className="workflow-preview-step">n8n workflow</div>
-          <div className="workflow-preview-step">CRM / calendar</div>
+          {steps.map((step) => (
+            <div className="workflow-preview-step" key={step}>
+              {step}
+            </div>
+          ))}
         </div>
         <div className="workflow-preview-outcome-block">
-          <span className="solution-card-kicker">Outcome block</span>
+          <span className="solution-card-kicker">{outcomeLabel}</span>
           <div className="workflow-preview-outcome">
-            <div className="workflow-preview-step workflow-preview-step--outcome">Human-in-the-loop automation</div>
-            <div className="workflow-preview-step workflow-preview-step--outcome">Call handling and booking</div>
+            <div className="workflow-preview-step workflow-preview-step--outcome">{outcomeTitle}</div>
+            <p className="muted" style={{ margin: 0, overflowWrap: "anywhere" }}>
+              {outcomeDetail}
+            </p>
           </div>
         </div>
       </div>
       <div className="solution-hero-card-bottom">
-        <span>Clear handoff rules</span>
-        <span>Visible routing and outcome blocks</span>
+        <span>{bottomLabels[0]}</span>
+        <span>{bottomLabels[1]}</span>
       </div>
     </aside>
   );
@@ -306,6 +354,12 @@ export function UseCaseLandingPage({
   h1,
   ogTitle,
   ogDescription,
+  workflowPreview = defaultWorkflowPreview,
+  workflowSection = {
+    title: "Target Workflow",
+    lead: "The exact architecture is adapted during discovery based on the client's existing phone system, CRM, and service structure.",
+    steps: defaultWorkflowSteps,
+  },
 }: UseCaseLandingPageProps) {
   return (
     <main className="solutions-page use-case-page" lang="en">
@@ -329,18 +383,16 @@ export function UseCaseLandingPage({
               </div>
             </div>
 
-            <WorkflowPreview />
+            <WorkflowPreview {...workflowPreview} />
           </section>
 
           {sections.map((section) =>
             section.kind === "markdown" ? (
               <MarkdownSection key={section.title} title={section.title} body={section.body} />
+            ) : section.kind === "workflow" ? (
+              <WorkflowSection key={section.title} title={section.title} lead={section.lead} steps={section.steps} />
             ) : (
-              section.title === "Target Workflow" ? (
-                <WorkflowSection key={section.title} />
-              ) : (
-                <PreSection key={section.title} title={section.title} bodyLines={section.bodyLines} />
-              )
+              section.title === "Target Workflow" ? <WorkflowSection key={section.title} {...workflowSection} /> : <PreSection key={section.title} title={section.title} bodyLines={section.bodyLines} />
             ),
           )}
 
