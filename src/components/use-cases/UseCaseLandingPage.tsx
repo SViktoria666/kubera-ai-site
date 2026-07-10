@@ -73,6 +73,12 @@ type UseCaseLandingPageProps = {
 type WorkflowStep = {
   title: string;
   description?: string;
+  branches?: WorkflowBranch[];
+};
+
+type WorkflowBranch = {
+  label: string;
+  steps: WorkflowStep[];
 };
 
 const defaultWorkflowSteps: WorkflowStep[] = [
@@ -206,22 +212,52 @@ function PreSection({ title, bodyLines }: { title: string; bodyLines: string[] }
   );
 }
 
+function renderWorkflowSteps(steps: WorkflowStep[], startIndex: { current: number }, isBranch = false): ReactNode[] {
+  return steps.flatMap((step, index) => {
+    const stepNumber = String(startIndex.current++).padStart(2, "0");
+
+    const nodes: ReactNode[] = [
+      <div className="workflow-step-wrap" key={`${step.title}-${stepNumber}`}>
+        <article className={`card workflow-step-card${isBranch ? " workflow-step-card--branch" : ""}`}>
+          <span className="workflow-step-index">{stepNumber}</span>
+          <div className="workflow-step-copy">
+            <h3>{step.title}</h3>
+            {step.description ? <p className="muted">{step.description}</p> : null}
+          </div>
+        </article>
+
+        {step.branches ? (
+          <div className="workflow-branch-panel">
+            <div className="workflow-connector workflow-connector--split" aria-hidden="true" />
+            <div className="workflow-branch-grid">
+              {step.branches.map((branch) => (
+                <div className="workflow-branch-column" key={`${step.title}-${branch.label}`}>
+                  <span className="workflow-branch-label">{branch.label}</span>
+                  <div className="workflow-branch-stack">
+                    {renderWorkflowSteps(branch.steps, startIndex, true)}
+                  </div>
+                </div>
+              ))}
+            </div>
+            {index < steps.length - 1 ? <div className="workflow-connector workflow-connector--merge" aria-hidden="true" /> : null}
+          </div>
+        ) : null}
+
+        {!step.branches && index < steps.length - 1 ? <div className="workflow-connector" aria-hidden="true" /> : null}
+      </div>,
+    ];
+
+    return nodes;
+  });
+}
+
 function WorkflowSection({ title, lead, steps }: { title: string; lead: string; steps: WorkflowStep[] }) {
+  const stepIndex = { current: 1 };
+
   return (
     <Section title={title} lead={lead}>
       <div className="workflow-steps">
-        {steps.map((step, index) => (
-          <div className="workflow-step-wrap" key={step.title}>
-            <article className="card workflow-step-card">
-              <span className="workflow-step-index">{String(index + 1).padStart(2, "0")}</span>
-              <div className="workflow-step-copy">
-                <h3>{step.title}</h3>
-                {step.description ? <p className="muted">{step.description}</p> : null}
-              </div>
-            </article>
-            {index < steps.length - 1 ? <div className="workflow-connector" aria-hidden="true" /> : null}
-          </div>
-        ))}
+        {renderWorkflowSteps(steps, stepIndex)}
       </div>
     </Section>
   );

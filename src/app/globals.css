@@ -638,6 +638,13 @@ main {
   min-width: 0;
 }
 
+.workflow-step-card--branch {
+  border-color: rgba(50, 122, 255, 0.18);
+  background:
+    linear-gradient(180deg, rgba(50, 122, 255, 0.08), rgba(255, 255, 255, 0.04)),
+    rgba(255, 255, 255, 0.05);
+}
+
 .workflow-step-index {
   display: inline-flex;
   align-items: center;
@@ -691,6 +698,54 @@ main {
   transform: translateX(-50%) rotate(45deg);
 }
 
+.workflow-connector--split,
+.workflow-connector--merge {
+  min-height: 14px;
+}
+
+.workflow-connector--merge {
+  background: linear-gradient(180deg, rgba(50, 122, 255, 0.55), rgba(255, 184, 0, 0.9));
+}
+
+.workflow-branch-panel {
+  display: grid;
+  gap: 12px;
+  min-width: 0;
+}
+
+.workflow-branch-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+  min-width: 0;
+}
+
+.workflow-branch-column {
+  display: grid;
+  gap: 10px;
+  min-width: 0;
+}
+
+.workflow-branch-label {
+  display: inline-flex;
+  width: fit-content;
+  align-items: center;
+  padding: 5px 10px;
+  border-radius: 999px;
+  background: rgba(255, 184, 0, 0.12);
+  color: var(--color-text);
+  font-size: 0.76rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.workflow-branch-stack {
+  display: grid;
+  gap: 12px;
+  min-width: 0;
+}
+
 .use-case-page .solution-final-cta .section-title {
   max-width: 18ch;
   font-size: clamp(1.95rem, 3.8vw, 3.1rem);
@@ -717,6 +772,10 @@ main {
   }
 
   .workflow-step-card {
+    grid-template-columns: 1fr;
+  }
+
+  .workflow-branch-grid {
     grid-template-columns: 1fr;
   }
 
