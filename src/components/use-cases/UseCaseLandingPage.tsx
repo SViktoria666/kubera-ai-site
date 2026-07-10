@@ -126,8 +126,10 @@ function Section({ title, lead, children }: { title: string; children: ReactNode
 function MarkdownSection({ title, body }: { title: string; body: string }) {
   return (
     <Section title={title}>
-      <article className="card blog-article-body">
-        <MarkdownRenderer content={body} />
+      <article className="card blog-article-body" style={{ minWidth: 0 }}>
+        <div style={{ maxWidth: "100%", minWidth: 0, overflowX: "auto" }}>
+          <MarkdownRenderer content={body} />
+        </div>
       </article>
     </Section>
   );
@@ -136,7 +138,7 @@ function MarkdownSection({ title, body }: { title: string; body: string }) {
 function PreSection({ title, bodyLines }: { title: string; bodyLines: string[] }) {
   return (
     <Section title={title}>
-      <article className="card blog-article-body">
+      <article className="card blog-article-body" style={{ minWidth: 0 }}>
         <pre
           style={{
             margin: 0,
@@ -144,7 +146,8 @@ function PreSection({ title, bodyLines }: { title: string; bodyLines: string[] }
             color: "var(--color-muted)",
             lineHeight: 1.7,
             fontFamily: "inherit",
-            overflowX: "auto",
+            overflowWrap: "anywhere",
+            wordBreak: "break-word",
           }}
         >
           {bodyLines.join("\n")}
@@ -241,7 +244,7 @@ export function UseCaseLandingPage({
   ];
 
   return (
-    <main className="solutions-page" lang="en">
+    <main className="solutions-page use-case-page" lang="en">
       <SchemaScripts canonical={canonical} description={description} faq={faq} title={h1} />
 
       <section className="solution-shell">
