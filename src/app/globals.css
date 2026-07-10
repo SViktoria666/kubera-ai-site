@@ -698,7 +698,6 @@ main {
   transform: translateX(-50%) rotate(45deg);
 }
 
-.workflow-connector--split,
 .workflow-connector--merge {
   min-height: 14px;
 }
@@ -713,32 +712,38 @@ main {
   min-width: 0;
 }
 
-.workflow-branch-split {
-  position: relative;
-  min-height: 24px;
+.workflow-branch-fork {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+  align-items: start;
   min-width: 0;
 }
 
-.workflow-branch-split::before {
+.workflow-branch-fork span {
+  position: relative;
+  display: block;
+  min-height: 16px;
+}
+
+.workflow-branch-fork span::before {
+  content: "";
+  position: absolute;
+  inset-inline: 0;
+  top: 0;
+  height: 2px;
+  background: linear-gradient(90deg, rgba(255, 184, 0, 0.9), rgba(50, 122, 255, 0.55));
+}
+
+.workflow-branch-fork span::after {
   content: "";
   position: absolute;
   inset-inline-start: 50%;
   top: 0;
-  bottom: 50%;
   width: 2px;
+  height: 16px;
   transform: translateX(-50%);
   background: linear-gradient(180deg, rgba(255, 184, 0, 0.9), rgba(50, 122, 255, 0.55));
-}
-
-.workflow-branch-split::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 50%;
-  height: 2px;
-  transform: translateY(-50%);
-  background: linear-gradient(90deg, rgba(255, 184, 0, 0.9), rgba(50, 122, 255, 0.55));
 }
 
 .workflow-branch-grid {
@@ -803,7 +808,7 @@ main {
     grid-template-columns: 1fr;
   }
 
-  .workflow-branch-split {
+  .workflow-branch-fork {
     display: none;
   }
 
@@ -2760,18 +2765,18 @@ input[type="range"] {
 
   .ai-assistant-widget {
     right: 8px;
-    bottom: 8px;
+    bottom: 72px;
   }
 
   .ai-assistant-button {
-    width: 120px;
-    height: 50px;
-    font-size: 0.82rem;
+    width: 96px;
+    height: 42px;
+    font-size: 0.74rem;
   }
 
   .ai-assistant-panel {
-    width: min(340px, calc(100vw - 16px));
-    height: min(66vh, 480px);
+    width: min(320px, calc(100vw - 16px));
+    height: min(64vh, 460px);
   }
 
   .ai-assistant-form {
@@ -2789,20 +2794,24 @@ input[type="range"] {
 }
 
 @media (max-width: 560px) {
+  .use-case-page .solution-container {
+    padding-bottom: 120px;
+  }
+
   .ai-assistant-widget {
     right: 10px;
-    bottom: 10px;
+    bottom: 72px;
   }
 
   .ai-assistant-button {
-    width: 136px;
-    height: 58px;
-    font-size: 0.92rem;
+    width: 92px;
+    height: 40px;
+    font-size: 0.72rem;
   }
 
   .ai-assistant-panel {
     width: calc(100vw - 20px);
-    height: min(68vh, 500px);
+    height: min(62vh, 440px);
   }
 
   .solution-final-cta {
