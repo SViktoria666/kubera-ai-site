@@ -1,19 +1,5 @@
 import type { UseCaseFaqItem, UseCaseLinkCard } from "@/content/use-cases/ai-voice-agents-home-services";
 
-type WorkflowStep = {
-  branches?: WorkflowBranch[];
-  description?: string;
-  title: string;
-};
-
-type WorkflowBranch = {
-  label: string;
-  steps: Array<{
-    description?: string;
-    title: string;
-  }>;
-};
-
 export const aiFrontDeskDentalPractices = {
   seo: {
     title: "AI Front Desk for Dental Practices | Appointment and Communication Automation — Kubera AI",
@@ -155,32 +141,20 @@ Business outcome: New patient administrative intake completed before the first a
       { title: "Communication platform", description: "telephony or chat" },
       { title: "Workflow layer", description: "n8n, typically orchestrated" },
       { title: "Inquiry classification", description: "appointment / reminder / recall / general / clinical / urgent" },
+      { title: "Decision branch: clinical or urgent?" },
+      { title: "CLINICAL OR URGENT", description: "Decision path for immediate transfer to staff" },
       {
-        title: "Decision branch: clinical or urgent?",
-        branches: [
-          {
-            label: "CLINICAL OR URGENT",
-            steps: [
-              {
-                title: "Immediate transfer to staff",
-                description: "Clinical questions, complaints and urgent situations are transferred without delay",
-              },
-            ],
-          },
-          {
-            label: "ADMINISTRATIVE",
-            steps: [
-              { title: "Configured handling logic" },
-              { title: "Scheduling-system check where supported" },
-              { title: "Patient record or CRM update where supported" },
-              { title: "Patient confirmation through a permitted configured channel" },
-              { title: "Staff notification where required" },
-            ],
-          },
-        ],
+        title: "Immediate transfer to staff",
+        description: "Clinical questions, complaints and urgent situations are transferred without delay",
       },
+      { title: "ADMINISTRATIVE", description: "Decision path for configured handling logic" },
+      { title: "Configured handling logic" },
+      { title: "Scheduling-system check where supported" },
+      { title: "Patient record or CRM update where supported" },
+      { title: "Patient confirmation through a permitted configured channel" },
+      { title: "Staff notification where required" },
       { title: "Logging, monitoring and reporting" },
-    ] satisfies WorkflowStep[],
+    ],
   },
   automationModules: `- Front desk process mapping (inquiry types, call volume, scheduling workflow, recall process)
 - AI-assisted call or chat handling configuration for defined administrative inquiry types
