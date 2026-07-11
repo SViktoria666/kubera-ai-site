@@ -22,6 +22,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { route: "/contacts", priority: 0.85 },
     { route: "/use-cases/ai-voice-agents-home-services", priority: 0.74 },
     { route: "/use-cases/real-estate-lead-automation", priority: 0.74 },
+    { route: "/use-cases/n8n-ecommerce-automation", priority: 0.74 },
     { route: "/use-cases/ai-customer-support-ecommerce", priority: 0.74 },
     { route: "/use-cases/ai-front-desk-dental-practices", priority: 0.74 },
     { route: "/use-cases/ai-client-intake-law-firms", priority: 0.74 },
