@@ -780,7 +780,7 @@ main {
 }
 
 .use-case-page .solution-final-cta .section-title {
-  max-width: 18ch;
+  max-width: 42rem;
   font-size: clamp(1.95rem, 3.8vw, 3.1rem);
   line-height: 1.04;
   overflow-wrap: anywhere;
@@ -800,6 +800,10 @@ main {
 }
 
 @media (max-width: 900px) {
+  .use-case-page .solution-final-cta .section-title {
+    max-width: 34rem;
+  }
+
   .workflow-preview-rail {
     display: none;
   }
@@ -824,6 +828,7 @@ main {
 
 @media (max-width: 560px) {
   .use-case-page .solution-final-cta .section-title {
+    max-width: 100%;
     font-size: clamp(1.55rem, 7vw, 2.1rem);
   }
 
