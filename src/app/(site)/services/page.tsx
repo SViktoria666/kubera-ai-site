@@ -33,6 +33,7 @@ export default function ServicesPage() {
           <ServicesGrid services={enServices} />
         </div>
       </section>
+      <LossCalculator locale="en" />
       <section className="section section-soft home-solution-nav">
         <div className="container">
           <div className="home-solution-nav-card">
@@ -55,7 +56,6 @@ export default function ServicesPage() {
           </div>
         </div>
       </section>
-      <LossCalculator locale="en" />
       <section className="section section-soft home-solution-nav">
         <div className="container">
           <div className="home-solution-nav-card">

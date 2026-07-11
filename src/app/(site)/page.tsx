@@ -37,6 +37,8 @@ export default function HomePage() {
           Explore the blog for practical automation guidance and AI system decisions: <Link href="/blog">Kubera AI Blog</Link>.
         </p>
       </div>
+      <PricingPackages locale="en" />
+      <LossCalculator locale="en" />
       <section className="section section-soft home-solution-nav">
         <div className="container">
           <div className="home-solution-nav-card">
@@ -65,8 +67,6 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-      <PricingPackages locale="en" />
-      <LossCalculator locale="en" />
       <section className="section section-soft home-solution-nav">
         <div className="container">
           <div className="home-solution-nav-card">
