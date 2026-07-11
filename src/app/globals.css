@@ -780,14 +780,21 @@ main {
 }
 
 .use-case-page .solution-final-cta .section-title {
-  max-width: 42rem;
-  font-size: clamp(1.95rem, 3.8vw, 3.1rem);
-  line-height: 1.04;
-  overflow-wrap: anywhere;
+  width: 100%;
+  inline-size: 100%;
+  max-width: none;
+  font-size: clamp(2.05rem, 3vw, 3.15rem);
+  line-height: 1.06;
+  overflow-wrap: break-word;
 }
 
 .use-case-page .solution-final-cta .lead {
-  max-width: 56rem;
+  width: 100%;
+  max-width: none;
+}
+
+.use-case-page .solution-final-cta .solution-cta-actions {
+  width: 100%;
 }
 
 .use-case-page .solution-hero-card-bottom {
@@ -801,7 +808,7 @@ main {
 
 @media (max-width: 900px) {
   .use-case-page .solution-final-cta .section-title {
-    max-width: 34rem;
+    font-size: clamp(1.9rem, 4.2vw, 2.65rem);
   }
 
   .workflow-preview-rail {
@@ -828,7 +835,6 @@ main {
 
 @media (max-width: 560px) {
   .use-case-page .solution-final-cta .section-title {
-    max-width: 100%;
     font-size: clamp(1.55rem, 7vw, 2.1rem);
   }
 
@@ -1416,6 +1422,11 @@ main {
   display: grid;
   gap: 12px;
   padding-bottom: 96px;
+}
+
+.use-case-page .solution-final-cta {
+  width: 100%;
+  justify-items: stretch;
 }
 
 @keyframes solution-rise {
