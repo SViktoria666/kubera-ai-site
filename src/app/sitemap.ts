@@ -25,6 +25,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { route: "/use-cases/ai-customer-support-ecommerce", priority: 0.74 },
     { route: "/use-cases/ai-front-desk-dental-practices", priority: 0.74 },
     { route: "/use-cases/ai-client-intake-law-firms", priority: 0.74 },
+    { route: "/use-cases/ai-receptionist-salons-spas", priority: 0.74 },
     { route: "/ru", priority: 0.9 },
     { route: "/ru/uslugi", priority: 0.85 },
     { route: "/ru/kak-my-rabotaem", priority: 0.8 },
