@@ -150,6 +150,8 @@ If you need business action, choose an AI agent.
 
 If you need both, build both layers intentionally instead of forcing one tool to do the job of the other.
 
+That layered pattern is especially visible in [AI Customer Support for E-commerce](/use-cases/ai-customer-support-ecommerce), [AI Front Desk for Dental Practices](/use-cases/ai-front-desk-dental-practices), and [AI Receptionist for Salons and Spas](/use-cases/ai-receptionist-salons-spas).
+
 If you are deciding where to start, the practical next question is often which automation project to ship first; see [How to Choose Your First AI Automation Project](/blog/first-ai-automation-project) for a simple framework.
 
 For a concrete example of how those savings add up in practice, read [How AI Automation Saves 20+ Hours Per Week](/blog/how-ai-automation-saves-time).

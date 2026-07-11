@@ -200,6 +200,8 @@ At Kubera AI, every engagement starts with a process audit - not a demo. We map 
 
 The technology to build those systems exists. The platforms are affordable. The models are capable. What most businesses are missing is not the AI - it is the operational design.
 
+If you want to see that operational design applied to real business scenarios, look at [AI Voice Agents for Home Services](/use-cases/ai-voice-agents-home-services), [AI Customer Support for E-commerce](/use-cases/ai-customer-support-ecommerce), [AI Front Desk for Dental Practices](/use-cases/ai-front-desk-dental-practices), and [AI Client Intake for Law Firms](/use-cases/ai-client-intake-law-firms).
+
 ## Frequently Asked Questions
 
 1. What is an AI agent in business terms?

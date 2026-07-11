@@ -4,7 +4,7 @@ import { HeroSection } from "@/components/sections/HeroSection";
 import { LossCalculator } from "@/components/sections/LossCalculator";
 import { ServicesGrid } from "@/components/services/ServicesGrid";
 import { enServices } from "@/content/en/services";
-import { buildSolutionLinks, solutionHubRoute } from "@/content/internal-linking";
+import { buildSolutionLinks, getServicesFeaturedUseCaseLinks, solutionHubRoute } from "@/content/internal-linking";
 import { createPageMetadata } from "@/content/seo";
 
 export const metadata: Metadata = createPageMetadata({
@@ -23,6 +23,7 @@ export default function ServicesPage() {
     "/en/solutions/poland/e-commerce-automation",
     "/en/solutions/cyprus/real-estate-automation",
   ]);
+  const featuredUseCaseLinks = getServicesFeaturedUseCaseLinks();
 
   return (
     <main>
@@ -30,6 +31,28 @@ export default function ServicesPage() {
       <section className="section section-soft">
         <div className="container">
           <ServicesGrid services={enServices} />
+        </div>
+      </section>
+      <section className="section section-soft home-solution-nav">
+        <div className="container">
+          <div className="home-solution-nav-card">
+            <div className="solution-section-heading">
+              <p className="eyebrow">Automation use cases</p>
+              <h2 className="section-title">See how these services are applied in real businesses</h2>
+              <p className="lead solution-section-lead">
+                Browse the current use-case pages for compact examples of how Kubera AI applies these services in practice.
+              </p>
+            </div>
+
+            <div className="home-solution-nav-grid">
+              {featuredUseCaseLinks.map((item) => (
+                <Link className="home-solution-nav-link" href={item.href} key={item.href}>
+                  <strong>{item.title}</strong>
+                  <span>{item.description}</span>
+                </Link>
+              ))}
+            </div>
+          </div>
         </div>
       </section>
       <LossCalculator locale="en" />

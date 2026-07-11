@@ -117,6 +117,8 @@ That usually means starting with work like:
 
 If you want a practical playbook for choosing the first project, the companion article [How AI Automation Saves 20+ Hours Per Week for Small Businesses](/blog/how-ai-automation-saves-time) shows where the time usually goes.
 
+For concrete use-case examples, see [AI Voice Agents for Home Services](/use-cases/ai-voice-agents-home-services), [n8n E-commerce Automation](/use-cases/n8n-ecommerce-automation), and [AI Customer Support for E-commerce](/use-cases/ai-customer-support-ecommerce).
+
 ## Where AI automation should not be used
 
 Not every process should be automated.

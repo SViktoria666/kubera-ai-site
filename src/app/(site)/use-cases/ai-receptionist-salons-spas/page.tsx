@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { getUseCaseIndustrySolutionLinks, getUseCaseRelatedLinks } from "@/content/internal-linking";
 import { UseCaseLandingPage } from "@/components/use-cases/UseCaseLandingPage";
 import { aiReceptionistSalonsSpas } from "@/content/use-cases/ai-receptionist-salons-spas";
 
@@ -32,6 +33,8 @@ export async function generateMetadata(): Promise<Metadata> {
 export default function AiReceptionistSalonsSpasPage() {
   const { seo, hero, workflowPreview, whoThisIsFor, whatTheServiceIs, commonBusinessProblems, manualVsAiComparison, useCases, workflowSection, automationModules, implementationProcess, toolAndPlatformOptions, security, expectedBusinessImpact, whyKuberaAi, pricingLogic, midCta, relatedServices, relevantDemoCases, recommendedReading, faq, finalCta } =
     aiReceptionistSalonsSpas;
+  const relatedUseCases = getUseCaseRelatedLinks("ai-receptionist-salons-spas");
+  const relatedIndustrySolutions = getUseCaseIndustrySolutionLinks("ai-receptionist-salons-spas");
 
   return (
     <UseCaseLandingPage
@@ -44,6 +47,8 @@ export default function AiReceptionistSalonsSpasPage() {
       relatedServices={relatedServices}
       relevantDemoCases={relevantDemoCases}
       recommendedReading={recommendedReading}
+      relatedUseCases={relatedUseCases}
+      relatedIndustrySolutions={relatedIndustrySolutions}
       seoTitle={seo.title}
       h1={seo.h1}
       ogTitle={seo.ogTitle}

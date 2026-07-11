@@ -22,7 +22,7 @@ The platform is rarely the problem. The problem is that the decision was made on
 
 This article does not compare feature lists. It helps you identify which of those factors is the real constraint for your business and match the platform to that constraint rather than to a generic ranking.
 
-One important framing note before starting: choosing a platform is a downstream decision. It only matters if the processes you intend to automate are already documented and ready to run. The discipline of deciding what to automate before picking the tool is covered in [Why Most AI Projects Fail Before They Deliver Any ROI](/blog/why-most-ai-projects-fail). If you are still clarifying the difference between basic automation, AI assistants, and AI agents, [What Is AI Automation?](/blog/what-is-ai-automation) is the right starting point before this comparison.
+One important framing note before starting: choosing a platform is a downstream decision. It only matters if the processes you intend to automate are already documented and ready to run. The discipline of deciding what to automate before picking the tool is covered in [Why Most AI Projects Fail Before They Deliver Any ROI](/blog/why-most-ai-projects-fail). If you are still clarifying the difference between basic automation, AI assistants, and AI agents, [What Is AI Automation?](/blog/what-is-ai-automation) is the right starting point before this comparison. For a concrete workflow example, see [n8n e-commerce automation in practice](/use-cases/n8n-ecommerce-automation).
 
 Related reading:
 

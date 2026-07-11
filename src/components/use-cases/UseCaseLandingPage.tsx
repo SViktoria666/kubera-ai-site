@@ -32,6 +32,8 @@ type UseCaseLandingPageProps = {
   relatedServices: UseCaseLinkCard[];
   relevantDemoCases: UseCaseLinkCard[];
   recommendedReading: UseCaseLinkCard[];
+  relatedIndustrySolutions?: UseCaseLinkCard[];
+  relatedUseCases?: UseCaseLinkCard[];
   sections: Array<
     | {
         body: string;
@@ -388,6 +390,8 @@ export function UseCaseLandingPage({
   relatedServices,
   relevantDemoCases,
   recommendedReading,
+  relatedIndustrySolutions = [],
+  relatedUseCases = [],
   sections,
   seoTitle,
   h1,
@@ -448,6 +452,22 @@ export function UseCaseLandingPage({
           <LinkGridSection title="Relevant Demo Cases" links={relevantDemoCases} />
 
           <LinkGridSection title="Recommended Reading" links={recommendedReading} />
+
+          {relatedIndustrySolutions.length ? (
+            <LinkGridSection
+              title="Related Industry Solutions"
+              lead="Use these country and industry pages to trace the same architecture across the broader site."
+              links={relatedIndustrySolutions}
+            />
+          ) : null}
+
+          {relatedUseCases.length ? (
+            <LinkGridSection
+              title="Related Use Cases"
+              lead="These adjacent use cases share workflow logic, intake patterns or communication channels."
+              links={relatedUseCases}
+            />
+          ) : null}
 
           <FaqSection items={faq} />
 

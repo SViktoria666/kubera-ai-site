@@ -1,9 +1,15 @@
 import Link from "next/link";
 import type { IndustrySolution } from "@/content/industry-solutions";
-import { getCountrySolutionHubCard, getSolutionRelatedLinks, solutionHubRoute } from "@/content/internal-linking";
+import {
+  getCountrySolutionHubCard,
+  getSolutionRelatedLinks,
+  getSolutionUseCaseLinks,
+  solutionHubRoute,
+} from "@/content/internal-linking";
 
 export function IndustryInternalLinks({ solution }: { solution: IndustrySolution }) {
   const relatedLinks = getSolutionRelatedLinks(solution);
+  const relatedUseCaseLinks = getSolutionUseCaseLinks(solution);
   const countryHub = getCountrySolutionHubCard(solution.country);
 
   return (
@@ -50,6 +56,20 @@ export function IndustryInternalLinks({ solution }: { solution: IndustrySolution
           ))}
         </div>
       </div>
+
+      {relatedUseCaseLinks.length ? (
+        <div className="solution-reading" style={{ marginTop: "24px" }}>
+          <p className="solution-reading-label">Related use case pages</p>
+          <div className="solution-reading-links">
+            {relatedUseCaseLinks.map((item) => (
+              <Link className="solution-reading-link" href={item.href} key={item.href}>
+                <strong>{item.title}</strong>
+                <span>{item.description}</span>
+              </Link>
+            ))}
+          </div>
+        </div>
+      ) : null}
     </section>
   );
 }

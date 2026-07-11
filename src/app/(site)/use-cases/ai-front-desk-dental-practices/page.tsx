@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { UseCaseLandingPage } from "@/components/use-cases/UseCaseLandingPage";
+import { getUseCaseIndustrySolutionLinks, getUseCaseRelatedLinks } from "@/content/internal-linking";
 import { aiFrontDeskDentalPractices } from "@/content/use-cases/ai-front-desk-dental-practices";
 
 export async function generateMetadata(): Promise<Metadata> {
@@ -54,6 +55,8 @@ export default function AiFrontDeskDentalPracticesPage() {
     faq,
     finalCta,
   } = aiFrontDeskDentalPractices;
+  const relatedUseCases = getUseCaseRelatedLinks("ai-front-desk-dental-practices");
+  const relatedIndustrySolutions = getUseCaseIndustrySolutionLinks("ai-front-desk-dental-practices");
 
   return (
     <UseCaseLandingPage
@@ -66,6 +69,8 @@ export default function AiFrontDeskDentalPracticesPage() {
       relatedServices={relatedServices}
       relevantDemoCases={relevantDemoCases}
       recommendedReading={recommendedReading}
+      relatedUseCases={relatedUseCases}
+      relatedIndustrySolutions={relatedIndustrySolutions}
       seoTitle={seo.title}
       h1={seo.h1}
       ogTitle={seo.ogTitle}

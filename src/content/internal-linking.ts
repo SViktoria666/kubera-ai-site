@@ -23,6 +23,205 @@ type RouteGroup = {
 const solutionLookup = new Map(industrySolutions.map((solution) => [solution.url, solution] as const));
 const countryLookup = new Map(countries.map((country) => [country.slug.replace(/-automation$/, ""), country] as const));
 
+const useCaseLinkCatalog: Record<string, InternalLinkCard> = {
+  "/use-cases/ai-voice-agents-home-services": {
+    title: "AI Voice Agents for Home Services",
+    description: "Call handling, booking and CRM automation for service businesses.",
+    href: "/use-cases/ai-voice-agents-home-services",
+  },
+  "/use-cases/real-estate-lead-automation": {
+    title: "Real Estate Lead Automation",
+    description: "Lead capture, qualification and follow-up automation for agencies.",
+    href: "/use-cases/real-estate-lead-automation",
+  },
+  "/use-cases/n8n-ecommerce-automation": {
+    title: "n8n E-commerce Automation",
+    description: "Custom n8n workflows for store, fulfilment, support and reporting.",
+    href: "/use-cases/n8n-ecommerce-automation",
+  },
+  "/use-cases/ai-customer-support-ecommerce": {
+    title: "AI Customer Support for E-commerce",
+    description: "Support automation for product questions, order status and routine helpdesk work.",
+    href: "/use-cases/ai-customer-support-ecommerce",
+  },
+  "/use-cases/ai-front-desk-dental-practices": {
+    title: "AI Front Desk for Dental Practices",
+    description: "Administrative call handling, booking and reminders for dental practices.",
+    href: "/use-cases/ai-front-desk-dental-practices",
+  },
+  "/use-cases/ai-client-intake-law-firms": {
+    title: "AI Client Intake for Law Firms",
+    description: "Administrative intake and consultation booking for legal teams.",
+    href: "/use-cases/ai-client-intake-law-firms",
+  },
+  "/use-cases/ai-receptionist-salons-spas": {
+    title: "AI Receptionist for Salons and Spas",
+    description: "Reception, booking and rebooking automation for salons and spas.",
+    href: "/use-cases/ai-receptionist-salons-spas",
+  },
+};
+
+const homeUseCaseRoutes = [
+  "/use-cases/ai-voice-agents-home-services",
+  "/use-cases/real-estate-lead-automation",
+  "/use-cases/n8n-ecommerce-automation",
+  "/use-cases/ai-customer-support-ecommerce",
+  "/use-cases/ai-front-desk-dental-practices",
+];
+
+const servicesUseCaseRoutes = [
+  "/use-cases/ai-voice-agents-home-services",
+  "/use-cases/real-estate-lead-automation",
+  "/use-cases/n8n-ecommerce-automation",
+  "/use-cases/ai-customer-support-ecommerce",
+  "/use-cases/ai-front-desk-dental-practices",
+  "/use-cases/ai-client-intake-law-firms",
+  "/use-cases/ai-receptionist-salons-spas",
+];
+
+const useCaseRelatedRoutes: Record<string, string[]> = {
+  "ai-voice-agents-home-services": [
+    "/use-cases/ai-front-desk-dental-practices",
+    "/use-cases/ai-receptionist-salons-spas",
+    "/use-cases/real-estate-lead-automation",
+  ],
+  "real-estate-lead-automation": [
+    "/use-cases/ai-voice-agents-home-services",
+    "/use-cases/ai-client-intake-law-firms",
+    "/use-cases/ai-customer-support-ecommerce",
+  ],
+  "n8n-ecommerce-automation": [
+    "/use-cases/ai-customer-support-ecommerce",
+    "/use-cases/real-estate-lead-automation",
+  ],
+  "ai-customer-support-ecommerce": [
+    "/use-cases/n8n-ecommerce-automation",
+    "/use-cases/ai-voice-agents-home-services",
+  ],
+  "ai-front-desk-dental-practices": [
+    "/use-cases/ai-voice-agents-home-services",
+    "/use-cases/ai-receptionist-salons-spas",
+  ],
+  "ai-client-intake-law-firms": [
+    "/use-cases/ai-voice-agents-home-services",
+    "/use-cases/real-estate-lead-automation",
+  ],
+  "ai-receptionist-salons-spas": [
+    "/use-cases/ai-front-desk-dental-practices",
+    "/use-cases/ai-voice-agents-home-services",
+  ],
+};
+
+const useCaseIndustrySolutionRoutes: Record<string, string[]> = {
+  "ai-voice-agents-home-services": [
+    "/en/solutions/spain/whatsapp-automation",
+    "/en/solutions/portugal/whatsapp-automation",
+    "/en/solutions/spain/hospitality-automation",
+    "/en/solutions/france/hospitality-automation",
+    "/en/solutions/belgium/multilingual-automation",
+  ],
+  "real-estate-lead-automation": [
+    "/en/solutions/spain/real-estate-automation",
+    "/en/solutions/portugal/real-estate-automation",
+    "/en/solutions/ireland/real-estate-automation",
+    "/en/solutions/switzerland/real-estate-automation",
+    "/en/solutions/cyprus/real-estate-automation",
+  ],
+  "n8n-ecommerce-automation": [
+    "/en/solutions/netherlands/e-commerce-automation",
+    "/en/solutions/estonia/e-commerce-automation",
+    "/en/solutions/poland/e-commerce-automation",
+    "/en/solutions/lithuania/e-commerce-automation",
+    "/en/solutions/netherlands/logistics-automation",
+  ],
+  "ai-customer-support-ecommerce": [
+    "/en/solutions/netherlands/e-commerce-automation",
+    "/en/solutions/estonia/e-commerce-automation",
+    "/en/solutions/poland/e-commerce-automation",
+    "/en/solutions/lithuania/e-commerce-automation",
+    "/en/solutions/netherlands/logistics-automation",
+  ],
+  "ai-front-desk-dental-practices": [
+    "/en/solutions/germany/dental-automation",
+    "/en/solutions/italy/dental-clinic-automation",
+    "/en/solutions/austria/dental-clinic-automation",
+    "/en/solutions/switzerland/private-clinic-automation",
+  ],
+  "ai-client-intake-law-firms": [
+    "/en/solutions/germany/legal-tech-automation",
+    "/en/solutions/belgium/multilingual-automation",
+    "/en/solutions/germany/whatsapp-automation",
+  ],
+  "ai-receptionist-salons-spas": [
+    "/en/solutions/spain/whatsapp-automation",
+    "/en/solutions/france/whatsapp-automation",
+    "/en/solutions/belgium/multilingual-automation",
+    "/en/solutions/spain/hospitality-automation",
+    "/en/solutions/italy/boutique-hotel-automation",
+  ],
+};
+
+const caseUseCaseRoutes: Record<string, string[]> = {
+  "customer-communications": [
+    "/use-cases/ai-voice-agents-home-services",
+    "/use-cases/ai-customer-support-ecommerce",
+    "/use-cases/ai-client-intake-law-firms",
+  ],
+  "sales-leads": [
+    "/use-cases/real-estate-lead-automation",
+    "/use-cases/ai-client-intake-law-firms",
+    "/use-cases/ai-voice-agents-home-services",
+  ],
+  "internal-processes": [
+    "/use-cases/n8n-ecommerce-automation",
+    "/use-cases/ai-customer-support-ecommerce",
+    "/use-cases/ai-front-desk-dental-practices",
+  ],
+  "real-estate-rentals": ["/use-cases/real-estate-lead-automation"],
+  "ecommerce-logistics": [
+    "/use-cases/n8n-ecommerce-automation",
+    "/use-cases/ai-customer-support-ecommerce",
+  ],
+  "medical-clinics-dental": ["/use-cases/ai-front-desk-dental-practices"],
+  "beauty-health": ["/use-cases/ai-receptionist-salons-spas"],
+};
+
+const solutionUseCaseRoutes: Record<string, string[]> = {
+  "whatsapp-automation": [
+    "/use-cases/ai-voice-agents-home-services",
+    "/use-cases/ai-customer-support-ecommerce",
+    "/use-cases/ai-receptionist-salons-spas",
+  ],
+  "multilingual-automation": [
+    "/use-cases/ai-client-intake-law-firms",
+    "/use-cases/ai-customer-support-ecommerce",
+    "/use-cases/ai-receptionist-salons-spas",
+  ],
+  "hospitality-automation": [
+    "/use-cases/ai-voice-agents-home-services",
+    "/use-cases/ai-customer-support-ecommerce",
+  ],
+  "boutique-hotel-automation": [
+    "/use-cases/ai-voice-agents-home-services",
+    "/use-cases/ai-customer-support-ecommerce",
+  ],
+  "luxury-hotel-automation": [
+    "/use-cases/ai-voice-agents-home-services",
+    "/use-cases/ai-customer-support-ecommerce",
+  ],
+  "real-estate-automation": ["/use-cases/real-estate-lead-automation"],
+  "e-commerce-automation": [
+    "/use-cases/n8n-ecommerce-automation",
+    "/use-cases/ai-customer-support-ecommerce",
+  ],
+  "logistics-automation": ["/use-cases/n8n-ecommerce-automation"],
+  "dental-automation": ["/use-cases/ai-front-desk-dental-practices"],
+  "dental-clinic-automation": ["/use-cases/ai-front-desk-dental-practices"],
+  "private-clinic-automation": ["/use-cases/ai-front-desk-dental-practices"],
+  "legal-tech-automation": ["/use-cases/ai-client-intake-law-firms"],
+  "retail-automation": ["/use-cases/ai-customer-support-ecommerce"],
+};
+
 export const solutionHubRoute = "/en/solutions";
 
 export const homeFeaturedSolutionRoutes = [
@@ -413,6 +612,12 @@ const blogRelatedRoutes: Record<string, string[]> = {
   ],
 };
 
+function buildUseCaseLinks(routes: string[]) {
+  return routes
+    .map((route) => useCaseLinkCatalog[route] ?? null)
+    .filter((item): item is InternalLinkCard => item !== null);
+}
+
 function resolveSolution(route: string) {
   return solutionLookup.get(route) ?? null;
 }
@@ -479,8 +684,24 @@ export function getSolutionRelatedLinks(solution: IndustrySolution) {
   return cards.slice(0, 4);
 }
 
+export function getSolutionUseCaseLinks(solution: IndustrySolution) {
+  return buildUseCaseLinks(solutionUseCaseRoutes[solution.industry] ?? []);
+}
+
+export function getUseCaseRelatedLinks(slug: string) {
+  return buildUseCaseLinks(useCaseRelatedRoutes[slug] ?? []);
+}
+
+export function getUseCaseIndustrySolutionLinks(slug: string) {
+  return buildSolutionLinks(useCaseIndustrySolutionRoutes[slug] ?? []);
+}
+
 export function getCaseSolutionLinks(slug: string) {
   return buildSolutionLinks(caseRelatedRoutes[slug] ?? []);
+}
+
+export function getCaseUseCaseLinks(slug: string) {
+  return buildUseCaseLinks(caseUseCaseRoutes[slug] ?? []);
 }
 
 export function getBlogSolutionLinks(slug: string) {
@@ -493,6 +714,14 @@ export function getHomeFeaturedSolutionLinks() {
 
 export function getServicesFeaturedSolutionLinks() {
   return buildSolutionLinks(servicesFeaturedSolutionRoutes);
+}
+
+export function getHomeFeaturedUseCaseLinks() {
+  return buildUseCaseLinks(homeUseCaseRoutes);
+}
+
+export function getServicesFeaturedUseCaseLinks() {
+  return buildUseCaseLinks(servicesUseCaseRoutes);
 }
 
 export function getSolutionHubClusters() {

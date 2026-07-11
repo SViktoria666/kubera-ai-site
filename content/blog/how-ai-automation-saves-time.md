@@ -152,6 +152,8 @@ That is why many businesses start with lead intake, CRM updates, reminders, or r
 
 If you need a framework for choosing the first one, see [How to Choose Your First AI Automation Project](/blog/first-ai-automation-project).
 
+For specific examples of where those hours get recovered, see [Real Estate Lead Automation](/use-cases/real-estate-lead-automation), [AI Client Intake for Law Firms](/use-cases/ai-client-intake-law-firms), and [AI Receptionist for Salons and Spas](/use-cases/ai-receptionist-salons-spas).
+
 ## What the weekly savings can look like
 
 Here is a realistic pattern for a small service business:

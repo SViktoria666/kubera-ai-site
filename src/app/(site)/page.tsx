@@ -4,7 +4,7 @@ import { HeroSection } from "@/components/sections/HeroSection";
 import { PricingPackages } from "@/components/sections/PricingPackages";
 import { LossCalculator } from "@/components/sections/LossCalculator";
 import { createPageMetadata } from "@/content/seo";
-import { buildSolutionLinks, solutionHubRoute } from "@/content/internal-linking";
+import { buildSolutionLinks, getHomeFeaturedUseCaseLinks, solutionHubRoute } from "@/content/internal-linking";
 
 export const metadata: Metadata = createPageMetadata({
   title: "Kubera AI",
@@ -22,6 +22,7 @@ export default function HomePage() {
     "/en/solutions/switzerland/luxury-hotel-automation",
     "/en/solutions/poland/e-commerce-automation",
   ]);
+  const featuredUseCaseLinks = getHomeFeaturedUseCaseLinks();
 
   return (
     <main>
@@ -36,6 +37,34 @@ export default function HomePage() {
           Explore the blog for practical automation guidance and AI system decisions: <Link href="/blog">Kubera AI Blog</Link>.
         </p>
       </div>
+      <section className="section section-soft home-solution-nav">
+        <div className="container">
+          <div className="home-solution-nav-card">
+            <div className="solution-section-heading">
+              <p className="eyebrow">International use cases</p>
+              <h2 className="section-title">Explore practical automation examples</h2>
+              <p className="lead solution-section-lead">
+                Browse a compact set of real use cases before moving into the full services and solution catalogue.
+              </p>
+            </div>
+
+            <div className="home-solution-nav-grid">
+              {featuredUseCaseLinks.map((item) => (
+                <Link className="home-solution-nav-link" href={item.href} key={item.href}>
+                  <strong>{item.title}</strong>
+                  <span>{item.description}</span>
+                </Link>
+              ))}
+            </div>
+
+            <div className="home-solution-nav-actions">
+              <Link className="button home-solution-nav-button" href="/services">
+                Explore services
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
       <PricingPackages locale="en" />
       <LossCalculator locale="en" />
       <section className="section section-soft home-solution-nav">

@@ -3,7 +3,7 @@ import Link from "next/link";
 import type { ReactNode } from "react";
 import type { CaseLocale, CaseStudy, CaseStudyType } from "@/content/cases";
 import { getCasePageContent } from "@/content/cases";
-import { getCaseSolutionLinks } from "@/content/internal-linking";
+import { getCaseSolutionLinks, getCaseUseCaseLinks } from "@/content/internal-linking";
 
 type CaseStudyPageProps = {
   caseStudy: CaseStudy;
@@ -146,6 +146,28 @@ function ContentCard({ eyebrow, title, intro, bullets, content, preformatted = f
   );
 }
 
+function LinkSection({ eyebrow, title, lead, links }: { eyebrow: string; title: string; lead: string; links: { href: string; title: string; description: string }[] }) {
+  return (
+    <section className="solution-section" style={{ marginTop: "24px" }}>
+      <div className="solution-section-heading">
+        <p className="eyebrow">{eyebrow}</p>
+        <h2 className="section-title">{title}</h2>
+        <p className="lead solution-section-lead">{lead}</p>
+      </div>
+
+      <div className="solution-grid solution-grid--services">
+        {links.map((item) => (
+          <Link className="solution-card solution-card--link" href={item.href} key={item.href}>
+            <h3>{item.title}</h3>
+            <p className="muted">{item.description}</p>
+            <span className="solution-card-link">Open page</span>
+          </Link>
+        ))}
+      </div>
+    </section>
+  );
+}
+
 function LegacyCaseStudyPage({ caseStudy }: { caseStudy: CaseStudy }) {
   return (
     <>
@@ -273,6 +295,7 @@ function DetailedCaseStudyPage({ caseStudy, locale }: CaseStudyPageProps) {
   const content = getCasePageContent(caseStudy, locale ?? "en");
   const copy = getSectionCopy(locale ?? "en", caseStudy.type ?? "case");
   const relatedSolutionLinks = locale === "en" ? getCaseSolutionLinks(caseStudy.slug) : [];
+  const relatedUseCaseLinks = locale === "en" ? getCaseUseCaseLinks(caseStudy.slug) : [];
 
   if (!content) {
     return (
@@ -384,6 +407,19 @@ function DetailedCaseStudyPage({ caseStudy, locale }: CaseStudyPageProps) {
                 </Link>
               ))}
             </div>
+          </div>
+        </section>
+      ) : null}
+
+      {relatedUseCaseLinks.length ? (
+        <section className="section section-soft">
+          <div className="container">
+            <LinkSection
+              eyebrow="Related use cases"
+              title="Adjacent use case pages"
+              lead="These links keep the case study connected to the new use-case cluster without claiming the same project or client."
+              links={relatedUseCaseLinks}
+            />
           </div>
         </section>
       ) : null}
