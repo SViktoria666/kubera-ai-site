@@ -2344,6 +2344,22 @@ input[type="range"] {
   gap: 24px;
 }
 
+.footer-brand {
+  min-width: 0;
+  max-width: 100%;
+  color: var(--color-muted);
+}
+
+.footer-legal {
+  display: inline-flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0 0.35em;
+  max-width: 100%;
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+
 .footer-links {
   display: flex;
   gap: 18px;
@@ -2656,6 +2672,10 @@ input[type="range"] {
   .footer-inner {
     align-items: flex-start;
     flex-direction: column;
+  }
+
+  .footer-brand {
+    width: 100%;
   }
 
   .footer-links {

@@ -4,8 +4,12 @@ export function Footer() {
   return (
     <footer className="site-footer">
       <div className="container footer-inner">
-        <div>
-          <strong>KUBERA AI</strong>
+        <div className="footer-brand">
+          <span className="footer-legal">
+            <strong>Kubera Digital OÜ</strong>
+            <span>/</span>
+            <span>Registry code 17524486</span>
+          </span>
         </div>
         <div className="footer-links">
           <Link className="footer-link" href="/blog">
