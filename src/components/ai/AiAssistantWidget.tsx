@@ -13,6 +13,8 @@ const initialMessages: AssistantMessage[] = [
 ];
 
 const assistantUnavailableMessage = "Assistant is temporarily unavailable. Please try again later.";
+const assistantFooterGap = 20;
+const assistantLiftRootMargin = "0px 0px 200px 0px";
 
 function getBrowserLocale() {
   if (typeof navigator === "undefined") {
@@ -26,12 +28,15 @@ function getBrowserLocale() {
 export function AiAssistantWidget({ enabled }: AiAssistantWidgetProps) {
   const pathname = usePathname();
   const [isOpen, setIsOpen] = useState(false);
+  const [footerLift, setFooterLift] = useState(0);
   const [messages, setMessages] = useState<AssistantMessage[]>(initialMessages);
   const [lead, setLead] = useState<AssistantLeadDraft>({});
   const [input, setInput] = useState("");
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState("");
   const [submitted, setSubmitted] = useState(false);
+  const widgetRef = useRef<HTMLDivElement | null>(null);
+  const buttonRef = useRef<HTMLButtonElement | null>(null);
   const messagesRef = useRef<HTMLDivElement | null>(null);
   const inputRef = useRef<HTMLInputElement | null>(null);
 
@@ -44,6 +49,105 @@ export function AiAssistantWidget({ enabled }: AiAssistantWidgetProps) {
       inputRef.current?.focus();
     }
   }, [isOpen, isLoading, messages]);
+
+  useEffect(() => {
+    if (typeof window === "undefined") {
+      return;
+    }
+
+    const footer = document.querySelector<HTMLElement>(".site-footer");
+    if (!footer) {
+      setFooterLift(0);
+      return;
+    }
+
+    let rafId = 0;
+    let cleanupObservers: (() => void) | null = null;
+
+    const updateFooterLift = () => {
+      rafId = 0;
+
+      const widget = widgetRef.current;
+      const button = buttonRef.current;
+      if (!widget || !button) {
+        setFooterLift(0);
+        return;
+      }
+
+      const footerRect = footer.getBoundingClientRect();
+      const viewportHeight = window.innerHeight;
+      const baseBottom = Number.parseFloat(
+        window.getComputedStyle(widget).getPropertyValue("--ai-assistant-base-bottom"),
+      );
+      const buttonHeight = button.getBoundingClientRect().height;
+
+      if (footerRect.top >= viewportHeight) {
+        setFooterLift(0);
+        return;
+      }
+
+      const requiredLift =
+        viewportHeight - footerRect.top + assistantFooterGap - (Number.isFinite(baseBottom) ? baseBottom : 0);
+      const maxLift = Math.max(0, viewportHeight - buttonHeight - (Number.isFinite(baseBottom) ? baseBottom : 0) - assistantFooterGap);
+      setFooterLift(Math.max(0, Math.min(requiredLift, maxLift)));
+    };
+
+    const scheduleUpdate = () => {
+      if (rafId) {
+        return;
+      }
+
+      rafId = window.requestAnimationFrame(updateFooterLift);
+    };
+
+    const attachActiveObservers = () => {
+      window.addEventListener("scroll", scheduleUpdate, { passive: true });
+      window.addEventListener("resize", scheduleUpdate);
+      window.visualViewport?.addEventListener("resize", scheduleUpdate);
+
+      const footerResizeObserver = new ResizeObserver(scheduleUpdate);
+      footerResizeObserver.observe(footer);
+
+      cleanupObservers = () => {
+        window.removeEventListener("scroll", scheduleUpdate);
+        window.removeEventListener("resize", scheduleUpdate);
+        window.visualViewport?.removeEventListener("resize", scheduleUpdate);
+        footerResizeObserver.disconnect();
+      };
+    };
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        const entry = entries[0];
+        if (entry?.isIntersecting) {
+          scheduleUpdate();
+          if (!cleanupObservers) {
+            attachActiveObservers();
+          }
+        } else {
+          setFooterLift(0);
+          cleanupObservers?.();
+          cleanupObservers = null;
+        }
+      },
+      {
+        root: null,
+        threshold: 0,
+        rootMargin: assistantLiftRootMargin,
+      },
+    );
+
+    observer.observe(footer);
+    scheduleUpdate();
+
+    return () => {
+      if (rafId) {
+        window.cancelAnimationFrame(rafId);
+      }
+      cleanupObservers?.();
+      observer.disconnect();
+    };
+  }, [pathname, enabled]);
 
   if (!enabled) {
     return null;
@@ -101,8 +205,19 @@ export function AiAssistantWidget({ enabled }: AiAssistantWidgetProps) {
   }
 
   return (
-    <div className={`ai-assistant-widget${isOpen ? " is-open" : ""}`}>
-      <button className="ai-assistant-button" type="button" aria-label="Open AI assistant" aria-expanded={isOpen} onClick={() => setIsOpen((open) => !open)}>
+    <div
+      ref={widgetRef}
+      className={`ai-assistant-widget${isOpen ? " is-open" : ""}`}
+      style={{ ["--ai-assistant-footer-lift" as string]: `${footerLift}px` }}
+    >
+      <button
+        className="ai-assistant-button"
+        type="button"
+        aria-label="Open AI assistant"
+        aria-expanded={isOpen}
+        ref={buttonRef}
+        onClick={() => setIsOpen((open) => !open)}
+      >
         AI Assistant
       </button>
 

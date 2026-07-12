@@ -2187,9 +2187,10 @@ input[type="range"] {
 }
 
 .ai-assistant-widget {
+  --ai-assistant-base-bottom: 18px;
   position: fixed;
   right: 18px;
-  bottom: 18px;
+  bottom: calc(var(--ai-assistant-base-bottom) + var(--ai-assistant-footer-lift, 0px));
   z-index: 80;
 }
 
@@ -2698,7 +2699,7 @@ input[type="range"] {
 
   .ai-assistant-widget {
     right: 12px;
-    bottom: 12px;
+    --ai-assistant-base-bottom: 12px;
   }
 
   .ai-assistant-panel {
@@ -2807,7 +2808,7 @@ input[type="range"] {
 
   .ai-assistant-widget {
     right: 8px;
-    bottom: 72px;
+    --ai-assistant-base-bottom: 72px;
   }
 
   .ai-assistant-button {
@@ -2842,7 +2843,7 @@ input[type="range"] {
 
   .ai-assistant-widget {
     right: 10px;
-    bottom: 72px;
+    --ai-assistant-base-bottom: 72px;
   }
 
   .ai-assistant-button {
