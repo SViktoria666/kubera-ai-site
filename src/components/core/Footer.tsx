@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { siteConfig } from "@/content/site";
 
 export function Footer() {
   return (
@@ -22,7 +23,7 @@ export function Footer() {
             <FooterIcon type="email" />
             <span>hello@kubera-automation.com</span>
           </a>
-          <a className="footer-link" href="https://t.me/kubera_automation">
+          <a className="footer-link" href={siteConfig.telegramUrl}>
             <FooterIcon type="telegram" />
             <span>Telegram</span>
           </a>

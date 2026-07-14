@@ -1,4 +1,5 @@
 import { ContactForm } from "@/components/forms/ContactForm";
+import { siteConfig } from "@/content/site";
 
 export function ContactSection({ locale }: { locale: "en" | "ru" }) {
   const isRu = locale === "ru";
@@ -16,7 +17,7 @@ export function ContactSection({ locale }: { locale: "en" | "ru" }) {
               </span>
               <span>↗</span>
             </a>
-            <a className="contact-link" href="https://t.me/kubera_automation">
+            <a className="contact-link" href={siteConfig.telegramUrl}>
               <span className="contact-link-main">
                 <ContactIcon type="telegram" />
                 Telegram

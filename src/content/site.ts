@@ -6,11 +6,11 @@ export const siteConfig = {
   email: "hello@kubera-automation.com",
   phone: "+37253841877",
   telegram: "@kubera_automation",
-  telegramUrl: "https://t.me/kubera_automation",
+  telegramUrl: "https://telegram.me/kubera_automation",
   whatsappUrl: "https://wa.me/37253841877",
   logo: "/assets/logo/kubera-ai-logo-source.png",
   defaultOgImage: "/assets/images/cases/case-dashboard-4ac0724.png",
-  sameAs: ["https://t.me/kubera_automation", "https://wa.me/37253841877"],
+  sameAs: ["https://telegram.me/kubera_automation", "https://wa.me/37253841877"],
 };
 
 export const supportedLanguages = {
