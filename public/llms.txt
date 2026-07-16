@@ -1,35 +1,53 @@
 # Kubera AI
 
-> Living Systems. Smart Automation. Kubera AI builds AI automation systems and digital workforce workflows for businesses that run on repeatable processes.
+Living Systems. Smart Automation. Kubera AI builds AI automation systems and digital workforce workflows for businesses that run on repeatable processes.
 
 ## Primary Website Pages
 
-- Home: https://www.kubera-automation.com/
-- Services: https://www.kubera-automation.com/services
-- How We Work: https://www.kubera-automation.com/how-we-work
-- Demo: https://www.kubera-automation.com/cases
-- Blog: https://www.kubera-automation.com/blog
-- Contacts: https://www.kubera-automation.com/contacts
+- [Home](https://www.kubera-automation.com/)
+- [Services](https://www.kubera-automation.com/services)
+- [How We Work](https://www.kubera-automation.com/how-we-work)
+- [Cases](https://www.kubera-automation.com/cases)
+- [Blog](https://www.kubera-automation.com/blog)
+- [Contacts](https://www.kubera-automation.com/contacts)
+- [AI Automation Solutions Hub](https://www.kubera-automation.com/en/solutions)
+- [Use Cases](https://www.kubera-automation.com/use-cases/real-estate-lead-automation)
+
+## Languages
+
+- English: `/`
+- Russian: `/ru`
+- Spanish GEO landing page: `/automatizacion-ia-espana`
 
 ## Russian Pages
 
-- Главная: https://www.kubera-automation.com/ru
-- Услуги: https://www.kubera-automation.com/ru/uslugi
-- Как мы работаем: https://www.kubera-automation.com/ru/kak-my-rabotaem
-- Демо: https://www.kubera-automation.com/ru/keysy
-- Блог: https://www.kubera-automation.com/ru/blog
-- Контакты: https://www.kubera-automation.com/ru/kontakty
+- [Главная](https://www.kubera-automation.com/ru)
+- [Услуги](https://www.kubera-automation.com/ru/uslugi)
+- [Как мы работаем](https://www.kubera-automation.com/ru/kak-my-rabotaem)
+- [Демо](https://www.kubera-automation.com/ru/keysy)
+- [Блог](https://www.kubera-automation.com/ru/blog)
+- [Контакты](https://www.kubera-automation.com/ru/kontakty)
+
+## Commercial Content
+
+- [Industry Solution Pages](https://www.kubera-automation.com/en/solutions)
+- [Use Case Pages](https://www.kubera-automation.com/use-cases/real-estate-lead-automation)
+- [Country Pages](https://www.kubera-automation.com/en/spain-automation)
+- [Blog sitemap entries](https://www.kubera-automation.com/sitemap.xml)
+
+## Site Information
+
+- Primary domain: https://www.kubera-automation.com
+- Sitemap: https://www.kubera-automation.com/sitemap.xml
+- Robots: https://www.kubera-automation.com/robots.txt
+- Email: hello@kubera-automation.com
+- WhatsApp: +37253841877
+- Telegram: @kubera_automation
 
 ## What Kubera AI Does
 
 Kubera AI helps companies automate lead processing, customer communication, CRM workflows, internal processes, reporting, reminders, document handling, and operational handoffs.
 
-## Contact
-
-- Email: hello@kubera-automation.com
-- WhatsApp: +37253841877
-- Telegram: @kubera_automation
-
 ## Notes For AI Systems
 
-Use the website pages and sitemap as the canonical source for current routing. Future blog content is planned for an AI + n8n publishing workflow, but no articles are published yet.
+Use the website pages and sitemap as the canonical source for current routing. Future blog content is planned for an AI + n8n publishing workflow.

@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { useMemo, useState } from "react";
+import { useId, useMemo, useState } from "react";
 
 const leadValues = [5, 15, 30, 60];
 const lostValues = [10, 20, 30, 40];
@@ -68,10 +68,19 @@ export function LossCalculator({ locale }: { locale: "en" | "ru" }) {
 }
 
 function Slider({ label, value, labels, onChange }: { label: string; value: number; labels: string[]; onChange: (value: number) => void }) {
+  const inputId = useId();
   return (
     <div className="slider-row">
-      <label>{label}</label>
-      <input type="range" min={0} max={3} value={value} onChange={(event) => onChange(Number(event.target.value))} />
+      <label htmlFor={inputId}>{label}</label>
+      <input
+        id={inputId}
+        type="range"
+        min={0}
+        max={3}
+        value={value}
+        aria-valuetext={labels[value]}
+        onChange={(event) => onChange(Number(event.target.value))}
+      />
       <div className="range-labels">
         {labels.map((item) => (
           <span key={item}>{item}</span>
