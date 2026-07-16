@@ -1,5 +1,6 @@
 type MarkdownRendererProps = {
   content: string;
+  stripTopHeading?: boolean;
 };
 
 function escapeHtml(value: string) {
@@ -39,7 +40,7 @@ function parseTableRow(line: string) {
     .map((cell) => cell.trim());
 }
 
-function renderBlock(lines: string[]) {
+function renderBlock(lines: string[], stripTopHeading: boolean) {
   const html: string[] = [];
   let paragraph: string[] = [];
   let listItems: string[] = [];
@@ -47,6 +48,7 @@ function renderBlock(lines: string[]) {
   let quoteLines: string[] = [];
   let codeLines: string[] = [];
   let inCode = false;
+  let topHeadingStripped = false;
 
   const flushParagraph = () => {
     if (!paragraph.length) return;
@@ -140,6 +142,10 @@ function renderBlock(lines: string[]) {
     if (headingMatch) {
       flushAll();
       const level = headingMatch[1].length;
+      if (stripTopHeading && !topHeadingStripped && level === 1) {
+        topHeadingStripped = true;
+        continue;
+      }
       html.push(`<h${level}>${renderInline(headingMatch[2])}</h${level}>`);
       continue;
     }
@@ -199,9 +205,9 @@ function renderBlock(lines: string[]) {
   return html.join("\n");
 }
 
-export function MarkdownRenderer({ content }: MarkdownRendererProps) {
+export function MarkdownRenderer({ content, stripTopHeading = false }: MarkdownRendererProps) {
   const lines = content.replace(/\r\n/g, "\n").split("\n");
-  const html = renderBlock(lines);
+  const html = renderBlock(lines, stripTopHeading);
 
   return <div className="blog-markdown" dangerouslySetInnerHTML={{ __html: html }} />;
 }

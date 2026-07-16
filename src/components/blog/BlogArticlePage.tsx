@@ -75,7 +75,7 @@ export function BlogArticlePage({ post }: BlogArticlePageProps) {
         </div>
 
         <article className="blog-article-body card">
-          <MarkdownRenderer content={post.body} />
+          <MarkdownRenderer content={post.body} stripTopHeading />
         </article>
 
         {relatedSolutionLinks.length ? (
