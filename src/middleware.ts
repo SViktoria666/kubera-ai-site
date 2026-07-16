@@ -7,6 +7,11 @@ const legacyPathRedirects: Record<string, string> = {
   "/en-services": "/services",
   "/en-kontakty": "/contacts",
   "/es/espana-automatizacion": "/automatizacion-ia-espana",
+  "/uslugi": "/ru/uslugi",
+  "/kak-my-rabotaem": "/ru/kak-my-rabotaem",
+  "/keysy": "/ru/keysy",
+  "/kontakty": "/ru/kontakty",
+  "/blog/first-ai-automation-project": "/blog/why-most-ai-projects-fail",
   ...Object.fromEntries(legacyGeoRoutes.map((route) => [route, normalizeGeoRoute(route)])),
 };
 
