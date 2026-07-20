@@ -4,9 +4,10 @@ import { landingPageDesignPortugalContent } from "@/content/services/portugal/la
 import { siteConfig } from "@/content/site";
 
 const content = landingPageDesignPortugalContent;
+const pageTitle = content.seoTitle.replace(/\s*\|\s*Kubera AI$/, "");
 
 export const metadata: Metadata = {
-  title: content.seoTitle,
+  title: pageTitle,
   description: content.metaDescription,
   alternates: {
     canonical: content.path,
