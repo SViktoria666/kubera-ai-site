@@ -610,6 +610,12 @@ const blogRelatedRoutes: Record<string, string[]> = {
     "/en/solutions/finland/saas-startup-automation",
     "/en/solutions/sweden/saas-startup-automation",
   ],
+  "ai-automation-readiness": [
+    "/en/solutions/germany/dental-automation",
+    "/en/solutions/netherlands/e-commerce-automation",
+    "/en/solutions/spain/real-estate-automation",
+    "/en/solutions/belgium/multilingual-automation",
+  ],
 };
 
 function buildUseCaseLinks(routes: string[]) {
