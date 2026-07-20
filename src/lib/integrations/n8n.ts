@@ -6,7 +6,7 @@ export type N8nContactLeadPayload = {
   Email: string;
   company: string;
   message: string;
-  locale: "en" | "ru";
+  locale: "en" | "ru" | "pt";
   source: "kubera-ai-site";
   page: string;
   formId: "new-vercel-site";

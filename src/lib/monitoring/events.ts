@@ -1,6 +1,6 @@
 export function recordContactSubmission(event: {
   requestId: string;
-  locale: "en" | "ru";
+  locale: "en" | "ru" | "pt";
   hasN8nWebhookConfigured: boolean;
   hasTelegramConfigured: boolean;
   hasCompany: boolean;
