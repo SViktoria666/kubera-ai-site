@@ -3602,4 +3602,313 @@ input[type="range"] {
     animation: none !important;
   }
 }
+
+.service-card--link {
+  display: grid;
+  gap: 10px;
+  transition: transform 0.2s ease, border-color 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.service-card--link:hover,
+.service-card--link:focus-visible {
+  transform: translateY(-2px);
+  border-color: rgba(255, 184, 0, 0.34);
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.24);
+}
+
+.service-card--link:focus-visible {
+  outline: 2px solid rgba(255, 184, 0, 0.82);
+  outline-offset: 2px;
+}
+
+.service-browser-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.service-browser-badges span {
+  display: inline-flex;
+  min-height: 30px;
+  align-items: center;
+  padding: 6px 10px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.06);
+  color: rgba(255, 255, 255, 0.84);
+  font-size: 0.78rem;
+  line-height: 1.2;
+}
+
+.service-mobile-stack {
+  display: grid;
+  gap: 10px;
+}
+
+.service-faq-item {
+  padding: 0;
+  overflow: clip;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.service-faq-item summary {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 32px;
+  gap: 14px;
+  align-items: start;
+  padding: 18px 20px;
+  list-style: none;
+  cursor: pointer;
+  color: #ffffff;
+  font-weight: 700;
+  line-height: 1.38;
+  font-family: inherit;
+  letter-spacing: 0;
+  text-shadow: none;
+  transform: none;
+  opacity: 1;
+}
+
+.service-faq-item summary::-webkit-details-marker {
+  display: none;
+}
+
+.service-faq-question {
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+.service-faq-toggle {
+  display: inline-flex;
+  width: 32px;
+  height: 32px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  background: rgba(255, 184, 0, 0.12);
+  color: var(--color-accent);
+  flex: 0 0 auto;
+  line-height: 1;
+}
+
+.service-faq-content {
+  display: grid;
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: max-height 240ms ease, opacity 180ms ease;
+}
+
+.service-faq-item[open] .service-faq-content {
+  max-height: 280px;
+  opacity: 1;
+}
+
+.service-faq-content-inner {
+  padding: 0 20px 18px;
+}
+
+.service-faq-content p {
+  margin: 0;
+  line-height: 1.6;
+}
+
+.service-form,
+.service-form-grid,
+.service-form-field,
+.service-form-field .input,
+.service-form-field .select {
+  min-width: 0;
+}
+
+.service-form-field span {
+  overflow-wrap: anywhere;
+}
+
+.service-form-field .input,
+.service-form-field .select {
+  width: 100%;
+  min-height: 48px;
+}
+
+.service-form-field .select {
+  white-space: normal;
+}
+
+.service-form-field .input:focus-visible,
+.service-form-field .select:focus-visible,
+.ai-assistant-form input:focus-visible,
+.ai-assistant-form button:focus-visible,
+.ai-assistant-button:focus-visible,
+.menu-toggle:focus-visible {
+  outline: 2px solid rgba(255, 184, 0, 0.85);
+  outline-offset: 2px;
+}
+
+.service-detail-page .solution-shell {
+  padding-bottom: 112px;
+}
+
+.service-detail-page .solution-final-cta {
+  padding-bottom: 120px;
+}
+
+.service-detail-page .solution-title,
+.service-detail-page .section-title,
+.service-detail-page .lead {
+  overflow-wrap: anywhere;
+}
+
+.service-detail-page .solution-hero-copy,
+.service-detail-page .service-proof-copy,
+.service-detail-page .service-ai-note,
+.service-detail-page .service-final-copy {
+  min-width: 0;
+}
+
+.service-detail-page .service-hero-visual,
+.service-detail-page .service-proof-mockups,
+.service-detail-page .service-proof-layout,
+.service-detail-page .service-ai-grid,
+.service-detail-page .service-final-grid {
+  min-width: 0;
+}
+
+.service-detail-page .service-browser,
+.service-detail-page .service-mobile,
+.service-detail-page .service-proof-browser,
+.service-detail-page .service-proof-phone {
+  min-width: 0;
+}
+
+.service-detail-page .service-mini-copy,
+.service-detail-page .service-mini-kicker,
+.service-detail-page .service-proof-state span,
+.service-detail-page .service-hero-metrics span,
+.service-detail-page .service-mobile-card span,
+.service-detail-page .service-proof-phone-card span {
+  overflow-wrap: anywhere;
+}
+
+.ai-assistant-widget {
+  bottom: calc(var(--ai-assistant-base-bottom) + max(env(safe-area-inset-bottom), 0px));
+}
+
+.ai-assistant-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 0 18px;
+}
+
+.ai-assistant-button-icon {
+  width: 20px;
+  height: 20px;
+  flex: 0 0 auto;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.ai-assistant-button-label {
+  display: inline-block;
+}
+
+@media (max-width: 767px) {
+  .service-detail-page .solution-shell,
+  .service-detail-page .solution-final-cta {
+    padding-bottom: 144px;
+  }
+
+  .service-detail-page .solution-hero,
+  .service-detail-page .solution-section,
+  .service-detail-page .solution-final-cta {
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+
+  .service-detail-page .solution-title {
+    font-size: clamp(2rem, 9vw, 3rem);
+    line-height: 1.06;
+  }
+
+  .service-detail-page .service-hero-visual,
+  .service-detail-page .service-proof-mockups,
+  .service-detail-page .service-proof-layout,
+  .service-detail-page .service-ai-grid,
+  .service-detail-page .service-final-grid,
+  .service-detail-page .service-process-grid,
+  .service-detail-page .service-form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .service-detail-page .service-hero-path {
+    gap: 6px;
+    font-size: 0.7rem;
+  }
+
+  .service-detail-page .service-browser-badges {
+    gap: 6px;
+  }
+
+  .service-detail-page .service-browser-badges span {
+    width: fit-content;
+  }
+
+  .service-detail-page .service-mobile-stack {
+    gap: 8px;
+  }
+
+  .service-detail-page .service-faq-item summary {
+    padding: 16px 16px 14px;
+    grid-template-columns: minmax(0, 1fr) 30px;
+  }
+
+  .service-detail-page .service-faq-content-inner {
+    padding: 0 16px 16px;
+  }
+
+  .ai-assistant-widget {
+    right: 8px;
+    left: auto;
+    --ai-assistant-base-bottom: 10px;
+  }
+
+  .ai-assistant-button {
+    width: 56px;
+    height: 56px;
+    padding: 0;
+    justify-content: center;
+  }
+
+  .ai-assistant-button-label {
+    display: none;
+  }
+
+  .ai-assistant-panel {
+    right: 0;
+    width: min(360px, calc(100vw - 16px));
+    height: min(60vh, 460px);
+    bottom: 66px;
+  }
+
+  .ai-assistant-form {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 560px) {
+  .ai-assistant-widget {
+    right: 8px;
+    --ai-assistant-base-bottom: 8px;
+  }
+
+  .ai-assistant-panel {
+    width: calc(100vw - 16px);
+  }
+}
 }

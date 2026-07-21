@@ -3,7 +3,7 @@ import { LandingPageDesignCountryPage } from "@/components/services/LandingPageD
 import { landingPageDesignCountryPages } from "@/content/services/landing-page-design";
 import { siteConfig } from "@/content/site";
 
-const content = landingPageDesignCountryPages.en;
+const content = landingPageDesignCountryPages.pt;
 
 export const metadata: Metadata = {
   title: content.seoTitle,
@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     description: content.metaDescription,
     url: `${siteConfig.url}${content.path}`,
     siteName: siteConfig.name,
-    locale: "en_US",
+    locale: "pt_PT",
     type: "website",
     images: [{ url: siteConfig.defaultOgImage }],
   },
@@ -33,6 +33,6 @@ export const metadata: Metadata = {
   },
 };
 
-export default function LandingPageDesignPortugal() {
+export default function LandingPageDesignPortugalPt() {
   return <LandingPageDesignCountryPage content={content} />;
 }

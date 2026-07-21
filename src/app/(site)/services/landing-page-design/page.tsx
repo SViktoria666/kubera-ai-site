@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
-import { LandingPageDesignCountryPage } from "@/components/services/LandingPageDesignPage";
-import { landingPageDesignCountryPages } from "@/content/services/landing-page-design";
+import { LandingPageDesignHubPage } from "@/components/services/LandingPageDesignPage";
+import { landingPageDesignHubPages } from "@/content/services/landing-page-design";
 import { siteConfig } from "@/content/site";
 
-const content = landingPageDesignCountryPages.en;
+const content = landingPageDesignHubPages.en;
 
 export const metadata: Metadata = {
   title: content.seoTitle,
@@ -11,9 +11,9 @@ export const metadata: Metadata = {
   alternates: {
     canonical: content.path,
     languages: {
-      "x-default": "/services/portugal/landing-page-design",
-      "en-US": "/services/portugal/landing-page-design",
-      "pt-PT": "/pt/services/portugal/landing-page-design",
+      "x-default": "/services/landing-page-design",
+      "en-US": "/services/landing-page-design",
+      "pt-PT": "/pt/services/landing-page-design",
     },
   },
   openGraph: {
@@ -33,6 +33,6 @@ export const metadata: Metadata = {
   },
 };
 
-export default function LandingPageDesignPortugal() {
-  return <LandingPageDesignCountryPage content={content} />;
+export default function LandingPageDesignHub() {
+  return <LandingPageDesignHubPage content={content} />;
 }

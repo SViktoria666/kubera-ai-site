@@ -27,6 +27,7 @@ export const contactFormSchema = z.object({
     return sanitized.length ? sanitized : undefined;
   }, telegramSchema),
   company: z.preprocess((value) => sanitizeText(value, 160), z.string().min(1).max(160)),
+  need: z.preprocess((value) => sanitizeText(value, 180), z.string().max(180).optional()),
   message: z.preprocess((value) => sanitizeText(value, 2000), z.string().min(1).max(2000)),
   website: z.preprocess((value) => sanitizeText(value, 120), z.string().max(120).optional()),
 });

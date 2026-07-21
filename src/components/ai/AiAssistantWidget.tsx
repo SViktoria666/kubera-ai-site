@@ -218,7 +218,11 @@ export function AiAssistantWidget({ enabled }: AiAssistantWidgetProps) {
         ref={buttonRef}
         onClick={() => setIsOpen((open) => !open)}
       >
-        AI Assistant
+        <svg className="ai-assistant-button-icon" viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M6 7.5C6 6.12 7.12 5 8.5 5h7C16.88 5 18 6.12 18 7.5v5c0 1.38-1.12 2.5-2.5 2.5H11l-3.5 3v-3H8.5C7.12 15 6 13.88 6 12.5v-5Z" />
+          <path d="M9 9.5h6M9 11.5h4" />
+        </svg>
+        <span className="ai-assistant-button-label">AI Assistant</span>
       </button>
 
       <aside className="ai-assistant-panel" aria-label="Kubera AI assistant" aria-hidden={!isOpen}>

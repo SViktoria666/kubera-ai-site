@@ -18,7 +18,7 @@ export function StructuredData() {
         contactType: "sales",
         email: siteConfig.email,
         telephone: siteConfig.phone,
-        availableLanguage: ["English", "Russian", "Spanish"],
+        availableLanguage: ["English", "Russian", "Spanish", "Portuguese"],
         areaServed: "Europe",
       },
     ],
@@ -30,7 +30,7 @@ export function StructuredData() {
     name: siteConfig.name,
     url: siteConfig.url,
     description: siteConfig.description,
-    inLanguage: ["en", "ru", "es"],
+    inLanguage: ["en", "ru", "es", "pt-PT"],
     publisher: {
       "@type": "Organization",
       name: siteConfig.name,

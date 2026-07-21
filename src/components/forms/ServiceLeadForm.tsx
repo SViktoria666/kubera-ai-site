@@ -4,21 +4,33 @@ import { FormEvent, useState } from "react";
 
 type ServiceLeadFormProps = {
   buttonLabel: string;
-  pagePath: string;
   fields: {
-    adSpendLabel: string;
-    adSpendOptions: string[];
     emailLabel: string;
     nameLabel: string;
+    needLabel: string;
+    needOptions: string[];
+    successMessage: string;
     websiteLabel: string;
   };
+  locale?: "en" | "pt";
+  pagePath: string;
 };
 
 type FormState = "idle" | "submitting" | "sent" | "error";
 
-export function ServiceLeadForm({ buttonLabel, pagePath, fields }: ServiceLeadFormProps) {
+export function ServiceLeadForm({ buttonLabel, pagePath, fields, locale = "en" }: ServiceLeadFormProps) {
   const [state, setState] = useState<FormState>("idle");
   const [errorMessage, setErrorMessage] = useState("");
+
+  const ui = {
+    placeholder: locale === "pt" ? "Selecione uma opção" : "Select an option",
+    invalidName: locale === "pt" ? "Introduza o nome." : "Enter a name.",
+    invalidEmail: locale === "pt" ? "Introduza um email válido." : "Enter a valid email.",
+    invalidWebsite: locale === "pt" ? "Introduza uma URL válida do site." : "Enter a valid website URL.",
+    invalidNeed: locale === "pt" ? "Escolha uma opção." : "Choose an option.",
+    genericError: locale === "pt" ? "Não foi possível enviar o pedido." : "Could not send the request.",
+    submitting: locale === "pt" ? "A enviar..." : "Sending...",
+  };
 
   async function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
@@ -28,7 +40,7 @@ export function ServiceLeadForm({ buttonLabel, pagePath, fields }: ServiceLeadFo
     const name = String(formData.get("name") || "").trim();
     const email = String(formData.get("email") || "").trim();
     const website = String(formData.get("websiteUrl") || "").trim();
-    const adSpend = String(formData.get("adSpend") || "").trim();
+    const need = String(formData.get("need") || "").trim();
     const honeypot = String(formData.get("website") || "").trim();
 
     if (honeypot) {
@@ -37,31 +49,30 @@ export function ServiceLeadForm({ buttonLabel, pagePath, fields }: ServiceLeadFo
 
     if (!name) {
       setState("error");
-      setErrorMessage("Introduza o nome.");
+      setErrorMessage(ui.invalidName);
       return;
     }
 
     if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
       setState("error");
-      setErrorMessage("Introduza um email válido.");
+      setErrorMessage(ui.invalidEmail);
       return;
     }
 
     if (website) {
       try {
-        // Accepts domains typed with or without protocol.
         const normalizedWebsite = website.startsWith("http://") || website.startsWith("https://") ? website : `https://${website}`;
         new URL(normalizedWebsite);
       } catch {
         setState("error");
-        setErrorMessage("Introduza uma URL válida do site.");
+        setErrorMessage(ui.invalidWebsite);
         return;
       }
     }
 
-    if (!adSpend) {
+    if (!need) {
       setState("error");
-      setErrorMessage("Escolha o investimento mensal em publicidade.");
+      setErrorMessage(ui.invalidNeed);
       return;
     }
 
@@ -71,15 +82,16 @@ export function ServiceLeadForm({ buttonLabel, pagePath, fields }: ServiceLeadFo
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
-        locale: "pt",
+        locale,
         page: pagePath,
         name,
         email,
-        company: "Pedido de auditoria de landing page",
+        company: locale === "pt" ? "Pedido de design de landing page" : "Landing page design request",
+        need,
         message: [
-          `URL do site atual: ${website || "Não indicado"}`,
-          `Investimento mensal em publicidade: ${adSpend}`,
-          "Serviço: Design de Landing Pages para Empresas em Portugal",
+          `${fields.needLabel}: ${need}`,
+          `${fields.websiteLabel}: ${website || (locale === "pt" ? "Não indicado" : "Not provided")}`,
+          `${locale === "pt" ? "Serviço" : "Service"}: ${locale === "pt" ? "Design de Landing Pages" : "Landing Page Design"}`,
         ].join("\n"),
         website: honeypot,
       }),
@@ -93,7 +105,7 @@ export function ServiceLeadForm({ buttonLabel, pagePath, fields }: ServiceLeadFo
 
     const payload = await response.json().catch(() => null);
     setState("error");
-    setErrorMessage(typeof payload?.error === "string" ? payload.error : "Não foi possível enviar o pedido.");
+    setErrorMessage(typeof payload?.error === "string" ? payload.error : ui.genericError);
   }
 
   return (
@@ -111,16 +123,23 @@ export function ServiceLeadForm({ buttonLabel, pagePath, fields }: ServiceLeadFo
 
         <label className="service-form-field service-form-field--full">
           <span>{fields.websiteLabel}</span>
-          <input className="input" name="websiteUrl" type="text" inputMode="url" autoComplete="url" placeholder="https://www.exemplo.pt" />
+          <input
+            className="input"
+            name="websiteUrl"
+            type="text"
+            inputMode="url"
+            autoComplete="url"
+            placeholder={locale === "pt" ? "https://www.exemplo.pt" : "https://www.example.com"}
+          />
         </label>
 
         <label className="service-form-field service-form-field--full">
-          <span>{fields.adSpendLabel}</span>
-          <select className="select" name="adSpend" defaultValue="" required>
+          <span>{fields.needLabel}</span>
+          <select className="select" name="need" defaultValue="" required>
             <option value="" disabled>
-              Selecione uma opção
+              {ui.placeholder}
             </option>
-            {fields.adSpendOptions.map((option) => (
+            {fields.needOptions.map((option) => (
               <option key={option} value={option}>
                 {option}
               </option>
@@ -132,11 +151,11 @@ export function ServiceLeadForm({ buttonLabel, pagePath, fields }: ServiceLeadFo
       <input className="honeypot" name="website" tabIndex={-1} autoComplete="off" aria-hidden="true" />
 
       <button className="button service-form-button" type="submit" disabled={state === "submitting"}>
-        {state === "submitting" ? "A enviar..." : buttonLabel}
+        {state === "submitting" ? ui.submitting : buttonLabel}
       </button>
 
       <p className="service-form-status" aria-live="polite">
-        {state === "sent" ? "Recebemos o seu pedido. Vamos responder brevemente." : state === "error" ? errorMessage : " "}
+        {state === "sent" ? fields.successMessage : state === "error" ? errorMessage : " "}
       </p>
     </form>
   );

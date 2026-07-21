@@ -6,8 +6,9 @@ import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import { LanguageSwitcher } from "@/components/core/LanguageSwitcher";
 import { navItems } from "@/content/en/navigation";
-import { ruNavItems } from "@/content/ru/navigation";
 import { getAssetByName } from "@/content/assets";
+import { ptNavItems } from "@/content/pt/navigation";
+import { ruNavItems } from "@/content/ru/navigation";
 import { siteConfig } from "@/content/site";
 
 export function Header() {
@@ -15,13 +16,14 @@ export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const logo = getAssetByName("kubera-logo-main");
   const isRu = pathname.startsWith("/ru");
-  const nav = isRu ? ruNavItems : navItems;
+  const isPt = pathname.startsWith("/pt");
+  const nav = isRu ? ruNavItems : isPt ? ptNavItems : navItems;
   const ctaHref = isRu ? "/ru/kontakty" : "/contacts";
-  const ctaLabel = isRu ? "Обсудить проект" : "Discuss my project";
+  const ctaLabel = isRu ? "Обсудить проект" : isPt ? "Falar sobre o meu projeto" : "Discuss my project";
   const brandSubtitle = siteConfig.description;
   const headerClassName = `site-header${isRu ? " site-header-ru" : ""}`;
-  const navLabel = isRu ? "Основная навигация" : "Main navigation";
-  const menuLabel = isRu ? "Открыть меню" : "Toggle navigation";
+  const navLabel = isRu ? "Основная навигация" : isPt ? "Navegação principal" : "Main navigation";
+  const menuLabel = isRu ? "Открыть меню" : isPt ? "Abrir menu" : "Toggle navigation";
 
   const isActiveNavItem = (href: string) => {
     if (href === "/") {
@@ -35,8 +37,16 @@ export function Header() {
     setIsMenuOpen(false);
   }, [pathname]);
 
+  useEffect(() => {
+    if (typeof document === "undefined") {
+      return;
+    }
+
+    document.documentElement.lang = isRu ? "ru" : isPt ? "pt-PT" : "en";
+  }, [isPt, isRu, pathname]);
+
   return (
-    <header className={headerClassName} lang={isRu ? "ru" : "en"}>
+    <header className={headerClassName} lang={isRu ? "ru" : isPt ? "pt-PT" : "en"}>
       <div className="container header-inner">
         <div className="header-topline">
           <Link href={isRu ? "/ru" : "/"} aria-label="Kubera AI home" className="header-logo">
@@ -52,7 +62,13 @@ export function Header() {
           </Link>
           <div className="header-mobile-tools">
             <LanguageSwitcher />
-            <button className="menu-toggle" type="button" aria-label={menuLabel} aria-expanded={isMenuOpen} onClick={() => setIsMenuOpen((open) => !open)}>
+            <button
+              className="menu-toggle"
+              type="button"
+              aria-label={menuLabel}
+              aria-expanded={isMenuOpen}
+              onClick={() => setIsMenuOpen((open) => !open)}
+            >
               <span />
               <span />
               <span />

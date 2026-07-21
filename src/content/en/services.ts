@@ -15,5 +15,11 @@ export const enServices: ServiceItem[] = [
   { title: "Beauty & Health", description: "Client booking, reminders, post-visit feedback.", assetName: "beauty-health-icon" },
   { title: "Medical Clinics & Dental", description: "Patient booking, visit reminders, feedback collection.", assetName: "medical-clinics-icon" },
   { title: "Auto Business & Car Rentals", description: "Service booking, car reservations, client base management.", assetName: "auto-business-icon" },
-  { title: "Landing Page GPT-NTI", description: "Landing + WhatsApp / Telegram + CRM + Lead Automation.", assetName: "landing-page-gpt-nti-icon", planned: true },
+  {
+    title: "Landing Page GPT-NTI",
+    description: "Landing + WhatsApp / Telegram + CRM + Lead Automation.",
+    assetName: "landing-page-gpt-nti-icon",
+    href: "/services/landing-page-design",
+    planned: true,
+  },
 ];

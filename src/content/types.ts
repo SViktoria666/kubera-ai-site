@@ -2,6 +2,7 @@ export type ServiceItem = {
   title: string;
   description: string;
   assetName?: string;
+  href?: string;
   planned?: boolean;
 };
 
