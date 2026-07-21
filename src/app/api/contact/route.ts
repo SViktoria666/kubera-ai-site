@@ -64,7 +64,6 @@ export async function POST(request: Request) {
     hasN8nWebhookConfigured: isN8nConfigured(),
     hasTelegramConfigured: Boolean(process.env.TELEGRAM_BOT_TOKEN && process.env.TELEGRAM_CHAT_ID),
     hasCompany: Boolean(leadEnvelope.lead.company),
-    hasNeed: Boolean(leadEnvelope.lead.need),
     hasWhatsapp: Boolean(leadEnvelope.lead.whatsapp),
     hasTelegram: Boolean(leadEnvelope.lead.telegram),
   });

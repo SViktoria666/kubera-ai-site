@@ -1,17 +1,7 @@
-"use client";
-
 import Link from "next/link";
-import { usePathname } from "next/navigation";
 import { siteConfig } from "@/content/site";
 
 export function Footer() {
-  const pathname = usePathname();
-  const isRu = pathname.startsWith("/ru");
-  const isPt = pathname.startsWith("/pt");
-  const blogLabel = isRu ? "Блог" : isPt ? "Blogue" : "Blog";
-  const telegramLabel = isRu ? "Телеграм" : isPt ? "Telegram" : "Telegram";
-  const whatsappLabel = isRu ? "Вотсап" : isPt ? "WhatsApp" : "WhatsApp";
-
   return (
     <footer className="site-footer">
       <div className="container footer-inner">
@@ -23,8 +13,11 @@ export function Footer() {
           </span>
         </div>
         <div className="footer-links">
-          <Link className="footer-link" href={isRu ? "/ru/blog" : "/blog"}>
-            <span>{blogLabel}</span>
+          <Link className="footer-link" href="/blog">
+            <span>Blog</span>
+          </Link>
+          <Link className="footer-link" href="/ru/blog">
+            <span>Блог</span>
           </Link>
           <a className="footer-link" href="mailto:hello@kubera-automation.com">
             <FooterIcon type="email" />
@@ -32,11 +25,11 @@ export function Footer() {
           </a>
           <a className="footer-link" href={siteConfig.telegramUrl}>
             <FooterIcon type="telegram" />
-            <span>{telegramLabel}</span>
+            <span>Telegram</span>
           </a>
           <a className="footer-link" href="https://wa.me/37253841877">
             <FooterIcon type="whatsapp" />
-            <span>{whatsappLabel}</span>
+            <span>WhatsApp</span>
           </a>
         </div>
       </div>

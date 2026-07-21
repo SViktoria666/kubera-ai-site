@@ -5,7 +5,6 @@ export type N8nContactLeadPayload = {
   Name: string;
   Email: string;
   company: string;
-  need: string;
   message: string;
   locale: "en" | "ru" | "pt";
   source: "kubera-ai-site";
@@ -41,7 +40,6 @@ export function createContactLeadEnvelope(lead: ContactFormPayload, page: string
       whatsapp: lead.whatsapp,
       telegram: lead.telegram,
       company: lead.company,
-      need: lead.need,
       message: lead.message,
     },
   };
@@ -58,7 +56,6 @@ export function createN8nContactLeadPayload(lead: ContactFormPayload, page = "")
     Name: lead.name,
     Email: lead.email,
     company: lead.company,
-    need: lead.need || "",
     message: lead.message,
     locale: lead.locale,
     source: "kubera-ai-site",

@@ -4,7 +4,6 @@ export function recordContactSubmission(event: {
   hasN8nWebhookConfigured: boolean;
   hasTelegramConfigured: boolean;
   hasCompany: boolean;
-  hasNeed: boolean;
   hasWhatsapp: boolean;
   hasTelegram: boolean;
 }) {

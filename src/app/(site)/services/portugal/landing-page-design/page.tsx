@@ -1,27 +1,23 @@
 import type { Metadata } from "next";
-import { LandingPageDesignCountryPage } from "@/components/services/LandingPageDesignPage";
-import { landingPageDesignCountryPages } from "@/content/services/landing-page-design";
+import { CommercialServicePage } from "@/components/services/CommercialServicePage";
+import { landingPageDesignPortugalContent } from "@/content/services/portugal/landing-page-design";
 import { siteConfig } from "@/content/site";
 
-const content = landingPageDesignCountryPages.en;
+const content = landingPageDesignPortugalContent;
+const pageTitle = content.seoTitle.replace(/\s*\|\s*Kubera AI$/, "");
 
 export const metadata: Metadata = {
-  title: content.seoTitle,
+  title: pageTitle,
   description: content.metaDescription,
   alternates: {
     canonical: content.path,
-    languages: {
-      "x-default": "/services/portugal/landing-page-design",
-      "en-US": "/services/portugal/landing-page-design",
-      "pt-PT": "/pt/services/portugal/landing-page-design",
-    },
   },
   openGraph: {
     title: content.seoTitle,
     description: content.metaDescription,
     url: `${siteConfig.url}${content.path}`,
     siteName: siteConfig.name,
-    locale: "en_US",
+    locale: "pt_PT",
     type: "website",
     images: [{ url: siteConfig.defaultOgImage }],
   },
@@ -34,5 +30,5 @@ export const metadata: Metadata = {
 };
 
 export default function LandingPageDesignPortugal() {
-  return <LandingPageDesignCountryPage content={content} />;
+  return <CommercialServicePage content={content} />;
 }
