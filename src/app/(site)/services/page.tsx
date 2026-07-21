@@ -33,33 +33,6 @@ export default function ServicesPage() {
           <ServicesGrid services={enServices} />
         </div>
       </section>
-      <section className="section section-dark" id="portugal">
-        <div className="container">
-          <div className="solution-section-heading">
-            <p className="eyebrow">Website design services</p>
-            <h2 className="section-title">Portugal commercial pages</h2>
-            <p className="lead solution-section-lead">
-              The first live page in this commercial series is ready. The two sibling pages below are part of the same structure and will link through once they are published.
-            </p>
-          </div>
-
-          <div className="solution-grid solution-grid--services">
-            <Link className="solution-card solution-card--link" href="/services/portugal/landing-page-design">
-              <h3>Landing Page Design</h3>
-              <p className="muted">Live service page for Portugal, built for Google Ads and fast conversion.</p>
-              <span className="solution-card-link">Open page</span>
-            </Link>
-            <article className="solution-card service-related-card" aria-disabled="true">
-              <h3>Business Website Design</h3>
-              <p className="muted">Planned for the same Portugal cluster, with a multi-page business site structure.</p>
-            </article>
-            <article className="solution-card service-related-card" aria-disabled="true">
-              <h3>Website Redesign</h3>
-              <p className="muted">Planned for the same Portugal cluster, for improving an existing website.</p>
-            </article>
-          </div>
-        </div>
-      </section>
       <LossCalculator locale="en" />
       <section className="section section-soft home-solution-nav">
         <div className="container">

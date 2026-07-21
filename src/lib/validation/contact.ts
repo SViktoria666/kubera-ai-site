@@ -14,7 +14,7 @@ const telegramSchema = z
   .optional();
 
 export const contactFormSchema = z.object({
-  locale: z.enum(["en", "ru", "pt"]),
+  locale: z.enum(["en", "ru"]),
   page: z.preprocess((value) => sanitizeText(value, 200), z.string().min(1).max(200)),
   name: z.preprocess((value) => sanitizeText(value, 120), z.string().min(1).max(120)),
   email: z.preprocess((value) => sanitizeText(value, 200).toLowerCase(), z.string().email().max(200)),
