@@ -33,29 +33,6 @@ export default function ServicesPage() {
           <ServicesGrid services={enServices} />
         </div>
       </section>
-      <section className="section section-soft home-solution-nav">
-        <div className="container">
-          <div className="home-solution-nav-card">
-            <div className="solution-section-heading">
-              <p className="eyebrow">Commercial service pages</p>
-              <h2 className="section-title">Web design by market</h2>
-              <p className="lead solution-section-lead">
-                See the first country-specific commercial service page in the new controlled format.
-              </p>
-            </div>
-
-            <div className="solution-grid solution-grid--services">
-              <Link className="solution-card solution-card--link" href="/services/portugal/landing-page-design">
-                <h3>Landing Page Design for Businesses in Portugal</h3>
-                <p className="muted">
-                  Commercial landing page, website design, and redesign scope for businesses serving Portugal.
-                </p>
-                <span className="solution-card-link">Open page</span>
-              </Link>
-            </div>
-          </div>
-        </div>
-      </section>
       <LossCalculator locale="en" />
       <section className="section section-soft home-solution-nav">
         <div className="container">
@@ -75,6 +52,29 @@ export default function ServicesPage() {
                   <span>{item.description}</span>
                 </Link>
               ))}
+            </div>
+          </div>
+        </div>
+      </section>
+      <section className="section section-soft home-solution-nav">
+        <div className="container">
+          <div className="home-solution-nav-card">
+            <div className="solution-section-heading">
+              <p className="eyebrow">Commercial service pages</p>
+              <h2 className="section-title">Web design by market</h2>
+              <p className="lead solution-section-lead">
+                See the first country-specific commercial service page in the new controlled format.
+              </p>
+            </div>
+
+            <div className="solution-grid solution-grid--services">
+              <Link className="solution-card solution-card--link" href="/services/portugal/landing-page-design">
+                <h3>Landing Page Design for Businesses in Portugal</h3>
+                <p className="muted">
+                  Commercial landing page, website design, and redesign scope for businesses serving Portugal.
+                </p>
+                <span className="solution-card-link">Open page</span>
+              </Link>
             </div>
           </div>
         </div>

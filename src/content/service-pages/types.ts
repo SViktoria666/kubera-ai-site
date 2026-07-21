@@ -23,6 +23,8 @@ export type ServicePageContent = {
     eyebrow: string;
     headline: string;
     subheadline: string;
+    imageAlt?: string;
+    imageSrc?: string;
     primaryCta: string;
     primaryCtaHref: string;
     secondaryCta: string;

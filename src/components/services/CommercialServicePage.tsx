@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import type { ReactNode } from "react";
 import { siteConfig } from "@/content/site";
@@ -98,13 +99,15 @@ function Section({ id, title, children, lead }: { id?: string; title: string; ch
 }
 
 export function CommercialServicePage({ content }: { content: ServicePageContent }) {
+  const hasHeroVisual = Boolean(content.hero.imageSrc);
+
   return (
     <main className="solutions-page" lang="en">
       <SchemaScripts content={content} />
 
       <section className="solution-shell">
         <div className="container solution-container">
-          <section className="solution-hero">
+          <section className={`solution-hero${hasHeroVisual ? " solution-hero--with-visual" : ""}`}>
             <div className="solution-hero-copy">
               <p className="eyebrow">{content.hero.eyebrow}</p>
               <p
@@ -131,6 +134,21 @@ export function CommercialServicePage({ content }: { content: ServicePageContent
                 </Link>
               </div>
             </div>
+
+            {content.hero.imageSrc ? (
+              <div className="solution-hero-visual">
+                <div className="solution-hero-visual-frame">
+                  <Image
+                    className="solution-hero-visual-image"
+                    src={content.hero.imageSrc}
+                    alt={content.hero.imageAlt ?? ""}
+                    fill
+                    priority
+                    sizes="(max-width: 1024px) 0vw, 42vw"
+                  />
+                </div>
+              </div>
+            ) : null}
           </section>
 
           <Section title="The Problem">
