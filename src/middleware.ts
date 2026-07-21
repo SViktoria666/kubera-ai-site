@@ -34,7 +34,14 @@ export function middleware(request: NextRequest) {
   const isHttps = request.nextUrl.protocol === "https:";
 
   if (isCanonicalHost && isCanonicalPath && isHttps) {
-    return NextResponse.next();
+    const requestHeaders = new Headers(request.headers);
+    requestHeaders.set("x-pathname", pathname);
+
+    return NextResponse.next({
+      request: {
+        headers: requestHeaders,
+      },
+    });
   }
 
   return NextResponse.redirect(canonicalUrl, 301);

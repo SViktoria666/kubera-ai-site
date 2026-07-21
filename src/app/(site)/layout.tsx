@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { headers } from "next/headers";
 import "./../globals.css";
 import { SiteShell } from "@/components/core/SiteShell";
 import { siteConfig } from "@/content/site";
@@ -29,9 +30,13 @@ export const metadata: Metadata = {
   },
 };
 
-export default function SiteRootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
+export default async function SiteRootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
+  const headerList = await headers();
+  const pathname = headerList.get("x-pathname") || "";
+  const lang = pathname.startsWith("/pt/") ? "pt-PT" : pathname.startsWith("/ru") ? "ru" : "en";
+
   return (
-    <html lang="en">
+    <html lang={lang}>
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
