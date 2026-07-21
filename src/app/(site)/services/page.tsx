@@ -62,9 +62,7 @@ export default function ServicesPage() {
             <div className="solution-section-heading">
               <p className="eyebrow">Commercial service pages</p>
               <h2 className="section-title">Web design by market</h2>
-              <p className="lead solution-section-lead">
-                See the first country-specific commercial service page in the new controlled format.
-              </p>
+              <p className="lead solution-section-lead">See the country-specific commercial service pages in the new controlled format.</p>
             </div>
 
             <div className="solution-grid solution-grid--services">
@@ -72,6 +70,13 @@ export default function ServicesPage() {
                 <h3>Landing Page Design for Businesses in Portugal</h3>
                 <p className="muted">
                   Commercial landing page, website design, and redesign scope for businesses serving Portugal.
+                </p>
+                <span className="solution-card-link">Open page</span>
+              </Link>
+              <Link className="solution-card solution-card--link" href="/services/spain/landing-page-design">
+                <h3>Landing Page Design for Businesses in Spain</h3>
+                <p className="muted">
+                  Commercial landing page, website design, and redesign scope for businesses serving Spain.
                 </p>
                 <span className="solution-card-link">Open page</span>
               </Link>
