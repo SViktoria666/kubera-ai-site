@@ -6,6 +6,7 @@ export const spainLandingPageDesignPage: ServicePageContent = {
   metaDescription:
     "Landing page design for businesses serving Spain. Business websites and redesigns also available. Written scope, fixed quote, from €600.",
   h1: "Landing Page Design for Businesses in Spain",
+  areaServed: "Spain",
   hero: {
     eyebrow: "Landing Page Design for Businesses in Spain",
     headline: "A website is a sales tool. We build it to perform, not just to look good.",

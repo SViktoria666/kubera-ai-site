@@ -19,6 +19,7 @@ export type ServicePageContent = {
   seoTitle: string;
   metaDescription: string;
   h1: string;
+  areaServed?: string;
   hero: {
     eyebrow: string;
     headline: string;

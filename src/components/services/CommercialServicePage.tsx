@@ -53,7 +53,7 @@ function SchemaScripts({ content }: { content: ServicePageContent }) {
     name: content.h1,
     url: canonical,
     description: content.metaDescription,
-    areaServed: "Portugal",
+    areaServed: content.areaServed ?? "Portugal",
     serviceType: "Landing page design, business website design, and website redesign",
     provider: {
       "@type": "Organization",
