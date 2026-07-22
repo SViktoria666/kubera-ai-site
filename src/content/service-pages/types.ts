@@ -62,6 +62,13 @@ export type ServicePageContent = {
     paragraph: string;
   };
   faq: ServicePageFaqItem[];
+  relatedPages?: {
+    title: string;
+    items: Array<{
+      label: string;
+      href: string;
+    }>;
+  };
   finalCta: {
     headline: string;
     subtext: string;

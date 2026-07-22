@@ -150,7 +150,7 @@ export const netherlandsLandingPageDesignPage: ServicePageContent = {
   },
   whatsNotIncluded: {
     paragraph:
-      "Each package covers page structure, content hierarchy, and editing and organizing the material you provide — not writing your content from scratch. The following are scoped and priced separately: full copywriting written from scratch, professional translation, custom illustration or photography, e-commerce functionality, advanced integrations (CRM, booking systems, payment processing), and ongoing maintenance after launch. Anything your project needs from this list is quoted alongside your package, in writing, before work begins.",
+      "Each package covers page structure, content hierarchy, and editing and organizing the material you provide — not writing your content from scratch. The following are scoped and priced separately: full copywriting written from scratch, professional translation, custom illustration or photography, e-commerce functionality, advanced integrations (CRM, booking systems, payment processing), and ongoing maintenance after launch. Anything your project needs from this list is quoted alongside your package, in writing, before work begins. Domain registration, hosting plans, paid plugins, third-party software subscriptions, and external service fees are not included in the package price. These are paid directly by the client unless the written project quote explicitly states otherwise.",
   },
   faq: [
     {
@@ -176,7 +176,7 @@ export const netherlandsLandingPageDesignPage: ServicePageContent = {
     {
       question: "What if I already have a domain and hosting?",
       answer:
-        "We can usually work with an existing domain and hosting setup if it is technically suitable. If not, we explain the issue and recommend practical alternatives before work begins.",
+        "We can usually work with an existing domain and hosting setup if it is technically suitable, and we can recommend suitable providers or setup options if needed. Domain registration, hosting and other third-party provider fees are paid directly by the client. We do not purchase or fund those costs from our own budget. Any setup, migration, or configuration work we do is included in the written scope or quoted separately.",
     },
     {
       question: "Will the site work well on mobile?",
@@ -217,6 +217,15 @@ export const netherlandsLandingPageDesignPage: ServicePageContent = {
         "Payment terms, project stages, cancellation conditions, and scope-change rules are confirmed in the written proposal before work begins. Any requested work outside the approved scope is quoted and approved in writing before it is added.",
     },
   ],
+  relatedPages: {
+    title: "Explore Kubera AI",
+    items: [
+      { label: "Home", href: "/" },
+      { label: "Services", href: "/services" },
+      { label: "How We Work", href: "/how-we-work" },
+      { label: "Contact", href: "/contacts" },
+    ],
+  },
   finalCta: {
     headline: "Tell us about your project and receive a written scope and fixed quote.",
     subtext:

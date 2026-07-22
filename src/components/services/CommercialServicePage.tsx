@@ -255,6 +255,19 @@ export function CommercialServicePage({ content }: { content: ServicePageContent
             </div>
           </Section>
 
+          {content.relatedPages ? (
+            <Section title={content.relatedPages.title}>
+              <nav aria-label={content.relatedPages.title} className="solution-grid solution-grid--services">
+                {content.relatedPages.items.map((item) => (
+                  <Link className="solution-card solution-card--link" href={item.href} key={item.href}>
+                    <h3>{item.label}</h3>
+                    <span className="solution-card-link">Open page</span>
+                  </Link>
+                ))}
+              </nav>
+            </Section>
+          ) : null}
+
           <section className="solution-final-cta">
             <h2 className="section-title">{content.finalCta.headline}</h2>
             <p className="lead solution-section-lead">{content.finalCta.subtext}</p>
