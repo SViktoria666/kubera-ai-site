@@ -94,6 +94,13 @@ export default function ServicesPage() {
                 </p>
                 <span className="solution-card-link">Open page</span>
               </Link>
+              <Link className="solution-card solution-card--link" href="/services/netherlands/landing-page-design">
+                <h3>Landing Page Design for Businesses in the Netherlands</h3>
+                <p className="muted">
+                  Commercial landing page, website design, and redesign scope for businesses serving the Netherlands.
+                </p>
+                <span className="solution-card-link">Open page</span>
+              </Link>
             </div>
           </div>
         </div>
