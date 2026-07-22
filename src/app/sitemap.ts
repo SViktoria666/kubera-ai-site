@@ -26,6 +26,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { route: "/services/switzerland/landing-page-design", priority: 0.81 },
     { route: "/services/austria/landing-page-design", priority: 0.81 },
     { route: "/services/denmark/landing-page-design", priority: 0.81 },
+    { route: "/services/sweden/landing-page-design", priority: 0.81 },
     { route: "/en/solutions", priority: 0.88 },
     { route: "/how-we-work", priority: 0.85 },
     { route: "/cases", priority: 0.8 },
