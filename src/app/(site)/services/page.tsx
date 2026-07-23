@@ -171,6 +171,13 @@ export default function ServicesPage() {
                 </p>
                 <span className="solution-card-link">Open page</span>
               </Link>
+              <Link className="solution-card solution-card--link" href="/services/australia/landing-page-design">
+                <h3>Landing Page Design for Businesses in Australia</h3>
+                <p className="muted">
+                  Commercial landing page, website design, and redesign scope for businesses serving Australia.
+                </p>
+                <span className="solution-card-link">Open page</span>
+              </Link>
               <Link className="solution-card solution-card--link" href="/services/united-states/landing-page-design">
                 <h3>Landing Page Design for Businesses in the United States</h3>
                 <p className="muted">
