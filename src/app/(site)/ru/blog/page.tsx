@@ -6,7 +6,7 @@ import { createPageMetadata } from "@/content/seo";
 
 export const metadata: Metadata = createPageMetadata({
   title: "Блог",
-  description: blogConfig.siteDescription,
+  description: "Статьи Kubera AI об ИИ-автоматизации, n8n, рабочих процессах и практических бизнес-системах.",
   path: "/ru/blog",
   locale: "ru",
 });
