@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
 import { CommercialServicePage } from "@/components/services/CommercialServicePage";
 import { siteConfig } from "@/content/site";
-import { unitedStatesLandingPageDesignPage } from "@/content/service-pages/united-states-landing-page-design";
+import { canadaLandingPageDesignPage } from "@/content/service-pages/canada-landing-page-design";
 
 export async function generateMetadata(): Promise<Metadata> {
-  const content = unitedStatesLandingPageDesignPage;
+  const content = canadaLandingPageDesignPage;
 
   return {
     title: { absolute: content.seoTitle },
@@ -18,7 +18,7 @@ export async function generateMetadata(): Promise<Metadata> {
       url: content.canonical,
       siteName: siteConfig.name,
       type: "website",
-      locale: "en_US",
+      locale: "en_CA",
       images: [{ url: siteConfig.defaultOgImage }],
     },
     twitter: {
@@ -30,6 +30,6 @@ export async function generateMetadata(): Promise<Metadata> {
   };
 }
 
-export default function UnitedStatesLandingPageDesignRoute() {
-  return <CommercialServicePage content={unitedStatesLandingPageDesignPage} />;
+export default function CanadaLandingPageDesignRoute() {
+  return <CommercialServicePage content={canadaLandingPageDesignPage} />;
 }

@@ -1,29 +1,29 @@
 import type { ServicePageContent } from "./types";
 
-export const unitedStatesLandingPageDesignPage: ServicePageContent = {
-  canonical: "https://www.kubera-automation.com/services/united-states/landing-page-design",
-  seoTitle: "Landing Page Design for Businesses in the United States | Kubera AI",
+export const canadaLandingPageDesignPage: ServicePageContent = {
+  canonical: "https://www.kubera-automation.com/services/canada/landing-page-design",
+  seoTitle: "Landing Page Design for Businesses in Canada | Kubera AI",
   metaDescription:
-    "Landing page design for businesses serving the United States. Business websites and redesigns also available. Written scope, fixed quote, from $700.",
-  h1: "Landing Page Design for Businesses in the United States",
-  areaServed: "United States",
+    "Landing page design for businesses serving Canada. Business websites and redesigns also available. Written scope, fixed quote, from $700.",
+  h1: "Landing Page Design for Businesses in Canada",
+  areaServed: "Canada",
   hero: {
-    eyebrow: "Landing Page Design for Businesses in the United States",
+    eyebrow: "Landing Page Design for Businesses in Canada",
     headline: "A website is a sales tool. We build it to perform, not just to look good.",
     subheadline:
-      "Kubera AI designs landing pages, business websites, and redesigns for small and mid-sized businesses across the United States — contractors and home service businesses, law firms, medical and dental practices, SaaS companies, and e-commerce brands that need a site built for lead generation and conversion, not just appearances. Every project follows a documented scope and a fixed quote agreed before work begins, and can be built to support future CRM and automation integrations.",
+      "Kubera AI designs landing pages, business websites, and redesigns for small and mid-sized businesses across Canada — professional services, construction, logistics, and healthcare businesses, including companies serving clients across multiple provinces. Every project follows a documented scope and a fixed quote agreed before work begins, and can be built to support future CRM and automation integrations.",
     primaryCta: "Request a Written Quote",
     primaryCtaHref: "/contacts",
     secondaryCta: "See Packages & Pricing",
     secondaryCtaHref: "#packages",
     trustStrip:
-      "Clear timeline confirmed before work begins · Additional language support available on request · Fixed quote for the agreed scope",
+      "Clear timeline confirmed before work begins · Optional English/French structure available on request · Fixed quote for the agreed scope",
   },
   problem: {
     paragraphs: [
       "For many businesses, simply having a website is not enough. An outdated, unclear, or poorly structured site can make it harder for potential clients to understand the offer and take the next step.",
-      "A lot of small businesses are still running on a site put together quickly in the early days, on a general-purpose builder, by whoever had the time rather than the expertise. A contractor or home service business whose site looks fine on a laptop but is genuinely hard to use on a phone, where mobile usability is critical for potential customers. A law firm, medical practice, or dental practice whose homepage explains what the business is instead of making it obvious how to schedule a consultation or appointment. A SaaS or e-commerce brand whose site gets traffic but converts poorly, because the path from landing page to sign-up or checkout has too many unnecessary steps.",
-      "When a potential client visits a website before making contact, every unclear page increases the chance that they continue searching elsewhere. For lead-generation businesses in particular, that shows up directly in cost per inquiry and conversion rate — not just in how the site looks.",
+      "For a business that has grown past its original city or province, the website doesn't always keep up. A construction or logistics company whose site was built around one region and never properly updated as the business took on work elsewhere. A professional services firm whose site reads well but doesn't make clear which provinces or markets it actually serves. A healthcare or clinical practice whose booking path is harder to find than it should be, making it harder for new patients to book an appointment or contact the practice.",
+      "When a potential client visits a website before making contact, every unclear page increases the chance that they continue searching elsewhere.",
     ],
   },
   whatYouGet: {
@@ -48,8 +48,8 @@ export const unitedStatesLandingPageDesignPage: ServicePageContent = {
   keyBenefits: {
     items: [
       {
-        title: "Built for a national and international audience",
-        body: "Sites are built in English by default, structured for buyers who may be seeing the business for the first time. Additional language support can be added where a project specifically needs it, for businesses serving multilingual or international customers.",
+        title: "Built for multi-province and bilingual audiences",
+        body: "Sites are built in English by default, structured for buyers across different provinces and markets. An optional English/French structure can be added for businesses that need it — the two versions built to carry equal weight, not one as a shortened copy of the other.",
       },
       {
         title: "Clear timelines",
@@ -57,11 +57,11 @@ export const unitedStatesLandingPageDesignPage: ServicePageContent = {
       },
       {
         title: "Conversion-first design",
-        body: "Layout, copy hierarchy, calls to action, and form placement are decided to move a visitor toward contacting the business — not to fill a portfolio. For lead-generation businesses, that means a faster, clearer path from click to inquiry.",
+        body: "Layout, copy hierarchy, calls to action, and form placement are decided to move a visitor toward contacting the business — not to fill a portfolio.",
       },
       {
         title: "Full ownership, no lock-in",
-        body: "You retain ownership of your domain and receive full access to the delivered website, code, and project content, subject to any third-party licenses disclosed in the written scope. Ongoing support is available, never mandatory.",
+        body: "You retain ownership of your domain and receive full access to the delivered website, code, and project content, subject to any third-party licences disclosed in the written scope. Ongoing support is available, never mandatory.",
       },
     ],
   },
@@ -131,7 +131,7 @@ export const unitedStatesLandingPageDesignPage: ServicePageContent = {
           "Structure and content planning for each page, based on materials you provide",
           "Contact forms, maps, and business information setup",
           "On-page SEO foundation across all pages",
-          "Optional additional language support available on request",
+          "Optional English/French structure available on request",
           "Two rounds of revisions",
         ],
       },
@@ -161,18 +161,17 @@ export const unitedStatesLandingPageDesignPage: ServicePageContent = {
     },
     {
       question: "Do you write the content, or do I need to provide it?",
-      answer:
-        "We structure every page and organize the material you send us. Writing the final copy from scratch is a separate, quoted service if you need it.",
+      answer: "We structure every page and organize the material you send us. Writing the final copy from scratch is a separate, quoted service if you need it.",
     },
     {
-      question: "Can you build the site in other languages besides English?",
+      question: "Can you build the site in English and French?",
       answer:
-        "Sites are built in English by default. Additional language support can be added to the project scope where specifically required. Professional translation and additional language implementation are priced separately where required.",
+        "Sites are built in English by default. An optional English/French structure can be added to the project scope where specifically required. Professional translation and additional language implementation are priced separately where required.",
     },
     {
       question: "Do I own the website after it's finished?",
       answer:
-        "Yes. You receive full access to and ownership of the delivered website, code, and project content, subject to any third-party licenses disclosed in the written scope. You remain in control of your domain and hosting accounts.",
+        "Yes. You receive full access to and ownership of the delivered website, code, and project content, subject to any third-party licences disclosed in the written scope. You remain in control of your domain and hosting accounts.",
     },
     {
       question: "What if I already have a domain and hosting?",
@@ -189,13 +188,12 @@ export const unitedStatesLandingPageDesignPage: ServicePageContent = {
     },
     {
       question: "Is support included after launch?",
-      answer:
-        "Each package includes a set number of revision rounds before launch. Maintenance and updates after launch are a separate, optional service.",
+      answer: "Each package includes a set number of revision rounds before launch. Maintenance and updates after launch are a separate, optional service.",
     },
     {
       question: "How is the final price set within a range?",
       answer:
-        "It depends on the number of pages, functionality, and how much content and structure work is needed. You get a fixed quote for the agreed scope in writing before work begins — never after. Pricing on this page is quoted in US dollars.",
+        "It depends on the number of pages, functionality, and how much content and structure work is needed. You get a fixed quote for the agreed scope in writing before work begins — never after. Pricing on this page is quoted in USD.",
     },
     {
       question: "Do I need to get on a call to start a project?",
@@ -203,14 +201,13 @@ export const unitedStatesLandingPageDesignPage: ServicePageContent = {
         "No. Every stage is handled in writing. We do not use phone or video calls for project discussions — the initial request, scoping questions, proposal, revisions, and handover all happen by email, messenger, form, or written brief.",
     },
     {
-      question: "Do you only work with businesses in the United States?",
+      question: "Do you only work with businesses in Canada?",
       answer:
-        "No. Kubera AI works with SMBs across Europe and international markets, including businesses serving the United States. This page describes our approach for that specific market.",
+        "No. Kubera AI works with SMBs across Europe and international markets, including businesses serving Canada. This page describes our approach for that specific market.",
     },
     {
       question: "What if my project doesn't fit neatly into one of the three packages?",
-      answer:
-        "Send a written description of what you need. We'll confirm the closest fit or scope it as a custom project.",
+      answer: "Send a written description of what you need. We'll confirm the closest fit or scope it as a custom project.",
     },
     {
       question: "Can I cancel or adjust scope partway through?",
@@ -233,7 +230,7 @@ export const unitedStatesLandingPageDesignPage: ServicePageContent = {
       "Send a short description of your business and what you need. We'll follow up in writing with any clarifying questions, then send a recommended package, a timeline, and a fixed quote — no phone or video calls involved.",
     primaryButton: "Send Your Requirements",
     primaryHref: "/contacts",
-    secondaryLink: "Or write to us directly → /contacts",
+    secondaryLink: "Or write to us directly",
     secondaryHref: "/contacts",
   },
   footerTrustBlock:
