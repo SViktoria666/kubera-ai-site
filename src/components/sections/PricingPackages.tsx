@@ -128,6 +128,7 @@ const content: Record<
 export function PricingPackages({ locale }: { locale: "en" | "ru" }) {
   const section = content[locale];
   const demoMedia = {
+    aspectRatio: "16 / 9",
     ariaLabel: locale === "ru" ? "Демонстрация AI-автоматизации Kubera AI" : "Kubera AI automation workflow demo",
     mp4Src: "/videos/home-automation-demo.mp4",
     posterSrc: "/images/video-posters/home-automation-demo.webp",

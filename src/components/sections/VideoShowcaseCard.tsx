@@ -4,13 +4,21 @@ import { useEffect, useRef, useState } from "react";
 
 type VideoShowcaseCardProps = {
   ariaLabel: string;
+  aspectRatio?: string;
   className?: string;
   mp4Src: string;
   posterSrc: string;
   webmSrc: string;
 };
 
-export function VideoShowcaseCard({ ariaLabel, className, mp4Src, posterSrc, webmSrc }: VideoShowcaseCardProps) {
+export function VideoShowcaseCard({
+  ariaLabel,
+  aspectRatio = "16 / 9",
+  className,
+  mp4Src,
+  posterSrc,
+  webmSrc,
+}: VideoShowcaseCardProps) {
   const shellRef = useRef<HTMLDivElement>(null);
   const videoRef = useRef<HTMLVideoElement>(null);
   const [isDesktop, setIsDesktop] = useState(false);
@@ -81,7 +89,7 @@ export function VideoShowcaseCard({ ariaLabel, className, mp4Src, posterSrc, web
 
   return (
     <div ref={shellRef} className={["video-showcase-card", className].filter(Boolean).join(" ")}>
-      <div className="video-showcase-card__frame" aria-label={ariaLabel} role="img">
+      <div className="video-showcase-card__frame" aria-label={ariaLabel} role="img" style={{ aspectRatio }}>
         {shouldRenderMedia ? <img alt="" className="video-showcase-card__poster" decoding="async" loading="eager" src={posterSrc} /> : null}
         {shouldAutoplay ? (
           <video

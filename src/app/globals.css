@@ -1740,6 +1740,8 @@ input[type="range"] {
 .pricing-packages-visual {
   display: none;
   min-width: 0;
+  justify-self: end;
+  width: 100%;
 }
 
 .pricing-packages-grid {
@@ -1859,9 +1861,9 @@ input[type="range"] {
 
 .video-showcase-card {
   position: relative;
-  width: min(100%, 252px);
+  width: min(100%, clamp(360px, 36vw, 440px));
   margin-left: auto;
-  padding: 12px;
+  padding: 14px;
   border: 1px solid rgba(255, 184, 0, 0.28);
   border-radius: 22px;
   background:
@@ -1884,7 +1886,6 @@ input[type="range"] {
 
 .video-showcase-card__frame {
   position: relative;
-  aspect-ratio: 404 / 720;
   overflow: hidden;
   border-radius: 16px;
   background:
@@ -1911,7 +1912,7 @@ input[type="range"] {
 .video-showcase-card__poster,
 .video-showcase-card__media {
   display: block;
-  object-fit: cover;
+  object-fit: contain;
   object-position: center center;
 }
 
@@ -2909,8 +2910,9 @@ input[type="range"] {
 
 @media (min-width: 1366px) {
   .pricing-packages-top {
-    grid-template-columns: minmax(0, 1fr) minmax(220px, 252px);
-    gap: 34px;
+    grid-template-columns: minmax(0, 1fr) minmax(360px, 440px);
+    gap: 30px;
+    align-items: start;
   }
 
   .pricing-packages-visual {
