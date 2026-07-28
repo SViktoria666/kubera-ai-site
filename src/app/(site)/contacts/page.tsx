@@ -3,7 +3,7 @@ import { ContactSection } from "@/components/sections/ContactSection";
 import { createPageMetadata } from "@/content/seo";
 
 export const metadata: Metadata = createPageMetadata({
-  title: "Contact",
+  title: "Contact Kubera AI | Discuss an AI Automation Project",
   description: "Contact Kubera AI by email, Telegram, or WhatsApp to discuss AI automation, CRM workflows, lead processing, and digital workforce systems.",
   path: "/contacts",
   locale: "en",

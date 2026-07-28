@@ -6,7 +6,7 @@ import { enWorkflow } from "@/content/en/workflow";
 import { createPageMetadata } from "@/content/seo";
 
 export const metadata: Metadata = createPageMetadata({
-  title: "How It Works",
+  title: "How Kubera AI Delivers AI Automation | 2-5 Week Delivery",
   description: "See how Kubera AI moves from diagnosis and solution architecture to automation development, launch, testing, and ongoing support.",
   path: "/how-we-work",
   locale: "en",

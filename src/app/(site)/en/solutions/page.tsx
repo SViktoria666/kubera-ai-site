@@ -12,7 +12,7 @@ import {
 export const metadata: Metadata = createPageMetadata({
   title: "AI Automation Solutions by Industry and Country",
   description:
-    "Browse Kubera AI industry solution pages across European markets. Find the right commercial automation page by industry cluster or country and move deeper into the site within two clicks.",
+    "Browse Kubera AI commercial automation pages by industry and country, with focused solution clusters for Germany, Cyprus, Finland, Sweden, Estonia, and Lithuania.",
   path: solutionHubRoute,
   locale: "en",
 });
@@ -32,7 +32,7 @@ function buildHubSchemas() {
       url: canonical,
       name: "AI Automation Solutions by Industry and Country",
       description:
-        "Browse Kubera AI industry solution pages across European markets. Find the right commercial automation page by industry cluster or country and move deeper into the site within two clicks.",
+        "Browse Kubera AI commercial automation pages by industry and country, with focused solution clusters for Germany, Cyprus, Finland, Sweden, Estonia, and Lithuania.",
       inLanguage: "en-US",
       isPartOf: {
         "@id": `${siteConfig.url}#website`,

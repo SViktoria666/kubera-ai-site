@@ -225,34 +225,21 @@ const solutionUseCaseRoutes: Record<string, string[]> = {
 export const solutionHubRoute = "/en/solutions";
 
 export const homeFeaturedSolutionRoutes = [
-  "/en/solutions/spain/hospitality-automation",
   "/en/solutions/germany/dental-automation",
-  "/en/solutions/netherlands/e-commerce-automation",
-  "/en/solutions/ireland/recruitment-automation",
-  "/en/solutions/switzerland/luxury-hotel-automation",
-  "/en/solutions/poland/e-commerce-automation",
-  "/en/solutions/sweden/saas-startup-automation",
   "/en/solutions/cyprus/real-estate-automation",
+  "/en/solutions/finland/saas-startup-automation",
+  "/en/solutions/sweden/saas-startup-automation",
+  "/en/solutions/estonia/saas-startup-automation",
+  "/en/solutions/lithuania/e-commerce-automation",
 ];
 
 export const servicesFeaturedSolutionRoutes = [
-  "/en/solutions/spain/hospitality-automation",
-  "/en/solutions/portugal/tourism-automation",
   "/en/solutions/germany/dental-automation",
-  "/en/solutions/netherlands/e-commerce-automation",
-  "/en/solutions/ireland/recruitment-automation",
-  "/en/solutions/estonia/saas-startup-automation",
-  "/en/solutions/denmark/cleantech-automation",
-  "/en/solutions/belgium/multilingual-automation",
-  "/en/solutions/italy/fashion-boutique-automation",
-  "/en/solutions/switzerland/luxury-hotel-automation",
-  "/en/solutions/poland/e-commerce-automation",
-  "/en/solutions/finland/saas-startup-automation",
-  "/en/solutions/sweden/recruitment-automation",
-  "/en/solutions/austria/boutique-hotel-automation",
-  "/en/solutions/lithuania/e-commerce-automation",
-  "/en/solutions/latvia/real-estate-automation",
   "/en/solutions/cyprus/real-estate-automation",
+  "/en/solutions/finland/saas-startup-automation",
+  "/en/solutions/sweden/saas-startup-automation",
+  "/en/solutions/estonia/saas-startup-automation",
+  "/en/solutions/lithuania/e-commerce-automation",
 ];
 
 export const solutionHubClusters: RouteGroup[] = [
@@ -672,8 +659,8 @@ export function getCountrySolutionHubCard(countrySlug: string): InternalLinkCard
   const countryLabel = country?.country ?? `${countrySlug.charAt(0).toUpperCase()}${countrySlug.slice(1)}`;
 
   return {
-    title: `${countryLabel} AI Automation Overview`,
-    description: `Open the ${countryLabel} GEO page for the broader country context and market overview.`,
+    title: `AI Automation in ${countryLabel}`,
+    description: `Open the ${countryLabel} GEO page for the broader market overview and country-level context.`,
     href: getCountryGeoRoute(countrySlug),
   };
 }

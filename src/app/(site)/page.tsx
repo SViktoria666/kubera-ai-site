@@ -7,20 +7,20 @@ import { createPageMetadata } from "@/content/seo";
 import { buildSolutionLinks, getHomeFeaturedUseCaseLinks, solutionHubRoute } from "@/content/internal-linking";
 
 export const metadata: Metadata = createPageMetadata({
-  title: "Kubera AI",
-  description: "AI automation systems and digital workforce solutions for companies that run on processes and want growth without chaos.",
+  title: "AI Automation Systems for Growing Businesses | Kubera AI",
+  description: "Kubera AI designs AI automation systems for customer communications, lead handling, CRM, and operations so growing businesses can scale without adding chaos.",
   path: "/",
   locale: "en",
 });
 
 export default function HomePage() {
   const featuredSolutionLinks = buildSolutionLinks([
-    "/en/solutions/spain/hospitality-automation",
     "/en/solutions/germany/dental-automation",
-    "/en/solutions/netherlands/e-commerce-automation",
-    "/en/solutions/ireland/recruitment-automation",
-    "/en/solutions/switzerland/luxury-hotel-automation",
-    "/en/solutions/poland/e-commerce-automation",
+    "/en/solutions/cyprus/real-estate-automation",
+    "/en/solutions/finland/saas-startup-automation",
+    "/en/solutions/sweden/recruitment-automation",
+    "/en/solutions/estonia/e-commerce-automation",
+    "/en/solutions/lithuania/e-commerce-automation",
   ]);
   const featuredUseCaseLinks = getHomeFeaturedUseCaseLinks();
 

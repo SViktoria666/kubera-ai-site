@@ -8,20 +8,20 @@ import { buildSolutionLinks, getServicesFeaturedUseCaseLinks, solutionHubRoute }
 import { createPageMetadata } from "@/content/seo";
 
 export const metadata: Metadata = createPageMetadata({
-  title: "Services",
-  description: "Explore Kubera AI services for customer communications, lead automation, CRM integration, internal processes, HR, content, finance, ecommerce, and more.",
+  title: "AI Automation Services | CRM, Lead and Workflow Automation | Kubera AI",
+  description: "Explore Kubera AI services for customer communications, lead automation, CRM integration, internal processes, and commercial automation across priority European markets.",
   path: "/services",
   locale: "en",
 });
 
 export default function ServicesPage() {
   const featuredSolutionLinks = buildSolutionLinks([
-    "/en/solutions/spain/hospitality-automation",
     "/en/solutions/germany/dental-automation",
-    "/en/solutions/netherlands/e-commerce-automation",
-    "/en/solutions/switzerland/luxury-hotel-automation",
-    "/en/solutions/poland/e-commerce-automation",
     "/en/solutions/cyprus/real-estate-automation",
+    "/en/solutions/finland/saas-startup-automation",
+    "/en/solutions/sweden/saas-startup-automation",
+    "/en/solutions/estonia/saas-startup-automation",
+    "/en/solutions/lithuania/e-commerce-automation",
   ]);
   const featuredUseCaseLinks = getServicesFeaturedUseCaseLinks();
 
