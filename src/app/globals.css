@@ -1727,6 +1727,21 @@ input[type="range"] {
   z-index: 1;
 }
 
+.pricing-packages-top {
+  display: grid;
+  gap: 28px;
+  align-items: start;
+}
+
+.pricing-packages-intro {
+  min-width: 0;
+}
+
+.pricing-packages-visual {
+  display: none;
+  min-width: 0;
+}
+
 .pricing-packages-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -1840,6 +1855,64 @@ input[type="range"] {
   max-width: 760px;
   margin: 24px 0 0;
   line-height: 1.6;
+}
+
+.video-showcase-card {
+  position: relative;
+  width: min(100%, 252px);
+  margin-left: auto;
+  padding: 12px;
+  border: 1px solid rgba(255, 184, 0, 0.28);
+  border-radius: 22px;
+  background:
+    linear-gradient(180deg, rgba(10, 12, 18, 0.98) 0%, rgba(7, 9, 13, 0.95) 100%);
+  box-shadow:
+    0 26px 60px rgba(0, 0, 0, 0.38),
+    0 0 0 1px rgba(255, 184, 0, 0.06) inset,
+    0 0 36px rgba(255, 184, 0, 0.08);
+  overflow: hidden;
+}
+
+.video-showcase-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.06) 0%, transparent 24%, transparent 76%, rgba(255, 184, 0, 0.06) 100%);
+}
+
+.video-showcase-card__frame {
+  position: relative;
+  aspect-ratio: 404 / 720;
+  overflow: hidden;
+  border-radius: 16px;
+  background:
+    radial-gradient(circle at 50% 0%, rgba(255, 184, 0, 0.06), transparent 42%),
+    linear-gradient(180deg, #0c1018 0%, #05070b 100%);
+}
+
+.video-showcase-card__placeholder,
+.video-showcase-card__poster,
+.video-showcase-card__media {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.video-showcase-card__placeholder {
+  background:
+    radial-gradient(circle at 30% 25%, rgba(255, 184, 0, 0.12), transparent 20%),
+    radial-gradient(circle at 75% 55%, rgba(50, 122, 255, 0.12), transparent 18%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.02), rgba(255, 255, 255, 0));
+}
+
+.video-showcase-card__poster,
+.video-showcase-card__media {
+  display: block;
+  object-fit: cover;
+  object-position: center center;
 }
 
 .workflow-list {
@@ -2831,6 +2904,17 @@ input[type="range"] {
   .ai-assistant-panel {
     width: min(360px, calc(100vw - 24px));
     height: min(72vh, 520px);
+  }
+}
+
+@media (min-width: 1366px) {
+  .pricing-packages-top {
+    grid-template-columns: minmax(0, 1fr) minmax(220px, 252px);
+    gap: 34px;
+  }
+
+  .pricing-packages-visual {
+    display: block;
   }
 }
 

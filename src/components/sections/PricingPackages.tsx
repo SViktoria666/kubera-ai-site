@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { VideoShowcaseCard } from "@/components/sections/VideoShowcaseCard";
 
 type PricingPackage = {
   badge?: string;
@@ -126,13 +127,26 @@ const content: Record<
 
 export function PricingPackages({ locale }: { locale: "en" | "ru" }) {
   const section = content[locale];
+  const demoMedia = {
+    ariaLabel: locale === "ru" ? "Демонстрация AI-автоматизации Kubera AI" : "Kubera AI automation workflow demo",
+    mp4Src: "/videos/home-automation-demo.mp4",
+    posterSrc: "/images/video-posters/home-automation-demo.webp",
+    webmSrc: "/videos/home-automation-demo.webm",
+  };
 
   return (
     <section className="section pricing-packages section-dark">
       <div className="container">
-        <p className="eyebrow">{section.eyebrow}</p>
-        <h2 className="section-title">{section.title}</h2>
-        <p className="lead">{section.subtitle}</p>
+        <div className="pricing-packages-top">
+          <div className="pricing-packages-intro">
+            <p className="eyebrow">{section.eyebrow}</p>
+            <h2 className="section-title">{section.title}</h2>
+            <p className="lead">{section.subtitle}</p>
+          </div>
+          <div className="pricing-packages-visual">
+            <VideoShowcaseCard {...demoMedia} />
+          </div>
+        </div>
         <div className="pricing-packages-grid">
           {section.packages.map((item) => {
             const featured = item.name === "Standard";
