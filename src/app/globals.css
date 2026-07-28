@@ -2289,10 +2289,10 @@ input[type="range"] {
 .ai-assistant-panel {
   position: absolute;
   right: 0;
-  bottom: calc(var(--ai-assistant-launcher-height) + 18px);
+  bottom: 0;
   display: none;
   width: min(390px, calc(100vw - 28px));
-  height: min(600px, calc(100vh - 132px));
+  height: min(600px, calc(100dvh - var(--ai-assistant-base-bottom) - var(--ai-assistant-footer-lift, 0px) - 16px));
   overflow: hidden;
   border: 1px solid rgba(255, 255, 255, 0.16);
   border-radius: 8px;

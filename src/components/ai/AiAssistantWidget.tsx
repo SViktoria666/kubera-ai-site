@@ -278,7 +278,7 @@ export function AiAssistantWidget({ enabled }: AiAssistantWidgetProps) {
             </div>
           </div>
           <button type="button" aria-label="Close Kubera AI assistant" onClick={closeAssistant}>
-            <span aria-hidden="true">×</span>
+            <span aria-hidden="true">{"\u00d7"}</span>
           </button>
         </div>
 
