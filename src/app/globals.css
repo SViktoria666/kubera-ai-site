@@ -2280,6 +2280,12 @@ input[type="range"] {
   filter: drop-shadow(0 20px 34px rgba(0, 0, 0, 0.32)) drop-shadow(0 0 18px rgba(245, 185, 66, 0.22));
 }
 
+.ai-assistant-widget.is-open .ai-assistant-button {
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+}
+
 .ai-assistant-panel {
   position: absolute;
   right: 0;
@@ -2319,6 +2325,25 @@ input[type="range"] {
   border-bottom: 1px solid rgba(255, 255, 255, 0.12);
 }
 
+.ai-assistant-panel-brand {
+  display: flex;
+  min-width: 0;
+  align-items: center;
+  gap: 12px;
+}
+
+.ai-assistant-panel-mark {
+  flex: none;
+  width: 30px;
+  height: 46px;
+}
+
+.ai-assistant-panel-mark-image {
+  display: block;
+  width: auto;
+  height: 46px;
+}
+
 .ai-assistant-panel-header p {
   margin: 0 0 2px;
   color: var(--color-muted);
@@ -2331,13 +2356,28 @@ input[type="range"] {
 }
 
 .ai-assistant-panel-header button {
-  width: 34px;
-  height: 34px;
-  border: 1px solid rgba(255, 255, 255, 0.18);
-  border-radius: 50%;
-  background: transparent;
+  width: 40px;
+  height: 40px;
+  border: 1px solid rgba(255, 255, 255, 0.24);
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.08);
   color: var(--color-text);
+  font-size: 28px;
+  line-height: 1;
+  font-weight: 600;
   cursor: pointer;
+  transition: background-color 0.18s ease, border-color 0.18s ease, transform 0.18s ease;
+}
+
+.ai-assistant-panel-header button:hover {
+  background: rgba(255, 255, 255, 0.14);
+  border-color: rgba(255, 255, 255, 0.32);
+  transform: translateY(-1px);
+}
+
+.ai-assistant-panel-header button:focus-visible {
+  outline: 2px solid rgba(245, 185, 66, 0.84);
+  outline-offset: 2px;
 }
 
 .ai-assistant-messages {

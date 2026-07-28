@@ -40,6 +40,27 @@ export function AiAssistantWidget({ enabled }: AiAssistantWidgetProps) {
   const buttonRef = useRef<HTMLButtonElement | null>(null);
   const messagesRef = useRef<HTMLDivElement | null>(null);
   const inputRef = useRef<HTMLInputElement | null>(null);
+  const activeRequestRef = useRef(0);
+  const isOpenRef = useRef(false);
+
+  useEffect(() => {
+    isOpenRef.current = isOpen;
+  }, [isOpen]);
+
+  function resetConversationState() {
+    setMessages([...initialMessages]);
+    setLead({});
+    setInput("");
+    setIsLoading(false);
+    setError("");
+    setSubmitted(false);
+  }
+
+  function closeAssistant() {
+    activeRequestRef.current += 1;
+    setIsOpen(false);
+    resetConversationState();
+  }
 
   useEffect(() => {
     messagesRef.current?.scrollTo({ top: messagesRef.current.scrollHeight, behavior: "smooth" });
@@ -162,6 +183,7 @@ export function AiAssistantWidget({ enabled }: AiAssistantWidgetProps) {
       return;
     }
 
+    const requestId = ++activeRequestRef.current;
     const userMessage: AssistantMessage = { role: "user", content };
     const nextMessages = [...messages, userMessage];
     setMessages(nextMessages);
@@ -195,13 +217,23 @@ export function AiAssistantWidget({ enabled }: AiAssistantWidgetProps) {
         throw new Error(data.error || assistantUnavailableMessage);
       }
 
+      if (requestId !== activeRequestRef.current || !isOpenRef.current) {
+        return;
+      }
+
       setLead(data.lead || {});
       setSubmitted((current) => current || Boolean(data.submitted));
       setMessages((current) => [...current, data.message as AssistantMessage]);
     } catch {
+      if (requestId !== activeRequestRef.current || !isOpenRef.current) {
+        return;
+      }
+
       setError(assistantUnavailableMessage);
     } finally {
-      setIsLoading(false);
+      if (requestId === activeRequestRef.current) {
+        setIsLoading(false);
+      }
     }
   }
 
@@ -218,7 +250,7 @@ export function AiAssistantWidget({ enabled }: AiAssistantWidgetProps) {
         aria-expanded={isOpen}
         aria-controls="kubera-ai-assistant-panel"
         ref={buttonRef}
-        onClick={() => setIsOpen((open) => !open)}
+        onClick={() => setIsOpen(true)}
       >
         <span className="ai-assistant-button-visual" aria-hidden="true">
           <Image
@@ -237,11 +269,16 @@ export function AiAssistantWidget({ enabled }: AiAssistantWidgetProps) {
         aria-hidden={!isOpen}
       >
         <div className="ai-assistant-panel-header">
-          <div>
-            <strong>Kubera AI Assistant</strong>
+          <div className="ai-assistant-panel-brand">
+            <span className="ai-assistant-panel-mark" aria-hidden="true">
+              <Image alt="" className="ai-assistant-panel-mark-image" height={797} src="/images/ai-assistant/kubera-ai-mascot.png" width={512} />
+            </span>
+            <div>
+              <strong>Kubera AI Assistant</strong>
+            </div>
           </div>
-          <button type="button" aria-label="Close AI assistant" onClick={() => setIsOpen(false)}>
-            x
+          <button type="button" aria-label="Close Kubera AI assistant" onClick={closeAssistant}>
+            <span aria-hidden="true">×</span>
           </button>
         </div>
 
