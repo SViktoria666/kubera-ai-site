@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { FormEvent, useEffect, useRef, useState } from "react";
 import { usePathname } from "next/navigation";
 import type { AiAssistantApiResponse, AiAssistantWidgetProps } from "@/components/ai/types";
@@ -213,15 +214,28 @@ export function AiAssistantWidget({ enabled }: AiAssistantWidgetProps) {
       <button
         className="ai-assistant-button"
         type="button"
-        aria-label="Open AI assistant"
+        aria-label="Open Kubera AI assistant"
         aria-expanded={isOpen}
+        aria-controls="kubera-ai-assistant-panel"
         ref={buttonRef}
         onClick={() => setIsOpen((open) => !open)}
       >
-        AI Assistant
+        <span className="ai-assistant-button-visual" aria-hidden="true">
+          <Image
+            alt=""
+            fill
+            src="/images/ai-assistant/kubera-ai-mascot.png"
+            sizes="(max-width: 560px) 80px, (max-width: 900px) 96px, 108px"
+          />
+        </span>
       </button>
 
-      <aside className="ai-assistant-panel" aria-label="Kubera AI assistant" aria-hidden={!isOpen}>
+      <aside
+        id="kubera-ai-assistant-panel"
+        className="ai-assistant-panel"
+        aria-label="Kubera AI assistant"
+        aria-hidden={!isOpen}
+      >
         <div className="ai-assistant-panel-header">
           <div>
             <strong>Kubera AI Assistant</strong>
