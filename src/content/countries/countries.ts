@@ -114,7 +114,7 @@ const countryData = [
 export const countries: CountryPageContent[] = countryData.map(({ slugBase, country, focus, heading }) => ({
   country,
   slug: `${slugBase}-automation`,
-  metaTitle: `AI Automation in ${country} | Kubera AI`,
+  metaTitle: `AI Automation in ${country}`,
   metaDescription: `Kubera AI builds AI automation in ${country}. ${focus.charAt(0).toUpperCase() + focus.slice(1)}`,
   heading,
   summary: `Kubera AI designs digital workforce systems for ${country}: ${focus}`,

@@ -3,7 +3,7 @@ import { GeoIndexPage } from "@/components/geo/GeoIndexPage";
 import { siteConfig } from "@/content/site";
 
 export const metadata: Metadata = {
-  title: "AI Automation Locations | Kubera AI",
+  title: "AI Automation Locations",
   description: "Browse all Kubera AI GEO country pages for AI automation, CRM, sales, and workflow systems across Europe.",
   alternates: {
     canonical: "/locations",

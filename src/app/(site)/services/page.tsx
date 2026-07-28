@@ -8,7 +8,7 @@ import { buildSolutionLinks, getServicesFeaturedUseCaseLinks, solutionHubRoute }
 import { createPageMetadata } from "@/content/seo";
 
 export const metadata: Metadata = createPageMetadata({
-  title: "AI Automation Services | CRM, Lead and Workflow Automation | Kubera AI",
+  title: "AI Automation Services | CRM, Lead and Workflow Automation",
   description: "Explore Kubera AI services for customer communications, lead automation, CRM integration, internal processes, and commercial automation across priority European markets.",
   path: "/services",
   locale: "en",

@@ -4,7 +4,7 @@ import { HeroSection } from "@/components/sections/HeroSection";
 import { createPageMetadata } from "@/content/seo";
 
 export const metadata: Metadata = createPageMetadata({
-  title: "AI Automation Case Studies | Kubera AI",
+  title: "AI Automation Case Studies",
   description: "Explore Kubera AI use case pages for customer communications, sales leads, operations, HR, finance, logistics, and other automation scenarios.",
   path: "/cases",
   locale: "en",
