@@ -9,13 +9,13 @@ type BlogArticlePageProps = {
   post: BlogPost;
 };
 
-function formatDate(date: string) {
+function formatDate(date: string, locale: string) {
   const parsed = new Date(date);
   if (Number.isNaN(parsed.getTime())) {
     return date;
   }
 
-  return new Intl.DateTimeFormat("en-US", {
+  return new Intl.DateTimeFormat(locale, {
     year: "numeric",
     month: "long",
     day: "numeric",
@@ -24,7 +24,8 @@ function formatDate(date: string) {
 
 export function BlogArticlePage({ post }: BlogArticlePageProps) {
   const canonicalUrl = `${siteConfig.url}${post.url}`;
-  const relatedSolutionLinks = post.frontmatter.language === "en" ? getBlogSolutionLinks(post.frontmatter.slug) : [];
+  const relatedSolutionLinks = post.frontmatter.language.startsWith("en") ? getBlogSolutionLinks(post.frontmatter.slug) : [];
+  const dateLocale = post.frontmatter.language === "en-GB" ? "en-GB" : post.frontmatter.language === "ru" ? "ru-RU" : post.frontmatter.language === "es" ? "es-ES" : "en-US";
   const author = {
     "@type": "Organization",
     name: siteConfig.name,
@@ -45,7 +46,7 @@ export function BlogArticlePage({ post }: BlogArticlePageProps) {
     dateModified: getBlogPublishedDate(post),
     author,
     publisher: author,
-    inLanguage: post.frontmatter.language === "ru" ? "ru-RU" : post.frontmatter.language === "es" ? "es-ES" : "en-US",
+    inLanguage: dateLocale,
     articleSection: post.frontmatter.category,
     keywords: post.frontmatter.tags.join(", "),
     isAccessibleForFree: true,
@@ -61,7 +62,7 @@ export function BlogArticlePage({ post }: BlogArticlePageProps) {
           <h1 className="section-title blog-article-title">{post.frontmatter.title}</h1>
           <p className="lead blog-article-description">{post.frontmatter.description}</p>
           <div className="blog-article-meta">
-            <time dateTime={getBlogPublishedDate(post)}>{formatDate(getBlogPublishedDate(post))}</time>
+            <time dateTime={getBlogPublishedDate(post)}>{formatDate(getBlogPublishedDate(post), dateLocale)}</time>
             <span>{post.frontmatter.language.toUpperCase()}</span>
             <span>{post.frontmatter.category}</span>
           </div>

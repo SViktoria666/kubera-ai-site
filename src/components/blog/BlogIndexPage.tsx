@@ -3,17 +3,17 @@ import type { BlogPost } from "@/content/blog";
 import { getBlogPublishedDate } from "@/content/blog/helpers";
 
 type BlogIndexPageProps = {
-  locale: "en" | "ru";
+  locale: "en" | "en-GB" | "ru";
   posts: BlogPost[];
 };
 
-function formatDate(date: string, locale: "en" | "ru") {
+function formatDate(date: string, locale: "en" | "en-GB" | "ru") {
   const parsed = new Date(date);
   if (Number.isNaN(parsed.getTime())) {
     return date;
   }
 
-  return new Intl.DateTimeFormat(locale === "ru" ? "ru-RU" : "en-US", {
+  return new Intl.DateTimeFormat(locale === "ru" ? "ru-RU" : locale === "en-GB" ? "en-GB" : "en-US", {
     year: "numeric",
     month: "long",
     day: "numeric",
@@ -44,7 +44,7 @@ export function BlogIndexPage({ locale, posts }: BlogIndexPageProps) {
                 </h2>
                 <p className="blog-index-description">{post.frontmatter.description}</p>
                 <div className="blog-index-meta">
-                  <time dateTime={getBlogPublishedDate(post)}>{formatDate(getBlogPublishedDate(post), locale)}</time>
+                  <time dateTime={getBlogPublishedDate(post)}>{formatDate(getBlogPublishedDate(post), post.frontmatter.language === "en-GB" ? "en-GB" : locale)}</time>
                   <span>{post.frontmatter.category}</span>
                 </div>
               </article>
