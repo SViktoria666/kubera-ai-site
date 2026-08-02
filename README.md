@@ -44,3 +44,7 @@ Spanish:
 
 - `/es/espana-automatizacion`
 
+## Contact Links
+
+- The visible `hello@kubera-automation.com` contact links in the contacts section and footer use `mailto:` and remain keyboard accessible.
+

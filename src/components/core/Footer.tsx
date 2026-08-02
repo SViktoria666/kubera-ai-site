@@ -19,9 +19,9 @@ export function Footer() {
           <Link className="footer-link" href="/ru/blog">
             <span>Блог</span>
           </Link>
-          <a className="footer-link" href="mailto:hello@kubera-automation.com">
+          <a className="footer-link" href={`mailto:${siteConfig.email}`} aria-label={`Email Kubera AI at ${siteConfig.email}`}>
             <FooterIcon type="email" />
-            <span>hello@kubera-automation.com</span>
+            <span>{siteConfig.email}</span>
           </a>
           <a className="footer-link" href={siteConfig.telegramUrl}>
             <FooterIcon type="telegram" />

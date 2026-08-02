@@ -10,10 +10,10 @@ export function ContactSection({ locale }: { locale: "en" | "ru" }) {
         <div>
           <h1 className="section-title">{isRu ? "Расскажите о вашем бизнесе." : "Tell us about your business."}</h1>
           <div className="contact-links">
-            <a className="contact-link" href="mailto:hello@kubera-automation.com">
+            <a className="contact-link" href={`mailto:${siteConfig.email}`} aria-label={`Email Kubera AI at ${siteConfig.email}`}>
               <span className="contact-link-main">
                 <ContactIcon type="email" />
-                hello@kubera-automation.com
+                {siteConfig.email}
               </span>
               <span>↗</span>
             </a>
