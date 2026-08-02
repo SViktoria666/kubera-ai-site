@@ -72,6 +72,8 @@ declare global {
 }
 
 const productionDomains = new Set(["www.kubera-automation.com", "kubera-automation.com"]);
+const fallbackUmamiScriptUrl = "https://analytics.kubera-automation.com/script.js";
+const fallbackUmamiWebsiteId = "a866bd55-0014-4f23-8678-6a38d4208966";
 const nonLanguageRootSegments = new Set([
   "blog",
   "cases",
@@ -87,20 +89,23 @@ const nonLanguageRootSegments = new Set([
 ]);
 
 export function isAnalyticsEnabled() {
+  const scriptUrl = getUmamiScriptUrl();
+  const websiteId = getUmamiWebsiteId();
+
   return (
     process.env.NODE_ENV === "production" &&
     process.env.VERCEL_ENV === "production" &&
-    Boolean(process.env.NEXT_PUBLIC_UMAMI_SCRIPT_URL?.trim()) &&
-    Boolean(process.env.NEXT_PUBLIC_UMAMI_WEBSITE_ID?.trim())
+    Boolean(scriptUrl) &&
+    Boolean(websiteId)
   );
 }
 
 export function getUmamiScriptUrl() {
-  return process.env.NEXT_PUBLIC_UMAMI_SCRIPT_URL?.trim() || "";
+  return process.env.NEXT_PUBLIC_UMAMI_SCRIPT_URL?.trim() || fallbackUmamiScriptUrl;
 }
 
 export function getUmamiWebsiteId() {
-  return process.env.NEXT_PUBLIC_UMAMI_WEBSITE_ID?.trim() || "";
+  return process.env.NEXT_PUBLIC_UMAMI_WEBSITE_ID?.trim() || fallbackUmamiWebsiteId;
 }
 
 export function getAnalyticsDomains() {
