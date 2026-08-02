@@ -5,6 +5,7 @@ import { FormEvent, useEffect, useRef, useState } from "react";
 import { usePathname } from "next/navigation";
 import type { AiAssistantApiResponse, AiAssistantWidgetProps } from "@/components/ai/types";
 import type { AssistantLeadDraft, AssistantMessage } from "@/lib/ai/types";
+import { buildCurrentPageContext, trackUmamiEvent } from "@/lib/analytics";
 
 const initialMessages: AssistantMessage[] = [
   {
@@ -42,6 +43,9 @@ export function AiAssistantWidget({ enabled }: AiAssistantWidgetProps) {
   const inputRef = useRef<HTMLInputElement | null>(null);
   const activeRequestRef = useRef(0);
   const isOpenRef = useRef(false);
+  const hasStartedRef = useRef(false);
+  const hasTrackedContactStepRef = useRef(false);
+  const hasTrackedSubmittedRef = useRef(false);
 
   useEffect(() => {
     isOpenRef.current = isOpen;
@@ -54,12 +58,20 @@ export function AiAssistantWidget({ enabled }: AiAssistantWidgetProps) {
     setIsLoading(false);
     setError("");
     setSubmitted(false);
+    hasStartedRef.current = false;
+    hasTrackedContactStepRef.current = false;
+    hasTrackedSubmittedRef.current = false;
   }
 
   function closeAssistant() {
     activeRequestRef.current += 1;
+    const wasSubmitted = submitted;
     setIsOpen(false);
     resetConversationState();
+    trackUmamiEvent("ai_assistant_closed", {
+      ...buildCurrentPageContext(),
+      conversation_stage: wasSubmitted ? "submitted" : "exploring",
+    });
   }
 
   useEffect(() => {
@@ -186,6 +198,18 @@ export function AiAssistantWidget({ enabled }: AiAssistantWidgetProps) {
     const requestId = ++activeRequestRef.current;
     const userMessage: AssistantMessage = { role: "user", content };
     const nextMessages = [...messages, userMessage];
+    if (!hasStartedRef.current) {
+      hasStartedRef.current = true;
+      trackUmamiEvent("ai_assistant_started", {
+        ...buildCurrentPageContext(),
+        conversation_stage: submitted ? "submitted" : "exploring",
+      });
+    }
+
+    trackUmamiEvent("ai_assistant_message_sent", {
+      ...buildCurrentPageContext(),
+      conversation_stage: submitted ? "submitted" : "exploring",
+    });
     setMessages(nextMessages);
     setInput("");
     setError("");
@@ -221,9 +245,29 @@ export function AiAssistantWidget({ enabled }: AiAssistantWidgetProps) {
         return;
       }
 
-      setLead(data.lead || {});
+      const nextLead = data.lead || {};
+      const hadContactData = Boolean(nextLead.name || nextLead.company || nextLead.email || nextLead.telegram || nextLead.whatsapp);
+
+      setLead(nextLead);
       setSubmitted((current) => current || Boolean(data.submitted));
       setMessages((current) => [...current, data.message as AssistantMessage]);
+
+      if (hadContactData && !hasTrackedContactStepRef.current) {
+        hasTrackedContactStepRef.current = true;
+        trackUmamiEvent("ai_assistant_contact_step_started", {
+          ...buildCurrentPageContext(),
+          conversation_stage: "contact_collection",
+        });
+      }
+
+      if (Boolean(data.submitted) && !hasTrackedSubmittedRef.current) {
+        hasTrackedSubmittedRef.current = true;
+        trackUmamiEvent("ai_assistant_submitted", {
+          ...buildCurrentPageContext(),
+          submission_completed: true,
+          conversation_stage: "submitted",
+        });
+      }
     } catch {
       if (requestId !== activeRequestRef.current || !isOpenRef.current) {
         return;
@@ -250,7 +294,13 @@ export function AiAssistantWidget({ enabled }: AiAssistantWidgetProps) {
         aria-expanded={isOpen}
         aria-controls="kubera-ai-assistant-panel"
         ref={buttonRef}
-        onClick={() => setIsOpen(true)}
+        onClick={() => {
+          setIsOpen(true);
+          trackUmamiEvent("ai_assistant_opened", {
+            ...buildCurrentPageContext(),
+            conversation_stage: submitted ? "submitted" : "initial",
+          });
+        }}
       >
         <span className="ai-assistant-button-visual" aria-hidden="true">
           <Image

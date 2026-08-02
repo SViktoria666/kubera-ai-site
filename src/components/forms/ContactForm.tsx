@@ -1,15 +1,48 @@
 "use client";
 
-import { FormEvent, useState } from "react";
+import { FormEvent, useEffect, useRef, useState } from "react";
+import { buildCurrentPageContext, trackUmamiEvent } from "@/lib/analytics";
 
 export function ContactForm({ locale }: { locale: "en" | "ru" }) {
   const [status, setStatus] = useState<"idle" | "submitting" | "sent" | "error">("idle");
   const [errorMessage, setErrorMessage] = useState("");
   const isRu = locale === "ru";
+  const hasOpenedRef = useRef(false);
+  const hasStartedRef = useRef(false);
+
+  useEffect(() => {
+    if (hasOpenedRef.current) {
+      return;
+    }
+
+    hasOpenedRef.current = true;
+    trackUmamiEvent("contact_form_opened", {
+      ...buildCurrentPageContext(),
+      form_id: "contact_form",
+    });
+  }, []);
+
+  function markStarted() {
+    if (hasStartedRef.current) {
+      return;
+    }
+
+    hasStartedRef.current = true;
+    trackUmamiEvent("contact_form_started", {
+      ...buildCurrentPageContext(),
+      form_id: "contact_form",
+    });
+  }
 
   async function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
     setErrorMessage("");
+    markStarted();
+
+    trackUmamiEvent("contact_form_submitted", {
+      ...buildCurrentPageContext(),
+      form_id: "contact_form",
+    });
 
     const formData = new FormData(event.currentTarget);
     const whatsapp = String(formData.get("whatsapp") || "").trim();
@@ -18,12 +51,22 @@ export function ContactForm({ locale }: { locale: "en" | "ru" }) {
     if (whatsapp && !/^\+?[0-9][0-9\s().-]{5,58}$/.test(whatsapp)) {
       setStatus("error");
       setErrorMessage(isRu ? "Проверьте формат WhatsApp номера." : "Please check the WhatsApp phone format.");
+      trackUmamiEvent("contact_form_error", {
+        ...buildCurrentPageContext(),
+        form_id: "contact_form",
+        completion_state: "validation",
+      });
       return;
     }
 
     if (telegram && !/^@?[a-zA-Z0-9_]{5,32}$/.test(telegram)) {
       setStatus("error");
       setErrorMessage(isRu ? "Проверьте формат Telegram username." : "Please check the Telegram username format.");
+      trackUmamiEvent("contact_form_error", {
+        ...buildCurrentPageContext(),
+        form_id: "contact_form",
+        completion_state: "validation",
+      });
       return;
     }
 
@@ -48,11 +91,20 @@ export function ContactForm({ locale }: { locale: "en" | "ru" }) {
     if (response.ok) {
       setStatus("sent");
       event.currentTarget.reset();
+      trackUmamiEvent("contact_form_success", {
+        ...buildCurrentPageContext(),
+        form_id: "contact_form",
+      });
       return;
     }
 
     const responsePayload = await response.json().catch(() => null);
     setStatus("error");
+    trackUmamiEvent("contact_form_error", {
+      ...buildCurrentPageContext(),
+      form_id: "contact_form",
+      completion_state: "delivery_error",
+    });
     setErrorMessage(
       response.status === 502 || response.status === 503
         ? isRu
@@ -67,7 +119,12 @@ export function ContactForm({ locale }: { locale: "en" | "ru" }) {
   }
 
   return (
-    <form className="form" onSubmit={handleSubmit}>
+    <form
+      className="form"
+      onSubmit={handleSubmit}
+      onFocusCapture={markStarted}
+      onPointerDownCapture={markStarted}
+    >
       <input className="input" name="name" placeholder={isRu ? "Ваше имя" : "Your name"} required />
       <input className="input" name="email" type="email" placeholder={isRu ? "Ваш Email" : "Your Email"} required />
       <input

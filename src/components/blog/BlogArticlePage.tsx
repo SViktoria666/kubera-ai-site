@@ -100,7 +100,13 @@ export function BlogArticlePage({ post }: BlogArticlePageProps) {
         ) : null}
 
         <div className="blog-article-backlink">
-          <Link className="button" href="/blog">
+          <Link
+            className="button"
+            href="/blog"
+            data-analytics-event="secondary_cta_click"
+            data-analytics-placement="blog-article"
+            data-analytics-cta-id="blog-back"
+          >
             Back to blog
           </Link>
         </div>

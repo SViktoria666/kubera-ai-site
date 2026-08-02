@@ -8,10 +8,22 @@ export function IndustryFinalCTA({ solution }: { solution: IndustrySolution }) {
       <h2 className="section-title">{solution.cta.title}</h2>
       <p className="lead solution-section-lead">{solution.cta.body}</p>
       <div className="solution-cta-actions">
-        <Link className="button" href={solution.cta.primary.href}>
+        <Link
+          className="button"
+          href={solution.cta.primary.href}
+          data-analytics-event="primary_cta_click"
+          data-analytics-placement="industry-final-cta"
+          data-analytics-cta-id={solution.cta.primary.href}
+        >
           {solution.cta.primary.title}
         </Link>
-        <Link className="solution-secondary-link" href={solution.cta.secondary.href}>
+        <Link
+          className="solution-secondary-link"
+          href={solution.cta.secondary.href}
+          data-analytics-event="secondary_cta_click"
+          data-analytics-placement="industry-final-cta"
+          data-analytics-cta-id={solution.cta.secondary.href}
+        >
           {solution.cta.secondary.title}
         </Link>
       </div>

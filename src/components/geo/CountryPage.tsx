@@ -40,7 +40,13 @@ export function CountryPage({ country }: { country: CountryPageContent }) {
             <Link className="button" href="/blog">
               Blog
             </Link>
-            <Link className="button" href="/contacts">
+            <Link
+              className="button"
+              href="/contacts"
+              data-analytics-event="primary_cta_click"
+              data-analytics-placement="country-hero"
+              data-analytics-cta-id="country-hero-contact"
+            >
               Contact
             </Link>
           </div>

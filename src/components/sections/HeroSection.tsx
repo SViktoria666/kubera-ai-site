@@ -16,7 +16,14 @@ export function HeroSection({ eyebrow, title, lead, ctaLabel, ctaHref }: HeroSec
         <h1 className="hero-title">{title}</h1>
         {lead ? <p className="lead">{lead}</p> : null}
         {ctaLabel && ctaHref ? (
-          <Link className="button" href={ctaHref}>
+          <Link
+            className="button"
+            href={ctaHref}
+            data-analytics-event="primary_cta_click"
+            data-analytics-placement="hero"
+            data-analytics-cta-id="hero-primary"
+            data-analytics-cta-label-key="hero_primary"
+          >
             {ctaLabel}
           </Link>
         ) : null}

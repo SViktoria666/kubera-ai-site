@@ -14,6 +14,9 @@ export function ContactSection({ locale }: { locale: "en" | "ru" }) {
               className="contact-link"
               href={`mailto:${siteConfig.email}`}
               aria-label={`Email Kubera AI at ${siteConfig.email}`}
+              data-analytics-event="email_click"
+              data-analytics-placement="contacts"
+              data-analytics-contact-method="email"
             >
               <span className="contact-link-main">
                 <ContactIcon type="email" />
@@ -24,6 +27,9 @@ export function ContactSection({ locale }: { locale: "en" | "ru" }) {
             <a
               className="contact-link"
               href={siteConfig.telegramUrl}
+              data-analytics-event="telegram_click"
+              data-analytics-placement="contacts"
+              data-analytics-contact-method="telegram"
             >
               <span className="contact-link-main">
                 <ContactIcon type="telegram" />
@@ -34,6 +40,9 @@ export function ContactSection({ locale }: { locale: "en" | "ru" }) {
             <a
               className="contact-link"
               href="https://wa.me/37253841877"
+              data-analytics-event="whatsapp_click"
+              data-analytics-placement="contacts"
+              data-analytics-contact-method="whatsapp"
             >
               <span className="contact-link-main">
                 <ContactIcon type="whatsapp" />

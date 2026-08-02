@@ -10,7 +10,13 @@ export function IndustryMidCTA({ solution }: { solution: IndustrySolution }) {
         We can scope the workflow around your current tools, channels, and handoff rules before anything is built.
       </p>
       <div className="solution-cta-actions">
-        <Link className="button" href={solution.cta.primary.href}>
+        <Link
+          className="button"
+          href={solution.cta.primary.href}
+          data-analytics-event="primary_cta_click"
+          data-analytics-placement="industry-mid-cta"
+          data-analytics-cta-id={solution.cta.primary.href}
+        >
           Discuss My Project
         </Link>
       </div>

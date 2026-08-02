@@ -179,7 +179,13 @@ function LegacyCaseStudyPage({ caseStudy }: { caseStudy: CaseStudy }) {
             {caseStudy.category}
           </p>
           <p className="lead">{caseStudy.short}</p>
-          <Link className="button" href="/contacts">
+          <Link
+            className="button"
+            href="/contacts"
+            data-analytics-event="primary_cta_click"
+            data-analytics-placement="case-study-hero"
+            data-analytics-cta-id="case-study-hero-contact"
+          >
             Discuss this automation
           </Link>
         </div>
@@ -281,7 +287,13 @@ function LegacyCaseStudyPage({ caseStudy }: { caseStudy: CaseStudy }) {
             <p className="muted" style={{ lineHeight: 1.7 }}>
               If this workflow matches your business, we can map the actual systems, triggers, owners, and follow-up logic before building anything.
             </p>
-            <Link className="button" href="/contacts">
+            <Link
+              className="button"
+              href="/contacts"
+              data-analytics-event="primary_cta_click"
+              data-analytics-placement="case-study-cta"
+              data-analytics-cta-id="case-study-cta-contact"
+            >
               Discuss this automation
             </Link>
           </article>
@@ -315,7 +327,13 @@ function DetailedCaseStudyPage({ caseStudy, locale }: CaseStudyPageProps) {
             {content.category}
           </p>
           <p className="lead">{content.short}</p>
-          <Link className="button case-cta-button" href={content.ctaHref}>
+          <Link
+            className="button case-cta-button"
+            href={content.ctaHref}
+            data-analytics-event="primary_cta_click"
+            data-analytics-placement="case-study-content-cta"
+            data-analytics-cta-id="case-study-content-contact"
+          >
             {content.ctaLabel}
           </Link>
         </div>
@@ -383,7 +401,13 @@ function DetailedCaseStudyPage({ caseStudy, locale }: CaseStudyPageProps) {
           <p className="muted" style={{ lineHeight: 1.7 }}>
             {content.ctaBody}
           </p>
-          <Link className="button case-cta-button" href={content.ctaHref}>
+          <Link
+            className="button case-cta-button"
+            href={content.ctaHref}
+            data-analytics-event="primary_cta_click"
+            data-analytics-placement="case-study-final-cta"
+            data-analytics-cta-id="case-study-final-contact"
+          >
             {content.ctaLabel}
           </Link>
         </article>

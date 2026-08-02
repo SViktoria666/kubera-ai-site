@@ -52,3 +52,10 @@ Spanish:
 
 - The production assistant route forwards the original customer message and transcript to the CRM handoff payload so downstream lead records can preserve the source language and context.
 
+## Analytics
+
+- Umami analytics is loaded globally from the shared `SiteShell` layout so it covers all English, Russian, Spanish, and future pages without touching 160+ routes.
+- The tracker is configured through `NEXT_PUBLIC_UMAMI_SCRIPT_URL` and `NEXT_PUBLIC_UMAMI_WEBSITE_ID`.
+- The implementation records anonymous page context, safe CTA clicks, calculator activity, contact form engagement, assistant milestones, and outbound link clicks without sending personal data.
+- Operational notes and the Russian glossary live in [`docs/analytics.md`](docs/analytics.md).
+

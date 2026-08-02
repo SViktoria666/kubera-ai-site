@@ -1,5 +1,9 @@
+"use client";
+
 import Link from "next/link";
+import { useEffect, useRef } from "react";
 import { VideoShowcaseCard } from "@/components/sections/VideoShowcaseCard";
+import { buildCurrentPageContext, trackUmamiEvent } from "@/lib/analytics";
 
 type PricingPackage = {
   badge?: string;
@@ -127,6 +131,7 @@ const content: Record<
 
 export function PricingPackages({ locale }: { locale: "en" | "ru" }) {
   const section = content[locale];
+  const hasTrackedViewRef = useRef(false);
   const demoMedia = {
     aspectRatio: "16 / 9",
     ariaLabel: locale === "ru" ? "Демонстрация AI-автоматизации Kubera AI" : "Kubera AI automation workflow demo",
@@ -134,6 +139,17 @@ export function PricingPackages({ locale }: { locale: "en" | "ru" }) {
     posterSrc: "/images/video-posters/home-automation-demo.webp",
     webmSrc: "/videos/home-automation-demo.webm",
   };
+
+  useEffect(() => {
+    if (hasTrackedViewRef.current) {
+      return;
+    }
+
+    hasTrackedViewRef.current = true;
+    trackUmamiEvent("pricing_viewed", {
+      ...buildCurrentPageContext(),
+    });
+  }, []);
 
   return (
     <section className="section pricing-packages section-dark">
@@ -167,7 +183,21 @@ export function PricingPackages({ locale }: { locale: "en" | "ru" }) {
                     <li key={feature}>{feature}</li>
                   ))}
                 </ul>
-                <Link className="button pricing-card-button" href={item.href}>
+                <Link
+                  className="button pricing-card-button"
+                  href={item.href}
+                  onClick={() => {
+                    const pageContext = buildCurrentPageContext();
+                    trackUmamiEvent("pricing_package_clicked", {
+                      ...pageContext,
+                      package_name: item.name,
+                    });
+                    trackUmamiEvent("pricing_cta_clicked", {
+                      ...pageContext,
+                      package_name: item.name,
+                    });
+                  }}
+                >
                   {item.label}
                 </Link>
               </article>

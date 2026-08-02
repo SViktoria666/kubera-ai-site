@@ -26,10 +26,22 @@ export function GeoIndexPage() {
             <Link className="button" href="/blog">
               Blog
             </Link>
-            <Link className="button" href="/contacts">
+            <Link
+              className="button"
+              href="/contacts"
+              data-analytics-event="primary_cta_click"
+              data-analytics-placement="geo-index"
+              data-analytics-cta-id="geo-index-contact"
+            >
               Contact
             </Link>
-            <Link className="button" href="/demo">
+            <Link
+              className="button"
+              href="/demo"
+              data-analytics-event="secondary_cta_click"
+              data-analytics-placement="geo-index"
+              data-analytics-cta-id="geo-index-demo"
+            >
               Demo
             </Link>
           </div>
@@ -61,10 +73,22 @@ export function GeoIndexPage() {
               <Link className="button" href="/services">
                 Services
               </Link>
-              <Link className="button" href="/contacts">
+              <Link
+                className="button"
+                href="/contacts"
+                data-analytics-event="primary_cta_click"
+                data-analytics-placement="geo-index"
+                data-analytics-cta-id="geo-index-card-contact"
+              >
                 Contact
               </Link>
-              <Link className="button" href="/demo">
+              <Link
+                className="button"
+                href="/demo"
+                data-analytics-event="secondary_cta_click"
+                data-analytics-placement="geo-index"
+                data-analytics-cta-id="geo-index-card-demo"
+              >
                 Demo
               </Link>
             </div>

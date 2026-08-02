@@ -38,7 +38,13 @@ export function IndustryInternalLinks({ solution }: { solution: IndustrySolution
           <p className="muted">Review the underlying service stack behind these workflows.</p>
           <span className="solution-card-link">Open services</span>
         </Link>
-        <Link className="solution-card solution-card--link" href="/contacts">
+        <Link
+          className="solution-card solution-card--link"
+          href="/contacts"
+          data-analytics-event="primary_cta_click"
+          data-analytics-placement="industry-internal-links"
+          data-analytics-cta-id="industry-links-contact"
+        >
           <h3>Contact Kubera AI</h3>
           <p className="muted">Start a project discussion with the team.</p>
           <span className="solution-card-link">Open contacts</span>

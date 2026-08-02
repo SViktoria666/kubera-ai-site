@@ -1,6 +1,10 @@
 {
   "framework": "nextjs",
   "buildCommand": "npm run build",
-  "installCommand": "npm install"
+  "installCommand": "npm install",
+  "env": {
+    "NEXT_PUBLIC_UMAMI_SCRIPT_URL": "https://analytics.kubera-automation.com/script.js",
+    "NEXT_PUBLIC_UMAMI_WEBSITE_ID": "a866bd55-0014-4f23-8678-6a38d4208966"
+  }
 }
 

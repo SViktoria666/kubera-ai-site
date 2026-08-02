@@ -372,7 +372,13 @@ function CtaPanel({
       <h2 className="section-title">{title}</h2>
       <p className="lead solution-section-lead">{body}</p>
       <div className="solution-cta-actions">
-        <Link className="button" href={primaryHref}>
+        <Link
+          className="button"
+          href={primaryHref}
+          data-analytics-event="primary_cta_click"
+          data-analytics-placement="use_case"
+          data-analytics-cta-id="use-case-panel-primary"
+        >
           {primaryLabel}
         </Link>
       </div>
@@ -417,10 +423,22 @@ export function UseCaseLandingPage({
               <p className="lead solution-lead">{hero.lead}</p>
               <p className="solution-trustline">{hero.trustLine}</p>
               <div className="solution-hero-actions">
-                <Link className="button" href={hero.ctaHref}>
+                <Link
+                  className="button"
+                  href={hero.ctaHref}
+                  data-analytics-event="primary_cta_click"
+                  data-analytics-placement="use_case_hero"
+                  data-analytics-cta-id="use-case-hero-primary"
+                >
                   {hero.ctaLabel}
                 </Link>
-                <Link className="solution-secondary-link" href="/contacts">
+                <Link
+                  className="solution-secondary-link"
+                  href="/contacts"
+                  data-analytics-event="secondary_cta_click"
+                  data-analytics-placement="use_case_hero"
+                  data-analytics-cta-id="use-case-hero-secondary-contact"
+                >
                   {hero.secondaryCtaLabel}
                 </Link>
               </div>

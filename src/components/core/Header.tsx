@@ -73,7 +73,14 @@ export function Header() {
         </nav>
         <div className={`header-actions${isMenuOpen ? " is-open" : ""}`}>
           <LanguageSwitcher />
-          <Link className="button" href={ctaHref}>
+          <Link
+            className="button"
+            href={ctaHref}
+            data-analytics-event="primary_cta_click"
+            data-analytics-placement="header"
+            data-analytics-cta-id="header-contact"
+            data-analytics-cta-label-key="header_discuss_project"
+          >
             {ctaLabel}
           </Link>
         </div>

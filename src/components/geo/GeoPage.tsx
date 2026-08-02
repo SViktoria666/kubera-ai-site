@@ -145,7 +145,13 @@ export function GeoPage({ page }: { page: GeoPageData }) {
             <Link className="button" href="/">
               Home
             </Link>
-            <Link className="button" href="/demo">
+            <Link
+              className="button"
+              href="/demo"
+              data-analytics-event="secondary_cta_click"
+              data-analytics-placement="geo-hero"
+              data-analytics-cta-id="geo-hero-demo"
+            >
               Demo
             </Link>
             <Link className="button" href="/services">
@@ -157,7 +163,13 @@ export function GeoPage({ page }: { page: GeoPageData }) {
             <Link className="button" href="/blog">
               Blog
             </Link>
-            <Link className="button" href="/contacts">
+            <Link
+              className="button"
+              href="/contacts"
+              data-analytics-event="primary_cta_click"
+              data-analytics-placement="geo-hero"
+              data-analytics-cta-id="geo-hero-contact"
+            >
               Contact
             </Link>
           </div>
@@ -200,10 +212,22 @@ export function GeoPage({ page }: { page: GeoPageData }) {
               <h2 className="section-title">{page.cta.headline}</h2>
               <p className="lead">{page.cta.body}</p>
               <div className="geo-cta-buttons">
-                <Link className="button" href="/demo">
+                <Link
+                  className="button"
+                  href="/demo"
+                  data-analytics-event="secondary_cta_click"
+                  data-analytics-placement="geo-cta"
+                  data-analytics-cta-id="geo-cta-demo"
+                >
                   {page.cta.primary}
                 </Link>
-                <Link className="button" href="/contacts">
+                <Link
+                  className="button"
+                  href="/contacts"
+                  data-analytics-event="primary_cta_click"
+                  data-analytics-placement="geo-cta"
+                  data-analytics-cta-id="geo-cta-contact"
+                >
                   {page.cta.secondary}
                 </Link>
               </div>
