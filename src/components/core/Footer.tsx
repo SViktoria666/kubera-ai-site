@@ -23,10 +23,6 @@ export function Footer() {
             className="footer-link"
             href={`mailto:${siteConfig.email}`}
             aria-label={`Email Kubera AI at ${siteConfig.email}`}
-            data-matomo-event="contact_click"
-            data-matomo-category="Contact"
-            data-matomo-action="Email"
-            data-matomo-label={siteConfig.email}
           >
             <FooterIcon type="email" />
             <span>{siteConfig.email}</span>
@@ -34,10 +30,6 @@ export function Footer() {
           <a
             className="footer-link"
             href={siteConfig.telegramUrl}
-            data-matomo-event="contact_click"
-            data-matomo-category="Contact"
-            data-matomo-action="Telegram"
-            data-matomo-label="Footer Telegram"
           >
             <FooterIcon type="telegram" />
             <span>Telegram</span>
@@ -45,10 +37,6 @@ export function Footer() {
           <a
             className="footer-link"
             href="https://wa.me/37253841877"
-            data-matomo-event="contact_click"
-            data-matomo-category="Contact"
-            data-matomo-action="WhatsApp"
-            data-matomo-label="Footer WhatsApp"
           >
             <FooterIcon type="whatsapp" />
             <span>WhatsApp</span>

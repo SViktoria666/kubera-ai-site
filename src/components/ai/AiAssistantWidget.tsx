@@ -3,7 +3,6 @@
 import Image from "next/image";
 import { FormEvent, useEffect, useRef, useState } from "react";
 import { usePathname } from "next/navigation";
-import { trackMatomoEvent } from "@/components/analytics/MatomoAnalytics";
 import type { AiAssistantApiResponse, AiAssistantWidgetProps } from "@/components/ai/types";
 import type { AssistantLeadDraft, AssistantMessage } from "@/lib/ai/types";
 
@@ -225,11 +224,6 @@ export function AiAssistantWidget({ enabled }: AiAssistantWidgetProps) {
       setLead(data.lead || {});
       setSubmitted((current) => current || Boolean(data.submitted));
       setMessages((current) => [...current, data.message as AssistantMessage]);
-      if (data.submitted) {
-        trackMatomoEvent("Assistant", "Submitted", pathname || "/");
-      } else if (nextMessages.length === 2) {
-        trackMatomoEvent("Assistant", "Started", pathname || "/");
-      }
     } catch {
       if (requestId !== activeRequestRef.current || !isOpenRef.current) {
         return;
@@ -256,10 +250,7 @@ export function AiAssistantWidget({ enabled }: AiAssistantWidgetProps) {
         aria-expanded={isOpen}
         aria-controls="kubera-ai-assistant-panel"
         ref={buttonRef}
-        onClick={() => {
-          trackMatomoEvent("Assistant", "Opened", pathname || "/");
-          setIsOpen(true);
-        }}
+        onClick={() => setIsOpen(true)}
       >
         <span className="ai-assistant-button-visual" aria-hidden="true">
           <Image

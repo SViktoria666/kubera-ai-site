@@ -14,10 +14,6 @@ export function ContactSection({ locale }: { locale: "en" | "ru" }) {
               className="contact-link"
               href={`mailto:${siteConfig.email}`}
               aria-label={`Email Kubera AI at ${siteConfig.email}`}
-              data-matomo-event="contact_click"
-              data-matomo-category="Contact"
-              data-matomo-action="Email"
-              data-matomo-label={siteConfig.email}
             >
               <span className="contact-link-main">
                 <ContactIcon type="email" />
@@ -28,10 +24,6 @@ export function ContactSection({ locale }: { locale: "en" | "ru" }) {
             <a
               className="contact-link"
               href={siteConfig.telegramUrl}
-              data-matomo-event="contact_click"
-              data-matomo-category="Contact"
-              data-matomo-action="Telegram"
-              data-matomo-label="Contact page Telegram"
             >
               <span className="contact-link-main">
                 <ContactIcon type="telegram" />
@@ -42,10 +34,6 @@ export function ContactSection({ locale }: { locale: "en" | "ru" }) {
             <a
               className="contact-link"
               href="https://wa.me/37253841877"
-              data-matomo-event="contact_click"
-              data-matomo-category="Contact"
-              data-matomo-action="WhatsApp"
-              data-matomo-label="Contact page WhatsApp"
             >
               <span className="contact-link-main">
                 <ContactIcon type="whatsapp" />
