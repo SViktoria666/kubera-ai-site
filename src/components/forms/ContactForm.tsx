@@ -1,11 +1,20 @@
 "use client";
 
-import { FormEvent, useState } from "react";
+import { FormEvent, useRef, useState } from "react";
+import { trackMatomoEvent } from "@/components/analytics/MatomoAnalytics";
 
 export function ContactForm({ locale }: { locale: "en" | "ru" }) {
   const [status, setStatus] = useState<"idle" | "submitting" | "sent" | "error">("idle");
   const [errorMessage, setErrorMessage] = useState("");
+  const openedRef = useRef(false);
   const isRu = locale === "ru";
+
+  function handleOpen() {
+    if (!openedRef.current) {
+      openedRef.current = true;
+      trackMatomoEvent("Forms", "Contact Opened", locale);
+    }
+  }
 
   async function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
@@ -47,6 +56,7 @@ export function ContactForm({ locale }: { locale: "en" | "ru" }) {
 
     if (response.ok) {
       setStatus("sent");
+      trackMatomoEvent("Forms", "Contact Submitted", locale);
       event.currentTarget.reset();
       return;
     }
@@ -67,7 +77,7 @@ export function ContactForm({ locale }: { locale: "en" | "ru" }) {
   }
 
   return (
-    <form className="form" onSubmit={handleSubmit}>
+    <form className="form" onFocusCapture={handleOpen} onSubmit={handleSubmit}>
       <input className="input" name="name" placeholder={isRu ? "Ваше имя" : "Your name"} required />
       <input className="input" name="email" type="email" placeholder={isRu ? "Ваш Email" : "Your Email"} required />
       <input

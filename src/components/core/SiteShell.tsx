@@ -1,4 +1,5 @@
 import { AiAssistantWidget } from "@/components/ai/AiAssistantWidget";
+import { MatomoAnalytics } from "@/components/analytics/MatomoAnalytics";
 import { Footer } from "@/components/core/Footer";
 import { Header } from "@/components/core/Header";
 import { RouteTransition } from "@/components/core/RouteTransition";
@@ -14,6 +15,7 @@ export function SiteShell({ children }: SiteShellProps) {
   return (
     <>
       <StructuredData />
+      <MatomoAnalytics />
       <Header />
       <RouteTransition>{children}</RouteTransition>
       <Footer />

@@ -10,21 +10,43 @@ export function ContactSection({ locale }: { locale: "en" | "ru" }) {
         <div>
           <h1 className="section-title">{isRu ? "Расскажите о вашем бизнесе." : "Tell us about your business."}</h1>
           <div className="contact-links">
-            <a className="contact-link" href={`mailto:${siteConfig.email}`} aria-label={`Email Kubera AI at ${siteConfig.email}`}>
+            <a
+              className="contact-link"
+              href={`mailto:${siteConfig.email}`}
+              aria-label={`Email Kubera AI at ${siteConfig.email}`}
+              data-matomo-event="contact_click"
+              data-matomo-category="Contact"
+              data-matomo-action="Email"
+              data-matomo-label={siteConfig.email}
+            >
               <span className="contact-link-main">
                 <ContactIcon type="email" />
                 {siteConfig.email}
               </span>
               <span>↗</span>
             </a>
-            <a className="contact-link" href={siteConfig.telegramUrl}>
+            <a
+              className="contact-link"
+              href={siteConfig.telegramUrl}
+              data-matomo-event="contact_click"
+              data-matomo-category="Contact"
+              data-matomo-action="Telegram"
+              data-matomo-label="Contact page Telegram"
+            >
               <span className="contact-link-main">
                 <ContactIcon type="telegram" />
                 Telegram
               </span>
               <span>@kubera_automation</span>
             </a>
-            <a className="contact-link" href="https://wa.me/37253841877">
+            <a
+              className="contact-link"
+              href="https://wa.me/37253841877"
+              data-matomo-event="contact_click"
+              data-matomo-category="Contact"
+              data-matomo-action="WhatsApp"
+              data-matomo-label="Contact page WhatsApp"
+            >
               <span className="contact-link-main">
                 <ContactIcon type="whatsapp" />
                 WhatsApp

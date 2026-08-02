@@ -16,7 +16,14 @@ export function HeroSection({ eyebrow, title, lead, ctaLabel, ctaHref }: HeroSec
         <h1 className="hero-title">{title}</h1>
         {lead ? <p className="lead">{lead}</p> : null}
         {ctaLabel && ctaHref ? (
-          <Link className="button" href={ctaHref}>
+          <Link
+            className="button"
+            href={ctaHref}
+            data-matomo-event="cta_click"
+            data-matomo-category="CTA"
+            data-matomo-action="Hero"
+            data-matomo-label={ctaLabel}
+          >
             {ctaLabel}
           </Link>
         ) : null}
