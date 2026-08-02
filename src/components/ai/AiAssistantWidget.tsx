@@ -1,27 +1,78 @@
 "use client";
 
 import Image from "next/image";
-import { FormEvent, useEffect, useRef, useState } from "react";
 import { usePathname } from "next/navigation";
+import { FormEvent, useEffect, useRef, useState } from "react";
 import type { AiAssistantApiResponse, AiAssistantWidgetProps } from "@/components/ai/types";
 import { buildAssistantConversationMemory } from "@/lib/ai/conversation-memory";
 import type { AssistantLeadDraft, AssistantLocale, AssistantMessage } from "@/lib/ai/types";
-import { buildCurrentPageContext, trackUmamiEvent } from "@/lib/analytics";
+import { buildCurrentPageContext, getPageLanguage, trackUmamiEvent } from "@/lib/analytics";
 
-const assistantStorageKey = "kubera-ai-assistant-state-v2";
-const maxStoredMessages = 60;
+type AssistantSessionPhase = "closed" | "active" | "waiting_for_response" | "collecting_contacts" | "submitting_lead" | "transient_error" | "completed";
+type AssistantErrorCategory = "network" | "server" | "malformed" | "validation" | "unknown";
+type RetrySource = "manual" | "auto";
+
+type AssistantRequestPayload = {
+  context: {
+    locale?: AssistantLocale;
+    currentPath: string;
+    page_path: string;
+    page_language: string;
+    page_type: string;
+    country_market?: string;
+    service_slug?: string;
+    article_slug?: string;
+    case_slug?: string;
+    conversationMemory: ReturnType<typeof buildAssistantConversationMemory>;
+  };
+  messages: AssistantMessage[];
+  lead: AssistantLeadDraft;
+  submissionCompleted: boolean;
+};
+
+type PendingTurn = {
+  sessionId: string;
+  locale: AssistantLocale;
+  pageContext: ReturnType<typeof buildCurrentPageContext>;
+  requestPayload: AssistantRequestPayload;
+  hadContactData: boolean;
+  usedRetry: boolean;
+};
+
+type AssistantErrorState = {
+  category: AssistantErrorCategory;
+  retryable: boolean;
+  message: string;
+};
+
+const maxStoredMessages = 80;
 const maxRequestMessages = 20;
-
-const initialMessages: AssistantMessage[] = [
-  {
-    role: "assistant",
-    content: "Hi, I’m Kubera AI Assistant. Tell me what you’d like to automate or improve, and I’ll help you find the best fit.",
-  },
-];
-
-const assistantUnavailableMessage = "Assistant is temporarily unavailable. Please try again later.";
 const assistantFooterGap = 20;
 const assistantLiftRootMargin = "0px 0px 200px 0px";
+
+const copy = {
+  en: {
+    welcome: "Hi! I’m the Kubera AI Assistant. I can help you find the right AI automation solution for your business. What would you like to improve or automate?",
+    placeholder: "Type your message",
+    send: "Send",
+    retry: "Retry",
+    temporaryError: "Sorry - I had a temporary connection issue. Your conversation is still here. Please try again.",
+  },
+  ru: {
+    welcome: "Здравствуйте! Я Kubera AI Assistant. Помогу подобрать подходящее AI-решение для вашего бизнеса. Что вы хотите улучшить или автоматизировать?",
+    placeholder: "Введите сообщение",
+    send: "Отправить",
+    retry: "Повторить",
+    temporaryError: "Извините, произошла временная ошибка соединения. Диалог сохранён. Попробуйте еще раз.",
+  },
+  es: {
+    welcome: "Hola. Soy Kubera AI Assistant. Puedo ayudarte a encontrar la mejor solucion de automatizacion con IA para tu negocio. ¿Que te gustaria mejorar o automatizar?",
+    placeholder: "Escribe tu mensaje",
+    send: "Enviar",
+    retry: "Reintentar",
+    temporaryError: "Lo siento - hubo un problema temporal de conexion. Tu conversacion sigue aqui. Intentalo de nuevo.",
+  },
+} as const;
 
 function getBrowserLocale() {
   if (typeof navigator === "undefined") {
@@ -32,6 +83,65 @@ function getBrowserLocale() {
   return language || undefined;
 }
 
+function resolveAssistantLocale(pathname: string): AssistantLocale {
+  const routeLanguage = getPageLanguage(pathname);
+
+  if (routeLanguage === "ru" || routeLanguage === "es") {
+    return routeLanguage;
+  }
+
+  if (routeLanguage === "en") {
+    return "en";
+  }
+
+  const browserLocale = getBrowserLocale();
+  if (browserLocale === "ru" || browserLocale === "es") {
+    return browserLocale;
+  }
+
+  return "en";
+}
+
+function getCopy(locale: AssistantLocale) {
+  if (locale === "ru") {
+    return copy.ru;
+  }
+
+  if (locale === "es") {
+    return copy.es;
+  }
+
+  return copy.en;
+}
+
+function getWelcomeMessage(locale: AssistantLocale) {
+  return getCopy(locale).welcome;
+}
+
+function getTemporaryErrorMessage(locale: AssistantLocale) {
+  return getCopy(locale).temporaryError;
+}
+
+function getPlaceholder(locale: AssistantLocale) {
+  return getCopy(locale).placeholder;
+}
+
+function getSendLabel(locale: AssistantLocale) {
+  return getCopy(locale).send;
+}
+
+function getRetryLabel(locale: AssistantLocale) {
+  return getCopy(locale).retry;
+}
+
+function createSessionId() {
+  if (typeof crypto !== "undefined" && typeof crypto.randomUUID === "function") {
+    return crypto.randomUUID();
+  }
+
+  return `${Date.now()}-${Math.random().toString(16).slice(2)}`;
+}
+
 function trimMessages(messages: AssistantMessage[]) {
   if (messages.length <= maxStoredMessages) {
     return messages;
@@ -40,67 +150,101 @@ function trimMessages(messages: AssistantMessage[]) {
   return messages.slice(-maxStoredMessages);
 }
 
-function readStoredConversationState() {
-  if (typeof window === "undefined") {
-    return null;
-  }
-
-  try {
-    const raw = window.sessionStorage.getItem(assistantStorageKey);
-    if (!raw) {
-      return null;
-    }
-
-    const parsed = JSON.parse(raw) as {
-      messages?: AssistantMessage[];
-      lead?: AssistantLeadDraft;
-      submitted?: boolean;
-    };
-
-    if (!Array.isArray(parsed.messages)) {
-      return null;
-    }
-
-    return {
-      messages: parsed.messages,
-      lead: parsed.lead || {},
-      submitted: Boolean(parsed.submitted),
-    };
-  } catch {
-    return null;
-  }
+function hasLeadContactData(lead: AssistantLeadDraft) {
+  return Boolean(lead.name || lead.company || lead.email || lead.telegram || lead.whatsapp);
 }
 
-function saveStoredConversationState(state: { messages: AssistantMessage[]; lead: AssistantLeadDraft; submitted: boolean }) {
-  if (typeof window === "undefined") {
-    return;
+function getConversationStage(phase: AssistantSessionPhase, submitted: boolean) {
+  if (submitted || phase === "completed") {
+    return "submitted";
   }
 
-  try {
-    window.sessionStorage.setItem(
-      assistantStorageKey,
-      JSON.stringify({
-        messages: trimMessages(state.messages),
-        lead: state.lead,
-        submitted: state.submitted,
-      }),
-    );
-  } catch {
-    // Ignore storage failures; the widget should keep working without persistence.
+  if (phase === "collecting_contacts" || phase === "submitting_lead") {
+    return "contact_collection";
   }
+
+  if (phase === "closed") {
+    return "initial";
+  }
+
+  return "exploring";
+}
+
+function buildRequestPayload(params: {
+  locale: AssistantLocale;
+  pageContext: ReturnType<typeof buildCurrentPageContext>;
+  pathname: string;
+  messages: AssistantMessage[];
+  lead: AssistantLeadDraft;
+  submitted: boolean;
+}) {
+  const conversationMemory = buildAssistantConversationMemory(params.messages, params.lead, {
+    currentPath: params.pathname,
+    locale: params.locale,
+    country: params.pageContext.country_market,
+    visitorIntent:
+      params.pageContext.page_type === "pricing"
+        ? "pricing"
+        : params.pageContext.page_type === "contacts"
+          ? "contact"
+          : params.pageContext.page_type === "services"
+            ? "services"
+            : "unknown",
+  });
+
+  return {
+    context: {
+      locale: params.locale,
+      currentPath: params.pathname,
+      ...params.pageContext,
+      conversationMemory,
+    },
+    messages: params.messages.slice(-maxRequestMessages),
+    lead: params.lead,
+    submissionCompleted: params.submitted,
+  };
+}
+
+function createRequestFailure(category: AssistantErrorCategory, retryable: boolean, message: string) {
+  return { category, retryable, message };
+}
+
+function classifyFailure(error: unknown, status?: number) {
+  if (error && typeof error === "object" && "category" in error && "message" in error) {
+    const typed = error as AssistantErrorState;
+    return typed;
+  }
+
+  if (typeof error === "object" && error !== null && "name" in error && String((error as { name?: unknown }).name) === "AbortError") {
+    return createRequestFailure("network", true, "Request was interrupted");
+  }
+
+  if (typeof status === "number") {
+    if (status >= 500 || status === 429 || status === 408) {
+      return createRequestFailure("server", true, "Temporary upstream error");
+    }
+
+    if (status >= 400) {
+      return createRequestFailure("validation", false, "Invalid assistant response");
+    }
+  }
+
+  return createRequestFailure("unknown", true, "Temporary assistant error");
 }
 
 export function AiAssistantWidget({ enabled }: AiAssistantWidgetProps) {
   const pathname = usePathname();
   const [isOpen, setIsOpen] = useState(false);
   const [footerLift, setFooterLift] = useState(0);
-  const [messages, setMessages] = useState<AssistantMessage[]>(initialMessages);
+  const [sessionPhase, setSessionPhase] = useState<AssistantSessionPhase>("closed");
+  const [sessionLocale, setSessionLocale] = useState<AssistantLocale>("en");
+  const [sessionId, setSessionId] = useState("");
+  const [messages, setMessages] = useState<AssistantMessage[]>([]);
   const [lead, setLead] = useState<AssistantLeadDraft>({});
   const [input, setInput] = useState("");
   const [isLoading, setIsLoading] = useState(false);
-  const [error, setError] = useState("");
+  const [errorState, setErrorState] = useState<AssistantErrorState | null>(null);
   const [submitted, setSubmitted] = useState(false);
-  const [hasHydrated, setHasHydrated] = useState(false);
   const widgetRef = useRef<HTMLDivElement | null>(null);
   const buttonRef = useRef<HTMLButtonElement | null>(null);
   const messagesRef = useRef<HTMLDivElement | null>(null);
@@ -109,51 +253,17 @@ export function AiAssistantWidget({ enabled }: AiAssistantWidgetProps) {
   const isOpenRef = useRef(false);
   const hasStartedRef = useRef(false);
   const hasTrackedContactStepRef = useRef(false);
+  const hasTrackedContactResumedRef = useRef(false);
   const hasTrackedSubmittedRef = useRef(false);
+  const pendingTurnRef = useRef<PendingTurn | null>(null);
 
   useEffect(() => {
     isOpenRef.current = isOpen;
   }, [isOpen]);
 
   useEffect(() => {
-    if (typeof window === "undefined") {
-      return;
-    }
-
-    const stored = readStoredConversationState();
-    if (stored) {
-      setMessages(stored.messages.length ? trimMessages(stored.messages) : [...initialMessages]);
-      setLead(stored.lead);
-      setSubmitted(stored.submitted);
-      hasStartedRef.current = stored.messages.some((message) => message.role === "user");
-      hasTrackedSubmittedRef.current = stored.submitted;
-      hasTrackedContactStepRef.current = Boolean(stored.lead.email || stored.lead.telegram || stored.lead.whatsapp || stored.lead.name || stored.lead.company);
-    }
-
-    setHasHydrated(true);
-  }, []);
-
-  useEffect(() => {
-    if (!hasHydrated) {
-      return;
-    }
-
-    saveStoredConversationState({ messages, lead, submitted });
-  }, [hasHydrated, lead, messages, submitted]);
-
-  function closeAssistant() {
-    activeRequestRef.current += 1;
-    const wasSubmitted = submitted;
-    setIsOpen(false);
-    trackUmamiEvent("ai_assistant_closed", {
-      ...buildCurrentPageContext(),
-      conversation_stage: wasSubmitted ? "submitted" : "exploring",
-    });
-  }
-
-  useEffect(() => {
     messagesRef.current?.scrollTo({ top: messagesRef.current.scrollHeight, behavior: "smooth" });
-  }, [messages, isOpen]);
+  }, [messages, isOpen, isLoading]);
 
   useEffect(() => {
     if (isOpen && !isLoading) {
@@ -187,9 +297,7 @@ export function AiAssistantWidget({ enabled }: AiAssistantWidgetProps) {
 
       const footerRect = footer.getBoundingClientRect();
       const viewportHeight = window.innerHeight;
-      const baseBottom = Number.parseFloat(
-        window.getComputedStyle(widget).getPropertyValue("--ai-assistant-base-bottom"),
-      );
+      const baseBottom = Number.parseFloat(window.getComputedStyle(widget).getPropertyValue("--ai-assistant-base-bottom"));
       const buttonHeight = button.getBoundingClientRect().height;
 
       if (footerRect.top >= viewportHeight) {
@@ -197,8 +305,7 @@ export function AiAssistantWidget({ enabled }: AiAssistantWidgetProps) {
         return;
       }
 
-      const requiredLift =
-        viewportHeight - footerRect.top + assistantFooterGap - (Number.isFinite(baseBottom) ? baseBottom : 0);
+      const requiredLift = viewportHeight - footerRect.top + assistantFooterGap - (Number.isFinite(baseBottom) ? baseBottom : 0);
       const maxLift = Math.max(0, viewportHeight - buttonHeight - (Number.isFinite(baseBottom) ? baseBottom : 0) - assistantFooterGap);
       setFooterLift(Math.max(0, Math.min(requiredLift, maxLift)));
     };
@@ -260,8 +367,212 @@ export function AiAssistantWidget({ enabled }: AiAssistantWidgetProps) {
     };
   }, [pathname, enabled]);
 
-  if (!enabled) {
-    return null;
+  function clearSessionState() {
+    activeRequestRef.current += 1;
+    pendingTurnRef.current = null;
+    hasStartedRef.current = false;
+    hasTrackedContactStepRef.current = false;
+    hasTrackedContactResumedRef.current = false;
+    hasTrackedSubmittedRef.current = false;
+    setSessionPhase("closed");
+    setSessionId("");
+    setSessionLocale("en");
+    setMessages([]);
+    setLead({});
+    setInput("");
+    setIsLoading(false);
+    setErrorState(null);
+    setSubmitted(false);
+  }
+
+  function startFreshSession() {
+    clearSessionState();
+    const locale = resolveAssistantLocale(pathname || "/");
+    const nextSessionId = createSessionId();
+
+    setSessionLocale(locale);
+    setSessionId(nextSessionId);
+    setSessionPhase("active");
+    setMessages([
+      {
+        role: "assistant",
+        content: getWelcomeMessage(locale),
+      },
+    ]);
+  }
+
+  function closeAssistant() {
+    const hadActiveConversation =
+      messages.length > 1 ||
+      Boolean(input.trim()) ||
+      Boolean(Object.keys(lead).length) ||
+      submitted ||
+      isLoading ||
+      Boolean(errorState);
+
+    activeRequestRef.current += 1;
+
+    if (hadActiveConversation) {
+      trackUmamiEvent("assistant_closed_with_active_conversation", {
+        ...buildCurrentPageContext(),
+        conversation_stage: getConversationStage(sessionPhase, submitted),
+      });
+    }
+
+    trackUmamiEvent("ai_assistant_closed", {
+      ...buildCurrentPageContext(),
+      conversation_stage: submitted ? "submitted" : "exploring",
+    });
+
+    clearSessionState();
+    setIsOpen(false);
+  }
+
+  async function executeTurn(turn: PendingTurn, source: RetrySource | null = null) {
+    const requestId = ++activeRequestRef.current;
+    const currentPhase = turn.hadContactData ? "submitting_lead" : "waiting_for_response";
+    const shouldTrackContactResumed = source === "manual" || source === "auto";
+
+    pendingTurnRef.current = {
+      ...turn,
+      usedRetry: turn.usedRetry || source !== null,
+    };
+
+    setErrorState(null);
+    setSessionPhase(currentPhase);
+    setIsLoading(true);
+
+    if (source === "manual") {
+      trackUmamiEvent("assistant_retry_clicked", {
+        ...turn.pageContext,
+        conversation_stage: getConversationStage(currentPhase, turn.requestPayload.submissionCompleted),
+      });
+    }
+
+    if (shouldTrackContactResumed && turn.hadContactData && !hasTrackedContactResumedRef.current) {
+      hasTrackedContactResumedRef.current = true;
+      trackUmamiEvent("assistant_contact_collection_resumed", {
+        ...turn.pageContext,
+        conversation_stage: "contact_collection",
+      });
+    }
+
+    const attempts = source === "manual" ? 2 : 2;
+    let failure: AssistantErrorState | null = null;
+
+    for (let attempt = 0; attempt < attempts; attempt += 1) {
+      try {
+        const response = await fetch("/api/assistant", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(turn.requestPayload),
+        });
+
+        const contentType = response.headers.get("content-type") || "";
+        if (!contentType.toLowerCase().includes("application/json")) {
+          throw createRequestFailure(response.status >= 500 || response.status === 408 || response.status === 429 ? "server" : "malformed", response.status >= 500 || response.status === 408 || response.status === 429, "Assistant response was not JSON");
+        }
+
+        const data = (await response.json()) as AiAssistantApiResponse;
+
+        if (!response.ok || !data.ok || !data.message) {
+          throw createRequestFailure(response.status >= 500 || response.status === 408 || response.status === 429 ? "server" : "validation", response.status >= 500 || response.status === 408 || response.status === 429, data.error || "Assistant response was invalid");
+        }
+
+        if (requestId !== activeRequestRef.current || !isOpenRef.current) {
+          return;
+        }
+
+        const nextLead = data.lead || {};
+        const nextSubmitted = submitted || Boolean(data.submitted);
+        const nextPhase = nextSubmitted ? "completed" : hasLeadContactData(nextLead) ? "collecting_contacts" : "active";
+
+        setLead(nextLead);
+        setSubmitted(nextSubmitted);
+        setSessionPhase(nextPhase);
+        setMessages((current) => [...current, data.message as AssistantMessage]);
+
+        if (hasLeadContactData(nextLead) && !hasTrackedContactStepRef.current) {
+          hasTrackedContactStepRef.current = true;
+          trackUmamiEvent("assistant_contact_collection_started", {
+            ...turn.pageContext,
+            conversation_stage: "contact_collection",
+          });
+          trackUmamiEvent("ai_assistant_contact_step_started", {
+            ...turn.pageContext,
+            conversation_stage: "contact_collection",
+          });
+        }
+
+        if (nextSubmitted && !hasTrackedSubmittedRef.current) {
+          hasTrackedSubmittedRef.current = true;
+          trackUmamiEvent("ai_assistant_submitted", {
+            ...turn.pageContext,
+            submission_completed: true,
+            conversation_stage: "submitted",
+          });
+        }
+
+        if (failure) {
+          trackUmamiEvent("assistant_retry_success", {
+            ...turn.pageContext,
+            conversation_stage: getConversationStage(nextPhase, nextSubmitted),
+            error_category: failure.category,
+          });
+        }
+
+        pendingTurnRef.current = null;
+        setIsLoading(false);
+        return;
+      } catch (error) {
+        if (requestId !== activeRequestRef.current || !isOpenRef.current) {
+          return;
+        }
+
+        failure = classifyFailure(error, typeof error === "object" && error && "status" in error ? Number((error as { status?: unknown }).status) : undefined);
+
+        if (failure.retryable && attempt + 1 < attempts) {
+          pendingTurnRef.current = {
+            ...turn,
+            usedRetry: true,
+          };
+
+          await new Promise((resolve) => window.setTimeout(resolve, 400));
+          continue;
+        }
+
+        break;
+      }
+    }
+
+    if (requestId !== activeRequestRef.current || !isOpenRef.current) {
+      return;
+    }
+
+    const nextFailure = failure || createRequestFailure("unknown", true, "Temporary assistant error");
+    setSessionPhase("transient_error");
+    setErrorState({
+      category: nextFailure.category,
+      retryable: nextFailure.retryable,
+      message: getTemporaryErrorMessage(sessionLocale),
+    });
+
+    trackUmamiEvent("assistant_error", {
+      ...turn.pageContext,
+      conversation_stage: getConversationStage("transient_error", turn.requestPayload.submissionCompleted),
+      error_category: nextFailure.category,
+      retryable: nextFailure.retryable,
+    });
+    setIsLoading(false);
+  }
+
+  async function handleRetry() {
+    const turn = pendingTurnRef.current;
+    if (!turn || isLoading) {
+      return;
+    }
+
+    await executeTurn(turn, "manual");
   }
 
   async function handleSubmit(event: FormEvent<HTMLFormElement>) {
@@ -272,100 +583,59 @@ export function AiAssistantWidget({ enabled }: AiAssistantWidgetProps) {
       return;
     }
 
-    const requestId = ++activeRequestRef.current;
-    const userMessage: AssistantMessage = { role: "user", content };
-    const nextMessages = [...messages, userMessage];
     const pageContext = buildCurrentPageContext();
+    const requestLocale = sessionLocale || resolveAssistantLocale(pathname || "/");
+    const userMessage: AssistantMessage = { role: "user", content };
+    const nextMessages = trimMessages([...messages, userMessage]);
+    const nextLead = lead;
+    const nextSubmitted = submitted;
+    const nextRequestPayload = buildRequestPayload({
+      locale: requestLocale,
+      pageContext,
+      pathname: pathname || "/",
+      messages: nextMessages,
+      lead: nextLead,
+      submitted: nextSubmitted,
+    });
+    const hadContactData = hasLeadContactData(nextLead);
+    const nextPhase: AssistantSessionPhase = nextSubmitted ? "completed" : hadContactData ? "submitting_lead" : "waiting_for_response";
 
     if (!hasStartedRef.current) {
       hasStartedRef.current = true;
       trackUmamiEvent("ai_assistant_started", {
         ...pageContext,
-        conversation_stage: submitted ? "submitted" : "exploring",
+        conversation_stage: getConversationStage(nextPhase, nextSubmitted),
       });
     }
 
     trackUmamiEvent("ai_assistant_message_sent", {
       ...pageContext,
-      conversation_stage: submitted ? "submitted" : "exploring",
+      conversation_stage: getConversationStage(nextPhase, nextSubmitted),
     });
+
     setMessages(nextMessages);
     setInput("");
-    setError("");
-    setIsLoading(true);
+    setErrorState(null);
+    setSessionPhase(nextPhase);
 
-    try {
-      const response = await fetch("/api/assistant", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          context: {
-            locale: getBrowserLocale(),
-            currentPath: pathname || "/",
-            ...pageContext,
-            conversationMemory: buildAssistantConversationMemory(nextMessages, lead, {
-              currentPath: pathname || "/",
-              locale: getBrowserLocale() as AssistantLocale | undefined,
-              country: pageContext.country_market,
-              visitorIntent: pageContext.page_type === "pricing" ? "pricing" : pageContext.page_type === "contacts" ? "contact" : pageContext.page_type === "services" ? "services" : "unknown",
-            }),
-          },
-          messages: nextMessages.slice(-maxRequestMessages),
-          lead,
-          submissionCompleted: submitted,
-        }),
-      });
-      const contentType = response.headers.get("content-type") || "";
+    const pendingTurn: PendingTurn = {
+      sessionId,
+      locale: requestLocale,
+      pageContext,
+      requestPayload: nextRequestPayload,
+      hadContactData,
+      usedRetry: false,
+    };
 
-      if (!contentType.toLowerCase().includes("application/json")) {
-        throw new Error(assistantUnavailableMessage);
-      }
-
-      const data = (await response.json()) as AiAssistantApiResponse;
-
-      if (!response.ok || !data.ok || !data.message) {
-        throw new Error(data.error || assistantUnavailableMessage);
-      }
-
-      if (requestId !== activeRequestRef.current || !isOpenRef.current) {
-        return;
-      }
-
-      const nextLead = data.lead || {};
-      const hadContactData = Boolean(nextLead.name || nextLead.company || nextLead.email || nextLead.telegram || nextLead.whatsapp);
-
-      setLead(nextLead);
-      setSubmitted((current) => current || Boolean(data.submitted));
-      setMessages((current) => [...current, data.message as AssistantMessage]);
-
-      if (hadContactData && !hasTrackedContactStepRef.current) {
-        hasTrackedContactStepRef.current = true;
-        trackUmamiEvent("ai_assistant_contact_step_started", {
-          ...buildCurrentPageContext(),
-          conversation_stage: "contact_collection",
-        });
-      }
-
-      if (Boolean(data.submitted) && !hasTrackedSubmittedRef.current) {
-        hasTrackedSubmittedRef.current = true;
-        trackUmamiEvent("ai_assistant_submitted", {
-          ...buildCurrentPageContext(),
-          submission_completed: true,
-          conversation_stage: "submitted",
-        });
-      }
-    } catch {
-      if (requestId !== activeRequestRef.current || !isOpenRef.current) {
-        return;
-      }
-
-      setError(assistantUnavailableMessage);
-    } finally {
-      if (requestId === activeRequestRef.current) {
-        setIsLoading(false);
-      }
-    }
+    pendingTurnRef.current = pendingTurn;
+    await executeTurn(pendingTurn);
   }
+
+  if (!enabled) {
+    return null;
+  }
+
+  const uiCopy = getCopy(sessionLocale);
 
   return (
     <div
@@ -381,10 +651,15 @@ export function AiAssistantWidget({ enabled }: AiAssistantWidgetProps) {
         aria-controls="kubera-ai-assistant-panel"
         ref={buttonRef}
         onClick={() => {
+          if (isOpen) {
+            return;
+          }
+
+          startFreshSession();
           setIsOpen(true);
           trackUmamiEvent("ai_assistant_opened", {
             ...buildCurrentPageContext(),
-            conversation_stage: submitted ? "submitted" : "initial",
+            conversation_stage: "initial",
           });
         }}
       >
@@ -427,7 +702,14 @@ export function AiAssistantWidget({ enabled }: AiAssistantWidgetProps) {
           {isLoading ? <div className="ai-assistant-message is-assistant">...</div> : null}
         </div>
 
-        {error ? <p className="ai-assistant-error">{error}</p> : null}
+        {errorState ? (
+          <div className="ai-assistant-error" role="alert">
+            <span>{errorState.message}</span>
+            <button className="ai-assistant-error-retry" type="button" onClick={handleRetry} disabled={isLoading}>
+              {getRetryLabel(sessionLocale)}
+            </button>
+          </div>
+        ) : null}
 
         <form className="ai-assistant-form" onSubmit={handleSubmit}>
           <input
@@ -435,13 +717,13 @@ export function AiAssistantWidget({ enabled }: AiAssistantWidgetProps) {
             disabled={isLoading}
             maxLength={1200}
             onChange={(event) => setInput(event.target.value)}
-            placeholder="Type your message"
+            placeholder={getPlaceholder(sessionLocale)}
             ref={inputRef}
             type="text"
             value={input}
           />
-          <button type="submit" disabled={isLoading || !input.trim()} aria-label="Send message">
-            Send
+          <button type="submit" disabled={isLoading || !input.trim()} aria-label={getSendLabel(sessionLocale)}>
+            {getSendLabel(sessionLocale)}
           </button>
         </form>
       </aside>

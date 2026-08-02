@@ -1,120 +1,173 @@
 # Kubera AI Analytics
 
-Umami подключён как глобальный слой анонимной аналитики для сайта Kubera AI.
+Umami is the production analytics layer for Kubera AI. It is loaded globally from the shared site shell so it covers all current and future pages without editing each route.
 
-## Что измеряем
+## What Victoria can see
 
-- Посещения и уникальных посетителей
-- Страны и регионы
-- Страницы входа и выхода
-- Время на сайте и на странице
-- Возвратные визиты
-- Источники трафика и UTM
-- Устройства, браузеры и язык браузера
-- Клики по CTA
-- Клики по WhatsApp, Telegram и email
-- Открытие и использование AI-ассистента
-- Открытие и отправка контактной формы
-- Использование калькулятора
-- Внешние ссылки
+- page views
+- unique visitors
+- sessions
+- countries and regions
+- landing pages and exit pages
+- referrers and UTM values
+- returning visitors
+- device, browser, operating system, and screen size
+- custom events for CTA clicks, contact links, calculator usage, assistant usage, and contact forms
 
-## Что не собираем
+## What we do not send
 
-- Имена, email, телефоны, WhatsApp-номера, Telegram usernames
-- Текст сообщений форм и AI-ассистента
-- Названия компаний
-- CRM record IDs
-- Любые токены, пароли, salts и приватные ключи
+- names
+- email addresses
+- phone numbers
+- WhatsApp numbers
+- Telegram usernames
+- CRM IDs
+- form text
+- assistant transcripts
+- company names
 
-## Где смотреть в Umami
+## Session lifecycle
 
-- **Общая посещаемость** - Overview сайта
-- **Страны и регионы** - Geography / Countries / Regions
-- **Отдельные страницы** - Pages
-- **Переходы и источники** - Referrers / Channels / UTM
-- **Время и вовлечённость** - Sessions / Pages
-- **События** - Events
-- **Конверсии** - Goals
-- **Сегментация** - Filters / Segments
+- Opening the assistant always starts a fresh session.
+- The welcome message is shown only for the new open session.
+- While the widget remains open, the active conversation stays in memory.
+- A transient API, model, timeout, or network failure does not reset the conversation.
+- Closing the widget intentionally clears the visible conversation, lead draft, compact memory, error state, and session identifier.
+- Reopening the widget after a close always starts a new conversation.
 
-## Русский словарь событий
+## Compact memory strategy
 
-- `page_context` - контекст страницы
-- `primary_cta_click` - клик по основному CTA
-- `secondary_cta_click` - клик по вторичному CTA
-- `pricing_viewed` - просмотр блока цен
-- `pricing_package_clicked` - клик по пакету цен
-- `pricing_cta_clicked` - клик по CTA в блоке цен
-- `calculator_viewed` - открытие калькулятора
-- `calculator_started` - начало использования калькулятора
-- `calculator_completed` - завершение калькулятора
-- `calculator_result_cta_clicked` - клик по CTA после расчёта
-- `ai_assistant_opened` - открытие AI-ассистента
-- `ai_assistant_closed` - закрытие AI-ассистента
-- `ai_assistant_started` - начало диалога
-- `ai_assistant_message_sent` - отправка сообщения в ассистент
-- `ai_assistant_contact_step_started` - начало шага сбора контактов
-- `ai_assistant_submitted` - передача контактов ассистенту
-- `contact_form_opened` - открытие контактной формы
-- `contact_form_started` - начало заполнения формы
-- `contact_form_submitted` - отправка формы
-- `contact_form_success` - успешная отправка формы
-- `contact_form_error` - ошибка отправки формы
-- `email_click` - клик по email
-- `telegram_click` - клик по Telegram
-- `whatsapp_click` - клик по WhatsApp
-- `phone_click` - клик по телефону
-- `external_link_click` - клик по внешней ссылке
+The assistant sends a bounded message window plus a compact structured memory summary to the backend.
 
-## Типы страниц
+The memory summary keeps only safe, useful facts:
 
-- `home` - главная
-- `services` - услуги
-- `country_landing` - лендинг по стране
-- `industry_solution` - отраслевое решение
-- `use_case` - сценарий использования
-- `case` - кейс
-- `blog` - блог
-- `pricing` - цены
-- `calculator` - калькулятор
-- `contacts` - контакты
-- `how_we_work` - как мы работаем
-- `demo` - демо
-- `other` - другая страница
+- language
+- page path
+- country
+- company
+- business type or intent
+- service interest
+- urgency
+- budget
+- collected contact fields
 
-## Принцип работы
+This keeps long conversations stable without sending an unbounded transcript.
 
-- Tracker подключён один раз в `src/components/core/SiteShell.tsx`.
-- Включение только на production.
-- Preview-окружения и local dev не трекаются по умолчанию.
-- Автоматический pageview оставлен Umami.
-- Дополнительные события передаются только через безопасные свойства без PII.
+## Contact collection state machine
 
-## Приватность
+The assistant follows a stable flow:
 
-- Трекинг анонимный и cookieless.
-- `Do Not Track` уважается.
-- Не отправляем персональные данные в Umami.
-- В CRM передаются только данные, необходимые для лида, отдельным approved workflow.
+- `closed`
+- `active`
+- `waiting_for_response`
+- `collecting_contacts`
+- `submitting_lead`
+- `transient_error`
+- `completed`
 
-## Отключение аналитики
+Rules:
 
-Для временного отключения аналитики без поломки сайта:
+- Never ask for a field already provided.
+- Distinguish email, phone, WhatsApp, and Telegram.
+- Resume from the last missing field after a transient error.
+- Submit the lead only once.
+- Keep partial progress until the user closes the widget.
 
-1. Уберите или очистите `NEXT_PUBLIC_UMAMI_SCRIPT_URL`
-2. Уберите или очистите `NEXT_PUBLIC_UMAMI_WEBSITE_ID`
-3. Пересоберите и задеплойте сайт
+## Retry behavior
 
-Tracker в этом случае просто не отрендерится, а сайт продолжит работать.
+- One automatic retry is allowed for transient network or 5xx failures.
+- Validation and malformed-response failures are not retried automatically.
+- The user sees a calm retry message in their current language.
+- The retry button retries only the failed request.
+- Closing the widget clears all retry state.
 
-## Добавление нового трекинга
+## Analytics dictionary
 
-1. Используйте уже существующий `trackUmamiEvent()` или глобальный `data-analytics-event`.
-2. Не передавайте значения полей форм, сообщения или CRM-идентификаторы.
-3. Для новых CTA используйте понятное имя события и безопасные свойства:
-   - `page_path`
-   - `page_language`
-   - `page_type`
-   - `placement`
-   - `cta_id`
-4. Если нужен новый тип отчёта, сначала проверьте, можно ли получить его через Pages / Events / Filters / Goals без добавления нового события.
+- `page_context` - page context snapshot
+- `primary_cta_click` - primary CTA click
+- `secondary_cta_click` - secondary CTA click
+- `pricing_viewed` - pricing section viewed
+- `pricing_package_clicked` - pricing package clicked
+- `pricing_cta_clicked` - pricing CTA clicked
+- `calculator_viewed` - calculator opened
+- `calculator_started` - calculator started
+- `calculator_completed` - calculator completed
+- `calculator_result_cta_clicked` - CTA clicked after calculator
+- `ai_assistant_opened` - assistant opened
+- `ai_assistant_closed` - assistant closed
+- `ai_assistant_started` - first assistant message sent
+- `ai_assistant_message_sent` - user sent a message
+- `ai_assistant_contact_step_started` - contact collection started
+- `ai_assistant_submitted` - lead submitted to CRM
+- `assistant_error` - transient assistant error
+- `assistant_retry_clicked` - retry clicked by user
+- `assistant_retry_success` - retry succeeded
+- `assistant_contact_collection_started` - contact collection began
+- `assistant_contact_collection_resumed` - contact collection resumed after an error
+- `assistant_closed_with_active_conversation` - widget closed while a conversation was active
+- `contact_form_opened` - contact form opened
+- `contact_form_started` - contact form started
+- `contact_form_submitted` - contact form submitted
+- `contact_form_success` - contact form succeeded
+- `contact_form_error` - contact form failed
+- `email_click` - email link clicked
+- `telegram_click` - Telegram link clicked
+- `whatsapp_click` - WhatsApp link clicked
+- `phone_click` - phone link clicked
+- `external_link_click` - outbound link clicked
+- `blog_article_opened` - blog article viewed
+- `case_opened` - case viewed
+- `service_page_viewed` - service page viewed
+- `country_landing_viewed` - country landing page viewed
+- `industry_solution_viewed` - industry solution viewed
+
+## Page categories
+
+- `home` - Главная
+- `services` - Услуги
+- `country_landing` - Лендинг по стране
+- `industry_solution` - Отраслевое решение
+- `use_case` - Use Case
+- `case` - Кейсы
+- `blog` - Блог
+- `pricing` - Цены
+- `calculator` - Калькулятор
+- `contacts` - Контакты
+- `how_we_work` - Как мы работаем
+- `demo` - Демо
+- `other` - Другая страница
+
+## Where Victoria looks in Umami
+
+- Countries and regions: Geography
+- Exact pages: Pages
+- English vs Russian pages: Pages, filtered by `/ru` and English routes
+- Traffic sources: Referrers and UTM reports
+- Session duration: Sessions and Pages
+- Calculator usage: Events and Goals
+- AI assistant usage: Events and Goals
+- Conversions: Goals and Boards
+
+## Operational rules
+
+- Tracker loads asynchronously from the shared site shell.
+- No paid Umami features are used.
+- No analytics payload contains PII.
+- Analytics failures must not break rendering, forms, calculator behavior, or the assistant.
+
+## Disable analytics safely
+
+To disable analytics without breaking the site:
+
+1. Remove or clear `NEXT_PUBLIC_UMAMI_SCRIPT_URL`.
+2. Remove or clear `NEXT_PUBLIC_UMAMI_WEBSITE_ID`.
+3. Redeploy the website.
+
+The website continues to work because the tracker is optional.
+
+## Rollback
+
+- Revert the website commit that introduced the assistant lifecycle fix or analytics change.
+- Leave Umami historical data intact.
+- Do not touch NocoDB or n8n unless the rollback explicitly includes them.
+
