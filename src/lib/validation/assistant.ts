@@ -20,12 +20,19 @@ export const assistantLeadSchema = z.object({
   leadScore: z.number().min(0).max(100).optional(),
 });
 
+const assistantConversationMemorySchema = z.object({
+  summary: z.preprocess((value) => sanitizeText(value, 4000), z.string().min(1).max(4000)),
+  turnCount: z.number().int().min(0).max(1000),
+  locale: assistantLocaleSchema.optional(),
+});
+
 export const assistantRequestSchema = z.object({
   context: z.object({
     locale: assistantLocaleSchema.optional(),
     currentPath: z.preprocess((value) => sanitizeText(value, 240), z.string().min(1).max(240)),
     country: z.preprocess((value) => sanitizeText(value, 120) || undefined, z.string().max(120).optional()),
     visitorIntent: z.enum(["services", "pricing", "contact", "support", "unknown"]).optional(),
+    conversationMemory: assistantConversationMemorySchema.optional(),
   }),
   messages: z.array(assistantMessageSchema).min(1).max(20),
   lead: assistantLeadSchema.optional(),

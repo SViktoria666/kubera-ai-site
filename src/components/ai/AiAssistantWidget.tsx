@@ -4,13 +4,18 @@ import Image from "next/image";
 import { FormEvent, useEffect, useRef, useState } from "react";
 import { usePathname } from "next/navigation";
 import type { AiAssistantApiResponse, AiAssistantWidgetProps } from "@/components/ai/types";
-import type { AssistantLeadDraft, AssistantMessage } from "@/lib/ai/types";
+import { buildAssistantConversationMemory } from "@/lib/ai/conversation-memory";
+import type { AssistantLeadDraft, AssistantLocale, AssistantMessage } from "@/lib/ai/types";
 import { buildCurrentPageContext, trackUmamiEvent } from "@/lib/analytics";
+
+const assistantStorageKey = "kubera-ai-assistant-state-v2";
+const maxStoredMessages = 60;
+const maxRequestMessages = 20;
 
 const initialMessages: AssistantMessage[] = [
   {
     role: "assistant",
-    content: "Tell me what you want to automate or improve first.",
+    content: "Hi, I’m Kubera AI Assistant. Tell me what you’d like to automate or improve, and I’ll help you find the best fit.",
   },
 ];
 
@@ -27,6 +32,64 @@ function getBrowserLocale() {
   return language || undefined;
 }
 
+function trimMessages(messages: AssistantMessage[]) {
+  if (messages.length <= maxStoredMessages) {
+    return messages;
+  }
+
+  return messages.slice(-maxStoredMessages);
+}
+
+function readStoredConversationState() {
+  if (typeof window === "undefined") {
+    return null;
+  }
+
+  try {
+    const raw = window.sessionStorage.getItem(assistantStorageKey);
+    if (!raw) {
+      return null;
+    }
+
+    const parsed = JSON.parse(raw) as {
+      messages?: AssistantMessage[];
+      lead?: AssistantLeadDraft;
+      submitted?: boolean;
+    };
+
+    if (!Array.isArray(parsed.messages)) {
+      return null;
+    }
+
+    return {
+      messages: parsed.messages,
+      lead: parsed.lead || {},
+      submitted: Boolean(parsed.submitted),
+    };
+  } catch {
+    return null;
+  }
+}
+
+function saveStoredConversationState(state: { messages: AssistantMessage[]; lead: AssistantLeadDraft; submitted: boolean }) {
+  if (typeof window === "undefined") {
+    return;
+  }
+
+  try {
+    window.sessionStorage.setItem(
+      assistantStorageKey,
+      JSON.stringify({
+        messages: trimMessages(state.messages),
+        lead: state.lead,
+        submitted: state.submitted,
+      }),
+    );
+  } catch {
+    // Ignore storage failures; the widget should keep working without persistence.
+  }
+}
+
 export function AiAssistantWidget({ enabled }: AiAssistantWidgetProps) {
   const pathname = usePathname();
   const [isOpen, setIsOpen] = useState(false);
@@ -37,6 +100,7 @@ export function AiAssistantWidget({ enabled }: AiAssistantWidgetProps) {
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState("");
   const [submitted, setSubmitted] = useState(false);
+  const [hasHydrated, setHasHydrated] = useState(false);
   const widgetRef = useRef<HTMLDivElement | null>(null);
   const buttonRef = useRef<HTMLButtonElement | null>(null);
   const messagesRef = useRef<HTMLDivElement | null>(null);
@@ -51,23 +115,36 @@ export function AiAssistantWidget({ enabled }: AiAssistantWidgetProps) {
     isOpenRef.current = isOpen;
   }, [isOpen]);
 
-  function resetConversationState() {
-    setMessages([...initialMessages]);
-    setLead({});
-    setInput("");
-    setIsLoading(false);
-    setError("");
-    setSubmitted(false);
-    hasStartedRef.current = false;
-    hasTrackedContactStepRef.current = false;
-    hasTrackedSubmittedRef.current = false;
-  }
+  useEffect(() => {
+    if (typeof window === "undefined") {
+      return;
+    }
+
+    const stored = readStoredConversationState();
+    if (stored) {
+      setMessages(stored.messages.length ? trimMessages(stored.messages) : [...initialMessages]);
+      setLead(stored.lead);
+      setSubmitted(stored.submitted);
+      hasStartedRef.current = stored.messages.some((message) => message.role === "user");
+      hasTrackedSubmittedRef.current = stored.submitted;
+      hasTrackedContactStepRef.current = Boolean(stored.lead.email || stored.lead.telegram || stored.lead.whatsapp || stored.lead.name || stored.lead.company);
+    }
+
+    setHasHydrated(true);
+  }, []);
+
+  useEffect(() => {
+    if (!hasHydrated) {
+      return;
+    }
+
+    saveStoredConversationState({ messages, lead, submitted });
+  }, [hasHydrated, lead, messages, submitted]);
 
   function closeAssistant() {
     activeRequestRef.current += 1;
     const wasSubmitted = submitted;
     setIsOpen(false);
-    resetConversationState();
     trackUmamiEvent("ai_assistant_closed", {
       ...buildCurrentPageContext(),
       conversation_stage: wasSubmitted ? "submitted" : "exploring",
@@ -198,16 +275,18 @@ export function AiAssistantWidget({ enabled }: AiAssistantWidgetProps) {
     const requestId = ++activeRequestRef.current;
     const userMessage: AssistantMessage = { role: "user", content };
     const nextMessages = [...messages, userMessage];
+    const pageContext = buildCurrentPageContext();
+
     if (!hasStartedRef.current) {
       hasStartedRef.current = true;
       trackUmamiEvent("ai_assistant_started", {
-        ...buildCurrentPageContext(),
+        ...pageContext,
         conversation_stage: submitted ? "submitted" : "exploring",
       });
     }
 
     trackUmamiEvent("ai_assistant_message_sent", {
-      ...buildCurrentPageContext(),
+      ...pageContext,
       conversation_stage: submitted ? "submitted" : "exploring",
     });
     setMessages(nextMessages);
@@ -223,8 +302,15 @@ export function AiAssistantWidget({ enabled }: AiAssistantWidgetProps) {
           context: {
             locale: getBrowserLocale(),
             currentPath: pathname || "/",
+            ...pageContext,
+            conversationMemory: buildAssistantConversationMemory(nextMessages, lead, {
+              currentPath: pathname || "/",
+              locale: getBrowserLocale() as AssistantLocale | undefined,
+              country: pageContext.country_market,
+              visitorIntent: pageContext.page_type === "pricing" ? "pricing" : pageContext.page_type === "contacts" ? "contact" : pageContext.page_type === "services" ? "services" : "unknown",
+            }),
           },
-          messages: nextMessages,
+          messages: nextMessages.slice(-maxRequestMessages),
           lead,
           submissionCompleted: submitted,
         }),

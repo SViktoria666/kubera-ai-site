@@ -5,6 +5,7 @@ export type AssistantContext = {
   currentPath: string;
   country?: string;
   visitorIntent?: "services" | "pricing" | "contact" | "support" | "unknown";
+  conversationMemory?: AssistantConversationMemory;
 };
 
 export type AssistantMessage = {
@@ -24,6 +25,12 @@ export type AssistantLeadDraft = {
   leadScore?: number;
 };
 
+export type AssistantConversationMemory = {
+  summary: string;
+  turnCount: number;
+  locale?: AssistantLocale;
+};
+
 export type AssistantRequest = {
   context: AssistantContext;
   messages: AssistantMessage[];
@@ -41,4 +48,5 @@ export type AssistantResponse = {
 
 export type AssistantProviderContext = {
   knowledgeContext?: import("@/lib/ai/knowledge-base").SelectedKnowledgeContext;
+  conversationMemory?: AssistantConversationMemory;
 };

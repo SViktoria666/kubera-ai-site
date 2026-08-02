@@ -30,7 +30,7 @@ const localePatterns = [
 
 const prompts = {
   en: {
-    need: "Tell me what you want to automate or improve first.",
+    need: "Hi, I'm Kubera AI Assistant. Tell me what you'd like to automate or improve, and I'll help you find the best fit.",
     urgency: "What makes this important now? For example: lost leads, slow replies, manual work, or a deadline.",
     name: "What is your name?",
     company: "What company are you from?",
@@ -39,7 +39,7 @@ const prompts = {
     ready: "Thanks. I have enough context and will pass this to the Kubera AI team.",
   },
   ru: {
-    need: "Сначала расскажите, что вы хотите автоматизировать или улучшить.",
+    need: "Привет! Я Kubera AI Assistant. Расскажите, что вы хотите автоматизировать или улучшить, и я помогу подобрать лучший вариант.",
     urgency: "Почему это важно сейчас? Например: теряются лиды, медленные ответы, ручная работа или дедлайн.",
     name: "Как вас зовут?",
     company: "Из какой вы компании?",
@@ -48,7 +48,7 @@ const prompts = {
     ready: "Спасибо. Контекста достаточно, передам это команде Kubera AI.",
   },
   es: {
-    need: "Primero, cuéntame qué quieres automatizar o mejorar.",
+    need: "Hola, soy Kubera AI Assistant. Cuéntame qué te gustaría automatizar o mejorar y te ayudaré a encontrar la mejor opción.",
     urgency: "¿Por qué es importante ahora? Por ejemplo: leads perdidos, respuestas lentas, trabajo manual o una fecha límite.",
     name: "¿Cómo te llamas?",
     company: "¿De qué empresa eres?",
@@ -66,14 +66,14 @@ const responseTimePattern =
 
 function getConsultativeResponse(locale: AssistantResponse["locale"]) {
   if (locale === "ru") {
-    return "Да, такие проекты находятся в зоне компетенции Kubera AI. Для точной оценки команда уточнит детали и предложит оптимальное решение. Что именно вы хотите автоматизировать или улучшить?";
+    return "Да, такие проекты находятся в зоне компетенции Kubera AI. Для точной оценки команда уточнит детали и предложит оптимальное решение. Если хотите, я также могу подсказать релевантную статью, кейс или страницу услуги. Что именно вы хотите автоматизировать или улучшить?";
   }
 
   if (locale === "es") {
-    return "Si, este tipo de proyectos esta dentro de la competencia de Kubera AI. Para una evaluacion precisa, el equipo aclarara los detalles y propondra la solucion optima. Que quieres automatizar o mejorar exactamente?";
+    return "Si, este tipo de proyectos esta dentro de la competencia de Kubera AI. Para una evaluacion precisa, el equipo aclarara los detalles y propondra la solucion optima. Si quieres, tambien puedo sugerirte un articulo, caso o pagina de servicio relevante. Que quieres automatizar o mejorar exactamente?";
   }
 
-  return "Yes, projects like this are within Kubera AI's area of competence. For an accurate assessment, the team will clarify the details and propose the optimal solution. What exactly do you want to automate or improve?";
+  return "Yes, projects like this are within Kubera AI's area of competence. For an accurate assessment, the team will clarify the details and propose the optimal solution. If you'd like, I can also point you to a relevant blog article, case study, or service page. What exactly do you want to automate or improve?";
 }
 
 function getResponseTimeResponse(locale: AssistantResponse["locale"]) {
