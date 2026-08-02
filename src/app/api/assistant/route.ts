@@ -32,6 +32,16 @@ function getKnowledgeKeywords(messages: Array<{ role: string; content: string }>
   );
 }
 
+function getLatestUserMessage(messages: Array<{ role: string; content: string }>) {
+  return [...messages].reverse().find((message) => message.role === "user")?.content.trim() || "";
+}
+
+function buildTranscript(messages: Array<{ role: string; content: string }>) {
+  return messages
+    .map((message) => `${message.role.toUpperCase()}: ${message.content}`)
+    .join("\n");
+}
+
 function withTimeout<T>(promise: Promise<T>, timeoutMs: number): Promise<T> {
   return new Promise((resolve, reject) => {
     const timeout = setTimeout(() => reject(new Error("assistant_provider_timeout")), timeoutMs);
@@ -231,7 +241,16 @@ export async function POST(request: Request) {
         return NextResponse.json({ ok: true, requestId, ...withSubmittedMessage(assistantResponse), submitted, duplicateSubmission });
       }
 
-      const delivery = await sendAssistantLeadToN8n(assistantResponse.lead);
+      const originalMessage = getLatestUserMessage(parsed.data.messages);
+      const transcript = buildTranscript(parsed.data.messages);
+      const delivery = await sendAssistantLeadToN8n({
+        ...assistantResponse.lead,
+        locale: parsed.data.context.locale,
+        page: parsed.data.context.currentPath,
+        source: "kubera-ai-site",
+        originalMessage: originalMessage || undefined,
+        transcript: transcript || undefined,
+      });
 
       if (!delivery.ok) {
         releaseAssistantSubmission(submissionHash);

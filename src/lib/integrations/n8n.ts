@@ -101,13 +101,26 @@ export type N8nAssistantLeadPayload = {
   urgency: string;
   country: string;
   leadScore: number;
+  locale?: string;
+  page?: string;
+  source?: string;
+  originalMessage?: string;
+  transcript?: string;
 };
 
 export function isAssistantN8nConfigured() {
   return Boolean(process.env.N8N_AI_LEAD_ASSISTANT_WEBHOOK_URL);
 }
 
-export function createN8nAssistantLeadPayload(lead: AssistantLeadDraft): N8nAssistantLeadPayload {
+export type AssistantLeadSubmission = AssistantLeadDraft & {
+  locale?: string;
+  page?: string;
+  source?: string;
+  originalMessage?: string;
+  transcript?: string;
+};
+
+export function createN8nAssistantLeadPayload(lead: AssistantLeadSubmission): N8nAssistantLeadPayload {
   return {
     createdAt: new Date().toISOString(),
     name: lead.name || "",
@@ -119,10 +132,15 @@ export function createN8nAssistantLeadPayload(lead: AssistantLeadDraft): N8nAssi
     urgency: lead.urgency || "",
     country: lead.country || "",
     leadScore: lead.leadScore ?? 0,
+    locale: lead.locale,
+    page: lead.page,
+    source: lead.source,
+    originalMessage: lead.originalMessage,
+    transcript: lead.transcript,
   };
 }
 
-export async function sendAssistantLeadToN8n(lead: AssistantLeadDraft) {
+export async function sendAssistantLeadToN8n(lead: AssistantLeadSubmission) {
   const webhookUrl = process.env.N8N_AI_LEAD_ASSISTANT_WEBHOOK_URL;
 
   if (!webhookUrl) {

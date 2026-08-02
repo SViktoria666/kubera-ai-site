@@ -48,3 +48,7 @@ Spanish:
 
 - The visible `hello@kubera-automation.com` contact links in the contacts section and footer use `mailto:` and remain keyboard accessible.
 
+## Assistant Handoff
+
+- The production assistant route forwards the original customer message and transcript to the CRM handoff payload so downstream lead records can preserve the source language and context.
+
