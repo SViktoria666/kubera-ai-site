@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { AmbientTechCloud } from "@/components/decorative/AmbientTechCloud";
 
 type HeroSectionProps = {
   eyebrow?: string;
@@ -11,6 +12,7 @@ type HeroSectionProps = {
 export function HeroSection({ eyebrow, title, lead, ctaLabel, ctaHref }: HeroSectionProps) {
   return (
     <section className="hero">
+      <AmbientTechCloud variant="hero" />
       <div className="container hero-content">
         {eyebrow ? <p className="eyebrow">{eyebrow}</p> : null}
         <h1 className="hero-title">{title}</h1>

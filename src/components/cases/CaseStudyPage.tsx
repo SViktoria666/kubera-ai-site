@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import type { ReactNode } from "react";
+import { AmbientTechCloud } from "@/components/decorative/AmbientTechCloud";
 import type { CaseLocale, CaseStudy, CaseStudyType } from "@/content/cases";
 import { getCasePageContent } from "@/content/cases";
 import { getCaseSolutionLinks, getCaseUseCaseLinks } from "@/content/internal-linking";
@@ -172,6 +173,7 @@ function LegacyCaseStudyPage({ caseStudy }: { caseStudy: CaseStudy }) {
   return (
     <>
       <section className="hero">
+        <AmbientTechCloud variant="compact" />
         <div className="container hero-content">
           <p className="eyebrow">{caseStudy.label}</p>
           <h1 className="hero-title">{caseStudy.title}</h1>
@@ -320,6 +322,7 @@ function DetailedCaseStudyPage({ caseStudy, locale }: CaseStudyPageProps) {
   return (
     <main className="case-study-page">
       <section className="hero">
+        <AmbientTechCloud variant="compact" />
         <div className="container hero-content">
           <p className="eyebrow">{content.label}</p>
           <h1 className="hero-title">{content.heroTitle}</h1>

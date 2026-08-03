@@ -1,3 +1,4 @@
+import { AmbientTechCloud } from "@/components/decorative/AmbientTechCloud";
 import { ContactForm } from "@/components/forms/ContactForm";
 import { siteConfig } from "@/content/site";
 
@@ -7,6 +8,7 @@ export function ContactSection({ locale }: { locale: "en" | "ru" }) {
   return (
     <main className="section">
       <div className="container contact-layout">
+        <AmbientTechCloud variant="compact" />
         <div>
           <h1 className="section-title">{isRu ? "Расскажите о вашем бизнесе." : "Tell us about your business."}</h1>
           <div className="contact-links">

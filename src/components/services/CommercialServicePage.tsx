@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import type { ReactNode } from "react";
+import { AmbientTechCloud } from "@/components/decorative/AmbientTechCloud";
 import { siteConfig } from "@/content/site";
 import type { ServicePageContent } from "@/content/service-pages/types";
 
@@ -108,6 +109,7 @@ export function CommercialServicePage({ content }: { content: ServicePageContent
       <section className="solution-shell">
         <div className="container solution-container">
           <section className={`solution-hero${hasHeroVisual ? " solution-hero--with-visual" : ""}`}>
+            <AmbientTechCloud variant="solution" />
             <div className="solution-hero-copy">
               <p className="eyebrow">{content.hero.eyebrow}</p>
               <p

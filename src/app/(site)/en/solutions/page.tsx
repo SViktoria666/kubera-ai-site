@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { AmbientTechCloud } from "@/components/decorative/AmbientTechCloud";
 import { createPageMetadata } from "@/content/seo";
 import { siteConfig } from "@/content/site";
 import {
@@ -88,6 +89,7 @@ export default function SolutionsHubPage() {
       ))}
 
       <section className="hero">
+        <AmbientTechCloud variant="hero" />
         <div className="container hero-content">
           <p className="eyebrow">Solutions hub</p>
           <h1 className="hero-title">AI Automation Solutions by Industry and Country</h1>

@@ -1,10 +1,12 @@
 import Link from "next/link";
 import type { IndustrySolution } from "@/content/industry-solutions";
+import { AmbientTechCloud } from "@/components/decorative/AmbientTechCloud";
 import { IndustryArrowIcon } from "./IndustryArrowIcon";
 
 export function IndustrySolutionHero({ solution }: { solution: IndustrySolution }) {
   return (
     <section className="solution-hero">
+      <AmbientTechCloud variant="solution" />
       <div className="solution-hero-copy">
         <p className="eyebrow">{solution.hero.label}</p>
         <h1 className="solution-title">{solution.hero.title}</h1>

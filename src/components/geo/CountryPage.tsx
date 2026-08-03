@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { AmbientTechCloud } from "@/components/decorative/AmbientTechCloud";
 import type { CountryPageContent } from "@/content/types";
 import { getCountrySolutionHubCard, getCountrySolutionLinks } from "@/content/internal-linking";
 
@@ -23,6 +24,7 @@ export function CountryPage({ country }: { country: CountryPageContent }) {
     <main>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       <section className="hero">
+        <AmbientTechCloud variant="compact" />
         <div className="container hero-content">
           <p className="eyebrow">GEO / AEO</p>
           <h1 className="hero-title">{country.heading}</h1>
