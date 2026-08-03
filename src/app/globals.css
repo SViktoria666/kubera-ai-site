@@ -384,8 +384,8 @@ main {
 .ambient-tech-cloud__glow {
   position: absolute;
   border-radius: 999px;
-  filter: blur(24px);
-  opacity: 0.18;
+  filter: blur(22px);
+  opacity: 0.14;
   pointer-events: none;
 }
 
@@ -393,165 +393,277 @@ main {
   inset: auto auto -10% -12%;
   width: 42%;
   height: 52%;
-  background: radial-gradient(circle, rgba(114, 66, 255, 0.18) 0%, rgba(114, 66, 255, 0.06) 42%, transparent 72%);
+  background: radial-gradient(circle, rgba(114, 66, 255, 0.16) 0%, rgba(114, 66, 255, 0.05) 42%, transparent 72%);
 }
 
 .ambient-tech-cloud__glow--right {
   inset: -12% -14% auto auto;
   width: 44%;
   height: 48%;
-  background: radial-gradient(circle, rgba(50, 122, 255, 0.16) 0%, rgba(50, 122, 255, 0.05) 40%, transparent 74%);
+  background: radial-gradient(circle, rgba(50, 122, 255, 0.14) 0%, rgba(50, 122, 255, 0.045) 40%, transparent 74%);
 }
 
-.ambient-tech-cloud__word {
+.ambient-tech-cloud__icon {
   position: absolute;
-  display: inline-flex;
-  align-items: center;
-  white-space: nowrap;
-  color: rgba(234, 231, 255, 0.86);
-  font-weight: 600;
-  letter-spacing: -0.04em;
-  line-height: 1;
-  text-shadow:
-    0 0 10px rgba(114, 66, 255, 0.12),
-    0 0 24px rgba(50, 122, 255, 0.08);
-  opacity: var(--ambient-opacity, 0.08);
+  display: block;
+  width: var(--ambient-size, 56px);
+  height: var(--ambient-size, 56px);
+  color: rgba(221, 216, 255, 0.86);
+  opacity: var(--ambient-opacity, 0.14);
   transform: translate3d(0, 0, 0) scale(1);
   transform-origin: center;
   will-change: transform, opacity;
-  animation: ambient-tech-cloud-drift var(--ambient-duration, 20s) ease-in-out infinite alternate;
+  filter:
+    drop-shadow(0 0 10px rgba(114, 66, 255, 0.12))
+    drop-shadow(0 0 22px rgba(50, 122, 255, 0.08));
+  animation-duration: var(--ambient-duration, 12s);
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-fill-mode: both;
 }
 
-.ambient-tech-cloud--hero .ambient-tech-cloud__word {
-  font-size: clamp(1.9rem, 3.1vw, 4rem);
+.ambient-tech-cloud__icon--motion-a {
+  animation-name: ambient-tech-cloud-drift-a;
 }
 
-.ambient-tech-cloud--solution .ambient-tech-cloud__word {
-  font-size: clamp(1.6rem, 2.7vw, 3.25rem);
+.ambient-tech-cloud__icon--motion-b {
+  animation-name: ambient-tech-cloud-drift-b;
 }
 
-.ambient-tech-cloud--compact .ambient-tech-cloud__word {
-  font-size: clamp(1.45rem, 2.3vw, 2.55rem);
+.ambient-tech-cloud__icon--motion-c {
+  animation-name: ambient-tech-cloud-drift-c;
 }
 
-.ambient-tech-cloud__word--chatgpt {
-  top: 9%;
+.ambient-tech-cloud__svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.ambient-tech-cloud__svg > svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.ambient-tech-cloud--hero .ambient-tech-cloud__icon--openai {
+  top: 8%;
   left: 3%;
-  --ambient-opacity: 0.07;
-  --ambient-opacity-peak: 0.095;
-  --ambient-duration: 22s;
+  --ambient-size: 66px;
+  --ambient-opacity: 0.14;
+  --ambient-opacity-peak: 0.24;
+  --ambient-duration: 13.5s;
+  --ambient-delay: -1.4s;
+  --ambient-drift-x: 18px;
+  --ambient-drift-y: -22px;
+  --ambient-scale: 1.035;
+}
+
+.ambient-tech-cloud--hero .ambient-tech-cloud__icon--anthropic {
+  top: 13%;
+  right: 5%;
+  --ambient-size: 54px;
+  --ambient-opacity: 0.12;
+  --ambient-opacity-peak: 0.22;
+  --ambient-duration: 15s;
+  --ambient-delay: -5s;
+  --ambient-drift-x: -12px;
+  --ambient-drift-y: 20px;
+  --ambient-scale: 1.03;
+}
+
+.ambient-tech-cloud--hero .ambient-tech-cloud__icon--n8n {
+  top: 41%;
+  left: 0%;
+  --ambient-size: 50px;
+  --ambient-opacity: 0.11;
+  --ambient-opacity-peak: 0.21;
+  --ambient-duration: 11.5s;
+  --ambient-delay: -3.5s;
+  --ambient-drift-x: 14px;
+  --ambient-drift-y: -18px;
+  --ambient-scale: 1.028;
+}
+
+.ambient-tech-cloud--hero .ambient-tech-cloud__icon--openclaw {
+  bottom: 21%;
+  left: 8%;
+  --ambient-size: 58px;
+  --ambient-opacity: 0.1;
+  --ambient-opacity-peak: 0.2;
+  --ambient-duration: 14.5s;
+  --ambient-delay: -6s;
+  --ambient-drift-x: 12px;
+  --ambient-drift-y: 16px;
+  --ambient-scale: 1.038;
+}
+
+.ambient-tech-cloud--hero .ambient-tech-cloud__icon--notion {
+  bottom: 28%;
+  right: 3%;
+  --ambient-size: 62px;
+  --ambient-opacity: 0.12;
+  --ambient-opacity-peak: 0.23;
+  --ambient-duration: 12.5s;
+  --ambient-delay: -4s;
+  --ambient-drift-x: -16px;
+  --ambient-drift-y: 18px;
+  --ambient-scale: 1.032;
+}
+
+.ambient-tech-cloud--hero .ambient-tech-cloud__icon--github {
+  bottom: 10%;
+  right: 13%;
+  --ambient-size: 52px;
+  --ambient-opacity: 0.12;
+  --ambient-opacity-peak: 0.22;
+  --ambient-duration: 10.5s;
+  --ambient-delay: -2.2s;
+  --ambient-drift-x: -14px;
+  --ambient-drift-y: -16px;
+  --ambient-scale: 1.03;
+}
+
+.ambient-tech-cloud--solution .ambient-tech-cloud__icon--openai {
+  top: 9%;
+  left: 2%;
+  --ambient-size: 54px;
+  --ambient-opacity: 0.12;
+  --ambient-opacity-peak: 0.21;
+  --ambient-duration: 13s;
+  --ambient-delay: -2s;
+  --ambient-drift-x: 16px;
+  --ambient-drift-y: -18px;
+  --ambient-scale: 1.03;
+}
+
+.ambient-tech-cloud--solution .ambient-tech-cloud__icon--anthropic {
+  top: 18%;
+  right: 5%;
+  --ambient-size: 46px;
+  --ambient-opacity: 0.11;
+  --ambient-opacity-peak: 0.2;
+  --ambient-duration: 14s;
+  --ambient-delay: -5s;
+  --ambient-drift-x: -11px;
+  --ambient-drift-y: 18px;
+  --ambient-scale: 1.028;
+}
+
+.ambient-tech-cloud--solution .ambient-tech-cloud__icon--n8n {
+  bottom: 16%;
+  left: 7%;
+  --ambient-size: 42px;
+  --ambient-opacity: 0.1;
+  --ambient-opacity-peak: 0.19;
+  --ambient-duration: 11.2s;
+  --ambient-delay: -3s;
+  --ambient-drift-x: 12px;
+  --ambient-drift-y: -16px;
+  --ambient-scale: 1.024;
+}
+
+.ambient-tech-cloud--solution .ambient-tech-cloud__icon--github {
+  bottom: 12%;
+  right: 6%;
+  --ambient-size: 44px;
+  --ambient-opacity: 0.11;
+  --ambient-opacity-peak: 0.2;
+  --ambient-duration: 10.8s;
+  --ambient-delay: -1.5s;
+  --ambient-drift-x: -12px;
+  --ambient-drift-y: -14px;
+  --ambient-scale: 1.027;
+}
+
+.ambient-tech-cloud--compact .ambient-tech-cloud__icon--openai {
+  top: 10%;
+  left: 2%;
+  --ambient-size: 44px;
+  --ambient-opacity: 0.11;
+  --ambient-opacity-peak: 0.19;
+  --ambient-duration: 12.5s;
+  --ambient-delay: -1.8s;
+  --ambient-drift-x: 12px;
+  --ambient-drift-y: -14px;
+  --ambient-scale: 1.022;
+}
+
+.ambient-tech-cloud--compact .ambient-tech-cloud__icon--n8n {
+  top: 30%;
+  right: 6%;
+  --ambient-size: 36px;
+  --ambient-opacity: 0.1;
+  --ambient-opacity-peak: 0.18;
+  --ambient-duration: 11s;
+  --ambient-delay: -4s;
   --ambient-drift-x: 10px;
-  --ambient-drift-y: -8px;
+  --ambient-drift-y: -12px;
+  --ambient-scale: 1.02;
+}
+
+.ambient-tech-cloud--compact .ambient-tech-cloud__icon--github {
+  bottom: 12%;
+  left: 6%;
+  --ambient-size: 38px;
+  --ambient-opacity: 0.1;
+  --ambient-opacity-peak: 0.18;
+  --ambient-duration: 10.6s;
+  --ambient-delay: -2.2s;
+  --ambient-drift-x: -10px;
+  --ambient-drift-y: 12px;
   --ambient-scale: 1.018;
 }
 
-.ambient-tech-cloud__word--claude {
-  top: 14%;
-  right: 6%;
-  --ambient-opacity: 0.06;
-  --ambient-opacity-peak: 0.082;
-  --ambient-duration: 24s;
-  --ambient-drift-x: -8px;
-  --ambient-drift-y: 7px;
-  --ambient-scale: 1.014;
-}
-
-.ambient-tech-cloud__word--n8n {
-  top: 42%;
-  left: 0%;
-  --ambient-opacity: 0.058;
-  --ambient-opacity-peak: 0.08;
-  --ambient-duration: 19s;
-  --ambient-drift-x: 9px;
-  --ambient-drift-y: -6px;
-  --ambient-scale: 1.016;
-}
-
-.ambient-tech-cloud__word--openclaw {
-  bottom: 22%;
-  left: 8%;
-  --ambient-opacity: 0.05;
-  --ambient-opacity-peak: 0.07;
-  --ambient-duration: 21s;
-  --ambient-drift-x: 7px;
-  --ambient-drift-y: 8px;
-  --ambient-scale: 1.013;
-}
-
-.ambient-tech-cloud__word--notion {
-  bottom: 29%;
-  right: 3%;
-  --ambient-opacity: 0.056;
-  --ambient-opacity-peak: 0.078;
-  --ambient-duration: 23s;
-  --ambient-drift-x: -10px;
-  --ambient-drift-y: 6px;
-  --ambient-scale: 1.015;
-}
-
-.ambient-tech-cloud__word--github {
-  bottom: 10%;
-  right: 13%;
-  --ambient-opacity: 0.062;
-  --ambient-opacity-peak: 0.085;
-  --ambient-duration: 18s;
-  --ambient-drift-x: -8px;
-  --ambient-drift-y: -7px;
-  --ambient-scale: 1.014;
-}
-
-.ambient-tech-cloud--solution .ambient-tech-cloud__word--chatgpt {
-  top: 10%;
-  left: 2%;
-}
-
-.ambient-tech-cloud--solution .ambient-tech-cloud__word--claude {
-  top: 18%;
-  right: 4%;
-}
-
-.ambient-tech-cloud--solution .ambient-tech-cloud__word--n8n {
-  bottom: 16%;
-  left: 7%;
-  top: auto;
-}
-
-.ambient-tech-cloud--solution .ambient-tech-cloud__word--github {
-  bottom: 12%;
-  right: 6%;
-}
-
-.ambient-tech-cloud--compact .ambient-tech-cloud__word--chatgpt {
-  top: 10%;
-  left: 2%;
-}
-
-.ambient-tech-cloud--compact .ambient-tech-cloud__word--n8n {
-  top: 28%;
-  right: 6%;
-  left: auto;
-}
-
-.ambient-tech-cloud--compact .ambient-tech-cloud__word--github {
-  bottom: 12%;
-  left: 6%;
-  right: auto;
-}
-
-@keyframes ambient-tech-cloud-drift {
+@keyframes ambient-tech-cloud-drift-a {
   0% {
     transform: translate3d(0, 0, 0) scale(1);
-    opacity: var(--ambient-opacity, 0.08);
+    opacity: var(--ambient-opacity, 0.14);
   }
 
   50% {
-    transform: translate3d(var(--ambient-drift-x, 8px), var(--ambient-drift-y, -8px), 0) scale(var(--ambient-scale, 1.015));
-    opacity: var(--ambient-opacity-peak, 0.1);
+    transform: translate3d(var(--ambient-drift-x, 16px), var(--ambient-drift-y, -18px), 0) scale(var(--ambient-scale, 1.03));
+    opacity: var(--ambient-opacity-peak, 0.22);
   }
 
   100% {
     transform: translate3d(0, 0, 0) scale(1);
-    opacity: var(--ambient-opacity, 0.08);
+    opacity: var(--ambient-opacity, 0.14);
+  }
+}
+
+@keyframes ambient-tech-cloud-drift-b {
+  0% {
+    transform: translate3d(0, 0, 0) scale(1);
+    opacity: var(--ambient-opacity, 0.14);
+  }
+
+  50% {
+    transform: translate3d(var(--ambient-drift-x, -12px), var(--ambient-drift-y, 18px), 0) scale(var(--ambient-scale, 1.028));
+    opacity: var(--ambient-opacity-peak, 0.2);
+  }
+
+  100% {
+    transform: translate3d(0, 0, 0) scale(1);
+    opacity: var(--ambient-opacity, 0.14);
+  }
+}
+
+@keyframes ambient-tech-cloud-drift-c {
+  0% {
+    transform: translate3d(0, 0, 0) scale(1);
+    opacity: var(--ambient-opacity, 0.14);
+  }
+
+  50% {
+    transform: translate3d(var(--ambient-drift-x, -14px), var(--ambient-drift-y, -16px), 0) scale(var(--ambient-scale, 1.03));
+    opacity: var(--ambient-opacity-peak, 0.2);
+  }
+
+  100% {
+    transform: translate3d(0, 0, 0) scale(1);
+    opacity: var(--ambient-opacity, 0.14);
   }
 }
 
@@ -3486,8 +3598,9 @@ input[type="range"] {
     animation: none;
   }
 
-  .ambient-tech-cloud__word {
+  .ambient-tech-cloud__icon {
     animation: none;
+    transform: none;
   }
 
   .ai-assistant-button,
