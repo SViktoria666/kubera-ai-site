@@ -408,15 +408,15 @@ main {
   display: block;
   width: var(--ambient-size, 56px);
   height: var(--ambient-size, 56px);
-  color: rgba(221, 216, 255, 0.86);
-  opacity: var(--ambient-opacity, 0.14);
+  color: rgba(226, 221, 255, 0.92);
+  opacity: var(--ambient-opacity, 0.16);
   transform: translate3d(0, 0, 0) scale(1);
   transform-origin: center;
   will-change: transform, opacity;
   filter:
-    drop-shadow(0 0 10px rgba(114, 66, 255, 0.12))
-    drop-shadow(0 0 22px rgba(50, 122, 255, 0.08));
-  animation-duration: var(--ambient-duration, 12s);
+    drop-shadow(0 0 8px rgba(114, 66, 255, 0.14))
+    drop-shadow(0 0 18px rgba(50, 122, 255, 0.09));
+  animation-duration: var(--ambient-duration, 11.5s);
   animation-timing-function: ease-in-out;
   animation-iteration-count: infinite;
   animation-direction: alternate;
@@ -445,175 +445,163 @@ main {
   display: block;
   width: 100%;
   height: 100%;
+  fill: currentColor;
 }
 
 .ambient-tech-cloud--hero .ambient-tech-cloud__icon--openai {
-  top: 8%;
-  left: 3%;
-  --ambient-size: 66px;
-  --ambient-opacity: 0.14;
-  --ambient-opacity-peak: 0.24;
-  --ambient-duration: 13.5s;
+  top: 7%;
+  left: 4%;
+  --ambient-size: 68px;
+  --ambient-opacity: 0.16;
+  --ambient-opacity-peak: 0.26;
+  --ambient-duration: 12.4s;
   --ambient-delay: -1.4s;
-  --ambient-drift-x: 18px;
-  --ambient-drift-y: -22px;
-  --ambient-scale: 1.035;
-}
-
-.ambient-tech-cloud--hero .ambient-tech-cloud__icon--anthropic {
-  top: 13%;
-  right: 5%;
-  --ambient-size: 54px;
-  --ambient-opacity: 0.12;
-  --ambient-opacity-peak: 0.22;
-  --ambient-duration: 15s;
-  --ambient-delay: -5s;
-  --ambient-drift-x: -12px;
-  --ambient-drift-y: 20px;
+  --ambient-drift-x: 22px;
+  --ambient-drift-y: -30px;
   --ambient-scale: 1.03;
 }
 
-.ambient-tech-cloud--hero .ambient-tech-cloud__icon--n8n {
-  top: 41%;
-  left: 0%;
-  --ambient-size: 50px;
-  --ambient-opacity: 0.11;
-  --ambient-opacity-peak: 0.21;
-  --ambient-duration: 11.5s;
-  --ambient-delay: -3.5s;
-  --ambient-drift-x: 14px;
-  --ambient-drift-y: -18px;
+.ambient-tech-cloud--hero .ambient-tech-cloud__icon--anthropic {
+  top: 12%;
+  right: 5%;
+  --ambient-size: 56px;
+  --ambient-opacity: 0.15;
+  --ambient-opacity-peak: 0.25;
+  --ambient-duration: 13.6s;
+  --ambient-delay: -5s;
+  --ambient-drift-x: -18px;
+  --ambient-drift-y: 28px;
   --ambient-scale: 1.028;
 }
 
-.ambient-tech-cloud--hero .ambient-tech-cloud__icon--openclaw {
-  bottom: 21%;
-  left: 8%;
-  --ambient-size: 58px;
-  --ambient-opacity: 0.1;
-  --ambient-opacity-peak: 0.2;
-  --ambient-duration: 14.5s;
-  --ambient-delay: -6s;
-  --ambient-drift-x: 12px;
-  --ambient-drift-y: 16px;
-  --ambient-scale: 1.038;
+.ambient-tech-cloud--hero .ambient-tech-cloud__icon--n8n {
+  top: 44%;
+  left: 1%;
+  --ambient-size: 50px;
+  --ambient-opacity: 0.14;
+  --ambient-opacity-peak: 0.23;
+  --ambient-duration: 10.8s;
+  --ambient-delay: -3.5s;
+  --ambient-drift-x: 20px;
+  --ambient-drift-y: -24px;
+  --ambient-scale: 1.026;
 }
 
 .ambient-tech-cloud--hero .ambient-tech-cloud__icon--notion {
-  bottom: 28%;
-  right: 3%;
-  --ambient-size: 62px;
-  --ambient-opacity: 0.12;
-  --ambient-opacity-peak: 0.23;
-  --ambient-duration: 12.5s;
+  bottom: 22%;
+  right: 4%;
+  --ambient-size: 60px;
+  --ambient-opacity: 0.15;
+  --ambient-opacity-peak: 0.25;
+  --ambient-duration: 12.8s;
   --ambient-delay: -4s;
-  --ambient-drift-x: -16px;
-  --ambient-drift-y: 18px;
+  --ambient-drift-x: -22px;
+  --ambient-drift-y: 30px;
   --ambient-scale: 1.032;
 }
 
 .ambient-tech-cloud--hero .ambient-tech-cloud__icon--github {
   bottom: 10%;
-  right: 13%;
-  --ambient-size: 52px;
-  --ambient-opacity: 0.12;
-  --ambient-opacity-peak: 0.22;
-  --ambient-duration: 10.5s;
+  left: 12%;
+  --ambient-size: 50px;
+  --ambient-opacity: 0.14;
+  --ambient-opacity-peak: 0.24;
+  --ambient-duration: 9.8s;
   --ambient-delay: -2.2s;
-  --ambient-drift-x: -14px;
-  --ambient-drift-y: -16px;
-  --ambient-scale: 1.03;
+  --ambient-drift-x: -16px;
+  --ambient-drift-y: -22px;
+  --ambient-scale: 1.024;
 }
 
 .ambient-tech-cloud--solution .ambient-tech-cloud__icon--openai {
   top: 9%;
   left: 2%;
   --ambient-size: 54px;
-  --ambient-opacity: 0.12;
-  --ambient-opacity-peak: 0.21;
-  --ambient-duration: 13s;
+  --ambient-opacity: 0.14;
+  --ambient-opacity-peak: 0.24;
+  --ambient-duration: 12s;
   --ambient-delay: -2s;
-  --ambient-drift-x: 16px;
-  --ambient-drift-y: -18px;
-  --ambient-scale: 1.03;
+  --ambient-drift-x: 18px;
+  --ambient-drift-y: -24px;
+  --ambient-scale: 1.028;
 }
 
 .ambient-tech-cloud--solution .ambient-tech-cloud__icon--anthropic {
   top: 18%;
   right: 5%;
   --ambient-size: 46px;
-  --ambient-opacity: 0.11;
-  --ambient-opacity-peak: 0.2;
-  --ambient-duration: 14s;
+  --ambient-opacity: 0.13;
+  --ambient-opacity-peak: 0.22;
+  --ambient-duration: 13.2s;
   --ambient-delay: -5s;
-  --ambient-drift-x: -11px;
-  --ambient-drift-y: 18px;
-  --ambient-scale: 1.028;
+  --ambient-drift-x: -14px;
+  --ambient-drift-y: 22px;
+  --ambient-scale: 1.026;
 }
 
 .ambient-tech-cloud--solution .ambient-tech-cloud__icon--n8n {
   bottom: 16%;
   left: 7%;
   --ambient-size: 42px;
-  --ambient-opacity: 0.1;
-  --ambient-opacity-peak: 0.19;
-  --ambient-duration: 11.2s;
+  --ambient-opacity: 0.12;
+  --ambient-opacity-peak: 0.2;
+  --ambient-duration: 10.8s;
   --ambient-delay: -3s;
-  --ambient-drift-x: 12px;
-  --ambient-drift-y: -16px;
-  --ambient-scale: 1.024;
+  --ambient-drift-x: 14px;
+  --ambient-drift-y: -20px;
+  --ambient-scale: 1.022;
 }
 
 .ambient-tech-cloud--solution .ambient-tech-cloud__icon--github {
   bottom: 12%;
   right: 6%;
   --ambient-size: 44px;
-  --ambient-opacity: 0.11;
-  --ambient-opacity-peak: 0.2;
-  --ambient-duration: 10.8s;
+  --ambient-opacity: 0.12;
+  --ambient-opacity-peak: 0.21;
+  --ambient-duration: 9.9s;
   --ambient-delay: -1.5s;
-  --ambient-drift-x: -12px;
-  --ambient-drift-y: -14px;
-  --ambient-scale: 1.027;
+  --ambient-drift-x: -14px;
+  --ambient-drift-y: -18px;
+  --ambient-scale: 1.022;
 }
 
 .ambient-tech-cloud--compact .ambient-tech-cloud__icon--openai {
   top: 10%;
   left: 2%;
   --ambient-size: 44px;
-  --ambient-opacity: 0.11;
-  --ambient-opacity-peak: 0.19;
-  --ambient-duration: 12.5s;
+  --ambient-opacity: 0.13;
+  --ambient-opacity-peak: 0.21;
+  --ambient-duration: 11.4s;
   --ambient-delay: -1.8s;
-  --ambient-drift-x: 12px;
-  --ambient-drift-y: -14px;
-  --ambient-scale: 1.022;
+  --ambient-drift-x: 14px;
+  --ambient-drift-y: -18px;
+  --ambient-scale: 1.02;
 }
 
 .ambient-tech-cloud--compact .ambient-tech-cloud__icon--n8n {
   top: 30%;
   right: 6%;
   --ambient-size: 36px;
-  --ambient-opacity: 0.1;
+  --ambient-opacity: 0.11;
   --ambient-opacity-peak: 0.18;
-  --ambient-duration: 11s;
+  --ambient-duration: 10.2s;
   --ambient-delay: -4s;
-  --ambient-drift-x: 10px;
-  --ambient-drift-y: -12px;
-  --ambient-scale: 1.02;
+  --ambient-drift-x: 12px;
+  --ambient-drift-y: -14px;
+  --ambient-scale: 1.018;
 }
 
 .ambient-tech-cloud--compact .ambient-tech-cloud__icon--github {
   bottom: 12%;
   left: 6%;
   --ambient-size: 38px;
-  --ambient-opacity: 0.1;
+  --ambient-opacity: 0.11;
   --ambient-opacity-peak: 0.18;
-  --ambient-duration: 10.6s;
+  --ambient-duration: 9.8s;
   --ambient-delay: -2.2s;
-  --ambient-drift-x: -10px;
-  --ambient-drift-y: 12px;
-  --ambient-scale: 1.018;
+  --ambient-drift-x: -12px;
+  --ambient-drift-y: 14px;
+  --ambient-scale: 1.016;
 }
 
 @keyframes ambient-tech-cloud-drift-a {

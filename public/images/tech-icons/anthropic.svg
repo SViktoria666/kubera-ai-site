@@ -1,13 +1,1 @@
-<svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <g stroke="currentColor" stroke-width="2.7" stroke-linecap="round" stroke-linejoin="round">
-    <circle cx="32" cy="32" r="6.4" />
-    <path d="M32 11.5v10" />
-    <path d="M32 42.5v10" />
-    <path d="M11.5 32h10" />
-    <path d="M42.5 32h10" />
-    <path d="M18 18l7 7" />
-    <path d="M39 39l7 7" />
-    <path d="M46 18l-7 7" />
-    <path d="M25 39l-7 7" />
-  </g>
-</svg>
+<svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>Anthropic</title><path d="M17.3041 3.541h-3.6718l6.696 16.918H24Zm-10.6082 0L0 20.459h3.7442l1.3693-3.5527h7.0052l1.3693 3.5528h3.7442L10.5363 3.5409Zm-.3712 10.2232 2.2914-5.9456 2.2914 5.9456Z"/></svg>

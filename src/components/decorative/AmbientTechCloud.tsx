@@ -2,7 +2,7 @@ import { readFileSync } from "node:fs";
 import path from "node:path";
 
 type AmbientTechCloudVariant = "hero" | "solution" | "compact";
-type TechIconId = "openai" | "anthropic" | "n8n" | "openclaw" | "notion" | "github";
+type TechIconId = "openai" | "anthropic" | "n8n" | "notion" | "github";
 
 type TechIconMeta = {
   className: string;
@@ -13,7 +13,7 @@ type TechIconMeta = {
 const iconDir = path.join(process.cwd(), "public", "images", "tech-icons");
 
 const cloudVariants = {
-  hero: ["openai", "anthropic", "n8n", "openclaw", "notion", "github"],
+  hero: ["openai", "anthropic", "n8n", "notion", "github"],
   solution: ["openai", "anthropic", "n8n", "github"],
   compact: ["openai", "n8n", "github"],
 } satisfies Record<AmbientTechCloudVariant, TechIconId[]>;
@@ -33,11 +33,6 @@ const techIcons = {
     className: "ambient-tech-cloud__icon--n8n",
     fileName: "n8n.svg",
     motionClass: "ambient-tech-cloud__icon--motion-c",
-  },
-  openclaw: {
-    className: "ambient-tech-cloud__icon--openclaw",
-    fileName: "openclaw.svg",
-    motionClass: "ambient-tech-cloud__icon--motion-b",
   },
   notion: {
     className: "ambient-tech-cloud__icon--notion",
@@ -59,7 +54,6 @@ const iconMarkup = {
   openai: loadIconSvg(techIcons.openai.fileName),
   anthropic: loadIconSvg(techIcons.anthropic.fileName),
   n8n: loadIconSvg(techIcons.n8n.fileName),
-  openclaw: loadIconSvg(techIcons.openclaw.fileName),
   notion: loadIconSvg(techIcons.notion.fileName),
   github: loadIconSvg(techIcons.github.fileName),
 } satisfies Record<TechIconId, string>;
