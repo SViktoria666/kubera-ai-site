@@ -631,7 +631,7 @@ export function detectAssistantLocaleFromText(text: string, fallback?: Assistant
     return "da";
   }
 
-  const ukrainianSignals = ["потріб", "компані", "автоматизац", "будь ласка", "дяку", "можете", "зараз"].filter((token) =>
+  const ukrainianSignals = ["потріб", "компані", "автоматизац", "будь ласка", "дяку", "можете", "чи можете", "інтегруват", "підключ", "зараз"].filter((token) =>
     normalizedForMatch.includes(token),
   );
   if (ukrainianSignals.length >= 2) {

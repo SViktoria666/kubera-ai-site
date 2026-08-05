@@ -66,6 +66,7 @@ test("locale detection recognizes all supported languages and preserves short am
   assert.equal(detectAssistantLocaleFromText("email", "fr"), "fr");
   assert.equal(detectAssistantLocaleFromMessages([{ role: "user", content: "Bonjour, je veux automatiser mon entreprise." }], "es"), "fr");
   assert.equal(detectAssistantLocaleFromText("Hallo, ik heb automatisering nodig voor mijn bedrijf.", "nl"), "nl");
+  assert.equal(detectAssistantLocaleFromMessages([{ role: "user", content: "Чи можете ви інтегрувати SAP?" }], "ru"), "uk");
   assert.equal(detectAssistantLocaleFromText("user@example.com", "pl"), "pl");
   assert.equal(detectAssistantLocaleFromText("https://kubera-automation.com/services", "it"), "it");
   assert.equal(detectAssistantLocaleFromText("+372 5384 1877", "sv"), "sv");
