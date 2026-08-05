@@ -5,14 +5,16 @@ import { getAssistantProvider } from "@/lib/ai/provider";
 import { createAssistantSubmissionHash, markAssistantSubmissionSubmitted, releaseAssistantSubmission, reserveAssistantSubmission } from "@/lib/ai/submission-dedupe";
 import { sendAssistantLeadToN8n } from "@/lib/integrations/n8n";
 import { checkRateLimit } from "@/lib/rate-limit/memory";
-import { getClientIp, getRequestId, safeJsonWithLimit } from "@/lib/security/request";
+import { getClientIp, getRequestId, getSafeGeoMetadata, safeJsonWithLimit } from "@/lib/security/request";
 import type { AssistantLeadDraft, AssistantLocale, AssistantProviderContext, AssistantRequest, AssistantResponse } from "@/lib/ai/types";
 import { assistantRequestSchema } from "@/lib/validation/assistant";
+import { normalizeAnalyticsContext } from "@/lib/validation/analytics";
+import { buildJourneySummary, buildTelegramJourneySummary } from "@/lib/analytics/summary";
 
 export const dynamic = "force-dynamic";
 export const runtime = "nodejs";
 
-const ASSISTANT_MAX_BODY_BYTES = 32 * 1024;
+const ASSISTANT_MAX_BODY_BYTES = 48 * 1024;
 const ASSISTANT_PROVIDER_TIMEOUT_MS = 20 * 1000;
 
 function getKnowledgeKeywords(messages: Array<{ role: string; content: string }>) {
@@ -217,6 +219,36 @@ export async function POST(request: Request) {
       return jsonError("Invalid assistant payload", requestId, 400);
     }
 
+    const rawAnalyticsContext = parsed.data.analyticsContext;
+    const analyticsContext = normalizeAnalyticsContext(rawAnalyticsContext);
+    const geoMetadata = getSafeGeoMetadata(request);
+    const safeAnalyticsContext =
+      analyticsContext && geoMetadata
+        ? {
+            ...analyticsContext,
+            geo: {
+              ...(analyticsContext.geo || {}),
+              ...geoMetadata,
+            },
+          }
+        : analyticsContext || undefined;
+    const analyticsSummary = safeAnalyticsContext ? buildJourneySummary(safeAnalyticsContext) : undefined;
+    const analyticsTelegramSummary = safeAnalyticsContext ? buildTelegramJourneySummary(safeAnalyticsContext) : undefined;
+
+    if (rawAnalyticsContext && !safeAnalyticsContext) {
+      console.warn("analytics_context_warning", {
+        requestId,
+        warning: "invalid",
+        page: parsed.data.context.currentPath,
+      });
+    } else if (!rawAnalyticsContext) {
+      console.warn("analytics_context_warning", {
+        requestId,
+        warning: "missing",
+        page: parsed.data.context.currentPath,
+      });
+    }
+
     const knowledgeContext = selectKnowledgeContext({
       page: parsed.data.context.currentPath,
       locale: parsed.data.context.locale,
@@ -259,6 +291,9 @@ export async function POST(request: Request) {
         source: "kubera-ai-site",
         originalMessage: originalMessage || undefined,
         transcript: transcript || undefined,
+        analyticsContext: safeAnalyticsContext,
+        analyticsSummary,
+        analyticsTelegramSummary,
       });
 
       if (!delivery.ok) {

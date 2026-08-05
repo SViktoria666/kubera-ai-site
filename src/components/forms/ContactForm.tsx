@@ -2,6 +2,7 @@
 
 import { FormEvent, useEffect, useRef, useState } from "react";
 import { buildCurrentPageContext, trackUmamiEvent } from "@/lib/analytics";
+import { buildJourneyAnalyticsContext } from "@/lib/analytics/journey";
 
 export function ContactForm({ locale }: { locale: "en" | "ru" }) {
   const [status, setStatus] = useState<"idle" | "submitting" | "sent" | "error">("idle");
@@ -85,6 +86,9 @@ export function ContactForm({ locale }: { locale: "en" | "ru" }) {
         message: formData.get("message"),
         page: window.location.pathname,
         website: formData.get("website"),
+        analyticsContext: buildJourneyAnalyticsContext({
+          conversionPage: window.location.pathname,
+        }),
       }),
     });
 

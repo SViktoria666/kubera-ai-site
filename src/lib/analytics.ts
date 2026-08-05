@@ -342,6 +342,10 @@ export function trackUmamiEvent(eventName: AnalyticsEventName, properties: Analy
     return false;
   }
 
+  if (eventName !== "page_context") {
+    recordJourneyEvent(eventName, sanitizeAnalyticsProperties(properties));
+  }
+
   const tracker = window.umami;
   if (!tracker || typeof tracker.track !== "function") {
     window.__kuberaAnalyticsQueue = window.__kuberaAnalyticsQueue || [];
@@ -405,3 +409,5 @@ export function buildCurrentPageContext() {
 
   return getPageContext(window.location.pathname);
 }
+import { recordJourneyEvent } from "@/lib/analytics/journey";
+export { recordJourneyPageContext } from "@/lib/analytics/journey";

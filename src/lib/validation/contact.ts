@@ -1,4 +1,5 @@
 import { z } from "zod";
+import { analyticsContextSchema, type AnalyticsContextPayload } from "@/lib/validation/analytics";
 import { sanitizePhone, sanitizeTelegram, sanitizeText } from "@/lib/security/sanitize";
 
 const whatsappSchema = z
@@ -29,6 +30,10 @@ export const contactFormSchema = z.object({
   company: z.preprocess((value) => sanitizeText(value, 160), z.string().min(1).max(160)),
   message: z.preprocess((value) => sanitizeText(value, 2000), z.string().min(1).max(2000)),
   website: z.preprocess((value) => sanitizeText(value, 120), z.string().max(120).optional()),
+  analyticsContext: analyticsContextSchema.optional(),
+  analyticsSummary: z.preprocess((value) => sanitizeText(value, 6000), z.string().max(6000).optional()),
+  analyticsTelegramSummary: z.preprocess((value) => sanitizeText(value, 1200), z.string().max(1200).optional()),
 });
 
 export type ContactFormPayload = z.infer<typeof contactFormSchema>;
+export type ContactAnalyticsContext = AnalyticsContextPayload;

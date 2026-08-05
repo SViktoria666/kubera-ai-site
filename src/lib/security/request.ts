@@ -1,3 +1,5 @@
+import { sanitizeText } from "@/lib/security/sanitize";
+
 export async function safeJson(request: Request): Promise<unknown> {
   try {
     return await request.json();
@@ -40,4 +42,21 @@ export function getClientIp(request: Request): string {
 
 export function getRequestId(request: Request): string {
   return request.headers.get("x-vercel-id") || crypto.randomUUID();
+}
+
+export function getSafeGeoMetadata(request: Request) {
+  const country = sanitizeText(request.headers.get("x-vercel-ip-country") || request.headers.get("cf-ipcountry") || "", 80);
+  const region = sanitizeText(
+    request.headers.get("x-vercel-ip-country-region") || request.headers.get("x-vercel-ip-country-region-name") || request.headers.get("cf-region") || "",
+    120,
+  );
+
+  if (!country && !region) {
+    return undefined;
+  }
+
+  return {
+    ...(country ? { country } : {}),
+    ...(region ? { region } : {}),
+  };
 }

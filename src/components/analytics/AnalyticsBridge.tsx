@@ -6,6 +6,7 @@ import {
   buildCurrentPageContext,
   getPageContext,
   flushQueuedAnalyticsEvents,
+  recordJourneyPageContext,
   shouldTrackAnalyticsInBrowser,
   trackUmamiEvent,
   type AnalyticsEventName,
@@ -173,6 +174,7 @@ export function AnalyticsBridge() {
     }
 
     lastTrackedPathRef.current = normalizedPath;
+    recordJourneyPageContext(getPageContext(normalizedPath));
     schedulePageContext(normalizedPath, () => cancelled);
 
     return () => {

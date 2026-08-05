@@ -1,5 +1,6 @@
 import type { ContactFormPayload } from "@/lib/validation/contact";
 import type { AssistantLeadDraft } from "@/lib/ai/types";
+import type { JourneyAnalyticsContext } from "@/lib/analytics/journey-types";
 
 export type N8nContactLeadPayload = {
   Name: string;
@@ -16,6 +17,11 @@ export type N8nContactLeadPayload = {
   messenger: string;
   "messenger-id": string;
   formid: "new-vercel-site";
+  websiteSessionId?: string;
+  externalSourceId?: string;
+  analyticsContext?: JourneyAnalyticsContext;
+  analyticsSummary?: string;
+  analyticsTelegramSummary?: string;
 };
 
 export type ContactLeadEnvelope = {
@@ -23,6 +29,9 @@ export type ContactLeadEnvelope = {
   page: string;
   formId: "new-vercel-site";
   createdAt: string;
+  analyticsContext?: JourneyAnalyticsContext;
+  analyticsSummary?: string;
+  analyticsTelegramSummary?: string;
   lead: Omit<ContactFormPayload, "website">;
 };
 
@@ -32,6 +41,9 @@ export function createContactLeadEnvelope(lead: ContactFormPayload, page: string
     page,
     formId: "new-vercel-site",
     createdAt: new Date().toISOString(),
+    analyticsContext: lead.analyticsContext,
+    analyticsSummary: lead.analyticsSummary,
+    analyticsTelegramSummary: lead.analyticsTelegramSummary,
     lead: {
       locale: lead.locale,
       page: lead.page,
@@ -67,6 +79,11 @@ export function createN8nContactLeadPayload(lead: ContactFormPayload, page = "")
     messenger,
     "messenger-id": messenger,
     formid: "new-vercel-site",
+    websiteSessionId: lead.analyticsContext?.journeyId || "",
+    externalSourceId: lead.analyticsContext?.journeyId || "",
+    analyticsContext: lead.analyticsContext,
+    analyticsSummary: lead.analyticsSummary,
+    analyticsTelegramSummary: lead.analyticsTelegramSummary,
   };
 }
 
@@ -106,6 +123,11 @@ export type N8nAssistantLeadPayload = {
   source?: string;
   originalMessage?: string;
   transcript?: string;
+  websiteSessionId?: string;
+  externalSourceId?: string;
+  analyticsContext?: JourneyAnalyticsContext;
+  analyticsSummary?: string;
+  analyticsTelegramSummary?: string;
 };
 
 export function isAssistantN8nConfigured() {
@@ -118,6 +140,9 @@ export type AssistantLeadSubmission = AssistantLeadDraft & {
   source?: string;
   originalMessage?: string;
   transcript?: string;
+  analyticsContext?: JourneyAnalyticsContext;
+  analyticsSummary?: string;
+  analyticsTelegramSummary?: string;
 };
 
 export function createN8nAssistantLeadPayload(lead: AssistantLeadSubmission): N8nAssistantLeadPayload {
@@ -137,6 +162,11 @@ export function createN8nAssistantLeadPayload(lead: AssistantLeadSubmission): N8
     source: lead.source,
     originalMessage: lead.originalMessage,
     transcript: lead.transcript,
+    websiteSessionId: lead.analyticsContext?.journeyId,
+    externalSourceId: lead.analyticsContext?.journeyId,
+    analyticsContext: lead.analyticsContext,
+    analyticsSummary: lead.analyticsSummary,
+    analyticsTelegramSummary: lead.analyticsTelegramSummary,
   };
 }
 

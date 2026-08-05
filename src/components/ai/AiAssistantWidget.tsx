@@ -6,7 +6,9 @@ import { FormEvent, useEffect, useRef, useState } from "react";
 import type { AiAssistantApiResponse, AiAssistantWidgetProps } from "@/components/ai/types";
 import { buildAssistantConversationMemory } from "@/lib/ai/conversation-memory";
 import type { AssistantLeadDraft, AssistantLocale, AssistantMessage } from "@/lib/ai/types";
+import type { JourneyAnalyticsContext } from "@/lib/analytics/journey-types";
 import { buildCurrentPageContext, getPageLanguage, trackUmamiEvent } from "@/lib/analytics";
+import { buildJourneyAnalyticsContext } from "@/lib/analytics/journey";
 
 type AssistantSessionPhase = "closed" | "active" | "waiting_for_response" | "collecting_contacts" | "submitting_lead" | "transient_error" | "completed";
 type AssistantErrorCategory = "network" | "server" | "malformed" | "validation" | "unknown";
@@ -28,6 +30,7 @@ type AssistantRequestPayload = {
   messages: AssistantMessage[];
   lead: AssistantLeadDraft;
   submissionCompleted: boolean;
+  analyticsContext?: JourneyAnalyticsContext;
 };
 
 type PendingTurn = {
@@ -202,6 +205,9 @@ function buildRequestPayload(params: {
     messages: params.messages.slice(-maxRequestMessages),
     lead: params.lead,
     submissionCompleted: params.submitted,
+    analyticsContext: buildJourneyAnalyticsContext({
+      conversionPage: params.pathname,
+    }) || undefined,
   };
 }
 

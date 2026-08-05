@@ -1,4 +1,5 @@
 import { z } from "zod";
+import { analyticsContextSchema, type AnalyticsContextPayload } from "@/lib/validation/analytics";
 import { sanitizePhone, sanitizeTelegram, sanitizeText } from "@/lib/security/sanitize";
 
 export const assistantLocaleSchema = z.enum(["en", "ru", "es", "de", "fr", "it", "nl", "pt", "pl", "et", "lv", "lt", "fi", "sv", "da"]);
@@ -37,6 +38,10 @@ export const assistantRequestSchema = z.object({
   messages: z.array(assistantMessageSchema).min(1).max(20),
   lead: assistantLeadSchema.optional(),
   submissionCompleted: z.boolean().optional(),
+  analyticsContext: analyticsContextSchema.optional(),
+  analyticsSummary: z.preprocess((value) => sanitizeText(value, 6000), z.string().max(6000).optional()),
+  analyticsTelegramSummary: z.preprocess((value) => sanitizeText(value, 1200), z.string().max(1200).optional()),
 });
 
 export type AssistantValidatedRequest = z.infer<typeof assistantRequestSchema>;
+export type AssistantAnalyticsContext = AnalyticsContextPayload;

@@ -36,6 +36,9 @@ export type AssistantRequest = {
   messages: AssistantMessage[];
   lead?: AssistantLeadDraft;
   submissionCompleted?: boolean;
+  analyticsContext?: import("@/lib/analytics/journey-types").JourneyAnalyticsContext;
+  analyticsSummary?: string;
+  analyticsTelegramSummary?: string;
 };
 
 export type AssistantResponse = {

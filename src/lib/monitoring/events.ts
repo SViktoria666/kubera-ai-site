@@ -3,6 +3,7 @@ export function recordContactSubmission(event: {
   locale: "en" | "ru";
   hasN8nWebhookConfigured: boolean;
   hasTelegramConfigured: boolean;
+  hasAnalyticsContext: boolean;
   hasCompany: boolean;
   hasWhatsapp: boolean;
   hasTelegram: boolean;
