@@ -2,7 +2,7 @@ import "server-only";
 
 import OpenAI from "openai";
 import { zodTextFormat } from "openai/helpers/zod";
-import { detectAssistantLocaleFromMessages } from "./assistant-localization";
+import { resolveAssistantReplyLocale } from "./assistant-localization";
 import { formatKnowledgeContext } from "./knowledge-base";
 import {
   buildCapabilityFallbackMessage,
@@ -14,7 +14,7 @@ import {
 import { openAiAssistantOutputSchema, requiredLeadFields } from "./openai-schema";
 import type { SiteAssistantProvider } from "./provider";
 import type { OpenAiAssistantOutput } from "./openai-schema";
-import type { AssistantLeadDraft, AssistantProviderContext, AssistantRequest, AssistantResponse } from "./types";
+import type { AssistantLeadDraft, AssistantLocale, AssistantProviderContext, AssistantRequest, AssistantResponse } from "./types";
 
 const DEFAULT_MODEL = "gpt-5.5";
 
@@ -49,19 +49,23 @@ function getLatestUserMessage(messages: AssistantRequest["messages"]) {
   return [...messages].reverse().find((message) => message.role === "user")?.content || "";
 }
 
-function resolveCapabilityAssessment(context: AssistantProviderContext | undefined, request: AssistantRequest | undefined) {
-  const detectedLocale = detectAssistantLocaleFromMessages(request?.messages || [], context?.conversationMemory?.locale || "en");
+function resolveCapabilityAssessment(context: AssistantProviderContext | undefined, request: AssistantRequest | undefined, locale?: AssistantLocale) {
   return (
     context?.capabilityAssessment ||
-    classifyCapabilityQuestion(getLatestUserMessage(request?.messages || []), getConfirmedCapabilityEvidenceText(), detectedLocale || context?.conversationMemory?.locale)
+    classifyCapabilityQuestion(getLatestUserMessage(request?.messages || []), getConfirmedCapabilityEvidenceText(), locale)
   );
 }
 
 function buildSystemPrompt(context: AssistantProviderContext | undefined, request?: AssistantRequest) {
+  const activeLocale = resolveAssistantReplyLocale({
+    latestUserMessage: getLatestUserMessage(request?.messages || []),
+    requestLocale: request?.context.locale,
+    conversationMemory: context?.conversationMemory || null,
+  });
   const knowledgeContext = context?.knowledgeContext ? formatKnowledgeContext(context.knowledgeContext) : "No route-specific knowledge context was provided.";
   const conversationMemory = context?.conversationMemory?.summary || "No conversation memory was provided.";
-  const capabilityAssessment = resolveCapabilityAssessment(context, request);
-  const capabilityText = formatCapabilityAssessment(capabilityAssessment, context?.conversationMemory?.locale);
+  const capabilityAssessment = resolveCapabilityAssessment(context, request, activeLocale);
+  const capabilityText = formatCapabilityAssessment(capabilityAssessment, activeLocale);
   const structuredMemory = context?.conversationMemory?.structured;
   const structuredMemoryText = structuredMemory
     ? JSON.stringify(structuredMemory, null, 2)
@@ -133,6 +137,11 @@ export class OpenAiAssistantProvider implements SiteAssistantProvider {
   }
 
   async respond(request: AssistantRequest, context?: AssistantProviderContext): Promise<AssistantResponse> {
+    const activeLocale = resolveAssistantReplyLocale({
+      latestUserMessage: getLatestUserMessage(request.messages),
+      requestLocale: request.context.locale,
+      conversationMemory: context?.conversationMemory || null,
+    });
     const response = await this.client.responses.create({
       model: this.model,
       instructions: buildSystemPrompt(context, request),
@@ -158,10 +167,10 @@ export class OpenAiAssistantProvider implements SiteAssistantProvider {
     const output = parseOutput(response.output_text);
     const lead = mergeLead(request.lead, output.collectedFields, output.leadScore);
     const readyToSubmit = output.readyToSubmit && isReadyToSubmit(lead);
-    const capabilityAssessment = resolveCapabilityAssessment(context, request);
+    const capabilityAssessment = resolveCapabilityAssessment(context, request, activeLocale);
     const useCapabilityFallback = shouldUseCapabilityFallback(getLatestUserMessage(request.messages), capabilityAssessment);
     const assistantMessage = useCapabilityFallback
-      ? buildCapabilityFallbackMessage(context?.conversationMemory?.locale, capabilityAssessment)
+      ? buildCapabilityFallbackMessage(activeLocale, capabilityAssessment)
       : output.assistantMessage;
 
     return {
@@ -169,7 +178,7 @@ export class OpenAiAssistantProvider implements SiteAssistantProvider {
         role: "assistant",
         content: assistantMessage,
       },
-      locale: output.detectedLanguage,
+      locale: activeLocale,
       lead,
       readyToSubmit,
     };

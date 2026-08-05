@@ -1,5 +1,5 @@
 import { NextResponse } from "next/server";
-import { buildSubmittedAssistantMessage } from "@/lib/ai/assistant-localization";
+import { buildSubmittedAssistantMessage, resolveAssistantReplyLocale } from "@/lib/ai/assistant-localization";
 import { buildAssistantConversationMemory } from "@/lib/ai/conversation-memory";
 import { selectKnowledgeContext } from "@/lib/ai/knowledge-base";
 import { getAssistantProvider } from "@/lib/ai/provider";
@@ -183,12 +183,12 @@ function buildSubmittedMessage(locale: AssistantLocale, lead: AssistantLeadDraft
   return templates[locale]({ contactLabel, contactValue, name });
 }
 
-function withSubmittedMessage(response: AssistantResponse): AssistantResponse {
+function withSubmittedMessage(response: AssistantResponse, locale: AssistantLocale): AssistantResponse {
   return {
     ...response,
     message: {
       role: "assistant",
-      content: buildSubmittedAssistantMessage(response.locale, response.lead),
+      content: buildSubmittedAssistantMessage(locale, response.lead),
     },
   };
 }
@@ -259,6 +259,11 @@ export async function POST(request: Request) {
       keywords: getKnowledgeKeywords(parsed.data.messages),
     });
     const latestUserMessage = getLatestUserMessage(parsed.data.messages);
+    const activeReplyLocale = resolveAssistantReplyLocale({
+      latestUserMessage,
+      requestLocale: parsed.data.context.locale,
+      conversationMemory: parsed.data.context.conversationMemory || null,
+    });
     const conversationMemory =
       parsed.data.context.conversationMemory ||
       buildAssistantConversationMemory(parsed.data.messages, parsed.data.lead, {
@@ -283,7 +288,7 @@ export async function POST(request: Request) {
       if (!reservation.reserved) {
         duplicateSubmission = true;
         submitted = true;
-        return NextResponse.json({ ok: true, requestId, ...withSubmittedMessage(assistantResponse), submitted, duplicateSubmission });
+        return NextResponse.json({ ok: true, requestId, ...withSubmittedMessage(assistantResponse, activeReplyLocale), submitted, duplicateSubmission });
       }
 
       const originalMessage = getLatestUserMessage(parsed.data.messages);
@@ -308,7 +313,7 @@ export async function POST(request: Request) {
 
       markAssistantSubmissionSubmitted(submissionHash);
       submitted = true;
-      return NextResponse.json({ ok: true, requestId, ...withSubmittedMessage(assistantResponse), submitted, duplicateSubmission });
+      return NextResponse.json({ ok: true, requestId, ...withSubmittedMessage(assistantResponse, activeReplyLocale), submitted, duplicateSubmission });
     }
 
     return NextResponse.json({ ok: true, requestId, ...assistantResponse, submitted, duplicateSubmission });

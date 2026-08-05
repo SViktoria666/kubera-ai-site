@@ -1,5 +1,5 @@
 import { createRequire } from "module";
-import { detectAssistantLocaleFromMessages, getAssistantPromptCopy, getConsultativeResponse as getLocalizedConsultativeResponse, getResponseTimeResponse as getLocalizedResponseTimeResponse } from "./assistant-localization";
+import { getAssistantPromptCopy, getConsultativeResponse as getLocalizedConsultativeResponse, getResponseTimeResponse as getLocalizedResponseTimeResponse, resolveAssistantReplyLocale } from "./assistant-localization";
 import { buildCapabilityFallbackMessage, classifyCapabilityQuestion, getConfirmedCapabilityEvidenceText, shouldUseCapabilityFallback } from "./assistant-intelligence";
 import type { AssistantProviderContext, AssistantRequest, AssistantResponse } from "./types";
 
@@ -86,10 +86,6 @@ function getSalesResponse(text: string, locale: AssistantResponse["locale"]) {
   return null;
 }
 
-function pickLocale(request: AssistantRequest) {
-  return detectAssistantLocaleFromMessages(request.messages, request.context.locale || "en");
-}
-
 function getPrompts(locale: AssistantResponse["locale"]) {
   return getAssistantPromptCopy(locale);
 }
@@ -127,7 +123,11 @@ function scoreLead(lead: AssistantRequest["lead"]) {
 
 export class DeterministicAssistantProvider implements SiteAssistantProvider {
   async respond(request: AssistantRequest, _context?: AssistantProviderContext): Promise<AssistantResponse> {
-    const locale = pickLocale(request);
+    const locale = resolveAssistantReplyLocale({
+      latestUserMessage: [...request.messages].reverse().find((message) => message.role === "user")?.content || "",
+      requestLocale: request.context.locale,
+      conversationMemory: request.context.conversationMemory,
+    });
     const labels = getPrompts(locale);
     const latestUserMessage = [...request.messages].reverse().find((message) => message.role === "user")?.content.trim() || "";
     const lead = { ...(request.lead || {}) };

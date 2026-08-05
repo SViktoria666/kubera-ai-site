@@ -19,6 +19,7 @@ import {
   getAssistantUiCopy,
   getCapabilityLocalization,
   normalizeAssistantLocale,
+  resolveAssistantReplyLocale,
 } from "../src/lib/ai/assistant-localization";
 import { createClosedAssistantSessionState, createTransientAssistantSessionState } from "../src/lib/ai/assistant-session";
 import { DeterministicAssistantProvider } from "../src/lib/ai/provider";
@@ -80,6 +81,40 @@ test("locale detection recognizes all supported languages and preserves short am
     "en",
   );
   assert.equal(normalizeAssistantLocale("de-DE", "en"), "de");
+});
+
+test("reply locale resolver keeps explicit language switches ahead of stale memory", () => {
+  const staleSpanishMemory = {
+    locale: "es" as const,
+    structured: {
+      language: "es" as const,
+    },
+  };
+
+  assert.equal(
+    resolveAssistantReplyLocale({
+      latestUserMessage: "Can you switch to English now?",
+      requestLocale: "es",
+      conversationMemory: staleSpanishMemory,
+      pageLocale: "es",
+    }),
+    "en",
+  );
+
+  assert.equal(
+    resolveAssistantReplyLocale({
+      latestUserMessage: "OK",
+      requestLocale: "de",
+      conversationMemory: {
+        locale: "de",
+        structured: {
+          language: "de",
+        },
+      },
+      pageLocale: "en",
+    }),
+    "de",
+  );
 });
 
 test("structured memory keeps confirmed facts and language across long conversations", () => {
@@ -223,6 +258,60 @@ test("deterministic fallback and helper copy stay aligned for confirmed and unco
   assert.ok(getAssistantPromptCopy("uk").need.length > 0);
   assert.ok(getCapabilityLocalization("fr").needReview.length > 0);
   assert.ok(buildSubmittedAssistantMessage("pl", { name: "Ala", email: "ala@example.com" }).includes("Kubera AI"));
+});
+
+test("capability fallback follows the switched active language instead of stale memory", async () => {
+  const provider = new DeterministicAssistantProvider();
+  const staleSpanishMemory = {
+    summary: "Spanish conversation about automation.",
+    turnCount: 24,
+    locale: "es" as const,
+    structured: {
+      language: "es" as const,
+      country: "Spain",
+      currentConversationStage: "solution_recommendation" as const,
+      questionsAlreadyAnswered: ["country", "need"],
+      informationStillNeeded: ["contact"],
+    },
+  };
+
+  const englishSwitchResponse = await provider.respond({
+    context: {
+      currentPath: "/services",
+      locale: "en",
+      conversationMemory: staleSpanishMemory,
+    },
+    messages: [
+      { role: "assistant", content: "Claro, puedo ayudar." },
+      { role: "user", content: "We are in Spain, but can you switch to English now and tell me if SAP integration is possible?" },
+    ],
+  });
+
+  const germanSwitchResponse = await provider.respond({
+    context: {
+      currentPath: "/services",
+      locale: "de",
+      conversationMemory: {
+        ...staleSpanishMemory,
+        locale: "de",
+        structured: {
+          ...staleSpanishMemory.structured,
+          language: "de" as const,
+        },
+      },
+    },
+    messages: [
+      { role: "assistant", content: "Claro, puedo ayudar." },
+      { role: "user", content: "Kannst du bitte auf Deutsch antworten und mir sagen, ob SAP möglich ist?" },
+    ],
+  });
+
+  assert.equal(englishSwitchResponse.locale, "en");
+  assert.ok(englishSwitchResponse.message.content.includes("technical assessment"));
+  assert.ok(englishSwitchResponse.message.content.includes("What system are you using"));
+  assert.equal(germanSwitchResponse.locale, "de");
+  assert.ok(germanSwitchResponse.message.content.toLowerCase().includes("technische pruefung"));
+  assert.ok(germanSwitchResponse.message.content.includes("Welches System"));
 });
 
 test("contact collection stays in the active language", () => {

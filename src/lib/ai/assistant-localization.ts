@@ -1,4 +1,4 @@
-import type { AssistantLeadDraft, AssistantLocale, AssistantMessage } from "./types";
+import type { AssistantConversationMemory, AssistantLeadDraft, AssistantLocale, AssistantMessage } from "./types";
 
 type AssistantLocalizedCopy = {
   welcome: string;
@@ -661,6 +661,27 @@ export function detectAssistantLocaleFromText(text: string, fallback?: Assistant
 export function detectAssistantLocaleFromMessages(messages: AssistantMessage[], fallback?: AssistantLocale) {
   const latestUserMessage = [...messages].reverse().find((message) => message.role === "user")?.content || "";
   return detectAssistantLocaleFromText(latestUserMessage, fallback);
+}
+
+export function resolveAssistantReplyLocale(params: {
+  latestUserMessage?: string;
+  requestLocale?: AssistantLocale;
+  conversationMemory?: Pick<AssistantConversationMemory, "locale" | "structured"> | null;
+  pageLocale?: string | null;
+  fallback?: AssistantLocale;
+}): AssistantLocale {
+  const fallbackLocale = params.fallback || "en";
+  const pageLocale = normalizeAssistantLocale(params.pageLocale || undefined, fallbackLocale);
+  const structuredLocale = params.conversationMemory?.structured?.language;
+  const memoryLocale = params.conversationMemory?.locale;
+  const sessionLocale = params.requestLocale;
+  const baseLocale = structuredLocale || memoryLocale || sessionLocale || pageLocale || fallbackLocale;
+
+  if (!params.latestUserMessage) {
+    return baseLocale;
+  }
+
+  return detectAssistantLocaleFromText(params.latestUserMessage, baseLocale);
 }
 
 export function normalizeAssistantLocale(locale?: string | null, fallback: AssistantLocale = "en"): AssistantLocale {
