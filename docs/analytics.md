@@ -50,8 +50,32 @@ The memory summary keeps only safe, useful facts:
 - urgency
 - budget
 - collected contact fields
+- customer name
+- city or region
+- industry
+- requested services
+- discussed pages
+- preferred contact method
+- questions already answered
+- information still needed
+- current conversation stage
 
 This keeps long conversations stable without sending an unbounded transcript.
+
+Rules:
+
+- Keep the memory bounded and compact.
+- Preserve confirmed facts through long conversations.
+- Never overwrite a confirmed fact with a guess.
+- Do not repeat questions that are already answered.
+- Clear the memory only when the user deliberately closes the widget.
+
+## Capability honesty
+
+- The assistant may describe a capability as confirmed only when the knowledge base explicitly supports it.
+- If a capability is not confirmed, the assistant must say it may be possible in principle and needs technical assessment of the specific systems, APIs, workflow, and security requirements.
+- Unconfirmed integrations such as SAP should never be stated as already supported.
+- Keep the wording consultative and avoid generic yes/no claims for unknown capabilities.
 
 ## Contact collection state machine
 
@@ -72,6 +96,7 @@ Rules:
 - Resume from the last missing field after a transient error.
 - Submit the lead only once.
 - Keep partial progress until the user closes the widget.
+- Ask for contacts only after the conversation has established the need, urgency, name, company, and country.
 
 ## Retry behavior
 
@@ -170,4 +195,3 @@ The website continues to work because the tracker is optional.
 - Revert the website commit that introduced the assistant lifecycle fix or analytics change.
 - Leave Umami historical data intact.
 - Do not touch NocoDB or n8n unless the rollback explicitly includes them.
-

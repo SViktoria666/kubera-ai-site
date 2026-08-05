@@ -52,6 +52,8 @@ Spanish:
 
 - The production assistant route forwards the original customer message and transcript to the CRM handoff payload so downstream lead records can preserve the source language and context.
 - The assistant uses an in-memory session lifecycle: opening starts a fresh conversation, transient errors preserve the active chat, and closing the widget intentionally clears the conversation and lead draft.
+- The assistant also carries a compact structured memory summary so confirmed facts, contact details, stage, and open questions survive long conversations without keeping an unbounded transcript.
+- Capability answers stay conservative unless the website knowledge base explicitly confirms the capability; unconfirmed integrations should be framed as possible only after technical review.
 - The retry flow is bounded so a temporary backend or network error can be retried once automatically, then manually without duplicating the conversation history.
 
 ## Analytics
