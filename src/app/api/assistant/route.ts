@@ -1,4 +1,5 @@
 import { NextResponse } from "next/server";
+import { buildSubmittedAssistantMessage } from "@/lib/ai/assistant-localization";
 import { buildAssistantConversationMemory } from "@/lib/ai/conversation-memory";
 import { selectKnowledgeContext } from "@/lib/ai/knowledge-base";
 import { getAssistantProvider } from "@/lib/ai/provider";
@@ -175,6 +176,8 @@ function buildSubmittedMessage(locale: AssistantLocale, lead: AssistantLeadDraft
       `Tack${name ? `, ${name}` : ""} for din forfragan. Jag har skickat den till Kubera AI-teamet. De kontaktar dig via ${contactLabel}${contactValue}. Om du vill korrigera kontaktuppgiften eller lagga till detaljer, skriv har.`,
     da: ({ contactLabel, contactValue, name }) =>
       `Tak${name ? `, ${name}` : ""} for din henvendelse. Jeg har sendt din foresporgsel til Kubera AI-teamet. De kontakter dig via ${contactLabel}${contactValue}. Hvis du vil rette kontakten eller tilfoje detaljer, saa skriv her.`,
+    uk: ({ contactLabel, contactValue, name }) =>
+      `Дякую${name ? `, ${name}` : ""} за звернення. Я передав ваш запит команді Kubera AI. З вами зв'яжуться через вказаний ${contactLabel}${contactValue}. Якщо хочете виправити контакт або додати деталі, просто напишіть тут.`,
   };
 
   return templates[locale]({ contactLabel, contactValue, name });
@@ -185,7 +188,7 @@ function withSubmittedMessage(response: AssistantResponse): AssistantResponse {
     ...response,
     message: {
       role: "assistant",
-      content: buildSubmittedMessage(response.locale, response.lead),
+      content: buildSubmittedAssistantMessage(response.locale, response.lead),
     },
   };
 }

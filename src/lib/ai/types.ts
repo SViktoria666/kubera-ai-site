@@ -1,4 +1,4 @@
-export type AssistantLocale = "en" | "ru" | "es" | "de" | "fr" | "it" | "nl" | "pt" | "pl" | "et" | "lv" | "lt" | "fi" | "sv" | "da";
+export type AssistantLocale = "en" | "ru" | "es" | "de" | "fr" | "it" | "nl" | "pt" | "pl" | "et" | "lv" | "lt" | "fi" | "sv" | "da" | "uk";
 
 export type AssistantContext = {
   locale?: AssistantLocale;

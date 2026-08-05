@@ -1,5 +1,3 @@
-import "server-only";
-
 import { getAllBlogPosts } from "@/content/blog";
 import { caseStudies } from "@/content/cases";
 import { enServices } from "@/content/en/services";
@@ -12,6 +10,7 @@ import { aiReceptionistSalonsSpas } from "@/content/use-cases/ai-receptionist-sa
 import { aiVoiceAgentsHomeServices } from "@/content/use-cases/ai-voice-agents-home-services";
 import { n8nEcommerceAutomation } from "@/content/use-cases/n8n-ecommerce-automation";
 import { realEstateLeadAutomation } from "@/content/use-cases/real-estate-lead-automation";
+import { industrySolutions } from "@/content/industry-solutions";
 import { siteConfig, supportedLanguages } from "@/content/site";
 import { rankRelevantKnowledgePages } from "@/lib/ai/assistant-intelligence";
 import type { AssistantLocale } from "@/lib/ai/types";
@@ -50,7 +49,7 @@ export type KnowledgeBaseWorkflowStep = {
   sourceId: string;
 };
 
-export type KnowledgeBaseContentKind = "service" | "workflow" | "geo" | "use-case" | "case-study" | "blog" | "static";
+export type KnowledgeBaseContentKind = "service" | "workflow" | "geo" | "use-case" | "case-study" | "blog" | "static" | "industry-solution";
 
 export type KnowledgeBaseContentPage = {
   kind: KnowledgeBaseContentKind;
@@ -62,6 +61,13 @@ export type KnowledgeBaseContentPage = {
 
 export type KnowledgeBasePageRecommendation = KnowledgeBaseContentPage & {
   reason: string;
+};
+
+export type KnowledgeBaseQuickAnswer = {
+  category: "service" | "pricing" | "delivery" | "security" | "contact" | "integration" | "faq";
+  question: string;
+  answer: string;
+  path?: string;
 };
 
 export type KnowledgeBaseGeoPage = {
@@ -90,16 +96,18 @@ export type KnowledgeBaseGeoPage = {
 };
 
 export type KnowledgeBase = {
-  version: "mvp-1";
+  version: "wave-3";
   generatedAt: string;
   company: KnowledgeBaseCompany;
   services: KnowledgeBaseService[];
   workflow: KnowledgeBaseWorkflowStep[];
   geoPages: KnowledgeBaseGeoPage[];
+  industrySolutions: KnowledgeBaseContentPage[];
   useCases: KnowledgeBaseContentPage[];
   caseStudies: KnowledgeBaseContentPage[];
   blogPosts: KnowledgeBaseContentPage[];
   staticPages: KnowledgeBaseContentPage[];
+  quickAnswers: KnowledgeBaseQuickAnswer[];
   llmsFull: string;
   sources: KnowledgeBaseSource[];
 };
@@ -116,10 +124,12 @@ export type SelectedKnowledgeContext = {
   services: KnowledgeBaseService[];
   workflow: KnowledgeBaseWorkflowStep[];
   geoPages: KnowledgeBaseGeoPage[];
+  industrySolutions: KnowledgeBaseContentPage[];
   useCases: KnowledgeBaseContentPage[];
   caseStudies: KnowledgeBaseContentPage[];
   blogPosts: KnowledgeBaseContentPage[];
   staticPages: KnowledgeBaseContentPage[];
+  quickAnswers: KnowledgeBaseQuickAnswer[];
   recommendedPages: KnowledgeBasePageRecommendation[];
   llmsFullExcerpt: string;
   sources: KnowledgeBaseSource[];
@@ -281,6 +291,19 @@ function getCaseStudySummaries(): KnowledgeBaseContentPage[] {
   });
 }
 
+function getIndustrySolutionSummaries(): KnowledgeBaseContentPage[] {
+  return industrySolutions.map((solution) => ({
+    kind: "industry-solution",
+    title: solution.hero.title || solution.seo.title,
+    path: solution.url,
+    summary: compactText(
+      `${solution.hero.subtitle} ${solution.architecture.description} ${solution.cta.body || ""}`,
+      260,
+    ),
+    sourceId: "industry-solutions",
+  }));
+}
+
 function getBlogPostSummaries(): KnowledgeBaseContentPage[] {
   return getAllBlogPosts().map((post) => ({
     kind: "blog",
@@ -289,6 +312,81 @@ function getBlogPostSummaries(): KnowledgeBaseContentPage[] {
     summary: compactText(post.excerpt || post.frontmatter.description, 240),
     sourceId: "blog",
   }));
+}
+
+function getQuickAnswers(): KnowledgeBaseQuickAnswer[] {
+  return [
+    {
+      category: "service",
+      question: "What can Kubera AI automate?",
+      answer:
+        "Kubera AI focuses on AI assistants, customer communication automation, lead generation automation, CRM automation, WhatsApp automation, Telegram automation, email automation, voice AI, internal workflow automation, and custom AI automation solutions.",
+      path: "/services",
+    },
+    {
+      category: "pricing",
+      question: "How much does automation cost?",
+      answer:
+        "The site shows example project entry points starting from €1,800 and ongoing maintenance from €350/month. Final pricing depends on scope, channels, integrations, and support needs after discovery.",
+      path: "/services",
+    },
+    {
+      category: "delivery",
+      question: "How long does implementation take?",
+      answer:
+        "The how-we-work page describes diagnosis on Day 1-2, solution architecture on Day 2-3, development and setup in 1-3 weeks, launch and testing in 2-3 days, and ongoing support afterwards. Exact timing depends on scope.",
+      path: "/how-we-work",
+    },
+    {
+      category: "security",
+      question: "Is my data secure?",
+      answer:
+        "The site emphasizes implementation with professional automation tools, clear workflow ownership, and systems that keep data with the client rather than on consumer SaaS platforms. Security details still depend on the specific project scope and integrations.",
+      path: "/how-we-work",
+    },
+    {
+      category: "contact",
+      question: "How can I contact Kubera AI?",
+      answer:
+        "The site provides email, Telegram, WhatsApp, and a contact form. The contacts page is the best place to start if you want a direct consultation.",
+      path: "/contacts",
+    },
+    {
+      category: "integration",
+      question: "Can Kubera AI work with my CRM, WhatsApp, or n8n workflow?",
+      answer:
+        "Yes, those are core website-backed capabilities. For vendor-specific ERP or enterprise systems, the assistant should say the exact feasibility needs a technical assessment of the APIs, authentication, workflow, and security requirements.",
+      path: "/services",
+    },
+    {
+      category: "faq",
+      question: "Do I need technical knowledge?",
+      answer:
+        "No. Kubera AI starts with diagnosis, then proposes the solution architecture, builds the workflow, launches it, and supports it afterwards. The team still needs your business context and the systems you use today.",
+      path: "/how-we-work",
+    },
+    {
+      category: "faq",
+      question: "What happens after launch?",
+      answer:
+        "The website says the work does not stop at launch: Kubera AI provides testing, handover, documentation, monitoring, fixes, and ongoing support as the business grows.",
+      path: "/how-we-work",
+    },
+    {
+      category: "faq",
+      question: "What if I do not know what to automate?",
+      answer:
+        "Start with the problems the business feels most: lost leads, slow replies, repetitive support, manual processing, or unclear follow-up. The assistant can then point to a matching use case, case study, or service page.",
+      path: "/services",
+    },
+    {
+      category: "integration",
+      question: "Can you integrate with a vendor-specific ERP system?",
+      answer:
+        "That may be technically possible, but the site does not confirm every vendor-specific ERP. The right next step is a technical assessment of the system, available APIs, authentication method, and workflow requirements.",
+      path: "/contacts",
+    },
+  ];
 }
 
 function getStaticPageSummaries(): KnowledgeBaseContentPage[] {
@@ -361,16 +459,18 @@ export function buildKnowledgeBase(): KnowledgeBase {
     { id: "site", title: "Kubera AI site configuration", path: "src/content/site.ts" },
     { id: "services-en", title: "English services catalog", path: "src/content/en/services.ts" },
     { id: "workflow-en", title: "English how-we-work process", path: "src/content/en/workflow.ts" },
+    { id: "industry-solutions", title: "Industry solution library", path: "src/content/industry-solutions/*.ts" },
     { id: "use-cases", title: "Use-case library", path: "src/content/use-cases/*.ts" },
     { id: "cases", title: "Case study library", path: "src/content/cases.ts" },
     { id: "blog", title: "Blog posts", path: "content/blog/*.md" },
     { id: "static-pages", title: "Core website pages", path: "src/app/(site)/*" },
     { id: "geo", title: "GEO markdown pages", path: "src/content/geo/*.md" },
     { id: "llms-full", title: "LLMs full site context", path: "public/llms-full.txt" },
+    { id: "quick-answers", title: "Approved assistant FAQ and boundaries", path: "src/lib/ai/knowledge-base.ts" },
   ];
 
   cachedKnowledgeBase = {
-    version: "mvp-1",
+    version: "wave-3",
     generatedAt: new Date().toISOString(),
     company: {
       name: siteConfig.name,
@@ -410,10 +510,12 @@ export function buildKnowledgeBase(): KnowledgeBase {
       relatedRoutes: page.relatedRoutes,
       sourceId: "geo",
     })),
+    industrySolutions: getIndustrySolutionSummaries(),
     useCases: getUseCaseSummaries(),
     caseStudies: getCaseStudySummaries(),
     blogPosts: getBlogPostSummaries(),
     staticPages: getStaticPageSummaries(),
+    quickAnswers: getQuickAnswers(),
     llmsFull: generatedLlmsFull,
     sources,
   };
@@ -450,28 +552,34 @@ export function selectKnowledgeContext(input: KnowledgeBaseSelectionInput): Sele
 
   const useCases = knowledgeBase.useCases;
   const caseStudies = knowledgeBase.caseStudies;
+  const industrySolutions = knowledgeBase.industrySolutions;
   const blogPosts = knowledgeBase.blogPosts;
   const staticPages = knowledgeBase.staticPages;
-  const recommendedPages = chooseTopRecommendations(input, [...useCases, ...caseStudies, ...blogPosts, ...staticPages], 2);
+  const quickAnswers = knowledgeBase.quickAnswers;
+  const recommendedPages = chooseTopRecommendations(input, [...useCases, ...caseStudies, ...industrySolutions, ...blogPosts, ...staticPages], 2);
 
   const sourceIds = new Set(["site", "services-en", "workflow-en", "llms-full"]);
   if (selectedPages.size) sourceIds.add("geo");
+  if (industrySolutions.length) sourceIds.add("industry-solutions");
   if (useCases.length) sourceIds.add("use-cases");
   if (caseStudies.length) sourceIds.add("cases");
   if (blogPosts.length) sourceIds.add("blog");
   if (staticPages.length) sourceIds.add("static-pages");
+  if (quickAnswers.length) sourceIds.add("quick-answers");
 
   return {
     company: knowledgeBase.company,
     services: knowledgeBase.services,
     workflow: knowledgeBase.workflow,
     geoPages: Array.from(selectedPages.values()).map(compactGeoPage),
+    industrySolutions,
     useCases,
     caseStudies,
     blogPosts,
     staticPages,
+    quickAnswers,
     recommendedPages,
-    llmsFullExcerpt: knowledgeBase.llmsFull.slice(0, 2500),
+    llmsFullExcerpt: knowledgeBase.llmsFull.slice(0, 2200),
     sources: knowledgeBase.sources.filter((source) => sourceIds.has(source.id) && sourceById(knowledgeBase.sources, source.id)),
     selection: {
       page: normalizedPage,
@@ -492,6 +600,20 @@ export function formatKnowledgeContext(context: SelectedKnowledgeContext) {
     })
     .join("\n\n");
 
+  const industryText = context.industrySolutions.length
+    ? `Industry solutions:\n${context.industrySolutions
+        .slice(0, 8)
+        .map((page) => `- ${page.title} (${page.path}) - ${page.summary}`)
+        .join("\n")}`
+    : "";
+
+  const quickAnswersText = context.quickAnswers.length
+    ? `Approved FAQ and boundaries:\n${context.quickAnswers
+        .slice(0, 10)
+        .map((item) => `- ${item.question}: ${item.answer}${item.path ? ` [${item.path}]` : ""}`)
+        .join("\n")}`
+    : "";
+
   const recommendedText = context.recommendedPages.length
     ? `Recommended pages:\n${context.recommendedPages.map((page) => `- ${page.title} (${page.path}) [${page.kind}] - ${page.reason}`).join("\n")}`
     : "";
@@ -504,6 +626,8 @@ export function formatKnowledgeContext(context: SelectedKnowledgeContext) {
     context.services.map((service) => `- ${service.title}: ${service.description}`).join("\n"),
     "Process:",
     context.workflow.map((step) => `- ${step.title}: ${step.description}`).join("\n"),
+    industryText,
+    quickAnswersText,
     geoText ? `GEO context:\n${geoText}` : "",
     recommendedText,
     context.llmsFullExcerpt ? `General context excerpt:\n${context.llmsFullExcerpt}` : "",

@@ -5,6 +5,7 @@ import { usePathname } from "next/navigation";
 import { FormEvent, useEffect, useRef, useState } from "react";
 import type { AiAssistantApiResponse, AiAssistantWidgetProps } from "@/components/ai/types";
 import { buildAssistantConversationMemory } from "@/lib/ai/conversation-memory";
+import { detectAssistantLocaleFromText, getAssistantUiCopy, normalizeAssistantLocale } from "@/lib/ai/assistant-localization";
 import type { AssistantLeadDraft, AssistantLocale, AssistantMessage } from "@/lib/ai/types";
 import type { JourneyAnalyticsContext } from "@/lib/analytics/journey-types";
 import { buildCurrentPageContext, getPageLanguage, trackUmamiEvent } from "@/lib/analytics";
@@ -88,33 +89,12 @@ function getBrowserLocale() {
 
 function resolveAssistantLocale(pathname: string): AssistantLocale {
   const routeLanguage = getPageLanguage(pathname);
-
-  if (routeLanguage === "ru" || routeLanguage === "es") {
-    return routeLanguage;
-  }
-
-  if (routeLanguage === "en") {
-    return "en";
-  }
-
   const browserLocale = getBrowserLocale();
-  if (browserLocale === "ru" || browserLocale === "es") {
-    return browserLocale;
-  }
-
-  return "en";
+  return normalizeAssistantLocale(routeLanguage !== "en" ? routeLanguage : browserLocale, "en");
 }
 
 function getCopy(locale: AssistantLocale) {
-  if (locale === "ru") {
-    return copy.ru;
-  }
-
-  if (locale === "es") {
-    return copy.es;
-  }
-
-  return copy.en;
+  return getAssistantUiCopy(locale);
 }
 
 function getWelcomeMessage(locale: AssistantLocale) {
@@ -490,6 +470,7 @@ export function AiAssistantWidget({ enabled }: AiAssistantWidgetProps) {
         }
 
         const nextLead = data.lead || {};
+        setSessionLocale(normalizeAssistantLocale(data.locale, turn.locale));
         const nextSubmitted = submitted || Boolean(data.submitted);
         const nextPhase = nextSubmitted ? "completed" : hasLeadContactData(nextLead) ? "collecting_contacts" : "active";
 
@@ -590,7 +571,8 @@ export function AiAssistantWidget({ enabled }: AiAssistantWidgetProps) {
     }
 
     const pageContext = buildCurrentPageContext();
-    const requestLocale = sessionLocale || resolveAssistantLocale(pathname || "/");
+    const requestLocale = detectAssistantLocaleFromText(content, sessionLocale || resolveAssistantLocale(pathname || "/"));
+    setSessionLocale(requestLocale);
     const userMessage: AssistantMessage = { role: "user", content };
     const nextMessages = trimMessages([...messages, userMessage]);
     const nextLead = lead;

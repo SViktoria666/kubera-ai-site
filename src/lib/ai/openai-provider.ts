@@ -2,6 +2,7 @@ import "server-only";
 
 import OpenAI from "openai";
 import { zodTextFormat } from "openai/helpers/zod";
+import { detectAssistantLocaleFromMessages } from "./assistant-localization";
 import { formatKnowledgeContext } from "./knowledge-base";
 import {
   buildCapabilityFallbackMessage,
@@ -49,9 +50,10 @@ function getLatestUserMessage(messages: AssistantRequest["messages"]) {
 }
 
 function resolveCapabilityAssessment(context: AssistantProviderContext | undefined, request: AssistantRequest | undefined) {
+  const detectedLocale = detectAssistantLocaleFromMessages(request?.messages || [], context?.conversationMemory?.locale || "en");
   return (
     context?.capabilityAssessment ||
-    classifyCapabilityQuestion(getLatestUserMessage(request?.messages || []), getConfirmedCapabilityEvidenceText(), context?.conversationMemory?.locale)
+    classifyCapabilityQuestion(getLatestUserMessage(request?.messages || []), getConfirmedCapabilityEvidenceText(), detectedLocale || context?.conversationMemory?.locale)
   );
 }
 

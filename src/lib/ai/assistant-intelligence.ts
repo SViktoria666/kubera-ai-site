@@ -1,4 +1,5 @@
 import type { AssistantConversationMemory, AssistantContext, AssistantLeadDraft, AssistantLocale, AssistantMessage } from "./types";
+import { getCapabilityLocalization } from "./assistant-localization";
 
 export type AssistantConversationStage =
   | "discovery"
@@ -58,6 +59,13 @@ export type KnowledgePageLike = {
   title: string;
 };
 
+export type KnowledgeQuickAnswer = {
+  category: "service" | "pricing" | "delivery" | "security" | "contact" | "integration" | "faq";
+  question: string;
+  answer: string;
+  path?: string;
+};
+
 type ConfirmedCapabilityDefinition = {
   label: string;
   aliases: string[];
@@ -67,52 +75,170 @@ type ConfirmedCapabilityDefinition = {
 const CONFIRMED_CAPABILITIES: ConfirmedCapabilityDefinition[] = [
   {
     label: "AI assistant",
-    aliases: ["ai assistant", "website ai assistant", "assistant", "asistente de ia", "asistente ia", "ассистент ии", "ии ассистент", "ai помощник"],
+    aliases: [
+      "ai assistant",
+      "website ai assistant",
+      "assistant",
+      "assistent",
+      "ki assistant",
+      "ki-assistent",
+      "ai assistent",
+      "assistant ia",
+      "asistente de ia",
+      "asistente ia",
+      "asystent ai",
+      "assistent ia",
+      "ассистент ии",
+      "ии ассистент",
+      "ai помощник",
+    ],
     summary: "Kubera AI positions website and business AI assistants as a core offer.",
   },
   {
     label: "Customer communication automation",
-    aliases: ["customer communication automation", "customer communications", "communications automation", "automatizacion de comunicaciones", "автоматизация коммуникаций"],
+    aliases: [
+      "customer communication automation",
+      "customer communications",
+      "communications automation",
+      "kommunikationsautomatis",
+      "automatisation communication",
+      "automazione comunic",
+      "automatisering communic",
+      "automatizacion de comunicaciones",
+      "automatizacia komunikac",
+      "автоматизация коммуникаций",
+    ],
     summary: "Kubera AI supports automation for customer communication flows.",
   },
   {
     label: "Lead generation automation",
-    aliases: ["lead generation automation", "lead automation", "automatizacion de leads", "автоматизация лидогенерации", "автоматизация лидов"],
+    aliases: [
+      "lead generation automation",
+      "lead automation",
+      "lead generation",
+      "lead gen",
+      "lead gener",
+      "generacion de leads",
+      "generation de leads",
+      "leadgenerering",
+      "leadgeneratie",
+      "liidide gener",
+      "automatizacion de leads",
+      "автоматизация лидогенерации",
+      "автоматизация лидов",
+    ],
     summary: "Kubera AI supports lead capture, qualification, and follow-up automation.",
   },
   {
     label: "CRM automation",
-    aliases: ["crm automation", "automatizacion crm", "автоматизация crm"],
+    aliases: [
+      "crm automation",
+      "crm autom",
+      "crm",
+      "crm automatis",
+      "automatizacion crm",
+      "automatisation crm",
+      "automazione crm",
+      "crm automatisering",
+      "crm automatisatie",
+      "автоматизация crm",
+    ],
     summary: "Kubera AI supports CRM-connected automation flows.",
   },
   {
     label: "WhatsApp automation",
-    aliases: ["whatsapp automation", "automatizacion whatsapp", "автоматизация whatsapp"],
+    aliases: [
+      "whatsapp automation",
+      "whatsapp autom",
+      "whatsapp",
+      "whatsapp automatis",
+      "automatisation whatsapp",
+      "automazione whatsapp",
+      "whatsapp automatisering",
+      "whatsapp automatisatie",
+      "automatizacion whatsapp",
+      "автоматизация whatsapp",
+    ],
     summary: "Kubera AI supports WhatsApp-based automation and lead handling.",
   },
   {
     label: "Telegram automation",
-    aliases: ["telegram automation", "automatizacion telegram", "автоматизация telegram"],
+    aliases: [
+      "telegram automation",
+      "telegram autom",
+      "telegram",
+      "telegram automatis",
+      "automatizacion telegram",
+      "автоматизация telegram",
+    ],
     summary: "Kubera AI supports Telegram-based automation and notifications.",
   },
   {
     label: "Email automation",
-    aliases: ["email automation", "automatizacion de email", "автоматизация email"],
+    aliases: [
+      "email automation",
+      "email autom",
+      "email",
+      "e-mail",
+      "automatisation email",
+      "automazione email",
+      "email automatisering",
+      "automatizacion de email",
+      "автоматизация email",
+    ],
     summary: "Kubera AI supports email-based automation and follow-up flows.",
   },
   {
     label: "Voice AI",
-    aliases: ["voice ai", "voice agents", "ai voice", "voz ia", "голосовой ии", "голосовые агенты"],
+    aliases: [
+      "voice ai",
+      "voice agents",
+      "ai voice",
+      "voz ia",
+      "voice",
+      "spracher",
+      "voix ia",
+      "voce ia",
+      "hlasova ia",
+      "голосовой ии",
+      "голосовые агенты",
+    ],
     summary: "Kubera AI supports voice AI and call-handling automation use cases.",
   },
   {
     label: "Internal workflow automation",
-    aliases: ["internal workflow automation", "workflow automation", "business process automation", "n8n automation", "automatizacion de procesos", "автоматизация рабочих процессов", "автоматизация процессов", "автоматизация n8n"],
+    aliases: [
+      "internal workflow automation",
+      "workflow automation",
+      "workflow autom",
+      "business process automation",
+      "process automation",
+      "n8n automation",
+      "n8n",
+      "automatizacion de procesos",
+      "automatisation des processus",
+      "automazione dei processi",
+      "automatisering proces",
+      "автоматизация рабочих процессов",
+      "автоматизация процессов",
+      "автоматизация n8n",
+    ],
     summary: "Kubera AI supports internal workflow automation and orchestration.",
   },
   {
     label: "Custom AI automation solutions",
-    aliases: ["custom ai automation solutions", "custom ai automation", "soluciones de automatizacion ia", "кастомные решения по ии-автоматизации"],
+    aliases: [
+      "custom ai automation solutions",
+      "custom ai automation",
+      "bespoke ai automation",
+      "custom automation",
+      "soluciones de automatizacion ia",
+      "solution d automatisation ia",
+      "soluzioni di automazione ia",
+      "ki autom",
+      "kaasgeschneiderte ki",
+      "кастомные решения по ии-автоматизации",
+    ],
     summary: "Kubera AI supports bespoke AI automation engagements.",
   },
 ];
@@ -340,12 +466,27 @@ function knownCapabilityMatches(question: string, _knowledgeText: string) {
 
 function looksLikeTechnicalAssessmentRequest(question: string) {
   const q = normalizeCapabilityText(question);
-  return /\b(integrat(?:e|ion)|connect|compatible|work with|support|can you|do you|does kubera|sap|api|oauth|security|crm|erp|system|integracion|integrar|conexion|compatibl|soporte|puede|puedes|seguridad|sistema|интеграц|подключ|совместим|безопасн|система)\b/ui.test(q);
+  return /\b(integrat(?:e|ion|ed|ing|ions?)|integriert|integrier|connect|connecter|conectar|verbind|verbinden|koppeln|koppel|polaczyc|polaczy|ligar|link|work with|support|can you|do you|does kubera|sap|oracle|netsuite|workday|servicenow|dynamics|api|oauth|security|crm|erp|system|integracion|integrar|conexion|compatibl|soporte|puede|puedes|seguridad|sistema|интеграц|подключ|совместим|безопасн|система)\b/ui.test(q);
 }
 
 function extractTopic(question: string) {
   const q = normalizeCapabilityText(question);
-  const match = q.match(/\b(sap(?: s\/4hana)?|salesforce|hubspot|pipedrive|n8n|whatsapp|telegram|openclaw|hermes|crm|erp|api|booking|calendar|oracle e-business suite|netsuite|workday|servicenow|microsoft dynamics)\b/ui);
+  if (/\boracle\b/.test(q) && /\b(business|suite|ebs|e business)\b/.test(q)) {
+    return "ORACLE E-BUSINESS SUITE";
+  }
+  if (/\b(microsoft)\b/.test(q) && /\b(dynamics)\b/.test(q)) {
+    return "MICROSOFT DYNAMICS";
+  }
+  if (/\bnetsuite\b/.test(q)) {
+    return "NETSUITE";
+  }
+  if (/\b(workday)\b/.test(q)) {
+    return "WORKDAY";
+  }
+  if (/\b(servicenow)\b/.test(q)) {
+    return "SERVICENOW";
+  }
+  const match = q.match(/\b(sap(?: s ?4hana)?|salesforce|hubspot|pipedrive|n8n|whatsapp|telegram|openclaw|hermes|crm|erp|api|booking|calendar)\b/ui);
   return match?.[1]?.toUpperCase();
 }
 
@@ -407,63 +548,11 @@ export function rankRelevantKnowledgePages<T extends KnowledgePageLike>(
 }
 
 function localizedAssessmentPhrases(locale?: AssistantLocale) {
-  if (locale === "ru") {
-    return {
-      confirmed: "Подтвержденная возможность",
-      related: "Похоже возможно, но не подтверждено",
-      assessment: "Требуется техническая оценка",
-      unknown: "Вне подтвержденной области или неизвестно",
-      mayBePossible: "Это может быть возможно, но",
-      needReview: "нужна техническая проверка конкретной системы, API и требований безопасности.",
-      followUp: "Если хотите, я помогу сформулировать задачу для технической оценки.",
-    };
-  }
-
-  if (locale === "es") {
-    return {
-      confirmed: "Capacidad confirmada",
-      related: "Relacionado pero no confirmado",
-      assessment: "Requiere evaluacion tecnica",
-      unknown: "Fuera del alcance confirmado o desconocido",
-      mayBePossible: "Puede ser posible, pero",
-      needReview: "hace falta revisar el sistema concreto, sus APIs y los requisitos de seguridad.",
-      followUp: "Si quieres, te ayudo a redactar la solicitud para una revision tecnica.",
-    };
-  }
-
-  return {
-    confirmed: "Confirmed capability",
-    related: "Related but unconfirmed",
-    assessment: "Requires technical assessment",
-    unknown: "Out of scope or unknown",
-    mayBePossible: "It may be possible, but",
-    needReview: "a technical review of the specific system, available APIs, and security requirements is needed.",
-    followUp: "If you want, I can help you frame the request for a technical review.",
-  };
+  return getCapabilityLocalization(locale);
 }
 
 function buildLocalizedCapabilityMessage(locale?: AssistantLocale) {
-  if (locale === "ru") {
-    return {
-      mayBePossible: "Это может быть возможно, но",
-      needReview: "нужна техническая оценка конкретной системы, API, workflow и требований к безопасности.",
-      followUpQuestion: "Какая у вас система и какой именно workflow нужно связать?",
-    };
-  }
-
-  if (locale === "es") {
-    return {
-      mayBePossible: "Puede ser posible, pero",
-      needReview: "hace falta revisar el sistema concreto, sus APIs, el flujo de trabajo y los requisitos de seguridad.",
-      followUpQuestion: "¿Qué sistema usas y qué flujo exacto quieres conectar?",
-    };
-  }
-
-  return {
-    mayBePossible: "It may be possible, but",
-    needReview: "a technical assessment of the specific system, APIs, workflow, and security requirements is needed.",
-    followUpQuestion: "What system are you using, and what exact workflow do you want to connect?",
-  };
+  return getCapabilityLocalization(locale);
 }
 
 export function classifyCapabilityQuestion(question: string, knowledgeText: string, locale?: AssistantLocale): CapabilityAssessment {

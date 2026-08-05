@@ -1,4 +1,6 @@
 import { createRequire } from "module";
+import { detectAssistantLocaleFromMessages, getAssistantPromptCopy, getConsultativeResponse as getLocalizedConsultativeResponse, getResponseTimeResponse as getLocalizedResponseTimeResponse } from "./assistant-localization";
+import { buildCapabilityFallbackMessage, classifyCapabilityQuestion, getConfirmedCapabilityEvidenceText, shouldUseCapabilityFallback } from "./assistant-intelligence";
 import type { AssistantProviderContext, AssistantRequest, AssistantResponse } from "./types";
 
 export interface SiteAssistantProvider {
@@ -59,33 +61,17 @@ const prompts = {
 };
 
 const consultativeTopicPattern =
-  /\b(ai|automation|agent|agents|openclaw|hermes|n8n|crm|saas|integration|integrations|workflow|workflows|chatbot|chatbots|mcp|business automation|assistant|asistente|ассистент|помощник|voice ai|voz ia|голосовой ии|автоматизац|агент|агенты|интеграц|воркфлоу|чатбот|чат-бот|ии)\b/i;
+  /\b(ai|ia|ia|automatiz|automatis|automation|automazione|automatisering|automatisering|automatizacij|agent|agents|openclaw|hermes|n8n|crm|saas|integration|integrations|integrazione|integratie|integra[cç][aã]o|workflow|workflows|flux|flusso|proces|procesos|process|chatbot|chatbots|mcp|business automation|assistant|asistente|asistent|asystent|assistent|assistanten|ассистент|помощник|voice ai|voz ia|voice|голосовой ии|автоматизац|automatizac|agente|агент|агенты|интеграц|integraz|workfl[oó]w|воркфлоу|чатбот|чат-бот|чатботы|chatboti|iau|ii)\b/i;
 
 const responseTimePattern =
-  /\b(how fast|how quickly|when (will|do)|response time|reply|contact me|свяж|ответ|как быстро|когда ответ|срок|сроки|cuándo|rapido|respuesta|contacto)\b/i;
+  /\b(how fast|how quickly|when (will|do)|response time|reply|contact me|свяж|ответ|как быстро|когда ответ|срок|сроки|cu[aá]ndo|rapido|respuesta|contacto|wann|schnell|delai|délai|tempo|timing|tempo di risposta|hoe snel|wanneer|kiek greitai|kuo greitai|jak szybko|kuig|aeg)\b/i;
 
 function getConsultativeResponse(locale: AssistantResponse["locale"]) {
-  if (locale === "ru") {
-    return "Да, такие проекты находятся в зоне компетенции Kubera AI. Для точной оценки команда уточнит детали и предложит оптимальное решение. Если хотите, я также могу подсказать релевантную статью, кейс или страницу услуги. Что именно вы хотите автоматизировать или улучшить?";
-  }
-
-  if (locale === "es") {
-    return "Sí, este tipo de proyectos está dentro de la competencia de Kubera AI. Para una evaluación precisa, el equipo aclarará los detalles y propondrá la solución óptima. Si quieres, también puedo sugerirte un artículo, caso o página de servicio relevante. ¿Qué quieres automatizar o mejorar exactamente?";
-  }
-
-  return "Yes, projects like this are within Kubera AI's area of competence. For an accurate assessment, the team will clarify the details and propose the optimal solution. If you'd like, I can also point you to a relevant blog article, case study, or service page. What exactly do you want to automate or improve?";
+  return getLocalizedConsultativeResponse(locale);
 }
 
 function getResponseTimeResponse(locale: AssistantResponse["locale"]) {
-  if (locale === "ru") {
-    return "Обычно команда Kubera AI связывается в течение нескольких часов. Если запрос срочный, мы стараемся ответить максимально быстро.";
-  }
-
-  if (locale === "es") {
-    return "Normalmente el equipo de Kubera AI se pone en contacto en unas pocas horas. Si la solicitud es urgente, intentamos responder lo antes posible.";
-  }
-
-  return "The Kubera AI team usually contacts clients within a few hours. If the request is urgent, we try to respond as quickly as possible.";
+  return getLocalizedResponseTimeResponse(locale);
 }
 
 function getSalesResponse(text: string, locale: AssistantResponse["locale"]) {
@@ -101,13 +87,11 @@ function getSalesResponse(text: string, locale: AssistantResponse["locale"]) {
 }
 
 function pickLocale(request: AssistantRequest) {
-  const latestUserMessage = [...request.messages].reverse().find((message) => message.role === "user")?.content || "";
-  const detected = localePatterns.find((entry) => entry.pattern.test(latestUserMessage))?.locale;
-  return detected || request.context.locale || "en";
+  return detectAssistantLocaleFromMessages(request.messages, request.context.locale || "en");
 }
 
 function getPrompts(locale: AssistantResponse["locale"]) {
-  return prompts[locale as keyof typeof prompts] || prompts.en;
+  return getAssistantPromptCopy(locale);
 }
 
 function hasContact(lead: AssistantRequest["lead"]) {
@@ -143,12 +127,6 @@ function scoreLead(lead: AssistantRequest["lead"]) {
 
 export class DeterministicAssistantProvider implements SiteAssistantProvider {
   async respond(request: AssistantRequest, _context?: AssistantProviderContext): Promise<AssistantResponse> {
-    const {
-      buildCapabilityFallbackMessage,
-      classifyCapabilityQuestion,
-      getConfirmedCapabilityEvidenceText,
-      shouldUseCapabilityFallback,
-    } = await import(new URL("./assistant-intelligence.ts", import.meta.url).href);
     const locale = pickLocale(request);
     const labels = getPrompts(locale);
     const latestUserMessage = [...request.messages].reverse().find((message) => message.role === "user")?.content.trim() || "";
