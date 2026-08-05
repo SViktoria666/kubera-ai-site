@@ -1,8 +1,17 @@
 import "server-only";
 
+import { getAllBlogPosts } from "@/content/blog";
+import { caseStudies } from "@/content/cases";
 import { enServices } from "@/content/en/services";
 import { enWorkflow } from "@/content/en/workflow";
 import { generatedGeoPages, generatedLlmsFull } from "@/content/geo/generated";
+import { aiClientIntakeLawFirms } from "@/content/use-cases/ai-client-intake-law-firms";
+import { aiCustomerSupportEcommerce } from "@/content/use-cases/ai-customer-support-ecommerce";
+import { aiFrontDeskDentalPractices } from "@/content/use-cases/ai-front-desk-dental-practices";
+import { aiReceptionistSalonsSpas } from "@/content/use-cases/ai-receptionist-salons-spas";
+import { aiVoiceAgentsHomeServices } from "@/content/use-cases/ai-voice-agents-home-services";
+import { n8nEcommerceAutomation } from "@/content/use-cases/n8n-ecommerce-automation";
+import { realEstateLeadAutomation } from "@/content/use-cases/real-estate-lead-automation";
 import { siteConfig, supportedLanguages } from "@/content/site";
 import type { AssistantLocale } from "@/lib/ai/types";
 
@@ -40,6 +49,20 @@ export type KnowledgeBaseWorkflowStep = {
   sourceId: string;
 };
 
+export type KnowledgeBaseContentKind = "service" | "workflow" | "geo" | "use-case" | "case-study" | "blog" | "static";
+
+export type KnowledgeBaseContentPage = {
+  kind: KnowledgeBaseContentKind;
+  title: string;
+  path: string;
+  summary: string;
+  sourceId: string;
+};
+
+export type KnowledgeBasePageRecommendation = KnowledgeBaseContentPage & {
+  reason: string;
+};
+
 export type KnowledgeBaseGeoPage = {
   country: string;
   locale: "en" | "es";
@@ -72,6 +95,10 @@ export type KnowledgeBase = {
   services: KnowledgeBaseService[];
   workflow: KnowledgeBaseWorkflowStep[];
   geoPages: KnowledgeBaseGeoPage[];
+  useCases: KnowledgeBaseContentPage[];
+  caseStudies: KnowledgeBaseContentPage[];
+  blogPosts: KnowledgeBaseContentPage[];
+  staticPages: KnowledgeBaseContentPage[];
   llmsFull: string;
   sources: KnowledgeBaseSource[];
 };
@@ -88,6 +115,11 @@ export type SelectedKnowledgeContext = {
   services: KnowledgeBaseService[];
   workflow: KnowledgeBaseWorkflowStep[];
   geoPages: KnowledgeBaseGeoPage[];
+  useCases: KnowledgeBaseContentPage[];
+  caseStudies: KnowledgeBaseContentPage[];
+  blogPosts: KnowledgeBaseContentPage[];
+  staticPages: KnowledgeBaseContentPage[];
+  recommendedPages: KnowledgeBasePageRecommendation[];
   llmsFullExcerpt: string;
   sources: KnowledgeBaseSource[];
   selection: {
@@ -118,6 +150,24 @@ function normalizePath(value: string) {
 
 function sourceById(sources: KnowledgeBaseSource[], id: string) {
   return sources.find((source) => source.id === id);
+}
+
+function compactText(value: string, maxLength = 240) {
+  const normalized = value.replace(/\s+/g, " ").replace(/\s+([,.;:!?])/g, "$1").trim();
+
+  if (normalized.length <= maxLength) {
+    return normalized;
+  }
+
+  return `${normalized.slice(0, Math.max(0, maxLength - 3)).trimEnd()}...`;
+}
+
+function canonicalPath(url: string) {
+  try {
+    return new URL(url).pathname;
+  } catch {
+    return normalizePath(url);
+  }
 }
 
 function toSearchText(page: KnowledgeBaseGeoPage) {
@@ -158,6 +208,33 @@ function scoreGeoPage(page: KnowledgeBaseGeoPage, input: KnowledgeBaseSelectionI
   return score;
 }
 
+function scoreContentPage(page: KnowledgeBaseContentPage, input: KnowledgeBaseSelectionInput) {
+  let score = 0;
+  const normalizedPage = normalizePath(input.page);
+  const normalizedCountry = normalize(input.country || "");
+  const normalizedKeywords = (input.keywords || []).map(normalize).filter(Boolean);
+  const searchText = normalize([page.title, page.path, page.summary, page.kind].join(" "));
+
+  if (normalizePath(page.path) === normalizedPage) score += 100;
+  if (normalizedCountry && searchText.includes(normalizedCountry)) score += 18;
+
+  for (const keyword of normalizedKeywords) {
+    if (!keyword) continue;
+    if (searchText.includes(keyword)) {
+      score += 12;
+      continue;
+    }
+
+    if (normalize(page.path).includes(keyword)) {
+      score += 8;
+    }
+  }
+
+  if (score > 0 && input.locale) score += 3;
+
+  return score;
+}
+
 function compactGeoPage(page: KnowledgeBaseGeoPage): KnowledgeBaseGeoPage {
   return {
     ...page,
@@ -169,6 +246,132 @@ function compactGeoPage(page: KnowledgeBaseGeoPage): KnowledgeBaseGeoPage {
   };
 }
 
+function getUseCaseSummaries(): KnowledgeBaseContentPage[] {
+  const useCases = [
+    aiClientIntakeLawFirms,
+    aiCustomerSupportEcommerce,
+    aiFrontDeskDentalPractices,
+    aiReceptionistSalonsSpas,
+    aiVoiceAgentsHomeServices,
+    n8nEcommerceAutomation,
+    realEstateLeadAutomation,
+  ];
+
+  return useCases.map((entry) => ({
+    kind: "use-case",
+    title: entry.seo.h1 || entry.hero.title,
+    path: canonicalPath(entry.seo.canonical),
+    summary: compactText(`${entry.hero.lead} ${entry.whatTheServiceIs}`, 260),
+    sourceId: "use-cases",
+  }));
+}
+
+function getCaseStudySummaries(): KnowledgeBaseContentPage[] {
+  return caseStudies.map((caseStudy) => {
+    const localized = caseStudy.localized?.en;
+    const intro = localized?.intro || caseStudy.short || caseStudy.solution;
+    return {
+      kind: "case-study",
+      title: localized?.title || caseStudy.title,
+      path: `/cases/${caseStudy.slug}`,
+      summary: compactText(`${intro} ${localized?.conclusion || caseStudy.solution}`, 260),
+      sourceId: "cases",
+    };
+  });
+}
+
+function getBlogPostSummaries(): KnowledgeBaseContentPage[] {
+  return getAllBlogPosts().map((post) => ({
+    kind: "blog",
+    title: post.frontmatter.title,
+    path: post.url,
+    summary: compactText(post.excerpt || post.frontmatter.description, 240),
+    sourceId: "blog",
+  }));
+}
+
+function getStaticPageSummaries(): KnowledgeBaseContentPage[] {
+  return [
+    {
+      kind: "static",
+      title: "Home",
+      path: "/",
+      summary: compactText(`${siteConfig.description} Homepage overview and pricing entry point for the main services and consultation flow.`, 240),
+      sourceId: "static-pages",
+    },
+    {
+      kind: "static",
+      title: "Services",
+      path: "/services",
+      summary: compactText(
+        "Primary service hub covering customer communications, sales and leads, internal processes, HR, marketing, finance, e-commerce, education, real estate, hospitality, transport, beauty, medical, and auto automation.",
+        240,
+      ),
+      sourceId: "static-pages",
+    },
+    {
+      kind: "static",
+      title: "How We Work",
+      path: "/how-we-work",
+      summary: compactText("Diagnosis, solution architecture, development and setup, launch and testing, plus ongoing support.", 240),
+      sourceId: "static-pages",
+    },
+    {
+      kind: "static",
+      title: "Cases",
+      path: "/cases",
+      summary: compactText("Case study index with outcome-driven examples across industries and workflows.", 240),
+      sourceId: "static-pages",
+    },
+    {
+      kind: "static",
+      title: "Blog",
+      path: "/blog",
+      summary: compactText("Articles about AI automation, workflows, CRM, lead generation, and operational systems.", 240),
+      sourceId: "static-pages",
+    },
+    {
+      kind: "static",
+      title: "Contacts",
+      path: "/contacts",
+      summary: compactText("Contact page with email, Telegram, WhatsApp, and inquiry form.", 240),
+      sourceId: "static-pages",
+    },
+    {
+      kind: "static",
+      title: "Use Cases",
+      path: "/use-cases",
+      summary: compactText("Use case hub covering law firms, e-commerce, dental, salons, home services, real estate, and n8n automation.", 240),
+      sourceId: "static-pages",
+    },
+  ];
+}
+
+function chooseTopRecommendations(input: KnowledgeBaseSelectionInput, items: KnowledgeBaseContentPage[], limit = 6) {
+  const scored = items
+    .map((item, index) => ({ item, index, score: scoreContentPage(item, input) }))
+    .filter((entry) => entry.score > 0)
+    .sort((left, right) => right.score - left.score || left.index - right.index);
+
+  const ranked = scored.slice(0, limit).map(({ item, score }) => ({
+    ...item,
+    reason: score >= 100 ? "Exact route match" : score >= 30 ? "Strong topical match" : "Related source",
+  }));
+
+  if (ranked.length) {
+    return ranked;
+  }
+
+  const fallbackPaths = new Set(["/services", "/how-we-work", "/cases", "/blog", "/contacts"]);
+  return items
+    .filter((item) => fallbackPaths.has(item.path))
+    .slice(0, limit)
+    .map((item) => ({
+      ...item,
+      reason: "General reference",
+    }));
+}
+
 export function buildKnowledgeBase(): KnowledgeBase {
   if (cachedKnowledgeBase) {
     return cachedKnowledgeBase;
@@ -178,6 +381,10 @@ export function buildKnowledgeBase(): KnowledgeBase {
     { id: "site", title: "Kubera AI site configuration", path: "src/content/site.ts" },
     { id: "services-en", title: "English services catalog", path: "src/content/en/services.ts" },
     { id: "workflow-en", title: "English how-we-work process", path: "src/content/en/workflow.ts" },
+    { id: "use-cases", title: "Use-case library", path: "src/content/use-cases/*.ts" },
+    { id: "cases", title: "Case study library", path: "src/content/cases.ts" },
+    { id: "blog", title: "Blog posts", path: "content/blog/*.md" },
+    { id: "static-pages", title: "Core website pages", path: "src/app/(site)/*" },
     { id: "geo", title: "GEO markdown pages", path: "src/content/geo/*.md" },
     { id: "llms-full", title: "LLMs full site context", path: "public/llms-full.txt" },
   ];
@@ -223,6 +430,10 @@ export function buildKnowledgeBase(): KnowledgeBase {
       relatedRoutes: page.relatedRoutes,
       sourceId: "geo",
     })),
+    useCases: getUseCaseSummaries(),
+    caseStudies: getCaseStudySummaries(),
+    blogPosts: getBlogPostSummaries(),
+    staticPages: getStaticPageSummaries(),
     llmsFull: generatedLlmsFull,
     sources,
   };
@@ -257,14 +468,29 @@ export function selectKnowledgeContext(input: KnowledgeBaseSelectionInput): Sele
   if (input.keywords?.length) matchedBy.add("keywords");
   if (!selectedPages.size) matchedBy.add("global");
 
+  const useCases = knowledgeBase.useCases;
+  const caseStudies = knowledgeBase.caseStudies;
+  const blogPosts = knowledgeBase.blogPosts;
+  const staticPages = knowledgeBase.staticPages;
+  const recommendedPages = chooseTopRecommendations(input, [...useCases, ...caseStudies, ...blogPosts, ...staticPages], 6);
+
   const sourceIds = new Set(["site", "services-en", "workflow-en", "llms-full"]);
   if (selectedPages.size) sourceIds.add("geo");
+  if (useCases.length) sourceIds.add("use-cases");
+  if (caseStudies.length) sourceIds.add("cases");
+  if (blogPosts.length) sourceIds.add("blog");
+  if (staticPages.length) sourceIds.add("static-pages");
 
   return {
     company: knowledgeBase.company,
     services: knowledgeBase.services,
     workflow: knowledgeBase.workflow,
     geoPages: Array.from(selectedPages.values()).map(compactGeoPage),
+    useCases,
+    caseStudies,
+    blogPosts,
+    staticPages,
+    recommendedPages,
     llmsFullExcerpt: knowledgeBase.llmsFull.slice(0, 2500),
     sources: knowledgeBase.sources.filter((source) => sourceIds.has(source.id) && sourceById(knowledgeBase.sources, source.id)),
     selection: {
@@ -286,6 +512,13 @@ export function formatKnowledgeContext(context: SelectedKnowledgeContext) {
     })
     .join("\n\n");
 
+  const pageBlock = (title: string, pages: KnowledgeBaseContentPage[]) =>
+    pages.length ? `${title}:\n${pages.map((page) => `- ${page.title} (${page.path}): ${page.summary}`).join("\n")}` : "";
+
+  const recommendedText = context.recommendedPages.length
+    ? `Recommended pages:\n${context.recommendedPages.map((page) => `- ${page.title} (${page.path}) [${page.kind}] - ${page.reason}`).join("\n")}`
+    : "";
+
   return [
     `Company: ${context.company.name}`,
     `Positioning: ${context.company.positioning}`,
@@ -295,6 +528,11 @@ export function formatKnowledgeContext(context: SelectedKnowledgeContext) {
     "Process:",
     context.workflow.map((step) => `- ${step.title}: ${step.description}`).join("\n"),
     geoText ? `GEO context:\n${geoText}` : "",
+    pageBlock("Use cases", context.useCases),
+    pageBlock("Case studies", context.caseStudies),
+    pageBlock("Blog posts", context.blogPosts),
+    pageBlock("Core pages", context.staticPages),
+    recommendedText,
     context.llmsFullExcerpt ? `General context excerpt:\n${context.llmsFullExcerpt}` : "",
   ]
     .filter(Boolean)
