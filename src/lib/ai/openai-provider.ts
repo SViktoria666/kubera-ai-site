@@ -2,12 +2,18 @@ import "server-only";
 
 import OpenAI from "openai";
 import { zodTextFormat } from "openai/helpers/zod";
-import { formatKnowledgeContext } from "@/lib/ai/knowledge-base";
-import { classifyCapabilityQuestion, formatCapabilityAssessment } from "@/lib/ai/assistant-intelligence";
-import { openAiAssistantOutputSchema, requiredLeadFields } from "@/lib/ai/openai-schema";
-import type { SiteAssistantProvider } from "@/lib/ai/provider";
-import type { OpenAiAssistantOutput } from "@/lib/ai/openai-schema";
-import type { AssistantLeadDraft, AssistantLocale, AssistantProviderContext, AssistantRequest, AssistantResponse } from "@/lib/ai/types";
+import { formatKnowledgeContext } from "./knowledge-base";
+import {
+  buildCapabilityFallbackMessage,
+  classifyCapabilityQuestion,
+  formatCapabilityAssessment,
+  getConfirmedCapabilityEvidenceText,
+  shouldUseCapabilityFallback,
+} from "./assistant-intelligence";
+import { openAiAssistantOutputSchema, requiredLeadFields } from "./openai-schema";
+import type { SiteAssistantProvider } from "./provider";
+import type { OpenAiAssistantOutput } from "./openai-schema";
+import type { AssistantLeadDraft, AssistantProviderContext, AssistantRequest, AssistantResponse } from "./types";
 
 const DEFAULT_MODEL = "gpt-5.5";
 
@@ -38,66 +44,21 @@ function isReadyToSubmit(lead: AssistantLeadDraft) {
   return inferMissingFields(lead).length === 0;
 }
 
-function buildCapabilityEvidenceText(knowledgeContext?: NonNullable<AssistantProviderContext["knowledgeContext"]>) {
-  if (!knowledgeContext) {
-    return "";
-  }
-
-  const lines = [
-    knowledgeContext.company.positioning,
-    ...knowledgeContext.services.map((service) => `${service.title}: ${service.description}`),
-    ...knowledgeContext.workflow.map((step) => `${step.title}: ${step.description}`),
-    ...knowledgeContext.geoPages.map((page) => `${page.country}: ${page.h1} ${page.metaDescription}`),
-    ...knowledgeContext.useCases.map((page) => `${page.title}: ${page.summary}`),
-    ...knowledgeContext.caseStudies.map((page) => `${page.title}: ${page.summary}`),
-    ...knowledgeContext.blogPosts.map((page) => `${page.title}: ${page.summary}`),
-    ...knowledgeContext.staticPages.map((page) => `${page.title}: ${page.summary}`),
-    ...knowledgeContext.recommendedPages.map((page) => `${page.title}: ${page.summary}`),
-  ];
-
-  return lines.filter((line) => Boolean(line && line.trim().length)).join("\n");
-}
-
-function buildCapabilityFallbackMessage(locale: AssistantLocale | undefined,
-capabilityAssessment: NonNullable<AssistantProviderContext["capabilityAssessment"]>,
-) {
-  if (locale === "ru") {
-    return capabilityAssessment.followUpQuestion
-      ? `Это может быть возможно, но я не могу подтвердить точный объём без технической оценки конкретной системы, API, workflow и требований безопасности. ${capabilityAssessment.followUpQuestion}`
-      : "Это может быть возможно, но я не могу подтвердить точный объём без технической оценки конкретной системы, API, workflow и требований безопасности.";
-  }
-
-  if (locale === "es") {
-    return capabilityAssessment.followUpQuestion
-      ? `Puede ser posible, pero no puedo confirmar el alcance exacto sin una revisión técnica del sistema concreto, sus APIs, el flujo de trabajo y los requisitos de seguridad. ${capabilityAssessment.followUpQuestion}`
-      : "Puede ser posible, pero no puedo confirmar el alcance exacto sin una revisión técnica del sistema concreto, sus APIs, el flujo de trabajo y los requisitos de seguridad.";
-  }
-
-  return capabilityAssessment.followUpQuestion
-    ? `It may be possible, but I can’t confirm the exact scope without a technical assessment of the specific system, APIs, workflow, and security requirements. ${capabilityAssessment.followUpQuestion}`
-    : "It may be possible, but I can’t confirm the exact scope without a technical assessment of the specific system, APIs, workflow, and security requirements.";
-}
-
 function getLatestUserMessage(messages: AssistantRequest["messages"]) {
   return [...messages].reverse().find((message) => message.role === "user")?.content || "";
 }
 
-function resolveCapabilityAssessment(
-  context: AssistantProviderContext | undefined,
-  request: AssistantRequest | undefined,
-  capabilityKnowledgeText: string,
-) {
+function resolveCapabilityAssessment(context: AssistantProviderContext | undefined, request: AssistantRequest | undefined) {
   return (
     context?.capabilityAssessment ||
-    classifyCapabilityQuestion(getLatestUserMessage(request?.messages || []), capabilityKnowledgeText, context?.conversationMemory?.locale)
+    classifyCapabilityQuestion(getLatestUserMessage(request?.messages || []), getConfirmedCapabilityEvidenceText(), context?.conversationMemory?.locale)
   );
 }
 
 function buildSystemPrompt(context: AssistantProviderContext | undefined, request?: AssistantRequest) {
   const knowledgeContext = context?.knowledgeContext ? formatKnowledgeContext(context.knowledgeContext) : "No route-specific knowledge context was provided.";
   const conversationMemory = context?.conversationMemory?.summary || "No conversation memory was provided.";
-  const capabilityKnowledgeText = buildCapabilityEvidenceText(context?.knowledgeContext) || knowledgeContext;
-  const capabilityAssessment = resolveCapabilityAssessment(context, request, capabilityKnowledgeText);
+  const capabilityAssessment = resolveCapabilityAssessment(context, request);
   const capabilityText = formatCapabilityAssessment(capabilityAssessment, context?.conversationMemory?.locale);
   const structuredMemory = context?.conversationMemory?.structured;
   const structuredMemoryText = structuredMemory
@@ -170,9 +131,6 @@ export class OpenAiAssistantProvider implements SiteAssistantProvider {
   }
 
   async respond(request: AssistantRequest, context?: AssistantProviderContext): Promise<AssistantResponse> {
-    const knowledgeContext = context?.knowledgeContext ? formatKnowledgeContext(context.knowledgeContext) : "No route-specific knowledge context was provided.";
-    const capabilityKnowledgeText = buildCapabilityEvidenceText(context?.knowledgeContext) || knowledgeContext;
-    const capabilityAssessment = resolveCapabilityAssessment(context, request, capabilityKnowledgeText);
     const response = await this.client.responses.create({
       model: this.model,
       instructions: buildSystemPrompt(context, request),
@@ -198,10 +156,9 @@ export class OpenAiAssistantProvider implements SiteAssistantProvider {
     const output = parseOutput(response.output_text);
     const lead = mergeLead(request.lead, output.collectedFields, output.leadScore);
     const readyToSubmit = output.readyToSubmit && isReadyToSubmit(lead);
-    const shouldUseCapabilityFallback =
-      capabilityAssessment.status !== "CONFIRMED_CAPABILITY" &&
-      /(\bintegrat(?:e|ion)|connect|compatible|work with|support|can you|do you|does kubera|sap|api|oauth|security|crm|erp|system)\b/i.test(getLatestUserMessage(request.messages));
-    const assistantMessage = shouldUseCapabilityFallback
+    const capabilityAssessment = resolveCapabilityAssessment(context, request);
+    const useCapabilityFallback = shouldUseCapabilityFallback(getLatestUserMessage(request.messages), capabilityAssessment);
+    const assistantMessage = useCapabilityFallback
       ? buildCapabilityFallbackMessage(context?.conversationMemory?.locale, capabilityAssessment)
       : output.assistantMessage;
 

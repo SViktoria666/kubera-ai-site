@@ -58,6 +58,65 @@ export type KnowledgePageLike = {
   title: string;
 };
 
+type ConfirmedCapabilityDefinition = {
+  label: string;
+  aliases: string[];
+  summary: string;
+};
+
+const CONFIRMED_CAPABILITIES: ConfirmedCapabilityDefinition[] = [
+  {
+    label: "AI assistant",
+    aliases: ["ai assistant", "website ai assistant", "assistant", "asistente de ia", "asistente ia", "ассистент ии", "ии ассистент", "ai помощник"],
+    summary: "Kubera AI positions website and business AI assistants as a core offer.",
+  },
+  {
+    label: "Customer communication automation",
+    aliases: ["customer communication automation", "customer communications", "communications automation", "automatizacion de comunicaciones", "автоматизация коммуникаций"],
+    summary: "Kubera AI supports automation for customer communication flows.",
+  },
+  {
+    label: "Lead generation automation",
+    aliases: ["lead generation automation", "lead automation", "automatizacion de leads", "автоматизация лидогенерации", "автоматизация лидов"],
+    summary: "Kubera AI supports lead capture, qualification, and follow-up automation.",
+  },
+  {
+    label: "CRM automation",
+    aliases: ["crm automation", "automatizacion crm", "автоматизация crm"],
+    summary: "Kubera AI supports CRM-connected automation flows.",
+  },
+  {
+    label: "WhatsApp automation",
+    aliases: ["whatsapp automation", "automatizacion whatsapp", "автоматизация whatsapp"],
+    summary: "Kubera AI supports WhatsApp-based automation and lead handling.",
+  },
+  {
+    label: "Telegram automation",
+    aliases: ["telegram automation", "automatizacion telegram", "автоматизация telegram"],
+    summary: "Kubera AI supports Telegram-based automation and notifications.",
+  },
+  {
+    label: "Email automation",
+    aliases: ["email automation", "automatizacion de email", "автоматизация email"],
+    summary: "Kubera AI supports email-based automation and follow-up flows.",
+  },
+  {
+    label: "Voice AI",
+    aliases: ["voice ai", "voice agents", "ai voice", "voz ia", "голосовой ии", "голосовые агенты"],
+    summary: "Kubera AI supports voice AI and call-handling automation use cases.",
+  },
+  {
+    label: "Internal workflow automation",
+    aliases: ["internal workflow automation", "workflow automation", "business process automation", "n8n automation", "automatizacion de procesos", "автоматизация рабочих процессов", "автоматизация процессов", "автоматизация n8n"],
+    summary: "Kubera AI supports internal workflow automation and orchestration.",
+  },
+  {
+    label: "Custom AI automation solutions",
+    aliases: ["custom ai automation solutions", "custom ai automation", "soluciones de automatizacion ia", "кастомные решения по ии-автоматизации"],
+    summary: "Kubera AI supports bespoke AI automation engagements.",
+  },
+];
+
 function normalize(value: string) {
   return value
     .normalize("NFKD")
@@ -79,6 +138,40 @@ function compactText(value: string, maxLength = 140) {
 
 function compactList(values: Array<string | undefined>) {
   return values.filter((value): value is string => Boolean(value && value.trim().length)).map((value) => value.trim());
+}
+
+function normalizeCapabilityText(value: string) {
+  return value
+    .normalize("NFKC")
+    .replace(/\p{Diacritic}/gu, "")
+    .toLowerCase()
+    .replace(/[^\p{L}\p{N}\s/-]/gu, " ")
+    .replace(/\s+/g, " ")
+    .trim();
+}
+
+function escapeRegExp(value: string) {
+  return value.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+}
+
+function matchesCapabilityAlias(question: string, alias: string) {
+  const normalizedQuestion = normalizeCapabilityText(question);
+  const normalizedAlias = normalizeCapabilityText(alias);
+
+  if (!normalizedQuestion || !normalizedAlias) {
+    return false;
+  }
+
+  if (normalizedQuestion === normalizedAlias || normalizedQuestion.includes(` ${normalizedAlias} `)) {
+    return true;
+  }
+
+  const pattern = new RegExp(`(^|\\s|/)${escapeRegExp(normalizedAlias).replace(/\s+/g, "\\s+")}(?=\\s|/|$)`, "iu");
+  return pattern.test(normalizedQuestion);
+}
+
+export function getConfirmedCapabilityEvidenceText() {
+  return CONFIRMED_CAPABILITIES.map((capability) => `${capability.label}: ${capability.summary}`).join("\n");
 }
 
 function hasContact(lead: AssistantLeadDraft) {
@@ -131,6 +224,10 @@ function inferStage(lead: AssistantLeadDraft, submitted: boolean, hasContactData
   }
 
   return "solution_recommendation";
+}
+
+function extractCapabilityMatch(question: string) {
+  return CONFIRMED_CAPABILITIES.find((capability) => capability.aliases.some((alias) => matchesCapabilityAlias(question, alias)));
 }
 
 function extractUsefulTopics(messages: AssistantMessage[]) {
@@ -237,23 +334,18 @@ export function buildStructuredConversationMemory(
   };
 }
 
-function knownCapabilityMatches(question: string, knowledgeText: string) {
-  const q = normalize(question);
-  const knowledge = normalize(knowledgeText);
-  const tokens = q.split(" ").filter((token) => token.length >= 3);
-  const informativeTokens = tokens.filter((token) => !["what", "how", "can", "does", "with", "this", "that", "you", "the", "for", "and", "are", "support", "integrate", "integration"].includes(token));
-
-  return informativeTokens.filter((token) => knowledge.includes(token)).length > 0;
+function knownCapabilityMatches(question: string, _knowledgeText: string) {
+  return Boolean(extractCapabilityMatch(question));
 }
 
 function looksLikeTechnicalAssessmentRequest(question: string) {
-  const q = normalize(question);
-  return /\b(integrat(?:e|ion)|connect|compatible|work with|support|can you|do you|does kubera|sap|api|oauth|security|crm|erp|system)\b/i.test(q);
+  const q = normalizeCapabilityText(question);
+  return /\b(integrat(?:e|ion)|connect|compatible|work with|support|can you|do you|does kubera|sap|api|oauth|security|crm|erp|system|integracion|integrar|conexion|compatibl|soporte|puede|puedes|seguridad|sistema|интеграц|подключ|совместим|безопасн|система)\b/ui.test(q);
 }
 
 function extractTopic(question: string) {
-  const q = normalize(question);
-  const match = q.match(/\b(sap(?: s\/4hana)?|salesforce|hubspot|pipedrive|n8n|whatsapp|telegram|openclaw|hermes|crm|erp|api|booking|calendar)\b/i);
+  const q = normalizeCapabilityText(question);
+  const match = q.match(/\b(sap(?: s\/4hana)?|salesforce|hubspot|pipedrive|n8n|whatsapp|telegram|openclaw|hermes|crm|erp|api|booking|calendar|oracle e-business suite|netsuite|workday|servicenow|microsoft dynamics)\b/ui);
   return match?.[1]?.toUpperCase();
 }
 
@@ -350,6 +442,30 @@ function localizedAssessmentPhrases(locale?: AssistantLocale) {
   };
 }
 
+function buildLocalizedCapabilityMessage(locale?: AssistantLocale) {
+  if (locale === "ru") {
+    return {
+      mayBePossible: "Это может быть возможно, но",
+      needReview: "нужна техническая оценка конкретной системы, API, workflow и требований к безопасности.",
+      followUpQuestion: "Какая у вас система и какой именно workflow нужно связать?",
+    };
+  }
+
+  if (locale === "es") {
+    return {
+      mayBePossible: "Puede ser posible, pero",
+      needReview: "hace falta revisar el sistema concreto, sus APIs, el flujo de trabajo y los requisitos de seguridad.",
+      followUpQuestion: "¿Qué sistema usas y qué flujo exacto quieres conectar?",
+    };
+  }
+
+  return {
+    mayBePossible: "It may be possible, but",
+    needReview: "a technical assessment of the specific system, APIs, workflow, and security requirements is needed.",
+    followUpQuestion: "What system are you using, and what exact workflow do you want to connect?",
+  };
+}
+
 export function classifyCapabilityQuestion(question: string, knowledgeText: string, locale?: AssistantLocale): CapabilityAssessment {
   const phrases = localizedAssessmentPhrases(locale);
   const topic = extractTopic(question);
@@ -376,13 +492,13 @@ export function classifyCapabilityQuestion(question: string, knowledgeText: stri
   }
 
   if (asksForIntegration) {
-    const guidance = `${phrases.mayBePossible} ${phrases.needReview}`;
+    const localized = buildLocalizedCapabilityMessage(locale);
     return {
       status: topic ? "RELATED_BUT_UNCONFIRMED" : "REQUIRES_TECHNICAL_ASSESSMENT",
       topic,
       evidence: [compactText(question, 120)],
-      guidance,
-      followUpQuestion: locale === "ru" ? "Какая у вас система и какой именно workflow нужно связать?" : locale === "es" ? "¿Qué sistema usas y qué flujo exacto quieres conectar?" : "What system are you using, and what exact workflow do you want to connect?",
+      guidance: `${localized.mayBePossible} ${localized.needReview}`,
+      followUpQuestion: localized.followUpQuestion,
     };
   }
 
@@ -409,4 +525,16 @@ export function formatCapabilityAssessment(assessment: CapabilityAssessment, loc
   ]
     .filter(Boolean)
     .join("\n");
+}
+
+export function shouldUseCapabilityFallback(question: string, assessment: CapabilityAssessment) {
+  return assessment.status !== "CONFIRMED_CAPABILITY" && looksLikeTechnicalAssessmentRequest(question);
+}
+
+export function buildCapabilityFallbackMessage(locale: AssistantLocale | undefined, assessment: CapabilityAssessment) {
+  const localized = buildLocalizedCapabilityMessage(locale);
+
+  return assessment.followUpQuestion
+    ? `${localized.mayBePossible} ${localized.needReview} ${assessment.followUpQuestion}`
+    : `${localized.mayBePossible} ${localized.needReview}`;
 }

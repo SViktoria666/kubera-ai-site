@@ -1,5 +1,5 @@
-import { OpenAiAssistantProvider } from "@/lib/ai/openai-provider";
-import type { AssistantProviderContext, AssistantRequest, AssistantResponse } from "@/lib/ai/types";
+import { createRequire } from "module";
+import type { AssistantProviderContext, AssistantRequest, AssistantResponse } from "./types";
 
 export interface SiteAssistantProvider {
   respond(request: AssistantRequest, context?: AssistantProviderContext): Promise<AssistantResponse>;
@@ -24,7 +24,7 @@ const localePatterns = [
   { locale: "lv" as const, pattern: /\b(sveiki|uzņēmums|kontakts|steidzami|automatizācija|paldies)\b/i },
   { locale: "lt" as const, pattern: /\b(sveiki|įmonė|imone|kontaktas|skubu|automatizavimas|ačiū|aciu)\b/i },
   { locale: "fi" as const, pattern: /\b(hei|yritys|yhteystieto|kiire|automaatio|kiitos)\b/i },
-  { locale: "sv" as const, pattern: /\b(hej|företag|foretag|kontakt|br[aå]dskande|automatisering|tack)\b/i },
+  { locale: "sv" as const, pattern: /\b(hej|företag|foretag|kontakt|brådskande|automatisering|tack)\b/i },
   { locale: "da" as const, pattern: /\b(hej|virksomhed|kontakt|haster|automatisering|tak)\b/i },
 ];
 
@@ -59,10 +59,10 @@ const prompts = {
 };
 
 const consultativeTopicPattern =
-  /\b(ai|automation|agent|agents|openclaw|hermes|n8n|crm|saas|integration|integrations|workflow|workflows|chatbot|chatbots|mcp|business automation|автоматизац|агент|агенты|интеграц|воркфлоу|чатбот|чат-бот|ии)\b/i;
+  /\b(ai|automation|agent|agents|openclaw|hermes|n8n|crm|saas|integration|integrations|workflow|workflows|chatbot|chatbots|mcp|business automation|assistant|asistente|ассистент|помощник|voice ai|voz ia|голосовой ии|автоматизац|агент|агенты|интеграц|воркфлоу|чатбот|чат-бот|ии)\b/i;
 
 const responseTimePattern =
-  /\b(how fast|how quickly|when (will|do)|response time|reply|contact me|свяж|ответ|как быстро|когда ответ|срок|сроки|cu[aá]ndo|rapido|respuesta|contacto)\b/i;
+  /\b(how fast|how quickly|when (will|do)|response time|reply|contact me|свяж|ответ|как быстро|когда ответ|срок|сроки|cuándo|rapido|respuesta|contacto)\b/i;
 
 function getConsultativeResponse(locale: AssistantResponse["locale"]) {
   if (locale === "ru") {
@@ -70,7 +70,7 @@ function getConsultativeResponse(locale: AssistantResponse["locale"]) {
   }
 
   if (locale === "es") {
-    return "Si, este tipo de proyectos esta dentro de la competencia de Kubera AI. Para una evaluacion precisa, el equipo aclarara los detalles y propondra la solucion optima. Si quieres, tambien puedo sugerirte un articulo, caso o pagina de servicio relevante. Que quieres automatizar o mejorar exactamente?";
+    return "Sí, este tipo de proyectos está dentro de la competencia de Kubera AI. Para una evaluación precisa, el equipo aclarará los detalles y propondrá la solución óptima. Si quieres, también puedo sugerirte un artículo, caso o página de servicio relevante. ¿Qué quieres automatizar o mejorar exactamente?";
   }
 
   return "Yes, projects like this are within Kubera AI's area of competence. For an accurate assessment, the team will clarify the details and propose the optimal solution. If you'd like, I can also point you to a relevant blog article, case study, or service page. What exactly do you want to automate or improve?";
@@ -141,16 +141,24 @@ function scoreLead(lead: AssistantRequest["lead"]) {
   return Math.min(100, score);
 }
 
-class DeterministicAssistantProvider implements SiteAssistantProvider {
+export class DeterministicAssistantProvider implements SiteAssistantProvider {
   async respond(request: AssistantRequest, _context?: AssistantProviderContext): Promise<AssistantResponse> {
+    const {
+      buildCapabilityFallbackMessage,
+      classifyCapabilityQuestion,
+      getConfirmedCapabilityEvidenceText,
+      shouldUseCapabilityFallback,
+    } = await import(new URL("./assistant-intelligence.ts", import.meta.url).href);
     const locale = pickLocale(request);
     const labels = getPrompts(locale);
     const latestUserMessage = [...request.messages].reverse().find((message) => message.role === "user")?.content.trim() || "";
     const lead = { ...(request.lead || {}) };
     const nextField = inferNextField(lead);
-    const salesResponse = getSalesResponse(latestUserMessage, locale);
+    const capabilityAssessment = classifyCapabilityQuestion(latestUserMessage, getConfirmedCapabilityEvidenceText(), locale);
+    const useCapabilityFallback = shouldUseCapabilityFallback(latestUserMessage, capabilityAssessment);
+    const salesResponse = useCapabilityFallback ? null : getSalesResponse(latestUserMessage, locale);
 
-    if (latestUserMessage && !salesResponse) {
+    if (latestUserMessage && !salesResponse && !useCapabilityFallback) {
       if (nextField === "contact") {
         Object.assign(lead, Object.fromEntries(Object.entries(extractContact(latestUserMessage)).filter(([, value]) => value)));
       } else if (nextField !== "ready") {
@@ -169,7 +177,9 @@ class DeterministicAssistantProvider implements SiteAssistantProvider {
     return {
       message: {
         role: "assistant",
-        content: salesResponse || (readyToSubmit ? labels.ready : labels[updatedNextField]),
+        content: useCapabilityFallback
+          ? buildCapabilityFallbackMessage(locale, capabilityAssessment)
+          : salesResponse || (readyToSubmit ? labels.ready : labels[updatedNextField]),
       },
       locale,
       lead,
@@ -180,6 +190,8 @@ class DeterministicAssistantProvider implements SiteAssistantProvider {
 
 export function getAssistantProvider(): SiteAssistantProvider {
   if (process.env.OPENAI_API_KEY) {
+    const require = createRequire(import.meta.url);
+    const { OpenAiAssistantProvider } = require("./openai-provider");
     return new OpenAiAssistantProvider(process.env.OPENAI_API_KEY);
   }
 

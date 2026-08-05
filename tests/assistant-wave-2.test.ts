@@ -2,8 +2,17 @@
 import test from "node:test";
 import assert from "node:assert/strict";
 
-import { buildStructuredConversationMemory, classifyCapabilityQuestion, formatCapabilityAssessment, rankRelevantKnowledgePages } from "../src/lib/ai/assistant-intelligence.ts";
+import {
+  buildCapabilityFallbackMessage,
+  buildStructuredConversationMemory,
+  classifyCapabilityQuestion,
+  formatCapabilityAssessment,
+  getConfirmedCapabilityEvidenceText,
+  rankRelevantKnowledgePages,
+  shouldUseCapabilityFallback,
+} from "../src/lib/ai/assistant-intelligence.ts";
 import { createClosedAssistantSessionState, createTransientAssistantSessionState } from "../src/lib/ai/assistant-session.ts";
+import { DeterministicAssistantProvider } from "../src/lib/ai/provider.ts";
 import type { AssistantLeadDraft, AssistantMessage } from "../src/lib/ai/types.ts";
 
 function makeMessages(count: number): AssistantMessage[] {
@@ -60,9 +69,26 @@ test("unknown integrations stay cautious and require assessment", () => {
   assert.equal(formatCapabilityAssessment(assessment, "en").includes("technical assessment"), true);
 });
 
+test("vendor mentions in general knowledge do not become proof of capability", () => {
+  const capabilityEvidence = getConfirmedCapabilityEvidenceText();
+
+  assert.ok(!/\\bsap\\b/i.test(capabilityEvidence));
+  assert.ok(!/\\boracle\\b/i.test(capabilityEvidence));
+
+  const assessment = classifyCapabilityQuestion(
+    "Can Kubera AI integrate directly with SAP?",
+    "A general article mentions SAP, Oracle, and other ERP vendors, but that is not proof of delivery capability.",
+    "en",
+  );
+
+  assert.notEqual(assessment.status, "CONFIRMED_CAPABILITY");
+  assert.equal(shouldUseCapabilityFallback("Can Kubera AI integrate directly with SAP?", assessment), true);
+  assert.ok(buildCapabilityFallbackMessage("en", assessment).toLowerCase().includes("technical assessment"));
+});
+
 test("confirmed capabilities are only marked confirmed when evidence is present", () => {
   const assessment = classifyCapabilityQuestion(
-    "Can Kubera AI support WhatsApp lead routing?",
+    "Can Kubera AI build WhatsApp automation?",
     "Kubera AI supports WhatsApp lead routing, Telegram notifications, and CRM follow-up.",
     "en",
   );
@@ -84,6 +110,35 @@ test("language guardrails remain separated", () => {
   assert.ok(ruAssessment.includes("Требуется"));
   assert.ok(esAssessment.includes("Requiere"));
   assert.ok(esAssessment.toLowerCase().includes("tecnica"));
+});
+
+test("deterministic fallback uses the same honesty guard", async () => {
+  const provider = new DeterministicAssistantProvider();
+
+  const sapResponse = await provider.respond({
+    context: { currentPath: "/", locale: "en" },
+    messages: [{ role: "user", content: "Can Kubera AI integrate directly with SAP?" }],
+  });
+
+  const ruSapResponse = await provider.respond({
+    context: { currentPath: "/", locale: "ru" },
+    messages: [{ role: "user", content: "Интеграция с SAP возможна?" }],
+  });
+
+  const esSapResponse = await provider.respond({
+    context: { currentPath: "/", locale: "es" },
+    messages: [{ role: "user", content: "¿Se puede integrar SAP?" }],
+  });
+
+  const confirmedResponse = await provider.respond({
+    context: { currentPath: "/", locale: "en" },
+    messages: [{ role: "user", content: "Can Kubera AI build a WhatsApp AI assistant?" }],
+  });
+
+  assert.ok(sapResponse.message.content.toLowerCase().includes("technical assessment"));
+  assert.ok(ruSapResponse.message.content.toLowerCase().includes("техничес"));
+  assert.ok(esSapResponse.message.content.toLowerCase().includes("revisar") || esSapResponse.message.content.toLowerCase().includes("sistema"));
+  assert.ok(confirmedResponse.message.content.toLowerCase().includes("competence"));
 });
 
 test("page recommendations stay bounded and only return known pages", () => {
