@@ -25,10 +25,62 @@ export type AssistantLeadDraft = {
   leadScore?: number;
 };
 
+export type AssistantConversationStage =
+  | "discovery"
+  | "problem_clarification"
+  | "solution_recommendation"
+  | "fit_confirmation"
+  | "contact_invitation"
+  | "contact_collection"
+  | "submission"
+  | "completion";
+
+export type AssistantStructuredMemory = {
+  language?: AssistantLocale;
+  customerName?: string;
+  companyName?: string;
+  country?: string;
+  cityOrRegion?: string;
+  industry?: string;
+  businessType?: string;
+  companySize?: string;
+  currentTools?: string[];
+  currentProblem?: string;
+  businessGoal?: string;
+  requestedServices?: string[];
+  discussedPages?: string[];
+  budget?: string;
+  timeline?: string;
+  urgency?: string;
+  decisionRole?: string;
+  confirmedEmail?: string;
+  confirmedPhone?: string;
+  confirmedWhatsApp?: string;
+  confirmedTelegram?: string;
+  preferredContactMethod?: string;
+  objections?: string[];
+  questionsAlreadyAnswered: string[];
+  informationStillNeeded: string[];
+  currentConversationStage: AssistantConversationStage;
+  lastConfirmedIntent?: string;
+  inferredFacts?: Record<string, string | string[]>;
+};
+
 export type AssistantConversationMemory = {
   summary: string;
   turnCount: number;
   locale?: AssistantLocale;
+  structured?: AssistantStructuredMemory;
+};
+
+export type AssistantCapabilityAssessmentStatus = "CONFIRMED_CAPABILITY" | "RELATED_BUT_UNCONFIRMED" | "REQUIRES_TECHNICAL_ASSESSMENT" | "OUT_OF_SCOPE_OR_UNKNOWN";
+
+export type AssistantCapabilityAssessment = {
+  status: AssistantCapabilityAssessmentStatus;
+  topic?: string;
+  evidence: string[];
+  guidance: string;
+  followUpQuestion?: string;
 };
 
 export type AssistantRequest = {
@@ -52,4 +104,6 @@ export type AssistantResponse = {
 export type AssistantProviderContext = {
   knowledgeContext?: import("@/lib/ai/knowledge-base").SelectedKnowledgeContext;
   conversationMemory?: AssistantConversationMemory;
+  latestUserMessage?: string;
+  capabilityAssessment?: AssistantCapabilityAssessment;
 };

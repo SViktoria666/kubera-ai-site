@@ -255,6 +255,7 @@ export async function POST(request: Request) {
       country: parsed.data.context.country,
       keywords: getKnowledgeKeywords(parsed.data.messages),
     });
+    const latestUserMessage = getLatestUserMessage(parsed.data.messages);
     const conversationMemory =
       parsed.data.context.conversationMemory ||
       buildAssistantConversationMemory(parsed.data.messages, parsed.data.lead, {
@@ -262,8 +263,8 @@ export async function POST(request: Request) {
         locale: parsed.data.context.locale,
         country: parsed.data.context.country,
         visitorIntent: parsed.data.context.visitorIntent,
-      });
-    const assistantResponse = await getControlledAssistantResponse(parsed.data, { knowledgeContext, conversationMemory }, requestId);
+      }, parsed.data.submissionCompleted === true);
+    const assistantResponse = await getControlledAssistantResponse(parsed.data, { knowledgeContext, conversationMemory, latestUserMessage }, requestId);
 
     if (!assistantResponse) {
       return jsonError("Assistant is temporarily unavailable", requestId, 503);

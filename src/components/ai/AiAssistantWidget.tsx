@@ -190,10 +190,10 @@ function buildRequestPayload(params: {
         ? "pricing"
         : params.pageContext.page_type === "contacts"
           ? "contact"
-          : params.pageContext.page_type === "services"
-            ? "services"
-            : "unknown",
-  });
+        : params.pageContext.page_type === "services"
+          ? "services"
+          : "unknown",
+  }, params.submitted);
 
   return {
     context: {

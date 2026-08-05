@@ -13,6 +13,7 @@ import { aiVoiceAgentsHomeServices } from "@/content/use-cases/ai-voice-agents-h
 import { n8nEcommerceAutomation } from "@/content/use-cases/n8n-ecommerce-automation";
 import { realEstateLeadAutomation } from "@/content/use-cases/real-estate-lead-automation";
 import { siteConfig, supportedLanguages } from "@/content/site";
+import { rankRelevantKnowledgePages } from "@/lib/ai/assistant-intelligence";
 import type { AssistantLocale } from "@/lib/ai/types";
 
 export type KnowledgeBaseSource = {
@@ -347,29 +348,8 @@ function getStaticPageSummaries(): KnowledgeBaseContentPage[] {
   ];
 }
 
-function chooseTopRecommendations(input: KnowledgeBaseSelectionInput, items: KnowledgeBaseContentPage[], limit = 6) {
-  const scored = items
-    .map((item, index) => ({ item, index, score: scoreContentPage(item, input) }))
-    .filter((entry) => entry.score > 0)
-    .sort((left, right) => right.score - left.score || left.index - right.index);
-
-  const ranked = scored.slice(0, limit).map(({ item, score }) => ({
-    ...item,
-    reason: score >= 100 ? "Exact route match" : score >= 30 ? "Strong topical match" : "Related source",
-  }));
-
-  if (ranked.length) {
-    return ranked;
-  }
-
-  const fallbackPaths = new Set(["/services", "/how-we-work", "/cases", "/blog", "/contacts"]);
-  return items
-    .filter((item) => fallbackPaths.has(item.path))
-    .slice(0, limit)
-    .map((item) => ({
-      ...item,
-      reason: "General reference",
-    }));
+function chooseTopRecommendations(input: KnowledgeBaseSelectionInput, items: KnowledgeBaseContentPage[], limit = 2) {
+  return rankRelevantKnowledgePages({ currentPath: input.page, country: input.country, locale: input.locale, keywords: input.keywords }, items, limit);
 }
 
 export function buildKnowledgeBase(): KnowledgeBase {
@@ -472,7 +452,7 @@ export function selectKnowledgeContext(input: KnowledgeBaseSelectionInput): Sele
   const caseStudies = knowledgeBase.caseStudies;
   const blogPosts = knowledgeBase.blogPosts;
   const staticPages = knowledgeBase.staticPages;
-  const recommendedPages = chooseTopRecommendations(input, [...useCases, ...caseStudies, ...blogPosts, ...staticPages], 6);
+  const recommendedPages = chooseTopRecommendations(input, [...useCases, ...caseStudies, ...blogPosts, ...staticPages], 2);
 
   const sourceIds = new Set(["site", "services-en", "workflow-en", "llms-full"]);
   if (selectedPages.size) sourceIds.add("geo");
@@ -512,9 +492,6 @@ export function formatKnowledgeContext(context: SelectedKnowledgeContext) {
     })
     .join("\n\n");
 
-  const pageBlock = (title: string, pages: KnowledgeBaseContentPage[]) =>
-    pages.length ? `${title}:\n${pages.map((page) => `- ${page.title} (${page.path}): ${page.summary}`).join("\n")}` : "";
-
   const recommendedText = context.recommendedPages.length
     ? `Recommended pages:\n${context.recommendedPages.map((page) => `- ${page.title} (${page.path}) [${page.kind}] - ${page.reason}`).join("\n")}`
     : "";
@@ -528,10 +505,6 @@ export function formatKnowledgeContext(context: SelectedKnowledgeContext) {
     "Process:",
     context.workflow.map((step) => `- ${step.title}: ${step.description}`).join("\n"),
     geoText ? `GEO context:\n${geoText}` : "",
-    pageBlock("Use cases", context.useCases),
-    pageBlock("Case studies", context.caseStudies),
-    pageBlock("Blog posts", context.blogPosts),
-    pageBlock("Core pages", context.staticPages),
     recommendedText,
     context.llmsFullExcerpt ? `General context excerpt:\n${context.llmsFullExcerpt}` : "",
   ]
