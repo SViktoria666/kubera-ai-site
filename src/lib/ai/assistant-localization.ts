@@ -640,6 +640,7 @@ export function detectAssistantLocaleFromText(text: string, fallback?: Assistant
 
   let bestLocale = current;
   let bestScore = 0;
+  let currentScore = 0;
 
   for (const entry of localeKeywordPatterns) {
     let score = 0;
@@ -649,13 +650,17 @@ export function detectAssistantLocaleFromText(text: string, fallback?: Assistant
       }
     }
 
+    if (entry.locale === current) {
+      currentScore = score;
+    }
+
     if (score > bestScore) {
       bestLocale = entry.locale;
       bestScore = score;
     }
   }
 
-  return bestScore > 0 ? bestLocale : current;
+  return bestScore > currentScore ? bestLocale : current;
 }
 
 export function detectAssistantLocaleFromMessages(messages: AssistantMessage[], fallback?: AssistantLocale) {
