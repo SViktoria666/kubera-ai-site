@@ -29,5 +29,4 @@ export const supportedLanguages = {
   fi: "Finnish",
   sv: "Swedish",
   da: "Danish",
-  uk: "Ukrainian",
 };

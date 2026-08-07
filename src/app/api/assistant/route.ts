@@ -176,9 +176,7 @@ function buildSubmittedMessage(locale: AssistantLocale, lead: AssistantLeadDraft
       `Tack${name ? `, ${name}` : ""} for din forfragan. Jag har skickat den till Kubera AI-teamet. De kontaktar dig via ${contactLabel}${contactValue}. Om du vill korrigera kontaktuppgiften eller lagga till detaljer, skriv har.`,
     da: ({ contactLabel, contactValue, name }) =>
       `Tak${name ? `, ${name}` : ""} for din henvendelse. Jeg har sendt din foresporgsel til Kubera AI-teamet. De kontakter dig via ${contactLabel}${contactValue}. Hvis du vil rette kontakten eller tilfoje detaljer, saa skriv her.`,
-    uk: ({ contactLabel, contactValue, name }) =>
-      `Дякую${name ? `, ${name}` : ""} за звернення. Я передав ваш запит команді Kubera AI. З вами зв'яжуться через вказаний ${contactLabel}${contactValue}. Якщо хочете виправити контакт або додати деталі, просто напишіть тут.`,
-  };
+};
 
   return templates[locale]({ contactLabel, contactValue, name });
 }

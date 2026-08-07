@@ -2,7 +2,7 @@ import { z } from "zod";
 import { analyticsContextSchema, type AnalyticsContextPayload } from "@/lib/validation/analytics";
 import { sanitizePhone, sanitizeTelegram, sanitizeText } from "@/lib/security/sanitize";
 
-export const assistantLocaleSchema = z.enum(["en", "ru", "es", "de", "fr", "it", "nl", "pt", "pl", "et", "lv", "lt", "fi", "sv", "da", "uk"]);
+export const assistantLocaleSchema = z.enum(["en", "ru", "es", "de", "fr", "it", "nl", "pt", "pl", "et", "lv", "lt", "fi", "sv", "da"]);
 
 const assistantMessageSchema = z.object({
   role: z.enum(["user", "assistant", "system"]),

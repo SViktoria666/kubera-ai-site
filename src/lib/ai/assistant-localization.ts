@@ -54,14 +54,7 @@ const localeKeywordPatterns: Array<{ locale: AssistantLocale; patterns: RegExp[]
       /[а-яё]/i,
     ],
   },
-  {
-    locale: "uk",
-    patterns: [
-      /\b(привіт|будь ласка|компані|контакт|автоматизац|інтеграц|система|безпек|ціна|термін|дякую|можете|чи можна)\b/i,
-      /[іїєґ]/i,
-    ],
-  },
-  {
+{
     locale: "es",
     patterns: [/\b(hola|por favor|empresa|contacto|automatizaci[oó]n|integraci[oó]n|seguridad|precio|plazo|gracias|puedes|puede)\b/i],
   },
@@ -221,13 +214,7 @@ const localeCopy: Record<AssistantLocale, AssistantLocalizedCopy> = {
     retry: "Proev igen",
     temporaryError: "Beklager - der opstod et midlertidigt forbindelsesproblem. Din samtale er stadig her. Proev igen.",
   },
-  uk: {
-    welcome: "Вітаю! Я Kubera AI Assistant. Допоможу підібрати правильне AI-рішення для вашого бізнесу. Що саме ви хочете покращити або автоматизувати?",
-    placeholder: "Введіть повідомлення",
-    send: "Надіслати",
-    retry: "Спробувати ще раз",
-    temporaryError: "Вибачте - виникла тимчасова проблема з підключенням. Розмова збережена. Спробуйте ще раз.",
-  },
+
 };
 
 const promptCopy: Record<AssistantLocale, AssistantPromptCopy> = {
@@ -366,15 +353,7 @@ const promptCopy: Record<AssistantLocale, AssistantPromptCopy> = {
     contact: "Hvad er den bedste kontakt til opfølgning: email, Telegram eller WhatsApp?",
     ready: "Tak. Jeg har nok kontekst og sender dette videre til Kubera AI-teamet.",
   },
-  uk: {
-    need: "Вітаю, я Kubera AI Assistant. Розкажіть, що ви хочете автоматизувати або покращити, і я допоможу знайти найкращий варіант.",
-    urgency: "Чому це важливо саме зараз? Наприклад: втрачені ліди, повільні відповіді, ручна робота або дедлайн.",
-    name: "Як вас звати?",
-    company: "З якої ви компанії?",
-    country: "У якій країні працює бізнес?",
-    contact: "Який контакт найкраще використати для зворотного зв'язку: email, Telegram чи WhatsApp?",
-    ready: "Дякую. У мене достатньо контексту, і я передам це команді Kubera AI.",
-  },
+
 };
 
 const capabilityLocalization: Record<
@@ -531,16 +510,7 @@ const capabilityLocalization: Record<
     followUp: "Hvis du vil, kan jeg hjaelpe med at formulere en anmodning til teknisk vurdering.",
     followUpQuestion: "Hvilket system bruger du, og hvilket praecist workflow vil du forbinde?",
   },
-  uk: {
-    confirmed: "Підтверджена можливість",
-    related: "Пов'язано, але не підтверджено",
-    assessment: "Потрібна технічна оцінка",
-    unknown: "Поза підтвердженою сферою або невідомо",
-    mayBePossible: "Це може бути можливо, але",
-    needReview: "потрібно технічно перевірити конкретну систему, API, workflow та вимоги до безпеки.",
-    followUp: "Якщо хочете, я допоможу сформулювати запит для технічної оцінки.",
-    followUpQuestion: "Яку систему ви використовуєте і який саме workflow хочете підключити?",
-  },
+
 };
 
 function normalizeLocaleCode(value: string | undefined | null): AssistantLocale | undefined {
@@ -565,7 +535,6 @@ function normalizeLocaleCode(value: string | undefined | null): AssistantLocale 
     case "fi":
     case "sv":
     case "da":
-    case "uk":
       return normalized;
     default:
       return undefined;
@@ -635,7 +604,7 @@ export function detectAssistantLocaleFromText(text: string, fallback?: Assistant
     normalizedForMatch.includes(token),
   );
   if (ukrainianSignals.length >= 2) {
-    return "uk";
+    return "ru";
   }
 
   let bestLocale = current;
@@ -726,7 +695,6 @@ export function getConsultativeResponse(locale: AssistantLocale) {
     fi: "Kyllä, tällaiset projektit kuuluvat Kubera AI:n osaamisalueeseen. Tarkkaa arviota varten tiimi tarkentaa yksityiskohdat ja ehdottaa parasta ratkaisua. Jos haluat, voin myös suositella sopivaa blogiartikkelia, case studya tai palvelusivua. Mitä haluat tarkalleen automatisoida tai parantaa?",
     sv: "Ja, den typen av projekt ligger inom Kubera AI:s kompetensomrade. For en noggrann bedomning klargor teamet detaljerna och foreslar den basta losningen. Om du vill kan jag ocksa foresla en relevant bloggartikel, case study eller servicesida. Vad vill du automatisera eller forbattra exakt?",
     da: "Ja, den type projekter ligger inden for Kubera AI's kompetenceomrade. For en praecis vurdering afklarer teamet detaljerne og foreslar den bedste loesning. Hvis du vil, kan jeg ogsa pege dig mod en relevant blogartikel, case study eller serviceside. Hvad vil du helt praecist automatisere eller forbedre?",
-    uk: "Так, такі проєкти входять до сфери компетенції Kubera AI. Для точної оцінки команда уточнить деталі та запропонує найкраще рішення. Якщо хочете, я також можу підказати релевантну статтю, кейс або сторінку послуги. Що саме ви хочете автоматизувати або покращити?",
   };
 
   return responses[locale] || responses.en;
@@ -749,7 +717,6 @@ export function getResponseTimeResponse(locale: AssistantLocale) {
     fi: "Kubera AI -tiimi ottaa yleensä yhteytta muutaman tunnin kuluessa. Jos pyyntö on kiireellinen, pyrimme vastaamaan mahdollisimman nopeasti.",
     sv: "Kubera AI-teamet hor vanligt av sig inom nagra timmar. Om forfragningen ar bradskande forsoker vi svara sa snabbt som mojligt.",
     da: "Kubera AI-teamet kontakter normalt kunder inden for fa timer. Hvis foresporgslen er presserende, forsoger vi at svare sa hurtigt som muligt.",
-    uk: "Команда Kubera AI зазвичай зв'язується протягом кількох годин. Якщо запит терміновий, ми намагаємося відповісти якнайшвидше.",
   };
 
   return responses[locale] || responses.en;
@@ -777,7 +744,6 @@ export function buildSubmittedAssistantMessage(locale: AssistantLocale, lead: As
     fi: `Kiitos${name ? `, ${name}` : ""} yhteydenotosta. Välitin pyyntösi Kubera AI -tiimille. He ottavat yhteyttä kanavan ${contactLabel}${contactValue} kautta. Jos haluat korjata yhteystiedon tai lisätä tietoja, kirjoita tähän.`,
     sv: `Tack${name ? `, ${name}` : ""} for din forfragan. Jag har skickat den till Kubera AI-teamet. De kontaktar dig via ${contactLabel}${contactValue}. Om du vill korrigera kontaktuppgiften eller lagga till detaljer, skriv har.`,
     da: `Tak${name ? `, ${name}` : ""} for din henvendelse. Jeg har sendt din foresporgsel til Kubera AI-teamet. De kontakter dig via ${contactLabel}${contactValue}. Hvis du vil rette kontakten eller tilfoje detaljer, saa skriv her.`,
-    uk: `Дякуємо${name ? `, ${name}` : ""} за звернення. Я передав ваш запит команді Kubera AI. З вами зв'яжуться через ${contactLabel}${contactValue}. Якщо хочете виправити контакт або додати деталі, просто напишіть тут.`,
   };
 
   return templates[locale];
