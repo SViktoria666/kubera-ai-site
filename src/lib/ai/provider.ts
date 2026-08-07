@@ -32,13 +32,13 @@ const localePatterns = [
 
 const prompts = {
   en: {
-    need: "Hi, I'm Kubera AI Assistant. Tell me what you'd like to automate or improve, and I'll help you find the best fit.",
-    urgency: "What makes this important now? For example: lost leads, slow replies, manual work, or a deadline.",
+    need: "Tell me what you want to automate or improve, and I'll help.",
+    urgency: "How soon do you want to start? For example: this week, this month, or just exploring.",
     name: "What is your name?",
-    company: "What company are you from?",
-    country: "Which country is the business operating in?",
-    contact: "What is the best contact for follow-up: email, Telegram, or WhatsApp?",
-    ready: "Thanks. I have enough context and will pass this to the Kubera AI team.",
+    company: "Which company are you with?",
+    country: "Which country does the business operate in?",
+    contact: "What is the best way to follow up: email, Telegram, or WhatsApp?",
+    ready: "Thanks. I have enough context and will pass this on to the Kubera AI team.",
   },
   ru: {
     need: "Привет! Я Kubera AI Assistant. Расскажите, что вы хотите автоматизировать или улучшить, и я помогу подобрать лучший вариант.",

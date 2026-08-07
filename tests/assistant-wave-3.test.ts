@@ -250,15 +250,22 @@ test("deterministic fallback and helper copy stay aligned for confirmed and unco
     messages: [{ role: "user", content: "Kann Kubera AI eine WhatsApp-Automatisierung bauen?" }],
   });
 
-  assert.ok(sapResponse.message.content.toLowerCase().includes("technical assessment"));
-  assert.ok(ruOracleResponse.message.content.includes(getCapabilityLocalization("ru").needReview));
-  assert.ok(esSapResponse.message.content.includes(getCapabilityLocalization("es").needReview));
+  assert.ok(sapResponse.message.content.toLowerCase().includes("need to look at the specific system"));
+  assert.ok(!sapResponse.message.content.toLowerCase().includes("best fit"));
+  assert.ok(!sapResponse.message.content.toLowerCase().includes("lead/customer processes"));
+  assert.ok(ruOracleResponse.message.content.includes("сначала нужно посмотреть"));
+  assert.ok(!ruOracleResponse.message.content.toLowerCase().includes("релевант"));
+  assert.ok(esSapResponse.message.content.includes("primero hay que revisar"));
   assert.ok(confirmedResponse.message.content.toLowerCase().includes("kubera ai"));
   assert.ok(!confirmedResponse.message.content.toLowerCase().includes("technical assessment"));
 
   assert.ok(getAssistantUiCopy("de").welcome.length > 0);
   assert.ok(getAssistantPromptCopy("ru").need.length > 0);
   assert.ok(getCapabilityLocalization("fr").needReview.length > 0);
+  assert.ok(!getAssistantPromptCopy("en").need.includes("best fit"));
+  assert.ok(getAssistantPromptCopy("en").urgency.startsWith("How soon"));
+  assert.ok(getAssistantPromptCopy("ru").need.startsWith("Расскажите"));
+  assert.ok(getAssistantPromptCopy("ru").urgency.includes("Насколько срочно"));
   assert.ok(buildSubmittedAssistantMessage("pl", { name: "Ala", email: "ala@example.com" }).includes("Kubera AI"));
 });
 
@@ -309,10 +316,10 @@ test("capability fallback follows the switched active language instead of stale 
   });
 
   assert.equal(englishSwitchResponse.locale, "en");
-  assert.ok(englishSwitchResponse.message.content.includes("technical assessment"));
+  assert.ok(englishSwitchResponse.message.content.includes("need to look at the specific system"));
   assert.ok(englishSwitchResponse.message.content.includes("What system are you using"));
   assert.equal(germanSwitchResponse.locale, "de");
-  assert.ok(germanSwitchResponse.message.content.toLowerCase().includes("technische pruefung"));
+  assert.ok(germanSwitchResponse.message.content.toLowerCase().includes("zuerst sollten wir"));
   assert.ok(germanSwitchResponse.message.content.includes("Welches System"));
 });
 

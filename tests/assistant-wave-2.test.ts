@@ -65,7 +65,7 @@ test("unknown integrations stay cautious and require assessment", () => {
   );
 
   assert.notEqual(assessment.status, "CONFIRMED_CAPABILITY");
-  assert.ok(assessment.guidance.toLowerCase().includes("technical"));
+  assert.ok(assessment.guidance.toLowerCase().includes("look at"));
   assert.equal(formatCapabilityAssessment(assessment, "en").includes("technical assessment"), true);
 });
 
@@ -83,7 +83,7 @@ test("vendor mentions in general knowledge do not become proof of capability", (
 
   assert.notEqual(assessment.status, "CONFIRMED_CAPABILITY");
   assert.equal(shouldUseCapabilityFallback("Can Kubera AI integrate directly with SAP?", assessment), true);
-  assert.ok(buildCapabilityFallbackMessage("en", assessment).toLowerCase().includes("technical assessment"));
+  assert.ok(buildCapabilityFallbackMessage("en", assessment).toLowerCase().includes("need to look at the specific system"));
 });
 
 test("confirmed capabilities are only marked confirmed when evidence is present", () => {
@@ -135,10 +135,10 @@ test("deterministic fallback uses the same honesty guard", async () => {
     messages: [{ role: "user", content: "Can Kubera AI build a WhatsApp AI assistant?" }],
   });
 
-  assert.ok(sapResponse.message.content.toLowerCase().includes("technical assessment"));
-  assert.ok(ruSapResponse.message.content.toLowerCase().includes("техничес"));
+  assert.ok(sapResponse.message.content.toLowerCase().includes("need to look at the specific system"));
+  assert.ok(ruSapResponse.message.content.toLowerCase().includes("сначала нужно посмотреть"));
   assert.ok(esSapResponse.message.content.toLowerCase().includes("revisar") || esSapResponse.message.content.toLowerCase().includes("sistema"));
-  assert.ok(confirmedResponse.message.content.toLowerCase().includes("competence"));
+  assert.ok(confirmedResponse.message.content.toLowerCase().includes("can help with"));
 });
 
 test("page recommendations stay bounded and only return known pages", () => {
