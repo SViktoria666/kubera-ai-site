@@ -219,17 +219,17 @@ const localeCopy: Record<AssistantLocale, AssistantLocalizedCopy> = {
 
 const promptCopy: Record<AssistantLocale, AssistantPromptCopy> = {
   en: {
-    need: "Hi, I'm Kubera AI Assistant. Tell me what you'd like to automate or improve, and I'll help you find the best fit.",
-    urgency: "What makes this important now? For example: lost leads, slow replies, manual work, or a deadline.",
+    need: "Tell me what you want to automate or improve, and I'll help.",
+    urgency: "How soon do you want to start? For example: this week, this month, or just exploring.",
     name: "What is your name?",
-    company: "What company are you from?",
-    country: "Which country is the business operating in?",
-    contact: "What is the best contact for follow-up: email, Telegram, or WhatsApp?",
-    ready: "Thanks. I have enough context and will pass this to the Kubera AI team.",
+    company: "Which company are you with?",
+    country: "Which country does the business operate in?",
+    contact: "What is the best way to follow up: email, Telegram, or WhatsApp?",
+    ready: "Thanks. I have enough context and will pass this on to the Kubera AI team.",
   },
   ru: {
-    need: "Привет! Я Kubera AI Assistant. Расскажите, что вы хотите автоматизировать или улучшить, и я помогу подобрать лучший вариант.",
-    urgency: "Почему это важно сейчас? Например: теряются лиды, медленные ответы, ручная работа или дедлайн.",
+    need: "Расскажите, что хотите автоматизировать или улучшить, и я помогу.",
+    urgency: "Насколько срочно это нужно? Например: в ближайшие недели, в этом месяце или вы пока изучаете варианты.",
     name: "Как вас зовут?",
     company: "Из какой вы компании?",
     country: "В какой стране работает бизнес?",
@@ -237,22 +237,22 @@ const promptCopy: Record<AssistantLocale, AssistantPromptCopy> = {
     ready: "Спасибо. Контекста достаточно, передам это команде Kubera AI.",
   },
   es: {
-    need: "Hola, soy Kubera AI Assistant. Cuéntame qué te gustaría automatizar o mejorar y te ayudaré a encontrar la mejor opción.",
-    urgency: "¿Por qué es importante ahora? Por ejemplo: leads perdidos, respuestas lentas, trabajo manual o una fecha límite.",
+    need: "Cuéntame qué quieres automatizar o mejorar y te ayudaré.",
+    urgency: "¿Qué tan pronto lo quieres empezar? Por ejemplo: esta semana, este mes o solo estás explorando.",
     name: "¿Cómo te llamas?",
-    company: "¿De qué empresa eres?",
+    company: "¿Con qué empresa trabajas?",
     country: "¿En qué país opera el negocio?",
-    contact: "¿Cuál es el mejor contacto para seguimiento: email, Telegram o WhatsApp?",
-    ready: "Gracias. Tengo suficiente contexto y lo enviaré al equipo de Kubera AI.",
+    contact: "¿Cuál es la mejor forma de seguir: email, Telegram o WhatsApp?",
+    ready: "Gracias. Ya tengo suficiente contexto y lo pasaré al equipo de Kubera AI.",
   },
   de: {
-    need: "Hallo, ich bin der Kubera AI Assistant. Erzaehl mir, was du automatisieren oder verbessern moechtest, und ich helfe dir beim passenden Fit.",
-    urgency: "Was ist daran gerade wichtig? Zum Beispiel: verlorene Leads, langsame Antworten, manuelle Arbeit oder eine Frist.",
+    need: "Erzähl mir kurz, was du automatisieren oder verbessern möchtest, und ich helfe dir.",
+    urgency: "Wie schnell soll es losgehen? Zum Beispiel: diese Woche, diesen Monat oder du schaust dich erst um.",
     name: "Wie heißt du?",
-    company: "Aus welchem Unternehmen kommst du?",
+    company: "Für welches Unternehmen arbeitest du?",
     country: "In welchem Land ist das Unternehmen aktiv?",
-    contact: "Was ist der beste Kontakt fuer die Rueckmeldung: E-Mail, Telegram oder WhatsApp?",
-    ready: "Danke. Ich habe genug Kontext und leite das an das Kubera AI Team weiter.",
+    contact: "Wie melden wir uns am besten: E-Mail, Telegram oder WhatsApp?",
+    ready: "Danke. Ich habe genug Kontext und gebe das an das Kubera AI Team weiter.",
   },
   fr: {
     need: "Bonjour, je suis Kubera AI Assistant. Dites-moi ce que vous souhaitez automatiser ou ameliorer, et je vous aiderai a trouver la meilleure solution.",
@@ -366,9 +366,9 @@ const capabilityLocalization: Record<
     assessment: "Requires technical assessment",
     unknown: "Out of scope or unknown",
     mayBePossible: "It may be possible, but",
-    needReview: "a technical assessment of the specific system, APIs, workflow, and security requirements is needed.",
-    followUp: "If you want, I can help you frame the request for a technical review.",
-    followUpQuestion: "What system are you using, and what exact workflow do you want to connect?",
+    needReview: "we need to look at the specific system, APIs, workflow, and security requirements first.",
+    followUp: "If you want, I can help you frame the question for that review.",
+    followUpQuestion: "What system are you using, and what exactly do you want to connect?",
   },
   ru: {
     confirmed: "Подтвержденная возможность",
@@ -376,9 +376,9 @@ const capabilityLocalization: Record<
     assessment: "Требуется техническая оценка",
     unknown: "Вне подтвержденной области или неизвестно",
     mayBePossible: "Это может быть возможно, но",
-    needReview: "нужна техническая проверка конкретной системы, API, workflow и требований к безопасности.",
-    followUp: "Если хотите, я помогу сформулировать задачу для технической оценки.",
-    followUpQuestion: "Какая у вас система и какой именно workflow нужно связать?",
+    needReview: "сначала нужно посмотреть конкретную систему, API, workflow и требования к безопасности.",
+    followUp: "Если хотите, я помогу сформулировать вопрос для такой проверки.",
+    followUpQuestion: "Какая у вас система и что именно вы хотите связать?",
   },
   es: {
     confirmed: "Capacidad confirmada",
@@ -386,9 +386,9 @@ const capabilityLocalization: Record<
     assessment: "Requiere evaluacion tecnica",
     unknown: "Fuera del alcance confirmado o desconocido",
     mayBePossible: "Puede ser posible, pero",
-    needReview: "hace falta revisar el sistema concreto, las APIs, el flujo de trabajo y los requisitos de seguridad.",
-    followUp: "Si quieres, te ayudo a redactar la solicitud para una revision tecnica.",
-    followUpQuestion: "¿Que sistema usas y que flujo exacto quieres conectar?",
+    needReview: "primero hay que revisar el sistema concreto, las APIs, el flujo de trabajo y los requisitos de seguridad.",
+    followUp: "Si quieres, te ayudo a formular la pregunta para esa revisión.",
+    followUpQuestion: "¿Qué sistema usas y qué quieres conectar exactamente?",
   },
   de: {
     confirmed: "Bestaetigte Faehigkeit",
@@ -396,9 +396,9 @@ const capabilityLocalization: Record<
     assessment: "Technische Pruefung erforderlich",
     unknown: "Ausserhalb des bestaetigten Bereichs oder unbekannt",
     mayBePossible: "Es kann moeglich sein, aber",
-    needReview: "eine technische Pruefung des konkreten Systems, der APIs, des Workflows und der Sicherheitsanforderungen ist notwendig.",
-    followUp: "Wenn du moechtest, formuliere ich die Anfrage fuer eine technische Pruefung.",
-    followUpQuestion: "Welches System nutzt du und welchen konkreten Workflow willst du verbinden?",
+    needReview: "zuerst sollten wir das konkrete System, die APIs, den Ablauf und die Sicherheitsanforderungen ansehen.",
+    followUp: "Wenn du moechtest, formuliere ich die Frage fuer diese Pruefung.",
+    followUpQuestion: "Welches System nutzt du und was genau willst du verbinden?",
   },
   fr: {
     confirmed: "Capacite confirmee",
@@ -670,6 +670,18 @@ export function getAssistantPromptCopy(locale: AssistantLocale): AssistantPrompt
   return promptCopy[locale] || promptCopy.en;
 }
 
+export function getHumanStyleGuidance() {
+  return [
+    "Style contract:",
+    "- Answer first, then ask at most one natural follow-up if it genuinely helps.",
+    "- Keep sentences short, plain, and human.",
+    "- Use the user's wording when possible.",
+    "- Avoid consultant clichés, CRM-form language, and unnecessary English jargon.",
+    "- Do not sound overly enthusiastic, scripted, or like a form.",
+    "- If the user already gave several useful facts, do not ask them again.",
+  ].join("\n");
+}
+
 export function getCapabilityLocalization(locale?: AssistantLocale): CapabilityLocalization {
   if (!locale) {
     return capabilityLocalization.en;
@@ -680,21 +692,21 @@ export function getCapabilityLocalization(locale?: AssistantLocale): CapabilityL
 
 export function getConsultativeResponse(locale: AssistantLocale) {
   const responses: Record<AssistantLocale, string> = {
-    en: "Yes, projects like this are within Kubera AI's area of competence. For an accurate assessment, the team will clarify the details and propose the optimal solution. If you'd like, I can also point you to a relevant blog article, case study, or service page. What exactly do you want to automate or improve?",
-    ru: "Да, такие проекты находятся в зоне компетенции Kubera AI. Для точной оценки команда уточнит детали и предложит оптимальное решение. Если хотите, я также могу подсказать релевантную статью, кейс или страницу услуги. Что именно вы хотите автоматизировать или улучшить?",
-    es: "Sí, este tipo de proyectos está dentro de la competencia de Kubera AI. Para una evaluacion precisa, el equipo aclarara los detalles y propondra la solucion optima. Si quieres, tambien puedo sugerirte un articulo, caso o pagina de servicio relevante. ¿Que quieres automatizar o mejorar exactamente?",
-    de: "Ja, solche Projekte liegen im Bereich von Kubera AI. Fuer eine genaue Bewertung klaert das Team die Details und schlaegt die passende Loesung vor. Wenn du moechtest, nenne ich dir auch einen passenden Blogartikel, eine Fallstudie oder eine Leistungsseite. Was genau moechtest du automatisieren oder verbessern?",
-    fr: "Oui, ce type de projet fait partie du domaine de Kubera AI. Pour une evaluation precise, l'equipe va clarifier les details et proposer la meilleure solution. Si vous voulez, je peux aussi vous orienter vers un article, une etude de cas ou une page de service pertinente. Que souhaitez-vous automatiser ou ameliorer exactement ?",
-    it: "Sì, questo tipo di progetto rientra nelle competenze di Kubera AI. Per una valutazione precisa, il team chiarira i dettagli e proporra la soluzione ottimale. Se vuoi, posso anche indicarti un articolo del blog, un case study o una pagina servizio pertinente. Cosa vuoi automatizzare o migliorare esattamente?",
-    nl: "Ja, dit soort projecten valt binnen de expertise van Kubera AI. Voor een nauwkeurige beoordeling zal het team de details verduidelijken en de beste oplossing voorstellen. Als je wilt, kan ik ook een relevant blogartikel, case study of servicepagina aanraden. Wat wil je precies automatiseren of verbeteren?",
-    pt: "Sim, este tipo de projeto faz parte da area de competencia da Kubera AI. Para uma avaliacao precisa, a equipa vai clarificar os detalhes e propor a melhor solucao. Se quiser, tambem posso indicar um artigo, caso ou pagina de servico relevante. O que quer automatizar ou melhorar exatamente?",
-    pl: "Tak, taki projekt miesci sie w kompetencjach Kubera AI. Aby przygotowac dokladna ocene, zespół doprecyzuje szczegoly i zaproponuje najlepsze rozwiazanie. Jesli chcesz, moge tez wskazac odpowiedni artykul, case study lub strone uslugi. Co dokladnie chcesz zautomatyzowac lub usprawnic?",
-    et: "Jah, sellised projektid on Kubera AI kompetentsi sees. Tapsa hinnangu jaoks selgitab tiim detailid ja pakub parima lahenduse. Kui soovite, saan soovitada ka sobiva blogipostituse, juhtumi voi teenuse lehe. Mida soovite tapselt automatiseerida voi parendada?",
-    lv: "Jā, šadi projekti ir Kubera AI kompetences jomā. Precīzai izvērtēšanai komanda precizēs detaļas un ieteiks optimālo risinājumu. Ja vēlaties, varu arī ieteikt atbilstošu rakstu, gadījumu vai pakalpojuma lapu. Ko tieši vēlaties automatizēt vai uzlabot?",
-    lt: "Taip, tokie projektai patenka i Kubera AI kompetencijos sriti. Tiksliai ivertinimui komanda patikslins detales ir pasiulys tinkamiausia sprendima. Jei norite, galiu taip pat pasiulyti tinkama straipsni, case study arba paslaugos puslapi. Ką tiksliai norite automatizuoti ar patobulinti?",
-    fi: "Kyllä, tällaiset projektit kuuluvat Kubera AI:n osaamisalueeseen. Tarkkaa arviota varten tiimi tarkentaa yksityiskohdat ja ehdottaa parasta ratkaisua. Jos haluat, voin myös suositella sopivaa blogiartikkelia, case studya tai palvelusivua. Mitä haluat tarkalleen automatisoida tai parantaa?",
-    sv: "Ja, den typen av projekt ligger inom Kubera AI:s kompetensomrade. For en noggrann bedomning klargor teamet detaljerna och foreslar den basta losningen. Om du vill kan jag ocksa foresla en relevant bloggartikel, case study eller servicesida. Vad vill du automatisera eller forbattra exakt?",
-    da: "Ja, den type projekter ligger inden for Kubera AI's kompetenceomrade. For en praecis vurdering afklarer teamet detaljerne og foreslar den bedste loesning. Hvis du vil, kan jeg ogsa pege dig mod en relevant blogartikel, case study eller serviceside. Hvad vil du helt praecist automatisere eller forbedre?",
+    en: "Yes, this is the kind of project Kubera AI can help with. First I would look at your systems and the data you want to move. If you want, I can point you to a relevant page. What are you trying to connect or improve?",
+    ru: "Да, с таким проектом Kubera AI может помочь. Сначала нужно посмотреть, как у вас устроены системы и какие данные вы хотите передавать. Если хотите, я могу подсказать подходящую страницу. Что именно вы хотите связать или улучшить?",
+    es: "Sí, este es el tipo de proyecto con el que Kubera AI puede ayudar. Primero habría que ver cómo están montados sus sistemas y qué datos quieren mover. Si quieres, puedo señalar una página útil. ¿Qué quieres conectar o mejorar?",
+    de: "Ja, bei so einem Projekt kann Kubera AI helfen. Zuerst sollte man sehen, wie deine Systeme aufgebaut sind und welche Daten du bewegen willst. Wenn du moechtest, nenne ich dir eine passende Seite. Was moechtest du verbinden oder verbessern?",
+    fr: "Oui, c'est le genre de projet sur lequel Kubera AI peut aider. Il faut d'abord voir comment vos systèmes sont organisés et quelles données vous voulez faire circuler. Si vous voulez, je peux vous orienter vers une page utile. Qu'aimeriez-vous connecter ou améliorer ?",
+    it: "Sì, questo è il tipo di progetto in cui Kubera AI può aiutare. Prima bisogna vedere come sono fatti i sistemi e quali dati volete far passare. Se vuoi, posso indicarti una pagina utile. Cosa vuoi collegare o migliorare?",
+    nl: "Ja, dit is precies het soort project waarbij Kubera AI kan helpen. Eerst kijken we hoe je systemen zijn ingericht en welke data je wilt laten lopen. Als je wilt, wijs ik je naar een passende pagina. Wat wil je koppelen of verbeteren?",
+    pt: "Sim, este é o tipo de projeto em que a Kubera AI pode ajudar. Primeiro vale a pena ver como os sistemas estão organizados e que dados quer mover. Se quiser, posso indicar uma página útil. O que quer ligar ou melhorar?",
+    pl: "Tak, to jest rodzaj projektu, przy którym Kubera AI może pomóc. Najpierw trzeba zobaczyć, jak są zbudowane systemy i jakie dane chcesz przekazywać. Jeśli chcesz, mogę wskazać odpowiednią stronę. Co dokładnie chcesz połączyć lub ulepszyć?",
+    et: "Jah, sellise projektiga saab Kubera AI aidata. Alustuseks vaatame, kuidas süsteemid on üles ehitatud ja milliseid andmeid soovite liigutada. Kui soovite, võin näidata sobivat lehte. Mida soovite ühendada või parandada?",
+    lv: "Jā, ar šādu projektu Kubera AI var palīdzēt. Vispirms vajag paskatīties, kā ir sakārtotas sistēmas un kādus datus vēlaties pārvietot. Ja vēlaties, varu norādīt noderīgu lapu. Ko tieši vēlaties savienot vai uzlabot?",
+    lt: "Taip, su tokiu projektu Kubera AI gali padėti. Pirmiausia reikėtų pasižiūrėti, kaip sujungtos sistemos ir kokius duomenis norite perduoti. Jei norite, galiu parodyti tinkamą puslapį. Ką tiksliai norite sujungti ar patobulinti?",
+    fi: "Kyllä, tämänkaltaisessa projektissa Kubera AI voi auttaa. Ensin kannattaa katsoa, miten järjestelmät on rakennettu ja mitä tietoa haluat siirtää. Jos haluat, voin näyttää sopivan sivun. Mitä haluat yhdistää tai parantaa?",
+    sv: "Ja, det är precis den typen av projekt Kubera AI kan hjälpa till med. Först behöver vi se hur systemen är uppbyggda och vilken data du vill flytta. Om du vill kan jag peka på en passande sida. Vad vill du koppla ihop eller förbättra?",
+    da: "Ja, det er den slags projekt, Kubera AI kan hjælpe med. Først skal vi se, hvordan systemerne er sat op, og hvilke data du vil flytte. Hvis du vil, kan jeg pege på en passende side. Hvad vil du forbinde eller forbedre?",
   };
 
   return responses[locale] || responses.en;
@@ -702,21 +714,21 @@ export function getConsultativeResponse(locale: AssistantLocale) {
 
 export function getResponseTimeResponse(locale: AssistantLocale) {
   const responses: Record<AssistantLocale, string> = {
-    en: "The Kubera AI team usually contacts clients within a few hours. If the request is urgent, we try to respond as quickly as possible.",
-    ru: "Обычно команда Kubera AI связывается в течение нескольких часов. Если запрос срочный, мы стараемся ответить максимально быстро.",
-    es: "Normalmente el equipo de Kubera AI contacta en unas pocas horas. Si la solicitud es urgente, intentamos responder lo antes posible.",
-    de: "Das Kubera AI Team meldet sich normalerweise innerhalb weniger Stunden. Wenn die Anfrage dringend ist, versuchen wir so schnell wie moeglich zu antworten.",
-    fr: "L'equipe Kubera AI contacte normalement les clients en quelques heures. Si la demande est urgente, nous essayons de repondre le plus vite possible.",
-    it: "Il team Kubera AI contatta di solito i clienti entro poche ore. Se la richiesta e urgente, proviamo a rispondere il prima possibile.",
-    nl: "Het Kubera AI team neemt meestal binnen een paar uur contact op. Als de aanvraag urgent is, proberen we zo snel mogelijk te reageren.",
-    pt: "A equipa Kubera AI costuma contactar os clientes dentro de algumas horas. Se o pedido for urgente, tentamos responder o mais rapidamente possivel.",
-    pl: "Zespol Kubera AI zwykle kontaktuje sie w ciagu kilku godzin. Jesli sprawa jest pilna, staramy sie odpowiedziec jak najszybciej.",
-    et: "Kubera AI tiim votab tavaliselt uhendust paari tunni jooksul. Kui taotlus on kiireloomuline, püüame vastata esimesel voimalusel.",
-    lv: "Kubera AI komanda parasti sazinās dažu stundu laikā. Ja pieprasījums ir steidzams, cenšamies atbildēt pēc iespējas ātrāk.",
-    lt: "Kubera AI komanda paprastai susisiekia per kelias valandas. Jei uzklausa skubi, stengiames atsakyti kuo greiciau.",
-    fi: "Kubera AI -tiimi ottaa yleensä yhteytta muutaman tunnin kuluessa. Jos pyyntö on kiireellinen, pyrimme vastaamaan mahdollisimman nopeasti.",
-    sv: "Kubera AI-teamet hor vanligt av sig inom nagra timmar. Om forfragningen ar bradskande forsoker vi svara sa snabbt som mojligt.",
-    da: "Kubera AI-teamet kontakter normalt kunder inden for fa timer. Hvis foresporgslen er presserende, forsoger vi at svare sa hurtigt som muligt.",
+    en: "The Kubera AI team usually replies within a few hours. If it's urgent, we try to answer sooner.",
+    ru: "Обычно команда Kubera AI отвечает в течение нескольких часов. Если вопрос срочный, стараемся ответить быстрее.",
+    es: "Normalmente el equipo de Kubera AI responde en unas pocas horas. Si es urgente, intentamos contestar antes.",
+    de: "Das Kubera AI Team antwortet normalerweise innerhalb weniger Stunden. Wenn es dringend ist, versuchen wir schneller zu antworten.",
+    fr: "L'équipe Kubera AI répond généralement en quelques heures. Si c'est urgent, nous essayons de répondre plus vite.",
+    it: "Il team Kubera AI di solito risponde entro poche ore. Se è urgente, proviamo a rispondere prima.",
+    nl: "Het Kubera AI team reageert meestal binnen een paar uur. Als het dringend is, proberen we sneller te antwoorden.",
+    pt: "A equipa Kubera AI costuma responder em poucas horas. Se for urgente, tentamos responder mais depressa.",
+    pl: "Zespół Kubera AI zwykle odpowiada w ciągu kilku godzin. Jeśli sprawa jest pilna, staramy się odpowiedzieć szybciej.",
+    et: "Kubera AI tiim vastab tavaliselt paari tunni jooksul. Kui asi on kiire, püüame vastata varem.",
+    lv: "Kubera AI komanda parasti atbild dažu stundu laikā. Ja jautājums ir steidzams, cenšamies atbildēt ātrāk.",
+    lt: "Kubera AI komanda paprastai atsako per kelias valandas. Jei klausimas skubus, stengiamės atsakyti greičiau.",
+    fi: "Kubera AI -tiimi vastaa yleensä muutaman tunnin kuluessa. Jos asia on kiireellinen, pyrimme vastaamaan nopeammin.",
+    sv: "Kubera AI-teamet svarar vanligtvis inom några timmar. Om det är brådskande försöker vi svara snabbare.",
+    da: "Kubera AI-teamet svarer normalt inden for et par timer. Hvis det haster, prøver vi at svare hurtigere.",
   };
 
   return responses[locale] || responses.en;
