@@ -724,9 +724,9 @@ main {
 }
 
 .solution-hero--with-visual {
-  grid-template-columns: minmax(0, 0.98fr) minmax(340px, 1.02fr);
+  grid-template-columns: minmax(0, 0.92fr) minmax(380px, 1.08fr);
   align-items: center;
-  gap: 28px;
+  gap: 24px;
 }
 
 .solution-hero-copy {
@@ -750,10 +750,10 @@ main {
 .solution-hero-visual-frame {
   position: relative;
   width: 100%;
-  min-height: 408px;
-  padding: 12px;
+  min-height: 432px;
+  padding: 8px;
   border: 1px solid rgba(255, 255, 255, 0.12);
-  border-radius: 24px;
+  border-radius: 22px;
   background:
     linear-gradient(180deg, rgba(114, 66, 255, 0.08), rgba(50, 122, 255, 0.03)),
     rgba(255, 255, 255, 0.04);
@@ -3138,12 +3138,12 @@ input[type="range"] {
   }
 
   .solution-hero--with-visual {
-    grid-template-columns: minmax(0, 1fr) minmax(260px, 0.82fr);
+    grid-template-columns: minmax(0, 0.96fr) minmax(300px, 1.04fr);
   }
 
   .solution-hero-visual-frame {
-    min-height: 320px;
-    padding: 10px;
+    min-height: 346px;
+    padding: 8px;
   }
 
   .solution-final-cta {
@@ -3439,7 +3439,7 @@ input[type="range"] {
   .solution-hero-visual {
     display: grid;
     order: 2;
-    margin-top: 6px;
+    margin-top: 4px;
   }
 
   .solution-hero-copy {
@@ -3447,8 +3447,8 @@ input[type="range"] {
   }
 
   .solution-hero-visual-frame {
-    min-height: 260px;
-    padding: 10px;
+    min-height: 248px;
+    padding: 8px;
   }
 
   .home-solution-nav-actions {
