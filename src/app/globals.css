@@ -750,9 +750,10 @@ main {
 .solution-hero-visual-frame {
   position: relative;
   width: 100%;
-  --solution-hero-visual-inset: 4px;
+  --solution-hero-visual-inset-y: 3px;
+  --solution-hero-visual-inset-x: 2px;
   min-height: 444px;
-  padding: var(--solution-hero-visual-inset);
+  padding: var(--solution-hero-visual-inset-y) var(--solution-hero-visual-inset-x);
   border: 1px solid rgba(200, 190, 255, 0.7);
   border-radius: 14px;
   background:
@@ -767,7 +768,7 @@ main {
 .solution-hero-visual-image {
   object-fit: contain;
   object-position: center;
-  inset: var(--solution-hero-visual-inset) !important;
+  inset: var(--solution-hero-visual-inset-y) var(--solution-hero-visual-inset-x) !important;
 }
 
 .solution-title {
@@ -3144,7 +3145,8 @@ input[type="range"] {
   }
 
   .solution-hero-visual-frame {
-    --solution-hero-visual-inset: 3px;
+    --solution-hero-visual-inset-y: 3px;
+    --solution-hero-visual-inset-x: 2px;
     min-height: 340px;
     border-radius: 13px;
   }
@@ -3450,7 +3452,8 @@ input[type="range"] {
   }
 
   .solution-hero-visual-frame {
-    --solution-hero-visual-inset: 3px;
+    --solution-hero-visual-inset-y: 2px;
+    --solution-hero-visual-inset-x: 1px;
     min-height: 244px;
     border-radius: 12px;
   }
