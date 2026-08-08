@@ -148,7 +148,7 @@ The fix is rarely expensive. Notion AI's relevant tiers and NotebookLM's free ac
 
 For teams also comparing AI model options behind the scenes, these two articles are useful companions:
 
-- [Claude vs ChatGPT vs Gemini vs DeepSeek](/blog/claude-vs-chatgpt-vs-gemini-vs-deepseek)
+- [Claude vs ChatGPT vs Gemini vs DeepSeek](/blog/claude-vs-chatgpt-vs-gemini-vs-qwen-vs-deepseek)
 - [Claude Code vs OpenAI Codex](/blog/claude-code-vs-openai-codex)
 
 ## Frequently Asked Questions
