@@ -149,7 +149,7 @@ export function GeoPage({ page }: { page: GeoPageData }) {
             </Link>
             <Link
               className="button"
-              href="/demo"
+              href="/cases"
               data-analytics-event="secondary_cta_click"
               data-analytics-placement="geo-hero"
               data-analytics-cta-id="geo-hero-demo"
@@ -216,7 +216,7 @@ export function GeoPage({ page }: { page: GeoPageData }) {
               <div className="geo-cta-buttons">
                 <Link
                   className="button"
-                  href="/demo"
+                  href="/cases"
                   data-analytics-event="secondary_cta_click"
                   data-analytics-placement="geo-cta"
                   data-analytics-cta-id="geo-cta-demo"

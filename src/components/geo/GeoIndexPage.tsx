@@ -39,7 +39,7 @@ export function GeoIndexPage() {
             </Link>
             <Link
               className="button"
-              href="/demo"
+              href="/cases"
               data-analytics-event="secondary_cta_click"
               data-analytics-placement="geo-index"
               data-analytics-cta-id="geo-index-demo"
@@ -86,7 +86,7 @@ export function GeoIndexPage() {
               </Link>
               <Link
                 className="button"
-                href="/demo"
+                href="/cases"
                 data-analytics-event="secondary_cta_click"
                 data-analytics-placement="geo-index"
                 data-analytics-cta-id="geo-index-card-demo"
