@@ -745,11 +745,12 @@ main {
   min-width: 0;
   position: relative;
   z-index: 1;
+  justify-items: center;
 }
 
 .solution-hero-visual-frame {
   position: relative;
-  width: 100%;
+  width: min(100%, 522px);
   --solution-hero-visual-inset-y: 3px;
   --solution-hero-visual-inset-x: 1px;
   min-height: 444px;
