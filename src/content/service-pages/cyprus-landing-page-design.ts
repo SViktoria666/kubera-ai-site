@@ -12,6 +12,8 @@ export const cyprusLandingPageDesignPage: ServicePageContent = {
     headline: "A website is a sales tool. We build it to perform, not just to look good.",
     subheadline:
       "Kubera AI designs landing pages, business websites, and redesigns for companies serving Cyprus — from shipping and maritime businesses to international business services firms, tourism operators, and real estate agencies working with clients across Europe and beyond. Every project follows a documented scope and a fixed quote agreed before work begins, and can be built to support future CRM and automation integrations. Optional EL/EN website structure is available where required.",
+    imageAlt: "Kubera AI landing page system automation illustration",
+    imageSrc: "/assets/images/portugal-real-image.png",
     primaryCta: "Request a Written Quote",
     primaryCtaHref: "/contacts",
     secondaryCta: "See Packages & Pricing",

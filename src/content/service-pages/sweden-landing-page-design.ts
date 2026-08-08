@@ -12,6 +12,8 @@ export const swedenLandingPageDesignPage: ServicePageContent = {
     headline: "A website is a sales tool. We build it to perform, not just to look good.",
     subheadline:
       "Kubera AI designs landing pages, business websites, and redesigns for companies serving Sweden — from engineering-driven scaleups and tech companies to e-commerce and service businesses that have outgrown their first website. Every project follows a documented scope and a fixed quote agreed before work begins, and can be built to support future CRM and automation integrations.",
+    imageAlt: "Kubera AI landing page system automation illustration",
+    imageSrc: "/assets/images/portugal-real-image.png",
     primaryCta: "Request a Written Quote",
     primaryCtaHref: "/contacts",
     secondaryCta: "See Packages & Pricing",

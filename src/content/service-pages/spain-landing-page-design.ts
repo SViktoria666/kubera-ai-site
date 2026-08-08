@@ -12,6 +12,8 @@ export const spainLandingPageDesignPage: ServicePageContent = {
     headline: "A website is a sales tool. We build it to perform, not just to look good.",
     subheadline:
       "Kubera AI designs landing pages, business websites, and redesigns for companies serving Spain — from tourism and hospitality operators to real estate agencies and service businesses working with international clients. Every project is scoped in writing and priced before work begins, and can be built to support future CRM and automation integrations.",
+    imageAlt: "Kubera AI landing page system automation illustration",
+    imageSrc: "/assets/images/portugal-real-image.png",
     primaryCta: "Request a Written Quote",
     primaryCtaHref: "/contacts",
     secondaryCta: "See Packages & Pricing",
