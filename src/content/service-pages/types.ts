@@ -26,6 +26,7 @@ export type ServicePageContent = {
     subheadline: string;
     imageAlt?: string;
     imageSrc?: string;
+    imagePlacement?: "hero" | "after-hero";
     primaryCta: string;
     primaryCtaHref: string;
     secondaryCta: string;

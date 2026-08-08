@@ -100,7 +100,11 @@ function Section({ id, title, children, lead }: { id?: string; title: string; ch
 }
 
 export function CommercialServicePage({ content }: { content: ServicePageContent }) {
-  const hasHeroVisual = Boolean(content.hero.imageSrc);
+  const heroImageSrc = content.hero.imageSrc;
+  const heroImageAlt = content.hero.imageAlt ?? "";
+  const heroImagePlacement = content.hero.imagePlacement ?? "hero";
+  const hasHeroVisual = Boolean(heroImageSrc) && heroImagePlacement === "hero";
+  const hasAfterHeroVisual = Boolean(heroImageSrc) && heroImagePlacement === "after-hero";
 
   return (
     <main className="solutions-page" lang="en">
@@ -137,13 +141,13 @@ export function CommercialServicePage({ content }: { content: ServicePageContent
               </div>
             </div>
 
-            {content.hero.imageSrc ? (
+            {hasHeroVisual && heroImageSrc ? (
               <div className="solution-hero-visual">
                 <div className="solution-hero-visual-frame">
                   <Image
                     className="solution-hero-visual-image"
-                    src={content.hero.imageSrc}
-                    alt={content.hero.imageAlt ?? ""}
+                    src={heroImageSrc}
+                    alt={heroImageAlt}
                     fill
                     priority
                     sizes="(max-width: 1024px) 0vw, 42vw"
@@ -152,6 +156,21 @@ export function CommercialServicePage({ content }: { content: ServicePageContent
               </div>
             ) : null}
           </section>
+
+          {hasAfterHeroVisual && heroImageSrc ? (
+            <section className="solution-feature-visual" aria-label={heroImageAlt || "Commercial visual"}>
+              <div className="solution-feature-visual-frame">
+                <Image
+                  className="solution-feature-visual-image"
+                  src={heroImageSrc}
+                  alt={heroImageAlt}
+                  fill
+                  loading="lazy"
+                  sizes="(max-width: 900px) calc(100vw - 32px), (max-width: 1280px) calc(100vw - 64px), 1120px"
+                />
+              </div>
+            </section>
+          ) : null}
 
           <Section title="The Problem">
             <div className="solution-grid" style={{ gap: "14px" }}>
