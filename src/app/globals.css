@@ -724,9 +724,9 @@ main {
 }
 
 .solution-hero--with-visual {
-  grid-template-columns: minmax(0, 0.88fr) minmax(400px, 1.12fr);
+  grid-template-columns: minmax(0, 0.84fr) minmax(430px, 1.16fr);
   align-items: center;
-  gap: 20px;
+  gap: 16px;
 }
 
 .solution-hero-copy {
@@ -750,7 +750,7 @@ main {
 .solution-hero-visual-frame {
   position: relative;
   width: 100%;
-  min-height: 412px;
+  min-height: 444px;
   padding: 0;
   border: 0;
   border-radius: 0;
@@ -3134,11 +3134,11 @@ input[type="range"] {
   }
 
   .solution-hero--with-visual {
-    grid-template-columns: minmax(0, 0.92fr) minmax(310px, 1.08fr);
+    grid-template-columns: minmax(0, 0.88fr) minmax(340px, 1.12fr);
   }
 
   .solution-hero-visual-frame {
-    min-height: 320px;
+    min-height: 336px;
   }
 
   .solution-final-cta {
@@ -3442,7 +3442,7 @@ input[type="range"] {
   }
 
   .solution-hero-visual-frame {
-    min-height: 232px;
+    min-height: 240px;
   }
 
   .home-solution-nav-actions {
