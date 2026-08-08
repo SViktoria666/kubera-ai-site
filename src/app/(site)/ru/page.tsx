@@ -14,7 +14,7 @@ export const metadata: Metadata = createPageMetadata({
 
 export default function RuHomePage() {
   return (
-    <main>
+    <main className="home-glass-wave0">
       <HeroSection
         title={"Ð¡Ð¸ÑÑ‚ÐµÐ¼Ñ‹, ÐºÐ¾Ñ‚Ð¾Ñ€Ñ‹Ðµ Ñ€Ð°Ð±Ð¾Ñ‚Ð°ÑŽÑ‚.\nÐ‘Ð¸Ð·Ð½ÐµÑ, ÐºÐ¾Ñ‚Ð¾Ñ€Ñ‹Ð¹ Ñ€Ð°ÑÑ‚Ñ‘Ñ‚."}
         lead="Kubera AI ÑÑ‚Ñ€Ð¾Ð¸Ñ‚ Ñ†Ð¸Ñ„Ñ€Ð¾Ð²Ñ‹Ñ… ÑÐ¾Ñ‚Ñ€ÑƒÐ´Ð½Ð¸ÐºÐ¾Ð² Ð´Ð»Ñ ÐºÐ¾Ð¼Ð¿Ð°Ð½Ð¸Ð¹, ÐºÐ¾Ñ‚Ð¾Ñ€Ñ‹Ðµ Ð¶Ð¸Ð²ÑƒÑ‚ Ð¿Ñ€Ð¾Ñ†ÐµÑÑÐ°Ð¼Ð¸ Ð¸ Ð³Ð¾Ñ‚Ð¾Ð²Ñ‹ Ðº ÑÐ»ÐµÐ´ÑƒÑŽÑ‰ÐµÐ¼Ñƒ ÑƒÑ€Ð¾Ð²Ð½ÑŽ."

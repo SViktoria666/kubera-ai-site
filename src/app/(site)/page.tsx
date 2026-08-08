@@ -25,7 +25,7 @@ export default function HomePage() {
   const featuredUseCaseLinks = getHomeFeaturedUseCaseLinks();
 
   return (
-    <main>
+    <main className="home-glass-wave0">
       <HeroSection
         title={"Systems that work.\nBusiness that grows."}
         lead="Kubera AI builds a digital workforce for companies that run on processes and are ready for the next level."
