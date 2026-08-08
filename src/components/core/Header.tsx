@@ -15,11 +15,12 @@ export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const logo = getAssetByName("kubera-logo-main");
   const isRu = pathname.startsWith("/ru");
+  const isGlassPrototype = pathname === "/" || pathname === "/ru";
   const nav = isRu ? ruNavItems : navItems;
   const ctaHref = isRu ? "/ru/kontakty" : "/contacts";
   const ctaLabel = isRu ? "Обсудить проект" : "Discuss my project";
   const brandSubtitle = siteConfig.description;
-  const headerClassName = `site-header${isRu ? " site-header-ru" : ""}`;
+  const headerClassName = `site-header${isRu ? " site-header-ru" : ""}${isGlassPrototype ? " site-header--glass-wave0" : ""}`;
   const navLabel = isRu ? "Основная навигация" : "Main navigation";
   const menuLabel = isRu ? "Открыть меню" : "Toggle navigation";
 
@@ -51,8 +52,14 @@ export function Header() {
             </span>
           </Link>
           <div className="header-mobile-tools">
-            <LanguageSwitcher />
-            <button className="menu-toggle" type="button" aria-label={menuLabel} aria-expanded={isMenuOpen} onClick={() => setIsMenuOpen((open) => !open)}>
+            <LanguageSwitcher className={isGlassPrototype ? "language-switcher--glass" : undefined} />
+            <button
+              className={`menu-toggle${isGlassPrototype ? " menu-toggle--glass" : ""}`}
+              type="button"
+              aria-label={menuLabel}
+              aria-expanded={isMenuOpen}
+              onClick={() => setIsMenuOpen((open) => !open)}
+            >
               <span />
               <span />
               <span />
@@ -72,9 +79,9 @@ export function Header() {
           ))}
         </nav>
         <div className={`header-actions${isMenuOpen ? " is-open" : ""}`}>
-          <LanguageSwitcher />
+          <LanguageSwitcher className={isGlassPrototype ? "language-switcher--glass" : undefined} />
           <Link
-            className="button"
+            className={`button${isGlassPrototype ? " button--glass-primary" : ""}`}
             href={ctaHref}
             data-analytics-event="primary_cta_click"
             data-analytics-placement="header"

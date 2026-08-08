@@ -8,7 +8,12 @@ const leadValues = [5, 15, 30, 60];
 const lostValues = [10, 20, 30, 40];
 const dealValues = [200, 500, 1500, 5000];
 
-export function LossCalculator({ locale }: { locale: "en" | "ru" }) {
+type LossCalculatorProps = {
+  locale: "en" | "ru";
+  visualMode?: "default" | "glass";
+};
+
+export function LossCalculator({ locale, visualMode = "default" }: LossCalculatorProps) {
   const [leadIndex, setLeadIndex] = useState(1);
   const [lostIndex, setLostIndex] = useState(1);
   const [dealIndex, setDealIndex] = useState(1);
@@ -47,7 +52,7 @@ export function LossCalculator({ locale }: { locale: "en" | "ru" }) {
   }
 
   return (
-    <section className="section loss-calculator section-dark">
+    <section className={`section loss-calculator section-dark${visualMode === "glass" ? " loss-calculator--glass" : ""}`}>
       <div className="container">
         <p className="eyebrow">{isRu ? "Калькулятор потерь" : "Loss Calculator"}</p>
         <h2 className="section-title">{isRu ? "Сколько денег теряет ваш бизнес без автоматизации?" : "How much is your business losing without automation?"}</h2>
@@ -93,7 +98,7 @@ export function LossCalculator({ locale }: { locale: "en" | "ru" }) {
             <strong>€{result.yearlyLoss.toLocaleString("en-US")}</strong>
             <p className="muted">{isRu ? "потерь за год" : "lost per year"}</p>
             <Link
-              className="button"
+              className={`button${visualMode === "glass" ? " button--glass-primary" : ""}`}
               href={isRu ? "/ru/kontakty" : "/contacts"}
               data-analytics-event="calculator_result_cta_clicked"
               data-analytics-placement="calculator"

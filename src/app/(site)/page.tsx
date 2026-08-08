@@ -31,6 +31,7 @@ export default function HomePage() {
         lead="Kubera AI builds a digital workforce for companies that run on processes and are ready for the next level."
         ctaLabel="Discuss my project"
         ctaHref="/contacts"
+        ctaClassName="button--glass-primary"
       />
       <div className="container" style={{ marginTop: "-8px", paddingBottom: "24px" }}>
         <p className="lead" style={{ margin: 0 }}>
@@ -38,7 +39,7 @@ export default function HomePage() {
         </p>
       </div>
       <PricingPackages locale="en" />
-      <LossCalculator locale="en" />
+      <LossCalculator locale="en" visualMode="glass" />
       <section className="section section-soft home-solution-nav">
         <div className="container">
           <div className="home-solution-nav-card">

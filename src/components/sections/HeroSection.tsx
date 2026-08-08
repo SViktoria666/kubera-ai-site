@@ -7,9 +7,10 @@ type HeroSectionProps = {
   lead?: string;
   ctaLabel?: string;
   ctaHref?: string;
+  ctaClassName?: string;
 };
 
-export function HeroSection({ eyebrow, title, lead, ctaLabel, ctaHref }: HeroSectionProps) {
+export function HeroSection({ eyebrow, title, lead, ctaLabel, ctaHref, ctaClassName }: HeroSectionProps) {
   return (
     <section className="hero">
       <AmbientTechCloud variant="hero" />
@@ -19,7 +20,7 @@ export function HeroSection({ eyebrow, title, lead, ctaLabel, ctaHref }: HeroSec
         {lead ? <p className="lead">{lead}</p> : null}
         {ctaLabel && ctaHref ? (
           <Link
-            className="button"
+            className={`button${ctaClassName ? ` ${ctaClassName}` : ""}`}
             href={ctaHref}
             data-analytics-event="primary_cta_click"
             data-analytics-placement="hero"
