@@ -724,9 +724,9 @@ main {
 }
 
 .solution-hero--with-visual {
-  grid-template-columns: minmax(0, 0.84fr) minmax(430px, 1.16fr);
+  grid-template-columns: minmax(0, 0.82fr) minmax(444px, 1.18fr);
   align-items: center;
-  gap: 16px;
+  gap: 14px;
 }
 
 .solution-hero-copy {
@@ -750,18 +750,24 @@ main {
 .solution-hero-visual-frame {
   position: relative;
   width: 100%;
+  --solution-hero-visual-inset: 4px;
   min-height: 444px;
-  padding: 0;
-  border: 0;
-  border-radius: 0;
-  background: transparent;
-  box-shadow: none;
+  padding: var(--solution-hero-visual-inset);
+  border: 1px solid rgba(200, 190, 255, 0.7);
+  border-radius: 14px;
+  background:
+    linear-gradient(180deg, rgba(131, 104, 255, 0.06), rgba(131, 104, 255, 0.015)),
+    rgba(255, 255, 255, 0.015);
+  box-shadow:
+    0 1px 0 rgba(255, 255, 255, 0.04) inset,
+    0 12px 28px rgba(31, 10, 84, 0.16);
   overflow: hidden;
 }
 
 .solution-hero-visual-image {
   object-fit: contain;
   object-position: center;
+  inset: var(--solution-hero-visual-inset) !important;
 }
 
 .solution-title {
@@ -3134,11 +3140,13 @@ input[type="range"] {
   }
 
   .solution-hero--with-visual {
-    grid-template-columns: minmax(0, 0.88fr) minmax(340px, 1.12fr);
+    grid-template-columns: minmax(0, 0.86fr) minmax(352px, 1.14fr);
   }
 
   .solution-hero-visual-frame {
-    min-height: 336px;
+    --solution-hero-visual-inset: 3px;
+    min-height: 340px;
+    border-radius: 13px;
   }
 
   .solution-final-cta {
@@ -3442,7 +3450,9 @@ input[type="range"] {
   }
 
   .solution-hero-visual-frame {
-    min-height: 240px;
+    --solution-hero-visual-inset: 3px;
+    min-height: 244px;
+    border-radius: 12px;
   }
 
   .home-solution-nav-actions {
