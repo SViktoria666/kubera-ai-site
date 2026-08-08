@@ -724,8 +724,9 @@ main {
 }
 
 .solution-hero--with-visual {
-  grid-template-columns: minmax(0, 1.1fr) minmax(280px, 0.9fr);
+  grid-template-columns: minmax(0, 0.98fr) minmax(340px, 1.02fr);
   align-items: center;
+  gap: 28px;
 }
 
 .solution-hero-copy {
@@ -749,8 +750,8 @@ main {
 .solution-hero-visual-frame {
   position: relative;
   width: 100%;
-  min-height: 360px;
-  padding: 18px;
+  min-height: 408px;
+  padding: 12px;
   border: 1px solid rgba(255, 255, 255, 0.12);
   border-radius: 24px;
   background:
@@ -3137,12 +3138,12 @@ input[type="range"] {
   }
 
   .solution-hero--with-visual {
-    grid-template-columns: minmax(0, 1fr) minmax(220px, 0.72fr);
+    grid-template-columns: minmax(0, 1fr) minmax(260px, 0.82fr);
   }
 
   .solution-hero-visual-frame {
-    min-height: 300px;
-    padding: 14px;
+    min-height: 320px;
+    padding: 10px;
   }
 
   .solution-final-cta {
@@ -3436,7 +3437,18 @@ input[type="range"] {
   }
 
   .solution-hero-visual {
-    display: none;
+    display: grid;
+    order: 2;
+    margin-top: 6px;
+  }
+
+  .solution-hero-copy {
+    order: 1;
+  }
+
+  .solution-hero-visual-frame {
+    min-height: 260px;
+    padding: 10px;
   }
 
   .home-solution-nav-actions {

@@ -146,7 +146,7 @@ export function CommercialServicePage({ content }: { content: ServicePageContent
                     alt={content.hero.imageAlt ?? ""}
                     fill
                     priority
-                    sizes="(max-width: 1024px) 0vw, 42vw"
+                    sizes="(max-width: 560px) 100vw, (max-width: 1024px) 46vw, 42vw"
                   />
                 </div>
               </div>
