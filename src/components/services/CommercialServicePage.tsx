@@ -99,11 +99,27 @@ function Section({ id, title, children, lead }: { id?: string; title: string; ch
   );
 }
 
+function renderLandingPageTitle(title: string): ReactNode {
+  const prefix = "Landing Page";
+
+  if (!title.startsWith(prefix)) {
+    return title;
+  }
+
+  return (
+    <>
+      <span className="landing-page-title-nowrap">{prefix}</span>
+      {title.slice(prefix.length)}
+    </>
+  );
+}
+
 export function CommercialServicePage({ content }: { content: ServicePageContent }) {
+  const isLandingPageDesign = content.canonical.includes("/landing-page-design");
   const hasHeroVisual = Boolean(content.hero.imageSrc);
 
   return (
-    <main className="solutions-page" lang="en">
+    <main className={`solutions-page${isLandingPageDesign ? " landing-page-design-page" : ""}`} lang="en">
       <SchemaScripts content={content} />
 
       <section className="solution-shell">
@@ -124,7 +140,7 @@ export function CommercialServicePage({ content }: { content: ServicePageContent
               >
                 {content.hero.headline}
               </p>
-              <h1 className="solution-title">{content.h1}</h1>
+              <h1 className="solution-title">{isLandingPageDesign ? renderLandingPageTitle(content.h1) : content.h1}</h1>
               <p className="lead solution-lead">{content.hero.subheadline}</p>
               <p className="solution-trustline">{content.hero.trustStrip}</p>
               <div className="solution-hero-actions">

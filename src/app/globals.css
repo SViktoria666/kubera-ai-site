@@ -781,6 +781,22 @@ main {
   overflow-wrap: break-word;
 }
 
+.landing-page-design-page .landing-page-title-nowrap {
+  white-space: nowrap;
+}
+
+.landing-page-design-page .solution-hero-copy {
+  gap: 8px;
+}
+
+.landing-page-design-page .solution-lead {
+  margin-top: 5px;
+}
+
+.landing-page-design-page .solution-trustline {
+  margin-top: 2px;
+}
+
 .solution-lead {
   margin: 8px 0 0;
 }
@@ -800,6 +816,17 @@ main {
   margin-top: 10px;
 }
 
+.landing-page-design-page .solution-hero-actions {
+  flex-wrap: nowrap;
+  gap: 14px;
+  margin-top: 8px;
+}
+
+.landing-page-design-page .solution-hero-actions > .button,
+.landing-page-design-page .solution-hero-actions > .solution-secondary-link {
+  flex: 0 1 auto;
+}
+
 .solution-secondary-link {
   display: inline-flex;
   align-items: center;
@@ -816,10 +843,30 @@ main {
   transition: transform 0.2s ease, border-color 0.2s ease, background-color 0.2s ease;
 }
 
+.landing-page-design-page .solution-secondary-link {
+  border-color: rgba(255, 229, 157, 0.9);
+  background: linear-gradient(180deg, #ffd95f 0%, #ffb800 100%);
+  color: #140f00;
+  box-shadow: 0 14px 30px rgba(255, 184, 0, 0.16);
+}
+
 .solution-secondary-link:hover {
   transform: translateY(-1px);
   border-color: rgba(114, 66, 255, 0.55);
   background: rgba(255, 255, 255, 0.06);
+}
+
+.landing-page-design-page .solution-secondary-link:hover {
+  border-color: rgba(255, 229, 157, 1);
+  background: linear-gradient(180deg, #ffe27d 0%, #ffc72f 100%);
+  color: #140f00;
+  box-shadow: 0 16px 34px rgba(255, 184, 0, 0.2);
+}
+
+.landing-page-design-page .solution-hero-actions > .button:focus-visible,
+.landing-page-design-page .solution-hero-actions > .solution-secondary-link:focus-visible {
+  outline: 2px solid rgba(255, 255, 255, 0.88);
+  outline-offset: 3px;
 }
 
 .solution-hero-card {
@@ -3397,6 +3444,17 @@ input[type="range"] {
 }
 
 @media (max-width: 560px) {
+  .landing-page-design-page .solution-hero-actions {
+    flex-direction: column;
+    align-items: stretch;
+    flex-wrap: nowrap;
+  }
+
+  .landing-page-design-page .solution-hero-actions > .button,
+  .landing-page-design-page .solution-hero-actions > .solution-secondary-link {
+    width: 100%;
+  }
+
   .use-case-page .solution-container {
     padding-bottom: 120px;
   }
