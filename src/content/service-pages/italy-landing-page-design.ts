@@ -12,6 +12,8 @@ export const italyLandingPageDesignPage: ServicePageContent = {
     headline: "A website is a sales tool. We build it to perform, not just to look good.",
     subheadline:
       "Kubera AI designs landing pages, business websites, and redesigns for companies serving Italy — from boutique hotels and restaurants to design studios and artisan businesses whose work depends on being presented at the same standard as the product itself. Every project follows a documented scope and a fixed quote agreed before work begins, and can be built to support future CRM and automation integrations.",
+    imageAlt: "Kubera AI landing page system automation illustration",
+    imageSrc: "/assets/images/portugal-real-image.png",
     primaryCta: "Request a Written Quote",
     primaryCtaHref: "/contacts",
     secondaryCta: "See Packages & Pricing",

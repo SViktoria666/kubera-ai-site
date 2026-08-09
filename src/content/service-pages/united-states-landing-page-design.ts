@@ -12,6 +12,8 @@ export const unitedStatesLandingPageDesignPage: ServicePageContent = {
     headline: "A website is a sales tool. We build it to perform, not just to look good.",
     subheadline:
       "Kubera AI designs landing pages, business websites, and redesigns for small and mid-sized businesses across the United States — contractors and home service businesses, law firms, medical and dental practices, SaaS companies, and e-commerce brands that need a site built for lead generation and conversion, not just appearances. Every project follows a documented scope and a fixed quote agreed before work begins, and can be built to support future CRM and automation integrations.",
+    imageAlt: "Kubera AI landing page system automation illustration",
+    imageSrc: "/assets/images/portugal-real-image.png",
     primaryCta: "Request a Written Quote",
     primaryCtaHref: "/contacts",
     secondaryCta: "See Packages & Pricing",

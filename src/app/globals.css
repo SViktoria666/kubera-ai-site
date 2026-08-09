@@ -724,8 +724,9 @@ main {
 }
 
 .solution-hero--with-visual {
-  grid-template-columns: minmax(0, 1.1fr) minmax(280px, 0.9fr);
+  grid-template-columns: minmax(0, 0.82fr) minmax(444px, 1.18fr);
   align-items: center;
+  gap: 14px;
 }
 
 .solution-hero-copy {
@@ -744,27 +745,31 @@ main {
   min-width: 0;
   position: relative;
   z-index: 1;
+  justify-items: center;
 }
 
 .solution-hero-visual-frame {
   position: relative;
-  width: 100%;
-  min-height: 360px;
-  padding: 18px;
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  border-radius: 24px;
+  width: min(100%, 522px);
+  --solution-hero-visual-inset-y: 3px;
+  --solution-hero-visual-inset-x: 1px;
+  min-height: 444px;
+  padding: var(--solution-hero-visual-inset-y) var(--solution-hero-visual-inset-x);
+  border: 1px solid rgba(200, 190, 255, 0.7);
+  border-radius: 14px;
   background:
-    linear-gradient(180deg, rgba(114, 66, 255, 0.08), rgba(50, 122, 255, 0.03)),
-    rgba(255, 255, 255, 0.04);
+    linear-gradient(180deg, rgba(131, 104, 255, 0.06), rgba(131, 104, 255, 0.015)),
+    rgba(255, 255, 255, 0.015);
   box-shadow:
-    0 20px 50px rgba(0, 0, 0, 0.22),
-    0 0 80px rgba(114, 66, 255, 0.08);
+    0 1px 0 rgba(255, 255, 255, 0.04) inset,
+    0 12px 28px rgba(31, 10, 84, 0.16);
   overflow: hidden;
 }
 
 .solution-hero-visual-image {
   object-fit: contain;
   object-position: center;
+  inset: var(--solution-hero-visual-inset-y) var(--solution-hero-visual-inset-x) !important;
 }
 
 .solution-title {
@@ -774,6 +779,22 @@ main {
   line-height: 1;
   font-weight: 800;
   overflow-wrap: break-word;
+}
+
+.landing-page-design-page .landing-page-title-nowrap {
+  white-space: nowrap;
+}
+
+.landing-page-design-page .solution-hero-copy {
+  gap: 8px;
+}
+
+.landing-page-design-page .solution-lead {
+  margin-top: 5px;
+}
+
+.landing-page-design-page .solution-trustline {
+  margin-top: 2px;
 }
 
 .solution-lead {
@@ -795,6 +816,17 @@ main {
   margin-top: 10px;
 }
 
+.landing-page-design-page .solution-hero-actions {
+  flex-wrap: nowrap;
+  gap: 14px;
+  margin-top: 8px;
+}
+
+.landing-page-design-page .solution-hero-actions > .button,
+.landing-page-design-page .solution-hero-actions > .solution-secondary-link {
+  flex: 0 1 auto;
+}
+
 .solution-secondary-link {
   display: inline-flex;
   align-items: center;
@@ -811,10 +843,30 @@ main {
   transition: transform 0.2s ease, border-color 0.2s ease, background-color 0.2s ease;
 }
 
+.landing-page-design-page .solution-secondary-link {
+  border-color: rgba(255, 229, 157, 0.9);
+  background: linear-gradient(180deg, #ffd95f 0%, #ffb800 100%);
+  color: #140f00;
+  box-shadow: 0 14px 30px rgba(255, 184, 0, 0.16);
+}
+
 .solution-secondary-link:hover {
   transform: translateY(-1px);
   border-color: rgba(114, 66, 255, 0.55);
   background: rgba(255, 255, 255, 0.06);
+}
+
+.landing-page-design-page .solution-secondary-link:hover {
+  border-color: rgba(255, 229, 157, 1);
+  background: linear-gradient(180deg, #ffe27d 0%, #ffc72f 100%);
+  color: #140f00;
+  box-shadow: 0 16px 34px rgba(255, 184, 0, 0.2);
+}
+
+.landing-page-design-page .solution-hero-actions > .button:focus-visible,
+.landing-page-design-page .solution-hero-actions > .solution-secondary-link:focus-visible {
+  outline: 2px solid rgba(255, 255, 255, 0.88);
+  outline-offset: 3px;
 }
 
 .solution-hero-card {
@@ -3137,12 +3189,14 @@ input[type="range"] {
   }
 
   .solution-hero--with-visual {
-    grid-template-columns: minmax(0, 1fr) minmax(220px, 0.72fr);
+    grid-template-columns: minmax(0, 0.86fr) minmax(352px, 1.14fr);
   }
 
   .solution-hero-visual-frame {
-    min-height: 300px;
-    padding: 14px;
+    --solution-hero-visual-inset-y: 3px;
+    --solution-hero-visual-inset-x: 1px;
+    min-height: 340px;
+    border-radius: 13px;
   }
 
   .solution-final-cta {
@@ -3390,6 +3444,17 @@ input[type="range"] {
 }
 
 @media (max-width: 560px) {
+  .landing-page-design-page .solution-hero-actions {
+    flex-direction: column;
+    align-items: stretch;
+    flex-wrap: nowrap;
+  }
+
+  .landing-page-design-page .solution-hero-actions > .button,
+  .landing-page-design-page .solution-hero-actions > .solution-secondary-link {
+    width: 100%;
+  }
+
   .use-case-page .solution-container {
     padding-bottom: 120px;
   }
@@ -3436,7 +3501,20 @@ input[type="range"] {
   }
 
   .solution-hero-visual {
-    display: none;
+    display: grid;
+    order: 2;
+    margin-top: 0;
+  }
+
+  .solution-hero-copy {
+    order: 1;
+  }
+
+  .solution-hero-visual-frame {
+    --solution-hero-visual-inset-y: 2px;
+    --solution-hero-visual-inset-x: 0.5px;
+    min-height: 244px;
+    border-radius: 12px;
   }
 
   .home-solution-nav-actions {
