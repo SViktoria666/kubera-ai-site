@@ -2,6 +2,7 @@
 
 import { useEffect, useRef } from "react";
 import { usePathname } from "next/navigation";
+import { handleAnalyticsClick } from "@/components/analytics/analytics-click";
 import {
   buildCurrentPageContext,
   getPageContext,
@@ -198,23 +199,13 @@ export function AnalyticsBridge() {
     }, 200);
 
     const handleClick = (event: MouseEvent) => {
-      const target = event.target;
-      if (!(target instanceof HTMLElement)) {
-        return;
-      }
+      const handled = handleAnalyticsClick(event.target, {
+        onAnalyticsEvent: trackDataAttributeEvent,
+        onFallbackAnchor: trackFallbackLinkEvent,
+      });
 
-      const analyticsElement = target.closest<HTMLElement>("[data-analytics-event]");
-      if (analyticsElement) {
-        const eventName = analyticsElement.dataset.analyticsEvent;
-        if (eventName) {
-          trackDataAttributeEvent(eventName, analyticsElement);
-        }
+      if (handled) {
         return;
-      }
-
-      const anchor = target.closest<HTMLAnchorElement>("a[href]");
-      if (anchor) {
-        trackFallbackLinkEvent(anchor);
       }
     };
 
