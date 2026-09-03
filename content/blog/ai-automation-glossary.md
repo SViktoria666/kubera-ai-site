@@ -54,7 +54,7 @@ Before the definitions, a short practical note. When a vendor or consultant uses
 
 **Orchestration.** The layer that coordinates multiple steps, tools, or agents in an automated workflow, deciding what happens in what order and handling errors or handoffs along the way. In practice this is often what a workflow automation platform is actually doing under the hood.
 
-**Model Context Protocol (MCP).** An open standard that lets AI models connect to external tools and data sources in a consistent way, rather than each integration being built from scratch. It's increasingly how AI agents connect to business tools like calendars, databases, or internal systems.
+**Model Context Protocol (MCP).** An open standard that lets AI models connect to external tools and data sources in a consistent way, rather than each integration being built from scratch. It's increasingly how AI agents connect to business tools like calendars, databases, or internal systems. For the business-case version of why that matters, see [What Is MCP (Model Context Protocol)? A Business Guide](/blog/what-is-model-context-protocol-mcp).
 
 **API (application programming interface).** The technical channel through which one piece of software, including an AI model, communicates with another. When a vendor says their tool "connects via API," this is what they mean, a defined way for systems to talk to each other.
 
