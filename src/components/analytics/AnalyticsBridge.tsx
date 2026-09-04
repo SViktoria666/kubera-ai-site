@@ -13,7 +13,7 @@ import {
   type AnalyticsEventName,
 } from "@/lib/analytics";
 
-function trackPageContext(pathname: string) {
+export function trackPageContext(pathname: string) {
   const context = getPageContext(pathname);
   trackUmamiEvent("page_context", context);
 
@@ -78,7 +78,7 @@ function getEventPropertiesFromElement(element: HTMLElement) {
   };
 }
 
-function trackDataAttributeEvent(eventName: string, element: HTMLElement) {
+export function trackDataAttributeEvent(eventName: string, element: HTMLElement) {
   const baseProperties = getEventPropertiesFromElement(element);
   const extraEvents = element.dataset.analyticsExtraEvents
     ?.split(",")

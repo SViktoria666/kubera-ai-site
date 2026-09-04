@@ -1,3 +1,5 @@
+import { getBrowserAnalyticsConfig } from "@/lib/analytics/runtime-config";
+
 export type AnalyticsTrafficClass = "external" | "internal" | "qa" | "preview";
 
 type AnalyticsTrafficResolutionInput = {
@@ -76,6 +78,19 @@ function isPreviewDeployment(hostname?: string, vercelEnv?: string) {
   return vercelEnv === "preview" || Boolean(hostname && previewHostnamePattern.test(hostname));
 }
 
+function resolveBrowserVercelEnv() {
+  const browserConfig = getBrowserAnalyticsConfig();
+  if (browserConfig?.vercelEnv) {
+    return browserConfig.vercelEnv;
+  }
+
+  if (typeof window === "undefined") {
+    return null;
+  }
+
+  return previewHostnamePattern.test(window.location.hostname) ? "preview" : "production";
+}
+
 export function resolveAnalyticsTrafficClass(input: AnalyticsTrafficResolutionInput = {}): AnalyticsTrafficClass {
   const marker = normalizeTrafficClass(input.searchParams?.get(trafficMarkerKey));
   if (marker === "internal" || marker === "qa") {
@@ -110,7 +125,7 @@ export function getAnalyticsTrafficClass() {
     hostname: window.location.hostname,
     searchParams,
     storedTrafficClass,
-    vercelEnv: process.env.VERCEL_ENV,
+    vercelEnv: resolveBrowserVercelEnv() ?? undefined,
   });
 
   if (searchParams.has(trafficMarkerKey)) {

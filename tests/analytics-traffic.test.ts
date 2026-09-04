@@ -8,8 +8,19 @@ import {
   resetAnalyticsTrafficClassForTests,
   resolveAnalyticsTrafficClass,
 } from "../src/lib/analytics/traffic.ts";
+import { isAnalyticsEnabled } from "../src/lib/analytics.ts";
+import { trackPageContext } from "../src/components/analytics/AnalyticsBridge.tsx";
 
-function installMockWindow(href: string) {
+function installMockWindow(
+  href: string,
+  config?: {
+    enabled?: boolean;
+    scriptUrl?: string;
+    websiteId?: string;
+    domains?: string;
+    vercelEnv?: "production" | "preview" | null;
+  },
+) {
   const url = new URL(href);
   const storage = new Map<string, string>();
   const replaceCalls: Array<{ nextUrl: string }> = [];
@@ -40,6 +51,15 @@ function installMockWindow(href: string) {
         storage.delete(key);
       },
     },
+    __kuberaAnalyticsConfig: config
+      ? {
+          enabled: config.enabled ?? true,
+          scriptUrl: config.scriptUrl ?? "https://analytics.kubera-automation.com/script.js",
+          websiteId: config.websiteId ?? "a866bd55-0014-4f23-8678-6a38d4208966",
+          domains: config.domains ?? "www.kubera-automation.com,kubera-automation.com",
+          vercelEnv: config.vercelEnv ?? "production",
+        }
+      : undefined,
   };
 
   globalThis.window = mockWindow as unknown as Window;
@@ -139,5 +159,58 @@ test("preview domains are added only for preview builds", () => {
   } finally {
     process.env.VERCEL_ENV = previousEnv;
     process.env.VERCEL_URL = previousUrl;
+  }
+});
+
+test("browser runtime with process undefined still enables analytics on production", () => {
+  const globalScope = globalThis as typeof globalThis & { process?: typeof process };
+  const previousProcess = globalScope.process;
+  const browserWindow = installMockWindow("https://www.kubera-automation.com/services", {
+    enabled: true,
+    vercelEnv: "production",
+  });
+
+  try {
+    globalScope.process = undefined;
+
+    assert.equal(isAnalyticsEnabled(), true);
+    assert.equal(getAnalyticsTrafficClass(), "external");
+  } finally {
+    globalScope.process = previousProcess;
+    browserWindow.restore();
+    resetAnalyticsTrafficClassForTests();
+  }
+});
+
+test("page_context emit path tracks the page context event", () => {
+  const browserWindow = installMockWindow("https://www.kubera-automation.com/services", {
+    enabled: true,
+    vercelEnv: "production",
+  });
+  const calls: Array<{ eventName: string; properties: unknown }> = [];
+  const previousUmami = browserWindow.mockWindow.umami;
+
+  browserWindow.mockWindow.umami = {
+    track(eventName?: string | Record<string, unknown>, properties?: Record<string, unknown>) {
+      calls.push({ eventName: String(eventName), properties });
+    },
+  };
+
+  try {
+    assert.equal(trackPageContext("/services"), undefined);
+    assert.deepEqual(calls[0], {
+      eventName: "page_context",
+      properties: {
+        page_path: "/services",
+        page_language: "en",
+        page_type: "services",
+        page_family: "services",
+        traffic_class: "external",
+      },
+    });
+  } finally {
+    browserWindow.mockWindow.umami = previousUmami;
+    browserWindow.restore();
+    resetAnalyticsTrafficClassForTests();
   }
 });
