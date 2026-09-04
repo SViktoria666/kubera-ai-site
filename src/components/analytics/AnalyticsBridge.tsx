@@ -2,7 +2,6 @@
 
 import { useEffect, useRef } from "react";
 import { usePathname } from "next/navigation";
-import { handleAnalyticsClick } from "@/components/analytics/analytics-click";
 import {
   buildCurrentPageContext,
   getPageContext,
@@ -13,7 +12,7 @@ import {
   type AnalyticsEventName,
 } from "@/lib/analytics";
 
-function trackPageContext(pathname: string) {
+export function trackPageContext(pathname: string) {
   const context = getPageContext(pathname);
   trackUmamiEvent("page_context", context);
 
@@ -65,7 +64,15 @@ function getEventPropertiesFromElement(element: HTMLElement) {
   const pageContext = buildCurrentPageContext();
 
   return {
-    ...pageContext,
+    page_path: pageContext.page_path,
+    page_language: pageContext.page_language,
+    page_type: pageContext.page_type,
+    page_family: pageContext.page_family,
+    traffic_class: pageContext.traffic_class,
+    country_market: pageContext.country_market,
+    service_slug: pageContext.service_slug,
+    article_slug: pageContext.article_slug,
+    case_slug: pageContext.case_slug,
     placement: element.dataset.analyticsPlacement,
     cta_id: element.dataset.analyticsCtaId,
     cta_label_key: element.dataset.analyticsCtaLabelKey,
@@ -78,7 +85,7 @@ function getEventPropertiesFromElement(element: HTMLElement) {
   };
 }
 
-function trackDataAttributeEvent(eventName: string, element: HTMLElement) {
+export function trackDataAttributeEvent(eventName: string, element: HTMLElement) {
   const baseProperties = getEventPropertiesFromElement(element);
   const extraEvents = element.dataset.analyticsExtraEvents
     ?.split(",")
@@ -193,10 +200,24 @@ export function AnalyticsBridge() {
     }, 200);
 
     const handleClick = (event: MouseEvent) => {
-      handleAnalyticsClick(event.target, {
-        onAnalyticsEvent: trackDataAttributeEvent,
-        onFallbackAnchor: trackFallbackLinkEvent,
-      });
+      const target = event.target;
+      if (!(target instanceof HTMLElement)) {
+        return;
+      }
+
+      const analyticsElement = target.closest<HTMLElement>("[data-analytics-event]");
+      if (analyticsElement) {
+        const eventName = analyticsElement.dataset.analyticsEvent;
+        if (eventName) {
+          trackDataAttributeEvent(eventName, analyticsElement);
+        }
+        return;
+      }
+
+      const anchor = target.closest<HTMLAnchorElement>("a[href]");
+      if (anchor) {
+        trackFallbackLinkEvent(anchor);
+      }
     };
 
     document.addEventListener("click", handleClick, true);

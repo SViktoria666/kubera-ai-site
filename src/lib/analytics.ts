@@ -1,5 +1,6 @@
 import { getAnalyticsTrafficClass, type AnalyticsTrafficClass } from "@/lib/analytics/traffic";
 import { recordJourneyEvent } from "@/lib/analytics/journey";
+import { getBrowserAnalyticsConfig } from "@/lib/analytics/runtime-config";
 
 export type AnalyticsPageLanguage = "en" | "ru" | "es" | "other";
 
@@ -17,8 +18,6 @@ export type AnalyticsPageType =
   | "how_we_work"
   | "demo"
   | "other";
-
-export type AnalyticsPageFamily = AnalyticsPageType;
 
 export type AnalyticsEventName =
   | "page_context"
@@ -66,7 +65,7 @@ export type PageContext = {
   page_path: string;
   page_language: AnalyticsPageLanguage;
   page_type: AnalyticsPageType;
-  page_family: AnalyticsPageFamily;
+  page_family: AnalyticsPageType;
   traffic_class: AnalyticsTrafficClass;
   country_market?: string;
   service_slug?: string;
@@ -102,29 +101,55 @@ const nonLanguageRootSegments = new Set([
 ]);
 
 export function isAnalyticsEnabled() {
+  if (typeof window !== "undefined") {
+    return getBrowserAnalyticsConfig()?.enabled ?? false;
+  }
+
   const scriptUrl = getUmamiScriptUrl();
   const websiteId = getUmamiWebsiteId();
 
   return (
-    process.env.NODE_ENV === "production" &&
-    (process.env.VERCEL_ENV === "production" || process.env.VERCEL_ENV === "preview") &&
+    typeof process !== "undefined" &&
+    process.env.NODE_ENV !== "development" &&
     Boolean(scriptUrl) &&
     Boolean(websiteId)
   );
 }
 
 export function getUmamiScriptUrl() {
+  if (typeof window !== "undefined") {
+    return getBrowserAnalyticsConfig()?.scriptUrl ?? fallbackUmamiScriptUrl;
+  }
+
   return process.env.NEXT_PUBLIC_UMAMI_SCRIPT_URL?.trim() || fallbackUmamiScriptUrl;
 }
 
 export function getUmamiWebsiteId() {
+  if (typeof window !== "undefined") {
+    return getBrowserAnalyticsConfig()?.websiteId ?? fallbackUmamiWebsiteId;
+  }
+
   return process.env.NEXT_PUBLIC_UMAMI_WEBSITE_ID?.trim() || fallbackUmamiWebsiteId;
 }
 
 export function getAnalyticsDomains() {
+  if (typeof window !== "undefined") {
+    const browserConfig = getBrowserAnalyticsConfig();
+    if (browserConfig?.domains) {
+      return browserConfig.domains;
+    }
+
+    const domains = new Set(productionDomains);
+    if (window.location.hostname.endsWith(".vercel.app")) {
+      domains.add(window.location.hostname);
+    }
+
+    return Array.from(domains).join(",");
+  }
+
   const domains = new Set(productionDomains);
 
-  if (process.env.VERCEL_ENV === "preview" && process.env.VERCEL_URL) {
+  if (typeof process !== "undefined" && process.env.VERCEL_ENV === "preview" && process.env.VERCEL_URL) {
     domains.add(process.env.VERCEL_URL.trim());
   }
 
