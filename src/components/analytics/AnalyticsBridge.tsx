@@ -2,6 +2,7 @@
 
 import { useEffect, useRef } from "react";
 import { usePathname } from "next/navigation";
+import { handleAnalyticsClick } from "@/components/analytics/analytics-click";
 import {
   buildCurrentPageContext,
   getPageContext,
@@ -64,13 +65,7 @@ function getEventPropertiesFromElement(element: HTMLElement) {
   const pageContext = buildCurrentPageContext();
 
   return {
-    page_path: pageContext.page_path,
-    page_language: pageContext.page_language,
-    page_type: pageContext.page_type,
-    country_market: pageContext.country_market,
-    service_slug: pageContext.service_slug,
-    article_slug: pageContext.article_slug,
-    case_slug: pageContext.case_slug,
+    ...pageContext,
     placement: element.dataset.analyticsPlacement,
     cta_id: element.dataset.analyticsCtaId,
     cta_label_key: element.dataset.analyticsCtaLabelKey,
@@ -198,24 +193,10 @@ export function AnalyticsBridge() {
     }, 200);
 
     const handleClick = (event: MouseEvent) => {
-      const target = event.target;
-      if (!(target instanceof HTMLElement)) {
-        return;
-      }
-
-      const analyticsElement = target.closest<HTMLElement>("[data-analytics-event]");
-      if (analyticsElement) {
-        const eventName = analyticsElement.dataset.analyticsEvent;
-        if (eventName) {
-          trackDataAttributeEvent(eventName, analyticsElement);
-        }
-        return;
-      }
-
-      const anchor = target.closest<HTMLAnchorElement>("a[href]");
-      if (anchor) {
-        trackFallbackLinkEvent(anchor);
-      }
+      handleAnalyticsClick(event.target, {
+        onAnalyticsEvent: trackDataAttributeEvent,
+        onFallbackAnchor: trackFallbackLinkEvent,
+      });
     };
 
     document.addEventListener("click", handleClick, true);

@@ -26,6 +26,14 @@ Umami is the production analytics layer for Kubera AI. It is loaded globally fro
 - assistant transcripts
 - company names
 
+## Traffic classification
+
+- `external` is the default fail-safe for normal production visitors.
+- `internal` and `qa` can be set with the `?analytics_traffic=` marker for controlled testing.
+- `preview` is used for Vercel preview deployments.
+- The marker is stripped from the visible URL after it is read.
+- No traffic marker is treated as a secret or PII.
+
 ## Session lifecycle
 
 - Opening the assistant always starts a fresh session.
