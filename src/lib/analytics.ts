@@ -1,3 +1,6 @@
+import { getAnalyticsTrafficClass, type AnalyticsTrafficClass } from "@/lib/analytics/traffic";
+import { recordJourneyEvent } from "@/lib/analytics/journey";
+
 export type AnalyticsPageLanguage = "en" | "ru" | "es" | "other";
 
 export type AnalyticsPageType =
@@ -14,6 +17,8 @@ export type AnalyticsPageType =
   | "how_we_work"
   | "demo"
   | "other";
+
+export type AnalyticsPageFamily = AnalyticsPageType;
 
 export type AnalyticsEventName =
   | "page_context"
@@ -61,6 +66,8 @@ export type PageContext = {
   page_path: string;
   page_language: AnalyticsPageLanguage;
   page_type: AnalyticsPageType;
+  page_family: AnalyticsPageFamily;
+  traffic_class: AnalyticsTrafficClass;
   country_market?: string;
   service_slug?: string;
   article_slug?: string;
@@ -100,7 +107,7 @@ export function isAnalyticsEnabled() {
 
   return (
     process.env.NODE_ENV === "production" &&
-    process.env.VERCEL_ENV === "production" &&
+    (process.env.VERCEL_ENV === "production" || process.env.VERCEL_ENV === "preview") &&
     Boolean(scriptUrl) &&
     Boolean(websiteId)
   );
@@ -115,7 +122,13 @@ export function getUmamiWebsiteId() {
 }
 
 export function getAnalyticsDomains() {
-  return Array.from(productionDomains).join(",");
+  const domains = new Set(productionDomains);
+
+  if (process.env.VERCEL_ENV === "preview" && process.env.VERCEL_URL) {
+    domains.add(process.env.VERCEL_URL.trim());
+  }
+
+  return Array.from(domains).join(",");
 }
 
 export function normalizePathname(pathname: string) {
@@ -188,139 +201,147 @@ function isCountryLandingPath(pathname: string) {
   return false;
 }
 
+function createPageContext(context: Omit<PageContext, "page_family" | "traffic_class">): PageContext {
+  return {
+    ...context,
+    page_family: context.page_type,
+    traffic_class: getAnalyticsTrafficClass(),
+  };
+}
+
 export function getPageContext(pathname: string): PageContext {
   const normalized = normalizePathname(pathname);
   const segments = getPathSegments(normalized);
   const pageLanguage = getPageLanguage(normalized);
 
   if (normalized === "/" || normalized === "/ru" || normalized === "/es") {
-    return {
+    return createPageContext({
       page_path: normalized,
       page_language: pageLanguage,
       page_type: "home",
-    };
+    });
   }
 
   if (normalized === "/contacts" || normalized.startsWith("/contacts/") || normalized === "/ru/kontakty" || normalized.startsWith("/ru/kontakty/")) {
-    return {
+    return createPageContext({
       page_path: normalized,
       page_language: pageLanguage,
       page_type: "contacts",
-    };
+    });
   }
 
   if (normalized === "/how-we-work" || normalized.startsWith("/how-we-work/") || normalized === "/ru/kak-my-rabotaem" || normalized.startsWith("/ru/kak-my-rabotaem/")) {
-    return {
+    return createPageContext({
       page_path: normalized,
       page_language: pageLanguage,
       page_type: "how_we_work",
-    };
+    });
   }
 
   if (normalized === "/demo" || normalized.startsWith("/demo/") || normalized === "/ru/demo" || normalized.startsWith("/ru/demo/")) {
-    return {
+    return createPageContext({
       page_path: normalized,
       page_language: pageLanguage,
       page_type: "demo",
-    };
+    });
   }
 
   if (normalized === "/blog" || normalized.startsWith("/blog/") || normalized === "/ru/blog" || normalized.startsWith("/ru/blog/")) {
     const articleSlug = segments.length > 1 ? segments.at(-1) : undefined;
-    return {
+    return createPageContext({
       page_path: normalized,
       page_language: pageLanguage,
       page_type: "blog",
       ...(articleSlug ? { article_slug: articleSlug } : {}),
-    };
+    });
   }
 
   if (normalized === "/cases" || normalized.startsWith("/cases/") || normalized === "/ru/keysy" || normalized.startsWith("/ru/keysy/")) {
     const caseSlug = segments.length > 1 ? segments.at(-1) : undefined;
-    return {
+    return createPageContext({
       page_path: normalized,
       page_language: pageLanguage,
       page_type: "case",
       ...(caseSlug ? { case_slug: caseSlug } : {}),
-    };
+    });
   }
 
   if (normalized === "/use-cases" || normalized.startsWith("/use-cases/")) {
-    return {
+    return createPageContext({
       page_path: normalized,
       page_language: pageLanguage,
       page_type: "use_case",
       ...(segments.length > 1 ? { case_slug: segments.at(-1) } : {}),
-    };
+    });
   }
 
   if (normalized === "/services" || normalized === "/ru/uslugi") {
-    return {
+    return createPageContext({
       page_path: normalized,
       page_language: pageLanguage,
       page_type: "services",
-    };
+    });
   }
 
   if (normalized.startsWith("/services/") && segments.length >= 3) {
     const countryMarket = extractCountryMarket(segments[1]);
     const serviceSlug = segments[2];
 
-    return {
+    return createPageContext({
       page_path: normalized,
       page_language: pageLanguage,
       page_type: "country_landing",
       ...(countryMarket ? { country_market: countryMarket } : {}),
       ...(serviceSlug ? { service_slug: serviceSlug } : {}),
-    };
+    });
   }
 
   if (normalized.startsWith("/en/solutions/") && segments.length >= 4) {
     const countryMarket = extractCountryMarket(segments[2]);
     const serviceSlug = segments[3];
 
-    return {
+    return createPageContext({
       page_path: normalized,
       page_language: pageLanguage,
       page_type: "industry_solution",
       ...(countryMarket ? { country_market: countryMarket } : {}),
       ...(serviceSlug ? { service_slug: serviceSlug } : {}),
-    };
+    });
   }
 
   if (isCountryLandingPath(normalized)) {
     const segment = segments.at(-1);
     const countryMarket = extractCountryMarket(segment);
 
-    return {
+    return createPageContext({
       page_path: normalized,
       page_language: pageLanguage,
       page_type: "country_landing",
       ...(countryMarket ? { country_market: countryMarket } : {}),
-    };
+    });
   }
 
   if (normalized.startsWith("/en/")) {
-    return {
+    return createPageContext({
       page_path: normalized,
       page_language: pageLanguage,
       page_type: "other",
-    };
+    });
   }
 
   if (normalized === "/pricing") {
-    return {
+    return createPageContext({
       page_path: normalized,
       page_language: pageLanguage,
       page_type: "pricing",
-    };
+    });
   }
 
-  return {
+  return createPageContext({
     page_path: normalized,
     page_language: pageLanguage,
     page_type: "other",
-  };
+  });
 }
 
 export function sanitizeAnalyticsProperties(properties: AnalyticsProperties = {}) {
@@ -409,5 +430,4 @@ export function buildCurrentPageContext() {
 
   return getPageContext(window.location.pathname);
 }
-import { recordJourneyEvent } from "@/lib/analytics/journey";
 export { recordJourneyPageContext } from "@/lib/analytics/journey";
