@@ -97,6 +97,8 @@ If you want a deeper explanation of the role AI plays in systems, see [What Is a
 
 If you are comparing assistants and full workflow automation, [AI Agent vs Chatbot](/blog/ai-agent-vs-chatbot) is the right next read.
 
+For the related question of how AI systems surface answers and citations, see [GEO: Why Your Business Isn't Showing Up in AI Search Answers](/blog/generative-engine-optimization-geo).
+
 ## What a good first workflow looks like
 
 The best first AI automation project has four properties:
