@@ -1,6 +1,6 @@
-import { getAnalyticsTrafficClass, type AnalyticsTrafficClass } from "@/lib/analytics/traffic";
-import { recordJourneyEvent } from "@/lib/analytics/journey";
-import { getBrowserAnalyticsConfig } from "@/lib/analytics/runtime-config";
+import { getAnalyticsTrafficClass, type AnalyticsTrafficClass } from "./analytics/traffic.ts";
+import { recordJourneyEvent } from "./analytics/journey.ts";
+import { getBrowserAnalyticsConfig } from "./analytics/runtime-config.ts";
 
 export type AnalyticsPageLanguage = "en" | "ru" | "es" | "other";
 
@@ -455,4 +455,4 @@ export function buildCurrentPageContext() {
 
   return getPageContext(window.location.pathname);
 }
-export { recordJourneyPageContext } from "@/lib/analytics/journey";
+export { recordJourneyPageContext } from "./analytics/journey.ts";

@@ -1,4 +1,4 @@
-import type { JourneyAnalyticsContext, JourneyPageType } from "@/lib/analytics/journey-types";
+import type { JourneyAnalyticsContext, JourneyPageType } from "./journey-types.ts";
 
 const pageLanguageLabels: Record<JourneyAnalyticsContext["pageLanguage"], string> = {
   en: "Английский",

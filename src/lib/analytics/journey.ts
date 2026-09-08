@@ -1,7 +1,7 @@
 "use client";
 
-import { getPageContext, normalizePathname, type PageContext } from "@/lib/analytics";
-import type { JourneyAnalyticsContext, JourneyGeo, JourneyPageLanguage, JourneyPageType, JourneySignals, JourneyUtm } from "@/lib/analytics/journey-types";
+import { getPageContext, normalizePathname, type PageContext } from "../analytics.ts";
+import type { JourneyAnalyticsContext, JourneyGeo, JourneyPageLanguage, JourneyPageType, JourneySignals, JourneyUtm } from "./journey-types.ts";
 
 const STORAGE_KEY = "kuberaJourneyContext";
 const PAGE_HISTORY_LIMIT = 24;
