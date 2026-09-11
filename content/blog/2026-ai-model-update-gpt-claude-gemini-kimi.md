@@ -8,7 +8,7 @@ date: "2026-09-11"
 publishedAt: "2026-09-11"
 tags: ["ai models", "gpt", "claude", "gemini", "kimi", "business automation", "eu ai"]
 status: "published"
-language: "en"
+language: "en-GB"
 category: "AI Automation"
 ---
 # AI Model Releases in 2026: What Changed for Businesses
