@@ -21,7 +21,7 @@ That question has a clear answer. It just requires you to stop thinking about AI
 
 This is also, not coincidentally, exactly how serious AI automation is built in 2026. Businesses running real AI infrastructure are not "using ChatGPT" or "using Claude." They are running systems that route different tasks to different models based on what each one does best. If you want to understand how that kind of system fits together operationally, see [What Is an AI Agent?](/blog/what-is-an-ai-agent) — an agent's intelligence layer is exactly where this model choice lives.
 
-This article gives you the practical version of that routing logic, without the benchmark theatre.
+This article gives you the practical version of that routing logic, without the benchmark theatre. For a dated release-by-release update covering the major 2026 model launches, see our [2026 AI Model Update](/blog/2026-ai-model-update-gpt-claude-gemini-kimi).
 
 
 ## Why There Is No Single Best Model
