@@ -370,6 +370,8 @@ The question "can AI replace an employee" presupposes a binary that does not exi
 
 The businesses getting this right are not replacing people with AI. They are restructuring what people do, removing the repetitive execution work from their plates, and directing their judgment toward the decisions and relationships that actually move the business forward.
 
+For businesses deciding what happens to a role after automatable tasks are removed, see [How AI Restructures Teams, Not Just Headcount](/blog/ai-restructures-teams-not-headcount).
+
 The businesses getting it wrong are either not automating at all - paying people to do work that a system would do more consistently and cheaply - or automating without thinking carefully about what genuinely needs a human, and discovering the hard way that certain things cannot be delegated to a system regardless of how capable it is.
 
 The framework is straightforward. The discipline is in applying it honestly, task by task, role by role, before making any hiring or automation decision.

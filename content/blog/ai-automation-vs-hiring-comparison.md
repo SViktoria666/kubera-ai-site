@@ -46,6 +46,8 @@ None of this data transfers directly to Europe. Recruiting cost structures, noti
 
 The comparison that actually holds up financially isn't "hire a person or deploy an AI system." It's "which specific tasks currently done by, or planned for, a role are better handled by automation, and which genuinely need a person." We go through the conceptual version of this question, what AI can and can't reasonably replace, in [Can AI Replace an Employee?](/blog/can-ai-replace-an-employee). This article is the financial companion to that question: once you've identified which tasks are genuinely a fit for automation, here's how to actually cost that decision out.
 
+Once that task-level comparison shows what automation can absorb, the next question is how the remaining role should be redesigned; [How AI Restructures Teams, Not Just Headcount](/blog/ai-restructures-teams-not-headcount) covers that next step.
+
 ## A framework for making the comparison
 
 This is a Kubera AI planning heuristic, not a universal benchmark, meant to structure the financial comparison rather than replace a proper cost analysis for your specific situation. If the process is not yet documented or stable, [AI Automation Readiness: Is Your Business Ready?](/blog/ai-automation-readiness) should come first. If you are still deciding which candidate process should be evaluated first, [How to Choose Your First AI Automation Project](/blog/how-to-choose-first-ai-automation-project) is the upstream selection step.
