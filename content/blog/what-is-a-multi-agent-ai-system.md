@@ -46,6 +46,8 @@ None of that automatically transfers to a European business. Team structures, ta
 
 A multi-agent system tends to earn its complexity when a task genuinely spans different kinds of work that benefit from specialization, research plus drafting plus review, for instance, where a single agent trying to do all three reliably tends to perform worse than dedicated agents handling each step. It also helps when different steps need meaningfully different tools, permissions, or oversight levels, and separating them makes governance and monitoring cleaner rather than messier.
 
+Regardless of whether one agent or several are involved, the oversight boundary still belongs to the specific action; [How Much Autonomy Should an AI Agent Have?](/blog/ai-agent-autonomy-human-in-the-loop) covers how to set it.
+
 It tends to be overkill when a single, well-scoped agent could handle the whole task end to end without meaningfully sacrificing quality. Splitting a straightforward task across multiple agents for its own sake usually adds coordination overhead, more failure points, and more to monitor, without a corresponding gain in what actually gets done. Gartner's own warning about "agent washing" cuts both ways here: a multi-agent label can be applied to a system that doesn't need to be one, just as easily as a chatbot can be rebranded as an agent.
 
 ## A framework for deciding

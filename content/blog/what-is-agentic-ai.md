@@ -46,6 +46,8 @@ An AI agent combines LLM reasoning with tool access and the ability to act. It r
 
 An agent may execute multiple steps without human approval at every transition, while still using approval gates for sensitive, irreversible, financial, legal, or high-risk actions. Autonomy is bounded by the tools the agent has access to, the permissions it holds, the policies it operates under, and the escalation rules defined at deployment. A well-designed agent is not unconstrained — it is constrained appropriately.
 
+That action-by-action boundary between autonomous execution and human approval is explored in [How Much Autonomy Should an AI Agent Have?](/blog/ai-agent-autonomy-human-in-the-loop).
+
 This is the core of what "agentic AI" means: an AI system that pursues a goal through multiple steps, using tools, with bounded autonomy. A single agent qualifies as agentic AI. Multi-agent systems are one way to extend this architecture.
 
 Most of the AI automation use cases described elsewhere in the Kubera AI blog — appointment reminders with response handling, lead qualification and CRM updates, document processing with exception routing — are at this layer. A single agent, owning a defined process end to end.

@@ -97,6 +97,8 @@ Every step in that sequence replaces something a human was previously doing manu
 
 The agent does not need to be supervised at every step. That is what makes it fundamentally different from automation software that just executes rules. The agent reasons. It can handle variations. It can interpret ambiguous input. It can decide between options.
 
+Once an agent can act on its own, the next design question is how much autonomy it should have and which actions still require human approval. We cover that action-by-action boundary in [How Much Autonomy Should an AI Agent Have?](/blog/ai-agent-autonomy-human-in-the-loop).
+
 But it only does this well when it has been given: clear goals, access to the right tools, defined boundaries, and a structured environment to operate in.
 
 ## Four Businesses. Four AI Agents. What Actually Changed.
