@@ -24,6 +24,8 @@ This matters because it changes what you should fix. If the cause were technical
 
 This article is about the four decisions that determine the outcome before any automation gets built, and the framework we use with every client to make sure those decisions get made on purpose instead of by accident.
 
+Even a project that clears those initial filters can still fail if a generic template is never adapted to the business's actual process; [Why Your Business Automation Looks Just Like Everyone Else's](/blog/template-automation-trap) explains how to spot that distinction.
+
 ## Mistake One: Automating Chaos
 
 The most common starting point for a failed AI project is a process that was never consistent to begin with.

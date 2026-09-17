@@ -192,6 +192,8 @@ Neither outcome means automation is not appropriate for the business. It means t
 
 Once a candidate has been selected:
 
+Before implementation begins, it is also worth checking that the proposed build reflects the business's specific process rather than stopping at a generic template; [Why Your Business Automation Looks Just Like Everyone Else's](/blog/template-automation-trap) gives a practical way to test that.
+
 1. Document the process fully. Every step, every decision branch, every exception, every escalation path. This is the specification the automation will be built from. It should be reviewed by everyone who currently handles the process before any build begins.
 
 2. Establish the baseline. Measure the current state of the primary outcome metric before any automation exists. If this requires manual counting or system queries, do that work before the build starts - not after.
