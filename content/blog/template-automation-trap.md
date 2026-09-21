@@ -51,6 +51,8 @@ The Kubera Template vs Custom Filter asks three questions about any proposed or 
 
 None of this means templates or no-code platforms like [n8n, Make, or Zapier](/blog/n8n-vs-make-vs-zapier) are bad. Plenty of genuinely well-built automation starts from a template and gets meaningfully adapted from there, the same way a good AI-assisted website can absolutely avoid the purple gradient if someone deliberately steers away from the default. The problem isn't the starting point. It's a build that never moved past it.
 
+When meaningful adaptation turns into a question of whether the platform can still express and maintain the required logic cleanly, [Custom Agentic App or No-Code Platform? How to Decide](/blog/custom-agentic-app-vs-no-code) covers the next architectural choice.
+
 ## Where this plays out in practice
 
 Illustrative scenario, not a specific Kubera client: a mid-size business buys a packaged AI automation for customer support ticket routing, and it appears to work well for the first month, tickets get categorized and routed, response times improve. Three months in, the business notices a recurring category of customer request, specific to a product line only they sell, that the system consistently miscategorizes or routes to the wrong team. The workflow was never actually built with that product line in mind; it was built for whatever generic support categories the template shipped with, and the business's specific case simply wasn't part of the median the template was designed around. Rebuilding the categorization logic around the business's actual product structure, rather than the template's generic categories, fixes a problem that was invisible until the exact case the template didn't anticipate showed up.

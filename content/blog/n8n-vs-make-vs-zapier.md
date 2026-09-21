@@ -422,6 +422,8 @@ Zapier is the right answer for low-volume, non-technical teams that need to move
 
 The businesses that get this wrong are usually the ones that made the decision without measuring expected volume and workflow complexity first.
 
+If the workflow's decision logic and state have grown beyond what a platform can maintain cleanly, the next question is whether the architecture itself should change; [Custom Agentic App or No-Code Platform? How to Decide](/blog/custom-agentic-app-vs-no-code) works through that boundary.
+
 The correct sequence is:
 
 1. document the process
