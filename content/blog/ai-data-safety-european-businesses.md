@@ -99,7 +99,7 @@ This is the framework we use before scoping any AI automation build.
 
 Most European SMB AI automation use cases — appointment reminders, lead qualification, customer support, document processing — involve Tier 2 data. The compliance requirements for Tier 2 data are real, specific, and manageable: a signed DPA, data minimisation applied to what the AI actually needs for the task, a defined retention policy, and SCCs in place for any US-based processing.
 
-The businesses that treat every category of business data as Tier 5 are over-engineering their compliance posture and, as a consequence, delaying implementations that would be straightforward to run compliantly. The businesses that treat Tier 3 or Tier 4 data as Tier 2 are accepting compliance risk that should be addressed first.
+The businesses that treat every category of business data as Tier 5 are over-engineering their compliance posture and, as a consequence, delaying implementations that would be straightforward to run compliantly. The businesses that treat Tier 3 or Tier 4 data as Tier 2 are accepting compliance risk that should be addressed first. For payment workflows involving supplier or bank details, the related verification and human-approval risks are covered in [Deepfake Fraud in 2026: How AI-Powered Automation Protects Your Company's Payments](/blog/deepfake-fraud-payment-protection-europe).
 
 ## What Each Category of Data Requires
 

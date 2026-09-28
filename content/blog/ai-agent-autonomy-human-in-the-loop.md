@@ -21,7 +21,7 @@ That's a genuinely striking demonstration that a specific, low-stakes system can
 
 This is commonly used governance vocabulary in enterprise AI discussion, though the exact definitions and boundaries between terms can vary somewhat between organizations and frameworks, so treat the three below as a useful shared starting point rather than a fixed, universal standard.
 
-Human-in-the-loop means a person approves a specific action before the agent executes it. The system pauses at a defined checkpoint and waits. This fits high-stakes, hard-to-reverse actions: financial disbursements, contract commitments, anything touching sensitive data.
+Human-in-the-loop means a person approves a specific action before the agent executes it. The system pauses at a defined checkpoint and waits. This fits high-stakes, hard-to-reverse actions: financial disbursements, contract commitments, anything touching sensitive data. For a payment-specific example, see [Deepfake Fraud in 2026: How AI-Powered Automation Protects Your Company's Payments](/blog/deepfake-fraud-payment-protection-europe).
 
 Human-on-the-loop means the agent acts on its own, but a person monitors the output and can intervene after the fact. This fits medium-risk, reversible situations where speed matters more than pre-approval.
 
