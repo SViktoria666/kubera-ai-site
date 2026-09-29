@@ -46,7 +46,7 @@ A complex first project, attempted before the team has any experience building o
 
 A trivial first project, on the other hand, succeeds easily but proves nothing. It recovers a small number of hours, generates a forgettable result, and gives the business no real evidence about whether AI automation can move the metrics that actually matter - revenue recovered, hours returned, errors eliminated at the volume that changes the unit economics of the business.
 
-The right first project sits in a specific zone: high enough in volume that the time savings are real and visible, simple enough in logic that it can be documented completely, and low enough in stakes that a mistake during the learning period costs minutes to fix, not a damaged client relationship. We give this a precise shape later in this article.
+The right first project sits in a specific zone: high enough in volume that the time savings are real and visible, simple enough in logic that it can be documented completely, and low enough in stakes that a mistake during the learning period costs minutes to fix, not a damaged client relationship. We give this a precise shape later in this article. That documentation discipline also matters when a business is reducing dependency on one founder's judgment, as explored in [Founder Dependency: The Hidden Risk to Your Business's Value](/blog/founder-dependency-business-continuity).
 
 ## Mistake Three: Nobody Calculates ROI Before Starting
 
