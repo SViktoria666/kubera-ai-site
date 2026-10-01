@@ -51,6 +51,7 @@ Do not claim a command passed if it was not run. Planned validators or browser c
 
 ## 6. Change-Control Rules
 
+- No production-first experiments. Risky or non-trivial experiments must start in an isolated worktree, local, draft, preview, or test path as appropriate. Establish verification and rollback before production; production is the final controlled stage, not an experimentation environment.
 - Use a clean isolated worktree for non-trivial or risky work; preserve dirty user work.
 - Establish the rollback path before a risky change.
 - Keep scope bounded and the diff minimal. No opportunistic refactors or cleanup.
@@ -59,6 +60,7 @@ Do not claim a command passed if it was not run. Planned validators or browser c
 - Preserve exact failure evidence. Retry an equivalent failed operation no more than 2–3 times; then stop and reassess.
 - Never create recursive repair loops or silently broaden scope.
 - Never commit secrets, tokens, cookies, auth state, SSH keys, OAuth material, private database dumps, or sensitive customer data.
+- If Codex can safely perform a routine technical action itself—such as repository inspection, Git/GitHub operations, file operations, tests, validation, or authorized technical verification—it should do so rather than transfer the work to the owner for convenience. This does not expand authority and does not override protected-system, production-approval, scope, secret, or rollback rules.
 - If owner approval, 2FA, secret entry, business judgment, or irreversible authorization is genuinely required, stop at that gate and report it.
 
 ## 7. Visual Definition of Done
@@ -90,4 +92,4 @@ The following six Kubera protocols are planned and **NOT YET INSTALLED**:
 - `kubera-evidence-content`
 - `kubera-doubt-review`
 
-Until installed, use the procedures in this file and `docs/`. Do not invoke a planned protocol as if it exists. The global `C:\Users\Admin\AGENTS.md` remains in force for generic safety and infrastructure policy; this file contains only the portable Kubera-specific contract.
+Until installed, use the procedures in this file and `docs/`. Do not invoke a planned protocol as if it exists. A global user-level AGENTS policy may also apply outside this repository, but this repo-level contract is sufficient for Kubera work on a fresh laptop and does not require any machine-specific external file.
