@@ -1,0 +1,49 @@
+# Checkpoint
+
+## TASK
+
+## GOAL
+
+## DATE
+
+## REPOSITORY
+
+## WORKTREE
+
+## BRANCH
+
+## BASE SHA
+
+## CURRENT HEAD
+
+## SOURCE OF TRUTH
+
+## PROTECTED SYSTEMS
+
+## FILES CHANGED
+
+## FILES INTENTIONALLY UNTOUCHED
+
+## COMMANDS RUN
+
+## TEST RESULTS
+
+## BROWSER EVIDENCE
+
+## DEPLOYMENT EVIDENCE
+
+## DECISIONS
+
+## REJECTED ALTERNATIVES
+
+## KNOWN UNKNOWNS
+
+## BLOCKERS
+
+## ROLLBACK
+
+## OWNER APPROVAL STATUS
+
+## EXACT NEXT STEP
+
+> Do not record passwords, tokens, cookies, credentials, private keys, or other secrets here.
