@@ -12,7 +12,7 @@ export const portugalLandingPageDesignPage: ServicePageContent = {
     subheadline:
       "Kubera AI designs conversion-focused landing pages, business websites, and redesigns for companies serving Portugal. Every project is scoped in writing and priced before work begins, and can be built to support future CRM and automation integrations.",
     imageAlt: "Website and landing page design visual for European markets",
-    imageSrc: "/assets/images/portugal-website-landing-page-visual.svg",
+    imageSrc: "/assets/images/portugal-landing-page-design-visual.svg",
     imagePlacement: "after-hero",
     primaryCta: "Request a Written Quote",
     primaryCtaHref: "/contacts",

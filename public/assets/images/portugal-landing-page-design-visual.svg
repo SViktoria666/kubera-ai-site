@@ -1,0 +1,416 @@
+<svg width="1118" height="1280" viewBox="0 0 1118 1280" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Website and landing page design visual for European markets</title>
+  <desc id="desc">A clean white visual with a laptop, phone, country callouts, European market nodes, and business website and landing page messaging.</desc>
+  <defs>
+    <linearGradient id="frame" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#FFFFFF"/>
+      <stop offset="1" stop-color="#F8F8FB"/>
+    </linearGradient>
+    <linearGradient id="purpleStroke" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#6B4AE6"/>
+      <stop offset="1" stop-color="#A78BFA"/>
+    </linearGradient>
+    <linearGradient id="blueStroke" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#278CFF"/>
+      <stop offset="1" stop-color="#45C6FF"/>
+    </linearGradient>
+    <linearGradient id="goldStroke" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#FFB800"/>
+      <stop offset="1" stop-color="#FFD46A"/>
+    </linearGradient>
+    <filter id="softShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="18" stdDeviation="18" flood-color="#22113D" flood-opacity="0.18"/>
+    </filter>
+    <filter id="smallShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="7" stdDeviation="8" flood-color="#24143E" flood-opacity="0.16"/>
+    </filter>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feDropShadow dx="0" dy="0" stdDeviation="12" flood-color="#6B4AE6" flood-opacity="0.16"/>
+    </filter>
+    <linearGradient id="laptopScreen" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#F8FAFF"/>
+      <stop offset="1" stop-color="#EFF1F7"/>
+    </linearGradient>
+    <linearGradient id="deviceBody" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#FEFEFF"/>
+      <stop offset="1" stop-color="#D7D8DE"/>
+    </linearGradient>
+    <linearGradient id="phoneScreen" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#FBFBFF"/>
+      <stop offset="1" stop-color="#EDF0F7"/>
+    </linearGradient>
+    <linearGradient id="platformGlow" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#6344E3"/>
+      <stop offset="0.45" stop-color="#8E5AF2"/>
+      <stop offset="0.75" stop-color="#2E88FF"/>
+      <stop offset="1" stop-color="#FFB800"/>
+    </linearGradient>
+    <style>
+      .ink { fill: #17203f; }
+      .muted { fill: #5c6280; }
+      .violet { fill: #6742db; }
+      .gold { fill: #f0b72c; }
+      .label { font-family: "Space Grotesk", Arial, sans-serif; font-weight: 700; letter-spacing: 0.01em; }
+      .small { font-family: "Space Grotesk", Arial, sans-serif; font-weight: 500; }
+      .caps { font-family: "Space Grotesk", Arial, sans-serif; font-weight: 800; letter-spacing: 0.02em; }
+    </style>
+  </defs>
+
+  <rect width="1118" height="1280" fill="#FFFFFF"/>
+
+  <!-- soft background world field -->
+  <g opacity="0.18">
+    <path d="M183 408C241 351 324 330 389 336C468 343 526 388 579 404C640 423 719 422 785 389C851 356 947 337 1007 377C1056 409 1072 459 1060 514C1037 616 930 647 838 656C742 666 657 649 565 641C489 635 414 650 339 642C274 635 208 611 162 562C118 516 126 447 183 408Z" fill="#F1F2F7"/>
+    <path d="M204 753C249 710 309 694 376 699C447 704 506 739 572 754C655 773 735 773 812 745C899 713 982 706 1035 747C1079 781 1087 835 1066 887C1036 961 938 989 848 996C747 1004 653 993 555 988C471 983 390 997 313 987C245 977 186 949 149 900C116 857 145 796 204 753Z" fill="#EFF1F8"/>
+    <path d="M72 573C95 540 124 524 158 519C203 511 233 521 260 535C289 550 315 570 342 579C367 588 396 589 430 578C464 566 503 542 534 541C575 541 607 563 617 598C627 633 611 670 582 694C548 723 500 735 449 739C381 745 314 735 253 727C192 718 133 704 100 672C65 637 49 604 72 573Z" fill="#F6F7FB"/>
+  </g>
+
+  <!-- left label callouts -->
+  <g transform="translate(92 100)" filter="url(#smallShadow)">
+    <circle cx="12" cy="12" r="17" fill="none" stroke="#6742db" stroke-width="3"/>
+    <circle cx="12" cy="12" r="6.6" fill="none" stroke="#6742db" stroke-width="2"/>
+    <path d="M-3 12H27M12 -3V27M2 2C6 5 8 8 12 12C16 16 19 19 22 22M22 2C18 5 16 8 12 12C8 16 5 19 2 22" stroke="#6742db" stroke-width="1.9" stroke-linecap="round"/>
+    <text x="46" y="10" class="caps" font-size="21" fill="#17203f">FOR ANY</text>
+    <text x="46" y="35" class="caps" font-size="21" fill="#17203f">COUNTRY</text>
+  </g>
+
+  <g transform="translate(92 208)" filter="url(#smallShadow)">
+    <path d="M2 14C2 6 8 0 16 0H28C36 0 42 6 42 14C42 24 35 34 24 46C13 34 2 24 2 14Z" fill="none" stroke="#6742db" stroke-width="3"/>
+    <path d="M14 18C14 13 18 10 22 10C27 10 31 14 31 19C31 26 26 31 22 35C18 31 14 26 14 18Z" fill="none" stroke="#6742db" stroke-width="2.2"/>
+    <text x="58" y="12" class="caps" font-size="20" fill="#17203f">QUICK</text>
+    <text x="58" y="37" class="caps" font-size="20" fill="#17203f">LAUNCH</text>
+  </g>
+
+  <g transform="translate(92 318)" filter="url(#smallShadow)">
+    <path d="M2 38L2 22M2 38H42" stroke="#6742db" stroke-width="4" stroke-linecap="round"/>
+    <path d="M12 31L24 19L32 24L42 8" fill="none" stroke="#6742db" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M42 8L36 8M42 8L42 14" stroke="#6742db" stroke-width="4" stroke-linecap="round"/>
+    <text x="58" y="12" class="caps" font-size="20" fill="#17203f">GROW YOUR</text>
+    <text x="58" y="37" class="caps" font-size="20" fill="#17203f">BUSINESS</text>
+  </g>
+
+  <!-- right label callouts -->
+  <g transform="translate(892 92)" filter="url(#smallShadow)">
+    <circle cx="18" cy="18" r="16" fill="none" stroke="#6742db" stroke-width="3"/>
+    <path d="M10 19L18 11L18 15L27 6" fill="none" stroke="#6742db" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="27" cy="6" r="2.3" fill="#6742db"/>
+    <text x="54" y="12" class="caps" font-size="20" fill="#17203f">TARGETED</text>
+    <text x="54" y="37" class="caps" font-size="20" fill="#17203f">RESULTS</text>
+  </g>
+
+  <g transform="translate(892 208)" filter="url(#smallShadow)">
+    <circle cx="18" cy="18" r="16" fill="none" stroke="#6742db" stroke-width="3"/>
+    <path d="M18 5V13M18 23V31M5 18H13M23 18H31" stroke="#6742db" stroke-width="2.6" stroke-linecap="round"/>
+    <path d="M11 22C13 18 16 15 21 14C24 13 27 14 29 16" fill="none" stroke="#6742db" stroke-width="2.2" stroke-linecap="round"/>
+    <text x="54" y="12" class="caps" font-size="20" fill="#17203f">TRUSTED &amp;</text>
+    <text x="54" y="37" class="caps" font-size="20" fill="#17203f">SECURE</text>
+  </g>
+
+  <g transform="translate(892 318)" filter="url(#smallShadow)">
+    <circle cx="18" cy="18" r="16" fill="none" stroke="#6742db" stroke-width="3"/>
+    <path d="M18 5A13 13 0 1 1 5 18" fill="none" stroke="#6742db" stroke-width="2.6" stroke-linecap="round"/>
+    <path d="M18 5V18H30" fill="none" stroke="#6742db" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="54" y="12" class="caps" font-size="20" fill="#17203f">MEASURABLE</text>
+    <text x="54" y="37" class="caps" font-size="20" fill="#17203f">PERFORMANCE</text>
+  </g>
+
+  <!-- central platform -->
+  <g filter="url(#softShadow)">
+    <ellipse cx="556" cy="548" rx="281" ry="48" fill="#F8F7FD"/>
+    <ellipse cx="556" cy="548" rx="281" ry="48" fill="none" stroke="url(#purpleStroke)" stroke-width="6"/>
+    <ellipse cx="556" cy="548" rx="252" ry="35" fill="none" stroke="rgba(114,66,255,0.08)" stroke-width="2"/>
+  </g>
+
+  <!-- laptop -->
+  <g filter="url(#softShadow)">
+    <rect x="325" y="74" width="436" height="295" rx="12" fill="#0F1630"/>
+    <rect x="341" y="90" width="404" height="257" rx="8" fill="url(#laptopScreen)"/>
+    <rect x="324" y="367" width="438" height="29" rx="12" fill="url(#deviceBody)"/>
+    <rect x="475" y="382" width="134" height="15" rx="7.5" fill="#B0B4C0"/>
+    <rect x="394" y="396" width="282" height="18" rx="9" fill="#A5A9B7"/>
+  </g>
+
+  <text x="559" y="160" text-anchor="middle" class="label" font-size="52" fill="#17203f">WEBSITE</text>
+  <text x="559" y="197" text-anchor="middle" class="small" font-size="26" fill="#38405d">Build. Grow. Succeed.</text>
+
+  <g transform="translate(392 226)">
+    <g transform="translate(0 0)">
+      <circle cx="18" cy="18" r="16" fill="none" stroke="#38405d" stroke-width="2"/>
+      <path d="M2 18H34M18 2C23 7 26 12 27 18C26 24 23 29 18 34C13 29 10 24 9 18C10 12 13 7 18 2Z" fill="none" stroke="#38405d" stroke-width="2"/>
+      <text x="18" y="56" text-anchor="middle" class="caps" font-size="16" fill="#38405d">GLOBAL</text>
+      <text x="18" y="75" text-anchor="middle" class="caps" font-size="16" fill="#38405d">REACH</text>
+    </g>
+    <g transform="translate(96 0)">
+      <circle cx="18" cy="18" r="16" fill="none" stroke="#38405d" stroke-width="2"/>
+      <path d="M4 30L12 20L18 24L27 10L32 14" fill="none" stroke="#38405d" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M4 36H34" stroke="#38405d" stroke-width="2"/>
+      <text x="18" y="56" text-anchor="middle" class="caps" font-size="16" fill="#38405d">MORE</text>
+      <text x="18" y="75" text-anchor="middle" class="caps" font-size="16" fill="#38405d">LEADS</text>
+    </g>
+    <g transform="translate(192 0)">
+      <circle cx="18" cy="18" r="16" fill="none" stroke="#38405d" stroke-width="2"/>
+      <path d="M9 26C14 14 20 10 27 8" fill="none" stroke="#38405d" stroke-width="2.5" stroke-linecap="round"/>
+      <path d="M25 7H31V13" fill="none" stroke="#38405d" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+      <text x="18" y="56" text-anchor="middle" class="caps" font-size="16" fill="#38405d">FAST</text>
+      <text x="18" y="75" text-anchor="middle" class="caps" font-size="16" fill="#38405d">LAUNCH</text>
+    </g>
+    <g transform="translate(288 0)">
+      <circle cx="18" cy="18" r="16" fill="none" stroke="#38405d" stroke-width="2"/>
+      <path d="M18 4L31 9V18C31 26 26 30 18 34C10 30 5 26 5 18V9L18 4Z" fill="none" stroke="#38405d" stroke-width="2.3" stroke-linejoin="round"/>
+      <path d="M12 18L16 22L25 12" fill="none" stroke="#38405d" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+      <text x="18" y="56" text-anchor="middle" class="caps" font-size="16" fill="#38405d">SECURE &amp;</text>
+      <text x="18" y="75" text-anchor="middle" class="caps" font-size="16" fill="#38405d">RELIABLE</text>
+    </g>
+  </g>
+
+  <!-- phone -->
+  <g filter="url(#softShadow)">
+    <rect x="746" y="104" width="154" height="338" rx="28" fill="#101525"/>
+    <rect x="758" y="116" width="130" height="314" rx="20" fill="url(#phoneScreen)"/>
+    <rect x="798" y="106" width="46" height="14" rx="7" fill="#0D1020"/>
+    <text x="823" y="199" text-anchor="middle" class="caps" font-size="27" fill="#17203f">LANDING</text>
+    <text x="823" y="232" text-anchor="middle" class="caps" font-size="27" fill="#17203f">PAGE</text>
+    <text x="823" y="284" text-anchor="middle" class="small" font-size="22" fill="#3A415D">Convert.</text>
+    <text x="823" y="316" text-anchor="middle" class="small" font-size="22" fill="#3A415D">Engage.</text>
+    <text x="823" y="348" text-anchor="middle" class="small" font-size="22" fill="#3A415D">Win.</text>
+    <path d="M821 372C826 372 831 377 831 383C831 389 826 394 821 394C815 394 810 389 810 383C810 377 815 372 821 372Z" fill="#6B4AE6"/>
+    <path d="M815 383C818 380 821 379 824 379C827 379 830 380 833 383" fill="none" stroke="#6B4AE6" stroke-width="2" stroke-linecap="round"/>
+  </g>
+
+  <!-- connection lines -->
+  <g filter="url(#glow)" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M107 501C153 501 200 496 249 490C280 486 304 487 325 490" stroke="#E33A39" stroke-width="4"/>
+    <path d="M107 642C160 640 214 640 254 643C285 645 309 647 330 648" stroke="#F49A18" stroke-width="4"/>
+    <path d="M169 763C219 742 255 707 282 679C310 651 337 637 373 638" stroke="#B05BEA" stroke-width="4"/>
+    <path d="M563 783V694C563 669 557 650 543 633" stroke="#4BC35D" stroke-width="4"/>
+    <path d="M792 716C770 692 747 671 721 656C692 639 669 633 645 633" stroke="#5A43E5" stroke-width="4"/>
+    <path d="M972 626C919 625 874 621 834 615C802 610 774 600 746 590" stroke="#1EA8C8" stroke-width="4"/>
+    <path d="M972 493C915 493 860 491 815 488C785 486 757 490 735 493" stroke="#1F7BFF" stroke-width="4"/>
+  </g>
+
+  <!-- country labels -->
+  <g class="caps" font-size="20" fill="#17203f">
+    <text x="55" y="508">SPAIN</text>
+    <text x="55" y="658">PORTUGAL</text>
+    <text x="55" y="837">FRANCE</text>
+    <text x="948" y="498">GERMANY</text>
+    <text x="939" y="675">NETHERLANDS</text>
+    <text x="987" y="865">POLAND</text>
+    <text x="530" y="1122">ITALY</text>
+  </g>
+
+  <!-- flags -->
+  <g transform="translate(58 518)" filter="url(#smallShadow)">
+    <rect width="46" height="30" rx="3" fill="#C60B1E"/>
+    <rect x="0" y="10" width="46" height="10" fill="#FFD43B"/>
+    <rect x="0" y="11.5" width="46" height="7" fill="#FFCA00"/>
+    <circle cx="8" cy="15" r="2.6" fill="#A76E00"/>
+  </g>
+  <g transform="translate(58 668)" filter="url(#smallShadow)">
+    <rect width="46" height="30" rx="3" fill="#DA291C"/>
+    <rect x="16" y="0" width="14" height="30" fill="#0A8F3A"/>
+    <circle cx="9" cy="15" r="3" fill="#F7C948"/>
+  </g>
+  <g transform="translate(58 847)" filter="url(#smallShadow)">
+    <rect width="46" height="30" rx="3" fill="#0A3D91"/>
+    <rect x="0" y="0" width="14" height="30" fill="#1E4FA8"/>
+    <rect x="32" y="0" width="14" height="30" fill="#F4F7F9"/>
+    <path d="M21 9V21M15 15H27" stroke="#FFFFFF" stroke-width="2"/>
+  </g>
+  <g transform="translate(1018 518)" filter="url(#smallShadow)">
+    <rect width="46" height="30" rx="3" fill="#000000"/>
+    <rect x="0" y="0" width="46" height="10" fill="#000000"/>
+    <rect x="0" y="10" width="46" height="10" fill="#DD0000"/>
+    <rect x="0" y="20" width="46" height="10" fill="#FFCE00"/>
+  </g>
+  <g transform="translate(1018 695)" filter="url(#smallShadow)">
+    <rect width="46" height="30" rx="3" fill="#E6E8F0"/>
+    <rect y="0" width="46" height="10" fill="#C8102E"/>
+    <rect x="0" y="10" width="46" height="10" fill="#FFFFFF"/>
+    <rect x="0" y="20" width="46" height="10" fill="#CF142B"/>
+  </g>
+  <g transform="translate(1018 875)" filter="url(#smallShadow)">
+    <rect width="46" height="30" rx="3" fill="#FFFFFF"/>
+    <rect y="18" width="46" height="12" fill="#D4213D"/>
+  </g>
+  <g transform="translate(553 1134)" filter="url(#smallShadow)">
+    <rect width="46" height="30" rx="3" fill="#008C45"/>
+    <rect x="15" width="16" height="30" fill="#FFFFFF"/>
+    <rect x="31" width="15" height="30" fill="#CD212A"/>
+  </g>
+
+  <!-- map base -->
+  <g filter="url(#softShadow)">
+    <ellipse cx="556" cy="872" rx="410" ry="298" fill="#F7F8FC"/>
+    <ellipse cx="556" cy="872" rx="410" ry="298" fill="none" stroke="#E8EBF4" stroke-width="2"/>
+  </g>
+
+  <!-- faint map texture -->
+  <g opacity="0.35" fill="none" stroke="#D9DDE9" stroke-width="2">
+    <path d="M186 760C235 706 298 676 357 672C414 668 472 683 517 708C566 736 612 744 670 736C735 726 803 699 856 668C905 640 967 624 1023 635"/>
+    <path d="M158 863C207 830 257 811 321 804C391 796 450 806 506 832C567 860 620 872 687 870C753 868 819 852 885 825C955 796 1018 786 1064 796"/>
+    <path d="M221 983C291 952 349 937 413 941C472 945 526 963 589 988C648 1012 703 1017 763 1008C837 995 907 964 975 924"/>
+    <path d="M279 585C322 620 365 641 425 650C488 659 545 649 597 627C650 604 709 593 774 598C847 604 926 626 997 672"/>
+    <path d="M342 1034C356 987 384 944 422 916C470 879 528 865 584 866C648 867 707 878 760 909C812 939 861 957 918 956"/>
+    <path d="M403 720C438 692 486 678 543 677C602 675 656 685 704 705C756 727 808 734 866 729C926 724 978 710 1024 689"/>
+  </g>
+
+  <!-- country tiles -->
+  <g filter="url(#smallShadow)">
+    <!-- Spain -->
+    <g transform="translate(136 608)">
+      <rect x="0" y="0" width="300" height="170" rx="16" fill="#F1F3F8"/>
+      <rect x="14" y="12" width="272" height="142" rx="12" fill="#E4E8F0"/>
+      <g transform="translate(36 25)">
+        <path d="M80 106L120 18L160 106Z" fill="#A97142"/>
+        <path d="M120 18L110 48H130L120 18Z" fill="#F1D7A7"/>
+        <rect x="68" y="78" width="104" height="28" rx="6" fill="#7F4F2C"/>
+        <rect x="58" y="98" width="125" height="24" rx="6" fill="#6A4024"/>
+        <path d="M40 110L60 70L80 110Z" fill="#BD8C58"/>
+        <path d="M160 110L180 70L200 110Z" fill="#BD8C58"/>
+        <rect x="92" y="60" width="56" height="48" rx="4" fill="#C5A173"/>
+        <path d="M14 116H224" stroke="#788067" stroke-width="4"/>
+      </g>
+      <circle cx="248" cy="34" r="7" fill="#8E5AF2"/>
+      <circle cx="236" cy="54" r="5" fill="#8E5AF2" opacity="0.8"/>
+    </g>
+    <!-- Portugal -->
+    <g transform="translate(113 818)">
+      <rect x="0" y="0" width="300" height="170" rx="16" fill="#F1F3F8"/>
+      <rect x="14" y="12" width="272" height="142" rx="12" fill="#E4E8F0"/>
+      <g transform="translate(36 28)">
+        <rect x="34" y="40" width="124" height="60" rx="8" fill="#B8BBC8"/>
+        <rect x="22" y="56" width="148" height="48" rx="8" fill="#C5C8D4"/>
+        <rect x="18" y="70" width="156" height="34" rx="6" fill="#9EA6B7"/>
+        <rect x="64" y="12" width="42" height="90" rx="7" fill="#B2B7C5"/>
+        <path d="M64 20L55 38H73L64 20Z" fill="#8B93A5"/>
+        <path d="M95 16L86 35H104L95 16Z" fill="#8B93A5"/>
+        <path d="M126 22L117 42H135L126 22Z" fill="#8B93A5"/>
+        <rect x="80" y="58" width="16" height="18" fill="#F7F8FC"/>
+        <rect x="52" y="76" width="72" height="6" fill="#F7F8FC" opacity="0.8"/>
+      </g>
+      <circle cx="36" cy="36" r="7" fill="#F49A18"/>
+      <circle cx="54" cy="56" r="5" fill="#F49A18" opacity="0.8"/>
+    </g>
+    <!-- France -->
+    <g transform="translate(101 986)">
+      <rect x="0" y="0" width="330" height="185" rx="16" fill="#F1F3F8"/>
+      <rect x="14" y="12" width="302" height="155" rx="12" fill="#E5E8F0"/>
+      <g transform="translate(47 16)">
+        <path d="M120 129L150 14L180 129Z" fill="#6B4AE6"/>
+        <path d="M150 14L143 34H157L150 14Z" fill="#F0D8A8"/>
+        <path d="M142 54H158L165 77H135L142 54Z" fill="#6B4AE6"/>
+        <path d="M128 84H172L180 108H120L128 84Z" fill="#6B4AE6"/>
+        <path d="M112 129H188" stroke="#786E79" stroke-width="5"/>
+        <path d="M0 136C36 114 78 102 116 100M221 100C259 102 301 114 337 136" stroke="#9DA3B6" stroke-width="4" fill="none"/>
+        <rect x="20" y="98" width="36" height="34" rx="4" fill="#A7A9B7"/>
+        <rect x="250" y="98" width="36" height="34" rx="4" fill="#A7A9B7"/>
+      </g>
+      <circle cx="18" cy="42" r="7" fill="#6B4AE6"/>
+      <circle cx="36" cy="62" r="5" fill="#6B4AE6" opacity="0.8"/>
+    </g>
+    <!-- Italy -->
+    <g transform="translate(430 1000)">
+      <rect x="0" y="0" width="260" height="165" rx="16" fill="#F1F3F8"/>
+      <rect x="14" y="12" width="232" height="135" rx="12" fill="#E4E8F0"/>
+      <g transform="translate(35 24)">
+        <ellipse cx="96" cy="70" rx="84" ry="38" fill="#A6A7B2"/>
+        <ellipse cx="96" cy="70" rx="62" ry="26" fill="#D0D4DE"/>
+        <path d="M20 70H172" stroke="#7B7F8F" stroke-width="4"/>
+        <path d="M30 70H162" stroke="#7B7F8F" stroke-width="2"/>
+        <path d="M48 33H144" stroke="#9CA0B0" stroke-width="6"/>
+      </g>
+      <circle cx="18" cy="56" r="7" fill="#31B14A"/>
+      <circle cx="36" cy="76" r="5" fill="#31B14A" opacity="0.8"/>
+    </g>
+    <!-- Germany -->
+    <g transform="translate(758 586)">
+      <rect x="0" y="0" width="292" height="180" rx="16" fill="#F1F3F8"/>
+      <rect x="14" y="12" width="264" height="150" rx="12" fill="#E4E8F0"/>
+      <g transform="translate(32 28)">
+        <path d="M42 102H204L188 84H58L42 102Z" fill="#C7B48A"/>
+        <path d="M56 84H188L166 48H78L56 84Z" fill="#DCC59B"/>
+        <rect x="76" y="48" width="16" height="56" fill="#AC9268"/>
+        <rect x="124" y="36" width="18" height="68" fill="#AC9268"/>
+        <rect x="172" y="48" width="16" height="56" fill="#AC9268"/>
+        <rect x="106" y="72" width="34" height="32" fill="#EEF0F6"/>
+        <path d="M60 104H196" stroke="#7C836F" stroke-width="4"/>
+      </g>
+      <circle cx="254" cy="34" r="7" fill="#1EA8C8"/>
+      <circle cx="240" cy="52" r="5" fill="#1EA8C8" opacity="0.8"/>
+    </g>
+    <!-- Netherlands -->
+    <g transform="translate(745 804)">
+      <rect x="0" y="0" width="300" height="176" rx="16" fill="#F1F3F8"/>
+      <rect x="14" y="12" width="272" height="146" rx="12" fill="#E4E8F0"/>
+      <g transform="translate(29 26)">
+        <rect x="20" y="66" width="66" height="44" rx="6" fill="#BEA574"/>
+        <rect x="102" y="60" width="58" height="50" rx="6" fill="#D2B78B"/>
+        <rect x="176" y="72" width="60" height="38" rx="6" fill="#B9C1CC"/>
+        <path d="M126 25L126 72M126 25L106 44M126 25L146 44" stroke="#8A5A2B" stroke-width="4" stroke-linecap="round"/>
+        <path d="M126 45C134 50 141 61 142 74C135 70 128 65 126 58C124 65 117 70 110 74C111 61 118 50 126 45Z" fill="#FFFFFF" stroke="#8A5A2B" stroke-width="3"/>
+        <path d="M36 108H228" stroke="#6D7A7F" stroke-width="4"/>
+        <circle cx="216" cy="26" r="7" fill="#45C6FF"/>
+      </g>
+    </g>
+    <!-- Poland -->
+    <g transform="translate(730 1010)">
+      <rect x="0" y="0" width="320" height="170" rx="16" fill="#F1F3F8"/>
+      <rect x="14" y="12" width="292" height="142" rx="12" fill="#E4E8F0"/>
+      <g transform="translate(27 24)">
+        <rect x="36" y="52" width="188" height="62" rx="10" fill="#C67B5E"/>
+        <rect x="54" y="34" width="32" height="80" rx="6" fill="#D89B79"/>
+        <rect x="96" y="28" width="38" height="86" rx="6" fill="#E2AA88"/>
+        <rect x="146" y="38" width="30" height="76" rx="6" fill="#D89B79"/>
+        <path d="M52 52L70 32L88 52H52Z" fill="#9C5D3F"/>
+        <path d="M100 48L115 20L130 48H100Z" fill="#9C5D3F"/>
+        <path d="M152 54L161 34L170 54H152Z" fill="#9C5D3F"/>
+        <path d="M34 114H224" stroke="#7A5F58" stroke-width="4"/>
+      </g>
+      <circle cx="260" cy="46" r="7" fill="#8E5AF2"/>
+      <circle cx="246" cy="66" r="5" fill="#8E5AF2" opacity="0.8"/>
+    </g>
+  </g>
+
+  <!-- bottom footer strip -->
+  <g filter="url(#softShadow)">
+    <rect x="82" y="1164" width="954" height="74" rx="18" fill="#FFFFFF" stroke="#E4E6EF"/>
+    <path d="M306 1180V1223" stroke="#E2E5EF" stroke-width="2"/>
+    <path d="M560 1180V1223" stroke="#E2E5EF" stroke-width="2"/>
+    <path d="M806 1180V1223" stroke="#E2E5EF" stroke-width="2"/>
+    <g transform="translate(111 1176)">
+      <circle cx="18" cy="18" r="16" fill="none" stroke="#17406B" stroke-width="2.5"/>
+      <circle cx="18" cy="18" r="6.5" fill="none" stroke="#17406B" stroke-width="2"/>
+      <path d="M2 18H34M18 2C23 7 26 12 27 18C26 24 23 29 18 34C13 29 10 24 9 18C10 12 13 7 18 2Z" fill="none" stroke="#17406B" stroke-width="2"/>
+      <text x="46" y="14" class="caps" font-size="17" fill="#17203f">LOCAL IMPACT</text>
+      <text x="46" y="35" class="small" font-size="16" fill="#5c6280">Global presence</text>
+    </g>
+    <g transform="translate(355 1176)">
+      <path d="M18 4L23 13L33 15L26 23L28 33L18 28L8 33L10 23L3 15L13 13L18 4Z" fill="none" stroke="#17406B" stroke-width="2.5" stroke-linejoin="round"/>
+      <text x="48" y="14" class="caps" font-size="17" fill="#17203f">PROFESSIONAL</text>
+      <text x="48" y="35" class="small" font-size="16" fill="#5c6280">Modern design</text>
+    </g>
+    <g transform="translate(597 1176)">
+      <path d="M18 31C27 22 34 15 34 8C34 3 30 0 25 0C21 0 18 2 18 5C18 2 15 0 11 0C6 0 2 3 2 8C2 15 9 22 18 31Z" fill="none" stroke="#17406B" stroke-width="2.4" stroke-linejoin="round"/>
+      <text x="46" y="14" class="caps" font-size="17" fill="#17203f">BUILT FOR YOU</text>
+      <text x="46" y="35" class="small" font-size="16" fill="#5c6280">Tailored solutions</text>
+    </g>
+    <g transform="translate(854 1176)">
+      <path d="M2 30L2 18M2 30H34" stroke="#17406B" stroke-width="3" stroke-linecap="round"/>
+      <path d="M12 24L18 18L23 21L32 9" fill="none" stroke="#17406B" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+      <text x="46" y="14" class="caps" font-size="17" fill="#17203f">RESULTS DRIVEN</text>
+      <text x="46" y="35" class="small" font-size="16" fill="#5c6280">Real growth</text>
+    </g>
+  </g>
+
+  <!-- small waterline accents -->
+  <g opacity="0.9">
+    <circle cx="250" cy="498" r="6" fill="#E33A39"/>
+    <circle cx="250" cy="644" r="6" fill="#F49A18"/>
+    <circle cx="389" cy="686" r="7" fill="#B05BEA"/>
+    <circle cx="556" cy="792" r="7" fill="#4BC35D"/>
+    <circle cx="760" cy="690" r="7" fill="#5A43E5"/>
+    <circle cx="886" cy="618" r="7" fill="#1EA8C8"/>
+    <circle cx="892" cy="492" r="7" fill="#1F7BFF"/>
+  </g>
+</svg>
