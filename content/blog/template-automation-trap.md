@@ -29,6 +29,8 @@ Here's the part worth translating directly to business automation, as an argumen
 
 The result looks like automation happened. A workflow is running, notifications are firing, tickets are getting categorized. But the same way a purple gradient signals "nobody made a specific design decision here," a workflow whose trigger conditions, escalation rules, and edge-case handling would be identical whether it was built for a dental practice or an accounting firm signals that nobody made a specific decision about your business either. It's not that the automation doesn't work. It's that it wasn't built to work for you specifically, and the gap between those two things tends to show up exactly where your business differs from the median case the template was built for, a mismatch that shows up in [why AI projects fail](/blog/why-most-ai-projects-fail) more broadly too.
 
+The same held-out testing principle appears in [What Google's RRSI Teaches About Building Good AI Agents](/blog/google-rrsi-self-improving-agents), where benchmark gains are only treated as meaningful when they survive cases the system never saw during development.
+
 ## What this actually looks like in a business automation
 
 A few signs tend to show up consistently in templated automation, worth checking for directly rather than assuming a working system is a custom one.

@@ -61,6 +61,8 @@ The Kubera Autonomy Tier Model sorts a specific action along three questions:
 
 The output isn't a single autonomy setting for an agent. It's a small map of specific action types to specific oversight levels, which is what separates a deliberately governed system from one that just happens not to have gone wrong yet.
 
+The same principle applies when the system itself is being improved: [Google's RRSI research](/blog/google-rrsi-self-improving-agents) treats a change as meaningful only when it passes checks on cases outside the set used to develop it.
+
 ## Where this plays out in practice
 
 Illustrative scenario, not a specific Kubera client: a mid-size business deploys an agent to triage and respond to inbound support tickets. Categorizing a ticket and drafting a proposed reply run fully autonomously, human-out-of-the-loop, since a wrong categorization or an unsent draft is cheap to fix before anything reaches a customer. Whether that drafted reply actually goes out varies by category: for routine inquiries it sends automatically, human-on-the-loop, with a person reviewing a sample of sent replies afterward rather than approving each one individually. Anything involving a refund, a contract change, or an angry customer escalation routes to human-in-the-loop instead, requiring explicit approval before the reply sends, because those specific actions carry financial or reputational weight the routine ones don't. The agent is the same system throughout; the oversight level changes by action type, not by a single setting applied to the whole deployment.
