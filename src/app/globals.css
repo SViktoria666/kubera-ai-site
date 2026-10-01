@@ -1012,6 +1012,11 @@ main {
   gap: 12px;
 }
 
+.workflow-step-wrap:has(> .workflow-branch-panel) {
+  gap: 0;
+  margin-bottom: -12px;
+}
+
 .workflow-step-card {
   display: grid;
   grid-template-columns: auto minmax(0, 1fr);
@@ -1090,13 +1095,13 @@ main {
 
 .workflow-branch-panel {
   display: grid;
-  gap: 12px;
+  gap: 0;
   min-width: 0;
 }
 
 .workflow-branch-split {
   position: relative;
-  min-height: 24px;
+  height: 30px;
   min-width: 0;
 }
 
@@ -1105,7 +1110,7 @@ main {
   position: absolute;
   inset-inline-start: 50%;
   top: 0;
-  bottom: 50%;
+  height: 15px;
   width: 2px;
   transform: translateX(-50%);
   background: linear-gradient(180deg, rgba(255, 184, 0, 0.9), rgba(50, 122, 255, 0.55));
@@ -1114,29 +1119,57 @@ main {
 .workflow-branch-split::after {
   content: "";
   position: absolute;
-  left: 0;
-  right: 0;
-  top: 50%;
+  left: calc((100% - 14px) / 4);
+  right: calc((100% - 14px) / 4);
+  top: 14px;
   height: 2px;
-  transform: translateY(-50%);
   background: linear-gradient(90deg, rgba(255, 184, 0, 0.9), rgba(50, 122, 255, 0.55));
 }
 
+.workflow-branch-column {
+  position: relative;
+}
+
+.workflow-branch-column::before {
+  content: "";
+  position: absolute;
+  top: -15px;
+  left: 50%;
+  width: 2px;
+  height: 15px;
+  transform: translateX(-50%);
+  background: linear-gradient(180deg, rgba(255, 184, 0, 0.9), rgba(50, 122, 255, 0.55));
+}
+
 .workflow-branch-grid {
+  position: relative;
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 14px;
   min-width: 0;
 }
 
+.workflow-branch-grid::after {
+  content: "";
+  position: absolute;
+  left: calc((100% - 14px) / 4);
+  right: calc((100% - 14px) / 4);
+  bottom: 0;
+  height: 2px;
+  background: linear-gradient(90deg, rgba(255, 184, 0, 0.9), rgba(50, 122, 255, 0.55));
+}
+
 .workflow-branch-column {
   display: grid;
+  grid-template-rows: auto minmax(0, 1fr);
+  align-content: stretch;
   gap: 10px;
   min-width: 0;
 }
 
 .workflow-branch-label {
   display: inline-flex;
+  justify-self: center;
   align-self: start;
   width: fit-content;
   align-items: center;
@@ -1151,9 +1184,20 @@ main {
 }
 
 .workflow-branch-stack {
-  display: grid;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
   gap: 12px;
   min-width: 0;
+}
+
+.workflow-branch-stack::after {
+  content: "";
+  flex: 1 1 auto;
+  align-self: center;
+  width: 2px;
+  min-height: 0;
+  background: linear-gradient(180deg, rgba(50, 122, 255, 0.55), rgba(255, 184, 0, 0.9));
 }
 
 .use-case-page .solution-final-cta .section-title {
@@ -1200,8 +1244,35 @@ main {
     display: none;
   }
 
+  .workflow-step-wrap:has(> .workflow-branch-panel) {
+    gap: 12px;
+    margin-bottom: 0;
+  }
+
+  .workflow-branch-panel {
+    gap: 12px;
+  }
+
+  .workflow-branch-column::before {
+    display: none;
+  }
+
+  .workflow-branch-grid::after,
+  .workflow-branch-stack::after {
+    display: none;
+  }
+
+  .workflow-branch-column {
+    grid-template-rows: auto auto;
+    align-content: start;
+  }
+
   .workflow-branch-grid {
     grid-template-columns: 1fr;
+  }
+
+  .workflow-branch-stack {
+    display: grid;
   }
 
   .workflow-step-index {
