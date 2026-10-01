@@ -27,7 +27,7 @@ export default function ServicesPage() {
 
   return (
     <main>
-      <HeroSection title="Digital workforce tailored to your business." lead="Choose your direction â€” we'll build the system" ctaLabel="Discuss my project" ctaHref="/contacts" />
+      <HeroSection title="Digital workforce tailored to your business." lead="Choose your direction — we'll build the system" ctaLabel="Discuss my project" ctaHref="/contacts" />
       <section className="section section-soft">
         <div className="container">
           <ServicesGrid services={enServices} />
