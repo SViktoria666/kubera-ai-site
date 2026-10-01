@@ -1094,38 +1094,32 @@ main {
   min-width: 0;
 }
 
-.workflow-branch-fork {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 14px;
-  align-items: start;
+.workflow-branch-split {
+  position: relative;
+  min-height: 24px;
   min-width: 0;
 }
 
-.workflow-branch-fork span {
-  position: relative;
-  display: block;
-  min-height: 16px;
-}
-
-.workflow-branch-fork span::before {
-  content: "";
-  position: absolute;
-  inset-inline: 0;
-  top: 0;
-  height: 2px;
-  background: linear-gradient(90deg, rgba(255, 184, 0, 0.9), rgba(50, 122, 255, 0.55));
-}
-
-.workflow-branch-fork span::after {
+.workflow-branch-split::before {
   content: "";
   position: absolute;
   inset-inline-start: 50%;
   top: 0;
+  bottom: 50%;
   width: 2px;
-  height: 16px;
   transform: translateX(-50%);
   background: linear-gradient(180deg, rgba(255, 184, 0, 0.9), rgba(50, 122, 255, 0.55));
+}
+
+.workflow-branch-split::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  height: 2px;
+  transform: translateY(-50%);
+  background: linear-gradient(90deg, rgba(255, 184, 0, 0.9), rgba(50, 122, 255, 0.55));
 }
 
 .workflow-branch-grid {
@@ -1201,7 +1195,7 @@ main {
     grid-template-columns: 1fr;
   }
 
-  .workflow-branch-fork {
+  .workflow-branch-split {
     display: none;
   }
 
