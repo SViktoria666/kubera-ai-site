@@ -9,13 +9,13 @@ Use for any change intended for production publication, including code, content,
 
 ## Gate sequence
 
-1. Record base SHA, intended commit, exact scope, owner approval requirement, and rollback path.
+1. Read `docs/checkpoints/CURRENT.md` for substantive work. Record base SHA, intended commit, exact scope, owner approval requirement, and rollback path.
 2. Run verified local checks and relevant source/content checks.
 3. Establish preview/deployment identity through the configured environment. Do not invent provider commands or IDs.
 4. Verify preview content and browser rendering where applicable.
 5. Obtain the required owner approval before the production action.
 6. After the authorized action, verify the actual production alias, deployment identity, expected SHA, live route, metadata/content, and rendered result as applicable.
-7. Record evidence, uncertainties, and rollback readiness in a checkpoint or incident record.
+7. Record evidence, uncertainties, rollback readiness, and final publication state in `CURRENT.md` or the relevant incident record before handoff.
 
 ## Hard rules
 
@@ -34,4 +34,4 @@ Stop before publication on unexpected source/remote state, failed checks, missin
 
 ## Output
 
-Return the base and intended commit, checks, preview and production identity, live verification, approvals, rollback readiness, evidence, and unresolved uncertainty. A gate result is not permission to publish unless the task explicitly authorizes that action.
+Return the base and intended commit, checks, preview and production identity, live verification, approvals, rollback readiness, evidence, unresolved uncertainty, and the `CURRENT.md` handoff status. A gate result is not permission to publish unless the task explicitly authorizes that action.

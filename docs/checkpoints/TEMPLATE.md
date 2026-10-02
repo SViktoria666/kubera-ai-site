@@ -16,6 +16,18 @@
 
 ## CURRENT HEAD
 
+> Record the actual verified `git rev-parse HEAD` at the checkpoint point. Never guess a future SHA. If this file is committed, Git history is authoritative for the final branch HEAD.
+
+## VERIFIED UPSTREAM / ORIGIN MAIN SHA
+
+## CHECKPOINT CONTENT COMMIT SHA
+
+> Optional. Fill only with an actual existing commit SHA after creation. Do not create a self-referential SHA-update loop.
+
+## HANDOFF STATUS
+
+> Use `HANDOFF NOT REMOTELY PERSISTED` until the relevant branch is pushed and its remote HEAD is verified.
+
 ## SOURCE OF TRUTH
 
 ## PROTECTED SYSTEMS

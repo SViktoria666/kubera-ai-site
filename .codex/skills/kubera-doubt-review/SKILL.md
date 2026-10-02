@@ -5,7 +5,7 @@ description: Independently challenge an important Kubera PASS claim before merge
 
 ## Trigger
 
-Use before a risky merge or production action, after a multi-step fix or migration, after repeated failed attempts, or whenever Codex claims PASS on important work. Do not silently remediate findings during a review-only task.
+Use before a risky merge or production action, after a multi-step fix or migration, after repeated failed attempts, or whenever Codex claims PASS on important work. For substantive handoffs, also check that `CURRENT.md` matches the evidence and remote persistence state. Do not silently remediate findings during a review-only task.
 
 ## Reviewer mindset
 
@@ -21,6 +21,8 @@ Try to falsify the PASS claim rather than confirm the implementation. Read the r
 - secrets or sensitive data;
 - regression and protected-system risk;
 - disagreement between docs, code, checkpoint, and deployed state;
+- mismatch between `CURRENT.md`, actual Git state, evidence, and the claimed next step;
+- local-only handoff presented as remotely persisted;
 - unresolved unknowns that affect the decision.
 
 ## Verdict

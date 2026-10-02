@@ -79,7 +79,9 @@ Before production-relevant work, record base SHA, intended diff, validation resu
 
 ## 10. Checkpoint and Incident Convention
 
-Use `docs/checkpoints/` for resumable state and `docs/incidents/` for failures/regressions. A checkpoint is required for multi-hour, cross-session, risky production, migration, large visual, or unfinished inherited work. Tiny isolated changes do not need bureaucracy. State belongs in checkpoints/incidents, not in this stable contract. Use the supplied templates and never store secrets.
+For every substantive session, read `docs/checkpoints/CURRENT.md` after the applicable `AGENTS.md`, verify its recorded state against Git, and identify the relevant skills and protected systems before editing. A checkpoint is required for multi-hour, cross-session, risky production, migration, large visual, or unfinished inherited work. Tiny isolated or read-only tasks do not need checkpoint churn.
+
+Before declaring substantive work complete or paused, update `docs/checkpoints/CURRENT.md` with evidence-based completion, unfinished work, resulting state, risks, blockers, and the exact next step. Do not guess a future SHA. Git HEAD and remote refs remain authoritative; if a handoff is not pushed and verified, report `HANDOFF NOT REMOTELY PERSISTED`. Repository/Git evidence overrides stale checkpoint text, and any mismatch must be reported and corrected safely. Keep milestone snapshots separate from `CURRENT.md`; keep failure/root-cause records in `docs/incidents/`. Never store secrets.
 
 ## 11. Skill Routing
 
