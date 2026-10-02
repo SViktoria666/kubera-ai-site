@@ -98,6 +98,14 @@ These branches are preservation lines, not canonical production implementations.
 - CI remains build/typecheck-only; no new secret-dependent integration was added. Independent doubt review: FIX REQUIRED only for the single external preview/serving-proof blocker.
 - D2 status: PARTIAL. Exact next step: obtain a real provider-linked preview URL plus expected/deployment/serving SHA metadata, run `npm run browser:preview`, and rereview. Do not begin the SEO/content stage.
 
+## WAVE D2.1 REAL PREVIEW PROOF — 2026-10-02
+
+- Matching Vercel/GitHub Preview already existed for branch `wave-d2/deployment-browser-gate-20261002`: deployment record `6813330915`, provider state `success`, environment `Preview`, and provider SHA `f4c2efe9ef7bb69a8c90c76597e4270b36ce6726` matching the branch HEAD. The temporary URL is retained only in the external audit report and runtime evidence.
+- Existing `npm run browser:preview` executed against the real URL with explicit `TARGET=PREVIEW`; it failed because Vercel Deployment Protection served its login page instead of the Kubera application. HTTP 200 did not become PASS.
+- Preview serving version classification: PARTIAL. Provider SHA/deployment relationship is strong, but browser content cannot be verified without authorized Preview access.
+- D2 remains PARTIAL. No Vercel auth session, CLI, bypass environment variable, token, or cookie is available locally. Exact blocker: owner-authorized provider-supported access to this protected Preview through an approved secret/session channel.
+- Production unchanged; CI remains DEFERRED; no credentials or Preview URL were committed.
+
 Wave D2 infrastructure is implemented but PARTIAL. Obtain a real provider-linked preview URL plus expected/deployment/serving SHA metadata, run the preview gate, and rereview. Do not begin the SEO/content stage.
 
 ## OWNER DECISIONS REQUIRED
