@@ -60,7 +60,7 @@ The single D2 blocker is real preview deployment/serving-version proof from the 
 
 - D2 infrastructure is now implemented; only provider-linked preview/serving proof remains. Do not begin the SEO/content stage.
 
-- Implement Wave D2 Preview → Production Browser Gate.
+- D2 infrastructure is implemented; only provider-linked preview/serving proof remains. Do not begin the SEO/content stage.
 - Curate and migrate local forensic reports/evidence where useful and safe.
 - Clean up the task-created temporary discovery clone in a separate approved task.
 
@@ -98,12 +98,12 @@ These branches are preservation lines, not canonical production implementations.
 - CI remains build/typecheck-only; no new secret-dependent integration was added. Independent doubt review: FIX REQUIRED only for the single external preview/serving-proof blocker.
 - D2 status: PARTIAL. Exact next step: obtain a real provider-linked preview URL plus expected/deployment/serving SHA metadata, run `npm run browser:preview`, and rereview. Do not begin the SEO/content stage.
 
-Wave D1 is integrated and remotely verified. The next owner-authorized task is Wave D2; do not begin D2 in this task.
+Wave D2 infrastructure is implemented but PARTIAL. Obtain a real provider-linked preview URL plus expected/deployment/serving SHA metadata, run the preview gate, and rereview. Do not begin the SEO/content stage.
 
 ## OWNER DECISIONS REQUIRED
 
 - Later decide which local forensic reports/evidence should become portable project documentation or private archive.
-- Separately approve Wave D2 Preview → Production Browser Gate.
+- Provide/authorize the configured provider handoff required to prove the preview deployment and serving SHA; no production promotion is requested.
 
 ## RECOVERY NOTES
 
