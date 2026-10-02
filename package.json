@@ -11,7 +11,10 @@
     "start": "next start",
     "typecheck": "tsc --noEmit",
     "browser:test": "playwright test",
-    "browser:test:critical": "playwright test tests/browser/critical.spec.ts"
+    "browser:test:critical": "playwright test tests/browser/critical.spec.ts",
+    "browser:local": "node scripts/browser-gate.mjs local",
+    "browser:preview": "node scripts/browser-gate.mjs preview",
+    "browser:production": "node scripts/browser-gate.mjs production"
   },
   "dependencies": {
     "next": "^15.3.3",

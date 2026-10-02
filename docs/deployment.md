@@ -2,6 +2,14 @@
 
 This document describes the verified process shape, not credentials or a deployment command that is not present in the repository.
 
+## D2 browser deployment gate
+
+The release sequence is `IMPLEMENT → LOCAL VERIFY → PREVIEW VERIFY → OWNER/CHANGE-CONTROL DECISION → DEPLOY/PROMOTE → PRODUCTION VERIFY → CHECKPOINT`.
+
+Run `npm run browser:local`, `npm run browser:preview`, or `npm run browser:production`. Remote runs require a runtime URL; provider deployment ID, expected SHA, and provider-confirmed serving SHA are recorded when available. The gate prints these values and writes compact JSON evidence under ignored `browser-gate-evidence/`; Playwright may clean its own `test-results/` directory. Remote targets refuse localhost URLs and perform at most three bounded HTTP preflight attempts before browser QA. Missing provider linkage remains `DEPLOYMENT STATE UNKNOWN` and exits non-zero; it cannot become PASS from HTTP or browser results alone. Production smoke defaults to `https://www.kubera-automation.com` and is side-effect-free.
+
+This repository currently has no authenticated Vercel CLI/API integration or checked-in preview URL. A real preview URL and provider metadata must come from the configured deployment system; the gate does not invent deployment IDs or infer a serving SHA from a screenshot. Existing CI remains build/typecheck-only until a safe provider handoff is available.
+
 ## Required sequence
 
 1. Record the base SHA and confirm the intended scope in an isolated worktree.
@@ -17,6 +25,7 @@ This document describes the verified process shape, not credentials or a deploym
 
 - `git push` does not prove that Vercel built or serves that SHA.
 - A successful deployment does not prove the correct production alias is active.
+- `Push ≠ Production Verified`, `Build PASS ≠ Production Verified`, `HTTP 200 ≠ Production Verified`, and `Preview PASS ≠ Production PASS`.
 - HTTP 200 and source/DOM inspection do not prove visual correctness.
 - Never change Vercel settings, domains, environment variables, or external systems as a workaround without explicit approval.
 - Do not poll indefinitely; use bounded verification and report propagation uncertainty.

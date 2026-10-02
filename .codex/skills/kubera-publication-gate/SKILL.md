@@ -17,6 +17,10 @@ Use for any change intended for production publication, including code, content,
 6. After the authorized action, verify the actual production alias, deployment identity, expected SHA, live route, metadata/content, and rendered result as applicable.
 7. Record evidence, uncertainties, rollback readiness, and final publication state in `CURRENT.md` or the relevant incident record before handoff.
 
+## D2 target-aware browser gate
+
+Use `npm run browser:local`, `npm run browser:preview`, and `npm run browser:production`. Remote commands must receive a runtime URL; preview/production verification must include provider deployment identity and expected/serving SHA inputs when available. The gate must print and persist target, URL, expected SHA, deployment ID, serving-version status, routes, viewports, HTTP result, and browser result. A missing or conflicting serving-version relation is `DEPLOYMENT STATE UNKNOWN` and fails closed. Never treat a local run, screenshot, HTTP 200, or preview result as production proof.
+
 ## Hard rules
 
 - Push is not production proof.

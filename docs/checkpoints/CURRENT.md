@@ -12,7 +12,7 @@ Kubera AI website and its portable Codex operating contract.
 
 ## CURRENT ORIGIN/MAIN SHA
 
-Verified Wave C.5 integration source and main baseline: `69e47a205ff43e901408357dc4cde084a1262624`.
+Verified current `origin/main` baseline: `5c734ef23b126fec76bdafb6f7a9b5395b3897a6`.
 
 The final main HEAD is always obtained from Git (`git rev-parse HEAD`) rather than copied into this file. This avoids a self-referential SHA update loop.
 
@@ -35,7 +35,7 @@ The final main HEAD is always obtained from Git (`git rev-parse HEAD`) rather th
 
 - Wave C.5 checkpoint lifecycle is integrated into main.
 - Wave D1 browser QA foundation and its 1024px assistant remediation are complete and integrated into `origin/main`.
-- Wave D2 preview-to-production browser gate has not started.
+- Wave D2 deployment browser gate is implemented on `wave-d2/deployment-browser-gate-20261002`, but remains PARTIAL pending a real provider-linked preview deployment and serving-SHA proof.
 - Durable portability of local forensic reports/evidence is not yet complete.
 
 ## IMPORTANT DECISIONS
@@ -50,13 +50,15 @@ The final main HEAD is always obtained from Git (`git rev-parse HEAD`) rather th
 
 - A task-created local skill-discovery clone remains deferred for cleanup after Windows denied removal; it is not required to recover the project.
 - Local audit reports/evidence are not all stored in GitHub and may require a separate portability decision.
-- Vercel automatic deployment status is not inferred from a main push.
+- Vercel automatic deployment status is not inferred from a main push; this D2 worktree has no authenticated Vercel CLI/API integration.
 
 ## BLOCKERS
 
-None for the completed Waves A-C. Any current task must stop on source-of-truth conflict, unexpected dirty work, missing rollback, missing approval, secret exposure, or unavailable required evidence.
+The single D2 blocker is real preview deployment/serving-version proof from the configured provider. Any current task must stop on source-of-truth conflict, unexpected dirty work, missing rollback, missing approval, secret exposure, or unavailable required evidence.
 
 ## DEFERRED / LOW-LATER ITEMS
+
+- D2 infrastructure is now implemented; only provider-linked preview/serving proof remains. Do not begin the SEO/content stage.
 
 - Implement Wave D2 Preview → Production Browser Gate.
 - Curate and migrate local forensic reports/evidence where useful and safe.
@@ -85,6 +87,16 @@ These branches are preservation lines, not canonical production implementations.
 - Current repository status and final branch HEAD must be rechecked at each session boundary; this file never replaces `git status` or `git rev-parse HEAD`.
 
 ## EXACT NEXT STEP
+
+## WAVE D2 DEPLOYMENT BROWSER GATE OVERRIDE — 2026-10-02
+
+- D2 target-aware gate infrastructure is implemented on `wave-d2/deployment-browser-gate-20261002` from base `5c734ef23b126fec76bdafb6f7a9b5395b3897a6`.
+- Local gate: PASS; typecheck: PASS; production build: PASS; local critical browser gate: 24/24 PASS at 1366x768, 390x844, and 1024x768.
+- Existing production smoke mechanism executed read-only against `https://www.kubera-automation.com`; HTTP 200 and 24/24 browser tests PASS, including workflow geometry and assistant responsive checks. No forms, messages, n8n, or CRM actions were invoked.
+- Production serving version: UNKNOWN because expected SHA/deployment identity/provider serving SHA are unavailable. This is intentionally not production verification.
+- Real preview deployment: NOT PROVEN. GitHub auth is invalid in this environment; no authenticated Vercel CLI/API or existing preview URL was available. The gate fails closed rather than treating localhost or HTTP 200 as preview proof.
+- CI remains build/typecheck-only; no new secret-dependent integration was added. Independent doubt review: FIX REQUIRED only for the single external preview/serving-proof blocker.
+- D2 status: PARTIAL. Exact next step: obtain a real provider-linked preview URL plus expected/deployment/serving SHA metadata, run `npm run browser:preview`, and rereview. Do not begin the SEO/content stage.
 
 Wave D1 is integrated and remotely verified. The next owner-authorized task is Wave D2; do not begin D2 in this task.
 

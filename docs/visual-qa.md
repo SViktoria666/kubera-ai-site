@@ -28,9 +28,16 @@ Run the critical suite from the repository root:
 
 ```text
 npm run browser:test:critical
+
+# Explicit target-aware gates
+npm run browser:local
+PLAYWRIGHT_BASE_URL=https://<verified-preview-url> PLAYWRIGHT_EXPECTED_SHA=<sha> npm run browser:preview
+npm run browser:production
 ```
 
 The default local server is the repository dev server on `http://127.0.0.1:3200`; override the port with `PLAYWRIGHT_PORT` if needed. To test a completed production build instead, run `npm run build` first and then run the suite with `PLAYWRIGHT_USE_PROD_SERVER=1` in the shell environment. `PLAYWRIGHT_BROWSER_CHANNEL=msedge` may be used when the locally installed Microsoft Edge audit browser is the evidence browser; without it, Playwright uses its configured/default Chromium browser and that browser must be installed on the machine. The harness never reuses an existing server, so an occupied port is a setup failure rather than a silent test-environment substitution.
+
+The D2 gate labels every run with `LOCAL`, `PREVIEW`, or `PRODUCTION`, plus URL and serving-version metadata. Remote targets never start the local web server. If provider metadata cannot prove the serving version, the result is `DEPLOYMENT STATE UNKNOWN`, not visual or production PASS. Evidence is retained as compact JSON in ignored `browser-gate-evidence/`; screenshots and traces are retained by Playwright on failure.
 
 The critical route matrix represents the home, commercial services, blog article, contacts, and use-case templates. The core projects are `1366x768` desktop, `390x844` mobile, and `1024x768` tablet for breakpoint-sensitive surfaces. A `1440x900` run is added only when a specific complex layout requires it; it is not a blanket matrix.
 

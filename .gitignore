@@ -12,4 +12,5 @@ pnpm-debug.log*
 *.tsbuildinfo
 test-results
 playwright-report
+browser-gate-evidence
 
