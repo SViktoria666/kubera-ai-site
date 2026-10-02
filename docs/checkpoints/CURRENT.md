@@ -117,6 +117,7 @@ This checkpoint records the approved Wave C.5 state for main. The main metadata 
 - CI remains unchanged; existing CI has typecheck/build only. Browser CI is deferred because adding browser installation/preview architecture is outside this bounded D1 repair.
 - Independent doubt review result: `FIX REQUIRED` due to the real 1024×768 assistant defect. D1 is not complete; do not claim visual PASS or merge main. Production and `origin/main` are unchanged.
 - Crash/recovery report: `C:\Users\Admin\kubera-visual-audit\reports\KUBERA_WAVE_D1_BROWSER_QA.md`.
+- Partial D1 handoff commit `59121e84590f8a0583d591b17094e9700130a90b` is pushed and verified on `origin/wave-d1/playwright-browser-qa-20261002`; `origin/main` remains `baa8d77bb4ff74ffc07263e15debea316b5e47b0`.
 
 ## EXACT NEXT STEP
 
