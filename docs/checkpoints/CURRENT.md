@@ -99,7 +99,7 @@ On a new machine: clone the repository, open a new Codex session at the reposito
 
 ## HANDOFF STATUS
 
-This checkpoint is authored on a dedicated Wave C.5 branch. Until that branch is pushed and its remote HEAD is verified, handoff status is `HANDOFF NOT REMOTELY PERSISTED`.
+This checkpoint is authored on a dedicated Wave C.5 branch. The branch has been pushed and its remote HEAD is verified; handoff status is `REMOTELY PERSISTED`.
 
 ## SHA LIFECYCLE
 
