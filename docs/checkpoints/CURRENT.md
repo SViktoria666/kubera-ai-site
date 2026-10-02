@@ -107,3 +107,17 @@ This checkpoint records the approved Wave C.5 state for main. The main metadata 
 ## CHECKPOINT CONTENT COMMIT SHA
 
 `0d038b99161c7847a2853a3f39242b8f654d9a9d`
+
+## WAVE D1 CRASH RECOVERY OVERRIDE — 2026-10-02
+
+- Recovery found the dedicated worktree `kubera-ai-site.worktrees/kubera-wave-d1-20261002` and branch `wave-d1/playwright-browser-qa-20261002` at base `baa8d77bb4ff74ffc07263e15debea316b5e47b0`; no prior D1 commit or remote D1 branch existed.
+- Recovered uncommitted D1 work: Playwright config, browser suite, server harness, package/lock changes, ignored diagnostics, and visual-QA documentation. A stale CSS mutation (`workflow-branch-grid: 1fr`) was found, proven as a failing mutation, and removed; no application source change remains.
+- Actual checks: `npm.cmd run typecheck` PASS; `npm.cmd run build` PASS; browser critical dev run executed 24 tests across 1366×768, 390×844, and 1024×768: 22 PASS, 2 FAIL. All route sanity and workflow geometry checks passed. Assistant launcher/panel failed at 1024×768 because the rendered panel/launcher escaped the right viewport edge (observed panel right 1037 vs viewport 1024).
+- False-pass proof: workflow geometry mutation and assistant right-offset mutation both caused targeted browser FAIL, then were fully reverted.
+- CI remains unchanged; existing CI has typecheck/build only. Browser CI is deferred because adding browser installation/preview architecture is outside this bounded D1 repair.
+- Independent doubt review result: `FIX REQUIRED` due to the real 1024×768 assistant defect. D1 is not complete; do not claim visual PASS or merge main. Production and `origin/main` are unchanged.
+- Crash/recovery report: `C:\Users\Admin\kubera-visual-audit\reports\KUBERA_WAVE_D1_BROWSER_QA.md`.
+
+## EXACT NEXT STEP
+
+Owner-authorized application fix for the existing assistant 1024×768 overflow, followed by rerunning the bounded browser suite and doubt review. Only after that may D1 be marked PASS and considered for integration; do not start D2.
