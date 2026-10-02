@@ -119,6 +119,19 @@ This checkpoint records the approved Wave C.5 state for main. The main metadata 
 - Crash/recovery report: `C:\Users\Admin\kubera-visual-audit\reports\KUBERA_WAVE_D1_BROWSER_QA.md`.
 - Partial D1 handoff commit `59121e84590f8a0583d591b17094e9700130a90b` is pushed and verified on `origin/wave-d1/playwright-browser-qa-20261002`; `origin/main` remains `baa8d77bb4ff74ffc07263e15debea316b5e47b0`.
 
+## WAVE D1.1 REMEDIATION — 2026-10-02
+
+- Original 1024×768 assistant overflow reproduced before editing: launcher and open panel right edge `1037px` vs allowed `1025px`; before screenshots preserved under `C:\Users\Admin\kubera-visual-audit\evidence\wave-d1.1`.
+- Root cause: `@media (min-width: 561px) and (max-width: 1200px)` used `.ai-assistant-widget { right: -28px; }`.
+- Minimal application fix: `src/app/globals.css` only, changed that rule to `right: 12px`. No test assertion, workflow, assistant logic, backend, or unrelated file changed.
+- After evidence: assistant closed/open PASS at 390×844, 1024×768, and 1366×768; neighboring widths 560, 561, 900, 980, 1024, 1200, 1201 probed and contained.
+- Full D1 rerun: 24/24 browser tests PASS; workflow geometry PASS; typecheck PASS; production build PASS with 202 static pages.
+- Independent rereview: PASS. Wave D1 is COMPLETE / READY FOR OWNER-AUTHORIZED MAIN INTEGRATION.
+
+## EXACT NEXT STEP
+
+Owner-authorized integration of Wave D1 into `main`, then Wave D2 — Preview → Production Browser Gate. Do not merge main or start D2 in this session.
+
 ## EXACT NEXT STEP
 
 Owner-authorized application fix for the existing assistant 1024×768 overflow, followed by rerunning the bounded browser suite and doubt review. Only after that may D1 be marked PASS and considered for integration; do not start D2.
