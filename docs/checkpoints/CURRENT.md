@@ -8,7 +8,7 @@ Kubera AI website and its portable Codex operating contract.
 
 ## LAST UPDATED
 
-2026-10-02 — Wave C.5 checkpoint lifecycle implementation in progress on a dedicated branch.
+2026-10-02 — Wave C.5 checkpoint lifecycle implemented on a dedicated branch.
 
 ## CURRENT ORIGIN/MAIN SHA
 
@@ -19,7 +19,7 @@ The current branch HEAD is always obtained from Git (`git rev-parse HEAD`) rathe
 ## CURRENT WORKING STATE
 
 - Wave A, Wave B, and Wave C are complete in `origin/main`.
-- This Wave C.5 branch adds the canonical current-state lifecycle and session handoff rules.
+- This Wave C.5 branch adds the canonical current-state lifecycle and session handoff rules; the implementation commit is complete.
 - No application behavior, production system, or Wave A preservation branch is part of this work.
 
 ## COMPLETED RECENTLY
@@ -33,8 +33,8 @@ The current branch HEAD is always obtained from Git (`git rev-parse HEAD`) rathe
 
 ## CURRENT / UNFINISHED WORK
 
-- Wave C.5 checkpoint lifecycle is the current bounded task.
-- Wave D — actual browser QA / Playwright gate — has not started.
+- Wave C.5 checkpoint lifecycle is complete on this branch; independent review and owner-authorized integration remain.
+- Wave D — actual browser QA / Playwright gate — has not started and is not included here.
 - Durable portability of local forensic reports/evidence is not yet complete.
 
 ## IMPORTANT DECISIONS
@@ -85,7 +85,7 @@ These branches are preservation lines, not canonical production implementations.
 
 ## EXACT NEXT STEP
 
-Complete Wave C.5 validation, commit the documentation-only lifecycle changes, push the dedicated branch, and perform the independent doubt review. Do not merge or begin Wave D in this task.
+Perform the independent doubt review of this Wave C.5 branch, then obtain owner approval before integration. Do not merge or begin Wave D in this task.
 
 ## OWNER DECISIONS REQUIRED
 
@@ -99,8 +99,12 @@ On a new machine: clone the repository, open a new Codex session at the reposito
 
 ## HANDOFF STATUS
 
-This checkpoint is being authored on a dedicated Wave C.5 branch. Until that branch is pushed and its remote HEAD is verified, handoff status is `HANDOFF NOT REMOTELY PERSISTED`.
+This checkpoint is authored on a dedicated Wave C.5 branch. Until that branch is pushed and its remote HEAD is verified, handoff status is `HANDOFF NOT REMOTELY PERSISTED`.
 
 ## SHA LIFECYCLE
 
-`CURRENT ORIGIN/MAIN SHA` records the verified upstream baseline. The branch HEAD is authoritative in Git and is intentionally not duplicated here. A checkpoint content commit may be recorded in the handoff report after creation; do not guess a future SHA or create an endless self-update loop.
+`CURRENT ORIGIN/MAIN SHA` records the verified upstream baseline. The branch HEAD is authoritative in Git and is intentionally not duplicated here. The checkpoint content commit is recorded below only after it exists; the final metadata update does not require embedding its own SHA, so there is no self-update loop.
+
+## CHECKPOINT CONTENT COMMIT SHA
+
+`0d038b99161c7847a2853a3f39242b8f654d9a9d`
