@@ -34,7 +34,8 @@ The final main HEAD is always obtained from Git (`git rev-parse HEAD`) rather th
 ## CURRENT / UNFINISHED WORK
 
 - Wave C.5 checkpoint lifecycle is integrated into main.
-- Wave D — actual browser QA / Playwright gate — has not started and is not included here.
+- Wave D1 browser QA foundation and its 1024px assistant remediation are complete and integrated into `origin/main`.
+- Wave D2 preview-to-production browser gate has not started.
 - Durable portability of local forensic reports/evidence is not yet complete.
 
 ## IMPORTANT DECISIONS
@@ -57,7 +58,7 @@ None for the completed Waves A-C. Any current task must stop on source-of-truth 
 
 ## DEFERRED / LOW-LATER ITEMS
 
-- Implement Wave D browser/Playwright QA and visual gate.
+- Implement Wave D2 Preview → Production Browser Gate.
 - Curate and migrate local forensic reports/evidence where useful and safe.
 - Clean up the task-created temporary discovery clone in a separate approved task.
 
@@ -85,12 +86,12 @@ These branches are preservation lines, not canonical production implementations.
 
 ## EXACT NEXT STEP
 
-After this main integration is remotely verified, obtain separate owner approval before implementing Wave D. Do not begin Wave D in this task.
+Wave D1 is integrated and remotely verified. The next owner-authorized task is Wave D2; do not begin D2 in this task.
 
 ## OWNER DECISIONS REQUIRED
 
 - Later decide which local forensic reports/evidence should become portable project documentation or private archive.
-- Separately approve Wave D browser/Playwright implementation.
+- Separately approve Wave D2 Preview → Production Browser Gate.
 
 ## RECOVERY NOTES
 
@@ -112,10 +113,10 @@ This checkpoint records the approved Wave C.5 state for main. The main metadata 
 
 - Recovery found the dedicated worktree `kubera-ai-site.worktrees/kubera-wave-d1-20261002` and branch `wave-d1/playwright-browser-qa-20261002` at base `baa8d77bb4ff74ffc07263e15debea316b5e47b0`; no prior D1 commit or remote D1 branch existed.
 - Recovered uncommitted D1 work: Playwright config, browser suite, server harness, package/lock changes, ignored diagnostics, and visual-QA documentation. A stale CSS mutation (`workflow-branch-grid: 1fr`) was found, proven as a failing mutation, and removed; no application source change remains.
-- Actual checks: `npm.cmd run typecheck` PASS; `npm.cmd run build` PASS; browser critical dev run executed 24 tests across 1366×768, 390×844, and 1024×768: 22 PASS, 2 FAIL. All route sanity and workflow geometry checks passed. Assistant launcher/panel failed at 1024×768 because the rendered panel/launcher escaped the right viewport edge (observed panel right 1037 vs viewport 1024).
+- Pre-remediation checks: `npm.cmd run typecheck` PASS; `npm.cmd run build` PASS; the initial browser critical run was 22/24 with the known 1024×768 assistant defect. The defect was fixed in D1.1 and is now regression-protected.
 - False-pass proof: workflow geometry mutation and assistant right-offset mutation both caused targeted browser FAIL, then were fully reverted.
 - CI remains unchanged; existing CI has typecheck/build only. Browser CI is deferred because adding browser installation/preview architecture is outside this bounded D1 repair.
-- Independent doubt review result: `FIX REQUIRED` due to the real 1024×768 assistant defect. D1 is not complete; do not claim visual PASS or merge main. Production and `origin/main` are unchanged.
+- Historical pre-remediation review result was `FIX REQUIRED`; D1.1 rereview subsequently returned `PASS`. Production was not modified.
 - Crash/recovery report: `C:\Users\Admin\kubera-visual-audit\reports\KUBERA_WAVE_D1_BROWSER_QA.md`.
 - Partial D1 handoff commit `59121e84590f8a0583d591b17094e9700130a90b` is pushed and verified on `origin/wave-d1/playwright-browser-qa-20261002`; `origin/main` remains `baa8d77bb4ff74ffc07263e15debea316b5e47b0`.
 
@@ -130,8 +131,4 @@ This checkpoint records the approved Wave C.5 state for main. The main metadata 
 
 ## EXACT NEXT STEP
 
-Owner-authorized integration of Wave D1 into `main`, then Wave D2 — Preview → Production Browser Gate. Do not merge main or start D2 in this session.
-
-## EXACT NEXT STEP
-
-Owner-authorized application fix for the existing assistant 1024×768 overflow, followed by rerunning the bounded browser suite and doubt review. Only after that may D1 be marked PASS and considered for integration; do not start D2.
+Wave D2 — Preview → Production Browser Gate. Do not start D2 in this session.
