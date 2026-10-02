@@ -83,13 +83,13 @@ Use `docs/checkpoints/` for resumable state and `docs/incidents/` for failures/r
 
 ## 11. Skill Routing
 
-The following six Kubera protocols are planned and **NOT YET INSTALLED**:
+The six repo-scoped Kubera protocols are available under `.codex/skills/<skill-name>/SKILL.md`:
 
-- `kubera-context-pack`
-- `kubera-change-packet`
-- `kubera-browser-visual-qa`
-- `kubera-publication-gate`
-- `kubera-evidence-content`
-- `kubera-doubt-review`
+- `kubera-context-pack` — use before complex, unfamiliar, cross-session, or production-relevant work.
+- `kubera-change-packet` — use before a real bounded repository change.
+- `kubera-browser-visual-qa` — use for rendered UI, responsive, overlay, media, navigation, or workflow changes; it defines the procedure but does not claim Wave D automation exists.
+- `kubera-publication-gate` — use for any authorized application or content publication.
+- `kubera-evidence-content` — use for evidence-backed technical, research, case-style, or factual commercial content.
+- `kubera-doubt-review` — use for adversarial review before important acceptance, merge, publication, deployment, or migration.
 
-Until installed, use the procedures in this file and `docs/`. Do not invoke a planned protocol as if it exists. A global user-level AGENTS policy may also apply outside this repository, but this repo-level contract is sufficient for Kubera work on a fresh laptop and does not require any machine-specific external file.
+Use only the protocols whose triggers apply; do not invoke all six for trivial work. Skills are reusable procedures, not permission to expand scope or modify production. They preserve the protected-system, owner-approval, secret, rollback, and visual-proof rules above. A global user-level AGENTS policy may also apply outside this repository, but this repo-level contract is sufficient for Kubera work on a fresh laptop and does not require any machine-specific external file.
