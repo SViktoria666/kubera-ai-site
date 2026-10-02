@@ -98,7 +98,7 @@ On a new machine: clone the repository, open a new Codex session at the reposito
 
 ## HANDOFF STATUS
 
-This checkpoint records the approved Wave C.5 state for main. Until the resulting main metadata commit is pushed and its remote HEAD is verified, handoff status is `MAIN INTEGRATION PENDING REMOTE VERIFICATION`.
+This checkpoint records the approved Wave C.5 state for main. The main metadata commit has been pushed and its remote HEAD is verified; handoff status is `REMOTELY PERSISTED`.
 
 ## SHA LIFECYCLE
 
