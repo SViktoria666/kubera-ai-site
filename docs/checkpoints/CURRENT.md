@@ -105,6 +105,7 @@ These branches are preservation lines, not canonical production implementations.
 - Preview serving version classification: PARTIAL. Provider SHA/deployment relationship is strong, but browser content cannot be verified without authorized Preview access.
 - D2 remains PARTIAL. No Vercel auth session, CLI, bypass environment variable, token, or cookie is available locally. Exact blocker: owner-authorized provider-supported access to this protected Preview through an approved secret/session channel.
 - Production unchanged; CI remains DEFERRED; no credentials or Preview URL were committed.
+- Current-head recheck: branch SHA `d3bd54ba00e0263caf7f069cc9131ca5810e2605` has matching Vercel/GitHub Preview deployment `6813591506`, provider state `success`, and provider SHA match. Existing Preview gate ran against it and returned `15 passed / 9 failed` because Deployment Protection served the provider login page. D2 remains PARTIAL; the blocker is authorized access to the protected Preview.
 
 Wave D2 infrastructure is implemented but PARTIAL. Obtain a real provider-linked preview URL plus expected/deployment/serving SHA metadata, run the preview gate, and rereview. Do not begin the SEO/content stage.
 
