@@ -127,7 +127,7 @@ This checkpoint records the approved Wave C.5 state for main. The main metadata 
 - Minimal application fix: `src/app/globals.css` only, changed that rule to `right: 12px`. No test assertion, workflow, assistant logic, backend, or unrelated file changed.
 - After evidence: assistant closed/open PASS at 390×844, 1024×768, and 1366×768; neighboring widths 560, 561, 900, 980, 1024, 1200, 1201 probed and contained.
 - Full D1 rerun: 24/24 browser tests PASS; workflow geometry PASS; typecheck PASS; production build PASS with 202 static pages.
-- Independent rereview: PASS. Wave D1 is COMPLETE / READY FOR OWNER-AUTHORIZED MAIN INTEGRATION.
+- Independent rereview: PASS. Wave D1 is COMPLETE / IN MAIN.
 
 ## EXACT NEXT STEP
 
