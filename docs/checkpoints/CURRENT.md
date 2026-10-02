@@ -8,18 +8,18 @@ Kubera AI website and its portable Codex operating contract.
 
 ## LAST UPDATED
 
-2026-10-02 — Wave C.5 checkpoint lifecycle implemented on a dedicated branch.
+2026-10-02 — Wave C.5 checkpoint lifecycle integrated into main.
 
 ## CURRENT ORIGIN/MAIN SHA
 
-Verified before this Wave C.5 change: `b05fbfff9d186135351ad10957b6256b1be13370`.
+Verified Wave C.5 integration source and main baseline: `69e47a205ff43e901408357dc4cde084a1262624`.
 
-The current branch HEAD is always obtained from Git (`git rev-parse HEAD`) rather than copied into this file. This avoids a self-referential SHA update loop.
+The final main HEAD is always obtained from Git (`git rev-parse HEAD`) rather than copied into this file. This avoids a self-referential SHA update loop.
 
 ## CURRENT WORKING STATE
 
 - Wave A, Wave B, and Wave C are complete in `origin/main`.
-- This Wave C.5 branch adds the canonical current-state lifecycle and session handoff rules; the implementation commit is complete.
+- Wave C.5 is integrated into `origin/main`; the canonical current-state lifecycle and session handoff rules are active.
 - No application behavior, production system, or Wave A preservation branch is part of this work.
 
 ## COMPLETED RECENTLY
@@ -33,7 +33,7 @@ The current branch HEAD is always obtained from Git (`git rev-parse HEAD`) rathe
 
 ## CURRENT / UNFINISHED WORK
 
-- Wave C.5 checkpoint lifecycle is complete on this branch; independent review and owner-authorized integration remain.
+- Wave C.5 checkpoint lifecycle is integrated into main.
 - Wave D — actual browser QA / Playwright gate — has not started and is not included here.
 - Durable portability of local forensic reports/evidence is not yet complete.
 
@@ -85,11 +85,10 @@ These branches are preservation lines, not canonical production implementations.
 
 ## EXACT NEXT STEP
 
-Perform the independent doubt review of this Wave C.5 branch, then obtain owner approval before integration. Do not merge or begin Wave D in this task.
+After this main integration is remotely verified, obtain separate owner approval before implementing Wave D. Do not begin Wave D in this task.
 
 ## OWNER DECISIONS REQUIRED
 
-- Approve integration of Wave C.5 after independent review.
 - Later decide which local forensic reports/evidence should become portable project documentation or private archive.
 - Separately approve Wave D browser/Playwright implementation.
 
@@ -99,7 +98,7 @@ On a new machine: clone the repository, open a new Codex session at the reposito
 
 ## HANDOFF STATUS
 
-This checkpoint is authored on a dedicated Wave C.5 branch. The branch has been pushed and its remote HEAD is verified; handoff status is `REMOTELY PERSISTED`.
+This checkpoint records the approved Wave C.5 state for main. Until the resulting main metadata commit is pushed and its remote HEAD is verified, handoff status is `MAIN INTEGRATION PENDING REMOTE VERIFICATION`.
 
 ## SHA LIFECYCLE
 
