@@ -342,3 +342,17 @@ Implement ONE isolated Germany WhatsApp design pilot and generate genuine BEFORE
 ## EXACT NEXT STEP
 
 Owner reviews genuine BEFORE/AFTER evidence for the Germany WhatsApp pilot. Do not merge to main, redesign siblings, promote tokens globally, or begin site-wide rollout until explicit owner approval.
+
+## DESIGN MODERNIZATION / PHASE 2 PILOT V2 — 2026-10-04
+
+- V1 remains recoverable at `455621f4db4a5db0298c7037e1b23645399f9aa1`.
+- V2 implementation: `6bc0deae4c06cff25524e0254d09545713b67c1c` on the same Germany-only pilot branch.
+- V2 visual refinement: deeper navy contrast, visible cyan/violet atmosphere, scoped orbital arcs/nodes, stronger hero depth, and localized CTA luminosity. No page structure, content, SEO semantics, assistant geometry, or workflow semantics changed.
+- V2 evidence: `C:\Users\Admin\kubera-visual-audit\evidence\design-pilot\v2-6bc0dea`.
+- V2 automated QA: typecheck PASS; production-like build PASS; `npm run validate:seo` PASS; D1 critical browser suite 24/24 PASS; five viewport containment and sibling isolation checks PASS.
+- Evidence lineage: baseline `before-8dcd0e1` → V1 `after-5690200` → V2 `v2-6bc0dea`; no evidence was overwritten.
+- Owner visual approval: `PENDING`. Site-wide rollout: `NOT AUTHORIZED`. Production and main remain unchanged.
+
+## EXACT NEXT STEP
+
+Owner inspects the live V2 at localhost and reviews V2 evidence. Do not merge, deploy, propagate, or change SEO/content until explicit owner visual feedback.

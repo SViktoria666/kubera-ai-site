@@ -95,3 +95,22 @@ No production deployment, Vercel configuration change, or main merge was perform
 ## Owner decision
 
 Automated technical PASS is not owner approval. The pilot is now **AWAITING OWNER VISUAL APPROVAL**. Owner should review the BEFORE/AFTER pairs at all five viewports and either approve this visual direction or request bounded changes. Site-wide token promotion and sibling rollout remain unauthorized until approval.
+
+## V2 luminosity / depth refinement — 2026-10-04
+
+- V1 remains recoverable at pilot history SHA `455621f4db4a5db0298c7037e1b23645399f9aa1`; V1 implementation was `56902003cd2ff833a26ef60cb1f5ec693097dc93`.
+- V2 implementation SHA: `6bc0deae4c06cff25524e0254d09545713b67c1c`.
+- Scope remained `.germany-whatsapp-pilot` only; no DOM, content, metadata, SEO, assistant geometry, workflow semantics, or shared sibling styles were changed.
+- V2 added CSS-only deep navy contrast, localized cyan/violet atmosphere, clipped orbital arcs, a small number of luminous nodes, stronger hero layering, and localized CTA/surface illumination. No raster dependency, WebGL, particle engine, or new client-side motion was added.
+- V2 evidence: `C:\Users\Admin\kubera-visual-audit\evidence\design-pilot\v2-6bc0dea\manifest.json`.
+- V2 identity remained stable at 390, 768, 1024, 1366, and 1440: title, canonical, description, H1, JSON-LD count, and document containment passed. Three sibling IndustrySolutionTemplate controls remained unmarked and unstyled by the pilot.
+- `npm run typecheck`: PASS; production build: PASS (219 static pages); `npm run validate:seo`: PASS (213 built indexable routes, 0 warnings); D1 critical browser suite: 24/24 PASS.
+- V2 visual self-review: luminosity, depth, cyan CTA energy, visible violet/blue atmosphere, orbital language, and mobile cropping improved without obvious overflow or excessive glow. Owner visual approval remains `PENDING`.
+
+### V1 → V2 evidence lineage
+
+`before-8dcd0e1` is the pre-V1 baseline at main SHA `8dcd0e13764dbf757c62385dd0161e50cd8e975a`.
+
+`after-5690200` is the original V1 after evidence captured from implementation SHA `56902003cd2ff833a26ef60cb1f5ec693097dc93`, then documented on pilot head `455621f4db4a5db0298c7037e1b23645399f9aa1`.
+
+`v2-6bc0dea` is the V2 after evidence captured from exact V2 SHA `6bc0deae4c06cff25524e0254d09545713b67c1c`. V1 evidence was not overwritten or renamed.
