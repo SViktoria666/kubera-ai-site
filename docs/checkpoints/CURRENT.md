@@ -217,3 +217,15 @@ Wave E is COMPLETE / READY FOR OWNER-AUTHORIZED INTEGRATION INTO MAIN. Next Mast
 ## EXACT NEXT STEP
 
 GSC Forensic / evidence-based SEO prioritization. Do not begin GSC forensic, SEO optimization, or design implementation in this session.
+
+## WAVE F GSC FORENSIC — 2026-10-03
+
+- Wave F status: `BLOCKED / PARTIAL` because no usable GSC Search Results or Page Indexing evidence was available in the repository, local exports, connected tools, or authenticated session. No clicks, impressions, CTR, position, query, page×query, country, device, or search-appearance metrics were fabricated.
+- Evidence discovery found only repository facts from Wave E and five unrelated 2023 warehouse `.xlsx` exports in Downloads. Canonical host remains `https://www.kubera-automation.com`; property scope and GSC freshness are unknown.
+- Current technical repository truth remains healthy: 213 indexable routes, `npm run validate:seo` PASS, rendered SEO 39/39 PASS, D1 24/24 PASS, GEO generation and Spanish sitemap correction in main. This is not evidence of Google indexing or ranking.
+- No application code, content, metadata, sitemap, robots, design, production, GSC property, or credentials were changed. Palette decision remains CLOSED.
+- Report: `reports/KUBERA_WAVE_F_GSC_FORENSIC_2026-10-03.md`. Independent rereview: PASS for evidence discipline; Wave F completion is blocked only by missing fresh GSC evidence.
+
+## EXACT NEXT STEP
+
+Wave F.1 — obtain and safely validate a read-only GSC evidence packet for the canonical property, then perform page/query forensic and evidence-based NOW/NEXT/WAIT prioritization. Do not implement SEO changes or begin design modernization.
