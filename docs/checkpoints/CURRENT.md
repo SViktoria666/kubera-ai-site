@@ -189,3 +189,18 @@ Palette decision: CLOSED. This is a durable direction only; no design implementa
 ## EXACT NEXT STEP
 
 SEO / Content Automated Validation. Do not begin design implementation in this task.
+
+## WAVE E SEO / CONTENT AUTOMATED VALIDATION — 2026-10-03
+
+- Wave E forensic is complete on `wave-e/seo-content-validation-20261003`, based on verified `origin/main` `9f1ed87de6aec047cc0bbe2ea6c8542f0440dc9d`. Existing protection was limited to blog validation, build generation, and manual SEO review; no reusable automated SEO gate existed.
+- Repository truth: 48 blog source files and 213 concrete indexable routes after build. Page families include Home, Services and country service pages, commercial/industry solutions, regional/GEO pages, use cases, cases, Blog, Contacts, and EN/RU variants.
+- Proven technical gaps were fixed minimally: GEO catalog routes were declared in the dynamic page's `generateStaticParams`, and `/es/espana-automatizacion` was added to the sitemap. No public copy or design was rewritten.
+- Added `npm run validate:seo` for source/build deterministic validation and `npm run browser:test:seo` for rendered SEO primitives and blog composition. Rendered coverage is 39/39 across 13 representative routes and 1366x768, 390x844, and 1024x768. Existing D1 critical browser suite remains 24/24 PASS; typecheck and production build PASS.
+- Hard-fail protection covers duplicate/mismatched slugs, required article/date errors, future dates, expected build routes, sitemap uniqueness/host/coverage, non-production metadata hosts, deterministic broken literal internal links, rendered title/description/canonical/H1, JSON-LD parsing/host safety, and blog index/sitemap composition. Subjective length, keyword, orphan-risk, GSC, and external crawl checks remain intentionally non-blocking.
+- Controlled failure proofs caught duplicate slug, invalid date, wrong sitemap host, and broken internal route; all mutations were reverted. False-positive coverage includes external/fragment/mailto/tel/runtime-link exclusions and valid EN/RU/article/schema rendering.
+- D1 and D2 remain preserved. Production, GSC, DNS, Vercel settings, n8n, CRM, Umami, public copy, and the selected design palette were not changed. Palette decision remains CLOSED: `#0C1726`, `#142136`, `#20344A`, `#4CE5E4`, `#1E5B6E`, `#3495A0`, `#F5F6F7`, `#B4CBD0`, `#818892`, gold `#AA895E → #D7B887 → #EDD9AA`, with selective violet/blue atmosphere.
+- Independent read-only rereview: PASS. Known limitation: deterministic production verification and GSC evidence are outside Wave E and still require the D2 publication gate / next roadmap stage.
+
+## EXACT NEXT STEP
+
+Wave E is COMPLETE / READY FOR OWNER-AUTHORIZED INTEGRATION INTO MAIN. Next Master Roadmap stage: GSC Forensic / evidence-based SEO prioritization. Do not merge Wave E or begin that stage in this session.

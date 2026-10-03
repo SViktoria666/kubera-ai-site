@@ -11,6 +11,7 @@ Use for any change intended for production publication, including code, content,
 
 1. Read `docs/checkpoints/CURRENT.md` for substantive work. Record base SHA, intended commit, exact scope, owner approval requirement, and rollback path.
 2. Run verified local checks and relevant source/content checks.
+   For SEO/content changes, run `npm run validate:seo` and the representative rendered suite `npm run browser:test:seo` before the D2 preview gate.
 3. Establish preview/deployment identity through the configured environment. Do not invent provider commands or IDs.
 4. Verify preview content and browser rendering where applicable.
 5. Obtain the required owner approval before the production action.

@@ -40,6 +40,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { route: "/how-we-work", priority: 0.85 },
     { route: "/cases", priority: 0.8 },
     { route: "/blog", priority: 0.7 },
+    { route: "/es/espana-automatizacion", priority: 0.82 },
     { route: "/contacts", priority: 0.85 },
     { route: "/use-cases/ai-voice-agents-home-services", priority: 0.74 },
     { route: "/use-cases/real-estate-lead-automation", priority: 0.74 },

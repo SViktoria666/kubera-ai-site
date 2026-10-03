@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { GeoPage } from "@/components/geo/GeoPage";
 import { getGeoPageByRoute } from "@/content/geo/loader";
+import { geoRoutes } from "@/content/geo/catalog";
 import { siteConfig } from "@/content/site";
 
 type Params = {
@@ -9,7 +10,7 @@ type Params = {
 };
 
 export function generateStaticParams() {
-  return [];
+  return geoRoutes.map((route) => ({ geoSlug: route.slice(1) }));
 }
 
 export const dynamicParams = false;
