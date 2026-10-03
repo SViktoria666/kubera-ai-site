@@ -200,6 +200,7 @@ SEO / Content Automated Validation. Do not begin design implementation in this t
 - Controlled failure proofs caught duplicate slug, invalid date, wrong sitemap host, and broken internal route; all mutations were reverted. False-positive coverage includes external/fragment/mailto/tel/runtime-link exclusions and valid EN/RU/article/schema rendering.
 - D1 and D2 remain preserved. Production, GSC, DNS, Vercel settings, n8n, CRM, Umami, public copy, and the selected design palette were not changed. Palette decision remains CLOSED: `#0C1726`, `#142136`, `#20344A`, `#4CE5E4`, `#1E5B6E`, `#3495A0`, `#F5F6F7`, `#B4CBD0`, `#818892`, gold `#AA895E → #D7B887 → #EDD9AA`, with selective violet/blue atmosphere.
 - Independent read-only rereview: PASS. Known limitation: deterministic production verification and GSC evidence are outside Wave E and still require the D2 publication gate / next roadmap stage.
+- Wave E implementation commit: `866493b` (`feat: add automated seo content validation`). The branch HEAD remains authoritative in Git; this checkpoint metadata commit follows the implementation commit without a SHA self-reference loop.
 
 ## EXACT NEXT STEP
 
