@@ -242,3 +242,21 @@ GSC Forensic / evidence-based SEO prioritization. Do not begin GSC forensic, SEO
 ## EXACT NEXT STEP
 
 Focused evidence-based snippet/intent forensic for the two Wave F NOW candidates. Do not implement SEO changes until that focused review authorizes a bounded change.
+
+## WAVE F MAIN INTEGRATION — 2026-10-04
+
+- Wave D1: `COMPLETE / IN MAIN`.
+- Wave D2: `COMPLETE / IN MAIN`.
+- Wave E: `COMPLETE / IN MAIN`.
+- Wave F: `COMPLETE / FORENSIC IN MAIN`.
+- GSC evidence: `AVAILABLE / SANITIZED` for `sc-domain:kubera-automation.com`.
+- Evidence periods: primary `2026-09-05–2026-10-02`, comparison `2026-08-08–2026-09-04`, secondary `2026-07-05–2026-10-02`.
+- Current baseline: primary 15 clicks / 2,561 impressions / 0.6% CTR / position 15.7; visibility and ranking improved versus the previous 28-day period while displayed CTR remained approximately 0.6%.
+- Evidence-backed NOW candidates remain exactly: Germany WhatsApp automation and the model-comparison article. Mass SEO rewriting is not authorized.
+- Forensic report and sanitized packet are persisted in `reports/KUBERA_WAVE_F_GSC_FORENSIC_2026-10-03.md` and `reports/evidence/wave-f-gsc-2026-10-04/`.
+- Application source, public content, metadata, sitemap, robots, design, and production were unchanged.
+- Palette decision remains `CLOSED`; palette research must not be reopened.
+
+## EXACT NEXT STEP
+
+Focused snippet / search-intent forensic for the two evidence-backed candidates only. Do not implement SEO changes or begin design modernization.
