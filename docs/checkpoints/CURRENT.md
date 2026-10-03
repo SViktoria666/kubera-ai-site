@@ -295,3 +295,19 @@ Focused snippet / search-intent forensic for the two retained Wave F candidates:
 ## EXACT NEXT STEP
 
 Controlled Design Modernization: audit current Master Roadmap state and prepare the ONE reference commercial-page design pilot using the already CLOSED palette decision. Do not begin design implementation or SEO implementation in this session.
+
+## DESIGN MODERNIZATION / PHASE 1 FORENSIC — 2026-10-04
+
+- Phase 1 status: `FORENSIC COMPLETE`; no design implementation was performed.
+- Report: `reports/KUBERA_DESIGN_SYSTEM_FORENSIC_2026-10-04.md`.
+- Current system is centered on one global `src/app/globals.css`, shared `SiteShell`/Header/Footer/Assistant, and family templates. The strongest commercial propagation lever is `IndustrySolutionTemplate`, which serves 54 commercial/industry routes through shared sections.
+- Reference page: `/en/solutions/germany/whatsapp-automation`, rendered by the shared industry template and backed by `src/content/industry-solutions.ts`. Wave G evidence remains preserved: 90-day 107 impressions, position 6.03, 0 clicks; query `whatsapp automation germany` 50 impressions, position 7.54, 0 clicks.
+- Pilot isolation plan: explicit Germany-only visual variant/data marker scoped at the existing industry template boundary; reuse real components; no duplicate public route; no global token change before owner approval.
+- SEO freeze for the future pilot: preserve URL, canonical/indexability, sitemap/robots, title/description, H1 meaning, body copy, structured-data meaning, localization, internal links, CTA/form behavior, and analytics semantics.
+- Future visual QA: real browser before/after evidence at 390, 768 where useful, 1024, 1366, and 1440; automated PASS remains separate from owner visual approval. D1 assistant and workflow geometry contracts remain protected.
+- Palette decision remains `CLOSED`: navy `#0C1726`, `#142136`, `#20344A`; cyan `#4CE5E4`, `#1E5B6E`, `#3495A0`; text `#F5F6F7`, `#B4CBD0`, `#818892`; gold `#AA895E → #D7B887 → #EDD9AA`; selective violet/blue atmosphere.
+- Application source, CSS, public content, SEO/metadata, production, and external systems were unchanged.
+
+## EXACT NEXT STEP
+
+Implement ONE isolated Germany WhatsApp reference-page design pilot, then produce real desktop/tablet/mobile BEFORE/AFTER evidence for owner review. Do not redesign other pages or implement SEO changes in the pilot-preparation task.
