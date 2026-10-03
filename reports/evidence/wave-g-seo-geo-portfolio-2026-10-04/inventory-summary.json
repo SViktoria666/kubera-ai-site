@@ -1,0 +1,27 @@
+{
+  "total_routes": 211,
+  "blog_routes": 49,
+  "commercial_routes": 162,
+  "by_family": {
+    "REGIONAL / GEO": 36,
+    "OTHER COMMERCIAL": 6,
+    "CASE / PROOF": 32,
+    "CONTACT": 2,
+    "SERVICE INDEX": 3,
+    "HOME": 1,
+    "SERVICE": 21,
+    "USE CASE": 7,
+    "COMMERCIAL / INDUSTRY": 54
+  },
+  "by_status": {
+    "IMPROVE": 103,
+    "KEEP": 2,
+    "NEED MORE DATA": 56,
+    "REPOSITION": 1
+  },
+  "by_maturity": {
+    "MATURE ENOUGH FOR EVIDENCE": 134,
+    "EARLY": 28
+  },
+  "source_files": 217
+}
