@@ -21,8 +21,10 @@ export function IndustrySolutionTemplate({
   solution: IndustrySolution;
   schemas: ReactNode[];
 }) {
+  const isGermanyWhatsAppPilot = solution.country === "germany" && solution.industry === "whatsapp-automation";
+
   return (
-    <main className="solutions-page" lang="en">
+    <main className={`solutions-page${isGermanyWhatsAppPilot ? " germany-whatsapp-pilot" : ""}`} lang="en" data-design-pilot={isGermanyWhatsAppPilot ? "germany-whatsapp" : undefined}>
       {schemas}
 
       <section className="solution-shell">

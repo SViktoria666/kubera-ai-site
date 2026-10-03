@@ -3751,3 +3751,262 @@ input[type="range"] {
   }
 }
 }
+
+/* Germany WhatsApp reference pilot: intentionally scoped until owner approval. */
+.germany-whatsapp-pilot {
+  --pilot-bg-main: #0c1726;
+  --pilot-bg-secondary: #142136;
+  --pilot-surface: #20344a;
+  --pilot-accent: #4ce5e4;
+  --pilot-accent-dark: #1e5b6e;
+  --pilot-accent-muted: #3495a0;
+  --pilot-text-main: #f5f6f7;
+  --pilot-text-secondary: #b4cbd0;
+  --pilot-text-muted: #818892;
+  --pilot-gold: #d7b887;
+  position: relative;
+  overflow: clip;
+  background:
+    radial-gradient(circle at 84% 8%, rgba(52, 149, 160, 0.12), transparent 26%),
+    radial-gradient(circle at 10% 16%, rgba(114, 66, 255, 0.1), transparent 24%),
+    var(--pilot-bg-main);
+  color: var(--pilot-text-main);
+}
+
+.germany-whatsapp-pilot .solution-shell {
+  padding: clamp(48px, 7vw, 88px) 0 clamp(72px, 9vw, 112px);
+}
+
+.germany-whatsapp-pilot .solution-container {
+  gap: clamp(16px, 2.2vw, 24px);
+}
+
+.germany-whatsapp-pilot .solution-hero,
+.germany-whatsapp-pilot .solution-section,
+.germany-whatsapp-pilot .solution-final-cta {
+  padding: clamp(24px, 3vw, 42px);
+  border: 1px solid rgba(180, 203, 208, 0.2);
+  border-radius: 24px;
+  background: linear-gradient(180deg, rgba(32, 52, 74, 0.88), rgba(20, 33, 54, 0.94));
+  box-shadow: 0 22px 52px rgba(3, 10, 20, 0.24);
+  backdrop-filter: none;
+  animation: none;
+}
+
+.germany-whatsapp-pilot .solution-hero {
+  gap: clamp(28px, 4vw, 56px);
+  align-items: center;
+}
+
+.germany-whatsapp-pilot .solution-hero-copy {
+  gap: 14px;
+}
+
+.germany-whatsapp-pilot .eyebrow,
+.germany-whatsapp-pilot .solution-card-kicker,
+.germany-whatsapp-pilot .solution-reading-label,
+.germany-whatsapp-pilot .solution-matrix-label {
+  color: var(--pilot-accent);
+  letter-spacing: 0.1em;
+}
+
+.germany-whatsapp-pilot .solution-title {
+  max-width: 760px;
+  color: var(--pilot-text-main);
+  font-size: clamp(2.45rem, 5vw, 4.75rem);
+  letter-spacing: -0.025em;
+  line-height: 1.02;
+  text-wrap: balance;
+}
+
+.germany-whatsapp-pilot .solution-lead,
+.germany-whatsapp-pilot .solution-section-lead {
+  max-width: 66ch;
+  color: var(--pilot-text-secondary);
+  line-height: 1.7;
+  text-wrap: pretty;
+}
+
+.germany-whatsapp-pilot .solution-trustline,
+.germany-whatsapp-pilot .solution-explainer-text,
+.germany-whatsapp-pilot .solution-card p,
+.germany-whatsapp-pilot .solution-card li {
+  color: var(--pilot-text-secondary);
+}
+
+.germany-whatsapp-pilot .solution-hero-actions,
+.germany-whatsapp-pilot .solution-cta-actions {
+  gap: 12px;
+  margin-top: 16px;
+}
+
+.germany-whatsapp-pilot .solution-hero-actions .button,
+.germany-whatsapp-pilot .solution-cta-actions .button {
+  border-color: var(--pilot-accent);
+  background: var(--pilot-accent);
+  color: var(--pilot-bg-main);
+  box-shadow: 0 10px 24px rgba(76, 229, 228, 0.14);
+}
+
+.germany-whatsapp-pilot .solution-hero-actions .button:hover,
+.germany-whatsapp-pilot .solution-cta-actions .button:hover {
+  background: #4ce5e4;
+  box-shadow: 0 14px 28px rgba(76, 229, 228, 0.2);
+}
+
+.germany-whatsapp-pilot .solution-hero-actions .button:focus-visible,
+.germany-whatsapp-pilot .solution-cta-actions .button:focus-visible,
+.germany-whatsapp-pilot .solution-secondary-link:focus-visible {
+  outline: 3px solid var(--pilot-accent);
+  outline-offset: 3px;
+}
+
+.germany-whatsapp-pilot .solution-secondary-link {
+  border-color: rgba(180, 203, 208, 0.42);
+  background: rgba(12, 23, 38, 0.24);
+  color: var(--pilot-text-main);
+}
+
+.germany-whatsapp-pilot .solution-secondary-link:hover {
+  border-color: var(--pilot-accent-muted);
+  background: rgba(52, 149, 160, 0.16);
+}
+
+.germany-whatsapp-pilot .solution-hero-card {
+  gap: 20px;
+  padding: clamp(20px, 3vw, 30px);
+  border: 1px solid rgba(76, 229, 228, 0.22);
+  border-radius: 20px;
+  background: linear-gradient(150deg, rgba(32, 52, 74, 0.98), rgba(12, 23, 38, 0.82));
+  box-shadow: inset 0 1px 0 rgba(245, 246, 247, 0.05), 0 18px 42px rgba(3, 10, 20, 0.24);
+}
+
+.germany-whatsapp-pilot .solution-hero-card-top,
+.germany-whatsapp-pilot .solution-hero-card-bottom {
+  color: var(--pilot-text-secondary);
+}
+
+.germany-whatsapp-pilot .solution-flow-node {
+  border-color: rgba(180, 203, 208, 0.2);
+  border-radius: 12px;
+  background: rgba(12, 23, 38, 0.54);
+  color: var(--pilot-text-main);
+}
+
+.germany-whatsapp-pilot .solution-flow-arrow {
+  color: var(--pilot-accent);
+}
+
+.germany-whatsapp-pilot .solution-container > .solution-section:nth-of-type(2n),
+.germany-whatsapp-pilot .solution-container > .solution-section:nth-of-type(2n + 1) {
+  background: linear-gradient(180deg, rgba(32, 52, 74, 0.76), rgba(20, 33, 54, 0.92));
+}
+
+.germany-whatsapp-pilot .solution-section {
+  gap: clamp(18px, 2.5vw, 28px);
+}
+
+.germany-whatsapp-pilot .solution-section-heading {
+  gap: 12px;
+}
+
+.germany-whatsapp-pilot .section-title {
+  color: var(--pilot-text-main);
+  letter-spacing: -0.015em;
+  text-wrap: balance;
+}
+
+.germany-whatsapp-pilot .solution-card {
+  border-color: rgba(180, 203, 208, 0.18);
+  border-radius: 16px;
+  background: rgba(32, 52, 74, 0.72);
+  box-shadow: 0 12px 28px rgba(3, 10, 20, 0.14);
+}
+
+.germany-whatsapp-pilot .solution-card--glass,
+.germany-whatsapp-pilot .solution-card--module {
+  background: rgba(32, 52, 74, 0.62);
+}
+
+.germany-whatsapp-pilot .solution-card--result {
+  border-color: rgba(215, 184, 135, 0.28);
+  background: linear-gradient(160deg, rgba(32, 52, 74, 0.82), rgba(20, 33, 54, 0.88));
+}
+
+.germany-whatsapp-pilot .solution-card:hover,
+.germany-whatsapp-pilot .solution-card--link:hover {
+  border-color: rgba(76, 229, 228, 0.52);
+  box-shadow: 0 16px 30px rgba(3, 10, 20, 0.22);
+  transform: translateY(-2px);
+}
+
+.germany-whatsapp-pilot .solution-card-link {
+  color: var(--pilot-accent);
+}
+
+.germany-whatsapp-pilot .solution-mid-cta,
+.germany-whatsapp-pilot .solution-final-cta {
+  border-color: rgba(76, 229, 228, 0.24);
+  background: linear-gradient(135deg, rgba(52, 149, 160, 0.16), rgba(20, 33, 54, 0.94));
+}
+
+.germany-whatsapp-pilot .ambient-tech-cloud {
+  opacity: 0.52;
+}
+
+.germany-whatsapp-pilot .ambient-tech-cloud__glow {
+  opacity: 0.7;
+}
+
+.germany-whatsapp-pilot .solution-hero + .solution-section {
+  margin-top: 2px;
+}
+
+@media (max-width: 900px) {
+  .germany-whatsapp-pilot .solution-hero,
+  .germany-whatsapp-pilot .solution-section,
+  .germany-whatsapp-pilot .solution-final-cta {
+    border-radius: 20px;
+  }
+
+  .germany-whatsapp-pilot .solution-title {
+    font-size: clamp(2.2rem, 7vw, 3.4rem);
+  }
+}
+
+@media (max-width: 560px) {
+  .germany-whatsapp-pilot .solution-shell {
+    padding-top: 32px;
+  }
+
+  .germany-whatsapp-pilot .solution-hero,
+  .germany-whatsapp-pilot .solution-section,
+  .germany-whatsapp-pilot .solution-final-cta {
+    padding: 22px 20px;
+    border-radius: 18px;
+  }
+
+  .germany-whatsapp-pilot .solution-title {
+    font-size: clamp(2.15rem, 10vw, 3rem);
+  }
+
+  .germany-whatsapp-pilot .solution-hero-actions,
+  .germany-whatsapp-pilot .solution-cta-actions {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .germany-whatsapp-pilot .solution-hero-actions > .button,
+  .germany-whatsapp-pilot .solution-hero-actions > .solution-secondary-link,
+  .germany-whatsapp-pilot .solution-cta-actions > .button,
+  .germany-whatsapp-pilot .solution-cta-actions > .solution-secondary-link {
+    width: 100%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .germany-whatsapp-pilot .solution-card:hover,
+  .germany-whatsapp-pilot .solution-card--link:hover {
+    transform: none;
+  }
+}
