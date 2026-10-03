@@ -153,3 +153,14 @@ This checkpoint records the approved Wave C.5 state for main. The main metadata 
 ## EXACT NEXT STEP
 
 Wave D2 — Preview → Production Browser Gate. Do not start D2 in this session.
+## WAVE D2.2 PROTECTED PREVIEW AUTHORIZATION OVERRIDE - 2026-10-03
+
+- Owner-authorized Vercel Shareable Link access completed in an isolated Chrome profile; the share token and Playwright storage state remain runtime-only and are not in Git.
+- Verified Preview deployment: `6813591506`, expected/provider SHA `d3bd54ba00e0263caf7f069cc9131ca5810e2605`, provider state `READY`. The share query token is omitted from project records.
+- `npm run browser:preview` ran against the real protected Preview with explicit `TARGET=PREVIEW` and completed **24/24 PASS** at 1366x768, 390x844, and 1024x768. Kubera application identity checks passed; the Vercel protection page was not rendered.
+- Workflow geometry and assistant regression protections passed, including 390 mobile, 1024 tablet, and 1366 desktop. The gate remained fail-closed before authorization.
+- D2.2 independent read-only rereview: PASS. Production was not modified; CI remains DEFERRED. Wave D2 is COMPLETE / READY FOR OWNER-AUTHORIZED MAIN INTEGRATION.
+
+## EXACT NEXT STEP
+
+Owner-authorized integration of Wave D2 into `main`, then the next Master Roadmap stage: SEO/content automated validation. Do not begin SEO in this session.

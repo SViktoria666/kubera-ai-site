@@ -16,6 +16,8 @@ async function navigate(page: Page, route: string) {
   await page.goto(route, { waitUntil: "domcontentloaded" });
   await page.waitForLoadState("load");
   await page.waitForTimeout(250);
+  await expect(page).toHaveTitle(/Kubera AI/i);
+  await expect(page.locator("body")).not.toContainText(/Vercel Authentication|Deployment Protection/i);
   await expect(page.locator("main")).toBeVisible();
   await expect.poll(() => pageErrors, { message: `Unhandled page errors on ${route}` }).toEqual([]);
 }
