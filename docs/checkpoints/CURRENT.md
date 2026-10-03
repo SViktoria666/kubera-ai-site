@@ -169,6 +169,7 @@ Owner-authorized integration of Wave D2 into `main`, then the next Master Roadma
 - Wave D1: COMPLETE / IN MAIN.
 - Wave D2: COMPLETE / IN MAIN.
 - Deployment Browser Gate: ACTIVE. Preview verification: ACTIVE. Production smoke: ACTIVE.
+- Existing live production smoke after integration: 24/24 browser checks PASS on the canonical host, including workflow geometry and assistant behavior at 1366x768, 390x844, and 1024x768. Production serving SHA/deployment identity remains UNKNOWN; HTTP/browser PASS is not production verification. Automatic Vercel deployment from this push is UNKNOWN from repository evidence.
 - The approved D2 source `c2c51211e287e6985389802d142c86a33ec97ae1` is integrated from the verified D2 branch. Runtime Vercel Shareable Link and Playwright storage-state artifacts were not committed.
 - Durable rules remain active: Push != Production Verified; Build PASS != Production Verified; HTTP 200 != Production Verified; Preview PASS != Production PASS; SOURCE PASS != BUILD PASS != DOM PASS != VISUAL PASS.
 
