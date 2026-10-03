@@ -164,3 +164,27 @@ Wave D2 — Preview → Production Browser Gate. Do not start D2 in this session
 ## EXACT NEXT STEP
 
 Owner-authorized integration of Wave D2 into `main`, then the next Master Roadmap stage: SEO/content automated validation. Do not begin SEO in this session.
+## MAIN INTEGRATION OVERRIDE - WAVE D2 - 2026-10-03
+
+- Wave D1: COMPLETE / IN MAIN.
+- Wave D2: COMPLETE / IN MAIN.
+- Deployment Browser Gate: ACTIVE. Preview verification: ACTIVE. Production smoke: ACTIVE.
+- The approved D2 source `c2c51211e287e6985389802d142c86a33ec97ae1` is integrated from the verified D2 branch. Runtime Vercel Shareable Link and Playwright storage-state artifacts were not committed.
+- Durable rules remain active: Push != Production Verified; Build PASS != Production Verified; HTTP 200 != Production Verified; Preview PASS != Production PASS; SOURCE PASS != BUILD PASS != DOM PASS != VISUAL PASS.
+
+## CLOSED DESIGN DECISION - CONTROLLED MODERNIZATION PALETTE
+
+Palette decision: CLOSED. This is a durable direction only; no design implementation starts in this task.
+
+- Structural base: `#0C1726` main background, `#142136` secondary background, `#20344A` surface.
+- Functional accent: `#4CE5E4` neon cyan, `#1E5B6E` dark accent, `#3495A0` muted accent.
+- Typography: `#F5F6F7` main text, `#B4CBD0` secondary text, `#818892` muted text.
+- Brand detail: gold gradient `#AA895E` -> `#D7B887` -> `#EDD9AA`.
+- Atmospheric accent: violet/blue used selectively for gradients, glow, and orbits.
+- Roles: navy structural; cyan functional UI/CTA; gold brand/premium detail; violet atmospheric.
+- Rollout: one reference page, then desktop/tablet/mobile approval, then shared design system/components, then full-site regional/country/commercial rollout.
+- Palette research must not be restarted.
+
+## EXACT NEXT STEP
+
+SEO / Content Automated Validation. Do not begin design implementation in this task.
