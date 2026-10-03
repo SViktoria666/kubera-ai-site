@@ -276,3 +276,22 @@ Focused snippet / search-intent forensic for the two evidence-backed candidates 
 ## EXACT NEXT STEP
 
 Focused snippet / search-intent forensic for the two retained Wave F candidates: Germany WhatsApp automation and the model-comparison article. Do not implement SEO changes, create pages, consolidate pages, or begin design modernization.
+
+## WAVE G MAIN INTEGRATION + OWNER SEQUENCING DECISION — 2026-10-04
+
+- Wave D1: `COMPLETE / IN MAIN`.
+- Wave D2: `COMPLETE / IN MAIN`.
+- Wave E: `COMPLETE / IN MAIN`.
+- Wave F: `COMPLETE / IN MAIN`.
+- Wave G: `COMPLETE / IN MAIN`.
+- Wave G report, sanitized evidence/matrices, and portfolio classification are persisted in `reports/KUBERA_WAVE_G_SEO_GEO_PORTFOLIO_FORENSIC_2026-10-04.md` and `reports/evidence/wave-g-seo-geo-portfolio-2026-10-04/`.
+- Durable portfolio facts: actionable inventory 211 routes (213 concrete build routes minus explicitly excluded `/demo` and `/ru/demo`), 49 blog routes, 162 commercial/non-blog routes; classification `KEEP 2 / IMPROVE 103 / REPOSITION 1 / CONSOLIDATE 0 / TOO NEW 0 / NO DEMAND 0 / NEED MORE DATA 56`.
+- Wave G conclusion remains unchanged: GEO strategy is partially validated; specific country × service/problem combinations show evidence, while broad country × service coverage is not yet sufficiently validated. Germany WhatsApp remains the strongest commercial control, and the model-comparison article remains a retained later snippet/intent opportunity.
+- Owner sequencing decision: do not mass-optimize the 103 `IMPROVE` pages or make destructive decisions about the 56 `NEED MORE DATA` pages. Resume Controlled Design Modernization with one reference commercial-page pilot, approve desktop/tablet/mobile direction, then build/reuse shared design-system tokens/components and roll out in controlled stages while preserving SEO semantics. Allow approximately 6–8 weeks of stable post-rollout evidence before repeating the full SEO/GEO portfolio forensic.
+- High-confidence snippet opportunities remain acknowledged but are not implemented in this integration: Germany WhatsApp and the model-comparison article.
+- Palette decision remains `CLOSED`: navy `#0C1726`, secondary navy `#142136`, surface `#20344A`, cyan `#4CE5E4`, dark/muted cyan `#1E5B6E` / `#3495A0`, text `#F5F6F7` / `#B4CBD0` / `#818892`, gold `#AA895E → #D7B887 → #EDD9AA`, with selective violet/blue atmosphere.
+- No application source, public content, metadata, internal links, sitemap, canonical, robots, schema, design, production, or external-system configuration changed.
+
+## EXACT NEXT STEP
+
+Controlled Design Modernization: audit current Master Roadmap state and prepare the ONE reference commercial-page design pilot using the already CLOSED palette decision. Do not begin design implementation or SEO implementation in this session.
