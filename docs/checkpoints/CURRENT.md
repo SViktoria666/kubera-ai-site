@@ -311,3 +311,16 @@ Controlled Design Modernization: audit current Master Roadmap state and prepare 
 ## EXACT NEXT STEP
 
 Implement ONE isolated Germany WhatsApp reference-page design pilot, then produce real desktop/tablet/mobile BEFORE/AFTER evidence for owner review. Do not redesign other pages or implement SEO changes in the pilot-preparation task.
+
+## DESIGN SYSTEM FORENSIC MAIN INTEGRATION — 2026-10-04
+
+- Design Modernization Phase 1 Forensic: `COMPLETE / IN MAIN`.
+- Approved report `reports/KUBERA_DESIGN_SYSTEM_FORENSIC_2026-10-04.md` is integrated; no application source, CSS, component, content, metadata, sitemap, robots, schema, deployment, or design implementation changed.
+- Palette decision remains `CLOSED`. Germany WhatsApp Automation remains the reference pilot; the pilot is `NOT IMPLEMENTED`.
+- Pilot method remains an isolated Germany-only visual variant/scoped wrapper using the existing `IndustrySolutionTemplate`; no duplicate route or site-wide rollout is authorized.
+- SEO freeze and owner visual approval gate remain required before propagation. Automated visual/regression PASS is not owner visual approval.
+- D1/D2/E/F/G remain complete/in main. Wave G portfolio remains 162 commercial/non-blog pages: `KEEP 2 / IMPROVE 103 / REPOSITION 1 / CONSOLIDATE 0 / TOO NEW 0 / NO DEMAND 0 / NEED MORE DATA 56`; mass SEO optimization remains deferred during the design experiment.
+
+## EXACT NEXT STEP
+
+Implement ONE isolated Germany WhatsApp design pilot and generate genuine BEFORE/AFTER evidence at 390 / 768 / 1024 / 1366 / 1440 for owner review. Do not redesign other pages, begin site-wide rollout, or implement SEO changes in this task.
