@@ -260,3 +260,19 @@ Focused evidence-based snippet/intent forensic for the two Wave F NOW candidates
 ## EXACT NEXT STEP
 
 Focused snippet / search-intent forensic for the two evidence-backed candidates only. Do not implement SEO changes or begin design modernization.
+
+## WAVE G SEO / GEO COMMERCIAL PORTFOLIO FORENSIC — 2026-10-04
+
+- Wave G: `COMPLETE / FORENSIC PASS` on `wave-g/seo-geo-portfolio-forensic-20261004`, based on main `53b925c4b8479de579645f7e38e0f87f666ae509`.
+- Evidence used: sanitized GSC packet `reports/evidence/wave-f-gsc-2026-10-04/`, property `sc-domain:kubera-automation.com`, primary `2026-09-05–2026-10-02`, comparison `2026-08-08–2026-09-04`, secondary `2026-07-05–2026-10-02`, plus read-only qualitative SERP research for representative Germany, Spain, Portugal, Cyprus, and Finland clusters.
+- Repository inventory: 213 concrete build routes; `/demo` and `/ru/demo` are explicitly outside Wave E indexable/sitemap scope. Actionable matrix: 211 routes, 49 blog routes, 162 non-blog commercial/supporting routes; 36 regional/GEO, 21 service, 54 commercial/industry, and 7 use-case routes.
+- Portfolio classifications: KEEP 2; IMPROVE 103; REPOSITION 1; CONSOLIDATE 0; TOO NEW 0; NO DEMAND 0; NEED MORE DATA 56. `IMPROVE` is a triage label, not a mass rewrite queue; absence from a GSC export is not treated as zero demand.
+- Systemic finding: architecture is technically valid but search evidence is concentrated and mixed; a small number of specific problem/service combinations are understood by Google while most country × service rows remain early, low-ranking, or insufficiently evidenced. No broad restructuring is authorized.
+- Germany WhatsApp automation remains the strongest commercial/GEO control: 90-day page 107 impressions / 0 clicks / position 6.03; primary page 57 impressions / 0 clicks / position 6.7; query 50 impressions / 0 clicks / position 7.54. The model-comparison article remains a separate Wave F candidate: 556 impressions / 5 clicks / position 4.48 in the primary period.
+- Report: `reports/KUBERA_WAVE_G_SEO_GEO_PORTFOLIO_FORENSIC_2026-10-04.md`. Matrix: `reports/evidence/wave-g-seo-geo-portfolio-2026-10-04/portfolio-matrix.csv` and `.json`; human priority matrix in the same evidence folder.
+- No application source, public content, metadata, sitemap, canonical, robots, design, GSC, or production changes were made. Palette decision remains `CLOSED`.
+- Independent read-only rereview: `PASS`. Known limitations: no exact external keyword volumes, selected page×query exports rather than a full API join, Git first-seen age proxies, and lower-bound static internal-link counts.
+
+## EXACT NEXT STEP
+
+Focused snippet / search-intent forensic for the two retained Wave F candidates: Germany WhatsApp automation and the model-comparison article. Do not implement SEO changes, create pages, consolidate pages, or begin design modernization.
