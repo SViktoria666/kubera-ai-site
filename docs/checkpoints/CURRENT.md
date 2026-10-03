@@ -226,6 +226,19 @@ GSC Forensic / evidence-based SEO prioritization. Do not begin GSC forensic, SEO
 - No application code, content, metadata, sitemap, robots, design, production, GSC property, or credentials were changed. Palette decision remains CLOSED.
 - Report: `reports/KUBERA_WAVE_F_GSC_FORENSIC_2026-10-03.md`. Independent rereview: PASS for evidence discipline; Wave F completion is blocked only by missing fresh GSC evidence.
 
+## WAVE F.1 GSC EVIDENCE ACQUISITION + WAVE F COMPLETION — 2026-10-04
+
+- Wave F: `COMPLETE / FORENSIC PASS` on `wave-f/gsc-forensic-20261003`.
+- Evidence source: read-only Google Search Console UI through the pre-authorized isolated Chrome session; sanitized packet: `reports/evidence/wave-f-gsc-2026-10-04/`.
+- Property: `sc-domain:kubera-automation.com`; canonical host: `https://www.kubera-automation.com`.
+- Periods: primary `2026-09-05–2026-10-02`, comparison `2026-08-08–2026-09-04`, secondary `2026-07-05–2026-10-02`.
+- Rendered GSC totals: primary 15 clicks / 2,561 impressions / 0.6% CTR / position 15.7; comparison 10 / 1,725 / 0.6% / 33.4; secondary 44 / 5,570 / 0.8% / 27.3.
+- Main evidence: blog model-comparison page has the strongest visibility (556 impressions, position 4.48, 5 clicks); Germany WhatsApp has a page-one commercial signal (57 page impressions, query 50 impressions, both 0 clicks); commercial/GEO expansion outside these signals remains early or insufficient.
+- Indexing snapshot: 147 indexed / 46 not indexed as of 2026-09-21. No REAL CURRENT ERROR was proven against current Wave E repository truth; redirects were treated as likely expected, the July sitemap record as historical residue, and robots/crawled/404/duplicate groups as needing URL-level evidence.
+- NOW is intentionally limited to two focused snippet/intent investigations: Germany WhatsApp automation and the model-comparison article. No SEO edit, content rewrite, sitemap/canonical change, design change, GSC action, or production action was performed.
+- Independent rereview: `PASS`. Report: `reports/KUBERA_WAVE_F_GSC_FORENSIC_2026-10-03.md`.
+- Palette decision remains `CLOSED`; no design research was reopened.
+
 ## EXACT NEXT STEP
 
-Wave F.1 — obtain and safely validate a read-only GSC evidence packet for the canonical property, then perform page/query forensic and evidence-based NOW/NEXT/WAIT prioritization. Do not implement SEO changes or begin design modernization.
+Focused evidence-based snippet/intent forensic for the two Wave F NOW candidates. Do not implement SEO changes until that focused review authorizes a bounded change.
