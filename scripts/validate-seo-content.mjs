@@ -88,8 +88,9 @@ function getExpectedRoutes() {
 
 function getBuiltRoutes() {
   const manifestPath = path.join(repoRoot, ".next", "prerender-manifest.json");
-  if (!fs.existsSync(manifestPath)) return null;
+  if (!fs.existsSync(manifestPath) || !fs.existsSync(path.join(repoRoot, ".next", "BUILD_ID"))) return null;
   const manifest = JSON.parse(fs.readFileSync(manifestPath, "utf8"));
+  if (!manifest.routes || Object.keys(manifest.routes).length === 0) return null;
   return new Set(Object.keys(manifest.routes).filter((route) => !route.startsWith("/_") && !["/robots.txt", "/sitemap.xml"].includes(route)));
 }
 
@@ -183,12 +184,13 @@ for (const { relative, route } of internalLinkCandidates) {
 }
 
 const routeCount = builtRoutes?.size ?? expectedRoutes.size;
-console.log(`SEO source validation: PASS (${blogFiles.length} blog files, ${routeCount} built indexable routes)`);
-console.log(`SEO warnings: ${warnings.length}`);
-for (const warning of warnings.slice(0, 20)) console.log(`WARNING: ${warning}`);
-
 if (failures.length) {
   console.error(`SEO source validation: FAIL (${failures.length} deterministic failures)`);
   for (const failure of failures) console.error(`FAIL: ${failure}`);
+  console.error(`SEO warnings: ${warnings.length}`);
   process.exit(1);
 }
+
+console.log(`SEO source validation: PASS (${blogFiles.length} blog files, ${routeCount} built indexable routes)`);
+console.log(`SEO warnings: ${warnings.length}`);
+for (const warning of warnings.slice(0, 20)) console.log(`WARNING: ${warning}`);
