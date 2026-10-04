@@ -145,3 +145,15 @@ V3's matte appearance is a compositing problem, not a missing color:
 - The assistant-side Hero region has no dedicated dark falloff plus reflected light field, leaving the large surrounding plane visually compressed.
 
 V4 therefore reconstructs the material stack: richer independent backdrop fields, translucent dark body, backdrop response, internal reflections, directional rim/specular layers, non-uniform depth shadows, and a layered CTA material. No page structure or SEO/content semantics are part of this correction.
+
+## V4 material reconstruction — 2026-10-04
+
+- V3 rollback SHA: `a7a1805b3cfa4e6887de7140bc29c4974f607520`.
+- V4 implementation SHA: `8ba6a2d0242f25ae02f3454bd015029777b1e1d3`.
+- The attached reference was inspected before implementation. V4 translates its material principles into an original Kubera system: dark falloff, independent localized fields, unequal partial arcs, translucent dark body, internal reflection, directional rim/specular light, crisp white hierarchy, and CTA luminosity at rest.
+- V4 is CSS-only and scoped to `.germany-whatsapp-pilot`: no new assets, runtime dependencies, WebGL, canvas, particle system, or continuous animation.
+- Temporary debug method was used and removed before commit. It inspected computed backdrop, glass body/backdrop-filter, internal reflection pseudo-layer, orbital/node layer, card material/specular, and CTA material/specular/sheen. Debug evidence: `C:\Users\Admin\kubera-visual-audit\evidence\design-pilot\v4-debug\layer-report.json`.
+- V4 evidence: `C:\Users\Admin\kubera-visual-audit\evidence\design-pilot\v4-8ba6a2d\manifest.json`; it includes five viewport states, CTA normal/hover states, hero/assistant-side/card surfaces, computed material values, and three sibling controls.
+- V4 browser evidence: body/document containment passed at 390, 768, 1024, 1366, and 1440; title, canonical, description, H1, and JSON-LD count remained unchanged; siblings remained unmarked and outside pilot styling.
+- `npm run typecheck`: PASS; production build: PASS (219 static pages); `npm run validate:seo`: PASS (213 built indexable routes, 0 warnings); D1 suite: 24/24 PASS.
+- V4 self-review: Hero has genuinely dark and illuminated regions, surfaces show computed backdrop response plus internal/reflected fields and directional edges, CTA is luminous in normal state and stronger on hover, H1 remains crisp, and the system avoids global blue wash/cyberpunk overload. Owner approval remains `PENDING`.

@@ -370,3 +370,18 @@ Owner inspects the live V2 at localhost and reviews V2 evidence. Do not merge, d
 ## EXACT NEXT STEP
 
 Owner inspects the live V3 and decides what still needs refinement. Do not merge, deploy, propagate, or change SEO/content until explicit owner visual feedback.
+
+## DESIGN MODERNIZATION / PHASE 2 PILOT V4 — 2026-10-04
+
+- V1: technical PASS, visually rejected. V2: improved, visually rejected. V3: improved orbital composition, still visually rejected because material remained matte.
+- V3 rollback SHA: `a7a1805b3cfa4e6887de7140bc29c4974f607520`.
+- V4 material reconstruction: `8ba6a2d0242f25ae02f3454bd015029777b1e1d3`.
+- V4 replaces flat/frosted compositing with scoped independent backdrop fields, dark translucent glass bodies, backdrop response, internal reflection, directional rim/specular layers, depth shadows, and a layered luminous CTA.
+- Temporary material-layer debug was used and removed; debug evidence is outside Git at `C:\Users\Admin\kubera-visual-audit\evidence\design-pilot\v4-debug\layer-report.json`.
+- V4 evidence: `C:\Users\Admin\kubera-visual-audit\evidence\design-pilot\v4-8ba6a2d`; typecheck PASS; build PASS; `npm run validate:seo` PASS; D1 suite 24/24 PASS; five viewport containment and sibling isolation PASS.
+- SEO/copy/metadata/URL/canonical/assistant geometry/workflow semantics remain unchanged. Main and production remain unchanged.
+- Owner visual approval: `PENDING`. Site-wide rollout: `NOT AUTHORIZED`.
+
+## EXACT NEXT STEP
+
+Owner inspects live V4, especially material depth, assistant-side background, CTA normal/hover, and glass edges. Do not merge, deploy, propagate, or change SEO/content until explicit owner feedback.
