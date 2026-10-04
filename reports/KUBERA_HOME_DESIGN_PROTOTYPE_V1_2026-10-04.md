@@ -86,3 +86,45 @@ site-wide token promotion was performed.
 Owner scrolls through the complete Home prototype and reviews the full-page
 composition. Only explicit owner approval may authorize a later, separately
 scoped rollout decision.
+
+## Home Design Prototype V1.1 — composition and color correction
+
+V1 remains recoverable at `9e3ed7c0fcf79e2541ed7543202cf4a89711f5f4`.
+V1.1 is a bounded follow-up on the same isolated prototype branch. It restores
+the real Home Hero geometry: the H1 uses the original full-width content measure,
+font scale, weight, wrapping behavior, and responsive proportions while keeping
+the requested white/cyan phrase split.
+
+V1.1 keeps the header near-black, converts functional controls to the cyan
+system in normal/hover/focus/active states, converts the Most Popular badge and
+pricing CTAs to cyan-family treatment, and changes prototype pricing bullets and
+eyebrows from legacy yellow to cyan. Gold remains only in Kubera branding and
+approved premium identity details. Explore services remains a readable,
+secondary dark/cyan control.
+
+The abstract sphere is reduced and moved toward the right edge as a secondary
+depth object; the accepted cyan/blue/violet lighting and orbital composition
+remain intact. No Home copy, CTA destination, pricing content, calculator
+behavior, production metadata, or real Home source was changed.
+
+V1.1 evidence is preserved separately at:
+`C:\Users\Admin\kubera-visual-audit\evidence\home-design-prototype-v1\after-v1.1\`.
+It includes matching full-page viewports, focused controls, and a computed
+interaction audit proving cyan controls do not become gold/yellow on hover.
+
+Validation: typecheck PASS; production build PASS; SEO validation PASS with
+213 built indexable routes and 0 warnings; responsive containment PASS at
+390/768/1024/1366/1440 and 561/1200 probes; D1 critical suite 24/24 PASS
+after building/running with `AI_ASSISTANT_ENABLED=true`. The first D1 attempt
+without that required harness flag was discarded as an environment setup
+failure, not an application regression. The Playwright runner again required
+the established manual teardown stop after reporting all 24 passing tests.
+
+Owner visual approval remains `PENDING`. Real Home, siblings, main, and
+production remain unchanged. Site-wide rollout is `NOT AUTHORIZED`.
+
+## EXACT NEXT STEP
+
+Owner reviews Home Design Prototype V1.1 in the visible browser at
+`/design-lab/home-v1`. Do not modify real Home, merge, deploy, or propagate the
+system before explicit owner feedback.

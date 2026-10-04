@@ -1,6 +1,9 @@
 {
   "kind": "isolated-home-design-prototype-v1",
   "prototypeCommit": "82accb0e5fc76b2ae968bdf0a4f8aee24c08d01b",
+  "v1RollbackSha": "9e3ed7c0fcf79e2541ed7543202cf4a89711f5f4",
+  "v1_1Evidence": "C:\\Users\\Admin\\kubera-visual-audit\\evidence\\home-design-prototype-v1\\after-v1.1",
+  "v1_1Scope": "Restore original Home geometry and enforce cyan functional interaction states; no production Home changes",
   "route": "/design-lab/home-v1",
   "indexable": false,
   "sitemap": false,

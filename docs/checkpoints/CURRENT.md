@@ -426,3 +426,18 @@ Owner reviews V5.1 background lighting in the isolated Material Lab. Do not inte
 ## EXACT NEXT STEP
 
 Owner scrolls through and reviews the complete Home Design Prototype V1. Do not modify real Home, merge, deploy, or propagate the system before explicit owner feedback.
+
+## DESIGN MODERNIZATION / HOME DESIGN PROTOTYPE V1.1 — 2026-10-04
+
+- V1 remains recoverable at `9e3ed7c0fcf79e2541ed7543202cf4a89711f5f4`.
+- V1.1 is a bounded composition/color correction on `design/home-design-prototype-v1-20261004`.
+- Original Home geometry restored: Hero H1 matches the real Home’s measured full-width desktop/mobile scale and wrapping behavior; only the requested white/cyan emphasis remains.
+- Header is near-black. Functional UI is cyan in normal, hover, focus, and active states. Legacy functional yellow was removed from header CTA, Hero CTA states, pricing CTAs, Most Popular, pricing bullets, and prototype eyebrows. Gold remains brand/premium identity only.
+- Sphere reduced and moved right as a secondary depth object. Accepted cyan/blue/violet lighting, glass, and orbital language remain in place.
+- V1.1 evidence: `C:\Users\Admin\kubera-visual-audit\evidence\home-design-prototype-v1\after-v1.1\`; manifest: `reports/evidence/home-design-prototype-v1/manifest.json`.
+- Validation: typecheck PASS; build PASS; `npm run validate:seo` PASS (213 built indexable routes, 0 warnings); responsive containment PASS at 390/768/1024/1366/1440 plus 561/1200; D1 24/24 PASS when run with `AI_ASSISTANT_ENABLED=true`.
+- Content/SEO freeze preserved. Real Home, Germany pilot, sibling pages, main, and production unchanged. Owner visual approval: `PENDING`; site-wide rollout: `NOT AUTHORIZED`.
+
+## EXACT NEXT STEP
+
+Owner reviews Home Design Prototype V1.1 in the visible browser at `/design-lab/home-v1`. Do not modify real Home, merge, deploy, or propagate before explicit owner feedback.

@@ -73,6 +73,7 @@ export function HomeDesignPrototype() {
             <p className="eyebrow">AI automation systems for growing businesses</p>
             <h1 className="home-prototype-title">
               <span>Systems that work.</span>
+              {"\n"}
               <strong>Business that grows.</strong>
             </h1>
             <p className="lead">Kubera AI builds a digital workforce for companies that run on processes and are ready for the next level.</p>
