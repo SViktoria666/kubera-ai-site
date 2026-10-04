@@ -411,3 +411,17 @@ Owner reviews the isolated material lab first. Only after the material itself is
 ## EXACT NEXT STEP
 
 Owner reviews V5.1 background lighting in the isolated Material Lab. Do not integrate Germany, redesign the CTA, add the planet/workflow, merge, deploy, or propagate before explicit owner feedback.
+
+## DESIGN MODERNIZATION / HOME DESIGN PROTOTYPE V1 — 2026-10-04
+
+- Prototype branch: `design/home-design-prototype-v1-20261004`.
+- Isolated route: `/design-lab/home-v1`; metadata is `noindex,nofollow,nocache`, it is absent from sitemap/navigation, and it does not modify `/`.
+- The prototype reuses real Home structure/content: Hero meaning, pricing/video, loss calculator, featured use-case links, and featured solution links. Copy, CTA destinations, calculator behavior, internal links, section order, production metadata, and SEO semantics are frozen.
+- Visual proof uses the proven V5 material (`625e825...`) and V5.1 lighting (`24e7d55...`): deep navy base, cyan functional light, electric-blue depth, localized secondary violet, restrained gold, partial orbits, purposeful nodes, and a temporary abstract sphere.
+- Prototype-only styling is scoped under `.home-design-prototype` and transient `body.home-design-lab-active`; negative controls cover real Home, Germany WhatsApp, Services, Blog article, and Contacts.
+- Genuine BEFORE/AFTER evidence: `C:\Users\Admin\kubera-visual-audit\evidence\home-design-prototype-v1\`; manifest: `reports/evidence/home-design-prototype-v1/manifest.json`; report: `reports/KUBERA_HOME_DESIGN_PROTOTYPE_V1_2026-10-04.md`.
+- Owner visual approval: `PENDING`. Real Home, siblings, main, and production remain unchanged. Site-wide rollout: `NOT AUTHORIZED`.
+
+## EXACT NEXT STEP
+
+Owner scrolls through and reviews the complete Home Design Prototype V1. Do not modify real Home, merge, deploy, or propagate the system before explicit owner feedback.

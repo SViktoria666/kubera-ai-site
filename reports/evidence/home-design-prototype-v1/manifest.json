@@ -1,0 +1,14 @@
+{
+  "kind": "isolated-home-design-prototype-v1",
+  "route": "/design-lab/home-v1",
+  "indexable": false,
+  "sitemap": false,
+  "baseMaterialSha": "625e825cbc948f44e04ebccf8c953724ef452f5b",
+  "baseLightingSha": "24e7d55a6db819aefd042bbf59ff1a3f013ac889",
+  "realHomeRoute": "/",
+  "contentFreeze": true,
+  "negativeControls": ["/", "/en/solutions/germany/whatsapp-automation", "/services", "/blog/ai-agent-autonomy-human-in-the-loop", "/contacts"],
+  "viewports": [[390, 844], [768, 1024], [1024, 768], [1366, 768], [1440, 900], [561, 900], [1200, 800]],
+  "evidenceRoot": "C:\\Users\\Admin\\kubera-visual-audit\\evidence\\home-design-prototype-v1",
+  "ownerApproval": "PENDING"
+}
