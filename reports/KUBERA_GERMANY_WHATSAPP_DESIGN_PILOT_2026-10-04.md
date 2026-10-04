@@ -132,3 +132,16 @@ Automated technical PASS is not owner approval. The pilot is now **AWAITING OWNE
 Baseline `before-8dcd0e1` → V1 `after-5690200` → V2 `v2-6bc0dea` → V3 `v3-a7a1805`.
 
 V1 implementation was `56902003cd2ff833a26ef60cb1f5ec693097dc93`, documented at pilot head `455621f4db4a5db0298c7037e1b23645399f9aa1`. V2 implementation was `6bc0deae4c06cff25524e0254d09545713b67c1c`. V3 is `a7a1805b3cfa4e6887de7140bc29c4974f607520`. Earlier evidence was not overwritten.
+
+## V4 forensic root-cause note — before implementation
+
+V3's matte appearance is a compositing problem, not a missing color:
+
+- The page backdrop has localized fields, but the Hero's own dark gradient still dominates the large surface; the translucent body therefore reveals little luminance variation behind it.
+- `backdrop-filter: blur(...) saturate(...)` is present on the Hero and surfaces, but without a sufficiently rich/contrasting backdrop response it reads as frost rather than glass.
+- V3 has narrow top highlights and generic inset/outer shadows, but no directional non-uniform rim, internal reflection field, or localized specular layer that visibly catches light across the surface.
+- Orbital paths are mostly background decoration outside the panel; they are not materially integrated through occlusion/reflection, so the panel does not appear to sit inside the same light system.
+- The CTA has a gradient and glow, but its normal-state material is still primarily a flat fill with a small highlight rather than a layered luminous object.
+- The assistant-side Hero region has no dedicated dark falloff plus reflected light field, leaving the large surrounding plane visually compressed.
+
+V4 therefore reconstructs the material stack: richer independent backdrop fields, translucent dark body, backdrop response, internal reflections, directional rim/specular layers, non-uniform depth shadows, and a layered CTA material. No page structure or SEO/content semantics are part of this correction.
