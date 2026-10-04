@@ -1,5 +1,5 @@
 {
-  "wave": "V5",
+  "wave": "V5.1",
   "kind": "isolated-liquid-glass-material-lab",
   "route": "/design-lab/liquid-glass",
   "indexable": false,
@@ -16,11 +16,26 @@
     "lenses": 2,
     "germanyIntegration": false
   },
+  "v5_1": {
+    "baseMaterialSha": "625e825cbc948f44e04ebccf8c953724ef452f5b",
+    "backgroundFormula": "dark navy base with overlapping cyan, electric-blue, and off-screen violet atmospheric fields",
+    "controls": ["lighting on/off", "glass on/off", "cyan intensity", "blue intensity", "violet intensity"],
+    "glassImplementationChanged": false,
+    "germanyIntegration": false,
+    "responsiveViewportEvidence": [390, 768, 1024, 1440]
+  },
   "evidence": {
     "on1440": "C:\\Users\\Admin\\kubera-visual-audit\\evidence\\design-pilot\\v5-material-lab-on-1440.png",
     "off1440": "C:\\Users\\Admin\\kubera-visual-audit\\evidence\\design-pilot\\v5-material-lab-off-1440.png",
     "panelOn1440": "C:\\Users\\Admin\\kubera-visual-audit\\evidence\\design-pilot\\v5-material-lab-panel-on-1440.png",
-    "panelOff1440": "C:\\Users\\Admin\\kubera-visual-audit\\evidence\\design-pilot\\v5-material-lab-panel-off-1440.png"
+    "panelOff1440": "C:\\Users\\Admin\\kubera-visual-audit\\evidence\\design-pilot\\v5-material-lab-panel-off-1440.png",
+    "v51On1440": "C:\\Users\\Admin\\kubera-visual-audit\\evidence\\design-pilot\\v51-material-lab-on-1440.png",
+    "v51On1024": "C:\\Users\\Admin\\kubera-visual-audit\\evidence\\design-pilot\\v51-material-lab-on-1024.png",
+    "v51On1366": "C:\\Users\\Admin\\kubera-visual-audit\\evidence\\design-pilot\\v51-material-lab-on-1366.png",
+    "v51On768": "C:\\Users\\Admin\\kubera-visual-audit\\evidence\\design-pilot\\v51-material-lab-on-768.png",
+    "v51On390": "C:\\Users\\Admin\\kubera-visual-audit\\evidence\\design-pilot\\v51-material-lab-on-390.png",
+    "v51LightingOff1440": "C:\\Users\\Admin\\kubera-visual-audit\\evidence\\design-pilot\\v51-material-lab-lighting-off-1440.png",
+    "v51GlassOff1440": "C:\\Users\\Admin\\kubera-visual-audit\\evidence\\design-pilot\\v51-material-lab-glass-off-1440.png"
   },
   "ownerApproval": "PENDING"
 }

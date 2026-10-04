@@ -60,3 +60,32 @@ External captures: `C:\Users\Admin\kubera-visual-audit\evidence\design-pilot\v5-
 ## Next gate
 
 Owner reviews the material lab first. Only if the material itself is visually accepted may a separate, bounded Germany Hero/CTA integration be prepared.
+
+## V5.1 background lighting reconstruction
+
+V5.1 keeps the proven V5 material implementation frozen and changes only the
+isolated lab backdrop. The baseline is the source-of-truth navy-to-blue-to-
+violet formula, implemented as three independently controlled, overlapping
+fields:
+
+- cyan/turquoise functional spill from the left/lower-left;
+- electric-blue transition light across the middle;
+- violet/blue-violet atmospheric light from an off-screen upper-right source.
+
+The fields use different radii and falloffs over a genuinely dark navy base.
+Orbital lines retain their sharp core and near glow while receiving a soft
+atmospheric spill. The V5 glass lenses, CTA material, orbital geometry, and
+Germany page were not changed. The lab now provides dev-only Lighting ON/OFF
+and bounded Cyan/Blue/Violet intensity controls; Glass ON/OFF remains intact.
+
+V5.1 captures are stored separately from earlier evidence:
+`C:\Users\Admin\kubera-visual-audit\evidence\design-pilot\v51-material-lab-on-1440.png`,
+`v51-material-lab-on-1024.png`, `v51-material-lab-on-768.png`,
+`v51-material-lab-on-390.png`, plus Lighting OFF and Glass OFF comparison
+captures. The 390/768/1024/1440 lab checks showed no horizontal overflow; the
+1366 viewport is covered by the same bounded CSS composition and remains a
+required owner-review viewport.
+
+The richer backdrop visibly benefits the unchanged glass panel through its
+existing transmission/refraction path. Germany integration remains `NOT
+PERFORMED`; owner visual approval remains `PENDING`.

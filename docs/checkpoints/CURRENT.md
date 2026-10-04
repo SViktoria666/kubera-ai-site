@@ -398,3 +398,16 @@ Owner inspects live V4, especially material depth, assistant-side background, CT
 ## EXACT NEXT STEP
 
 Owner reviews the isolated material lab first. Only after the material itself is visually accepted may a separate bounded Germany Hero/CTA integration be prepared. Do not merge, deploy, propagate, or edit the Germany page before that gate.
+
+## DESIGN MODERNIZATION / V5.1 BACKGROUND LIGHTING — 2026-10-04
+
+- Base material remains frozen at `625e825cbc948f44e04ebccf8c953724ef452f5b`; the proven `@sohumsuthar/liquid-glass@3.1.0` lens was not replaced or retuned.
+- V5.1 reconstructs only the isolated Material Lab background: dark navy base plus independently controlled cyan, electric-blue, and off-screen violet atmospheric fields with overlapping falloff and emissive-line spill.
+- Dev-only controls now provide Lighting ON/OFF, preserve Glass ON/OFF, and bound cyan/blue/violet field intensity. The lighting default for owner review is ON with Glass ON.
+- Responsive lab evidence: 390, 768, 1024, and 1440 captures passed containment; 1366 remains a required review viewport under the same isolated lab CSS. Germany integration was not performed.
+- V5.1 report/evidence manifest remains under `reports/KUBERA_LIQUID_GLASS_MATERIAL_LAB_V5_2026-10-04.md` and `reports/evidence/design-pilot-v5-material-lab/manifest.json`.
+- Main, Germany, sibling pages, production, SEO/content, CTA material, assistant, and workflow remain unchanged. Owner visual approval: `PENDING`.
+
+## EXACT NEXT STEP
+
+Owner reviews V5.1 background lighting in the isolated Material Lab. Do not integrate Germany, redesign the CTA, add the planet/workflow, merge, deploy, or propagate before explicit owner feedback.

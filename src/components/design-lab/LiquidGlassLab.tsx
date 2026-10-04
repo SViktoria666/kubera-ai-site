@@ -21,6 +21,16 @@ const ctaStyle = {
 
 export function LiquidGlassLab() {
   const [glassOn, setGlassOn] = useState(true);
+  const [lightingOn, setLightingOn] = useState(true);
+  const [cyanIntensity, setCyanIntensity] = useState(36);
+  const [blueIntensity, setBlueIntensity] = useState(40);
+  const [violetIntensity, setVioletIntensity] = useState(34);
+
+  const labStyle = {
+    "--lab-cyan-alpha": `${cyanIntensity / 100}`,
+    "--lab-blue-alpha": `${blueIntensity / 100}`,
+    "--lab-violet-alpha": `${violetIntensity / 100}`,
+  } as React.CSSProperties;
 
   useEffect(() => {
     const hadDarkClass = document.documentElement.classList.contains("dark");
@@ -35,7 +45,7 @@ export function LiquidGlassLab() {
   }, [glassOn]);
 
   return (
-    <main className="liquid-glass-lab" data-glass-state={glassOn ? "on" : "off"}>
+    <main className="liquid-glass-lab" data-glass-state={glassOn ? "on" : "off"} data-lighting-state={lightingOn ? "on" : "off"} style={labStyle}>
       <div className="liquid-glass-lab-backdrop" aria-hidden="true">
         <div className="lab-light-field lab-light-field--cyan" />
         <div className="lab-light-field lab-light-field--blue" />
@@ -77,9 +87,22 @@ export function LiquidGlassLab() {
           <h1>Liquid light, made visible.</h1>
           <p>Isolated proof surface for transmission, refraction, specular edge light and crisp content.</p>
         </div>
-        <button className="lab-toggle" type="button" aria-pressed={glassOn} onClick={() => setGlassOn((value) => !value)}>
-          Glass {glassOn ? "on" : "off"}
-        </button>
+        <div className="lab-controls">
+          <div className="lab-toggle-row">
+            <button className="lab-toggle" type="button" aria-pressed={lightingOn} onClick={() => setLightingOn((value) => !value)}>
+              Lighting {lightingOn ? "on" : "off"}
+            </button>
+            <button className="lab-toggle" type="button" aria-pressed={glassOn} onClick={() => setGlassOn((value) => !value)}>
+              Glass {glassOn ? "on" : "off"}
+            </button>
+          </div>
+          <details className="lab-light-controls">
+            <summary>Light field controls</summary>
+            <label>Cyan <input type="range" min="0" max="55" value={cyanIntensity} onChange={(event) => setCyanIntensity(Number(event.target.value))} /></label>
+            <label>Blue <input type="range" min="0" max="55" value={blueIntensity} onChange={(event) => setBlueIntensity(Number(event.target.value))} /></label>
+            <label>Violet <input type="range" min="0" max="55" value={violetIntensity} onChange={(event) => setVioletIntensity(Number(event.target.value))} /></label>
+          </details>
+        </div>
       </header>
 
       <section className="liquid-glass-lab-stage" aria-label="Liquid glass material comparison">

@@ -4415,6 +4415,9 @@ body.liquid-glass-lab-active .ai-assistant-widget {
   padding: clamp(1.5rem, 4vw, 4.5rem);
   color: #f5f6f7;
   background: #070f1b;
+  --lab-cyan-alpha: 0.36;
+  --lab-blue-alpha: 0.4;
+  --lab-violet-alpha: 0.34;
 }
 
 .liquid-glass-lab-backdrop,
@@ -4429,13 +4432,14 @@ body.liquid-glass-lab-active .ai-assistant-widget {
 .liquid-glass-lab-backdrop {
   z-index: -1;
   overflow: hidden;
-  background: radial-gradient(ellipse 70% 78% at 50% 52%, #12243a 0%, #0b1728 48%, #060d18 100%);
+  background: linear-gradient(145deg, #081421 0%, #0c1a2d 48%, #10152e 100%);
 }
 
-.lab-light-field { filter: blur(18px); }
-.lab-light-field--cyan { background: radial-gradient(ellipse 34% 36% at 26% 68%, rgba(76,229,228,.28), transparent 70%); }
-.lab-light-field--blue { background: radial-gradient(ellipse 40% 42% at 78% 24%, rgba(54,124,255,.31), transparent 72%); }
-.lab-light-field--violet { background: radial-gradient(ellipse 30% 38% at 80% 78%, rgba(126,86,255,.25), transparent 72%); }
+.lab-light-field { filter: blur(22px); transition: opacity .25s ease; }
+.lab-light-field--cyan { background: radial-gradient(ellipse 54% 66% at 7% 58%, rgba(41,215,213,var(--lab-cyan-alpha)), transparent 70%); }
+.lab-light-field--blue { background: radial-gradient(ellipse 72% 80% at 62% 39%, rgba(48,125,255,var(--lab-blue-alpha)), transparent 74%); }
+.lab-light-field--violet { background: radial-gradient(ellipse 76% 96% at 108% 18%, rgba(88,70,220,var(--lab-violet-alpha)), transparent 73%); }
+.liquid-glass-lab[data-lighting-state="off"] .lab-light-field { opacity: 0; }
 
 .lab-grid {
   opacity: .22;
@@ -4451,7 +4455,7 @@ body.liquid-glass-lab-active .ai-assistant-widget {
 .lab-signal-ruler b { margin-left: .3rem; color: rgba(180,203,208,.5); font-weight: 600; }
 .lab-signal-line { position: absolute; top: 11%; right: 28%; width: 1px; height: 70%; transform: rotate(21deg); transform-origin: top; background: linear-gradient(180deg, transparent, rgba(245,246,247,.72) 30%, #4ce5e4 52%, transparent 84%); box-shadow: 0 0 12px rgba(76,229,228,.58); opacity: .75; }
 
-.lab-orbits { width: 100%; height: 100%; opacity: .94; }
+.lab-orbits { width: 100%; height: 100%; opacity: .94; filter: drop-shadow(0 0 5px rgba(76,229,228,.4)) drop-shadow(0 0 30px rgba(88,70,220,.18)); }
 .lab-technical-mark { position: absolute; color: rgba(180,203,208,.42); font: 600 .58rem/1.2 ui-monospace, SFMono-Regular, Menlo, monospace; letter-spacing: .18em; }
 .lab-technical-mark--top { top: 18%; left: 8%; }
 .lab-technical-mark--side { right: 7%; bottom: 20%; writing-mode: vertical-rl; }
@@ -4463,8 +4467,14 @@ body.liquid-glass-lab-active .ai-assistant-widget {
 .lab-kicker { color: #4ce5e4; font: 700 .68rem/1.2 ui-monospace, SFMono-Regular, Menlo, monospace; letter-spacing: .2em; }
 .liquid-glass-lab h1 { max-width: 11ch; margin: .8rem 0 1rem; color: #f5f6f7; font-size: clamp(2.5rem, 7vw, 6.4rem); line-height: .92; letter-spacing: -.055em; text-shadow: 0 0 22px rgba(245,246,247,.18); }
 .liquid-glass-lab-header p { max-width: 44rem; margin: 0; color: #b4cbd0; font-size: clamp(.95rem, 1.4vw, 1.15rem); }
+.lab-controls { display: grid; gap: .7rem; justify-items: end; }
+.lab-toggle-row { display: flex; flex-wrap: wrap; justify-content: end; gap: .55rem; }
 .lab-toggle { min-width: 7.5rem; min-height: 44px; border: 1px solid rgba(76,229,228,.5); border-radius: 999px; color: #f5f6f7; background: rgba(12,23,38,.58); cursor: pointer; font-weight: 700; }
 .lab-toggle:hover, .lab-toggle:focus-visible { border-color: #4ce5e4; box-shadow: 0 0 22px rgba(76,229,228,.24); }
+.lab-light-controls { width: min(17rem, 100%); padding: .7rem .85rem; border: 1px solid rgba(180,203,208,.2); border-radius: 14px; color: #b4cbd0; background: rgba(7,15,27,.44); font: .7rem/1.2 ui-monospace, SFMono-Regular, Menlo, monospace; }
+.lab-light-controls summary { cursor: pointer; color: #f5f6f7; }
+.lab-light-controls label { display: grid; grid-template-columns: 4rem 1fr; align-items: center; gap: .5rem; margin-top: .65rem; }
+.lab-light-controls input { accent-color: #4ce5e4; min-width: 0; }
 
 .liquid-glass-lab-stage { margin-top: clamp(3rem, 10vh, 9rem); }
 .lab-glass-panel { min-height: 380px; display: grid; grid-template-columns: minmax(0, 1fr) 180px; align-items: end; gap: 2rem; overflow: hidden; background: rgba(20,33,54,.18); }
@@ -4486,6 +4496,8 @@ body.liquid-glass-lab-active .ai-assistant-widget {
 
 @media (max-width: 760px) {
   .liquid-glass-lab-header { align-items: start; flex-direction: column; }
+  .lab-controls { width: 100%; justify-items: start; }
+  .lab-toggle-row { justify-content: start; }
   .lab-glass-panel, .lab-glass-content { display: block; min-height: 500px; }
   .lab-panel-readout { margin-top: 3rem; }
   .lab-technical-mark--side { display: none; }
