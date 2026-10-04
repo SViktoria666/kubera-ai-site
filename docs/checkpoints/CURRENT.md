@@ -484,3 +484,21 @@ Owner reviews Home Design Prototype V1.1 in the visible browser at `/design-lab/
 ## EXACT NEXT STEP
 
 Owner reviews the actually rendered V1.1 in the visible browser. Do not begin V1.2, Theme Architecture, UI library work, merge, deploy, or rollout.
+
+## KUBERA DESIGN ENGINEERING SYSTEM / PHASE 1 — 2026-10-05
+
+- Phase 1 research and architecture documentation is isolated on `design/kubera-design-engineering-phase1-20261005`, based on `8ea971dfd2657b167031b1ebd0971435a889a774`. Local `origin/main` remains `8dcd0e13764dbf757c62385dd0161e50cd8e975a`.
+- The current Theme Playground, approved glass button family, Material Lab, browser guards, D1 protections, and previous prototype history remain preserved. No production source, real Home, Germany page, main, deployment, Telegram production system, or external code was changed.
+- Formal artifacts created under `docs/design-engineering/`: forensic report, machine-readable resource registry, Approved Arsenal, Approved Material #001, Design Studio architecture, Telegram Mini App readiness, license/provenance policy, and implementation roadmap.
+- `KUBERA APPROVED MATERIAL #001 — PREMIUM CYAN OPTICAL GLASS` records the owner-approved current UI Kit family and exact implementation lineage: `@sohumsuthar/liquid-glass@3.1.0`, UI Kit SHA `8ea971d…`, Material Lab proof `625e825…`. No replacement library was installed.
+- Roadmap #23 seed is expanded through the new registry; resources remain provenance-tagged and external code is reference-only unless explicitly marked otherwise. Shadcn Registry and applecn were selected as architecture donors; TMA.js/official Telegram Web Apps docs are the first Telegram foundation to test.
+- Research conclusions: use a curated private arsenal with Primary/Alternative/Experimental slots; keep runtime code separate from knowledge, tokens, registry metadata, agent instructions, and license records; delay a separate private package/repository until one Telegram consumer validates the API.
+
+### Phase 1 persistence state
+
+- GitHub fetch was attempted before this work and was blocked by shell network connectivity. Remote branch persistence and remote SHA verification remain pending until a permitted push succeeds.
+- Owner approval of the material remains recorded as approved for the material family; site-wide migration and production rollout remain unauthorized.
+
+## EXACT NEXT STEP
+
+Verify the documentation diff, commit the bounded Phase 1 artifacts, push the isolated branch when remote access is available, and then use the Telegram adapter/mobile-primitives roadmap for the first Mini App planning session. Do not migrate production or create a new repository yet.

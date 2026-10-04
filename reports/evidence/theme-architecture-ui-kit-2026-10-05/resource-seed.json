@@ -1,6 +1,8 @@
 {
   "purpose": "Bounded seed for Master Roadmap #23 — Kubera Web Design Knowledge Base / UI Resource Library.",
   "created": "2026-10-05",
+  "canonicalRegistry": "docs/design-engineering/registry/KUBERA_DESIGN_ENGINEERING_RESOURCE_REGISTRY.json",
+  "note": "This original bounded seed is preserved for lineage. The Phase 1 machine-readable registry is now the canonical expanded record for Roadmap #23.",
   "resources": [
     {
       "name": "@sohumsuthar/liquid-glass",
