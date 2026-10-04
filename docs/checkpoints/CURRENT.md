@@ -502,3 +502,16 @@ Owner reviews the actually rendered V1.1 in the visible browser. Do not begin V1
 ## EXACT NEXT STEP
 
 Verify the documentation diff, commit the bounded Phase 1 artifacts, push the isolated branch when remote access is available, and then use the Telegram adapter/mobile-primitives roadmap for the first Mini App planning session. Do not migrate production or create a new repository yet.
+
+## KUBERA NEON CONTROLLED ROLLOUT PREPARATION — 2026-10-05
+
+- Preservation audit passed on planning branch `design/kubera-neon-controlled-rollout-prep-20261005`, based on Phase 1 SHA `b234f4e8171cd3976bb0fdfb82fe1126d3f67c10`.
+- All eight Phase 1 design-engineering artifacts are present and Git-tracked under the intended `kubera-ai-site.worktrees/.../docs/design-engineering/` path. The earlier `kubera-ai.worktrees` references were report typos; no outside artifact location was found.
+- Approved Material #001 remains recoverable at UI Kit SHA `8ea971dfd2657b167031b1ebd0971435a889a774` with material proof SHA `625e825cbc948f44e04ebccf8c953724ef452f5b`; no material, dependency, or production source was changed.
+- Source forensic completed: shared shell/components plus `src/app/globals.css` are the propagation centers. Inventory on the planning base: 247 hex, 560 rgb/rgba, 0 HSL, 184 gradients, 86 shadow declarations, and 57 inline-style hits. These are classified in `docs/design-engineering/KUBERA_NEON_CONTROLLED_ROLLOUT_PLAN.md`; no mass replacement was performed.
+- Four-route preview proposal: isolated Home prototype, Germany WhatsApp industry route, `/en/germany-automation` GEO route, and `/contacts`. Production rollout remains unauthorized.
+- Telegram implementation was not started. SEO, content, metadata, sitemap, robots, analytics, n8n, main, production, and real page output remain unchanged.
+
+## EXACT NEXT STEP
+
+Owner reviews the bounded rollout plan and chooses the first preview group/material adoption scope. Do not edit production, migrate shared primitives, deploy, or begin Telegram implementation before that decision.
