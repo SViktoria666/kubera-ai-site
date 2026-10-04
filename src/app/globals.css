@@ -4205,3 +4205,216 @@ input[type="range"] {
     transform: none;
   }
 }
+
+/* Germany WhatsApp V4 material reconstruction: still isolated until owner approval. */
+.germany-whatsapp-pilot {
+  background:
+    radial-gradient(ellipse 34% 25% at 7% 27%, rgba(76, 229, 228, 0.16), transparent 72%),
+    radial-gradient(ellipse 43% 32% at 92% 12%, rgba(45, 105, 193, 0.2), transparent 76%),
+    radial-gradient(ellipse 30% 29% at 83% 56%, rgba(114, 66, 255, 0.14), transparent 74%),
+    linear-gradient(132deg, #07111e 0%, #0c1726 42%, #101b31 71%, #080f1b 100%);
+}
+
+.germany-whatsapp-pilot .solution-hero,
+.germany-whatsapp-pilot .solution-section,
+.germany-whatsapp-pilot .solution-final-cta {
+  background:
+    linear-gradient(114deg, rgba(245, 246, 247, 0.08), transparent 16%, transparent 64%, rgba(76, 229, 228, 0.035)),
+    radial-gradient(ellipse 39% 54% at 88% 16%, rgba(76, 229, 228, 0.12), transparent 73%),
+    radial-gradient(ellipse 42% 48% at 4% 96%, rgba(114, 66, 255, 0.13), transparent 75%),
+    linear-gradient(148deg, rgba(32, 52, 74, 0.54), rgba(10, 20, 34, 0.76) 62%, rgba(7, 15, 27, 0.86));
+  border-color: rgba(180, 203, 208, 0.24);
+  box-shadow:
+    inset 0 1px 0 rgba(245, 246, 247, 0.17),
+    inset 0 0 0 1px rgba(76, 229, 228, 0.045),
+    inset 0 -24px 44px rgba(3, 10, 20, 0.18),
+    0 26px 64px rgba(2, 8, 17, 0.42),
+    0 0 42px rgba(52, 149, 160, 0.05);
+  -webkit-backdrop-filter: blur(15px) saturate(138%) brightness(112%);
+  backdrop-filter: blur(15px) saturate(138%) brightness(112%);
+}
+
+.germany-whatsapp-pilot .solution-hero {
+  background:
+    linear-gradient(116deg, rgba(245, 246, 247, 0.1), transparent 17%, transparent 57%, rgba(76, 229, 228, 0.045)),
+    radial-gradient(ellipse 30% 68% at 91% 13%, rgba(76, 229, 228, 0.17), transparent 74%),
+    radial-gradient(ellipse 31% 45% at 7% 94%, rgba(114, 66, 255, 0.17), transparent 76%),
+    radial-gradient(ellipse 56% 28% at 55% 2%, rgba(43, 104, 191, 0.12), transparent 78%),
+    linear-gradient(148deg, rgba(32, 52, 74, 0.58), rgba(8, 17, 29, 0.8) 68%, rgba(5, 12, 22, 0.9));
+  box-shadow:
+    inset 0 1px 0 rgba(245, 246, 247, 0.22),
+    inset 0 2px 0 rgba(76, 229, 228, 0.1),
+    inset 0 -30px 58px rgba(3, 10, 20, 0.26),
+    0 28px 70px rgba(2, 8, 17, 0.48),
+    0 0 54px rgba(52, 149, 160, 0.08);
+}
+
+.germany-whatsapp-pilot .solution-hero::before {
+  top: -11rem;
+  right: -15rem;
+  width: min(55vw, 46rem);
+  height: min(34vw, 28rem);
+  border-color: rgba(76, 229, 228, 0.42);
+  box-shadow:
+    0 0 0 2.5rem rgba(76, 229, 228, 0.026),
+    0 0 0 5.8rem rgba(114, 66, 255, 0.07),
+    0 0 24px rgba(76, 229, 228, 0.12);
+}
+
+.germany-whatsapp-pilot .solution-hero-copy {
+  isolation: isolate;
+}
+
+.germany-whatsapp-pilot .solution-hero-copy::before {
+  content: "";
+  position: absolute;
+  top: -18%;
+  left: -12%;
+  z-index: -1;
+  width: 66%;
+  height: 54%;
+  background: linear-gradient(124deg, rgba(245, 246, 247, 0.075), rgba(76, 229, 228, 0.035) 34%, transparent 72%);
+  filter: blur(12px);
+  opacity: 0.82;
+  pointer-events: none;
+}
+
+.germany-whatsapp-pilot .solution-title {
+  color: #f5f6f7;
+  text-shadow:
+    0 0 1px rgba(245, 246, 247, 0.98),
+    0 0 16px rgba(245, 246, 247, 0.06),
+    0 0 26px rgba(76, 229, 228, 0.08);
+}
+
+.germany-whatsapp-pilot .solution-hero-actions .button,
+.germany-whatsapp-pilot .solution-cta-actions .button {
+  background:
+    linear-gradient(113deg, rgba(245, 246, 247, 0.46), transparent 24%, transparent 68%, rgba(30, 91, 110, 0.34)),
+    linear-gradient(180deg, #76f3ee 0%, #4ce5e4 44%, #3495a0 100%);
+  box-shadow:
+    inset 0 1px 0 rgba(245, 246, 247, 0.72),
+    inset 0 -2px 0 rgba(30, 91, 110, 0.38),
+    0 0 0 1px rgba(76, 229, 228, 0.55),
+    0 10px 22px rgba(2, 9, 17, 0.36),
+    0 0 34px rgba(76, 229, 228, 0.3);
+}
+
+.germany-whatsapp-pilot .solution-hero-actions .button::before,
+.germany-whatsapp-pilot .solution-cta-actions .button::before {
+  top: 2px;
+  left: 13%;
+  width: 44%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, rgba(245, 246, 247, 0.9), transparent);
+  box-shadow: 0 0 12px rgba(245, 246, 247, 0.5);
+}
+
+.germany-whatsapp-pilot .solution-hero-actions .button::after,
+.germany-whatsapp-pilot .solution-cta-actions .button::after {
+  content: "";
+  position: absolute;
+  top: 13%;
+  left: 46%;
+  width: 23%;
+  height: 74%;
+  background: linear-gradient(105deg, transparent, rgba(245, 246, 247, 0.18), transparent);
+  transform: skewX(-18deg);
+  pointer-events: none;
+}
+
+.germany-whatsapp-pilot .solution-hero-actions .button:hover,
+.germany-whatsapp-pilot .solution-cta-actions .button:hover {
+  background:
+    linear-gradient(113deg, rgba(245, 246, 247, 0.58), transparent 27%, transparent 64%, rgba(30, 91, 110, 0.28)),
+    linear-gradient(180deg, #8af7f2 0%, #63eee9 44%, #3fa8b0 100%);
+  box-shadow:
+    inset 0 1px 0 rgba(245, 246, 247, 0.88),
+    inset 0 -2px 0 rgba(30, 91, 110, 0.34),
+    0 0 0 1px rgba(76, 229, 228, 0.72),
+    0 13px 27px rgba(2, 9, 17, 0.4),
+    0 0 42px rgba(76, 229, 228, 0.42);
+}
+
+.germany-whatsapp-pilot .solution-hero-card {
+  background:
+    linear-gradient(114deg, rgba(245, 246, 247, 0.11), transparent 21%, transparent 66%, rgba(76, 229, 228, 0.055)),
+    radial-gradient(ellipse 46% 45% at 87% 13%, rgba(76, 229, 228, 0.14), transparent 74%),
+    radial-gradient(ellipse 38% 56% at 4% 90%, rgba(114, 66, 255, 0.12), transparent 76%),
+    linear-gradient(145deg, rgba(32, 52, 74, 0.56), rgba(8, 17, 29, 0.82));
+  border-color: rgba(180, 203, 208, 0.32);
+  box-shadow:
+    inset 0 1px 0 rgba(245, 246, 247, 0.2),
+    inset 0 -18px 30px rgba(3, 10, 20, 0.22),
+    0 20px 48px rgba(2, 8, 17, 0.42),
+    0 0 32px rgba(76, 229, 228, 0.1);
+  -webkit-backdrop-filter: blur(14px) saturate(142%) brightness(114%);
+  backdrop-filter: blur(14px) saturate(142%) brightness(114%);
+}
+
+.germany-whatsapp-pilot .solution-hero-card::before {
+  top: 0;
+  left: 8%;
+  width: 56%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, rgba(245, 246, 247, 0.74) 22%, rgba(76, 229, 228, 0.46) 66%, transparent);
+  box-shadow: 0 0 16px rgba(76, 229, 228, 0.32);
+}
+
+.germany-whatsapp-pilot .solution-card {
+  background:
+    linear-gradient(112deg, rgba(245, 246, 247, 0.06), transparent 24%),
+    linear-gradient(145deg, rgba(32, 52, 74, 0.62), rgba(10, 20, 34, 0.78));
+  box-shadow:
+    inset 0 1px 0 rgba(245, 246, 247, 0.09),
+    inset 0 -12px 20px rgba(3, 10, 20, 0.12),
+    0 14px 32px rgba(2, 8, 17, 0.28);
+}
+
+.germany-whatsapp-pilot .solution-card--glass {
+  background:
+    linear-gradient(108deg, rgba(245, 246, 247, 0.11), transparent 21%),
+    radial-gradient(ellipse 40% 65% at 96% 8%, rgba(76, 229, 228, 0.08), transparent 74%),
+    linear-gradient(145deg, rgba(32, 52, 74, 0.55), rgba(10, 20, 34, 0.76));
+  border-color: rgba(180, 203, 208, 0.25);
+  -webkit-backdrop-filter: blur(10px) saturate(128%) brightness(108%);
+  backdrop-filter: blur(10px) saturate(128%) brightness(108%);
+}
+
+.germany-whatsapp-pilot .solution-card--module {
+  background:
+    radial-gradient(ellipse 50% 55% at 7% 6%, rgba(114, 66, 255, 0.08), transparent 74%),
+    linear-gradient(145deg, rgba(32, 52, 74, 0.56), rgba(10, 20, 34, 0.8));
+}
+
+.germany-whatsapp-pilot .solution-final-cta,
+.germany-whatsapp-pilot .solution-mid-cta {
+  background:
+    linear-gradient(112deg, rgba(245, 246, 247, 0.08), transparent 20%),
+    radial-gradient(ellipse 42% 70% at 88% 20%, rgba(76, 229, 228, 0.15), transparent 76%),
+    radial-gradient(ellipse 36% 60% at 10% 86%, rgba(114, 66, 255, 0.12), transparent 78%),
+    linear-gradient(145deg, rgba(32, 52, 74, 0.52), rgba(8, 17, 29, 0.82));
+}
+
+@media (max-width: 560px) {
+  .germany-whatsapp-pilot .solution-hero,
+  .germany-whatsapp-pilot .solution-section,
+  .germany-whatsapp-pilot .solution-final-cta {
+    -webkit-backdrop-filter: blur(9px) saturate(132%) brightness(108%);
+    backdrop-filter: blur(9px) saturate(132%) brightness(108%);
+  }
+
+  .germany-whatsapp-pilot .solution-hero::before {
+    top: -8rem;
+    right: -15rem;
+    width: 31rem;
+    height: 17rem;
+  }
+
+  .germany-whatsapp-pilot .solution-hero-copy::before {
+    top: -8%;
+    left: -8%;
+    width: 78%;
+    height: 32%;
+  }
+}
