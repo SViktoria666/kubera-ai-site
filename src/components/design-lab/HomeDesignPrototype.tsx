@@ -1,19 +1,10 @@
 "use client";
 
-import { LiquidGlass } from "@sohumsuthar/liquid-glass";
 import Link from "next/link";
 import { useEffect } from "react";
 import { LossCalculator } from "@/components/sections/LossCalculator";
 import { PricingPackages } from "@/components/sections/PricingPackages";
 import { buildSolutionLinks, getHomeFeaturedUseCaseLinks, solutionHubRoute } from "@/content/internal-linking";
-
-const glassStyle = {
-  "--lg-radius": "28px",
-  "--lg-blur": "4px",
-  "--lg-saturate": "168%",
-  "--lg-brightness": "0.86",
-  "--lg-contrast": "1.08",
-} as React.CSSProperties;
 
 export function HomeDesignPrototype() {
   const featuredSolutionLinks = buildSolutionLinks([
@@ -90,11 +81,6 @@ export function HomeDesignPrototype() {
               <span className="home-prototype-sphere-core" />
               <span className="home-prototype-sphere-reflection" />
             </div>
-            <LiquidGlass className="home-prototype-signal-panel" lens macro lensOptions={{ bezel: 18, refraction: 1.7, dispersion: 5 }} style={glassStyle}>
-              <span className="home-prototype-signal-label">LIVE SYSTEM MAP</span>
-              <strong>Signal in. Clarity out.</strong>
-              <span>Automation that keeps the human decision visible.</span>
-            </LiquidGlass>
           </div>
         </div>
       </section>

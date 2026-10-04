@@ -412,6 +412,22 @@ Owner reviews the isolated material lab first. Only after the material itself is
 
 Owner reviews V5.1 background lighting in the isolated Material Lab. Do not integrate Germany, redesign the CTA, add the planet/workflow, merge, deploy, or propagate before explicit owner feedback.
 
+## THEME ARCHITECTURE + UI KIT FOUNDATION / PHASE 1 — 2026-10-05
+
+- Theme Architecture Phase 1 is implemented only in isolated Design Lab on `design/theme-architecture-ui-kit-20261005`; base/recovery HEAD was `cc45fe70cc66fcf8c2cb404ef4d60946b3d1b5f8`.
+- UI Kit route: `/design-lab/ui-kit`; `noindex,nofollow,nocache`, not linked from production navigation, not added to sitemap. Real Home, Germany pilot, shared production output, main, and production remain unchanged.
+- Current / Kubera Neon switching uses the same component DOM and geometry with scoped semantic appearance tokens only. Theme values do not control layout, typography geometry, breakpoints, content, routing, or SEO.
+- New bounded primitives: `KuberaButton` with primary/secondary/language/icon/compact variants and three material candidates; glass card using the already proven `@sohumsuthar/liquid-glass@3.1.0`; badge; input; select; switch; theme switcher; geometry-lock guard.
+- Owner-rejected `Signal in. Clarity out.` floating detail was removed only from `HomeDesignPrototype`; real Home was not modified. Production EN/RU buttons were not modified; lab EN/RU examples consume the new primitive.
+- Primary glass foundation: MIT `@sohumsuthar/liquid-glass@3.1.0`, selected from bounded research; no competing glass package installed. Resource seed for Master Roadmap #23: `reports/evidence/theme-architecture-ui-kit-2026-10-05/resource-seed.json`.
+- Forensic scan: 241 hex occurrences, 558 rgb/rgba occurrences, 0 HSL occurrences in `src`; legacy values are semantically classified in `reports/KUBERA_THEME_ARCHITECTURE_UI_KIT_PHASE1_2026-10-05.md`. No blind global replacement performed.
+- Browser evidence root: `C:\Users\Admin\kubera-visual-audit\evidence\ui-kit-20261005\`; exact viewport captures for CURRENT and KUBERA NEON at 390/768/1024/1366/1440. UI Kit render/geometry guard PASS; D1 critical suite 24/24 PASS against verified local server; typecheck/build/SEO validation PASS (213 built indexable routes, 0 warnings). External Google font request is network-blocked in the sandbox; local fallback renders and no application runtime error was introduced.
+- Owner approval: `PENDING`; theme approval, button approval, production migration, and site-wide rollout are not authorized.
+
+## EXACT NEXT STEP
+
+Owner compares CURRENT vs KUBERA NEON in the visible UI Kit browser and selects the glass/neon material direction. Do not migrate production pages or continue Home redesign.
+
 ## DESIGN MODERNIZATION / HOME DESIGN PROTOTYPE V1 — 2026-10-04
 
 - Prototype branch: `design/home-design-prototype-v1-20261004`.

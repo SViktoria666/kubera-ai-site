@@ -1,0 +1,60 @@
+{
+  "purpose": "Bounded seed for Master Roadmap #23 — Kubera Web Design Knowledge Base / UI Resource Library.",
+  "created": "2026-10-05",
+  "resources": [
+    {
+      "name": "@sohumsuthar/liquid-glass",
+      "url": "https://github.com/sohumsuthar/liquid-glass",
+      "category": "Liquid glass / SVG refraction",
+      "purpose": "Primary material foundation for focal glass surfaces.",
+      "stack": "React 18+, CSS, SVG displacement/lens filters",
+      "license": "MIT (verified in installed package and repository)",
+      "commercialUse": "YES",
+      "browserSupport": "Chromium verified in Kubera lab; fallback path retained for unsupported filter behavior",
+      "mobile": "Use selectively; avoid many concurrent lenses",
+      "accessibility": "Content remains normal DOM; pair with contrast/focus states; reduced-motion CSS fallback",
+      "performanceNotes": "Existing V5 lab performance PASS; package documents performance gates and per-element lens cost",
+      "whenToUse": "Focal panels/cards where real transmission/refraction improves hierarchy",
+      "whenNotToUse": "Every card, dense text surfaces, or broad navigation chrome",
+      "status": "KUBERA APPROVED",
+      "codexNotes": "Already proven at 625e825…; no new dependency install in this task.",
+      "evidence": ["local node_modules package.json", "reports/KUBERA_LIQUID_GLASS_MATERIAL_LAB_V5_2026-10-04.md", "https://github.com/sohumsuthar/liquid-glass"]
+    },
+    {
+      "name": "kucukkanat/liquid-glass",
+      "url": "https://github.com/kucukkanat/liquid-glass",
+      "category": "Liquid glass / React UI kit",
+      "purpose": "Reference implementation for SVG displacement, chromatic aberration, and reusable controls.",
+      "stack": "React, platform SVG/CSS; package workspace",
+      "license": "MIT (repository page verified)",
+      "commercialUse": "YES",
+      "browserSupport": "Repository documents Safari-safe filter IDs; verify in Kubera before adoption",
+      "mobile": "Not adopted; requires bounded mobile testing",
+      "accessibility": "Native DOM controls are possible; verify focus and contrast per component",
+      "performanceNotes": "Repository describes map reuse and no runtime rendering dependency; no Kubera benchmark performed",
+      "whenToUse": "Alternative if the current foundation cannot cover a broader control kit",
+      "whenNotToUse": "Do not install as a second competing foundation without a measured gap",
+      "status": "REVIEWED",
+      "codexNotes": "Reference only; not installed.",
+      "evidence": ["https://github.com/kucukkanat/liquid-glass"]
+    },
+    {
+      "name": "LeonardSEO/liquid-glass-react",
+      "url": "https://github.com/LeonardSEO/liquid-glass-react",
+      "category": "Liquid glass / React-Next reference",
+      "purpose": "Lightweight alternative using a single SVG feDisplacementMap path.",
+      "stack": "React/Next.js, CSS backdrop-filter, SVG displacement map",
+      "license": "MIT (repository page verified)",
+      "commercialUse": "YES",
+      "browserSupport": "Graceful blur fallback is documented; cross-browser adoption testing not performed",
+      "mobile": "Potentially suitable due to small runtime footprint; not adopted",
+      "accessibility": "Native DOM approach; must be paired with explicit focus/contrast states",
+      "performanceNotes": "Repository describes no WebGL/canvas and small runtime cost; no Kubera benchmark performed",
+      "whenToUse": "Lightweight fallback candidate when full per-element lens fidelity is unnecessary",
+      "whenNotToUse": "Do not replace the proven foundation without visual parity testing",
+      "status": "REVIEWED",
+      "codexNotes": "Reference only; not installed.",
+      "evidence": ["https://github.com/LeonardSEO/liquid-glass-react"]
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "artifact": "Kubera Theme Architecture + UI Kit Foundation",
+  "route": "/design-lab/ui-kit",
+  "indexable": false,
+  "themeStates": ["current", "kubera-neon"],
+  "viewports": ["390x844", "768x1024", "1024x768", "1366x768", "1440x900"],
+  "screenshots": "C:\\Users\\Admin\\kubera-visual-audit\\evidence\\ui-kit-20261005\\{theme}-{viewport}.png",
+  "focusedCaptures": ["button-materials", "states", "language-buttons", "badge", "glass-card", "form-controls", "mobile"],
+  "sha": "final branch HEAD recorded in the external evidence manifest",
+  "ownerApproval": "PENDING",
+  "production": "UNCHANGED",
+  "main": "UNCHANGED"
+}
