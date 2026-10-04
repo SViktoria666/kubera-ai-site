@@ -29,7 +29,7 @@ No external code was copied and no new dependency was installed in this phase.
 | Approved UI Kit | preserved at the base commit and parent branch `design/theme-architecture-ui-kit-20261005` |
 | Approved material dependency | `@sohumsuthar/liquid-glass@3.1.0`, MIT, already installed |
 
-The remote fetch was attempted before this work but GitHub was unreachable from the shell (`Failed to connect to github.com port 443`). Remote persistence therefore requires a later push/verification step; it is not inferred from local refs.
+The remote fetch was attempted before this work but GitHub was unreachable from the shell (`Failed to connect to github.com port 443`). The isolated branch was subsequently pushed successfully; the local tracking ref is `f5a415242df5f82115b03647e50ab95970ff6102`. A later `ls-remote` verification was network-blocked, so the push command output and matching local tracking ref are the available persistence evidence.
 
 ## Existing Kubera foundation
 

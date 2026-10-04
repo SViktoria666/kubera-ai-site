@@ -496,7 +496,7 @@ Owner reviews the actually rendered V1.1 in the visible browser. Do not begin V1
 
 ### Phase 1 persistence state
 
-- GitHub fetch was attempted before this work and was blocked by shell network connectivity. Remote branch persistence and remote SHA verification remain pending until a permitted push succeeds.
+- GitHub fetch was attempted before this work and was blocked by shell network connectivity. The bounded branch was then pushed successfully to `origin/design/kubera-design-engineering-phase1-20261005` at local tracking SHA `f5a415242df5f82115b03647e50ab95970ff6102`. A later `ls-remote` verification was network-blocked; the push output and matching tracking ref are the available persistence evidence.
 - Owner approval of the material remains recorded as approved for the material family; site-wide migration and production rollout remain unauthorized.
 
 ## EXACT NEXT STEP
