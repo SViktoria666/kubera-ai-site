@@ -114,3 +114,21 @@ Automated technical PASS is not owner approval. The pilot is now **AWAITING OWNE
 `after-5690200` is the original V1 after evidence captured from implementation SHA `56902003cd2ff833a26ef60cb1f5ec693097dc93`, then documented on pilot head `455621f4db4a5db0298c7037e1b23645399f9aa1`.
 
 `v2-6bc0dea` is the V2 after evidence captured from exact V2 SHA `6bc0deae4c06cff25524e0254d09545713b67c1c`. V1 evidence was not overwritten or renamed.
+
+## V3 polished light / glass depth refinement — 2026-10-04
+
+- V2 remains recoverable at `6bc0deae4c06cff25524e0254d09545713b67c1c`.
+- V3 implementation SHA: `a7a1805b3cfa4e6887de7140bc29c4974f607520`.
+- The owner-provided reference image was inspected first at `C:\Users\Admin\Desktop\Изображение ChatGPT 4 окт. 2026 г., 02_51_45.png`. Its relevant principles were translated into an original Kubera treatment: dark falloff, unequal partial off-canvas paths, purposeful path nodes, directional edge light, crisp white/cyan hierarchy, and a luminous resting CTA.
+- V2 target-like rings were rebuilt as masked partial arcs with different centers, sizes, rotations, opacity, and fade. They do not form a shared concentric target system.
+- V3 added CSS-only layered lighting: deep navy base, localized blue/violet/cyan fields, translucent surface depth, directional specular edges, restrained backdrop blur on pilot surfaces, and CTA base-state gloss/glow. No new raster, WebGL, particle system, or heavy animation was added.
+- V3 evidence: `C:\Users\Admin\kubera-visual-audit\evidence\design-pilot\v3-a7a1805\manifest.json`; it includes base/hover CTA captures, five viewport captures, and three sibling controls.
+- V3 identity stayed unchanged at 390, 768, 1024, 1366, and 1440: title, canonical, description, H1, JSON-LD count, and document containment all passed. Siblings remained unmarked and outside pilot styling.
+- `npm run typecheck`: PASS; production build: PASS (219 static pages); `npm run validate:seo`: PASS (213 built indexable routes, 0 warnings); D1 suite: 24/24 PASS.
+- V3 self-review: arcs read as fragments of a larger system, CTA is luminous before hover and stronger on hover, H1 remains crisp, surfaces have directional light/depth, and dark contrast remains. Owner visual approval remains `PENDING`.
+
+### V3 evidence lineage
+
+Baseline `before-8dcd0e1` → V1 `after-5690200` → V2 `v2-6bc0dea` → V3 `v3-a7a1805`.
+
+V1 implementation was `56902003cd2ff833a26ef60cb1f5ec693097dc93`, documented at pilot head `455621f4db4a5db0298c7037e1b23645399f9aa1`. V2 implementation was `6bc0deae4c06cff25524e0254d09545713b67c1c`. V3 is `a7a1805b3cfa4e6887de7140bc29c4974f607520`. Earlier evidence was not overwritten.

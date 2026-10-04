@@ -356,3 +356,17 @@ Owner reviews genuine BEFORE/AFTER evidence for the Germany WhatsApp pilot. Do n
 ## EXACT NEXT STEP
 
 Owner inspects the live V2 at localhost and reviews V2 evidence. Do not merge, deploy, propagate, or change SEO/content until explicit owner visual feedback.
+
+## DESIGN MODERNIZATION / PHASE 2 PILOT V3 — 2026-10-04
+
+- V2 remains recoverable at `6bc0deae4c06cff25524e0254d09545713b67c1c`.
+- V3 implementation: `a7a1805b3cfa4e6887de7140bc29c4974f607520` on the same Germany-only pilot branch.
+- V3 visual refinement used the attached owner reference: V2 target-like rings were rebuilt into masked partial orbital arcs; surfaces gained layered translucent depth/specular edges; CTA has a luminous base state; H1 remains crisp and bright.
+- V3 evidence: `C:\Users\Admin\kubera-visual-audit\evidence\design-pilot\v3-a7a1805` with base/hover CTA states and five viewports.
+- V3 automated QA: typecheck PASS; production-like build PASS; `npm run validate:seo` PASS; D1 suite 24/24 PASS; five viewport containment and sibling isolation PASS.
+- SEO/copy/metadata/URL/canonical/assistant geometry/workflow semantics remain unchanged. Main and production remain unchanged.
+- Owner visual approval: `PENDING`. Site-wide rollout: `NOT AUTHORIZED`.
+
+## EXACT NEXT STEP
+
+Owner inspects the live V3 and decides what still needs refinement. Do not merge, deploy, propagate, or change SEO/content until explicit owner visual feedback.
