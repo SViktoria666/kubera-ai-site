@@ -123,6 +123,26 @@ the established manual teardown stop after reporting all 24 passing tests.
 Owner visual approval remains `PENDING`. Real Home, siblings, main, and
 production remain unchanged. Site-wide rollout is `NOT AUTHORIZED`.
 
+## V1.1 owner-browser recovery
+
+The earlier `READY FOR OWNER REVIEW` claim was invalidated after the owner
+reported raw browser-default rendering. The failure was reproduced at the
+exact URL: port 3105 returned the HTML shell, but the CSS request
+`/_next/static/css/app/(site)/layout.css?...` and route JS chunks returned
+404. Chromium consequently computed Times New Roman/32px H1 styles and a
+transparent page background. The port was owned by stale PID 5892; the
+generated `.next` cache in this isolated worktree was cleared and the server
+was restarted from the verified V1.1 worktree/HEAD.
+
+After recovery, CSS returned 200, all six required Next JS chunks returned 200,
+and normal load, hard reload, and a new tab computed Space Grotesk H1 styles,
+dark header, dark page background, and the cyan CTA. A new scoped browser guard
+at `tests/browser/home-design-lab.spec.ts` fails at desktop/mobile/tablet if
+critical prototype styles fall back to browser defaults. It passed 3/3. The
+existing D1 suite passed 24/24 against the repaired 3105 server.
+
+No design source, real Home, main, production, or deployment was changed.
+
 ## EXACT NEXT STEP
 
 Owner reviews Home Design Prototype V1.1 in the visible browser at

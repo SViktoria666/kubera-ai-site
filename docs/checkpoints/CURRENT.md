@@ -441,3 +441,17 @@ Owner scrolls through and reviews the complete Home Design Prototype V1. Do not 
 ## EXACT NEXT STEP
 
 Owner reviews Home Design Prototype V1.1 in the visible browser at `/design-lab/home-v1`. Do not modify real Home, merge, deploy, or propagate before explicit owner feedback.
+
+## HOME PROTOTYPE V1.1 OWNER-BROWSER RECOVERY — 2026-10-04
+
+- Previous READY claim invalidated: port 3105 served HTML while the required CSS and route chunks returned 404, producing raw browser-default rendering.
+- Proven root cause: stale/wrong Next dev artifact/server state on PID 5892. The process owning 3105 was stopped; only this worktree’s generated `.next` cache was cleared; the server was restarted from V1.1 HEAD `8461a048061b1cae54b3814ecf05068036527cef`.
+- Recovered asset checks: CSS 200; six required JS chunks 200; no required stylesheet/chunk 404.
+- Normal load, hard reload, and new tab computed V1.1 styles successfully. Exact owner URL: `http://localhost:3105/design-lab/home-v1`.
+- Added `tests/browser/home-design-lab.spec.ts` as a narrowly scoped catastrophic-CSS guard. Guard: 3/3 PASS at desktop/mobile/tablet. D1: 24/24 PASS against the same repaired server.
+- Typecheck PASS; build PASS; `npm run validate:seo` PASS with 213 built indexable routes and 0 warnings.
+- No design source, real Home, main, production, or deployment changed. Owner visual approval remains `PENDING`.
+
+## EXACT NEXT STEP
+
+Owner reviews the actually rendered V1.1 in the visible browser. Do not begin V1.2, Theme Architecture, UI library work, merge, deploy, or rollout.
