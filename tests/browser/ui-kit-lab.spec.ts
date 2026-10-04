@@ -18,19 +18,28 @@ test.describe("isolated UI Kit render and theme guard", () => {
       if (!lab || !h1 || !button || !header) throw new Error("UI Kit critical elements are missing");
       const h1Style = getComputedStyle(h1);
       const buttonStyle = getComputedStyle(button);
+      const boxes = [".ui-kit-button", ".ui-kit-button--secondary", ".ui-kit-button--language", ".ui-kit-badge", ".ui-kit-glass-card", ".ui-kit-form-panel input", ".ui-kit-form-panel select", ".ui-kit-switch"].map((selector) => {
+        const node = document.querySelector<HTMLElement>(selector);
+        const box = node?.getBoundingClientRect();
+        return [selector, box ? { width: box.width, height: box.height, x: box.x, y: box.y } : null];
+      });
       return {
+        activeTheme: document.querySelector<HTMLElement>("[data-testid='active-theme']")?.textContent,
         h1Family: h1Style.fontFamily,
         h1Size: Number.parseFloat(h1Style.fontSize),
         buttonBackground: buttonStyle.backgroundImage || buttonStyle.backgroundColor,
         buttonWidth: button.getBoundingClientRect().width,
         buttonHeight: button.getBoundingClientRect().height,
         headerWidth: header.getBoundingClientRect().width,
+        boxes,
       };
     });
 
     expect(initial.h1Family).toContain("Space Grotesk");
     expect(initial.h1Size).toBeGreaterThan(32);
     expect(initial.buttonBackground).not.toBe("rgba(0, 0, 0, 0)");
+    expect(initial.activeTheme).toContain("CURRENT / LEGACY");
+    const beforeImage = await page.screenshot();
 
     await page.getByRole("button", { name: "Kubera Neon" }).click();
     const neon = await page.evaluate(() => {
@@ -38,13 +47,22 @@ test.describe("isolated UI Kit render and theme guard", () => {
       const lab = document.querySelector<HTMLElement>(".ui-kit-lab");
       if (!button || !lab) throw new Error("UI Kit theme controls did not render");
       const style = getComputedStyle(button);
-      return { theme: lab.dataset.theme, background: style.backgroundImage || style.backgroundColor, width: button.getBoundingClientRect().width, height: button.getBoundingClientRect().height };
+      const boxes = [".ui-kit-button", ".ui-kit-button--secondary", ".ui-kit-button--language", ".ui-kit-badge", ".ui-kit-glass-card", ".ui-kit-form-panel input", ".ui-kit-form-panel select", ".ui-kit-switch"].map((selector) => {
+        const node = document.querySelector<HTMLElement>(selector);
+        const box = node?.getBoundingClientRect();
+        return [selector, box ? { width: box.width, height: box.height, x: box.x, y: box.y } : null];
+      });
+      return { theme: lab.dataset.theme, activeTheme: document.querySelector<HTMLElement>("[data-testid='active-theme']")?.textContent, background: style.backgroundImage || style.backgroundColor, width: button.getBoundingClientRect().width, height: button.getBoundingClientRect().height, boxes };
     });
+    const afterImage = await page.screenshot();
 
     expect(neon.theme).toBe("kubera-neon");
+    expect(neon.activeTheme).toContain("KUBERA NEON");
     expect(neon.background).not.toBe(initial.buttonBackground);
     expect(neon.width).toBeCloseTo(initial.buttonWidth, 1);
     expect(neon.height).toBeCloseTo(initial.buttonHeight, 1);
+    expect(Buffer.compare(beforeImage, afterImage)).not.toBe(0);
+    expect(neon.boxes).toEqual(initial.boxes);
     expect(runtimeErrors).toEqual([]);
   });
 });

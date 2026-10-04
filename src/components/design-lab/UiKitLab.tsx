@@ -106,6 +106,11 @@ export function UiKitLab() {
         </div>
         <div className="ui-kit-header-tools">
           <ThemeSwitcher theme={theme} onChange={setTheme} />
+          <div className="ui-kit-active-theme" aria-live="polite" data-testid="active-theme">
+            <span className="ui-kit-control-label">Active appearance</span>
+            <strong>{theme === "current" ? "CURRENT / LEGACY" : "KUBERA NEON"}</strong>
+            <span className={`ui-kit-theme-swatch ui-kit-theme-swatch--${theme}`} aria-hidden="true" />
+          </div>
           <GeometryLock theme={theme} />
         </div>
       </header>
@@ -115,7 +120,7 @@ export function UiKitLab() {
         <div className="ui-kit-material-grid">
           {(["clean", "optical", "chromatic"] as MaterialVariant[]).map((material) => (
             <article className="ui-kit-sample-panel" key={material}>
-              <div className="ui-kit-sample-label"><span>{material === "clean" ? "A" : material === "optical" ? "B" : "C"}</span><strong>{material} cyan glass</strong></div>
+              <div className="ui-kit-sample-label"><span>{material === "clean" ? "A" : material === "optical" ? "B" : "C"}</span><strong>{material === "clean" ? "Artisan Cyan Glass" : material === "optical" ? "Optical Cyan Glass" : "Chromatic Cyan Glass"}</strong></div>
               <KuberaButton material={material}>Discuss my project</KuberaButton>
               <small>Normal · hover · focus-visible · active · disabled</small>
             </article>

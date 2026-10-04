@@ -3836,6 +3836,12 @@ body:has(.ui-kit-lab) .ai-assistant-widget {
 .ui-kit-lab-header p:not(.ui-kit-kicker) { max-width: 56ch; font-size: 1.05rem; }
 .ui-kit-header-tools { display: grid; gap: 1rem; min-width: 250px; }
 .ui-kit-theme-switcher, .ui-kit-geometry-lock { padding: .8rem; border: 1px solid var(--ui-border); border-radius: 16px; background: rgba(4,10,20,.28); }
+.ui-kit-active-theme { display: grid; grid-template-columns: 1fr auto; gap: .2rem .75rem; align-items: center; padding: .8rem; border: 1px solid var(--ui-border-active); border-radius: 16px; background: linear-gradient(135deg, color-mix(in srgb, var(--ui-accent) 12%, transparent), rgba(4,10,20,.32)); box-shadow: 0 0 24px var(--ui-glow); }
+.ui-kit-active-theme .ui-kit-control-label { grid-column: 1 / -1; margin-bottom: .15rem; }
+.ui-kit-active-theme strong { color: var(--ui-text); font-size: .82rem; letter-spacing: .08em; }
+.ui-kit-theme-swatch { width: 2.2rem; height: 1rem; border: 1px solid var(--ui-border-active); border-radius: 999px; box-shadow: 0 0 16px var(--ui-glow); }
+.ui-kit-theme-swatch--current { background: linear-gradient(90deg, #1a0533, #327aff, #8e7cff); }
+.ui-kit-theme-swatch--kubera-neon { background: linear-gradient(90deg, #0c1726, #4ce5e4, #6d78ff); }
 .ui-kit-segmented { display: grid; grid-template-columns: 1fr 1fr; gap: .3rem; }
 .ui-kit-segmented button { min-height: 44px; border: 1px solid transparent; border-radius: 10px; background: transparent; color: var(--ui-text-secondary); cursor: pointer; font: inherit; font-size: .82rem; }
 .ui-kit-segmented button:hover, .ui-kit-segmented button:focus-visible, .ui-kit-segmented button.is-selected { border-color: var(--ui-border-active); background: var(--ui-surface); color: var(--ui-text); }

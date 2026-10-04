@@ -60,3 +60,9 @@ Fallback strategy: Chromium uses the installed refraction/lens path; Safari and 
 Evidence root: `C:\Users\Admin\kubera-visual-audit\evidence\ui-kit-20261005\` (CURRENT and KUBERA NEON captures, focused primitive captures, and viewport manifest). The owner gate remains `PENDING`; automated checks do not authorize theme approval or site-wide migration.
 
 Next exact step: owner compares CURRENT vs KUBERA NEON and selects the glass/neon material direction.
+
+## Owner interaction recovery
+
+The first owner review found that clicking the theme control did not communicate an obvious comparison state. Forensic reproduction showed the handler changed `data-theme`, semantic variables, computed backgrounds, and button styles while preserving geometry; the missing piece was review affordance and a guard that proved rendered appearance changed. The lab now exposes an `aria-live` active appearance label and swatch, and names the simultaneous material specimens explicitly: A — Artisan Cyan Glass, B — Optical Cyan Glass, C — Chromatic Cyan Glass.
+
+The browser regression guard now asserts theme status, computed style change, screenshot-byte change, and equality of representative geometry. It also covers hard reload/new-tab behavior through the owner-browser evidence run.

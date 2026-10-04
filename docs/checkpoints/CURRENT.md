@@ -428,6 +428,19 @@ Owner reviews V5.1 background lighting in the isolated Material Lab. Do not inte
 
 Owner compares CURRENT vs KUBERA NEON in the visible UI Kit browser and selects the glass/neon material direction. Do not migrate production pages or continue Home redesign.
 
+## UI KIT OWNER-INTERACTION RECOVERY — 2026-10-05
+
+- Owner-reported comparison failure was reproduced against port 3105 and treated as a review UX defect, not a design approval.
+- Root cause: the original lab relied on computed-token/selected-control state without an explicit active-theme readout; the three samples were labeled only by material shorthand (`clean`, `optical`, `chromatic`). The handler itself was functional, but the review surface did not make the state change sufficiently explicit.
+- Fix is isolated to the UI Kit: added an `aria-live` active appearance readout and theme swatches; renamed simultaneous specimens `A — Artisan Cyan Glass`, `B — Optical Cyan Glass`, and `C — Chromatic Cyan Glass`.
+- Regression guard now checks attribute, semantic status text, computed palette/style change, screenshot-byte difference, and geometry equality across primary/secondary/language/badge/glass/form controls/switch.
+- Browser recovery proof: CSS/JS requests 200; no asset failures; no application hydration/page errors; normal load, hard reload, and new tab verified; production-like server remains on port 3105 from the pilot worktree.
+- Owner visual approval remains `PENDING`.
+
+## EXACT NEXT STEP
+
+Owner repeats CURRENT ↔ KUBERA NEON in the visible browser and compares A/B/C material specimens. Do not migrate production or declare visual approval.
+
 ## DESIGN MODERNIZATION / HOME DESIGN PROTOTYPE V1 — 2026-10-04
 
 - Prototype branch: `design/home-design-prototype-v1-20261004`.
