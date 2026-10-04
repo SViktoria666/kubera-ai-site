@@ -3719,6 +3719,7 @@ input[type="range"] {
   padding: 0 15px;
   font-size: 13px;
 }
+}
 
 .route-transition {
   animation: route-fade-in 180ms ease both;
@@ -3849,6 +3850,14 @@ body:has(.ui-kit-lab) .ai-assistant-widget {
 .ui-kit-geometry-lock span { color: var(--ui-text-secondary); font-size: .8rem; }
 .ui-kit-geometry-lock strong { color: var(--ui-accent); font-size: .75rem; letter-spacing: .12em; }
 .ui-kit-geometry-lock small { grid-column: 1 / -1; color: var(--ui-text-muted); }
+.ui-kit-token-panel { display: grid; grid-template-columns: minmax(220px, .7fr) minmax(0, 1.3fr); gap: 1.25rem; max-width: 1180px; margin: 0 auto 2rem; padding: 1.1rem; border: 1px solid var(--ui-border); border-radius: 20px; background: linear-gradient(135deg, color-mix(in srgb, var(--ui-surface-strong) 82%, transparent), color-mix(in srgb, var(--ui-bg-elevated) 55%, transparent)); box-shadow: 0 20px 55px rgba(0,0,0,.16); }
+.ui-kit-token-panel h2 { margin: 0; color: var(--ui-text); font-size: clamp(1.2rem, 2vw, 1.65rem); line-height: 1.08; }
+.ui-kit-token-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: .6rem; }
+.ui-kit-token { display: flex; min-width: 0; align-items: center; gap: .6rem; padding: .55rem .65rem; border: 1px solid var(--ui-border); border-radius: 12px; background: color-mix(in srgb, var(--ui-bg) 48%, transparent); }
+.ui-kit-token-swatch { flex: 0 0 1.8rem; width: 1.8rem; height: 1.8rem; border: 1px solid color-mix(in srgb, var(--ui-text) 32%, transparent); border-radius: 8px; box-shadow: 0 0 14px color-mix(in srgb, var(--ui-glow) 65%, transparent); }
+.ui-kit-token span:last-child { display: grid; min-width: 0; gap: .12rem; }
+.ui-kit-token strong { overflow: hidden; color: var(--ui-text); font-size: .72rem; text-overflow: ellipsis; white-space: nowrap; }
+.ui-kit-token small { overflow: hidden; color: var(--ui-text-muted); font-size: .62rem; text-overflow: ellipsis; white-space: nowrap; }
 .ui-kit-section { padding: 4rem 0; }
 .ui-kit-section-heading { display: flex; align-items: end; justify-content: space-between; gap: 2rem; margin-bottom: 1.75rem; }
 .ui-kit-section-heading .ui-kit-kicker { min-width: 150px; }
@@ -3902,6 +3911,8 @@ body:has(.ui-kit-lab) .ai-assistant-widget {
   .ui-kit-lab-header, .ui-kit-section-heading { align-items: start; flex-direction: column; }
   .ui-kit-header-tools { width: 100%; grid-template-columns: 1fr 1fr; }
   .ui-kit-material-grid { grid-template-columns: 1fr; }
+  .ui-kit-token-panel { grid-template-columns: 1fr; }
+  .ui-kit-token-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
 
 @media (max-width: 640px) {
@@ -3909,6 +3920,7 @@ body:has(.ui-kit-lab) .ai-assistant-widget {
   .ui-kit-lab-header { padding-top: 2rem; }
   .ui-kit-lab h1 { font-size: clamp(2.5rem, 14vw, 4.4rem); }
   .ui-kit-header-tools, .ui-kit-surface-grid, .ui-kit-role-grid { grid-template-columns: 1fr; }
+  .ui-kit-token-grid { grid-template-columns: 1fr; }
   .ui-kit-section { padding: 2.5rem 0; }
   .ui-kit-state-row { display: grid; grid-template-columns: repeat(2, 1fr); }
   .ui-kit-state-row .ui-kit-button { width: 100%; }
@@ -3917,7 +3929,6 @@ body:has(.ui-kit-lab) .ai-assistant-widget {
 
 @media (prefers-reduced-motion: reduce) {
   .ui-kit-button, .ui-kit-switch span { transition: none; }
-}
 }
 
 /* Germany WhatsApp reference pilot: intentionally scoped until owner approval. */

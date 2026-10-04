@@ -7,6 +7,18 @@ type ThemeName = "current" | "kubera-neon";
 type ButtonVariant = "primary" | "secondary" | "language" | "icon" | "compact";
 type MaterialVariant = "clean" | "optical" | "chromatic";
 
+const themeTokenRows = [
+  ["Background", "--ui-bg"],
+  ["Surface", "--ui-surface"],
+  ["Primary", "--ui-accent"],
+  ["Secondary", "--ui-accent-secondary"],
+  ["Text", "--ui-text"],
+  ["Border", "--ui-border-active"],
+  ["Glow", "--ui-glow"],
+  ["Atmosphere", "--ui-atmosphere"],
+  ["Brand Gold", "--ui-brand"],
+] as const;
+
 const liquidGlassStyle = {
   "--lg-radius": "24px",
   "--lg-blur": "5px",
@@ -63,6 +75,25 @@ function ThemeSwitcher({ theme, onChange }: { theme: ThemeName; onChange: (value
   );
 }
 
+function ThemeTokenPanel() {
+  return (
+    <section className="ui-kit-token-panel" aria-labelledby="token-panel-title">
+      <div>
+        <p className="ui-kit-control-label">Live semantic tokens</p>
+        <h2 id="token-panel-title">The components consume the active theme.</h2>
+      </div>
+      <div className="ui-kit-token-grid">
+        {themeTokenRows.map(([label, token]) => (
+          <div className="ui-kit-token" key={token}>
+            <span className="ui-kit-token-swatch" style={{ background: `var(${token})` }} aria-hidden="true" />
+            <span><strong>{label}</strong><small>{token}</small></span>
+          </div>
+        ))}
+      </div>
+    </section>
+  );
+}
+
 function GeometryLock({ theme }: { theme: ThemeName }) {
   const anchorRef = useRef<HTMLDivElement>(null);
   const [baseline, setBaseline] = useState<{ width: number; height: number } | null>(null);
@@ -114,6 +145,8 @@ export function UiKitLab() {
           <GeometryLock theme={theme} />
         </div>
       </header>
+
+      <ThemeTokenPanel />
 
       <section className="ui-kit-section" aria-labelledby="button-title">
         <div className="ui-kit-section-heading"><p className="ui-kit-kicker">01 · Interaction</p><h2 id="button-title">Buttons that keep their material through every state.</h2></div>

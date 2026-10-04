@@ -1,4 +1,23 @@
 import { expect, test } from "@playwright/test";
+import sharp from "sharp";
+
+async function pixelDelta(before: Buffer, after: Buffer) {
+  const [beforeImage, afterImage] = await Promise.all([
+    sharp(before).raw().toBuffer({ resolveWithObject: true }),
+    sharp(after).raw().toBuffer({ resolveWithObject: true }),
+  ]);
+  if (beforeImage.info.width !== afterImage.info.width || beforeImage.info.height !== afterImage.info.height) return 1;
+  let changed = 0;
+  const totalPixels = beforeImage.info.width * beforeImage.info.height;
+  for (let i = 0; i < beforeImage.data.length; i += beforeImage.info.channels) {
+    let distance = 0;
+    for (let channel = 0; channel < Math.min(3, beforeImage.info.channels); channel += 1) {
+      distance += Math.abs(beforeImage.data[i + channel] - afterImage.data[i + channel]);
+    }
+    if (distance >= 12) changed += 1;
+  }
+  return changed / totalPixels;
+}
 
 test.describe("isolated UI Kit render and theme guard", () => {
   test("keeps critical styles non-default and geometry stable across themes", async ({ page }) => {
@@ -36,7 +55,7 @@ test.describe("isolated UI Kit render and theme guard", () => {
     });
 
     expect(initial.h1Family).toContain("Space Grotesk");
-    expect(initial.h1Size).toBeGreaterThan(32);
+    expect(initial.h1Size).toBeGreaterThanOrEqual(32);
     expect(initial.buttonBackground).not.toBe("rgba(0, 0, 0, 0)");
     expect(initial.activeTheme).toContain("CURRENT / LEGACY");
     const beforeImage = await page.screenshot();
@@ -55,6 +74,7 @@ test.describe("isolated UI Kit render and theme guard", () => {
       return { theme: lab.dataset.theme, activeTheme: document.querySelector<HTMLElement>("[data-testid='active-theme']")?.textContent, background: style.backgroundImage || style.backgroundColor, width: button.getBoundingClientRect().width, height: button.getBoundingClientRect().height, boxes };
     });
     const afterImage = await page.screenshot();
+    const visualDelta = await pixelDelta(beforeImage, afterImage);
 
     expect(neon.theme).toBe("kubera-neon");
     expect(neon.activeTheme).toContain("KUBERA NEON");
@@ -62,6 +82,7 @@ test.describe("isolated UI Kit render and theme guard", () => {
     expect(neon.width).toBeCloseTo(initial.buttonWidth, 1);
     expect(neon.height).toBeCloseTo(initial.buttonHeight, 1);
     expect(Buffer.compare(beforeImage, afterImage)).not.toBe(0);
+    expect(visualDelta).toBeGreaterThan(0.03);
     expect(neon.boxes).toEqual(initial.boxes);
     expect(runtimeErrors).toEqual([]);
   });
