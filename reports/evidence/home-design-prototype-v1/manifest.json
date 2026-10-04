@@ -1,5 +1,6 @@
 {
   "kind": "isolated-home-design-prototype-v1",
+  "prototypeCommit": "82accb0e5fc76b2ae968bdf0a4f8aee24c08d01b",
   "route": "/design-lab/home-v1",
   "indexable": false,
   "sitemap": false,

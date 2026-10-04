@@ -415,6 +415,7 @@ Owner reviews V5.1 background lighting in the isolated Material Lab. Do not inte
 ## DESIGN MODERNIZATION / HOME DESIGN PROTOTYPE V1 — 2026-10-04
 
 - Prototype branch: `design/home-design-prototype-v1-20261004`.
+- Prototype implementation commit: `82accb0e5fc76b2ae968bdf0a4f8aee24c08d01b`.
 - Isolated route: `/design-lab/home-v1`; metadata is `noindex,nofollow,nocache`, it is absent from sitemap/navigation, and it does not modify `/`.
 - The prototype reuses real Home structure/content: Hero meaning, pricing/video, loss calculator, featured use-case links, and featured solution links. Copy, CTA destinations, calculator behavior, internal links, section order, production metadata, and SEO semantics are frozen.
 - Visual proof uses the proven V5 material (`625e825...`) and V5.1 lighting (`24e7d55...`): deep navy base, cyan functional light, electric-blue depth, localized secondary violet, restrained gold, partial orbits, purposeful nodes, and a temporary abstract sphere.

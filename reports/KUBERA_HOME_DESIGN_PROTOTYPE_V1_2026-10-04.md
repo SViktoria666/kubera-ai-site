@@ -4,6 +4,8 @@ Date: 2026-10-04
 Branch: `design/home-design-prototype-v1-20261004`  
 Scope: isolated full-page visual proof; real Home and production intentionally unchanged.
 
+Implementation commit: `82accb0e5fc76b2ae968bdf0a4f8aee24c08d01b`.
+
 ## Purpose and boundary
 
 This prototype answers whether the proven Kubera visual language can carry a
