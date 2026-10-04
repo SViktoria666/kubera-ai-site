@@ -73,7 +73,7 @@ function getExpectedRoutes() {
   const routes = new Set();
   for (const pageFile of collectPageFiles("src/app")) {
     const route = routeFromPageFile(pageFile);
-    if (route && !route.startsWith("/api/") && !["/demo", "/ru/demo"].includes(route)) routes.add(route);
+    if (route && !route.startsWith("/api/") && !route.startsWith("/design-lab/") && !["/demo", "/ru/demo"].includes(route)) routes.add(route);
   }
   for (const route of expectedBlogRoutes) routes.add(route);
   for (const slug of caseSlugs) {
@@ -91,7 +91,7 @@ function getBuiltRoutes() {
   if (!fs.existsSync(manifestPath) || !fs.existsSync(path.join(repoRoot, ".next", "BUILD_ID"))) return null;
   const manifest = JSON.parse(fs.readFileSync(manifestPath, "utf8"));
   if (!manifest.routes || Object.keys(manifest.routes).length === 0) return null;
-  return new Set(Object.keys(manifest.routes).filter((route) => !route.startsWith("/_") && !["/robots.txt", "/sitemap.xml"].includes(route)));
+  return new Set(Object.keys(manifest.routes).filter((route) => !route.startsWith("/_") && !route.startsWith("/design-lab/") && !["/robots.txt", "/sitemap.xml"].includes(route)));
 }
 
 const blogFiles = listFiles("content/blog", ".md");

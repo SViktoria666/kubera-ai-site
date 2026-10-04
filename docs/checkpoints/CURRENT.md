@@ -385,3 +385,16 @@ Owner inspects the live V3 and decides what still needs refinement. Do not merge
 ## EXACT NEXT STEP
 
 Owner inspects live V4, especially material depth, assistant-side background, CTA normal/hover, and glass edges. Do not merge, deploy, propagate, or change SEO/content until explicit owner feedback.
+
+## DESIGN MODERNIZATION / V5 LIQUID GLASS MATERIAL LAB — 2026-10-04
+
+- V4 remains preserved at `8ba6a2d0242f25ae02f3454bd015029777b1e1d3`; Germany page integration was intentionally stopped.
+- Research selected MIT-licensed `@sohumsuthar/liquid-glass@3.1.0` for a bounded material lab after reviewing the primary candidate and secondary alternatives. It provides a four-layer surface, SVG displacement/refraction lens, measured rim/specular treatment, tint, saturation/brightness controls, and React 18+ compatibility.
+- Isolated lab route: `/design-lab/liquid-glass`; metadata is `noindex,nofollow,nocache`, it is absent from the sitemap and navigation, and it has a local Glass OFF/ON A/B control.
+- Material proof: Chromium technical PASS for the isolated panel/CTA (`url(#lg-refract)` and `url(#lg-refract-sm)` effect filters, two lenses, high-frequency signal backdrop). Owner visual approval remains `PENDING`.
+- Germany integration: `NOT PERFORMED`. No Germany page, sibling page, SEO/content semantics, assistant geometry, workflow semantics, main, or production changes were made by V5.
+- Report: `reports/KUBERA_LIQUID_GLASS_MATERIAL_LAB_V5_2026-10-04.md`. Manifest: `reports/evidence/design-pilot-v5-material-lab/manifest.json`.
+
+## EXACT NEXT STEP
+
+Owner reviews the isolated material lab first. Only after the material itself is visually accepted may a separate bounded Germany Hero/CTA integration be prepared. Do not merge, deploy, propagate, or edit the Germany page before that gate.

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./../globals.css";
+import "@sohumsuthar/liquid-glass/css/liquid-glass-core.css";
 import { SiteShell } from "@/components/core/SiteShell";
 import { siteConfig } from "@/content/site";
 

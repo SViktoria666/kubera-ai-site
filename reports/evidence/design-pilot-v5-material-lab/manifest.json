@@ -1,0 +1,26 @@
+{
+  "wave": "V5",
+  "kind": "isolated-liquid-glass-material-lab",
+  "route": "/design-lab/liquid-glass",
+  "indexable": false,
+  "sitemap": false,
+  "gitBase": "8ba6a2d0242f25ae02f3454bd015029777b1e1d3",
+  "selected": {
+    "package": "@sohumsuthar/liquid-glass",
+    "version": "3.1.0",
+    "license": "MIT"
+  },
+  "proof": {
+    "glassOffOn": true,
+    "chromiumFilterUrls": ["url(#lg-refract)", "url(#lg-refract-sm)"],
+    "lenses": 2,
+    "germanyIntegration": false
+  },
+  "evidence": {
+    "on1440": "C:\\Users\\Admin\\kubera-visual-audit\\evidence\\design-pilot\\v5-material-lab-on-1440.png",
+    "off1440": "C:\\Users\\Admin\\kubera-visual-audit\\evidence\\design-pilot\\v5-material-lab-off-1440.png",
+    "panelOn1440": "C:\\Users\\Admin\\kubera-visual-audit\\evidence\\design-pilot\\v5-material-lab-panel-on-1440.png",
+    "panelOff1440": "C:\\Users\\Admin\\kubera-visual-audit\\evidence\\design-pilot\\v5-material-lab-panel-off-1440.png"
+  },
+  "ownerApproval": "PENDING"
+}
