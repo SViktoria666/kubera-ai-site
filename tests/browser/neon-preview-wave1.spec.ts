@@ -45,7 +45,8 @@ async function assertPreview(page: Page, route: string) {
       });
     const advancedFilterElements = [...document.querySelectorAll("*")].filter((element) => {
       const style = getComputedStyle(element);
-      return style.backdropFilter !== "none" || style.webkitBackdropFilter !== "none" || style.filter.includes("url(");
+      const webkitBackdropFilter = (style as CSSStyleDeclaration & { webkitBackdropFilter?: string }).webkitBackdropFilter;
+      return style.backdropFilter !== "none" || webkitBackdropFilter !== "none" || style.filter.includes("url(");
     }).length;
     return {
       hasMarker: Boolean(root),
