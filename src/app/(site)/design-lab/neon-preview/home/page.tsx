@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { HomeDesignPrototype } from "@/components/design-lab/HomeDesignPrototype";
+import { NeonPreviewShell } from "@/components/design-lab/NeonPreviewShell";
 
 export const metadata: Metadata = {
   title: "Kubera Neon Home Preview",
@@ -8,8 +9,8 @@ export const metadata: Metadata = {
 
 export default function NeonHomePreviewPage() {
   return (
-    <div className="neon-preview neon-preview-home">
+    <NeonPreviewShell className="neon-preview-home">
       <HomeDesignPrototype />
-    </div>
+    </NeonPreviewShell>
   );
 }

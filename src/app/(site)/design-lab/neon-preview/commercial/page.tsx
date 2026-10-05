@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { NeonPreviewShell } from "@/components/design-lab/NeonPreviewShell";
 import { IndustrySolutionTemplate } from "@/components/industry-solutions/IndustrySolutionTemplate";
 import { getIndustrySolutionByRoute } from "@/content/industry-solutions";
 
@@ -15,8 +16,8 @@ export default function NeonCommercialPreviewPage() {
   }
 
   return (
-    <div className="neon-preview neon-preview-commercial">
+    <NeonPreviewShell className="neon-preview-commercial">
       <IndustrySolutionTemplate solution={solution} schemas={[]} />
-    </div>
+    </NeonPreviewShell>
   );
 }

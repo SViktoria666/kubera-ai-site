@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { NeonPreviewShell } from "@/components/design-lab/NeonPreviewShell";
 import { ContactSection } from "@/components/sections/ContactSection";
 
 export const metadata: Metadata = {
@@ -8,8 +9,8 @@ export const metadata: Metadata = {
 
 export default function NeonContactsPreviewPage() {
   return (
-    <div className="neon-preview neon-preview-contacts">
+    <NeonPreviewShell className="neon-preview-contacts">
       <ContactSection locale="en" />
-    </div>
+    </NeonPreviewShell>
   );
 }

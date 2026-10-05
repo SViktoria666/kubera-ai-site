@@ -18,6 +18,13 @@ The final main HEAD is always obtained from Git (`git rev-parse HEAD`) rather th
 
 ## CURRENT WORKING STATE
 
+### Neon Wave 1 and Vercel incident handoff — 2026-10-05
+
+- Protected Neon Wave 1 source is preserved on `design/kubera-neon-controlled-rollout-prep-20261005` at `6e984f8d3a47e6499032a1f70d918e33a7de190e`; it is not production authorization.
+- Production remains `8dcd0e13764dbf757c62385dd0161e50cd8e975a`. Do not modify production while reviewing Neon work.
+- The 2026-10-05 Vercel Deployment Storage incident is documented at `docs/incidents/2026-10-05-vercel-deployment-storage.md`. Future visual iterations remain local by default; follow the storage/preview retention policy in `docs/deployment.md`.
+- Current bounded work: correct owner-found Neon preview defects and provide a local-only route review index. Owner approval remains pending.
+
 - Wave A, Wave B, and Wave C are complete in `origin/main`.
 - Wave C.5 is integrated into `origin/main`; the canonical current-state lifecycle and session handoff rules are active.
 - No application behavior, production system, or Wave A preservation branch is part of this work.

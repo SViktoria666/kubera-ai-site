@@ -318,8 +318,8 @@ export const generatedGeoPages = [
     "cta": {
       "headline": "Ready to Build Automation Systems That Match German Standards — and Scale Beyond Them?",
       "body": "Kubera AI specializes in AI automation and business process automation for German SMEs and Mittelstand companies. We understand the German business environment: the expectations, the compliance requirements, the SAP and DATEV software ecosystem, the precision that clients expect. Let's design an automation architecture that fits your operations exactly — not a template dressed up with your company name.",
-      "primary": "",
-      "secondary": ""
+      "primary": "Book a Free Discovery Call",
+      "secondary": "See How It Works"
     },
     "relatedRoutes": [
       "/ai-automation-netherlands",
@@ -614,8 +614,8 @@ export const generatedGeoPages = [
     "cta": {
       "headline": "Dutch Businesses That Move Fast Win. Let's Build the Systems That Keep You Moving.",
       "body": "Kubera AI builds custom AI automation for ambitious Dutch SMEs. Whether you're in Amsterdam, Rotterdam, Utrecht, Eindhoven, or anywhere in the Netherlands — if you're ready to stop losing time to manual processes and start scaling without proportionally growing your team, let's talk. One conversation is enough to identify where automation makes the biggest impact.",
-      "primary": "",
-      "secondary": ""
+      "primary": "Book a Free Discovery Call",
+      "secondary": "Explore Our Services"
     },
     "relatedRoutes": [
       "/ai-automation-belgium",
@@ -890,8 +890,8 @@ export const generatedGeoPages = [
     "cta": {
       "headline": "Portugal Is Moving Fast. Your Operations Should Too.",
       "body": "Kubera AI builds AI automation for Portuguese businesses — from Lisbon real estate agencies to Algarve hospitality operators to Porto-based consulting firms. One free discovery call is all it takes to identify where automation will have the biggest impact on your operations.",
-      "primary": "",
-      "secondary": ""
+      "primary": "Book a Free Discovery Call",
+      "secondary": "Learn How It Works"
     },
     "relatedRoutes": [
       "/automatizacion-ia-espana",
@@ -1170,8 +1170,8 @@ export const generatedGeoPages = [
     "cta": {
       "headline": "Estonia Runs on Digital. Your Business Operations Should Too.",
       "body": "Kubera AI is an Estonian OÜ building AI automation for local and internationally operating companies. Whether you're a Tallinn startup, a service business in Tartu, or an e-Resident operating a global company through Estonia — let's talk about how automation can eliminate your operational bottlenecks and free your team for the work that matters.",
-      "primary": "",
-      "secondary": ""
+      "primary": "Book a Free Discovery Call",
+      "secondary": "About Kubera AI"
     },
     "relatedRoutes": [
       "/ai-automation-latvia",
@@ -1280,8 +1280,8 @@ export const generatedGeoPages = [
     "cta": {
       "headline": "Las Empresas Españolas que Automatizan Hoy Ganan Mañana.",
       "body": "Kubera AI construye sistemas de automatización con inteligencia artificial para pymes europeas ambiciosas. Si tienes un negocio en España — en Madrid, Barcelona, Valencia, Málaga, Bilbao, Sevilla o en cualquier otro lugar — y quieres dejar de perder tiempo en procesos manuales, hablemos. Una conversación es suficiente para identificar dónde la automatización tendrá el mayor impacto en tu empresa.",
-      "primary": "",
-      "secondary": ""
+      "primary": "Reserva una Llamada de Descubrimiento Gratuita",
+      "secondary": "Conoce Cómo Funciona"
     },
     "relatedRoutes": [
       "/ai-automation-portugal",
@@ -1574,8 +1574,8 @@ export const generatedGeoPages = [
     "cta": {
       "headline": "Les Entreprises Françaises Qui Automatisent Aujourd'hui Prennent de l'Avance.",
       "body": "Kubera AI builds AI automation for French SMEs and growth-stage companies. Whether you're in Paris, Lyon, Toulouse, Bordeaux, Marseille, or anywhere in France — if you're ready to stop losing time to manual processes and start scaling with systems that actually work, let's talk.",
-      "primary": "",
-      "secondary": ""
+      "primary": "Book a Free Discovery Call",
+      "secondary": "Explore Our Services"
     },
     "relatedRoutes": [
       "/ai-automation-belgium",
@@ -1844,8 +1844,8 @@ export const generatedGeoPages = [
     "cta": {
       "headline": "Italian Excellence Deserves Excellent Systems to Support It.",
       "body": "Kubera AI builds AI automation for Italian SMEs across manufacturing, fashion, professional services, tourism, and technology. Whether you're in Milan, Rome, Turin, Bologna, Florence, or anywhere in Italy — if you're ready to remove the operational bottlenecks limiting your growth, let's talk.",
-      "primary": "",
-      "secondary": ""
+      "primary": "Book a Free Discovery Call",
+      "secondary": "Explore Our Services"
     },
     "relatedRoutes": [
       "/ai-automation-austria",
@@ -2145,8 +2145,8 @@ export const generatedGeoPages = [
     "cta": {
       "headline": "Belgium Is Europe's AI Leader. Is Your Business Leading Too?",
       "body": "Kubera AI builds multilingual AI automation for Belgian businesses across Flanders, Wallonia, and Brussels. Whether you're a logistics company in Antwerp, a law firm in Brussels, a tech startup in Ghent, or a hospitality business in Bruges — if you need systems that work in Dutch, French, English, and German simultaneously, let's talk.",
-      "primary": "",
-      "secondary": ""
+      "primary": "Book a Free Discovery Call",
+      "secondary": "Explore Our Services"
     },
     "relatedRoutes": [
       "/ai-automation-netherlands",
@@ -2410,8 +2410,8 @@ export const generatedGeoPages = [
     "cta": {
       "headline": "Austrian Precision Deserves Processes That Match.",
       "body": "Kubera AI builds AI automation for Austrian businesses across Vienna, Graz, Linz, Salzburg, and beyond. From law firms to manufacturers, from hospitality to technology — if you want to eliminate operational bottlenecks and scale with precision, let's talk.",
-      "primary": "",
-      "secondary": ""
+      "primary": "Book a Free Discovery Call",
+      "secondary": "Explore Our Services"
     },
     "relatedRoutes": [
       "/ai-automation-germany",
@@ -2689,8 +2689,8 @@ export const generatedGeoPages = [
     "cta": {
       "headline": "Swiss Precision Applies to Operations, Not Just Products.",
       "body": "Kubera AI builds AI automation for Swiss businesses — from Zurich's financial sector to Geneva's international community, from Basel's pharmaceutical cluster to Ticino's Italian-speaking economy. If you need systems that work natively in German, French, Italian, and English, and meet Swiss data protection standards, let's talk.",
-      "primary": "",
-      "secondary": ""
+      "primary": "Book a Free Discovery Call",
+      "secondary": "Explore Our Services"
     },
     "relatedRoutes": [
       "/ai-automation-germany",
@@ -2974,8 +2974,8 @@ export const generatedGeoPages = [
     "cta": {
       "headline": "Irish Businesses Are Moving. The Question Is Whether Your Operations Can Keep Up.",
       "body": "Kubera AI builds AI automation for Irish companies across Dublin, Cork, Galway, Limerick, and beyond. Whether you're in professional services, technology, agri-food, hospitality, or any other sector — if you want to scale operations without proportionally scaling your team, let's talk.",
-      "primary": "",
-      "secondary": ""
+      "primary": "Book a Free Discovery Call",
+      "secondary": "Explore Our Services"
     },
     "relatedRoutes": [
       "/ai-automation-netherlands",
@@ -3259,8 +3259,8 @@ export const generatedGeoPages = [
     "cta": {
       "headline": "Cyprus's People Already Embrace AI. Now It's Time for the Businesses.",
       "body": "Kubera AI builds AI automation for Cypriot businesses across Nicosia, Limassol, Larnaca, Paphos, and beyond. In a market where only 9% of businesses use AI — the first-mover window is exceptional. One discovery call is all it takes to identify where automation makes the biggest impact in your business.",
-      "primary": "",
-      "secondary": ""
+      "primary": "Book a Free Discovery Call",
+      "secondary": "Explore Our Services"
     },
     "relatedRoutes": [
       "/ai-automation-italy",
@@ -3544,8 +3544,8 @@ export const generatedGeoPages = [
     "cta": {
       "headline": "Finland Leads Europe in AI Adoption. Does Your Business Lead in Finland?",
       "body": "Kubera AI builds AI automation for Finnish businesses from Helsinki and Espoo to Tampere, Turku, and Oulu. In a market where 38% of enterprises already use AI, the competitive standard is clear. Let's build the systems that put your company on the right side of that gap.",
-      "primary": "",
-      "secondary": ""
+      "primary": "Book a Free Discovery Call",
+      "secondary": "Explore Our Services"
     },
     "relatedRoutes": [
       "/ai-automation-sweden",
@@ -3819,8 +3819,8 @@ export const generatedGeoPages = [
     "cta": {
       "headline": "Sweden Sets the Standard. Does Your Operations Infrastructure Match It?",
       "body": "Kubera AI builds AI automation for Swedish businesses across Stockholm, Gothenburg, Malmö, Uppsala, and beyond. From tech startups to manufacturers, from professional services to e-commerce — let's build the operational infrastructure your growth requires.",
-      "primary": "",
-      "secondary": ""
+      "primary": "Book a Free Discovery Call",
+      "secondary": "Explore Our Services"
     },
     "relatedRoutes": [
       "/ai-automation-denmark",
@@ -4110,8 +4110,8 @@ export const generatedGeoPages = [
     "cta": {
       "headline": "Denmark Leads Europe in AI Adoption. Is Your Business Part of the Lead?",
       "body": "Kubera AI builds AI automation for Danish businesses across Copenhagen, Aarhus, Odense, Aalborg, and beyond. In the EU's most AI-adopted market, the competitive standard is clear. Let's build the systems that put you on the right side of it.",
-      "primary": "",
-      "secondary": ""
+      "primary": "Book a Free Discovery Call",
+      "secondary": "Explore Our Services"
     },
     "relatedRoutes": [
       "/ai-automation-sweden",
@@ -4383,8 +4383,8 @@ export const generatedGeoPages = [
     "cta": {
       "headline": "Poland's First Movers in AI Automation Win. Now Is the Time.",
       "body": "Kubera AI builds AI automation for Polish businesses across Warsaw, Kraków, Wrocław, Poznań, Gdańsk, and beyond. In a market where only 8.4% of companies currently use AI — the competitive advantage window is wide open. Let's talk.",
-      "primary": "",
-      "secondary": ""
+      "primary": "Book a Free Discovery Call",
+      "secondary": "Explore Our Services"
     },
     "relatedRoutes": [
       "/ai-automation-germany",
@@ -4612,8 +4612,8 @@ export const generatedGeoPages = [
     "cta": {
       "headline": "Lithuania Is One of Europe's Fastest-Moving AI Markets. Is Your Business Moving With It?",
       "body": "Kubera AI builds AI automation for Lithuanian businesses across Vilnius, Kaunas, Klaipėda, and beyond. In a market accelerating toward European AI adoption standards, the early movers capture the competitive advantage. Let's talk.",
-      "primary": "",
-      "secondary": ""
+      "primary": "Book a Free Discovery Call",
+      "secondary": "Explore Our Services"
     },
     "relatedRoutes": [
       "/ai-automation-latvia",
@@ -4889,8 +4889,8 @@ export const generatedGeoPages = [
     "cta": {
       "headline": "Latvia Is a Digital Leader. Your Business Operations Should Be Too.",
       "body": "Kubera AI builds AI automation for Latvian businesses across Riga, Daugavpils, Liepāja, Jēkabpils, and beyond. Lean teams with powerful AI-automated systems outperform large teams with manual processes. Let's talk about what that looks like for your company.",
-      "primary": "",
-      "secondary": ""
+      "primary": "Book a Free Discovery Call",
+      "secondary": "Explore Our Services"
     },
     "relatedRoutes": [
       "/ai-automation-lithuania",

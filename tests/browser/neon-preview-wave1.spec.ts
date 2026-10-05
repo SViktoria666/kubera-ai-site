@@ -7,6 +7,7 @@ const previewRoutes = [
   ["commercial", "/design-lab/neon-preview/commercial"],
   ["geo", "/design-lab/neon-preview/geo"],
   ["contacts", "/design-lab/neon-preview/contacts"],
+  ["landing-page", "/design-lab/neon-preview/landing-page"],
 ] as const;
 
 async function assertPreview(page: Page, route: string) {
@@ -89,6 +90,30 @@ test("Wave 1 preview markers do not leak onto normal representative routes", asy
     await page.goto(route, { waitUntil: "domcontentloaded" });
     await expect(page.locator("body.neon-preview")).toHaveCount(0);
     await expect(page.locator(".neon-preview")).toHaveCount(0);
+  }
+});
+
+test("GEO preview restores explicit CTA labels and the local review harness includes the assistant", async ({ page }) => {
+  await page.goto("/design-lab/neon-preview/geo", { waitUntil: "networkidle" });
+  const ctaButtons = page.locator(".geo-cta .button");
+  await expect(ctaButtons).toHaveCount(2);
+  await expect(ctaButtons.nth(0)).not.toHaveText(/^\s*$/);
+  await expect(ctaButtons.nth(1)).not.toHaveText(/^\s*$/);
+  await expect(page.getByRole("button", { name: "Open Kubera AI assistant" })).toBeVisible();
+});
+
+test("Wave 1 preview pricing CTAs retain a shared card-bottom anchor", async ({ page }) => {
+  for (const route of ["/design-lab/neon-preview/home", "/design-lab/neon-preview/commercial"]) {
+    await page.goto(route, { waitUntil: "networkidle" });
+    const offsets = await page.locator(".pricing-card").evaluateAll((cards) => cards.map((card) => {
+      const button = card.querySelector(".pricing-card-button");
+      if (!button) return null;
+      const cardRect = card.getBoundingClientRect();
+      const buttonRect = button.getBoundingClientRect();
+      return Math.round(cardRect.bottom - buttonRect.bottom);
+    }).filter((offset): offset is number => offset !== null));
+    expect(offsets.length).toBeGreaterThanOrEqual(3);
+    expect(Math.max(...offsets) - Math.min(...offsets)).toBeLessThanOrEqual(2);
   }
 });
 

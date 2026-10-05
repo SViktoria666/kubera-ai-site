@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { NeonPreviewShell } from "@/components/design-lab/NeonPreviewShell";
 import { GeoPage } from "@/components/geo/GeoPage";
 import { getGeoPageByRoute } from "@/content/geo/loader";
 
@@ -15,8 +16,8 @@ export default function NeonGeoPreviewPage() {
   }
 
   return (
-    <div className="neon-preview neon-preview-geo">
+    <NeonPreviewShell className="neon-preview-geo">
       <GeoPage page={page} />
-    </div>
+    </NeonPreviewShell>
   );
 }

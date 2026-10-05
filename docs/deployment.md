@@ -35,3 +35,7 @@ This repository currently has no authenticated Vercel CLI/API integration or che
 Before a risky release, record the previous known-good production commit/deployment identity and the normal provider/Git rollback path. Never use force-push or destructive reset as an emergency shortcut. If the release is wrong, stop new changes, preserve evidence, and use the approved revert/rollback procedure after owner authorization.
 
 No credentials, tokens, cookies, deployment secrets, or stale deployment IDs belong in this document.
+
+## Deployment storage and preview retention
+
+The operational incident record is [2026-10-05 Vercel Deployment Storage](incidents/2026-10-05-vercel-deployment-storage.md). Its policy is part of the standard deployment contract: local visual iteration is the default, hosted previews are created only when they are actually required, and stale previews are removed only after a fresh safety/alias review. At roughly 50 total deployments, or before a deployment-heavy preview wave, perform a lightweight storage/alias forensic. This is a review trigger, never automatic deletion.

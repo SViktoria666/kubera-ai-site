@@ -4068,7 +4068,6 @@ body:has(.neon-preview) .neon-preview::before {
 
 body:has(.neon-preview) .neon-preview .card,
 body:has(.neon-preview) .neon-preview .pricing-card,
-body:has(.neon-preview) .neon-preview .calculator-panel,
 body:has(.neon-preview) .neon-preview .solution-card,
 body:has(.neon-preview) .neon-preview .geo-panel,
 body:has(.neon-preview) .neon-preview .contact-link {
@@ -4126,7 +4125,6 @@ body:has(.neon-preview) .neon-preview h3 {
 
 body:has(.neon-preview) .neon-preview .eyebrow,
 body:has(.neon-preview) .neon-preview .pricing-price,
-body:has(.neon-preview) .neon-preview .geo-subheading,
 body:has(.neon-preview) .neon-preview a:not(.button):hover,
 body:has(.neon-preview) .neon-preview a:not(.button):focus-visible {
   color: #4ce5e4;
@@ -4171,6 +4169,42 @@ body:has(.neon-preview) .neon-preview-index__link small {
   color: #b4cbd0;
 }
 
+body:has(.neon-preview) .neon-review-group {
+  padding-bottom: 3rem;
+}
+
+body:has(.neon-preview) .neon-review-group h2 span {
+  color: #4ce5e4;
+  font-size: 0.7em;
+}
+
+body:has(.neon-preview) .neon-review-group__routes {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.75rem;
+}
+
+body:has(.neon-preview) .neon-review-group__routes a {
+  display: grid;
+  gap: 0.3rem;
+  min-height: 64px;
+  padding: 0.9rem 1rem;
+  border: 1px solid rgba(180, 203, 208, 0.2);
+  border-radius: 12px;
+  background: rgba(20, 33, 54, 0.48);
+  color: #f5f6f7;
+}
+
+body:has(.neon-preview) .neon-review-group__routes a:hover,
+body:has(.neon-preview) .neon-review-group__routes a:focus-visible {
+  border-color: rgba(76, 229, 228, 0.72);
+  box-shadow: 0 0 20px rgba(76, 229, 228, 0.12);
+}
+
+body:has(.neon-preview) .neon-review-group__routes small {
+  color: #b4cbd0;
+}
+
 body:has(.neon-preview) .neon-preview-commercial .solution-hero,
 body:has(.neon-preview) .neon-preview-commercial .solution-section,
 body:has(.neon-preview) .neon-preview-commercial .solution-final-cta {
@@ -4205,8 +4239,28 @@ body:has(.neon-preview) .neon-preview-contacts .contact-link:focus-visible {
   box-shadow: 0 0 24px rgba(76, 229, 228, 0.16), 0 18px 50px rgba(0, 0, 0, 0.24);
 }
 
+/* Preview-only geometry correction: variable pricing copy must not shift CTA
+   baselines. The shared production templates remain untouched. */
+body:has(.neon-preview) .neon-preview .pricing-card {
+  grid-template-rows: auto minmax(0, 1fr) auto;
+}
+
+body:has(.neon-preview) .neon-preview .pricing-card-button {
+  align-self: end;
+}
+
+/* Home owns its calculator panels. Removing the generic nested-surface shadow
+   keeps the two functional panels visually independent. */
+body:has(.neon-preview) .home-design-prototype .calculator-panel {
+  box-shadow: none;
+}
+
 @media (max-width: 640px) {
   body:has(.neon-preview) .neon-preview-index__grid {
+    grid-template-columns: 1fr;
+  }
+
+  body:has(.neon-preview) .neon-review-group__routes {
     grid-template-columns: 1fr;
   }
 }

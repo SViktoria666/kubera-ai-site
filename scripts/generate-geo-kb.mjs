@@ -27,6 +27,19 @@ function matchLine(line, patterns) {
 
 function findLineValue(lines, patterns) {
   for (let i = 0; i < lines.length; i += 1) {
+    const line = lines[i].trim();
+
+    // GEO source permits both a heading followed by a value and an inline
+    // `Label: value` form. The latter must not render an empty CTA.
+    const separatorIndex = line.indexOf(":");
+    if (separatorIndex >= 0) {
+      const label = line.slice(0, separatorIndex);
+      const value = line.slice(separatorIndex + 1).trim();
+      if (value && matchLine(label, patterns)) {
+        return value;
+      }
+    }
+
     if (matchLine(lines[i], patterns)) {
       for (let j = i + 1; j < lines.length; j += 1) {
         const candidate = lines[j].trim();

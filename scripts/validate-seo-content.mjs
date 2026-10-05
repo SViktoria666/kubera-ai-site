@@ -176,7 +176,9 @@ for (const relative of sourceFiles) {
   for (const match of source.matchAll(/\bhref\s*:\s*["'](\/[^"'#?${}]+)["']/g)) internalLinkCandidates.push({ relative, route: match[1] });
   for (const match of source.matchAll(/\bhref\s*=\s*["'](\/[^"'#?${}]+)["']/g)) internalLinkCandidates.push({ relative, route: match[1] });
 }
-const ignoredInternalPrefixes = ["/assets/", "/api/", "/_next/"];
+// Design Lab routes are explicitly noindex and excluded from the production
+// route inventory/sitemap; links between local review surfaces are valid.
+const ignoredInternalPrefixes = ["/assets/", "/api/", "/_next/", "/design-lab/"];
 for (const { relative, route } of internalLinkCandidates) {
   if (ignoredInternalPrefixes.some((prefix) => route.startsWith(prefix))) continue;
   if (route === "/" || expectedRoutes.has(route)) continue;
