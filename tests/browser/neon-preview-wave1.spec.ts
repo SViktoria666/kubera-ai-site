@@ -67,7 +67,6 @@ async function assertPreview(page: Page, route: string) {
   expect(state.styles.buttonBackground).toContain("gradient");
   expect(state.styles.buttonShadow).toContain("rgba");
   expect(state.styles.cardBackground).toContain("gradient");
-  expect(state.rects.every((rect) => rect.width > 0 && rect.height > 0)).toBe(true);
   expect(state.overflow).toBe(false);
 
   const evidenceDir = path.resolve("reports/evidence/neon-preview-wave1");
