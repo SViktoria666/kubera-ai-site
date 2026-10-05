@@ -38,7 +38,7 @@ Sometimes it is phrased as a GDPR question. Sometimes as a concern about custome
 
 This article takes that concern seriously — not to dismiss it, but to make it precise. Because "is my data safe with AI?" is not actually one question. It is several questions bundled together, and they have different answers.
 
-Some data categories require careful handling, specific contractual safeguards, and clear choices about architecture. Others are appropriate for standard cloud AI processing with a signed Data Processing Addendum and sensible retention settings. And some perceived barriers — the idea that you cannot use any cloud AI if you process European personal data, or that GDPR makes AI automation legally impossible — are simply inaccurate.
+Some data categories require careful handling, specific contractual safeguards, and clear choices about architecture. Others are appropriate for standard cloud AI processing with a signed Data Processing Addendum and sensible retention settings. And some perceived barriers — the idea that you cannot use any cloud AI if you process European personal data, or that GDPR makes AI automation legally impossible — are simply inaccurate. For a current example of how regional inference, control-plane data, subprocessors, retention, and jurisdiction fit together in practice, see [Sovereign AI in Europe: What Mistral's 2026 Moves Mean for Your Business](/blog/sovereign-ai-europe-mistral-guide).
 
 The goal here is not to reassure you that everything is fine. It is to give you a precise map of what the real requirements are, what the real risks are, and how to make a technically and legally defensible decision for your specific business — before spending anything on AI.
 
