@@ -515,3 +515,16 @@ Verify the documentation diff, commit the bounded Phase 1 artifacts, push the is
 ## EXACT NEXT STEP
 
 Owner reviews the bounded rollout plan and chooses the first preview group/material adoption scope. Do not edit production, migrate shared primitives, deploy, or begin Telegram implementation before that decision.
+
+## KUBERA NEON CONTROLLED PREVIEW - WAVE 1 - 2026-10-05
+
+- Protected preview implementation is on `design/kubera-neon-controlled-rollout-prep-20261005`, based on rollout-prep SHA `db8f28ef90b5dfb96ae0034374eec8098b3d08d9`.
+- Preview routes reuse real Home prototype, IndustrySolutionTemplate, GeoPage, and ContactSection architecture under `/design-lab/neon-preview/*`; normal production routes remain unmarked and unchanged.
+- The preview appearance is scoped by the `.neon-preview` marker and `body:has(.neon-preview)` tokens. Header remains black; functional controls remain cyan; gold is not used for functional interaction.
+- Wave 1 implementation commit: `922a4b9`; evidence is stored in `reports/evidence/neon-preview-wave1/`. The approved Material #001 recipe was preserved; no glass library or production component was replaced.
+- Browser guard `tests/browser/neon-preview-wave1.spec.ts` checks static assets, page errors, preview marker isolation, dark header, gradient CTA, surface styling, responsive overflow, and captures route evidence. Advanced filter count is measured in-browser; Wave 1 uses CSS optical material without adding SVG/refraction filters to the four family previews.
+- Typecheck and production build passed. Full SEO/D1 and remote persistence remain required before final owner handoff.
+
+## EXACT NEXT STEP
+
+Run the remaining SEO, D1, stale-style, theme visual-delta, geometry, and responsive browser gates against the final committed preview, then push the isolated branch. Owner visual approval remains pending; do not deploy or propagate.
