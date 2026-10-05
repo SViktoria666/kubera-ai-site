@@ -1,4 +1,4 @@
-import { expect, test, type Page } from "@playwright/test";
+import { expect, test, type Page, type TestInfo } from "@playwright/test";
 import fs from "node:fs";
 import path from "node:path";
 
@@ -88,5 +88,28 @@ test("Wave 1 preview markers do not leak onto normal representative routes", asy
     await page.goto(route, { waitUntil: "domcontentloaded" });
     await expect(page.locator("body.neon-preview")).toHaveCount(0);
     await expect(page.locator(".neon-preview")).toHaveCount(0);
+  }
+});
+
+test("Wave 1 preview boundary viewports retain styling and no overflow", async ({ page }, testInfo: TestInfo) => {
+  test.skip(testInfo.project.name !== "desktop-1366", "Run boundary viewport proof once in the desktop project.");
+  test.setTimeout(180_000);
+  const evidenceDir = path.resolve("reports/evidence/neon-preview-wave1");
+  fs.mkdirSync(evidenceDir, { recursive: true });
+
+  for (const [width, height] of [[768, 1024], [1440, 900]] as const) {
+    await page.setViewportSize({ width, height });
+    for (const [name, route] of previewRoutes) {
+      await page.goto(route, { waitUntil: "networkidle" });
+      const state = await page.evaluate(() => ({
+        marker: Boolean(document.querySelector(".neon-preview")),
+        overflow: document.documentElement.scrollWidth > window.innerWidth || document.body.scrollWidth > window.innerWidth,
+        header: getComputedStyle(document.querySelector(".site-header") as Element).backgroundColor,
+      }));
+      expect(state.marker).toBe(true);
+      expect(state.overflow).toBe(false);
+      expect(state.header).not.toBe("rgba(0, 0, 0, 0)");
+      await page.screenshot({ path: path.join(evidenceDir, `${name}-${width}x${height}.png`), fullPage: true, timeout: 30_000 });
+    }
   }
 });
