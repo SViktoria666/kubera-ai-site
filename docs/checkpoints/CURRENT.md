@@ -528,3 +528,17 @@ Owner reviews the bounded rollout plan and chooses the first preview group/mater
 ## EXACT NEXT STEP
 
 Run the remaining SEO, D1, stale-style, theme visual-delta, geometry, and responsive browser gates against the final committed preview, then push the isolated branch. Owner visual approval remains pending; do not deploy or propagate.
+
+## KUBERA NEON CONTROLLED PREVIEW - WAVE 1 FINAL STATE
+
+- Final implementation SHA: `d67fe03bf304a30e6b9f89c26cf0b93bcfd8ad23`, remotely preserved on `origin/design/kubera-neon-controlled-rollout-prep-20261005`.
+- Protected review index: `http://localhost:3105/design-lab/neon-preview`; family previews: `/home`, `/commercial`, `/geo`, `/contacts`.
+- The correct branch server is running on port 3105 from the isolated worktree. The prior stale process was a 404 server; it was verified and replaced before owner review.
+- Four family routes return 200, carry the noindex/nofollow metadata, are absent from sitemap, and use the `.neon-preview` scoped appearance marker. Normal `/contacts`, `/en/germany-automation`, and Germany WhatsApp routes have no preview marker.
+- Browser evidence: desktop 1366, mobile 390, tablet 1024, boundary 768, and wide 1440 viewport captures are in `reports/evidence/neon-preview-wave1/`.
+- Browser results: protected preview guard passed desktop/mobile/tablet/boundary runs; D1 rerun passed all 24 cases. Typecheck, build, and SEO validation passed. Advanced filter measurement is included in the preview guard; Wave 1 uses no additional SVG/refraction filters in family pages, preserving the approved CSS optical CTA recipe.
+- No production route, real Home, main, SEO/content, sitemap, robots, analytics, Telegram, or external system was modified. Owner visual approval is pending.
+
+## EXACT NEXT STEP
+
+Owner reviews the four protected Wave 1 previews in the visible browser. Do not merge, deploy, recolor normal routes, or mass-propagate until explicit owner approval.
