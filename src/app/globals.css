@@ -4286,6 +4286,108 @@ body:has(.neon-preview) .home-design-prototype .calculator-panel {
   }
 }
 
+/* Full-family protected rollout scope. It is activated only by the local
+   Visual Review Index query flag and leaves ordinary route rendering alone. */
+.neon-preview-sitewide {
+  --neon-rollout-bg: #0c1726;
+  --neon-rollout-bg-secondary: #142136;
+  --neon-rollout-surface: #20344a;
+  --neon-rollout-accent: #4ce5e4;
+  --neon-rollout-text: #f5f6f7;
+  --neon-rollout-muted: #b4cbd0;
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at 8% 18%, rgba(41, 215, 213, 0.09), transparent 28%),
+    radial-gradient(circle at 88% 10%, rgba(88, 70, 220, 0.1), transparent 32%),
+    linear-gradient(145deg, #081421, #0c1a2d 48%, #10152e);
+  color: var(--neon-rollout-text);
+}
+
+.neon-preview-sitewide .site-footer {
+  border-top-color: rgba(180, 203, 208, 0.16);
+  background: rgba(12, 23, 38, 0.94);
+  color: var(--neon-rollout-muted);
+}
+
+.neon-preview-sitewide .footer-link:hover,
+.neon-preview-sitewide .footer-link:focus-visible {
+  color: var(--neon-rollout-accent);
+}
+
+.neon-preview-sitewide .solution-shell,
+.neon-preview-sitewide .solutions-page,
+.neon-preview-sitewide .home-page,
+.neon-preview-sitewide .page-shell,
+.neon-preview-sitewide .blog-page,
+.neon-preview-sitewide .cases-page,
+.neon-preview-sitewide .contact-page,
+.neon-preview-sitewide .services-page {
+  background: transparent;
+}
+
+/* Shared legacy surfaces that remain purple/yellow in the base theme. These
+   overrides are deliberately limited to the protected local Neon scope. */
+.neon-preview-sitewide .hero {
+  background:
+    radial-gradient(circle at 18% 18%, rgba(76, 229, 228, 0.14), transparent 30%),
+    radial-gradient(circle at 84% 16%, rgba(50, 122, 255, 0.14), transparent 26%),
+    linear-gradient(180deg, #0c1726 0%, #142136 100%);
+}
+
+.neon-preview-sitewide .ai-assistant-form button {
+  background: linear-gradient(145deg, #63eee8, #4ce5e4 52%, #3495a0);
+  color: #06131d;
+  border: 1px solid rgba(245, 246, 247, 0.72);
+}
+
+.neon-preview-sitewide .ai-assistant-form button:hover:not(:disabled),
+.neon-preview-sitewide .ai-assistant-form button:focus-visible {
+  background: linear-gradient(145deg, #8af5f1, #4ce5e4 52%, #3495a0);
+}
+
+.neon-preview-sitewide .solution-hero,
+.neon-preview-sitewide .solution-section,
+.neon-preview-sitewide .solution-final-cta,
+.neon-preview-sitewide .pricing-packages,
+.neon-preview-sitewide .contact-section,
+.neon-preview-sitewide .blog-card,
+.neon-preview-sitewide .case-card,
+.neon-preview-sitewide .service-card {
+  border-color: rgba(180, 203, 208, 0.2);
+  background: linear-gradient(145deg, rgba(32, 52, 74, 0.68), rgba(12, 23, 38, 0.78));
+  color: var(--neon-rollout-text);
+}
+
+.neon-preview-sitewide .button:hover,
+.neon-preview-sitewide .button:focus-visible,
+.neon-preview-sitewide .solution-secondary-link:hover,
+.neon-preview-sitewide .solution-secondary-link:focus-visible {
+  background: linear-gradient(145deg, var(--theme-accent-hover), var(--theme-accent) 54%, var(--theme-accent-muted));
+  color: #06131d;
+}
+
+.neon-preview-sitewide .input,
+.neon-preview-sitewide .textarea,
+.neon-preview-sitewide .select,
+.neon-preview-sitewide input,
+.neon-preview-sitewide textarea,
+.neon-preview-sitewide select {
+  border-color: rgba(180, 203, 208, 0.36);
+  background: rgba(2, 8, 16, 0.52);
+  color: var(--neon-rollout-text);
+}
+
+.neon-preview-sitewide .input:focus-visible,
+.neon-preview-sitewide .textarea:focus-visible,
+.neon-preview-sitewide .select:focus-visible,
+.neon-preview-sitewide input:focus-visible,
+.neon-preview-sitewide textarea:focus-visible,
+.neon-preview-sitewide select:focus-visible {
+  border-color: var(--neon-rollout-accent);
+  outline: 2px solid rgba(76, 229, 228, 0.7);
+  outline-offset: 3px;
+}
+
 /* Neon systemic correction: nested production primitives must inherit the
    approved appearance roles inside protected previews. This scope deliberately
    does not alter normal production pages. */

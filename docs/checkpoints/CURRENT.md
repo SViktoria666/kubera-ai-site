@@ -637,3 +637,17 @@ The GEO parser incident is technically closed for the identified parser defects.
 ## EXACT NEXT STEP
 
 If approved later, run one bounded P2 content-strengthening review for the 12 identified snippets only; do not rewrite good content or create copy for the 58 historical placeholders.
+
+## CONTROLLED NEON FULL-FAMILY LOCAL ROLLOUT - 2026-10-06
+
+- Baseline verified at `09eebb60880c4e23b0476cbdebf4a21dbb2cec10`; the protected branch remains `neon-owner-forensic-20261006`. The local-only rollout is query-scoped through `?neon=1` and `NeonRouteScope`; normal production routes remain unchanged.
+- All 211 real user-facing routes were audited at 390, 768, 1024, 1366, and 1440, plus 20 boundary checks at 561 and 1200: 1,075/1,075 passed. Canonical redirect behavior is recorded as redirect-only; no redirect architecture was changed.
+- Family inventory: Home/shared 6, Commercial/Industry 54, canonical GEO 18, legacy GEO 18, Use Cases 7, Cases 16, Landing Pages 21, Blog 49, RU 21, ES 1. The protected appearance scope propagates the approved Neon system to all families while preserving the five owner-approved reference families.
+- Shared protected corrections cover the sitewide wrapper, legacy purple hero/solution surfaces, assistant yellow send control, semantic navy/cyan surfaces, button states, form styling, focus-visible states, and protected Visual Review Index links. No content, SEO, route, canonical, sitemap, pricing, workflow, or assistant behavior was changed.
+- Evidence: `reports/KUBERA_NEON_FULL_ROUTE_AUDIT_2026-10-06.json`, `reports/evidence/neon-full-rollout/`, and `scripts/forensics/neon-full-route-audit.mjs`. Audit report: 211 routes, 1,075 checks, 0 failures.
+- Validation: typecheck PASS; build PASS (229 generated pages); SEO PASS (213 built indexable routes, 0 warnings); content gate PASS; D1 assertions 24/24; existing Neon suite assertions 33/33 observed passing. The test runner teardown required stopping only its isolated process; the protected 3105 server remains running.
+- Protected review proof: `http://localhost:3105/design-lab/visual-review` returns 200, noindex/nofollow/nocache, local route links carry `?neon=1`, and normal/hard reload plus new-tab checks passed. No Vercel preview or production deployment was created.
+
+## EXACT NEXT STEP
+
+Owner visually reviews the protected representative family links and confirms whether the full local Neon rollout may advance to the bounded D2 Preview -> Production Gate. Do not deploy or modify production before explicit approval.

@@ -3,6 +3,7 @@ import { AnalyticsBridge } from "@/components/analytics/AnalyticsBridge";
 import { UmamiScript } from "@/components/analytics/UmamiScript";
 import { Footer } from "@/components/core/Footer";
 import { Header } from "@/components/core/Header";
+import { NeonRouteScope } from "@/components/core/NeonRouteScope";
 import { RouteTransition } from "@/components/core/RouteTransition";
 import { StructuredData } from "@/components/seo/StructuredData";
 
@@ -14,7 +15,7 @@ export function SiteShell({ children }: SiteShellProps) {
   const isAssistantEnabled = process.env.AI_ASSISTANT_ENABLED === "true";
 
   return (
-    <>
+    <NeonRouteScope assistantEnabled={isAssistantEnabled}>
       <UmamiScript />
       <StructuredData />
       <Header />
@@ -22,6 +23,6 @@ export function SiteShell({ children }: SiteShellProps) {
       <Footer />
       <AiAssistantWidget enabled={isAssistantEnabled} />
       <AnalyticsBridge />
-    </>
+    </NeonRouteScope>
   );
 }
