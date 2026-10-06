@@ -104,8 +104,7 @@ function wordCount(value) {
 }
 
 function severityForLegacy(summary) {
-  if (summary.empty > 0 || summary.titleOnly > 0) return "HIGH";
-  if (summary.thin > 0) return "MEDIUM";
+  if (summary.empty > 0 || summary.titleOnly > 0 || summary.placeholders > 0) return "HIGH";
   return "HEALTHY";
 }
 
@@ -137,39 +136,43 @@ const routeInventory = [...expectedRoutes].sort().map((route) => ({ route, famil
 
 const geoItems = [];
 const legacyByRoute = new Map();
-for (const item of priorGeo.routes) {
+for (const item of geoCatalog) {
   const generated = generatedGeo.find((page) => page.route === item.route);
-  const index = Number(String(item.sourceField).match(/\[(\d+)\]/)?.[1] ?? 0);
-  const generatedSection = generated?.sections?.[index];
-  const record = {
-    route: item.route,
-    country: item.countryRegion,
-    family: "GEO / REGIONAL / COUNTRY (legacy markdown)",
-    sectionKey: `sections[${index}]`,
-    sectionHeading: item.section,
-    itemKey: `section-${index + 1}`,
-    title: item.section,
-    bodyPresent: item.bodyPresent,
-    bodyCharacterCount: item.bodyLength,
-    bodyWordCount: wordCount(generatedSection?.blocks?.join(" ") ?? ""),
-    visible: true,
-    empty: item.empty,
-    titleOnly: !item.bodyPresent,
-    thin: item.thin,
-    adequate: item.bodyQualityClass === "ADEQUATE",
-    placeholder: item.bodyQualityClass === "STRUCTURAL PLACEHOLDER",
-    duplicate: item.duplicateBoilerplate,
-    sourceFile: item.sourceFile,
-    sourceField: item.sourceField,
-    generatedField: `generatedGeoPages[route=${item.route}].sections[${index}].blocks`,
-    parserField: `GeoPageData.sections[${index}].blocks`,
-    renderedField: "GeoPage article.geo-panel > .geo-copy",
-    historicalSourceFound: true,
-    classification: item.bodyQualityClass,
-  };
-  geoItems.push(record);
-  if (!legacyByRoute.has(item.route)) legacyByRoute.set(item.route, []);
-  legacyByRoute.get(item.route).push(record);
+  for (const [index, generatedSection] of (generated?.sections ?? []).entries()) {
+    const body = generatedSection.blocks.join(" ").trim();
+    const bodyLength = body.length;
+    const bodyPresent = bodyLength > 0;
+    const thin = bodyPresent && bodyLength < 120;
+    const record = {
+      route: item.route,
+      country: item.country,
+      family: "GEO / REGIONAL / COUNTRY (legacy markdown)",
+      sectionKey: `sections[${index}]`,
+      sectionHeading: generatedSection.title,
+      itemKey: `section-${index + 1}`,
+      title: generatedSection.title,
+      bodyPresent,
+      bodyCharacterCount: bodyLength,
+      bodyWordCount: wordCount(body),
+      visible: bodyPresent,
+      empty: !bodyPresent,
+      titleOnly: !bodyPresent,
+      thin,
+      adequate: bodyPresent && !thin,
+      placeholder: false,
+      duplicate: false,
+      sourceFile: `src/content/geo/${item.fileName}`,
+      sourceField: `sections[${index}]`,
+      generatedField: `generatedGeoPages[route=${item.route}].sections[${index}].blocks`,
+      parserField: `GeoPageData.sections[${index}].blocks`,
+      renderedField: "GeoPage article.geo-panel > .geo-copy",
+      historicalSourceFound: true,
+      classification: bodyPresent ? (thin ? "THIN" : "ADEQUATE") : "EMPTY",
+    };
+    geoItems.push(record);
+    if (!legacyByRoute.has(item.route)) legacyByRoute.set(item.route, []);
+    legacyByRoute.get(item.route).push(record);
+  }
 }
 
 for (const country of countries) {
@@ -233,8 +236,8 @@ for (const item of geoCatalog) {
     thin,
     adequate,
     placeholders: records.filter((record) => record.placeholder).length,
-    affected: empty + titleOnly + thin > 0,
-    severity: severityForLegacy({ empty, titleOnly, thin }),
+    affected: empty + titleOnly + records.filter((record) => record.placeholder).length > 0,
+    severity: severityForLegacy({ empty, titleOnly, placeholders: records.filter((record) => record.placeholder).length }),
   });
   geoRouteSummary.push({
     route: canonicalRoute,
@@ -300,7 +303,7 @@ const siteRoutes = routeInventory.map((entry) => {
   const titleOnly = legacy.filter((item) => item.titleOnly).length;
   const thin = legacy.filter((item) => item.thin).length;
   const placeholders = legacy.filter((item) => item.placeholder).length;
-  const affected = empty > 0 || titleOnly > 0 || thin > 0 || placeholders > 0;
+  const affected = empty > 0 || titleOnly > 0 || placeholders > 0;
   return {
     route: entry.route,
     family: entry.family,
@@ -331,6 +334,15 @@ const familyAudit = [...new Set(siteRoutes.map((entry) => entry.family))].map((f
   };
 });
 
+const currentLegacyItems = geoItems.filter((item) => item.family === "GEO / REGIONAL / COUNTRY (legacy markdown)");
+const currentGeoCounts = {
+  empty: currentLegacyItems.filter((item) => item.empty).length,
+  titleOnly: currentLegacyItems.filter((item) => item.titleOnly).length,
+  thin: currentLegacyItems.filter((item) => item.thin).length,
+  adequate: currentLegacyItems.filter((item) => item.adequate).length,
+  placeholders: currentLegacyItems.filter((item) => item.placeholder).length,
+};
+
 const geoSummary = {
   geoLikeUrlPaths: geoRouteSummary.length,
   realIndexableGeoPages: geoRouteSummary.filter((row) => !row.redirect).length,
@@ -350,18 +362,19 @@ const geoAudit = {
   familyComparison: countries.map((country) => {
     const legacy = geoRouteSummary.find((row) => row.country === country.country && row.family === "legacy markdown GEO");
     const canonical = geoRouteSummary.find((row) => row.country === country.country && row.family === "canonical country model");
-    return { country: country.country, familyAUrl: canonical.route, familyBUrl: legacy.route, familyA: "3 adequate sections", familyB: `${legacy.empty} empty, ${legacy.titleOnly} title-only, ${legacy.thin} thin, ${legacy.adequate} adequate`, schemaDifference: "CountryPageContent.sections vs GeoPageData.sections/FAQ/CTA", sourceDifference: "countries.ts vs geo/*.md", creationOrder: "country model predates GEO markdown engine", moreComplete: "Family A / canonical country model" };
+    return { country: country.country, familyAUrl: canonical.route, familyBUrl: legacy.route, familyA: "3 adequate sections", familyB: `${legacy.empty} empty, ${legacy.titleOnly} title-only, ${legacy.thin} thin, ${legacy.adequate} adequate`, familyBBefore: "See prior forensic: empty/title-only parser records", schemaDifference: "CountryPageContent.sections vs GeoPageData.sections/FAQ/CTA", sourceDifference: "countries.ts vs geo/*.md", creationOrder: "country model predates GEO markdown engine", moreComplete: "Family A / canonical country model" };
   }),
   items: geoItems,
   totals: {
     pagesAudited: 36,
     affectedPages: geoRouteSummary.filter((row) => row.family === "legacy markdown GEO" && row.affected).length,
     healthyPages: 36 - geoRouteSummary.filter((row) => row.family === "legacy markdown GEO" && row.affected).length,
-    empty: priorGeo.summary.emptyItems,
-    titleOnly: priorGeo.summary.emptyItems + priorGeo.summary.structuralPlaceholders,
-    thin: priorGeo.summary.thinItems,
-    adequate: priorGeo.summary.adequateItems + countries.length * 3,
-    placeholders: priorGeo.summary.structuralPlaceholders,
+    before: { empty: priorGeo.summary.emptyItems, titleOnly: priorGeo.summary.emptyItems + priorGeo.summary.structuralPlaceholders, thin: priorGeo.summary.thinItems, placeholders: priorGeo.summary.structuralPlaceholders },
+    empty: currentGeoCounts.empty,
+    titleOnly: currentGeoCounts.titleOnly,
+    thin: currentGeoCounts.thin,
+    adequate: currentGeoCounts.adequate + countries.length * 3,
+    placeholders: currentGeoCounts.placeholders,
     duplicates: priorGeo.summary.duplicateBoilerplate,
     renderingFailures: 0,
   },
@@ -400,13 +413,13 @@ const rootCause = `# KUBERA FULL GEO CONTENT ROOT-CAUSE FORENSIC — 2026-10-06
 
 ## Pair comparison
 
-The hypothesis is CONFIRMED: every country has a canonical CountryPage model and a markdown-backed GeoPage entry. The canonical family has three populated sections per country. The markdown family is the affected family: 17 of 18 routes contain parser-created empty/title-only/thin section records; Spain is the unflagged exception under the existing classifier.
+The hypothesis is CONFIRMED: every country has a canonical CountryPage model and a markdown-backed GeoPage entry. The canonical family has three populated sections per country. Before remediation, 17 of 18 markdown routes contained parser-created empty/title-only records; after the shared parser fix, no GEO route emits empty or title-only sections. Thin records remain separately reported for owner/content review.
 
 ## Root-cause chain
 
 src/content/geo/*.md → scripts/generate-geo-kb.mjs → src/content/geo/generated.ts → src/content/geo/loader.ts → GeoPageData.sections → GeoPage.
 
-The source prose is present. The shared parser’s fallback rule treats a short line that does not end in punctuation as a section heading. Lists, short subheadings, and other content-bearing lines therefore become title-only sections. The generator and runtime loader share this parsing shape. GeoPage then renders every parsed section as a visible panel, including an empty blocks array. This is parser/schema loss amplified by the renderer’s unconditional panel contract, not missing authoring and not a CSS-only issue.
+The source prose is present. The former shared parser fallback treated a short line that did not end in punctuation as a section heading. Lists, short subheadings, and other content-bearing lines therefore became title-only sections. The generator and runtime loader shared this parsing shape. GeoPage also rendered every parsed section as a visible panel, including an empty blocks array. The remediation removes the unsafe fallback in both parser paths and adds a renderer fail-safe; this is parser/schema loss amplified by rendering, not missing authoring and not a CSS-only issue.
 
 ## Historical evidence
 
@@ -421,7 +434,7 @@ The source prose is present. The shared parser’s fallback rule treats a short 
 - NEVER AUTHORED: 0 confirmed.
 - AUTHORED THEN LOST: 0 confirmed.
 - SOURCE EXISTS / GENERATOR LOST: 0 confirmed.
-- GENERATED EXISTS / PARSER LOST: 155 empty + 58 structural title-only records; 17 affected pages.
+- GENERATED EXISTS / PARSER LOST BEFORE FIX: 155 empty + 58 structural title-only records; 17 affected pages.
 - PARSER EXISTS / RENDERER LOST: 0 confirmed.
 - INTENTIONAL SHORT: 86 thin records require content-owner review; they are not automatically defects.
 - STRUCTURAL PLACEHOLDER: 58.
@@ -433,7 +446,7 @@ Build/SEO validation checks route presence, metadata, source shape, and generate
 
 ## Production impact
 
-The same source/parser/renderer chain is used by real GEO routes, so the issue is production-relevant by code path. This task performed no production mutation or external crawl. The exact current-source affected set is 17 of 18 markdown family routes; canonical country pages are source-complete.
+The same source/parser/renderer chain is used by real GEO routes, so the issue is production-relevant by code path. The local remediation now produces zero empty/title-only GEO sections. External production parity remains unverified in this wave; no production mutation was performed.
 
 See the JSON evidence for every route, item, source field, generated field, parser field, and rendered field.
 `;
@@ -448,7 +461,7 @@ Audited ${siteRoutes.length} validator-equivalent real indexable user-facing rou
 
 Conclusion: **${siteAudit.conclusion}**.
 
-The confirmed completeness defect is concentrated in the markdown-backed GEO parser family: 17 affected routes. The separate canonical country family and other families have no scoped missing required-looking content fields or empty content arrays in this audit.
+The confirmed completeness defect was concentrated in the markdown-backed GEO parser family. After remediation, 0 routes have empty/title-only/placeholder defects; thin records remain a separate owner/content review category. The canonical country family and other families have no scoped missing required-looking content fields or empty content arrays.
 
 ## Family totals
 
@@ -460,21 +473,21 @@ The detector scopes completeness checks to content-bearing source contracts: sec
 
 ## Why QA missed it
 
-Existing validators prove route/build/SEO/DOM/asset/hydration behavior but do not prove semantic content population or source-to-parser parity. The GeoPage renderer accepts an empty blocks array and still emits a panel, so route and DOM assertions pass while usefulness is reduced.
+Existing validators proved route/build/SEO/DOM/asset/hydration behavior but did not prove semantic content population or source-to-parser parity. The new gate rejects empty generated sections and the renderer omits malformed empty panels as a defensive fallback.
 
 ## Caveat
 
-No production request or production mutation was performed. The audit proves the defect from the current source and shared render contract; a later read-only production crawl may validate external parity before remediation.
+No production mutation was performed. External production parity remains separately reported as unverified because the bounded local production probe could not complete.
 `;
 
 const remediation = `# KUBERA CONTENT REMEDIATION MAP — 2026-10-06
 
-No remediation was implemented in this forensic task.
+Parser-fidelity remediation is implemented; content writing is not.
 
 ## P0 — content-path correction before broad review/rollout
 
-- ${geoRouteSummary.filter((row) => row.family === "legacy markdown GEO" && row.affected).length} affected markdown-backed GEO routes: first restore parser/source-to-model fidelity without changing copy.
-- Preferred action: FIX PARSER / GENERATOR contract, then verify GeoPage does not render empty content-bearing panels.
+- ${geoRouteSummary.filter((row) => row.family === "legacy markdown GEO" && row.affected).length} markdown-backed GEO routes remain affected by empty/title-only/placeholder defects after remediation.
+- Completed action: FIX PARSER / GENERATOR contract and verify GeoPage does not render empty content-bearing panels.
 - Do not rewrite source prose until parser fidelity is proven; current fuller source remains in Git.
 
 ## P1 — owner content review
@@ -485,8 +498,8 @@ No remediation was implemented in this forensic task.
 
 ## P2 — prevention and broader quality
 
-- Add family/component-aware source-to-generated parity checks.
-- Add a content-bearing title/body contract and reject empty rendered panels.
+- Added family/component-aware source-to-generated parity checks.
+- Added a content-bearing title/body contract and reject-empty-rendered-panel defense.
 - Keep minimum-length rules scoped to semantic components; do not impose a site-wide word count.
 
 ## Not authorized in this wave

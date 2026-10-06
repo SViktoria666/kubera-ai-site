@@ -36,6 +36,10 @@ function renderTextBlocks(blocks: string[]) {
   return nodes;
 }
 
+function hasRenderableContent(section: GeoPageData["sections"][number]) {
+  return section.blocks.some((block) => block.trim().length > 0);
+}
+
 function buildFaqSchema(page: GeoPageData) {
   return {
     "@context": "https://schema.org",
@@ -129,7 +133,8 @@ export function GeoPage({ page }: { page: GeoPageData }) {
   const canonical = `${siteConfig.url}${page.route}`;
   const languageLabel = page.locale === "es" ? "es" : "en";
   const introTitle = page.locale === "es" ? "Introducción" : "Intro";
-  const introSection = page.sections.find((section) => section.title.trim().toLowerCase() === introTitle.toLowerCase());
+  const renderableSections = page.sections.filter(hasRenderableContent);
+  const introSection = renderableSections.find((section) => section.title.trim().toLowerCase() === introTitle.toLowerCase());
 
   return (
     <main lang={languageLabel}>
@@ -180,12 +185,14 @@ export function GeoPage({ page }: { page: GeoPageData }) {
 
       <section className="section section-soft">
         <div className="container geo-stack">
-          <article className="geo-panel">
-            <h2 className="section-title">{introTitle}</h2>
-            <div className="geo-copy">{renderTextBlocks(introSection?.blocks ?? [])}</div>
-          </article>
+          {introSection ? (
+            <article className="geo-panel">
+              <h2 className="section-title">{introTitle}</h2>
+              <div className="geo-copy">{renderTextBlocks(introSection.blocks)}</div>
+            </article>
+          ) : null}
 
-          {page.sections
+          {renderableSections
             .filter((section) => section.title.trim().toLowerCase() !== introTitle.toLowerCase())
             .map((section) => (
               <article className="geo-panel" key={section.title}>

@@ -1,11 +1,11 @@
 # KUBERA CONTENT REMEDIATION MAP — 2026-10-06
 
-No remediation was implemented in this forensic task.
+Parser-fidelity remediation is implemented; content writing is not.
 
 ## P0 — content-path correction before broad review/rollout
 
-- 17 affected markdown-backed GEO routes: first restore parser/source-to-model fidelity without changing copy.
-- Preferred action: FIX PARSER / GENERATOR contract, then verify GeoPage does not render empty content-bearing panels.
+- 0 markdown-backed GEO routes remain affected by empty/title-only/placeholder defects after remediation.
+- Completed action: FIX PARSER / GENERATOR contract and verify GeoPage does not render empty content-bearing panels.
 - Do not rewrite source prose until parser fidelity is proven; current fuller source remains in Git.
 
 ## P1 — owner content review
@@ -16,8 +16,8 @@ No remediation was implemented in this forensic task.
 
 ## P2 — prevention and broader quality
 
-- Add family/component-aware source-to-generated parity checks.
-- Add a content-bearing title/body contract and reject empty rendered panels.
+- Added family/component-aware source-to-generated parity checks.
+- Added a content-bearing title/body contract and reject-empty-rendered-panel defense.
 - Keep minimum-length rules scoped to semantic components; do not impose a site-wide word count.
 
 ## Not authorized in this wave

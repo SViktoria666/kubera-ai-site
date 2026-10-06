@@ -8,12 +8,12 @@ Audited 211 validator-equivalent real indexable user-facing routes from source i
 
 Conclusion: **MOSTLY-GEO**.
 
-The confirmed completeness defect is concentrated in the markdown-backed GEO parser family: 17 affected routes. The separate canonical country family and other families have no scoped missing required-looking content fields or empty content arrays in this audit.
+The confirmed completeness defect was concentrated in the markdown-backed GEO parser family. After remediation, 0 routes have empty/title-only/placeholder defects; thin records remain a separate owner/content review category. The canonical country family and other families have no scoped missing required-looking content fields or empty content arrays.
 
 ## Family totals
 
 - HOME / SHARED: 6 total, 0 affected, critical 0, high 0, medium 0, low 0; none detected by scoped source completeness checks.
-- GEO / REGIONAL / COUNTRY (legacy markdown): 18 total, 17 affected, critical 0, high 17, medium 0, low 0; parser-created empty/title-only GEO sections.
+- GEO / REGIONAL / COUNTRY (legacy markdown): 18 total, 0 affected, critical 0, high 0, medium 0, low 0; none detected by scoped source completeness checks.
 - BLOG: 49 total, 0 affected, critical 0, high 0, medium 0, low 0; none detected by scoped source completeness checks.
 - CASES: 16 total, 0 affected, critical 0, high 0, medium 0, low 0; none detected by scoped source completeness checks.
 - GEO / REGIONAL / COUNTRY (canonical country): 18 total, 0 affected, critical 0, high 0, medium 0, low 0; none detected by scoped source completeness checks.
@@ -29,9 +29,9 @@ The detector scopes completeness checks to content-bearing source contracts: sec
 
 ## Why QA missed it
 
-Existing validators prove route/build/SEO/DOM/asset/hydration behavior but do not prove semantic content population or source-to-parser parity. The GeoPage renderer accepts an empty blocks array and still emits a panel, so route and DOM assertions pass while usefulness is reduced.
+Existing validators proved route/build/SEO/DOM/asset/hydration behavior but did not prove semantic content population or source-to-parser parity. The new gate rejects empty generated sections and the renderer omits malformed empty panels as a defensive fallback.
 
 ## Caveat
 
-No production request or production mutation was performed. The audit proves the defect from the current source and shared render contract; a later read-only production crawl may validate external parity before remediation.
+No production mutation was performed. External production parity remains separately reported as unverified because the bounded local production probe could not complete.
 

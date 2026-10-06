@@ -37,37 +37,8 @@ export const generatedGeoPages = [
       },
       {
         "title": "Why German businesses choose Kubera AI:",
-        "blocks": []
-      },
-      {
-        "title": "EU-focused automation expertise",
-        "blocks": []
-      },
-      {
-        "title": "GDPR-conscious implementation approach",
-        "blocks": []
-      },
-      {
-        "title": "Custom workflow architecture instead of template deployments",
         "blocks": [
-          "Integration with SAP, DATEV, HubSpot, Microsoft Dynamics, Salesforce, and existing business systems"
-        ]
-      },
-      {
-        "title": "Support for German and international teams",
-        "blocks": []
-      },
-      {
-        "title": "Automation designed specifically for SMEs and Mittelstand companies",
-        "blocks": []
-      },
-      {
-        "title": "Fast implementation cycles with measurable ROI targets",
-        "blocks": []
-      },
-      {
-        "title": "Long-term scalability without increasing operational complexity",
-        "blocks": [
+          "EU-focused automation expertise GDPR-conscious implementation approach Custom workflow architecture instead of template deployments Integration with SAP, DATEV, HubSpot, Microsoft Dynamics, Salesforce, and existing business systems Support for German and international teams Automation designed specifically for SMEs and Mittelstand companies Fast implementation cycles with measurable ROI targets Long-term scalability without increasing operational complexity",
           "Our objective is simple: remove repetitive operational work so your team can focus on revenue-generating, customer-facing, and strategic activities."
         ]
       },
@@ -76,200 +47,47 @@ export const generatedGeoPages = [
         "blocks": [
           "The demand for AI automation in Germany is being driven by structural economic and demographic changes rather than short-term technology trends. German companies are simultaneously facing labor shortages, rising operational costs, increasing compliance requirements, and growing international competition. These pressures are accelerating investment in workflow automation, CRM automation, customer support automation, and AI-assisted business operations. Several current data points explain why automation is becoming a strategic priority for German SMEs and Mittelstand companies:",
           "Workforce shrinkage is accelerating. The IAB (Institut für Arbeitsmarkt- und Berufsforschung) notes that Germany's workforce is under long-term demographic pressure, with the baby boomer generation retiring through 2035 — compounding existing skilled labor challenges across every sector. SMEs are already feeling the gap. The DIHK Skilled Labour Report 2025/2026 found that 36% of nearly 22,000 surveyed German companies were at least partially unable to fill vacancies due to a lack of suitable personnel. Among small and medium-sized businesses, the share exceeded 40%. Labor shortages persist despite economic slowdown. The ifo Institute reported in early 2026 that 22.7% of German companies still reported a shortage of qualified workers, even as some cyclical pressure eased. AI adoption is moving mainstream. Eurostat reported that 20.0% of EU enterprises with 10 or more employees used AI technologies in 2025, up from 13.5% in 2024 — a nearly 50% increase in a single year. Labor costs continue rising. OECD data shows that nominal wages in Germany increased by 2.7% between Q1 2024 and Q1 2025. Rising labor costs make automation increasingly attractive from a pure operational economics standpoint.",
-          "Germany's automation opportunity is especially strong because most companies already use structured business systems — SAP, DATEV, Microsoft Dynamics, HubSpot, Salesforce, and industry-specific ERP platforms. The challenge is rarely a lack of software. The real challenge is that these systems remain disconnected, underused, or dependent on manual updates. This creates a clear opportunity for AI automation: connect existing tools, reduce manual data movement, automate repetitive communication, and turn business software into an active operating system rather than a passive database."
-        ]
-      },
-      {
-        "title": "AI Automation vs. Hiring Additional Staff",
-        "blocks": [
-          "For many German SMEs, the decision to automate feels like a hiring decision. Here's how the comparison actually looks: TaskHiring a Staff MemberAI AutomationLead qualificationNew hire needed; weeks to onboardAutomated within days of setupCRM updatesRelies on rep discipline; often incomplete100% consistent, real-time, automaticWeekly reporting2–4 hours of manual workDelivered automatically on scheduleAppointment schedulingCoordination overhead + calendar managementFully automated booking with confirmationsCustomer support (routine)Full-time or part-time hireAI handles 60–80% of inquiries 24/7Follow-up sequencesDepends on individual rep memoryTriggered automatically, never missedCost€35,000–€65,000/year + overheadFrom €1,800 setup + €350/monthOnboarding time4–12 weeks2–4 weeks to go liveAvailabilityBusiness hours24/7/365 The conclusion for most German SMEs is not \"automation instead of people\" — it is \"automation handling the repetitive layer so your people can do the work that actually requires them.\""
-        ]
-      },
-      {
-        "title": "Manual Process vs. AI Automation: What Changes",
-        "blocks": [
-          "ProcessManualWith AI AutomationNew lead arrives via web formSomeone manually checks form, logs to CRM, assigns repInstant capture, enrichment, CRM record, rep notification — in 90 secondsFollow-up after quote requestRep remembers (or forgets) to follow upAutomated sequence: 3 touchpoints over 7 days, personalizedCustomer asks a standard questionSupport staff responds within hoursAI responds in seconds, escalates complex issues automaticallyWeekly sales reportManager spends 2–3 hours aggregating from multiple systemsAuto-generated and delivered every Monday morningNew client onboardingManual email sequence, document requests, calendar coordinationFully automated: documents, welcome sequence, calendar bookingLead goes cold in CRMStays cold until someone noticesRe-engagement sequence triggered automatically at defined interval"
+          "Germany's automation opportunity is especially strong because most companies already use structured business systems — SAP, DATEV, Microsoft Dynamics, HubSpot, Salesforce, and industry-specific ERP platforms. The challenge is rarely a lack of software. The real challenge is that these systems remain disconnected, underused, or dependent on manual updates. This creates a clear opportunity for AI automation: connect existing tools, reduce manual data movement, automate repetitive communication, and turn business software into an active operating system rather than a passive database.",
+          "AI Automation vs. Hiring Additional Staff For many German SMEs, the decision to automate feels like a hiring decision. Here's how the comparison actually looks: TaskHiring a Staff MemberAI AutomationLead qualificationNew hire needed; weeks to onboardAutomated within days of setupCRM updatesRelies on rep discipline; often incomplete100% consistent, real-time, automaticWeekly reporting2–4 hours of manual workDelivered automatically on scheduleAppointment schedulingCoordination overhead + calendar managementFully automated booking with confirmationsCustomer support (routine)Full-time or part-time hireAI handles 60–80% of inquiries 24/7Follow-up sequencesDepends on individual rep memoryTriggered automatically, never missedCost€35,000–€65,000/year + overheadFrom €1,800 setup + €350/monthOnboarding time4–12 weeks2–4 weeks to go liveAvailabilityBusiness hours24/7/365 The conclusion for most German SMEs is not \"automation instead of people\" — it is \"automation handling the repetitive layer so your people can do the work that actually requires them.\"",
+          "Manual Process vs. AI Automation: What Changes ProcessManualWith AI AutomationNew lead arrives via web formSomeone manually checks form, logs to CRM, assigns repInstant capture, enrichment, CRM record, rep notification — in 90 secondsFollow-up after quote requestRep remembers (or forgets) to follow upAutomated sequence: 3 touchpoints over 7 days, personalizedCustomer asks a standard questionSupport staff responds within hoursAI responds in seconds, escalates complex issues automaticallyWeekly sales reportManager spends 2–3 hours aggregating from multiple systemsAuto-generated and delivered every Monday morningNew client onboardingManual email sequence, document requests, calendar coordinationFully automated: documents, welcome sequence, calendar bookingLead goes cold in CRMStays cold until someone noticesRe-engagement sequence triggered automatically at defined interval"
         ]
       },
       {
         "title": "AI Automation Opportunities in Germany",
         "blocks": [
           "Germany's strong digital infrastructure, widespread business software adoption (SAP, DATEV, Microsoft Dynamics, HubSpot, Salesforce), and data-conscious business culture make it an ideal environment for deploying sophisticated automation. Key opportunities for AI solutions in Germany include:",
-          "CRM automation integrated with SAP, DATEV, HubSpot, Salesforce, Microsoft Dynamics — the core tools of German business software ecosystems Lead qualification and nurturing using AI that scores, enriches, and routes prospects automatically"
+          "CRM automation integrated with SAP, DATEV, HubSpot, Salesforce, Microsoft Dynamics — the core tools of German business software ecosystems Lead qualification and nurturing using AI that scores, enriches, and routes prospects automatically WhatsApp Business automation for customer communication in B2B and B2C contexts Automated onboarding workflows for new clients and employees across regulated industries AI-powered reporting replacing manual aggregation from SAP, DATEV, and CRM platforms Multilingual AI assistants (German/English) for companies serving international clients Workflow automation for German SMEs covering procurement, approvals, and project coordination"
         ]
-      },
-      {
-        "title": "WhatsApp Business automation for customer communication in B2B and B2C contexts",
-        "blocks": []
-      },
-      {
-        "title": "Automated onboarding workflows for new clients and employees across regulated industries",
-        "blocks": []
-      },
-      {
-        "title": "AI-powered reporting replacing manual aggregation from SAP, DATEV, and CRM platforms",
-        "blocks": []
-      },
-      {
-        "title": "Multilingual AI assistants (German/English) for companies serving international clients",
-        "blocks": []
-      },
-      {
-        "title": "Workflow automation for German SMEs covering procurement, approvals, and project coordination",
-        "blocks": []
       },
       {
         "title": "Which German Industries Benefit Most from AI Automation",
-        "blocks": []
-      },
-      {
-        "title": "Manufacturing & Maschinenbau (Stuttgart, Munich, Ruhr)",
         "blocks": [
-          "Automation for order processing, inquiry routing, supplier follow-up, and logistics coordination. Integrates with SAP and ERP systems already in use."
-        ]
-      },
-      {
-        "title": "Logistics & Transport (Hamburg, Duisburg, Frankfurt)",
-        "blocks": [
-          "Shipment status automation, exception handling, partner communications, documentation workflows. Hamburg's port-based logistics sector is one of the highest-volume automation use cases in Europe."
-        ]
-      },
-      {
-        "title": "Automotive Supply Chain (Stuttgart, Munich, Ingolstadt)",
-        "blocks": [
-          "German automotive suppliers manage complex multi-tier supply chains. Automating RFQ responses, delivery confirmations, and quality documentation reduces overhead dramatically."
-        ]
-      },
-      {
-        "title": "Professional Services — Legal, Tax, Consulting (Frankfurt, Munich, Berlin)",
-        "blocks": [
-          "Client intake automation, appointment scheduling, document request sequences, GDPR-compliant data collection. DATEV integration for accounting and tax firms."
-        ]
-      },
-      {
-        "title": "Financial Services & Fintech (Frankfurt)",
-        "blocks": [
-          "Frankfurt's financial sector runs on precision. Lead qualification for wealth management, compliance-aware client onboarding, automated KYC document collection."
-        ]
-      },
-      {
-        "title": "Healthcare & Medical Practices (nationwide)",
-        "blocks": [
-          "Appointment booking, patient intake, reminder sequences, follow-up communication. Particularly high ROI in practices handling 100+ patient interactions per week."
-        ]
-      },
-      {
-        "title": "E-commerce & Retail (Berlin, Hamburg, Cologne)",
-        "blocks": [
-          "Cart recovery, post-purchase lifecycle sequences, customer support automation, review generation. German e-commerce companies operate in one of Europe's most competitive retail markets."
-        ]
-      },
-      {
-        "title": "Tech Startups & SaaS (Berlin, Munich)",
-        "blocks": [
-          "Berlin remains Germany's startup capital. Automation for trial nurturing, churn prevention, onboarding sequences, and growth-stage operational infrastructure."
+          "Manufacturing & Maschinenbau (Stuttgart, Munich, Ruhr) Automation for order processing, inquiry routing, supplier follow-up, and logistics coordination. Integrates with SAP and ERP systems already in use. Logistics & Transport (Hamburg, Duisburg, Frankfurt) Shipment status automation, exception handling, partner communications, documentation workflows. Hamburg's port-based logistics sector is one of the highest-volume automation use cases in Europe. Automotive Supply Chain (Stuttgart, Munich, Ingolstadt) German automotive suppliers manage complex multi-tier supply chains. Automating RFQ responses, delivery confirmations, and quality documentation reduces overhead dramatically. Professional Services — Legal, Tax, Consulting (Frankfurt, Munich, Berlin) Client intake automation, appointment scheduling, document request sequences, GDPR-compliant data collection. DATEV integration for accounting and tax firms. Financial Services & Fintech (Frankfurt) Frankfurt's financial sector runs on precision. Lead qualification for wealth management, compliance-aware client onboarding, automated KYC document collection. Healthcare & Medical Practices (nationwide) Appointment booking, patient intake, reminder sequences, follow-up communication. Particularly high ROI in practices handling 100+ patient interactions per week. E-commerce & Retail (Berlin, Hamburg, Cologne) Cart recovery, post-purchase lifecycle sequences, customer support automation, review generation. German e-commerce companies operate in one of Europe's most competitive retail markets. Tech Startups & SaaS (Berlin, Munich) Berlin remains Germany's startup capital. Automation for trial nurturing, churn prevention, onboarding sequences, and growth-stage operational infrastructure."
         ]
       },
       {
         "title": "Kubera AI Solutions for the German Market",
-        "blocks": []
-      },
-      {
-        "title": "CRM Automation",
         "blocks": [
-          "We connect your CRM (HubSpot, Salesforce, Pipedrive, or custom-built) to automated workflows that keep it accurate and actionable without manual data entry. New leads are captured, enriched, scored, and assigned. Follow-up tasks are created automatically. Deals that go silent trigger re-engagement sequences. Integration with SAP and Microsoft Dynamics available."
-        ]
-      },
-      {
-        "title": "AI Sales Assistant",
-        "blocks": [
-          "An AI assistant that handles first-touch lead qualification over email, WhatsApp, or web chat — in German or English. It asks the right qualification questions, identifies buyer intent, and hands warm leads to your sales team with full context already gathered."
-        ]
-      },
-      {
-        "title": "Customer Support Automation",
-        "blocks": [
-          "Deploy an AI-powered support system that handles up to 70% of routine customer inquiries without human intervention. Escalation logic ensures complex issues reach the right person, with full conversation context already gathered — not a blank transfer."
-        ]
-      },
-      {
-        "title": "Reporting & Analytics Automation",
-        "blocks": [
-          "Pull data from your CRM, SAP, DATEV exports, and ad platforms into automated weekly executive reports. No spreadsheets. No manual aggregation. Delivered on schedule to your inbox or shared team channel."
-        ]
-      },
-      {
-        "title": "Landing Page + AI Funnel (GPT-NTI)",
-        "blocks": [
-          "A complete demand generation system: conversion-optimized landing page, integrated AI chatbot, CRM connection, and automated WhatsApp/Telegram/email follow-up. Designed to turn traffic into qualified leads without manual intervention."
-        ]
-      },
-      {
-        "title": "Business Process Automation",
-        "blocks": [
-          "Map and automate the repetitive internal workflows that consume your team's time: document routing, approval chains, client onboarding steps, procurement workflows. We analyze your current operations and build systems that eliminate the bottlenecks."
+          "CRM Automation We connect your CRM (HubSpot, Salesforce, Pipedrive, or custom-built) to automated workflows that keep it accurate and actionable without manual data entry. New leads are captured, enriched, scored, and assigned. Follow-up tasks are created automatically. Deals that go silent trigger re-engagement sequences. Integration with SAP and Microsoft Dynamics available. AI Sales Assistant An AI assistant that handles first-touch lead qualification over email, WhatsApp, or web chat — in German or English. It asks the right qualification questions, identifies buyer intent, and hands warm leads to your sales team with full context already gathered. Customer Support Automation Deploy an AI-powered support system that handles up to 70% of routine customer inquiries without human intervention. Escalation logic ensures complex issues reach the right person, with full conversation context already gathered — not a blank transfer. Reporting & Analytics Automation Pull data from your CRM, SAP, DATEV exports, and ad platforms into automated weekly executive reports. No spreadsheets. No manual aggregation. Delivered on schedule to your inbox or shared team channel. Landing Page + AI Funnel (GPT-NTI) A complete demand generation system: conversion-optimized landing page, integrated AI chatbot, CRM connection, and automated WhatsApp/Telegram/email follow-up. Designed to turn traffic into qualified leads without manual intervention. Business Process Automation Map and automate the repetitive internal workflows that consume your team's time: document routing, approval chains, client onboarding steps, procurement workflows. We analyze your current operations and build systems that eliminate the bottlenecks."
         ]
       },
       {
         "title": "Example Automation Scenarios",
-        "blocks": []
-      },
-      {
-        "title": "Scenario 1: Stuttgart Maschinenbau Supplier (Mittelstand)",
         "blocks": [
-          "A 45-person machinery supplier near Stuttgart receives 80–120 inquiries per month via web form and email. Previously, a sales coordinator manually reviewed each inquiry, logged it into the CRM, and assigned it to a rep — a process taking 15–20 minutes per lead. With Kubera AI: the inquiry is received, an AI instantly categorizes it by product type and buyer stage, enriches the contact with company data, creates a CRM record, assigns the correct rep, and sends a personalized acknowledgment email — all within 90 seconds of submission. The sales coordinator shifts focus to deal progression, not data entry."
-        ]
-      },
-      {
-        "title": "Scenario 2: Hamburg Logistics Company",
-        "blocks": [
-          "A regional freight company in Hamburg loses deals because follow-ups after initial quote requests are inconsistent — some happen, some don't, depending on rep workload. Kubera AI implements an automated follow-up sequence triggered the moment a quote is sent: 3 touchpoints over 7 days via email and WhatsApp, all personalized with the prospect's company name, shipment route, and the quote details. The sales team only actively engages when a prospect replies."
-        ]
-      },
-      {
-        "title": "Scenario 3: Frankfurt Financial Services Firm",
-        "blocks": [
-          "A boutique investment advisory firm in Frankfurt wants to grow its client base through digital channels but has no structured lead nurturing process. Inquiries come in via their website and are manually handled by a single relationship manager. Kubera AI builds an automated qualification and nurturing flow: AI chatbot on the website qualifies intent and collects key information, a CRM record is created, and a 5-touch email sequence runs automatically over 14 days. The relationship manager only speaks to prospects who have already demonstrated genuine interest."
-        ]
-      },
-      {
-        "title": "Scenario 4: Munich Consulting Firm",
-        "blocks": [
-          "A 20-person strategy consultancy in Munich spends significant management time on client reporting — pulling data from project management tools, CRM, and time-tracking systems every month to build client-facing reports. Kubera AI automates the entire reporting pipeline: data is pulled automatically from all sources, a structured report is generated, and it's delivered to the client on the agreed schedule. Consultants recover 3–5 hours per month per client."
-        ]
-      },
-      {
-        "title": "Scenario 5: Berlin SaaS Startup",
-        "blocks": [
-          "A B2B SaaS company in Berlin generates trial signups from LinkedIn ads and content marketing but has no automated nurturing — most trials expire without any meaningful sales engagement. Kubera AI builds a behavior-triggered nurturing system: welcome sequence on signup, feature-adoption emails based on in-app activity, Slack alert to the sales rep when a trial account shows high engagement signals, and an automated WhatsApp message at day 10 offering a live demo."
-        ]
-      },
-      {
-        "title": "Scenario 6: Tax Advisory Firm — Steuerberatung",
-        "blocks": [
-          "A Steuerberatung with 12 advisors spends 4+ hours weekly on client appointment scheduling, reminder calls, and document collection requests. Kubera AI automates the entire client intake flow: online booking, automatic document request sequence with DATEV-compatible collection, GDPR-compliant data handling, and confirmation/reminder notifications via email and WhatsApp. Advisors recover an average of 3 hours per week — equivalent to reclaiming over 150 billable hours per year."
+          "Scenario 1: Stuttgart Maschinenbau Supplier (Mittelstand) A 45-person machinery supplier near Stuttgart receives 80–120 inquiries per month via web form and email. Previously, a sales coordinator manually reviewed each inquiry, logged it into the CRM, and assigned it to a rep — a process taking 15–20 minutes per lead. With Kubera AI: the inquiry is received, an AI instantly categorizes it by product type and buyer stage, enriches the contact with company data, creates a CRM record, assigns the correct rep, and sends a personalized acknowledgment email — all within 90 seconds of submission. The sales coordinator shifts focus to deal progression, not data entry. Scenario 2: Hamburg Logistics Company A regional freight company in Hamburg loses deals because follow-ups after initial quote requests are inconsistent — some happen, some don't, depending on rep workload. Kubera AI implements an automated follow-up sequence triggered the moment a quote is sent: 3 touchpoints over 7 days via email and WhatsApp, all personalized with the prospect's company name, shipment route, and the quote details. The sales team only actively engages when a prospect replies. Scenario 3: Frankfurt Financial Services Firm A boutique investment advisory firm in Frankfurt wants to grow its client base through digital channels but has no structured lead nurturing process. Inquiries come in via their website and are manually handled by a single relationship manager. Kubera AI builds an automated qualification and nurturing flow: AI chatbot on the website qualifies intent and collects key information, a CRM record is created, and a 5-touch email sequence runs automatically over 14 days. The relationship manager only speaks to prospects who have already demonstrated genuine interest. Scenario 4: Munich Consulting Firm A 20-person strategy consultancy in Munich spends significant management time on client reporting — pulling data from project management tools, CRM, and time-tracking systems every month to build client-facing reports. Kubera AI automates the entire reporting pipeline: data is pulled automatically from all sources, a structured report is generated, and it's delivered to the client on the agreed schedule. Consultants recover 3–5 hours per month per client. Scenario 5: Berlin SaaS Startup A B2B SaaS company in Berlin generates trial signups from LinkedIn ads and content marketing but has no automated nurturing — most trials expire without any meaningful sales engagement. Kubera AI builds a behavior-triggered nurturing system: welcome sequence on signup, feature-adoption emails based on in-app activity, Slack alert to the sales rep when a trial account shows high engagement signals, and an automated WhatsApp message at day 10 offering a live demo. Scenario 6: Tax Advisory Firm — Steuerberatung A Steuerberatung with 12 advisors spends 4+ hours weekly on client appointment scheduling, reminder calls, and document collection requests. Kubera AI automates the entire client intake flow: online booking, automatic document request sequence with DATEV-compatible collection, GDPR-compliant data handling, and confirmation/reminder notifications via email and WhatsApp. Advisors recover an average of 3 hours per week — equivalent to reclaiming over 150 billable hours per year."
         ]
       },
       {
         "title": "What Processes Should German Businesses Automate First?",
-        "blocks": []
-      },
-      {
-        "title": "For most German SMEs, the highest-ROI automation starting points are:",
         "blocks": [
+          "For most German SMEs, the highest-ROI automation starting points are:",
           "Lead follow-up sequences — The single most common revenue leak. Leads that don't receive timely follow-up go cold. Automation ensures every lead gets a structured response sequence without relying on individual rep discipline. CRM data entry and updates — Reps who spend 30–60 minutes per day on CRM housekeeping are not selling. Automation handles data capture, enrichment, and updates in real time. Customer support for routine inquiries — If more than 30% of your support volume is the same 10–15 questions, that's a clear automation target. AI handles it; humans handle the rest. Appointment scheduling and confirmations — Particularly for service businesses (legal, medical, consulting) where scheduling is a high-frequency, low-value administrative task. Weekly reporting — If someone in your company spends more than 2 hours per week building reports, that process should be automated."
         ]
       },
       {
         "title": "Is AI Automation Worth It for German SMEs?",
         "blocks": [
-          "Yes — with one important condition: the automation must be built for your actual processes, not a generic template."
-        ]
-      },
-      {
-        "title": "The return on investment for AI automation in German SMEs typically comes from three sources:",
-        "blocks": [
-          "Time savings. A well-implemented automation system saves between 5 and 20 hours per week of staff time, depending on the size and complexity of operations. At German labor costs, this translates to significant financial savings within months. Faster lead conversion. Speed of follow-up is one of the strongest predictors of B2B conversion. Companies that follow up within 5 minutes of a lead inquiry convert at dramatically higher rates than those that follow up within hours. Automation makes instant follow-up the default. Operational consistency. Human processes have variance — some reps follow up, some don't; some reports get done, some get skipped. Automated systems execute with 100% consistency. This matters enormously for CRM hygiene, compliance documentation, and customer experience. For most German SMEs investing in AI automation, the initial project cost is recovered within 2–4 months."
+          "Yes — with one important condition: the automation must be built for your actual processes, not a generic template. The return on investment for AI automation in German SMEs typically comes from three sources: Time savings. A well-implemented automation system saves between 5 and 20 hours per week of staff time, depending on the size and complexity of operations. At German labor costs, this translates to significant financial savings within months. Faster lead conversion. Speed of follow-up is one of the strongest predictors of B2B conversion. Companies that follow up within 5 minutes of a lead inquiry convert at dramatically higher rates than those that follow up within hours. Automation makes instant follow-up the default. Operational consistency. Human processes have variance — some reps follow up, some don't; some reports get done, some get skipped. Automated systems execute with 100% consistency. This matters enormously for CRM hygiene, compliance documentation, and customer experience. For most German SMEs investing in AI automation, the initial project cost is recovered within 2–4 months."
         ]
       }
     ],
@@ -363,209 +181,43 @@ export const generatedGeoPages = [
       },
       {
         "title": "Why Dutch businesses choose Kubera AI:",
-        "blocks": []
-      },
-      {
-        "title": "GDPR-compliant by design, EU-based infrastructure",
-        "blocks": []
-      },
-      {
-        "title": "WhatsApp Business API integration for the Dutch communication-first market",
-        "blocks": []
-      },
-      {
-        "title": "Multilingual automation (NL/EN/DE/FR) for pan-European operations",
-        "blocks": []
-      },
-      {
-        "title": "Custom workflow architecture, not off-the-shelf templates",
         "blocks": [
-          "Integration with Exact Online, HubSpot, Salesforce, Shopify, Mollie, and major Dutch business tools"
+          "GDPR-compliant by design, EU-based infrastructure WhatsApp Business API integration for the Dutch communication-first market Multilingual automation (NL/EN/DE/FR) for pan-European operations Custom workflow architecture, not off-the-shelf templates Integration with Exact Online, HubSpot, Salesforce, Shopify, Mollie, and major Dutch business tools Fast implementation: most projects go live in 2–4 weeks Scaled for SMEs with 5–200 employees"
         ]
-      },
-      {
-        "title": "Fast implementation: most projects go live in 2–4 weeks",
-        "blocks": []
-      },
-      {
-        "title": "Scaled for SMEs with 5–200 employees",
-        "blocks": []
       },
       {
         "title": "AI Automation in the Netherlands: Key Market Trends",
         "blocks": [
           "The demand for business automation in the Netherlands is accelerating rapidly, driven by structural labour market pressure and high digital literacy:",
           "AI adoption is above EU average. Eurostat (2025) reports the Netherlands exceeded 33% enterprise AI adoption — ranking among Europe's top five countries and significantly ahead of the EU27 average of 20%. Two in three Dutch businesses face staff shortages. CBS's April 2025 Netherlands Business Survey found 67% of medium-sized companies are dealing with staff shortages. Among small businesses, the figure exceeded 61%. 45% of vacancies go unfilled. UWV research shows Dutch employers struggled to fill 45% of all vacancies in 2025. The most acute shortages are in transport, business services, ICT, and healthcare. Labour market remains near historic tightness. DNB data shows 97 job openings per 100 unemployed people at end of 2025 — far above the pre-pandemic average of 32 per 100. SMEs lag larger firms on digital adoption. The OECD's 2025 Netherlands Economic Survey specifically notes that SMEs are behind larger companies in adopting automation and digital tools, creating a clear productivity gap that automation can close.",
-          "For Dutch businesses, AI automation is not a future investment — it's a present-day operational necessity."
-        ]
-      },
-      {
-        "title": "AI Automation vs. Hiring Additional Staff",
-        "blocks": [
-          "TaskHiring a Staff MemberAI AutomationLead qualificationNew hire needed; weeks to onboardAutomated within days of setupCRM updatesRelies on rep discipline; often incomplete100% consistent, real-time, automaticWeekly reporting2–4 hours of manual workDelivered automatically on scheduleAppointment schedulingCoordination overhead + calendar managementFully automated booking with confirmationsCustomer support (routine)Full-time or part-time hireAI handles 60–80% of inquiries 24/7Follow-up sequencesDepends on individual rep memoryTriggered automatically, never missedCost€35,000–€65,000/year + overheadFrom €1,800 setup + €350/monthOnboarding time4–12 weeks2–4 weeks to go liveAvailabilityBusiness hours24/7/365"
-        ]
-      },
-      {
-        "title": "Manual Process vs. AI Automation: What Changes",
-        "blocks": [
-          "ProcessManualWith AI AutomationNew lead arrives via web formSomeone manually checks, logs to CRM, assigns repInstant capture, enrichment, CRM record, rep notification — in 90 secondsFollow-up after quote requestRep remembers (or forgets)Automated sequence: 3 touchpoints over 7 days, personalizedCustomer asks a standard questionSupport staff responds within hoursAI responds in seconds, complex cases escalated automaticallyWeekly sales reportManager spends 2–3 hours aggregatingAuto-generated and delivered Monday morningNew client onboardingManual email sequence, document requestsFully automated: documents, welcome sequence, calendar bookingLead goes cold in CRMStays cold until someone noticesRe-engagement sequence triggered automatically"
+          "For Dutch businesses, AI automation is not a future investment — it's a present-day operational necessity.",
+          "AI Automation vs. Hiring Additional Staff TaskHiring a Staff MemberAI AutomationLead qualificationNew hire needed; weeks to onboardAutomated within days of setupCRM updatesRelies on rep discipline; often incomplete100% consistent, real-time, automaticWeekly reporting2–4 hours of manual workDelivered automatically on scheduleAppointment schedulingCoordination overhead + calendar managementFully automated booking with confirmationsCustomer support (routine)Full-time or part-time hireAI handles 60–80% of inquiries 24/7Follow-up sequencesDepends on individual rep memoryTriggered automatically, never missedCost€35,000–€65,000/year + overheadFrom €1,800 setup + €350/monthOnboarding time4–12 weeks2–4 weeks to go liveAvailabilityBusiness hours24/7/365",
+          "Manual Process vs. AI Automation: What Changes ProcessManualWith AI AutomationNew lead arrives via web formSomeone manually checks, logs to CRM, assigns repInstant capture, enrichment, CRM record, rep notification — in 90 secondsFollow-up after quote requestRep remembers (or forgets)Automated sequence: 3 touchpoints over 7 days, personalizedCustomer asks a standard questionSupport staff responds within hoursAI responds in seconds, complex cases escalated automaticallyWeekly sales reportManager spends 2–3 hours aggregatingAuto-generated and delivered Monday morningNew client onboardingManual email sequence, document requestsFully automated: documents, welcome sequence, calendar bookingLead goes cold in CRMStays cold until someone noticesRe-engagement sequence triggered automatically"
         ]
       },
       {
         "title": "AI Automation Opportunities in the Netherlands",
         "blocks": [
           "The Dutch market's strengths — near-universal WhatsApp adoption (over 90%), high business software penetration, internationally oriented companies, and data-savvy leadership — create ideal conditions for sophisticated automation:",
-          "WhatsApp Business automation — the default communication channel for Dutch consumers and B2B buyers"
+          "WhatsApp Business automation — the default communication channel for Dutch consumers and B2B buyers Multilingual AI assistants (NL/EN/DE/FR) for companies operating across European markets CRM automation integrated with Exact Online, HubSpot, Salesforce, Pipedrive, and Mollie E-commerce lifecycle automation for the highly competitive Dutch online retail market Lead generation and nurturing systems for companies converting digital traffic into pipeline Automated reporting for management teams drowning in manual data aggregation Trial-to-paid automation for SaaS companies in Amsterdam's growing tech ecosystem"
         ]
-      },
-      {
-        "title": "Multilingual AI assistants (NL/EN/DE/FR) for companies operating across European markets",
-        "blocks": []
-      },
-      {
-        "title": "CRM automation integrated with Exact Online, HubSpot, Salesforce, Pipedrive, and Mollie",
-        "blocks": []
-      },
-      {
-        "title": "E-commerce lifecycle automation for the highly competitive Dutch online retail market",
-        "blocks": []
-      },
-      {
-        "title": "Lead generation and nurturing systems for companies converting digital traffic into pipeline",
-        "blocks": []
-      },
-      {
-        "title": "Automated reporting for management teams drowning in manual data aggregation",
-        "blocks": []
-      },
-      {
-        "title": "Trial-to-paid automation for SaaS companies in Amsterdam's growing tech ecosystem",
-        "blocks": []
       },
       {
         "title": "Relevant Industries",
-        "blocks": []
-      },
-      {
-        "title": "E-commerce & Retail (Amsterdam, Rotterdam, Utrecht)",
         "blocks": [
-          "Post-purchase flows, cart abandonment recovery, loyalty sequences, multilingual customer support. The Netherlands is one of Europe's most competitive e-commerce markets."
-        ]
-      },
-      {
-        "title": "Tech & SaaS Startups (Amsterdam, Eindhoven)",
-        "blocks": [
-          "Trial nurturing, onboarding automation, churn reduction workflows. Amsterdam's Zuidas and the Eindhoven tech corridor are home to some of Europe's fastest-growing B2B SaaS companies."
-        ]
-      },
-      {
-        "title": "Logistics & Distribution (Rotterdam, Amsterdam, Tilburg)",
-        "blocks": [
-          "Shipment status automation, exception handling, partner communications. Rotterdam is Europe's largest port — logistics automation use cases here are exceptionally high-volume."
-        ]
-      },
-      {
-        "title": "Financial Services & Fintech (Amsterdam)",
-        "blocks": [
-          "Lead qualification, compliance document collection, client onboarding workflows."
-        ]
-      },
-      {
-        "title": "Real Estate (Makelaardij) (Amsterdam, Utrecht, The Hague)",
-        "blocks": [
-          "Inquiry handling, viewing scheduling, buyer follow-up sequences. The Dutch property market is highly active with significant international buyer interest."
-        ]
-      },
-      {
-        "title": "Professional Services (nationwide)",
-        "blocks": [
-          "Client intake, proposal automation, appointment scheduling, document workflows."
-        ]
-      },
-      {
-        "title": "Hospitality & Tourism (Amsterdam, coastal regions)",
-        "blocks": [
-          "Booking confirmation, upsell sequences, review request automation, repeat guest nurturing."
-        ]
-      },
-      {
-        "title": "Healthcare & Wellness (nationwide)",
-        "blocks": [
-          "Appointment booking, patient intake, follow-up communication."
+          "E-commerce & Retail (Amsterdam, Rotterdam, Utrecht) Post-purchase flows, cart abandonment recovery, loyalty sequences, multilingual customer support. The Netherlands is one of Europe's most competitive e-commerce markets. Tech & SaaS Startups (Amsterdam, Eindhoven) Trial nurturing, onboarding automation, churn reduction workflows. Amsterdam's Zuidas and the Eindhoven tech corridor are home to some of Europe's fastest-growing B2B SaaS companies. Logistics & Distribution (Rotterdam, Amsterdam, Tilburg) Shipment status automation, exception handling, partner communications. Rotterdam is Europe's largest port — logistics automation use cases here are exceptionally high-volume. Financial Services & Fintech (Amsterdam) Lead qualification, compliance document collection, client onboarding workflows. Real Estate (Makelaardij) (Amsterdam, Utrecht, The Hague) Inquiry handling, viewing scheduling, buyer follow-up sequences. The Dutch property market is highly active with significant international buyer interest. Professional Services (nationwide) Client intake, proposal automation, appointment scheduling, document workflows. Hospitality & Tourism (Amsterdam, coastal regions) Booking confirmation, upsell sequences, review request automation, repeat guest nurturing. Healthcare & Wellness (nationwide) Appointment booking, patient intake, follow-up communication."
         ]
       },
       {
         "title": "Kubera AI Solutions for the Dutch Market",
-        "blocks": []
-      },
-      {
-        "title": "CRM Automation & Pipeline Management",
         "blocks": [
-          "Your CRM should be a live view of your business, not a historical record of what your team remembered to log. We automate contact creation, deal updates, activity logging, and follow-up task generation — keeping your pipeline accurate and actionable in real time. Works with Exact Online, HubSpot, Salesforce, and Pipedrive."
-        ]
-      },
-      {
-        "title": "WhatsApp Automation",
-        "blocks": [
-          "For Dutch businesses where WhatsApp is the primary customer channel, we build automated workflows that handle incoming messages, route inquiries, send updates, and trigger sequences — all within WhatsApp Business API. Compliant with official API policies and GDPR requirements."
-        ]
-      },
-      {
-        "title": "Multilingual AI Customer Assistant",
-        "blocks": [
-          "An AI assistant that communicates in Dutch, English, German, and French. Handles FAQs, product questions, appointment requests, and complaint triage — escalating to humans only when needed. Essential for companies serving pan-European markets."
-        ]
-      },
-      {
-        "title": "AI Lead Generation System (GPT-NTI)",
-        "blocks": [
-          "A complete lead generation machine: conversion-optimized landing page, AI chatbot for instant qualification, CRM integration, and automated follow-up via email, WhatsApp, and Telegram. Designed to generate qualified pipeline without requiring a large sales team."
-        ]
-      },
-      {
-        "title": "Automated Reporting & Analytics",
-        "blocks": [
-          "Replace the Friday spreadsheet ritual with automated reporting. Data pulled from your CRM, Exact Online, ad platforms, and operations tools — delivered as a structured weekly report to your inbox or Slack channel."
-        ]
-      },
-      {
-        "title": "Business Process Automation",
-        "blocks": [
-          "Map and automate the internal workflows consuming your team's time: document routing, approval chains, client onboarding, procurement coordination. We identify the bottlenecks and build systems that eliminate them."
+          "CRM Automation & Pipeline Management Your CRM should be a live view of your business, not a historical record of what your team remembered to log. We automate contact creation, deal updates, activity logging, and follow-up task generation — keeping your pipeline accurate and actionable in real time. Works with Exact Online, HubSpot, Salesforce, and Pipedrive. WhatsApp Automation For Dutch businesses where WhatsApp is the primary customer channel, we build automated workflows that handle incoming messages, route inquiries, send updates, and trigger sequences — all within WhatsApp Business API. Compliant with official API policies and GDPR requirements. Multilingual AI Customer Assistant An AI assistant that communicates in Dutch, English, German, and French. Handles FAQs, product questions, appointment requests, and complaint triage — escalating to humans only when needed. Essential for companies serving pan-European markets. AI Lead Generation System (GPT-NTI) A complete lead generation machine: conversion-optimized landing page, AI chatbot for instant qualification, CRM integration, and automated follow-up via email, WhatsApp, and Telegram. Designed to generate qualified pipeline without requiring a large sales team. Automated Reporting & Analytics Replace the Friday spreadsheet ritual with automated reporting. Data pulled from your CRM, Exact Online, ad platforms, and operations tools — delivered as a structured weekly report to your inbox or Slack channel. Business Process Automation Map and automate the internal workflows consuming your team's time: document routing, approval chains, client onboarding, procurement coordination. We identify the bottlenecks and build systems that eliminate them."
         ]
       },
       {
         "title": "Example Automation Scenarios",
-        "blocks": []
-      },
-      {
-        "title": "Scenario 1: Amsterdam E-commerce Brand",
         "blocks": [
-          "A 20-person Amsterdam lifestyle brand gets 300+ customer messages per week via email and Instagram DM — mostly about shipping, returns, and product availability. Customer service spends 60% of their time on repetitive queries. Kubera AI deploys an AI assistant across email and WhatsApp that resolves 75% of inquiries automatically. The team shifts focus to complex issues and product development."
-        ]
-      },
-      {
-        "title": "Scenario 2: Rotterdam B2B Logistics Company",
-        "blocks": [
-          "A freight company in Rotterdam loses deals because follow-up after quote requests is inconsistent. Kubera AI builds an automated 3-touch follow-up sequence triggered immediately when a quote is sent — personalized with the prospect's company name and the specific shipment route quoted. The sales team only engages when a prospect replies."
-        ]
-      },
-      {
-        "title": "Scenario 3: Utrecht Real Estate Agency (Makelaardij)",
-        "blocks": [
-          "A mid-sized agency receives 50–80 property inquiries weekly. Agents spend significant time qualifying leads, many of whom are just browsing. Kubera AI implements an automated qualification flow: website chatbot captures intent, budget, and timeline; serious buyers are routed to an agent with full context; casual browsers receive a nurturing sequence. Agents spend time with buyers who are actually ready to move."
-        ]
-      },
-      {
-        "title": "Scenario 4: Amsterdam SaaS Startup",
-        "blocks": [
-          "A B2B SaaS company generates trial signups via LinkedIn but has no structured follow-up. Most trials expire without conversion. Kubera AI builds a behavior-triggered nurturing system: welcome sequence, feature-adoption emails based on in-app activity, Slack alerts when a lead shows high engagement, and an automated WhatsApp message at day 10 offering a live demo."
-        ]
-      },
-      {
-        "title": "Scenario 5: The Hague Professional Services Firm",
-        "blocks": [
-          "A consulting firm closes most work through referrals but wants structured digital lead generation. Kubera AI builds a landing page with embedded AI chatbot, integrates with HubSpot, and sets up a 5-touch email nurturing sequence. Within 60 days, the firm has a predictable supplementary pipeline alongside referrals."
+          "Scenario 1: Amsterdam E-commerce Brand A 20-person Amsterdam lifestyle brand gets 300+ customer messages per week via email and Instagram DM — mostly about shipping, returns, and product availability. Customer service spends 60% of their time on repetitive queries. Kubera AI deploys an AI assistant across email and WhatsApp that resolves 75% of inquiries automatically. The team shifts focus to complex issues and product development. Scenario 2: Rotterdam B2B Logistics Company A freight company in Rotterdam loses deals because follow-up after quote requests is inconsistent. Kubera AI builds an automated 3-touch follow-up sequence triggered immediately when a quote is sent — personalized with the prospect's company name and the specific shipment route quoted. The sales team only engages when a prospect replies. Scenario 3: Utrecht Real Estate Agency (Makelaardij) A mid-sized agency receives 50–80 property inquiries weekly. Agents spend significant time qualifying leads, many of whom are just browsing. Kubera AI implements an automated qualification flow: website chatbot captures intent, budget, and timeline; serious buyers are routed to an agent with full context; casual browsers receive a nurturing sequence. Agents spend time with buyers who are actually ready to move. Scenario 4: Amsterdam SaaS Startup A B2B SaaS company generates trial signups via LinkedIn but has no structured follow-up. Most trials expire without conversion. Kubera AI builds a behavior-triggered nurturing system: welcome sequence, feature-adoption emails based on in-app activity, Slack alerts when a lead shows high engagement, and an automated WhatsApp message at day 10 offering a live demo. Scenario 5: The Hague Professional Services Firm A consulting firm closes most work through referrals but wants structured digital lead generation. Kubera AI builds a landing page with embedded AI chatbot, integrates with HubSpot, and sets up a 5-touch email nurturing sequence. Within 60 days, the firm has a predictable supplementary pipeline alongside referrals."
         ]
       },
       {
@@ -655,193 +307,40 @@ export const generatedGeoPages = [
       {
         "title": "Why Portuguese Businesses Choose Kubera AI",
         "blocks": [
-          "Portuguese SMEs need automation systems that work in their language, serve their international clients, integrate with the tools they already use, and deliver results fast — not in six months."
+          "Portuguese SMEs need automation systems that work in their language, serve their international clients, integrate with the tools they already use, and deliver results fast — not in six months. Kubera AI builds practical automation that fits how Portuguese businesses actually operate:",
+          "Fully multilingual: Portuguese, English, French, German WhatsApp Business API integration — the default channel for Portuguese business communication Tourism and hospitality automation expertise Real estate lead management for international buyer markets GDPR-compliant by design, EU-based infrastructure Fast implementation: most projects go live in 2–4 weeks Investment from €1,800 — scaled for Portuguese SME budgets"
         ]
-      },
-      {
-        "title": "Kubera AI builds practical automation that fits how Portuguese businesses actually operate:",
-        "blocks": []
-      },
-      {
-        "title": "Fully multilingual: Portuguese, English, French, German",
-        "blocks": []
-      },
-      {
-        "title": "WhatsApp Business API integration — the default channel for Portuguese business communication",
-        "blocks": []
-      },
-      {
-        "title": "Tourism and hospitality automation expertise",
-        "blocks": []
-      },
-      {
-        "title": "Real estate lead management for international buyer markets",
-        "blocks": []
-      },
-      {
-        "title": "GDPR-compliant by design, EU-based infrastructure",
-        "blocks": []
-      },
-      {
-        "title": "Fast implementation: most projects go live in 2–4 weeks",
-        "blocks": []
-      },
-      {
-        "title": "Investment from €1,800 — scaled for Portuguese SME budgets",
-        "blocks": []
       },
       {
         "title": "AI Automation in Portugal: Key Market Trends",
         "blocks": [
-          "Labour shortage ranks 3rd in EU for SMEs. EC December 2025 survey: 35% of Portuguese companies cannot fill vacancies. AI adoption below EU average. Portugal's enterprise AI adoption lags the EU 20% average — creating a competitive window for early adopters. Tourism spending at €31–33 billion. Record international visitor volumes are creating both demand and operational pressure for hospitality businesses. 96% of Portuguese companies are SMEs. The automation opportunity in Portugal is almost entirely an SME story — and these are exactly the businesses Kubera AI is built for. WhatsApp penetration above 85%. Portugal has one of the highest WhatsApp adoption rates in Europe. Automation on this channel directly reaches where Portuguese customers already are."
-        ]
-      },
-      {
-        "title": "AI Automation vs. Hiring Additional Staff",
-        "blocks": [
-          "TaskHiring a Staff MemberAI AutomationLead qualificationNew hire needed; weeks to onboardAutomated within days of setupCRM updatesRelies on rep discipline; often incomplete100% consistent, real-time, automaticWeekly reporting2–4 hours of manual workDelivered automatically on scheduleAppointment schedulingCoordination overheadFully automated booking with confirmationsCustomer support (routine)Full-time or part-time hireAI handles 60–80% of inquiries 24/7Multilingual responsesRequires multiple language-skilled staffSingle AI assistant handles PT/EN/FR/DECost€15,000–€35,000/year + overheadFrom €1,800 setup + €350/monthOnboarding time4–12 weeks2–4 weeks to go liveAvailabilityBusiness hours24/7/365"
-        ]
-      },
-      {
-        "title": "Manual Process vs. AI Automation: What Changes",
-        "blocks": [
-          "ProcessManualWith AI AutomationInternational inquiry arrives in EnglishStaff translates, responds hours laterAI responds in English instantly, CRM record createdFollow-up after property viewingAgent remembers (or forgets)Automated 5-touch sequence over 14 daysGuest asks about check-in via WhatsAppOperator responds manuallyAI responds in seconds with full instructionsWeekly business reportManual aggregation from multiple toolsAuto-generated and delivered on scheduleLead from web formManual log in CRM, assign to repInstant capture, enrichment, assignment in 90 secondsSeasonal demand spikeHire temporary staffAutomation handles volume without headcount increase"
+          "Labour shortage ranks 3rd in EU for SMEs. EC December 2025 survey: 35% of Portuguese companies cannot fill vacancies. AI adoption below EU average. Portugal's enterprise AI adoption lags the EU 20% average — creating a competitive window for early adopters. Tourism spending at €31–33 billion. Record international visitor volumes are creating both demand and operational pressure for hospitality businesses. 96% of Portuguese companies are SMEs. The automation opportunity in Portugal is almost entirely an SME story — and these are exactly the businesses Kubera AI is built for. WhatsApp penetration above 85%. Portugal has one of the highest WhatsApp adoption rates in Europe. Automation on this channel directly reaches where Portuguese customers already are.",
+          "AI Automation vs. Hiring Additional Staff TaskHiring a Staff MemberAI AutomationLead qualificationNew hire needed; weeks to onboardAutomated within days of setupCRM updatesRelies on rep discipline; often incomplete100% consistent, real-time, automaticWeekly reporting2–4 hours of manual workDelivered automatically on scheduleAppointment schedulingCoordination overheadFully automated booking with confirmationsCustomer support (routine)Full-time or part-time hireAI handles 60–80% of inquiries 24/7Multilingual responsesRequires multiple language-skilled staffSingle AI assistant handles PT/EN/FR/DECost€15,000–€35,000/year + overheadFrom €1,800 setup + €350/monthOnboarding time4–12 weeks2–4 weeks to go liveAvailabilityBusiness hours24/7/365",
+          "Manual Process vs. AI Automation: What Changes ProcessManualWith AI AutomationInternational inquiry arrives in EnglishStaff translates, responds hours laterAI responds in English instantly, CRM record createdFollow-up after property viewingAgent remembers (or forgets)Automated 5-touch sequence over 14 daysGuest asks about check-in via WhatsAppOperator responds manuallyAI responds in seconds with full instructionsWeekly business reportManual aggregation from multiple toolsAuto-generated and delivered on scheduleLead from web formManual log in CRM, assign to repInstant capture, enrichment, assignment in 90 secondsSeasonal demand spikeHire temporary staffAutomation handles volume without headcount increase"
         ]
       },
       {
         "title": "AI Automation Opportunities in Portugal",
         "blocks": [
-          "Tourism and hospitality automation — booking confirmations, upsell sequences, review requests, repeat guest nurturing, WhatsApp-first communication Real estate lead management — international buyer inquiry handling, automated multilingual follow-up WhatsApp automation — near-universal adoption makes this the highest-reach communication channel E-commerce lifecycle automation — abandoned cart, post-purchase, loyalty programs for Portuguese brands"
+          "Tourism and hospitality automation — booking confirmations, upsell sequences, review requests, repeat guest nurturing, WhatsApp-first communication Real estate lead management — international buyer inquiry handling, automated multilingual follow-up WhatsApp automation — near-universal adoption makes this the highest-reach communication channel E-commerce lifecycle automation — abandoned cart, post-purchase, loyalty programs for Portuguese brands Multilingual AI assistants (PT/EN/FR/DE) for businesses serving international markets Professional services intake automation — legal, accounting, consulting: onboarding, scheduling, document collection Lead generation funnels for local service businesses ready to grow beyond referrals"
         ]
-      },
-      {
-        "title": "Multilingual AI assistants (PT/EN/FR/DE) for businesses serving international markets",
-        "blocks": [
-          "Professional services intake automation — legal, accounting, consulting: onboarding, scheduling, document collection"
-        ]
-      },
-      {
-        "title": "Lead generation funnels for local service businesses ready to grow beyond referrals",
-        "blocks": []
       },
       {
         "title": "Relevant Industries",
-        "blocks": []
-      },
-      {
-        "title": "Tourism & Hospitality (Lisbon, Porto, Algarve, Madeira)",
         "blocks": [
-          "Hotels, vacation rentals, tour companies, restaurants. WhatsApp-first guest communication, automated booking confirmation, upsell sequences, review generation, repeat guest nurturing."
-        ]
-      },
-      {
-        "title": "Real Estate (Lisbon, Cascais, Algarve, Porto)",
-        "blocks": [
-          "International buyer funnels — British, French, German, Dutch buyers. Multilingual lead capture and follow-up, viewing scheduling, automated nurturing sequences."
-        ]
-      },
-      {
-        "title": "Professional Services (Lisbon, Porto, nationwide)",
-        "blocks": [
-          "Lawyers, accountants, consultants: automated client intake, appointment scheduling, document request sequences, GDPR-compliant data collection."
-        ]
-      },
-      {
-        "title": "E-commerce (Lisbon, Porto)",
-        "blocks": [
-          "Portuguese brands selling to European markets. Post-purchase flows, cart recovery, multilingual customer support."
-        ]
-      },
-      {
-        "title": "Tech Startups (Lisbon — Web Summit ecosystem)",
-        "blocks": [
-          "Lisbon's startup scene is internationally recognized. Automation for trial nurturing, onboarding, churn prevention, and scalable operations."
-        ]
-      },
-      {
-        "title": "Health & Wellness (nationwide)",
-        "blocks": [
-          "Clinics, spas, fitness studios: booking automation, follow-up communication, loyalty programmes."
-        ]
-      },
-      {
-        "title": "Construction & Real Estate Development",
-        "blocks": [
-          "Project inquiry handling, contractor communications, client update workflows."
+          "Tourism & Hospitality (Lisbon, Porto, Algarve, Madeira) Hotels, vacation rentals, tour companies, restaurants. WhatsApp-first guest communication, automated booking confirmation, upsell sequences, review generation, repeat guest nurturing. Real Estate (Lisbon, Cascais, Algarve, Porto) International buyer funnels — British, French, German, Dutch buyers. Multilingual lead capture and follow-up, viewing scheduling, automated nurturing sequences. Professional Services (Lisbon, Porto, nationwide) Lawyers, accountants, consultants: automated client intake, appointment scheduling, document request sequences, GDPR-compliant data collection. E-commerce (Lisbon, Porto) Portuguese brands selling to European markets. Post-purchase flows, cart recovery, multilingual customer support. Tech Startups (Lisbon — Web Summit ecosystem) Lisbon's startup scene is internationally recognized. Automation for trial nurturing, onboarding, churn prevention, and scalable operations. Health & Wellness (nationwide) Clinics, spas, fitness studios: booking automation, follow-up communication, loyalty programmes. Construction & Real Estate Development Project inquiry handling, contractor communications, client update workflows."
         ]
       },
       {
         "title": "Kubera AI Solutions for the Portuguese Market",
-        "blocks": []
-      },
-      {
-        "title": "WhatsApp Automation",
         "blocks": [
-          "WhatsApp is Portugal's default business communication channel — adoption exceeds 85%. We build automated systems within the official WhatsApp Business API: lead qualification, booking confirmations, follow-up sequences, FAQ responses. Everything automated, everything on the channel your clients already use."
-        ]
-      },
-      {
-        "title": "Multilingual AI Customer Assistant",
-        "blocks": [
-          "An AI assistant configured for Portuguese, English, French, and German. Handles first contact, qualification, and information requests around the clock. Essential for tourism, real estate, and hospitality businesses serving international clients."
-        ]
-      },
-      {
-        "title": "CRM Automation for Sales-Led Businesses",
-        "blocks": [
-          "For real estate, professional services, and B2B companies running relationship-driven sales, we build CRM automation that ensures no lead is forgotten, every follow-up happens on time, and the pipeline reflects reality — not memory."
-        ]
-      },
-      {
-        "title": "Tourism & Hospitality Automation",
-        "blocks": [
-          "Automated sequences for the full guest lifecycle: booking confirmation, pre-arrival information, upsell offers, check-in instructions, post-stay review requests, repeat guest incentive sequences. Works with Airbnb, Booking.com, direct booking systems, and WhatsApp."
-        ]
-      },
-      {
-        "title": "Lead Generation System (GPT-NTI)",
-        "blocks": [
-          "A complete lead capture and nurturing system: landing page, AI chatbot, CRM integration, and automated WhatsApp and email follow-up. For businesses wanting to generate qualified leads from digital channels without building a large sales team."
-        ]
-      },
-      {
-        "title": "Reporting Automation",
-        "blocks": [
-          "Replace manual reporting with automated dashboards. Pull data from your booking system, CRM, and marketing platforms into weekly reports delivered to your inbox. Spend less time gathering data and more time acting on it."
+          "WhatsApp Automation WhatsApp is Portugal's default business communication channel — adoption exceeds 85%. We build automated systems within the official WhatsApp Business API: lead qualification, booking confirmations, follow-up sequences, FAQ responses. Everything automated, everything on the channel your clients already use. Multilingual AI Customer Assistant An AI assistant configured for Portuguese, English, French, and German. Handles first contact, qualification, and information requests around the clock. Essential for tourism, real estate, and hospitality businesses serving international clients. CRM Automation for Sales-Led Businesses For real estate, professional services, and B2B companies running relationship-driven sales, we build CRM automation that ensures no lead is forgotten, every follow-up happens on time, and the pipeline reflects reality — not memory. Tourism & Hospitality Automation Automated sequences for the full guest lifecycle: booking confirmation, pre-arrival information, upsell offers, check-in instructions, post-stay review requests, repeat guest incentive sequences. Works with Airbnb, Booking.com, direct booking systems, and WhatsApp. Lead Generation System (GPT-NTI) A complete lead capture and nurturing system: landing page, AI chatbot, CRM integration, and automated WhatsApp and email follow-up. For businesses wanting to generate qualified leads from digital channels without building a large sales team. Reporting Automation Replace manual reporting with automated dashboards. Pull data from your booking system, CRM, and marketing platforms into weekly reports delivered to your inbox. Spend less time gathering data and more time acting on it."
         ]
       },
       {
         "title": "Example Automation Scenarios",
-        "blocks": []
-      },
-      {
-        "title": "Scenario 1: Lisbon Real Estate Agency (International Buyers)",
         "blocks": [
-          "A boutique Lisbon agency receives 60–80 inquiries monthly from foreign buyers — mostly British, French, and German. Managing communications across three languages and different stages of the buying journey is chaotic. Kubera AI deploys a multilingual AI assistant that captures each inquiry, identifies language and intent, sends a personalized response, and creates a CRM record with full context. Agents wake up each morning to an organized pipeline instead of an inbox of unanswered messages."
-        ]
-      },
-      {
-        "title": "Scenario 2: Algarve Vacation Rental Operator",
-        "blocks": [
-          "An operator managing 12 properties on Airbnb and Booking.com receives constant WhatsApp messages about check-in, parking, WiFi, and local tips. These repetitive inquiries consume hours daily. Kubera AI builds an AI assistant handling all standard guest communication automatically via WhatsApp. Unique situations are escalated to the human team. The operator's time is freed for property expansion."
-        ]
-      },
-      {
-        "title": "Scenario 3: Lisbon Boutique Hotel",
-        "blocks": [
-          "A 30-room hotel in Lisbon receives 200–300 messages monthly via WhatsApp, email, and web form — mostly about availability, pricing, and services. Reception dedicates hours daily to manual responses. Kubera AI deploys an AI assistant connected to WhatsApp and the booking engine. 75% of inquiries are resolved automatically; human staff handle special requests and complaints."
-        ]
-      },
-      {
-        "title": "Scenario 4: Porto B2B Consulting Firm",
-        "blocks": [
-          "A 10-person consulting firm closes most work through referrals but wants structured digital growth. They have a website but no lead capture or follow-up system. Kubera AI builds a landing page with embedded AI chatbot, integrates with HubSpot, and sets up a 5-touch nurturing sequence. Within 60 days, the firm has a predictable supplementary pipeline."
-        ]
-      },
-      {
-        "title": "Scenario 5: Portuguese E-commerce Brand (Export)",
-        "blocks": [
-          "A Lisbon-based e-commerce company sells premium goods to Finland, Sweden, and Germany. Customer support via email takes 2–3 hours daily — mostly answering shipping, return, and product questions. Kubera AI deploys a multilingual AI support assistant integrated with their Shopify store. Standard inquiries in Finnish, Swedish, and German are handled automatically; complex issues go to the team."
+          "Scenario 1: Lisbon Real Estate Agency (International Buyers) A boutique Lisbon agency receives 60–80 inquiries monthly from foreign buyers — mostly British, French, and German. Managing communications across three languages and different stages of the buying journey is chaotic. Kubera AI deploys a multilingual AI assistant that captures each inquiry, identifies language and intent, sends a personalized response, and creates a CRM record with full context. Agents wake up each morning to an organized pipeline instead of an inbox of unanswered messages. Scenario 2: Algarve Vacation Rental Operator An operator managing 12 properties on Airbnb and Booking.com receives constant WhatsApp messages about check-in, parking, WiFi, and local tips. These repetitive inquiries consume hours daily. Kubera AI builds an AI assistant handling all standard guest communication automatically via WhatsApp. Unique situations are escalated to the human team. The operator's time is freed for property expansion. Scenario 3: Lisbon Boutique Hotel A 30-room hotel in Lisbon receives 200–300 messages monthly via WhatsApp, email, and web form — mostly about availability, pricing, and services. Reception dedicates hours daily to manual responses. Kubera AI deploys an AI assistant connected to WhatsApp and the booking engine. 75% of inquiries are resolved automatically; human staff handle special requests and complaints. Scenario 4: Porto B2B Consulting Firm A 10-person consulting firm closes most work through referrals but wants structured digital growth. They have a website but no lead capture or follow-up system. Kubera AI builds a landing page with embedded AI chatbot, integrates with HubSpot, and sets up a 5-touch nurturing sequence. Within 60 days, the firm has a predictable supplementary pipeline. Scenario 5: Portuguese E-commerce Brand (Export) A Lisbon-based e-commerce company sells premium goods to Finland, Sweden, and Germany. Customer support via email takes 2–3 hours daily — mostly answering shipping, return, and product questions. Kubera AI deploys a multilingual AI support assistant integrated with their Shopify store. Standard inquiries in Finnish, Swedish, and German are handled automatically; complex issues go to the team."
         ]
       },
       {
@@ -923,11 +422,8 @@ export const generatedGeoPages = [
       },
       {
         "title": "Why Estonian Businesses Are Investing in AI Automation Now",
-        "blocks": []
-      },
-      {
-        "title": "Estonia is already among Europe's leading countries in AI adoption — and accelerating:",
         "blocks": [
+          "Estonia is already among Europe's leading countries in AI adoption — and accelerating:",
           "23.4% enterprise AI adoption in 2025. Estonia's enterprise AI adoption rate reached 23.4% in 2025, above the EU27 average of 20% and significantly ahead of neighbouring countries: Poland (8.4%), Latvia, and Lithuania. (Source: Eurostat / Institute of Central Europe, 2026) Estonia ranks 4th in EU for individual AI use at work. According to EU-wide data (IndexBox/Eurostat, 2025), 25.12% of Estonian individuals use generative AI for work purposes — ranking 4th in the EU, after Malta, Denmark, and the Netherlands. Eesti.ai programme launched 2026 — national AI scale-up. The Estonian government launched Eesti.ai in early 2026 with the declared goal of doubling labour productivity by 2035. AI adoption is now explicit national economic policy in Estonia — the country is investing at state level in making AI a mainstream business tool. SMEs account for the vast majority of Estonian employment. According to the European Commission and OECD data, SMEs represent the vast majority of Estonian enterprises. Yet SMEs lag larger firms on AI adoption. This creates a clear productivity gap — and a competitive advantage for the SMEs that close it first. AI adoption is most common in finance, ICT, and professional services. Statistics Estonia data shows that AI adoption is led by financial and insurance activities (28%), information and communication (21%), and professional services. These are precisely the sectors where Kubera AI's automation systems deliver the highest ROI."
         ]
       },
@@ -939,189 +435,41 @@ export const generatedGeoPages = [
       },
       {
         "title": "Why Estonian businesses choose Kubera AI:",
-        "blocks": []
-      },
-      {
-        "title": "Estonian OÜ — operating locally under Estonian and EU law",
-        "blocks": []
-      },
-      {
-        "title": "GDPR-compliant by design, EU-based infrastructure",
-        "blocks": []
-      },
-      {
-        "title": "Telegram automation for Baltic and tech-first communication channels",
-        "blocks": []
-      },
-      {
-        "title": "Multilingual support: Estonian, English, Russian, Finnish, Latvian",
-        "blocks": []
-      },
-      {
-        "title": "Integration with Merit Aktiva, Directo, e-arveldaja, and major international platforms",
-        "blocks": []
-      },
-      {
-        "title": "Automation designed specifically for lean Estonian SME teams",
-        "blocks": []
-      },
-      {
-        "title": "e-Residency business automation expertise",
-        "blocks": []
+        "blocks": [
+          "Estonian OÜ — operating locally under Estonian and EU law GDPR-compliant by design, EU-based infrastructure Telegram automation for Baltic and tech-first communication channels Multilingual support: Estonian, English, Russian, Finnish, Latvian Integration with Merit Aktiva, Directo, e-arveldaja, and major international platforms Automation designed specifically for lean Estonian SME teams e-Residency business automation expertise"
+        ]
       },
       {
         "title": "AI Automation in Estonia: Key Market Trends",
         "blocks": [
-          "Enterprise AI adoption at 23.4% in 2025 — above EU average, driven by finance, ICT, and professional services sectors. (Eurostat / Institute of Central Europe) Individual AI-at-work adoption ranks 4th in EU at 25.12%. Estonian workers are among Europe's most active AI users in professional contexts, creating a workforce already comfortable with AI-assisted tools. Eesti.ai national programme — the Estonian government is treating AI adoption as core economic policy, targeting a 50% GDP increase over 10 years through AI-driven productivity growth. SME AI adoption lags large firms — creating a competitive advantage for the SMEs that automate first. Telegram dominates tech and startup communication in Estonia and the wider Baltic market — a channel Kubera AI specifically supports for automation workflows."
-        ]
-      },
-      {
-        "title": "AI Automation vs. Hiring Additional Staff",
-        "blocks": [
-          "TaskHiring a Staff MemberAI AutomationLead qualificationNew hire needed; weeks to onboardAutomated within days of setupCRM updatesRelies on rep discipline; often incomplete100% consistent, real-time, automaticWeekly reporting2–4 hours of manual workDelivered automatically on scheduleAppointment schedulingCoordination overheadFully automated booking with confirmationsCustomer support (routine)Full-time hire requiredAI handles 60–80% of inquiries 24/7Telegram/WhatsApp communicationManual message managementAutomated workflows, instant responsesCost€20,000–€45,000/year + overheadFrom €1,800 setup + €350/monthOnboarding time4–12 weeks2–4 weeks to go liveAvailabilityBusiness hours24/7/365"
-        ]
-      },
-      {
-        "title": "Manual Process vs. AI Automation: What Changes",
-        "blocks": [
-          "ProcessManualWith AI AutomationNew lead arrives via websiteManual log in CRM, assign to repInstant capture, enrichment, CRM record, rep notificationTelegram inquiry from potential clientTeam member checks and respondsAutomated response, qualification, CRM record createdCustomer asks FAQ in Estonian or EnglishStaff responds manuallyAI responds in correct language instantlyWeekly business reportManual aggregation from multiple systemsAuto-generated and delivered on schedulee-Resident client inquiry about servicesManual email responseAI assistant handles, books discovery call automaticallyLead goes cold in pipelineStays coldRe-engagement sequence triggered automatically"
+          "Enterprise AI adoption at 23.4% in 2025 — above EU average, driven by finance, ICT, and professional services sectors. (Eurostat / Institute of Central Europe) Individual AI-at-work adoption ranks 4th in EU at 25.12%. Estonian workers are among Europe's most active AI users in professional contexts, creating a workforce already comfortable with AI-assisted tools. Eesti.ai national programme — the Estonian government is treating AI adoption as core economic policy, targeting a 50% GDP increase over 10 years through AI-driven productivity growth. SME AI adoption lags large firms — creating a competitive advantage for the SMEs that automate first. Telegram dominates tech and startup communication in Estonia and the wider Baltic market — a channel Kubera AI specifically supports for automation workflows.",
+          "AI Automation vs. Hiring Additional Staff TaskHiring a Staff MemberAI AutomationLead qualificationNew hire needed; weeks to onboardAutomated within days of setupCRM updatesRelies on rep discipline; often incomplete100% consistent, real-time, automaticWeekly reporting2–4 hours of manual workDelivered automatically on scheduleAppointment schedulingCoordination overheadFully automated booking with confirmationsCustomer support (routine)Full-time hire requiredAI handles 60–80% of inquiries 24/7Telegram/WhatsApp communicationManual message managementAutomated workflows, instant responsesCost€20,000–€45,000/year + overheadFrom €1,800 setup + €350/monthOnboarding time4–12 weeks2–4 weeks to go liveAvailabilityBusiness hours24/7/365",
+          "Manual Process vs. AI Automation: What Changes ProcessManualWith AI AutomationNew lead arrives via websiteManual log in CRM, assign to repInstant capture, enrichment, CRM record, rep notificationTelegram inquiry from potential clientTeam member checks and respondsAutomated response, qualification, CRM record createdCustomer asks FAQ in Estonian or EnglishStaff responds manuallyAI responds in correct language instantlyWeekly business reportManual aggregation from multiple systemsAuto-generated and delivered on schedulee-Resident client inquiry about servicesManual email responseAI assistant handles, books discovery call automaticallyLead goes cold in pipelineStays coldRe-engagement sequence triggered automatically"
         ]
       },
       {
         "title": "AI Automation Opportunities in Estonia",
         "blocks": [
           "Estonia's digital-first infrastructure, high tech literacy, and internationally oriented business culture create exceptional conditions:",
-          "CRM automation integrated with Estonian business tools (Merit, Directo, e-arveldaja) and international platforms Telegram automation — the primary communication channel for Estonian and Baltic tech communities AI assistants in Estonian, English, Russian, and Finnish — covering the full range of relevant languages"
+          "CRM automation integrated with Estonian business tools (Merit, Directo, e-arveldaja) and international platforms Telegram automation — the primary communication channel for Estonian and Baltic tech communities AI assistants in Estonian, English, Russian, and Finnish — covering the full range of relevant languages Lead generation systems for companies scaling across the Baltics and Northern Europe e-Residency company automation — serving the global e-Resident community from Estonia Automated reporting compatible with Estonian accounting systems Sales pipeline automation for Tallinn's fast-growing B2B tech and services sector"
         ]
-      },
-      {
-        "title": "Lead generation systems for companies scaling across the Baltics and Northern Europe",
-        "blocks": []
-      },
-      {
-        "title": "e-Residency company automation — serving the global e-Resident community from Estonia",
-        "blocks": []
-      },
-      {
-        "title": "Automated reporting compatible with Estonian accounting systems",
-        "blocks": []
-      },
-      {
-        "title": "Sales pipeline automation for Tallinn's fast-growing B2B tech and services sector",
-        "blocks": []
       },
       {
         "title": "Relevant Industries",
-        "blocks": []
-      },
-      {
-        "title": "Tech Startups & SaaS (Tallinn)",
         "blocks": [
-          "Trial nurturing, onboarding automation, churn reduction, scalable operational infrastructure from day one. Tallinn has produced globally recognized startups; automation is how they stay lean while scaling."
-        ]
-      },
-      {
-        "title": "Financial Services & Fintech",
-        "blocks": [
-          "Client onboarding, compliance-aware communication, KYC document collection, automated reporting."
-        ]
-      },
-      {
-        "title": "E-commerce (export-focused)",
-        "blocks": [
-          "Estonian brands selling to Finland, Sweden, Germany, and global markets. Multilingual customer support, post-purchase flows, cart recovery."
-        ]
-      },
-      {
-        "title": "Professional Services — Legal, Accounting, Consulting",
-        "blocks": [
-          "Client intake, document workflow, appointment scheduling. Particularly relevant for firms working with e-Resident clients across time zones."
-        ]
-      },
-      {
-        "title": "HR & Recruiting",
-        "blocks": [
-          "Candidate pipeline automation, interview scheduling, onboarding workflows."
-        ]
-      },
-      {
-        "title": "Real Estate",
-        "blocks": [
-          "Rental management, tenant communications, inquiry handling."
-        ]
-      },
-      {
-        "title": "Tourism & Hospitality (Tallinn, coastal regions)",
-        "blocks": [
-          "International visitor communication, booking automation, multilingual support."
+          "Tech Startups & SaaS (Tallinn) Trial nurturing, onboarding automation, churn reduction, scalable operational infrastructure from day one. Tallinn has produced globally recognized startups; automation is how they stay lean while scaling. Financial Services & Fintech Client onboarding, compliance-aware communication, KYC document collection, automated reporting. E-commerce (export-focused) Estonian brands selling to Finland, Sweden, Germany, and global markets. Multilingual customer support, post-purchase flows, cart recovery. Professional Services — Legal, Accounting, Consulting Client intake, document workflow, appointment scheduling. Particularly relevant for firms working with e-Resident clients across time zones. HR & Recruiting Candidate pipeline automation, interview scheduling, onboarding workflows. Real Estate Rental management, tenant communications, inquiry handling. Tourism & Hospitality (Tallinn, coastal regions) International visitor communication, booking automation, multilingual support."
         ]
       },
       {
         "title": "Kubera AI Solutions for the Estonian Market",
-        "blocks": []
-      },
-      {
-        "title": "CRM Automation",
         "blocks": [
-          "For Estonian B2B companies with active sales pipelines, we automate the full CRM lifecycle: lead capture, contact enrichment, deal creation, stage updates, follow-up task generation, and pipeline reporting. Your CRM becomes a live system, not a manual log."
-        ]
-      },
-      {
-        "title": "Telegram Automation",
-        "blocks": [
-          "Telegram is a primary channel for Estonian and Baltic tech communities. We build automated workflows: customer support bots, notification systems, internal alerts, lead qualification flows — connected to your CRM and operational systems."
-        ]
-      },
-      {
-        "title": "Multilingual AI Assistant",
-        "blocks": [
-          "An AI assistant deployed on your website, WhatsApp, or Telegram that communicates in Estonian, English, Russian, and Finnish. Essential for businesses operating across Baltic and Nordic markets."
-        ]
-      },
-      {
-        "title": "e-Residency Business Automation",
-        "blocks": [
-          "For companies founded through Estonia's e-Residency program serving international clients, we build automation handling multilingual client communication, proposal generation, onboarding, and billing workflows — enabling truly location-independent operations."
-        ]
-      },
-      {
-        "title": "Lead Generation System (GPT-NTI)",
-        "blocks": [
-          "A complete lead generation system: conversion-optimized landing page, AI chatbot, CRM integration, and automated multichannel follow-up. For Estonian companies wanting predictable inbound pipeline."
-        ]
-      },
-      {
-        "title": "Business Process Automation",
-        "blocks": [
-          "Map and automate repetitive workflows: document routing, approval sequences, reporting cycles, client onboarding steps. We identify where human time is spent on systematizable work and build systems that free it."
+          "CRM Automation For Estonian B2B companies with active sales pipelines, we automate the full CRM lifecycle: lead capture, contact enrichment, deal creation, stage updates, follow-up task generation, and pipeline reporting. Your CRM becomes a live system, not a manual log. Telegram Automation Telegram is a primary channel for Estonian and Baltic tech communities. We build automated workflows: customer support bots, notification systems, internal alerts, lead qualification flows — connected to your CRM and operational systems. Multilingual AI Assistant An AI assistant deployed on your website, WhatsApp, or Telegram that communicates in Estonian, English, Russian, and Finnish. Essential for businesses operating across Baltic and Nordic markets. e-Residency Business Automation For companies founded through Estonia's e-Residency program serving international clients, we build automation handling multilingual client communication, proposal generation, onboarding, and billing workflows — enabling truly location-independent operations. Lead Generation System (GPT-NTI) A complete lead generation system: conversion-optimized landing page, AI chatbot, CRM integration, and automated multichannel follow-up. For Estonian companies wanting predictable inbound pipeline. Business Process Automation Map and automate repetitive workflows: document routing, approval sequences, reporting cycles, client onboarding steps. We identify where human time is spent on systematizable work and build systems that free it."
         ]
       },
       {
         "title": "Example Automation Scenarios",
-        "blocks": []
-      },
-      {
-        "title": "Scenario 1: Tallinn SaaS Startup",
         "blocks": [
-          "A 12-person B2B SaaS company generates 40–60 trial signups monthly from LinkedIn and Google Ads. The sales team can only actively work the most promising leads — most trials expire with no meaningful engagement. Kubera AI builds a behavior-triggered nurturing system: welcome sequence on signup, feature-adoption emails based on in-app activity, Telegram notification to the sales rep when a lead shows high engagement, and an automated trial-extension offer at day 12. Trial-to-paid conversion improves by 30%."
-        ]
-      },
-      {
-        "title": "Scenario 2: Estonian E-commerce Brand (Export)",
-        "blocks": [
-          "A Tallinn company sells premium Estonian goods to customers in Finland, Sweden, and Germany. Customer support via email takes 2–3 hours daily — mostly shipping times, returns, and product details. Kubera AI deploys a multilingual AI support assistant integrated with their Shopify store, handling standard inquiries in Finnish, Swedish, German, and English automatically."
-        ]
-      },
-      {
-        "title": "Scenario 3: Accounting Firm (e-Resident Clients)",
-        "blocks": [
-          "An accounting firm specializing in Estonian OÜ clients — many of them e-Residents globally — receives constant similar inquiries: company registration, annual reports, VAT registration. Kubera AI builds an AI assistant on their website that handles initial inquiries, qualifies needs, and books consultation calls — removing the manual intake process entirely and enabling the firm to serve more clients without adding staff."
-        ]
-      },
-      {
-        "title": "Scenario 4: Baltic B2B Services Company",
-        "blocks": [
-          "A Tallinn-based professional services firm operates across Estonia, Latvia, and Lithuania. Managing sales pipeline in three Baltic markets simultaneously is chaotic without systems. Kubera AI builds a CRM automation layer that captures leads from all three markets, routes them by region and service type, and runs language-appropriate follow-up sequences. The sales team only engages when a lead is qualified and ready."
+          "Scenario 1: Tallinn SaaS Startup A 12-person B2B SaaS company generates 40–60 trial signups monthly from LinkedIn and Google Ads. The sales team can only actively work the most promising leads — most trials expire with no meaningful engagement. Kubera AI builds a behavior-triggered nurturing system: welcome sequence on signup, feature-adoption emails based on in-app activity, Telegram notification to the sales rep when a lead shows high engagement, and an automated trial-extension offer at day 12. Trial-to-paid conversion improves by 30%. Scenario 2: Estonian E-commerce Brand (Export) A Tallinn company sells premium Estonian goods to customers in Finland, Sweden, and Germany. Customer support via email takes 2–3 hours daily — mostly shipping times, returns, and product details. Kubera AI deploys a multilingual AI support assistant integrated with their Shopify store, handling standard inquiries in Finnish, Swedish, German, and English automatically. Scenario 3: Accounting Firm (e-Resident Clients) An accounting firm specializing in Estonian OÜ clients — many of them e-Residents globally — receives constant similar inquiries: company registration, annual reports, VAT registration. Kubera AI builds an AI assistant on their website that handles initial inquiries, qualifies needs, and books consultation calls — removing the manual intake process entirely and enabling the firm to serve more clients without adding staff. Scenario 4: Baltic B2B Services Company A Tallinn-based professional services firm operates across Estonia, Latvia, and Lithuania. Managing sales pipeline in three Baltic markets simultaneously is chaotic without systems. Kubera AI builds a CRM automation layer that captures leads from all three markets, routes them by region and service type, and runs language-appropriate follow-up sequences. The sales team only engages when a lead is qualified and ready."
         ]
       },
       {
@@ -1313,219 +661,49 @@ export const generatedGeoPages = [
       },
       {
         "title": "Why French Businesses Are Investing in AI Automation Now",
-        "blocks": []
-      },
-      {
-        "title": "The case for AI automation in France is grounded in concrete data:",
         "blocks": [
+          "The case for AI automation in France is grounded in concrete data:",
           "68% of French businesses cite AI skills shortage as a major innovation blocker. The result: most companies want AI-assisted operations but can't build them internally. Kubera AI closes this gap — we build and maintain the systems so your team doesn't need to. (Source: Unlocking Europe's AI Potential) 47% of French SMEs report AI skills shortages have directly slowed their growth. The financial impact is real: 45% of affected SMEs face rising operational costs as a direct consequence. (Source: Unlocking Europe's AI Potential) Labour productivity declined 8.5% since 2019 relative to pre-Covid trends. AI automation is one of the few practical levers available to reverse this at the SME level without capital-intensive investment. Only 10% of French companies used AI in 2024, versus 13.5% EU average. The adoption gap creates a competitive window — but it's closing. (Source: INSEE / Eurostat) 89% of French SMEs that have adopted AI report increased revenue. The evidence is clear: the challenge isn't whether AI automation works. It's getting it implemented. (Source: Unlocking Europe's AI Potential)"
         ]
       },
       {
         "title": "Why French Businesses Choose Kubera AI",
         "blocks": [
-          "French companies need automation partners who understand the French business environment — not US-centric platforms that require significant customization to work in a French context."
+          "French companies need automation partners who understand the French business environment — not US-centric platforms that require significant customization to work in a French context.",
+          "RGPD-compliant by design, EU-based infrastructure Full support in French and English Custom workflow architecture, not off-the-shelf templates Integration with French business tools: Salesforce France, HubSpot, Zoho, Sellsy, Pennylane, Pipedrive SME-focused approach — projects scaled for 5–200 employees Fast implementation: most projects go live in 2–4 weeks No internal technical team required on the client side"
         ]
-      },
-      {
-        "title": "RGPD-compliant by design, EU-based infrastructure",
-        "blocks": []
-      },
-      {
-        "title": "Full support in French and English",
-        "blocks": []
-      },
-      {
-        "title": "Custom workflow architecture, not off-the-shelf templates",
-        "blocks": [
-          "Integration with French business tools: Salesforce France, HubSpot, Zoho, Sellsy, Pennylane, Pipedrive"
-        ]
-      },
-      {
-        "title": "SME-focused approach — projects scaled for 5–200 employees",
-        "blocks": []
-      },
-      {
-        "title": "Fast implementation: most projects go live in 2–4 weeks",
-        "blocks": []
-      },
-      {
-        "title": "No internal technical team required on the client side",
-        "blocks": []
       },
       {
         "title": "AI Automation in France: Key Market Trends",
         "blocks": [
-          "10% of French enterprises used AI in 2024 — below the EU average. The adoption gap is real and creates a competitive window for early movers. (INSEE 2024) France's labour productivity declined 8.5% post-Covid relative to trend — among the drivers pushing businesses toward operational efficiency tools. (Implement Economics / Eurostat) 68% of French businesses cite AI skills shortage as a major innovation barrier, versus 56% for Europe overall. (Unlocking Europe's AI Potential) Large enterprises adopt at 33%; SMEs at under 10%. The productivity gap between large and small companies is accelerating — automation is how SMEs close it. The EU's Apply AI Strategy (launched October 2025) specifically targets increasing AI adoption among European SMEs, including French companies, signaling regulatory and funding support for the next phase of adoption."
-        ]
-      },
-      {
-        "title": "AI Automation vs. Hiring Additional Staff",
-        "blocks": [
-          "TaskHiring a Staff MemberAI AutomationLead qualificationNew hire needed; weeks to onboardAutomated within days of setupCRM updatesRelies on individual discipline100% consistent, real-time, automaticWeekly reporting2–4 hours of manual workDelivered automatically on scheduleAppointment schedulingCoordination overheadFully automated booking with confirmationsCustomer support (routine)Full-time or part-time hireAI handles 60–80% of inquiries 24/7Follow-up sequencesDepends on rep memoryTriggered automatically, never missedCost€35,000–€70,000/year incl. chargesFrom €1,800 setup + €350/monthOnboarding time4–12 weeks2–4 weeks to go liveAvailabilityBusiness hours24/7/365"
-        ]
-      },
-      {
-        "title": "Manual Process vs. AI Automation: What Changes",
-        "blocks": [
-          "ProcessManualWith AI AutomationNew lead arrives via contact formManually reviewed, logged, assignedCaptured, enriched, CRM record created in 90 secondsPost-proposal follow-upRep remembers (or forgets)Automated 3-touch sequence over 7 daysClient asks standard questionStaff response within hoursAI answers in seconds, complex cases escalatedWeekly management report2–3 hours aggregating from multiple toolsGenerated and sent automaticallyNew client onboardingManual email chain, document requestsAutomated flow: welcome, documents, calendarLead goes cold in CRMStays cold until noticedRe-engagement sequence triggered automatically"
+          "10% of French enterprises used AI in 2024 — below the EU average. The adoption gap is real and creates a competitive window for early movers. (INSEE 2024) France's labour productivity declined 8.5% post-Covid relative to trend — among the drivers pushing businesses toward operational efficiency tools. (Implement Economics / Eurostat) 68% of French businesses cite AI skills shortage as a major innovation barrier, versus 56% for Europe overall. (Unlocking Europe's AI Potential) Large enterprises adopt at 33%; SMEs at under 10%. The productivity gap between large and small companies is accelerating — automation is how SMEs close it. The EU's Apply AI Strategy (launched October 2025) specifically targets increasing AI adoption among European SMEs, including French companies, signaling regulatory and funding support for the next phase of adoption.",
+          "AI Automation vs. Hiring Additional Staff TaskHiring a Staff MemberAI AutomationLead qualificationNew hire needed; weeks to onboardAutomated within days of setupCRM updatesRelies on individual discipline100% consistent, real-time, automaticWeekly reporting2–4 hours of manual workDelivered automatically on scheduleAppointment schedulingCoordination overheadFully automated booking with confirmationsCustomer support (routine)Full-time or part-time hireAI handles 60–80% of inquiries 24/7Follow-up sequencesDepends on rep memoryTriggered automatically, never missedCost€35,000–€70,000/year incl. chargesFrom €1,800 setup + €350/monthOnboarding time4–12 weeks2–4 weeks to go liveAvailabilityBusiness hours24/7/365",
+          "Manual Process vs. AI Automation: What Changes ProcessManualWith AI AutomationNew lead arrives via contact formManually reviewed, logged, assignedCaptured, enriched, CRM record created in 90 secondsPost-proposal follow-upRep remembers (or forgets)Automated 3-touch sequence over 7 daysClient asks standard questionStaff response within hoursAI answers in seconds, complex cases escalatedWeekly management report2–3 hours aggregating from multiple toolsGenerated and sent automaticallyNew client onboardingManual email chain, document requestsAutomated flow: welcome, documents, calendarLead goes cold in CRMStays cold until noticedRe-engagement sequence triggered automatically"
         ]
       },
       {
         "title": "AI Automation Opportunities in France",
         "blocks": [
           "France's strong enterprise software adoption, large professional services sector, ambitious startup ecosystem, and highly connected economy create clear automation opportunities:",
-          "CRM automation integrated with Salesforce France, HubSpot, Pipedrive, Zoho, Sellsy, and Pennylane Lead generation and qualification systems for companies generating digital traffic but lacking structured follow-up"
+          "CRM automation integrated with Salesforce France, HubSpot, Pipedrive, Zoho, Sellsy, and Pennylane Lead generation and qualification systems for companies generating digital traffic but lacking structured follow-up WhatsApp Business automation for client-facing teams using WhatsApp for business communication AI assistants in French and English (and additional languages for international operations) Professional services intake automation — legal, consulting, accounting: scheduling, document collection, onboarding E-commerce automation for French brands selling domestically and across Europe Automated reporting for management teams currently spending hours on manual data aggregation"
         ]
-      },
-      {
-        "title": "WhatsApp Business automation for client-facing teams using WhatsApp for business communication",
-        "blocks": []
-      },
-      {
-        "title": "AI assistants in French and English (and additional languages for international operations)",
-        "blocks": [
-          "Professional services intake automation — legal, consulting, accounting: scheduling, document collection, onboarding"
-        ]
-      },
-      {
-        "title": "E-commerce automation for French brands selling domestically and across Europe",
-        "blocks": []
-      },
-      {
-        "title": "Automated reporting for management teams currently spending hours on manual data aggregation",
-        "blocks": []
       },
       {
         "title": "Relevant Industries",
-        "blocks": []
-      },
-      {
-        "title": "Professional Services — Legal, Accounting, Consulting (Paris, Lyon, Bordeaux)",
         "blocks": [
-          "Cabinet d'avocats, cabinets comptables, consultants indépendants: automated client intake, scheduling, document request workflows."
-        ]
-      },
-      {
-        "title": "Technology & SaaS (Paris, Sophia Antipolis, Toulouse)",
-        "blocks": [
-          "Station F ecosystem and regional tech hubs: trial nurturing, onboarding automation, churn reduction, scalable operational infrastructure."
-        ]
-      },
-      {
-        "title": "Luxury & E-commerce (Paris, nationwide)",
-        "blocks": [
-          "French luxury and lifestyle brands selling across Europe and globally: customer support automation, post-purchase flows, multilingual AI assistants."
-        ]
-      },
-      {
-        "title": "Industrial & Manufacturing (Lyon, Grenoble, Nantes)",
-        "blocks": [
-          "B2B industrial suppliers: order confirmation workflows, supplier communications, inquiry routing and CRM automation."
-        ]
-      },
-      {
-        "title": "Tourism & Hospitality (Paris, Côte d'Azur, Provence, Loire Valley)",
-        "blocks": [
-          "Hotels, châteaux, tour operators serving international guests: booking automation, multilingual AI assistants, upsell sequences."
-        ]
-      },
-      {
-        "title": "Real Estate (Paris, Côte d'Azur, major cities)",
-        "blocks": [
-          "Agences immobilières serving international buyers: multilingual lead management, follow-up automation, viewing scheduling."
-        ]
-      },
-      {
-        "title": "Healthcare & Wellness (nationwide)",
-        "blocks": [
-          "Médecins, cliniques, professionnels de santé: appointment booking, patient intake, reminder sequences."
-        ]
-      },
-      {
-        "title": "Fintech & Financial Services (Paris)",
-        "blocks": [
-          "Paris's growing fintech sector: lead qualification, compliance document collection, client onboarding automation."
+          "Professional Services — Legal, Accounting, Consulting (Paris, Lyon, Bordeaux) Cabinet d'avocats, cabinets comptables, consultants indépendants: automated client intake, scheduling, document request workflows. Technology & SaaS (Paris, Sophia Antipolis, Toulouse) Station F ecosystem and regional tech hubs: trial nurturing, onboarding automation, churn reduction, scalable operational infrastructure. Luxury & E-commerce (Paris, nationwide) French luxury and lifestyle brands selling across Europe and globally: customer support automation, post-purchase flows, multilingual AI assistants. Industrial & Manufacturing (Lyon, Grenoble, Nantes) B2B industrial suppliers: order confirmation workflows, supplier communications, inquiry routing and CRM automation. Tourism & Hospitality (Paris, Côte d'Azur, Provence, Loire Valley) Hotels, châteaux, tour operators serving international guests: booking automation, multilingual AI assistants, upsell sequences. Real Estate (Paris, Côte d'Azur, major cities) Agences immobilières serving international buyers: multilingual lead management, follow-up automation, viewing scheduling. Healthcare & Wellness (nationwide) Médecins, cliniques, professionnels de santé: appointment booking, patient intake, reminder sequences. Fintech & Financial Services (Paris) Paris's growing fintech sector: lead qualification, compliance document collection, client onboarding automation."
         ]
       },
       {
         "title": "Kubera AI Solutions for the French Market",
-        "blocks": []
-      },
-      {
-        "title": "CRM Automation",
         "blocks": [
-          "Connect your CRM (HubSpot, Salesforce, Pipedrive, Sellsy, or custom) to automated workflows that maintain accurate, actionable data without manual effort. Lead capture, enrichment, scoring, assignment, and follow-up task creation — all automatic."
-        ]
-      },
-      {
-        "title": "AI Sales Assistant",
-        "blocks": [
-          "An AI assistant handling first-touch lead qualification in French (and English/additional languages as needed). Qualifies intent, asks the right questions, and hands warm leads to your team with full context already gathered."
-        ]
-      },
-      {
-        "title": "Customer Support Automation",
-        "blocks": [
-          "Deploy an AI support system handling up to 70% of routine client inquiries without human intervention. Escalation logic ensures complex issues reach the right person with full context — not a blank transfer."
-        ]
-      },
-      {
-        "title": "Professional Services Automation",
-        "blocks": [
-          "Specifically designed for French cabinet workflows: automated client intake, RGPD-compliant data collection, appointment scheduling, document request sequences, and reminder notifications via email and WhatsApp."
-        ]
-      },
-      {
-        "title": "Lead Generation System (GPT-NTI)",
-        "blocks": [
-          "A complete lead capture machine: conversion-optimized landing page, AI chatbot, CRM integration, and automated multichannel follow-up via email and WhatsApp. For companies wanting predictable inbound pipeline."
-        ]
-      },
-      {
-        "title": "Reporting & Analytics Automation",
-        "blocks": [
-          "Automated weekly management reports drawing data from your CRM, ad platforms, and business systems. Delivered on schedule — no manual aggregation required."
+          "CRM Automation Connect your CRM (HubSpot, Salesforce, Pipedrive, Sellsy, or custom) to automated workflows that maintain accurate, actionable data without manual effort. Lead capture, enrichment, scoring, assignment, and follow-up task creation — all automatic. AI Sales Assistant An AI assistant handling first-touch lead qualification in French (and English/additional languages as needed). Qualifies intent, asks the right questions, and hands warm leads to your team with full context already gathered. Customer Support Automation Deploy an AI support system handling up to 70% of routine client inquiries without human intervention. Escalation logic ensures complex issues reach the right person with full context — not a blank transfer. Professional Services Automation Specifically designed for French cabinet workflows: automated client intake, RGPD-compliant data collection, appointment scheduling, document request sequences, and reminder notifications via email and WhatsApp. Lead Generation System (GPT-NTI) A complete lead capture machine: conversion-optimized landing page, AI chatbot, CRM integration, and automated multichannel follow-up via email and WhatsApp. For companies wanting predictable inbound pipeline. Reporting & Analytics Automation Automated weekly management reports drawing data from your CRM, ad platforms, and business systems. Delivered on schedule — no manual aggregation required."
         ]
       },
       {
         "title": "Example Automation Scenarios",
-        "blocks": []
-      },
-      {
-        "title": "Scenario 1: Paris Consulting Firm (Conseil en Stratégie)",
         "blocks": [
-          "A 15-person strategy firm generates leads through content marketing and LinkedIn but has no structured follow-up process. Inquiries receive one response and are then forgotten. Kubera AI builds a qualification chatbot on their website, CRM integration with Salesforce, and a 5-touch nurturing email sequence. Within 60 days, the conversion rate from lead to discovery call increases significantly."
-        ]
-      },
-      {
-        "title": "Scenario 2: Lyon Industrial Supplier (B2B)",
-        "blocks": [
-          "A 40-person industrial equipment distributor in Lyon receives 60–80 inquiries monthly via email and web form. A sales coordinator manually processes each one — 15–20 minutes per inquiry. Kubera AI automates the full intake flow: instant capture, categorization, CRM record, rep assignment, and personalized acknowledgment — in 90 seconds per lead. The coordinator shifts to deal management."
-        ]
-      },
-      {
-        "title": "Scenario 3: Paris Luxury E-commerce Brand",
-        "blocks": [
-          "A Parisian fashion brand sells across Europe in four languages. Customer service handles 400+ messages per month — 70% are shipping and returns inquiries. Kubera AI deploys a multilingual AI assistant (FR/EN/DE/IT) that handles standard inquiries automatically. The team focuses on VIP clients and complex cases."
-        ]
-      },
-      {
-        "title": "Scenario 4: Nice/Côte d'Azur Real Estate Agency",
-        "blocks": [
-          "An agency serving international buyers receives inquiries in English, Russian, and German. Managing three languages across the buying journey is operationally chaotic. Kubera AI implements a multilingual AI assistant that handles initial contact, sends property information in the correct language, and creates CRM records — so agents wake up to organized pipeline instead of an overflowing inbox."
-        ]
-      },
-      {
-        "title": "Scenario 5: Toulouse SaaS Startup (Deeptech)",
-        "blocks": [
-          "A B2B SaaS company near Toulouse's aerospace ecosystem generates trial signups from LinkedIn but has no automated nurturing. Kubera AI builds a behavior-triggered sequence: welcome email, feature-adoption emails based on in-app activity, Slack alert when a trial user shows high engagement, and an automated WhatsApp message at day 10 offering a live demo in French."
-        ]
-      },
-      {
-        "title": "Scenario 6: Cabinet Comptable (Nationwide)",
-        "blocks": [
-          "A 12-person accounting firm in Bordeaux spends hours weekly on client scheduling and document collection. Kubera AI automates the full intake cycle: online booking, automated document request sequence (RGPD-compliant), reminder notifications via email and WhatsApp. Partners recover 3+ hours per week."
+          "Scenario 1: Paris Consulting Firm (Conseil en Stratégie) A 15-person strategy firm generates leads through content marketing and LinkedIn but has no structured follow-up process. Inquiries receive one response and are then forgotten. Kubera AI builds a qualification chatbot on their website, CRM integration with Salesforce, and a 5-touch nurturing email sequence. Within 60 days, the conversion rate from lead to discovery call increases significantly. Scenario 2: Lyon Industrial Supplier (B2B) A 40-person industrial equipment distributor in Lyon receives 60–80 inquiries monthly via email and web form. A sales coordinator manually processes each one — 15–20 minutes per inquiry. Kubera AI automates the full intake flow: instant capture, categorization, CRM record, rep assignment, and personalized acknowledgment — in 90 seconds per lead. The coordinator shifts to deal management. Scenario 3: Paris Luxury E-commerce Brand A Parisian fashion brand sells across Europe in four languages. Customer service handles 400+ messages per month — 70% are shipping and returns inquiries. Kubera AI deploys a multilingual AI assistant (FR/EN/DE/IT) that handles standard inquiries automatically. The team focuses on VIP clients and complex cases. Scenario 4: Nice/Côte d'Azur Real Estate Agency An agency serving international buyers receives inquiries in English, Russian, and German. Managing three languages across the buying journey is operationally chaotic. Kubera AI implements a multilingual AI assistant that handles initial contact, sends property information in the correct language, and creates CRM records — so agents wake up to organized pipeline instead of an overflowing inbox. Scenario 5: Toulouse SaaS Startup (Deeptech) A B2B SaaS company near Toulouse's aerospace ecosystem generates trial signups from LinkedIn but has no automated nurturing. Kubera AI builds a behavior-triggered sequence: welcome email, feature-adoption emails based on in-app activity, Slack alert when a trial user shows high engagement, and an automated WhatsApp message at day 10 offering a live demo in French. Scenario 6: Cabinet Comptable (Nationwide) A 12-person accounting firm in Bordeaux spends hours weekly on client scheduling and document collection. Kubera AI automates the full intake cycle: online booking, automated document request sequence (RGPD-compliant), reminder notifications via email and WhatsApp. Partners recover 3+ hours per week."
         ]
       },
       {
@@ -1607,62 +785,24 @@ export const generatedGeoPages = [
       },
       {
         "title": "Why Italian Businesses Are Investing in AI Automation Now",
-        "blocks": []
-      },
-      {
-        "title": "Data confirms that the Italian automation moment has arrived:",
         "blocks": [
+          "Data confirms that the Italian automation moment has arrived:",
           "240% productivity premium for Italian AI adopters. OECD data (December 2025) shows that Italian firms using AI are in a productivity category 240% higher than non-adopting firms — the largest productivity gap in the entire G7. The ROI of AI adoption in Italy is exceptionally high. AI adoption doubled in one year: from 8.2% in 2024 to 16.4% in 2025. This acceleration shows that Italian companies are moving — but significant first-mover advantage remains available. (Source: it4lia-aifactory.eu, February 2026) Main AI uses: marketing/sales (33.1%) and administrative process organization (25.7%). These are exactly the areas where Kubera AI specializes — the highest-ROI applications for Italian SMEs. (Source: ISTAT / it4lia) 95% of Italian enterprises are SMEs. The automation opportunity in Italy is almost entirely an SME story — and these are the businesses Kubera AI is built for. (Source: EURES Italy) Primary barriers: skills shortage and high implementation costs. Kubera AI addresses both: we provide the technical expertise and deliver focused systems that fit SME budgets, not enterprise contracts. (Source: ISTAT report, it4lia)"
         ]
       },
       {
         "title": "Why Italian Businesses Choose Kubera AI",
         "blocks": [
-          "Italian companies need a partner who understands their context — the dominance of SMEs, the mix of legacy and modern software, the importance of personal relationships in B2B sales, and the international ambitions of Italian brands."
+          "Italian companies need a partner who understands their context — the dominance of SMEs, the mix of legacy and modern software, the importance of personal relationships in B2B sales, and the international ambitions of Italian brands.",
+          "GDPR-compliant by design, EU-based infrastructure Full support in Italian and English (and additional languages for export-focused companies) Integration with Italian business software: Teamsystem, Zucchetti, Sage Italy, HubSpot, Salesforce, Shopify Custom workflow architecture — not off-the-shelf templates SME-focused: systems scaled for 5–150 employees Fast implementation: 2–4 weeks to go live No internal technical team required"
         ]
-      },
-      {
-        "title": "GDPR-compliant by design, EU-based infrastructure",
-        "blocks": []
-      },
-      {
-        "title": "Full support in Italian and English (and additional languages for export-focused companies)",
-        "blocks": [
-          "Integration with Italian business software: Teamsystem, Zucchetti, Sage Italy, HubSpot, Salesforce, Shopify"
-        ]
-      },
-      {
-        "title": "Custom workflow architecture — not off-the-shelf templates",
-        "blocks": []
-      },
-      {
-        "title": "SME-focused: systems scaled for 5–150 employees",
-        "blocks": []
-      },
-      {
-        "title": "Fast implementation: 2–4 weeks to go live",
-        "blocks": []
-      },
-      {
-        "title": "No internal technical team required",
-        "blocks": []
       },
       {
         "title": "AI Automation in Italy: Key Market Trends",
         "blocks": [
-          "AI adoption jumped from 8.2% to 16.4% in one year (2024–2025). Momentum is accelerating rapidly. (it4lia, February 2026) 240% productivity premium for Italian AI adopters vs. non-adopters — highest in the G7. (OECD, December 2025) Top uses: marketing/sales (33.1%) and process organization (25.7%). The highest-ROI automation applications. (ISTAT/it4lia) Primary barrier: skills shortage. 95% of Italian companies are SMEs without in-house AI capability. (ISTAT) Italy's AI Factory programme (EU-funded, operational 2025) is creating national AI infrastructure to accelerate SME adoption across industrial districts. Labour shortages in tourism, construction, healthcare. Automation fills the gap in customer-facing operational roles."
-        ]
-      },
-      {
-        "title": "AI Automation vs. Hiring Additional Staff",
-        "blocks": [
-          "TaskHiring a Staff MemberAI AutomationLead qualificationNew hire; weeks of onboardingAutomated within days of setupCRM updatesRelies on rep memory and discipline100% consistent, real-time, automaticWeekly reporting2–4 hours of manual workDelivered automatically on scheduleCustomer support (routine)Full-time hire for volumeAI handles 60–80% of inquiries 24/7Export lead communicationRequires multilingual staffAI assistant in IT/EN/DE/FRFollow-up sequencesDepends on rep workloadTriggered automatically, never missedCost€25,000–€50,000/year + contributionsFrom €1,800 setup + €350/monthOnboarding time4–12 weeks2–4 weeks to go liveAvailabilityBusiness hours24/7/365"
-        ]
-      },
-      {
-        "title": "Manual Process vs. AI Automation: What Changes",
-        "blocks": [
-          "ProcessManualWith AI AutomationInternational buyer inquiry arrivesStaff response next day (or later)AI responds in buyer's language in secondsTrade show lead follow-upReps remember some, forget othersAutomated sequence triggered for every contactClient asks about order statusManual lookup and email responseAI handles instantly, escalates exceptionsWeekly export sales reportManual aggregation from multiple sourcesAuto-generated and delivered every MondayNew distributor onboardingManual email chain, document requestsAutomated flow: welcome, documents, calendarSeasonal demand spikeTemporary staff or overtimeAutomation handles volume without headcount"
+          "AI adoption jumped from 8.2% to 16.4% in one year (2024–2025). Momentum is accelerating rapidly. (it4lia, February 2026) 240% productivity premium for Italian AI adopters vs. non-adopters — highest in the G7. (OECD, December 2025) Top uses: marketing/sales (33.1%) and process organization (25.7%). The highest-ROI automation applications. (ISTAT/it4lia) Primary barrier: skills shortage. 95% of Italian companies are SMEs without in-house AI capability. (ISTAT) Italy's AI Factory programme (EU-funded, operational 2025) is creating national AI infrastructure to accelerate SME adoption across industrial districts. Labour shortages in tourism, construction, healthcare. Automation fills the gap in customer-facing operational roles.",
+          "AI Automation vs. Hiring Additional Staff TaskHiring a Staff MemberAI AutomationLead qualificationNew hire; weeks of onboardingAutomated within days of setupCRM updatesRelies on rep memory and discipline100% consistent, real-time, automaticWeekly reporting2–4 hours of manual workDelivered automatically on scheduleCustomer support (routine)Full-time hire for volumeAI handles 60–80% of inquiries 24/7Export lead communicationRequires multilingual staffAI assistant in IT/EN/DE/FRFollow-up sequencesDepends on rep workloadTriggered automatically, never missedCost€25,000–€50,000/year + contributionsFrom €1,800 setup + €350/monthOnboarding time4–12 weeks2–4 weeks to go liveAvailabilityBusiness hours24/7/365",
+          "Manual Process vs. AI Automation: What Changes ProcessManualWith AI AutomationInternational buyer inquiry arrivesStaff response next day (or later)AI responds in buyer's language in secondsTrade show lead follow-upReps remember some, forget othersAutomated sequence triggered for every contactClient asks about order statusManual lookup and email responseAI handles instantly, escalates exceptionsWeekly export sales reportManual aggregation from multiple sourcesAuto-generated and delivered every MondayNew distributor onboardingManual email chain, document requestsAutomated flow: welcome, documents, calendarSeasonal demand spikeTemporary staff or overtimeAutomation handles volume without headcount"
         ]
       },
       {
@@ -1674,128 +814,20 @@ export const generatedGeoPages = [
       },
       {
         "title": "Relevant Industries",
-        "blocks": []
-      },
-      {
-        "title": "Manufacturing & Industrial Districts (Milan, Turin, Bologna, Veneto, Lombardia)",
         "blocks": [
-          "Italy's industrial districts are world-class in precision manufacturing, packaging machinery, food processing equipment, and specialized industrial goods. Automation for order processing, supplier communications, B2B inquiry management, and export documentation."
-        ]
-      },
-      {
-        "title": "Fashion & Luxury (Milan, Florence, Rome)",
-        "blocks": [
-          "Milan's fashion system and Florence's leather goods and artisan industries serve global clients. Multilingual AI assistants, VIP client management automation, post-purchase sequences, international distributor communication."
-        ]
-      },
-      {
-        "title": "Tourism & Hospitality (Rome, Florence, Venice, Amalfi Coast, Sicily)",
-        "blocks": [
-          "Italy is the world's fifth most visited country. Hotels, agriturismi, tour operators: WhatsApp automation, booking confirmation, guest communication, upsell sequences, review generation."
-        ]
-      },
-      {
-        "title": "Professional Services — Commercialisti, Avvocati, Notai",
-        "blocks": [
-          "Italy's professions have highly structured client intake requirements. Automated scheduling, document request sequences, GDPR-compliant data collection, and reminder notifications save hours per week per professional."
-        ]
-      },
-      {
-        "title": "Food & Wine (Tuscany, Piedmont, Emilia-Romagna)",
-        "blocks": [
-          "Italian food and wine exports are among Europe's most valuable. Automated distributor communication, international buyer nurturing, trade show follow-up sequences."
-        ]
-      },
-      {
-        "title": "Technology & SaaS (Milan, Turin, Rome)",
-        "blocks": [
-          "Growing Italian tech sector: onboarding automation, trial nurturing, churn prevention workflows."
-        ]
-      },
-      {
-        "title": "Real Estate (Milan, Rome, Tuscany, Sardinia)",
-        "blocks": [
-          "International buyer management — UK, German, US, Swiss buyers. Multilingual AI assistants, automated follow-up, viewing scheduling."
+          "Manufacturing & Industrial Districts (Milan, Turin, Bologna, Veneto, Lombardia) Italy's industrial districts are world-class in precision manufacturing, packaging machinery, food processing equipment, and specialized industrial goods. Automation for order processing, supplier communications, B2B inquiry management, and export documentation. Fashion & Luxury (Milan, Florence, Rome) Milan's fashion system and Florence's leather goods and artisan industries serve global clients. Multilingual AI assistants, VIP client management automation, post-purchase sequences, international distributor communication. Tourism & Hospitality (Rome, Florence, Venice, Amalfi Coast, Sicily) Italy is the world's fifth most visited country. Hotels, agriturismi, tour operators: WhatsApp automation, booking confirmation, guest communication, upsell sequences, review generation. Professional Services — Commercialisti, Avvocati, Notai Italy's professions have highly structured client intake requirements. Automated scheduling, document request sequences, GDPR-compliant data collection, and reminder notifications save hours per week per professional. Food & Wine (Tuscany, Piedmont, Emilia-Romagna) Italian food and wine exports are among Europe's most valuable. Automated distributor communication, international buyer nurturing, trade show follow-up sequences. Technology & SaaS (Milan, Turin, Rome) Growing Italian tech sector: onboarding automation, trial nurturing, churn prevention workflows. Real Estate (Milan, Rome, Tuscany, Sardinia) International buyer management — UK, German, US, Swiss buyers. Multilingual AI assistants, automated follow-up, viewing scheduling."
         ]
       },
       {
         "title": "Kubera AI Solutions for the Italian Market",
-        "blocks": []
-      },
-      {
-        "title": "CRM Automation",
         "blocks": [
-          "Connect your CRM (HubSpot, Salesforce, Pipedrive, or Teamsystem/Zucchetti data exports) to automated workflows. New leads captured, enriched, and assigned. Follow-up tasks created automatically. Deals that go silent trigger re-engagement sequences."
-        ]
-      },
-      {
-        "title": "Multilingual AI Sales Assistant",
-        "blocks": [
-          "An AI assistant qualified to handle first-touch communication in Italian, English, German, and French — essential for Italian export-oriented businesses. Qualifies intent, asks the right questions, and routes warm leads to your team."
-        ]
-      },
-      {
-        "title": "WhatsApp Automation",
-        "blocks": [
-          "Build automated workflows within WhatsApp Business API — the communication channel most Italians and Italian businesses already prefer. Lead qualification, order confirmations, appointment reminders, follow-up sequences."
-        ]
-      },
-      {
-        "title": "Export Lead Management System",
-        "blocks": [
-          "For Italian manufacturers and brands selling internationally, we build systems that capture trade show contacts, web inquiries, and inbound leads — and run personalized, multilingual nurturing sequences that keep international buyers engaged without manual follow-up."
-        ]
-      },
-      {
-        "title": "Customer Support Automation",
-        "blocks": [
-          "Deploy an AI system that handles up to 70% of routine client inquiries in Italian and other languages. Escalation routes to the right person with full context already gathered."
-        ]
-      },
-      {
-        "title": "Reporting & Analytics Automation",
-        "blocks": [
-          "Replace manual weekly reporting with automated data aggregation and delivery. Pull from CRM, e-commerce platform, and ad accounts — delivered on schedule."
+          "CRM Automation Connect your CRM (HubSpot, Salesforce, Pipedrive, or Teamsystem/Zucchetti data exports) to automated workflows. New leads captured, enriched, and assigned. Follow-up tasks created automatically. Deals that go silent trigger re-engagement sequences. Multilingual AI Sales Assistant An AI assistant qualified to handle first-touch communication in Italian, English, German, and French — essential for Italian export-oriented businesses. Qualifies intent, asks the right questions, and routes warm leads to your team. WhatsApp Automation Build automated workflows within WhatsApp Business API — the communication channel most Italians and Italian businesses already prefer. Lead qualification, order confirmations, appointment reminders, follow-up sequences. Export Lead Management System For Italian manufacturers and brands selling internationally, we build systems that capture trade show contacts, web inquiries, and inbound leads — and run personalized, multilingual nurturing sequences that keep international buyers engaged without manual follow-up. Customer Support Automation Deploy an AI system that handles up to 70% of routine client inquiries in Italian and other languages. Escalation routes to the right person with full context already gathered. Reporting & Analytics Automation Replace manual weekly reporting with automated data aggregation and delivery. Pull from CRM, e-commerce platform, and ad accounts — delivered on schedule."
         ]
       },
       {
         "title": "Example Automation Scenarios",
-        "blocks": []
-      },
-      {
-        "title": "Scenario 1: Milan Fashion Export Brand",
         "blocks": [
-          "A Milanese women's fashion brand sells to European boutiques and global e-commerce. They receive 50–80 buyer inquiries monthly in English, German, and French. Managing these in three languages while maintaining quality relationships is challenging. Kubera AI deploys a multilingual AI assistant that handles initial inquiry, sends the correct catalogue and price list, qualifies buying intent, and creates a CRM record. The sales director focuses on closing — not first-response admin."
-        ]
-      },
-      {
-        "title": "Scenario 2: Bologna Packaging Machinery Manufacturer",
-        "blocks": [
-          "A 60-person B2B machinery manufacturer in Bologna's packaging district receives constant inquiries from European distributors and end-users. Proposal follow-up is inconsistent. Kubera AI builds an automated follow-up system triggered the moment a proposal is sent: 3 personalized touchpoints over 10 days. Win rate on quoted proposals improves."
-        ]
-      },
-      {
-        "title": "Scenario 3: Florence Agriturismo & Boutique Hotel",
-        "blocks": [
-          "A Tuscan property serving 80% international guests (British, German, American) receives constant WhatsApp and email messages about availability, experiences, and local recommendations. The owner manages it personally. Kubera AI deploys a multilingual WhatsApp AI assistant that handles standard guest communication and escalates to the owner only for complex or personalized requests. 70% of incoming messages resolved automatically."
-        ]
-      },
-      {
-        "title": "Scenario 4: Rome Professional Services Firm (Commercialista)",
-        "blocks": [
-          "A Rome-based accounting studio with 10 professionals spends 5+ hours weekly on appointment scheduling, document collection, and client reminders. Kubera AI automates the full intake cycle: booking, document request sequence (GDPR-compliant), payment reminders, and status notifications. Professionals recover over 4 hours per week."
-        ]
-      },
-      {
-        "title": "Scenario 5: Turin Automotive Supplier (Tier 2)",
-        "blocks": [
-          "A 30-person precision parts supplier for the Turin automotive cluster manages RFQ responses, supplier communications, and delivery confirmations manually. Kubera AI automates the inquiry-to-quote intake workflow and delivery confirmation sequences, reducing administrative overhead and response times to OEM procurement contacts."
-        ]
-      },
-      {
-        "title": "Scenario 6: Milan SaaS Startup (HRTech)",
-        "blocks": [
-          "A B2B SaaS company in Milan's Porta Nuova innovation district generates trial signups from LinkedIn but has no automated nurturing. Most trials expire without sales engagement. Kubera AI builds a behavior-triggered nurturing system: welcome sequence, feature-adoption emails, Slack alert to the sales rep for high-engagement accounts, and WhatsApp message at day 10 offering a demo in Italian."
+          "Scenario 1: Milan Fashion Export Brand A Milanese women's fashion brand sells to European boutiques and global e-commerce. They receive 50–80 buyer inquiries monthly in English, German, and French. Managing these in three languages while maintaining quality relationships is challenging. Kubera AI deploys a multilingual AI assistant that handles initial inquiry, sends the correct catalogue and price list, qualifies buying intent, and creates a CRM record. The sales director focuses on closing — not first-response admin. Scenario 2: Bologna Packaging Machinery Manufacturer A 60-person B2B machinery manufacturer in Bologna's packaging district receives constant inquiries from European distributors and end-users. Proposal follow-up is inconsistent. Kubera AI builds an automated follow-up system triggered the moment a proposal is sent: 3 personalized touchpoints over 10 days. Win rate on quoted proposals improves. Scenario 3: Florence Agriturismo & Boutique Hotel A Tuscan property serving 80% international guests (British, German, American) receives constant WhatsApp and email messages about availability, experiences, and local recommendations. The owner manages it personally. Kubera AI deploys a multilingual WhatsApp AI assistant that handles standard guest communication and escalates to the owner only for complex or personalized requests. 70% of incoming messages resolved automatically. Scenario 4: Rome Professional Services Firm (Commercialista) A Rome-based accounting studio with 10 professionals spends 5+ hours weekly on appointment scheduling, document collection, and client reminders. Kubera AI automates the full intake cycle: booking, document request sequence (GDPR-compliant), payment reminders, and status notifications. Professionals recover over 4 hours per week. Scenario 5: Turin Automotive Supplier (Tier 2) A 30-person precision parts supplier for the Turin automotive cluster manages RFQ responses, supplier communications, and delivery confirmations manually. Kubera AI automates the inquiry-to-quote intake workflow and delivery confirmation sequences, reducing administrative overhead and response times to OEM procurement contacts. Scenario 6: Milan SaaS Startup (HRTech) A B2B SaaS company in Milan's Porta Nuova innovation district generates trial signups from LinkedIn but has no automated nurturing. Most trials expire without sales engagement. Kubera AI builds a behavior-triggered nurturing system: welcome sequence, feature-adoption emails, Slack alert to the sales rep for high-engagement accounts, and WhatsApp message at day 10 offering a demo in Italian."
         ]
       },
       {
@@ -1877,226 +909,49 @@ export const generatedGeoPages = [
       },
       {
         "title": "Why Belgian Businesses Are Investing in AI Automation Now",
-        "blocks": []
-      },
-      {
-        "title": "Belgium's market data creates an unusually clear case for automation:",
         "blocks": [
+          "Belgium's market data creates an unusually clear case for automation:",
           "Belgium ranks 4th in Europe for enterprise AI adoption at 34.5% (Eurostat 2025). The country's business community has clearly validated AI as a mainstream operational tool — not an experiment. Individual AI usage at work is among Europe's highest. Belgium (34.5% enterprise adoption) is also a country where workers are culturally comfortable with AI tools, reducing the adoption friction that holds back other markets. Among the 5 EU countries where AI adoption exceeded 33% in 2025 — alongside Denmark, Finland, Sweden, and the Netherlands. Belgium is not a laggard market; it's a leading one. The implication: companies that don't automate are already falling behind competitors who do. Belgium's highest-in-Europe labour costs create exceptional ROI for automation. At Belgian labour cost levels, any saved hour has unusually high financial value. Automation systems pay back faster in Belgium than in almost any other European country. Multilingual complexity creates a specific operational overhead that standard software doesn't address. Custom-built multilingual AI automation handles this by design."
         ]
       },
       {
         "title": "Why Belgian Businesses Choose Kubera AI",
         "blocks": [
-          "Belgian companies need automation that works natively across Dutch, French, and English — and understands the specific software and business context of the Belgian market."
+          "Belgian companies need automation that works natively across Dutch, French, and English — and understands the specific software and business context of the Belgian market.",
+          "GDPR/AVG/RGPD-compliant by design, EU-based infrastructure Native multilingual support: Dutch (Flemish), French, English, German Custom workflow architecture — not off-the-shelf templates Integration with Belgian business tools: Exact Online Belgium, Odoo, HubSpot, Salesforce, Teamleader, Microsoft Dynamics SME-focused: systems scaled for 5–200 employees Fast implementation: 2–4 weeks to go live Understanding of Belgium's multilingual, multicultural business environment"
         ]
-      },
-      {
-        "title": "GDPR/AVG/RGPD-compliant by design, EU-based infrastructure",
-        "blocks": []
-      },
-      {
-        "title": "Native multilingual support: Dutch (Flemish), French, English, German",
-        "blocks": []
-      },
-      {
-        "title": "Custom workflow architecture — not off-the-shelf templates",
-        "blocks": [
-          "Integration with Belgian business tools: Exact Online Belgium, Odoo, HubSpot, Salesforce, Teamleader, Microsoft Dynamics"
-        ]
-      },
-      {
-        "title": "SME-focused: systems scaled for 5–200 employees",
-        "blocks": []
-      },
-      {
-        "title": "Fast implementation: 2–4 weeks to go live",
-        "blocks": []
-      },
-      {
-        "title": "Understanding of Belgium's multilingual, multicultural business environment",
-        "blocks": []
       },
       {
         "title": "AI Automation in Belgium: Key Market Trends",
         "blocks": [
-          "Belgium ranks 4th in EU for enterprise AI adoption at 34.5% — behind only Denmark, Finland, and Sweden. (Eurostat, December 2025) Belgium is 1 of 5 EU countries to exceed 33% AI adoption — placing it firmly in Europe's digital leadership tier. Labour costs among EU's highest — creating strong economic incentives for automation at every company size. Multilingual business complexity is a structural feature of Belgian SMEs — and a specific driver of demand for AI-powered multilingual communication tools. EU's Apply AI Strategy (October 2025) specifically targets SME adoption across Europe, with Belgium well-positioned to be a primary beneficiary given its existing infrastructure and adoption culture."
-        ]
-      },
-      {
-        "title": "AI Automation vs. Hiring Additional Staff",
-        "blocks": [
-          "TaskHiring a Staff MemberAI AutomationLead qualificationNew hire; weeks of onboardingAutomated within daysMultilingual client communicationRequires bilingual/trilingual staffAI handles NL/FR/EN/DE nativelyCRM updatesRelies on rep discipline100% consistent, real-timeWeekly reporting2–4 hours manualAuto-generated and deliveredCustomer support (routine)Full-time hire requiredAI handles 60–80% of volume 24/7Follow-up sequencesDepends on individual repTriggered automatically, never missedCost€45,000–€75,000/year incl. chargesFrom €1,800 setup + €350/monthOnboarding time4–12 weeks2–4 weeks to go liveAvailabilityBusiness hours24/7/365"
-        ]
-      },
-      {
-        "title": "Manual Process vs. AI Automation: What Changes",
-        "blocks": [
-          "ProcessManualWith AI AutomationLead arrives from Flemish companyRep responds in Dutch manuallyAI responds in Dutch automatically, CRM record createdLead arrives from Walloon companyDifferent rep handles in FrenchSame system, switches language automaticallyPost-proposal follow-upRep remembers (or forgets)Automated 3-touch sequence in correct languageClient support inquiryStaff responds within hoursAI responds in seconds, escalates complex casesWeekly sales report (bilingual)Manual aggregation, manual formattingAuto-generated in correct language for each regionNew client onboardingManual email, document requestsAutomated flow: welcome, documents, calendar"
+          "Belgium ranks 4th in EU for enterprise AI adoption at 34.5% — behind only Denmark, Finland, and Sweden. (Eurostat, December 2025) Belgium is 1 of 5 EU countries to exceed 33% AI adoption — placing it firmly in Europe's digital leadership tier. Labour costs among EU's highest — creating strong economic incentives for automation at every company size. Multilingual business complexity is a structural feature of Belgian SMEs — and a specific driver of demand for AI-powered multilingual communication tools. EU's Apply AI Strategy (October 2025) specifically targets SME adoption across Europe, with Belgium well-positioned to be a primary beneficiary given its existing infrastructure and adoption culture.",
+          "AI Automation vs. Hiring Additional Staff TaskHiring a Staff MemberAI AutomationLead qualificationNew hire; weeks of onboardingAutomated within daysMultilingual client communicationRequires bilingual/trilingual staffAI handles NL/FR/EN/DE nativelyCRM updatesRelies on rep discipline100% consistent, real-timeWeekly reporting2–4 hours manualAuto-generated and deliveredCustomer support (routine)Full-time hire requiredAI handles 60–80% of volume 24/7Follow-up sequencesDepends on individual repTriggered automatically, never missedCost€45,000–€75,000/year incl. chargesFrom €1,800 setup + €350/monthOnboarding time4–12 weeks2–4 weeks to go liveAvailabilityBusiness hours24/7/365",
+          "Manual Process vs. AI Automation: What Changes ProcessManualWith AI AutomationLead arrives from Flemish companyRep responds in Dutch manuallyAI responds in Dutch automatically, CRM record createdLead arrives from Walloon companyDifferent rep handles in FrenchSame system, switches language automaticallyPost-proposal follow-upRep remembers (or forgets)Automated 3-touch sequence in correct languageClient support inquiryStaff responds within hoursAI responds in seconds, escalates complex casesWeekly sales report (bilingual)Manual aggregation, manual formattingAuto-generated in correct language for each regionNew client onboardingManual email, document requestsAutomated flow: welcome, documents, calendar"
         ]
       },
       {
         "title": "AI Automation Opportunities in Belgium",
-        "blocks": []
-      },
-      {
-        "title": "Belgium's specific market characteristics create clear, high-value automation opportunities:",
         "blocks": [
-          "Multilingual AI assistants (NL/FR/EN/DE) — the most Belgium-specific automation use case, solving a challenge that standard software can't address"
+          "Belgium's specific market characteristics create clear, high-value automation opportunities:",
+          "Multilingual AI assistants (NL/FR/EN/DE) — the most Belgium-specific automation use case, solving a challenge that standard software can't address CRM automation integrated with Exact Online Belgium, Teamleader, Odoo, HubSpot, and Salesforce Professional services intake automation — Belgium's large professional services sector (law, accounting, consulting) around Brussels and Antwerp E-commerce automation for Belgian brands selling across Benelux and Europe Logistics and trade automation around Antwerp's port ecosystem Lead generation systems for Brussels-based consultancies and public affairs firms WhatsApp and email automation for client-facing teams managing high message volumes"
         ]
-      },
-      {
-        "title": "CRM automation integrated with Exact Online Belgium, Teamleader, Odoo, HubSpot, and Salesforce",
-        "blocks": [
-          "Professional services intake automation — Belgium's large professional services sector (law, accounting, consulting) around Brussels and Antwerp"
-        ]
-      },
-      {
-        "title": "E-commerce automation for Belgian brands selling across Benelux and Europe",
-        "blocks": []
-      },
-      {
-        "title": "Logistics and trade automation around Antwerp's port ecosystem",
-        "blocks": []
-      },
-      {
-        "title": "Lead generation systems for Brussels-based consultancies and public affairs firms",
-        "blocks": []
-      },
-      {
-        "title": "WhatsApp and email automation for client-facing teams managing high message volumes",
-        "blocks": []
       },
       {
         "title": "Relevant Industries",
-        "blocks": []
-      },
-      {
-        "title": "Professional Services — Legal, Tax, Consulting (Brussels, Antwerp, Ghent)",
         "blocks": [
-          "Large law firms, notaries, tax advisors, management consultants: client intake, document workflows, scheduling, multilingual client communication."
-        ]
-      },
-      {
-        "title": "Logistics & Trade (Antwerp, Brussels)",
-        "blocks": [
-          "Antwerp is Europe's second-largest port. Logistics companies: shipment status automation, partner communication, documentation workflows, customer updates."
-        ]
-      },
-      {
-        "title": "Technology & SaaS (Ghent, Leuven, Brussels)",
-        "blocks": [
-          "Belgium's growing tech sector: onboarding automation, trial nurturing, multilingual customer support."
-        ]
-      },
-      {
-        "title": "Manufacturing (Liège, Charleroi, East Flanders)",
-        "blocks": [
-          "B2B manufacturing companies: order workflow automation, supplier communications, inquiry management."
-        ]
-      },
-      {
-        "title": "Financial Services & Insurance (Brussels)",
-        "blocks": [
-          "Insurance brokers, financial advisors, independent asset managers: lead qualification, compliance document collection, client onboarding."
-        ]
-      },
-      {
-        "title": "Real Estate (Brussels, Antwerp, Bruges)",
-        "blocks": [
-          "Belgian and international property markets: multilingual buyer management, inquiry automation, viewing scheduling."
-        ]
-      },
-      {
-        "title": "Hospitality & Tourism (Brussels, Bruges, Ghent, Ardennes)",
-        "blocks": [
-          "Belgium is one of Europe's most-visited tourism destinations. Hotels, event venues, tour operators: booking automation, multilingual guest communication, upsell sequences."
-        ]
-      },
-      {
-        "title": "EU Affairs & Public Policy (Brussels)",
-        "blocks": [
-          "Law firms, public affairs consultancies, NGOs operating around EU institutions: client reporting automation, event management workflows, stakeholder communication."
+          "Professional Services — Legal, Tax, Consulting (Brussels, Antwerp, Ghent) Large law firms, notaries, tax advisors, management consultants: client intake, document workflows, scheduling, multilingual client communication. Logistics & Trade (Antwerp, Brussels) Antwerp is Europe's second-largest port. Logistics companies: shipment status automation, partner communication, documentation workflows, customer updates. Technology & SaaS (Ghent, Leuven, Brussels) Belgium's growing tech sector: onboarding automation, trial nurturing, multilingual customer support. Manufacturing (Liège, Charleroi, East Flanders) B2B manufacturing companies: order workflow automation, supplier communications, inquiry management. Financial Services & Insurance (Brussels) Insurance brokers, financial advisors, independent asset managers: lead qualification, compliance document collection, client onboarding. Real Estate (Brussels, Antwerp, Bruges) Belgian and international property markets: multilingual buyer management, inquiry automation, viewing scheduling. Hospitality & Tourism (Brussels, Bruges, Ghent, Ardennes) Belgium is one of Europe's most-visited tourism destinations. Hotels, event venues, tour operators: booking automation, multilingual guest communication, upsell sequences. EU Affairs & Public Policy (Brussels) Law firms, public affairs consultancies, NGOs operating around EU institutions: client reporting automation, event management workflows, stakeholder communication."
         ]
       },
       {
         "title": "Kubera AI Solutions for the Belgian Market",
-        "blocks": []
-      },
-      {
-        "title": "Multilingual AI Assistant (NL/FR/EN/DE)",
         "blocks": [
-          "Belgium's most specific automation need. An AI assistant that communicates natively in Dutch, French, English, and German — switching languages automatically based on the client's preference. Handles FAQs, qualification questions, appointment requests, and support inquiries across all four languages."
-        ]
-      },
-      {
-        "title": "CRM Automation",
-        "blocks": [
-          "Connect your CRM (Teamleader, HubSpot, Salesforce, Odoo, or Exact Online Belgium data exports) to automated workflows. New leads captured, enriched, assigned, and followed up — in the correct language, automatically."
-        ]
-      },
-      {
-        "title": "Professional Services Automation",
-        "blocks": [
-          "For Belgian cabinets and firms: automated client intake, GDPR/AVG/RGPD-compliant data collection, appointment scheduling, document request sequences, and reminders in the client's preferred language."
-        ]
-      },
-      {
-        "title": "Lead Generation System (GPT-NTI)",
-        "blocks": [
-          "A complete lead capture system: landing page, AI chatbot (multilingual), CRM integration, and automated follow-up. Available in Dutch, French, and English versions or a single multilingual system."
-        ]
-      },
-      {
-        "title": "Logistics & Trade Automation",
-        "blocks": [
-          "For Antwerp-area logistics companies: automated shipment status updates, exception notifications, partner communication workflows, and client update sequences."
-        ]
-      },
-      {
-        "title": "Reporting & Analytics Automation",
-        "blocks": [
-          "Automated weekly reporting in the format and language your management team needs — Dutch for Flemish operations, French for Walloon operations, English for international reporting."
+          "Multilingual AI Assistant (NL/FR/EN/DE) Belgium's most specific automation need. An AI assistant that communicates natively in Dutch, French, English, and German — switching languages automatically based on the client's preference. Handles FAQs, qualification questions, appointment requests, and support inquiries across all four languages. CRM Automation Connect your CRM (Teamleader, HubSpot, Salesforce, Odoo, or Exact Online Belgium data exports) to automated workflows. New leads captured, enriched, assigned, and followed up — in the correct language, automatically. Professional Services Automation For Belgian cabinets and firms: automated client intake, GDPR/AVG/RGPD-compliant data collection, appointment scheduling, document request sequences, and reminders in the client's preferred language. Lead Generation System (GPT-NTI) A complete lead capture system: landing page, AI chatbot (multilingual), CRM integration, and automated follow-up. Available in Dutch, French, and English versions or a single multilingual system. Logistics & Trade Automation For Antwerp-area logistics companies: automated shipment status updates, exception notifications, partner communication workflows, and client update sequences. Reporting & Analytics Automation Automated weekly reporting in the format and language your management team needs — Dutch for Flemish operations, French for Walloon operations, English for international reporting."
         ]
       },
       {
         "title": "Example Automation Scenarios",
-        "blocks": []
-      },
-      {
-        "title": "Scenario 1: Brussels Public Affairs Consultancy",
         "blocks": [
-          "A 12-person Brussels public affairs firm serves clients in English, French, and Dutch. New project inquiries come from across Europe. Managing multilingual first-response and qualification while maintaining the relationship-focused approach of EU affairs work is challenging. Kubera AI builds a multilingual AI assistant that handles initial contact, sends relevant credentials in the correct language, and books discovery calls — freeing the team for client work, not intake admin."
-        ]
-      },
-      {
-        "title": "Scenario 2: Antwerp Logistics Company",
-        "blocks": [
-          "A freight forwarding company in Antwerp handles 100+ shipment inquiries per week across their European client base. Status updates, document requests, and exception notifications are managed manually. Kubera AI automates shipment status communications and exception alerts — clients receive proactive, accurate updates without the logistics team manually triggering each one."
-        ]
-      },
-      {
-        "title": "Scenario 3: Ghent Technology Company (SaaS)",
-        "blocks": [
-          "A B2B SaaS startup from Ghent generates signups via LinkedIn but has no structured nurturing. Most trials expire without meaningful sales contact. Kubera AI builds a behavior-triggered nurturing system: Dutch welcome sequence for Benelux leads, English for international, Slack alert to the sales rep for high-engagement accounts, and automated demo offer at day 10."
-        ]
-      },
-      {
-        "title": "Scenario 4: Bruges Tourism & Event Venue",
-        "blocks": [
-          "A historic venue near Bruges hosts corporate events and private functions. Inquiries come in Dutch, French, English, and German — and are handled by a small team. Kubera AI deploys a multilingual AI assistant that handles event inquiry intake, sends correct pricing and availability, and books site visits. The team focuses on delivering exceptional events, not managing incoming messages."
-        ]
-      },
-      {
-        "title": "Scenario 5: Brussels Law Firm",
-        "blocks": [
-          "A 20-person commercial law firm in Brussels handles clients in Dutch, French, and English. Administrative overhead for intake scheduling and document collection is high. Kubera AI automates the intake flow: online booking in the client's language, automated document request sequence, GDPR-compliant data collection, and reminder notifications. Partners recover 3–4 hours per week."
-        ]
-      },
-      {
-        "title": "Scenario 6: Antwerp Diamond Trade Company",
-        "blocks": [
-          "A diamond trading company in Antwerp's historic diamond district manages international buyer relationships across multiple time zones. Lead follow-up after trade shows and industry events is inconsistent. Kubera AI builds an automated multilingual follow-up system that activates immediately after any trade show contact is added to CRM, running personalized sequences in the buyer's language."
+          "Scenario 1: Brussels Public Affairs Consultancy A 12-person Brussels public affairs firm serves clients in English, French, and Dutch. New project inquiries come from across Europe. Managing multilingual first-response and qualification while maintaining the relationship-focused approach of EU affairs work is challenging. Kubera AI builds a multilingual AI assistant that handles initial contact, sends relevant credentials in the correct language, and books discovery calls — freeing the team for client work, not intake admin. Scenario 2: Antwerp Logistics Company A freight forwarding company in Antwerp handles 100+ shipment inquiries per week across their European client base. Status updates, document requests, and exception notifications are managed manually. Kubera AI automates shipment status communications and exception alerts — clients receive proactive, accurate updates without the logistics team manually triggering each one. Scenario 3: Ghent Technology Company (SaaS) A B2B SaaS startup from Ghent generates signups via LinkedIn but has no structured nurturing. Most trials expire without meaningful sales contact. Kubera AI builds a behavior-triggered nurturing system: Dutch welcome sequence for Benelux leads, English for international, Slack alert to the sales rep for high-engagement accounts, and automated demo offer at day 10. Scenario 4: Bruges Tourism & Event Venue A historic venue near Bruges hosts corporate events and private functions. Inquiries come in Dutch, French, English, and German — and are handled by a small team. Kubera AI deploys a multilingual AI assistant that handles event inquiry intake, sends correct pricing and availability, and books site visits. The team focuses on delivering exceptional events, not managing incoming messages. Scenario 5: Brussels Law Firm A 20-person commercial law firm in Brussels handles clients in Dutch, French, and English. Administrative overhead for intake scheduling and document collection is high. Kubera AI automates the intake flow: online booking in the client's language, automated document request sequence, GDPR-compliant data collection, and reminder notifications. Partners recover 3–4 hours per week. Scenario 6: Antwerp Diamond Trade Company A diamond trading company in Antwerp's historic diamond district manages international buyer relationships across multiple time zones. Lead follow-up after trade shows and industry events is inconsistent. Kubera AI builds an automated multilingual follow-up system that activates immediately after any trade show contact is added to CRM, running personalized sequences in the buyer's language."
         ]
       },
       {
@@ -2185,187 +1040,34 @@ export const generatedGeoPages = [
       {
         "title": "Why Austrian Businesses Choose Kubera AI",
         "blocks": [
-          "Austrian companies need an automation partner who understands the DACH business context — the German-language first environment, the SAP and BMD software ecosystem, the Austrian compliance requirements, and the Mittelstand culture of precision and reliability."
-        ]
-      },
-      {
-        "title": "GDPR-compliant by design, EU-based infrastructure",
-        "blocks": []
-      },
-      {
-        "title": "German-language first support (also English and additional languages)",
-        "blocks": []
-      },
-      {
-        "title": "Integration with SAP, BMD, RZL, DATEV Austria, HubSpot, Salesforce, Pipedrive",
-        "blocks": []
-      },
-      {
-        "title": "Custom workflow architecture — built for Austrian business processes",
-        "blocks": []
-      },
-      {
-        "title": "SME-focused: systems scaled for 5–200 employees",
-        "blocks": []
-      },
-      {
-        "title": "Fast implementation: 2–4 weeks to go live",
-        "blocks": []
-      },
-      {
-        "title": "Understanding of DACH business culture and operational expectations",
-        "blocks": []
-      },
-      {
-        "title": "AI Automation vs. Hiring Additional Staff",
-        "blocks": [
-          "TaskHiring a Staff MemberAI AutomationLead qualificationNew hire; weeks of onboardingAutomated within daysCRM updatesRelies on rep discipline100% consistent, real-timeWeekly reporting2–4 hours manualDelivered automatically on scheduleCustomer support (routine)Full-time hireAI handles 60–80% of volume 24/7DACH region follow-upManual management per territoryAutomated sequences per regionFollow-up sequencesDepends on rep memoryTriggered automatically, never missedCost€40,000–€70,000/year incl. contributionsFrom €1,800 setup + €350/monthOnboarding time4–12 weeks2–4 weeks to go liveAvailabilityBusiness hours24/7/365"
-        ]
-      },
-      {
-        "title": "Manual Process vs. AI Automation: What Changes",
-        "blocks": [
-          "ProcessManualWith AI AutomationNew B2B lead arrives via webManual review, CRM entry, rep assignmentInstant capture, enrichment, CRM record, notificationFollow-up after trade showSome leads followed up, most forgottenAutomated sequence for every contactCEE client sends inquiry in EnglishStaff translates and responds next dayAI responds in English instantlyWeekly report for managementManual aggregation from SAP, CRM, ExcelAuto-generated and deliveredNew client onboardingManual email sequence, document requestsAutomated: documents, welcome, calendarQuote sent, no responseStays in pipeline, forgottenRe-engagement sequence at day 7"
+          "Austrian companies need an automation partner who understands the DACH business context — the German-language first environment, the SAP and BMD software ecosystem, the Austrian compliance requirements, and the Mittelstand culture of precision and reliability.",
+          "GDPR-compliant by design, EU-based infrastructure German-language first support (also English and additional languages) Integration with SAP, BMD, RZL, DATEV Austria, HubSpot, Salesforce, Pipedrive Custom workflow architecture — built for Austrian business processes SME-focused: systems scaled for 5–200 employees Fast implementation: 2–4 weeks to go live Understanding of DACH business culture and operational expectations",
+          "AI Automation vs. Hiring Additional Staff TaskHiring a Staff MemberAI AutomationLead qualificationNew hire; weeks of onboardingAutomated within daysCRM updatesRelies on rep discipline100% consistent, real-timeWeekly reporting2–4 hours manualDelivered automatically on scheduleCustomer support (routine)Full-time hireAI handles 60–80% of volume 24/7DACH region follow-upManual management per territoryAutomated sequences per regionFollow-up sequencesDepends on rep memoryTriggered automatically, never missedCost€40,000–€70,000/year incl. contributionsFrom €1,800 setup + €350/monthOnboarding time4–12 weeks2–4 weeks to go liveAvailabilityBusiness hours24/7/365",
+          "Manual Process vs. AI Automation: What Changes ProcessManualWith AI AutomationNew B2B lead arrives via webManual review, CRM entry, rep assignmentInstant capture, enrichment, CRM record, notificationFollow-up after trade showSome leads followed up, most forgottenAutomated sequence for every contactCEE client sends inquiry in EnglishStaff translates and responds next dayAI responds in English instantlyWeekly report for managementManual aggregation from SAP, CRM, ExcelAuto-generated and deliveredNew client onboardingManual email sequence, document requestsAutomated: documents, welcome, calendarQuote sent, no responseStays in pipeline, forgottenRe-engagement sequence at day 7"
         ]
       },
       {
         "title": "AI Automation Opportunities in Austria",
-        "blocks": []
-      },
-      {
-        "title": "CRM automation integrated with SAP, BMD, RZL, DATEV Austria, HubSpot, Salesforce",
         "blocks": [
-          "DACH region sales automation — covering Germany, Austria, and Switzerland with consistent German-language follow-up CEE market expansion support — multilingual AI assistants for Austrian companies entering Czech, Hungarian, Slovak, and Polish markets"
-        ]
-      },
-      {
-        "title": "Professional services intake — Viennese law firms, tax advisors, management consultants",
-        "blocks": []
-      },
-      {
-        "title": "Industrial and manufacturing automation — Linz-area manufacturers, Graz automotive suppliers",
-        "blocks": [
-          "Tourism and hospitality automation — Salzburg, Vienna, Tyrol, Styria: booking automation, multilingual guest communication Reporting automation for management teams currently assembling data from SAP and CRM systems manually"
+          "CRM automation integrated with SAP, BMD, RZL, DATEV Austria, HubSpot, Salesforce DACH region sales automation — covering Germany, Austria, and Switzerland with consistent German-language follow-up CEE market expansion support — multilingual AI assistants for Austrian companies entering Czech, Hungarian, Slovak, and Polish markets Professional services intake — Viennese law firms, tax advisors, management consultants Industrial and manufacturing automation — Linz-area manufacturers, Graz automotive suppliers Tourism and hospitality automation — Salzburg, Vienna, Tyrol, Styria: booking automation, multilingual guest communication Reporting automation for management teams currently assembling data from SAP and CRM systems manually"
         ]
       },
       {
         "title": "Relevant Industries",
-        "blocks": []
-      },
-      {
-        "title": "Professional Services — Legal, Tax, Consulting (Vienna)",
         "blocks": [
-          "Vienna has one of Europe's densest concentrations of law firms, tax advisory firms, and management consultancies — many serving CEE clients. Client intake automation, scheduling, document workflows, GDPR-compliant data collection."
-        ]
-      },
-      {
-        "title": "Manufacturing & Engineering (Linz, Graz, Steyr)",
-        "blocks": [
-          "Austria's industrial heartland. Voestalpine and its supply ecosystem. Precision engineering companies. B2B inquiry routing, order confirmation workflows, supplier communications, CRM automation."
-        ]
-      },
-      {
-        "title": "Automotive Supply (Graz)",
-        "blocks": [
-          "AVL, Magna, and the broader Graz automotive cluster. RFQ response automation, delivery confirmation, engineering inquiry routing."
-        ]
-      },
-      {
-        "title": "Tourism & Hospitality (Vienna, Salzburg, Tyrol, Vorarlberg)",
-        "blocks": [
-          "Austria's €25+ billion tourism sector. Hotels, ski resorts, wellness facilities: booking automation, multilingual guest communication, upsell sequences, review generation."
-        ]
-      },
-      {
-        "title": "Financial Services & Insurance (Vienna)",
-        "blocks": [
-          "Austria's Bankenstelle. Insurance brokers, wealth managers, financial advisors: lead qualification, compliance document collection, client onboarding workflows."
-        ]
-      },
-      {
-        "title": "Technology & Startups (Vienna — Startup Vienna ecosystem)",
-        "blocks": [
-          "Vienna's growing tech ecosystem: onboarding automation, trial nurturing, multilingual support for international users."
-        ]
-      },
-      {
-        "title": "Real Estate (Vienna, major cities)",
-        "blocks": [
-          "Vienna's property market serves Austrian buyers and significant international investor interest. Multilingual lead management, inquiry automation, viewing scheduling."
+          "Professional Services — Legal, Tax, Consulting (Vienna) Vienna has one of Europe's densest concentrations of law firms, tax advisory firms, and management consultancies — many serving CEE clients. Client intake automation, scheduling, document workflows, GDPR-compliant data collection. Manufacturing & Engineering (Linz, Graz, Steyr) Austria's industrial heartland. Voestalpine and its supply ecosystem. Precision engineering companies. B2B inquiry routing, order confirmation workflows, supplier communications, CRM automation. Automotive Supply (Graz) AVL, Magna, and the broader Graz automotive cluster. RFQ response automation, delivery confirmation, engineering inquiry routing. Tourism & Hospitality (Vienna, Salzburg, Tyrol, Vorarlberg) Austria's €25+ billion tourism sector. Hotels, ski resorts, wellness facilities: booking automation, multilingual guest communication, upsell sequences, review generation. Financial Services & Insurance (Vienna) Austria's Bankenstelle. Insurance brokers, wealth managers, financial advisors: lead qualification, compliance document collection, client onboarding workflows. Technology & Startups (Vienna — Startup Vienna ecosystem) Vienna's growing tech ecosystem: onboarding automation, trial nurturing, multilingual support for international users. Real Estate (Vienna, major cities) Vienna's property market serves Austrian buyers and significant international investor interest. Multilingual lead management, inquiry automation, viewing scheduling."
         ]
       },
       {
         "title": "Kubera AI Solutions for the Austrian Market",
-        "blocks": []
-      },
-      {
-        "title": "CRM Automation (SAP/BMD-compatible)",
         "blocks": [
-          "Connect your CRM to automated workflows. Works with Austrian business software ecosystems: SAP data exports, BMD, RZL, DATEV Austria, and modern platforms including HubSpot, Salesforce, and Pipedrive. New leads captured, enriched, assigned, and followed up automatically."
-        ]
-      },
-      {
-        "title": "German-Language AI Sales Assistant",
-        "blocks": [
-          "An AI assistant handling first-touch lead qualification in German (Austrian dialect and formal registers as appropriate). Qualifies intent, routes leads, and hands warm prospects to your team with full context."
-        ]
-      },
-      {
-        "title": "CEE Expansion Automation",
-        "blocks": [
-          "For Austrian companies managing relationships across Czech Republic, Hungary, Slovakia, and Poland: multilingual AI assistants and follow-up systems that handle first-contact communication in the appropriate language."
-        ]
-      },
-      {
-        "title": "Tourism & Hospitality Automation",
-        "blocks": [
-          "Booking confirmation, pre-arrival information, upsell offers, check-in instructions, post-stay review requests, and repeat guest incentives. Works with Austrian PMS systems, Booking.com, and WhatsApp."
-        ]
-      },
-      {
-        "title": "Professional Services Automation",
-        "blocks": [
-          "For Vienna-area law firms, tax advisors, and consultancies: automated client intake, GDPR-compliant data collection, appointment scheduling, document request sequences."
-        ]
-      },
-      {
-        "title": "Reporting & Analytics Automation",
-        "blocks": [
-          "Automated weekly management reports pulling data from SAP, CRM, and operations systems. Delivered on schedule — in German or English as needed."
+          "CRM Automation (SAP/BMD-compatible) Connect your CRM to automated workflows. Works with Austrian business software ecosystems: SAP data exports, BMD, RZL, DATEV Austria, and modern platforms including HubSpot, Salesforce, and Pipedrive. New leads captured, enriched, assigned, and followed up automatically. German-Language AI Sales Assistant An AI assistant handling first-touch lead qualification in German (Austrian dialect and formal registers as appropriate). Qualifies intent, routes leads, and hands warm prospects to your team with full context. CEE Expansion Automation For Austrian companies managing relationships across Czech Republic, Hungary, Slovakia, and Poland: multilingual AI assistants and follow-up systems that handle first-contact communication in the appropriate language. Tourism & Hospitality Automation Booking confirmation, pre-arrival information, upsell offers, check-in instructions, post-stay review requests, and repeat guest incentives. Works with Austrian PMS systems, Booking.com, and WhatsApp. Professional Services Automation For Vienna-area law firms, tax advisors, and consultancies: automated client intake, GDPR-compliant data collection, appointment scheduling, document request sequences. Reporting & Analytics Automation Automated weekly management reports pulling data from SAP, CRM, and operations systems. Delivered on schedule — in German or English as needed."
         ]
       },
       {
         "title": "Example Automation Scenarios",
-        "blocks": []
-      },
-      {
-        "title": "Scenario 1: Vienna Law Firm (CEE Practice)",
         "blocks": [
-          "A 20-person Viennese Rechtsanwaltskanzlei with a CEE practice receives inquiries from clients across Austria, Germany, Czech Republic, and Hungary. Managing multilingual intake — German, English, Czech — while maintaining quality relationship standards is demanding. Kubera AI implements a multilingual AI assistant that handles initial contact in the correct language, sends relevant credentials, and books discovery calls. Partners focus on billable work, not intake admin."
-        ]
-      },
-      {
-        "title": "Scenario 2: Linz Industrial Manufacturer",
-        "blocks": [
-          "A 50-person precision parts manufacturer in Linz serves German and Austrian automotive OEMs. RFQ responses, delivery confirmations, and quality documentation requests are handled manually, often slowly. Kubera AI automates the inquiry-to-quote workflow: instant acknowledgment, categorization, rep assignment, and follow-up reminders. Response times drop from days to hours."
-        ]
-      },
-      {
-        "title": "Scenario 3: Salzburg Boutique Hotel",
-        "blocks": [
-          "A 4-star hotel in Salzburg's city center serves 70% international guests — German, British, Japanese, and US visitors. Guest communication via email and WhatsApp is managed by a small front-desk team. Kubera AI deploys a multilingual WhatsApp AI assistant handling check-in questions, room service requests, and local recommendations automatically."
-        ]
-      },
-      {
-        "title": "Scenario 4: Vienna SaaS Startup (FinTech)",
-        "blocks": [
-          "A Viennese FinTech startup generates trial signups from across the DACH region but has no automated nurturing. German-language welcome sequence, behavior-triggered feature-adoption emails, and a WhatsApp message at day 12 offering a demo in German. Trial-to-paid conversion improves."
-        ]
-      },
-      {
-        "title": "Scenario 5: Graz Automotive Supplier (Tier 1)",
-        "blocks": [
-          "A supplier to Graz's automotive cluster manages relationships with procurement teams at BMW, Mercedes, and Stellantis. Follow-up after technical meetings is inconsistent. Kubera AI builds an automated post-meeting follow-up system: personalized email sequences in German and English, triggered after each logged meeting, ensuring consistent relationship maintenance without manual effort."
+          "Scenario 1: Vienna Law Firm (CEE Practice) A 20-person Viennese Rechtsanwaltskanzlei with a CEE practice receives inquiries from clients across Austria, Germany, Czech Republic, and Hungary. Managing multilingual intake — German, English, Czech — while maintaining quality relationship standards is demanding. Kubera AI implements a multilingual AI assistant that handles initial contact in the correct language, sends relevant credentials, and books discovery calls. Partners focus on billable work, not intake admin. Scenario 2: Linz Industrial Manufacturer A 50-person precision parts manufacturer in Linz serves German and Austrian automotive OEMs. RFQ responses, delivery confirmations, and quality documentation requests are handled manually, often slowly. Kubera AI automates the inquiry-to-quote workflow: instant acknowledgment, categorization, rep assignment, and follow-up reminders. Response times drop from days to hours. Scenario 3: Salzburg Boutique Hotel A 4-star hotel in Salzburg's city center serves 70% international guests — German, British, Japanese, and US visitors. Guest communication via email and WhatsApp is managed by a small front-desk team. Kubera AI deploys a multilingual WhatsApp AI assistant handling check-in questions, room service requests, and local recommendations automatically. Scenario 4: Vienna SaaS Startup (FinTech) A Viennese FinTech startup generates trial signups from across the DACH region but has no automated nurturing. German-language welcome sequence, behavior-triggered feature-adoption emails, and a WhatsApp message at day 12 offering a demo in German. Trial-to-paid conversion improves. Scenario 5: Graz Automotive Supplier (Tier 1) A supplier to Graz's automotive cluster manages relationships with procurement teams at BMW, Mercedes, and Stellantis. Follow-up after technical meetings is inconsistent. Kubera AI builds an automated post-meeting follow-up system: personalized email sequences in German and English, triggered after each logged meeting, ensuring consistent relationship maintenance without manual effort."
         ]
       },
       {
@@ -2443,208 +1145,49 @@ export const generatedGeoPages = [
       },
       {
         "title": "Why Swiss Businesses Are Investing in AI Automation Now",
-        "blocks": []
-      },
-      {
-        "title": "Switzerland's market data makes the case clearly:",
         "blocks": [
+          "Switzerland's market data makes the case clearly:",
           "SME AI adoption jumped from 22% to 34% in one year. AXA Switzerland SME Labour Market Study (2025) confirms Swiss businesses are adopting AI at an accelerating rate. The competitive pressure of this adoption curve is real. 34% of Swiss SMEs now use AI to automate specific work steps — up from 23% in 2024. Automation is no longer experimental in Switzerland; it's mainstream SME practice. 47% of individual Swiss users now use generative AI tools (Eurostat 2025), placing Switzerland among Europe's highest individual AI adoption markets — behind only Norway (56%) among non-EU European countries. Swiss employees are already comfortable with AI tools, reducing adoption friction. Translation and correspondence are the top AI use cases (52% and 47% of Swiss SMEs respectively). This reflects Switzerland's quadrilingual reality — and highlights the specific opportunity for multilingual automation in client-facing workflows. Switzerland's highest-in-Europe labour costs create the strongest economic incentive for automation. Every saved hour in Zurich or Geneva has higher financial value than almost anywhere else in the world."
         ]
       },
       {
         "title": "Why Swiss Businesses Choose Kubera AI",
         "blocks": [
-          "Swiss companies need automation partners who understand the Swiss context — the quadrilingual requirement, the data privacy culture, the high-precision operational standards, and the specific software tools Swiss businesses use."
-        ]
-      },
-      {
-        "title": "Swiss revDSG-compliant data handling, EU GDPR-aligned, EU-based infrastructure",
-        "blocks": []
-      },
-      {
-        "title": "Native quadrilingual support: German, French, Italian, English",
-        "blocks": []
-      },
-      {
-        "title": "Custom workflow architecture — precision-built for Swiss business processes",
-        "blocks": [
-          "Integration with Swiss business tools: Abacus Business Software, Sage Switzerland, Bexio, HubSpot, Salesforce, Microsoft Dynamics"
-        ]
-      },
-      {
-        "title": "SME-focused: systems scaled for 5–200 employees",
-        "blocks": []
-      },
-      {
-        "title": "Fast implementation: 2–4 weeks to go live",
-        "blocks": [
-          "Understanding of Swiss business culture across German-speaking, French-speaking, and Italian-speaking regions"
+          "Swiss companies need automation partners who understand the Swiss context — the quadrilingual requirement, the data privacy culture, the high-precision operational standards, and the specific software tools Swiss businesses use.",
+          "Swiss revDSG-compliant data handling, EU GDPR-aligned, EU-based infrastructure Native quadrilingual support: German, French, Italian, English Custom workflow architecture — precision-built for Swiss business processes Integration with Swiss business tools: Abacus Business Software, Sage Switzerland, Bexio, HubSpot, Salesforce, Microsoft Dynamics SME-focused: systems scaled for 5–200 employees Fast implementation: 2–4 weeks to go live Understanding of Swiss business culture across German-speaking, French-speaking, and Italian-speaking regions"
         ]
       },
       {
         "title": "AI Automation in Switzerland: Key Market Trends",
         "blocks": [
-          "SME AI adoption: 22% → 34% in one year (2024–2025). Switzerland's fastest-ever single-year increase in SME technology adoption. (AXA Switzerland SME Labour Market Study 2025)"
-        ]
-      },
-      {
-        "title": "34% of Swiss SMEs use AI for work step automation — up from 23%. (AXA Switzerland, 2025)",
-        "blocks": [
-          "47% of Swiss individuals use generative AI — 2nd highest in non-EU Europe after Norway. (Eurostat 2025 individuals survey) Top use cases: translation (52%) and correspondence (47%). The quadrilingual business reality drives specific AI demand. (AXA Switzerland) Switzerland's revDSG (in force September 2023) aligns data protection standards with EU GDPR — requiring the same privacy-by-design approach that Kubera AI builds as standard."
-        ]
-      },
-      {
-        "title": "AI Automation vs. Hiring Additional Staff",
-        "blocks": [
-          "TaskHiring a Staff MemberAI AutomationLead qualificationNew hire; weeks of onboardingAutomated within daysQuadrilingual communicationRequires 4-language-capable staffAI handles DE/FR/IT/EN nativelyCRM updatesRelies on rep discipline100% consistent, real-timeWeekly reporting2–4 hours manualDelivered automaticallyCustomer support (routine)Full-time hireAI handles 60–80% of volume 24/7Translation overheadHours per weekEliminated with AI-native multilingualCostCHF 80,000–150,000/yearFrom €1,800 setup + €350/monthOnboarding time4–12 weeks2–4 weeks to go liveAvailabilityBusiness hours24/7/365"
-        ]
-      },
-      {
-        "title": "Manual Process vs. AI Automation: What Changes",
-        "blocks": [
-          "ProcessManualWith AI AutomationGerman-speaking lead from Zurich arrivesManual CRM entry, rep assignmentInstant capture, German-language acknowledgment sentFrench-speaking lead from Geneva arrivesDifferent process, possibly different repSame system, switches to French automaticallyItalian-speaking lead from Ticino arrivesDepends on who's availableAI responds in Italian, CRM record createdWeekly management reportManual aggregation in ExcelAuto-generated in correct language, deliveredPost-trade-show follow-upSome contacts followed up, most notAutomated sequence for every contactClient asks standard questionStaff responds within hoursAI responds in seconds in client's language"
+          "SME AI adoption: 22% → 34% in one year (2024–2025). Switzerland's fastest-ever single-year increase in SME technology adoption. (AXA Switzerland SME Labour Market Study 2025) 34% of Swiss SMEs use AI for work step automation — up from 23%. (AXA Switzerland, 2025) 47% of Swiss individuals use generative AI — 2nd highest in non-EU Europe after Norway. (Eurostat 2025 individuals survey) Top use cases: translation (52%) and correspondence (47%). The quadrilingual business reality drives specific AI demand. (AXA Switzerland) Switzerland's revDSG (in force September 2023) aligns data protection standards with EU GDPR — requiring the same privacy-by-design approach that Kubera AI builds as standard.",
+          "AI Automation vs. Hiring Additional Staff TaskHiring a Staff MemberAI AutomationLead qualificationNew hire; weeks of onboardingAutomated within daysQuadrilingual communicationRequires 4-language-capable staffAI handles DE/FR/IT/EN nativelyCRM updatesRelies on rep discipline100% consistent, real-timeWeekly reporting2–4 hours manualDelivered automaticallyCustomer support (routine)Full-time hireAI handles 60–80% of volume 24/7Translation overheadHours per weekEliminated with AI-native multilingualCostCHF 80,000–150,000/yearFrom €1,800 setup + €350/monthOnboarding time4–12 weeks2–4 weeks to go liveAvailabilityBusiness hours24/7/365",
+          "Manual Process vs. AI Automation: What Changes ProcessManualWith AI AutomationGerman-speaking lead from Zurich arrivesManual CRM entry, rep assignmentInstant capture, German-language acknowledgment sentFrench-speaking lead from Geneva arrivesDifferent process, possibly different repSame system, switches to French automaticallyItalian-speaking lead from Ticino arrivesDepends on who's availableAI responds in Italian, CRM record createdWeekly management reportManual aggregation in ExcelAuto-generated in correct language, deliveredPost-trade-show follow-upSome contacts followed up, most notAutomated sequence for every contactClient asks standard questionStaff responds within hoursAI responds in seconds in client's language"
         ]
       },
       {
         "title": "AI Automation Opportunities in Switzerland",
-        "blocks": []
-      },
-      {
-        "title": "Switzerland's specific market characteristics create high-value automation opportunities:",
         "blocks": [
-          "Quadrilingual AI assistants (DE/FR/IT/EN) — the most Switzerland-specific automation need; no other European country has quite this language complexity at SME level Financial services automation — Zurich's banking and wealth management ecosystem: lead qualification, client onboarding, compliance document workflows Pharmaceutical and biotech automation — Basel's life sciences cluster: partner communications, trial coordination, regulatory documentation workflows Professional services intake — Geneva's international organizations, consulting firms, and legal community"
+          "Switzerland's specific market characteristics create high-value automation opportunities:",
+          "Quadrilingual AI assistants (DE/FR/IT/EN) — the most Switzerland-specific automation need; no other European country has quite this language complexity at SME level Financial services automation — Zurich's banking and wealth management ecosystem: lead qualification, client onboarding, compliance document workflows Pharmaceutical and biotech automation — Basel's life sciences cluster: partner communications, trial coordination, regulatory documentation workflows Professional services intake — Geneva's international organizations, consulting firms, and legal community Watchmaking and luxury goods — client communication automation, international buyer management CRM automation integrated with Abacus, Bexio, Sage Switzerland, HubSpot, Salesforce E-commerce automation for Swiss premium brands selling internationally"
         ]
-      },
-      {
-        "title": "Watchmaking and luxury goods — client communication automation, international buyer management",
-        "blocks": []
-      },
-      {
-        "title": "CRM automation integrated with Abacus, Bexio, Sage Switzerland, HubSpot, Salesforce",
-        "blocks": []
-      },
-      {
-        "title": "E-commerce automation for Swiss premium brands selling internationally",
-        "blocks": []
       },
       {
         "title": "Relevant Industries",
-        "blocks": []
-      },
-      {
-        "title": "Financial Services & Private Banking (Zurich, Geneva)",
         "blocks": [
-          "Switzerland's banking heritage. Wealth management firms, private banks, insurance companies: lead qualification (with compliance awareness), client onboarding automation, multilingual client communication."
-        ]
-      },
-      {
-        "title": "Pharmaceutical & Life Sciences (Basel, Zug, Zurich)",
-        "blocks": [
-          "Novartis, Roche, and their ecosystems. Partner communication automation, regulatory document management, conference follow-up systems."
-        ]
-      },
-      {
-        "title": "Professional Services — Legal, Tax, Consulting (Zurich, Geneva, Basel)",
-        "blocks": [
-          "Swiss fiduciary firms, law offices, management consultancies: client intake automation, scheduling, document workflows, multilingual client communication."
-        ]
-      },
-      {
-        "title": "Luxury & Watchmaking (Geneva, Lausanne, Jura, Neuchâtel)",
-        "blocks": [
-          "Rolex, Patek Philippe, and the broader horological industry. International buyer communication, VIP client management, multilingual correspondence automation."
-        ]
-      },
-      {
-        "title": "Technology & SaaS (Zurich — Silicon Valley of Europe)",
-        "blocks": [
-          "Zurich's dense tech ecosystem. Onboarding automation, trial nurturing, multilingual support."
-        ]
-      },
-      {
-        "title": "Tourism & Hospitality (Zurich, Geneva, Alps resorts)",
-        "blocks": [
-          "Swiss luxury hospitality. International guest communication, booking automation, multilingual WhatsApp and email workflows."
-        ]
-      },
-      {
-        "title": "Medtech & Diagnostics (Zürich, Basel)",
-        "blocks": [
-          "Medtech SMEs in Switzerland's health corridor: international partner communication, regulatory document workflows."
+          "Financial Services & Private Banking (Zurich, Geneva) Switzerland's banking heritage. Wealth management firms, private banks, insurance companies: lead qualification (with compliance awareness), client onboarding automation, multilingual client communication. Pharmaceutical & Life Sciences (Basel, Zug, Zurich) Novartis, Roche, and their ecosystems. Partner communication automation, regulatory document management, conference follow-up systems. Professional Services — Legal, Tax, Consulting (Zurich, Geneva, Basel) Swiss fiduciary firms, law offices, management consultancies: client intake automation, scheduling, document workflows, multilingual client communication. Luxury & Watchmaking (Geneva, Lausanne, Jura, Neuchâtel) Rolex, Patek Philippe, and the broader horological industry. International buyer communication, VIP client management, multilingual correspondence automation. Technology & SaaS (Zurich — Silicon Valley of Europe) Zurich's dense tech ecosystem. Onboarding automation, trial nurturing, multilingual support. Tourism & Hospitality (Zurich, Geneva, Alps resorts) Swiss luxury hospitality. International guest communication, booking automation, multilingual WhatsApp and email workflows. Medtech & Diagnostics (Zürich, Basel) Medtech SMEs in Switzerland's health corridor: international partner communication, regulatory document workflows."
         ]
       },
       {
         "title": "Kubera AI Solutions for the Swiss Market",
-        "blocks": []
-      },
-      {
-        "title": "Quadrilingual AI Assistant (DE/FR/IT/EN)",
         "blocks": [
-          "Switzerland's most specific automation need. An AI assistant that communicates natively in German, French, Italian, and English — switching based on client preference. Handles qualification, support, scheduling, and follow-up across all four languages simultaneously."
-        ]
-      },
-      {
-        "title": "CRM Automation (Swiss-stack compatible)",
-        "blocks": [
-          "Integrate with Abacus, Bexio, Sage Switzerland, HubSpot, Salesforce, or Microsoft Dynamics. Automated lead capture, enrichment, CRM records, follow-up sequences — in the correct language."
-        ]
-      },
-      {
-        "title": "Financial Services Automation",
-        "blocks": [
-          "For Swiss fiduciary, wealth management, and financial services: GDPR/revDSG-compliant client intake, document collection, onboarding workflows — designed with Swiss financial sector sensitivities."
-        ]
-      },
-      {
-        "title": "Professional Services Automation",
-        "blocks": [
-          "Automated scheduling, document request sequences, client onboarding, and follow-up — in German, French, or Italian based on the client's region."
-        ]
-      },
-      {
-        "title": "Lead Generation System (GPT-NTI)",
-        "blocks": [
-          "A complete lead capture system available in Swiss German, French, and Italian — with CRM integration and automated multilingual follow-up."
-        ]
-      },
-      {
-        "title": "Reporting & Analytics Automation",
-        "blocks": [
-          "Automated weekly management reports in the language appropriate for each business region. Replace the manual Excel aggregation cycle."
+          "Quadrilingual AI Assistant (DE/FR/IT/EN) Switzerland's most specific automation need. An AI assistant that communicates natively in German, French, Italian, and English — switching based on client preference. Handles qualification, support, scheduling, and follow-up across all four languages simultaneously. CRM Automation (Swiss-stack compatible) Integrate with Abacus, Bexio, Sage Switzerland, HubSpot, Salesforce, or Microsoft Dynamics. Automated lead capture, enrichment, CRM records, follow-up sequences — in the correct language. Financial Services Automation For Swiss fiduciary, wealth management, and financial services: GDPR/revDSG-compliant client intake, document collection, onboarding workflows — designed with Swiss financial sector sensitivities. Professional Services Automation Automated scheduling, document request sequences, client onboarding, and follow-up — in German, French, or Italian based on the client's region. Lead Generation System (GPT-NTI) A complete lead capture system available in Swiss German, French, and Italian — with CRM integration and automated multilingual follow-up. Reporting & Analytics Automation Automated weekly management reports in the language appropriate for each business region. Replace the manual Excel aggregation cycle."
         ]
       },
       {
         "title": "Example Automation Scenarios",
-        "blocks": []
-      },
-      {
-        "title": "Scenario 1: Zurich Financial Advisory Firm",
         "blocks": [
-          "A 15-person independent wealth management firm in Zurich serves Swiss German, French, and international English-speaking clients. Intake of new client inquiries is managed manually — email reviewed, qualification questions asked by phone, calendar coordination by assistant. Kubera AI implements a multilingual qualification chatbot, CRM integration with Salesforce, and an automated document collection sequence (revDSG-compliant). Senior advisors focus on client relationships, not intake admin."
-        ]
-      },
-      {
-        "title": "Scenario 2: Basel Pharmaceutical Supplier",
-        "blocks": [
-          "A specialty chemicals supplier to Basel's pharma cluster manages partner communications and documentation requests across 30+ client companies. Follow-up after product inquiries is inconsistent. Kubera AI automates the inquiry-to-quotation workflow: acknowledgment, categorization, rep assignment, and follow-up reminders in German and English."
-        ]
-      },
-      {
-        "title": "Scenario 3: Geneva International Consulting Firm",
-        "blocks": [
-          "A management consultancy near Geneva's Place des Nations serves clients from international organizations, NGOs, and multinationals — communication in English and French. Kubera AI builds a bilingual AI assistant for their website and email, an automated qualification flow, and HubSpot integration. The team moves from managing intake to focusing on project delivery."
-        ]
-      },
-      {
-        "title": "Scenario 4: Swiss E-commerce Brand (Luxury Outdoor)",
-        "blocks": [
-          "A Zurich-based premium outdoor gear brand sells across Switzerland, Germany, Austria, and France. Customer support receives 300+ messages per week — 65% are shipping, returns, and product inquiries. Kubera AI deploys a quadrilingual AI support assistant. Standard inquiries in German, French, Italian, and English handled automatically; complex cases escalated."
-        ]
-      },
-      {
-        "title": "Scenario 5: Ticino Hotel & Spa (Italian Switzerland)",
-        "blocks": [
-          "A luxury hotel in Ticino receives guests from Switzerland, Italy, and Germany. Reception manages inquiries in three languages. Kubera AI deploys a multilingual WhatsApp AI assistant that handles standard guest communication in Italian, German, and English — escalating to the human team only for special requests."
+          "Scenario 1: Zurich Financial Advisory Firm A 15-person independent wealth management firm in Zurich serves Swiss German, French, and international English-speaking clients. Intake of new client inquiries is managed manually — email reviewed, qualification questions asked by phone, calendar coordination by assistant. Kubera AI implements a multilingual qualification chatbot, CRM integration with Salesforce, and an automated document collection sequence (revDSG-compliant). Senior advisors focus on client relationships, not intake admin. Scenario 2: Basel Pharmaceutical Supplier A specialty chemicals supplier to Basel's pharma cluster manages partner communications and documentation requests across 30+ client companies. Follow-up after product inquiries is inconsistent. Kubera AI automates the inquiry-to-quotation workflow: acknowledgment, categorization, rep assignment, and follow-up reminders in German and English. Scenario 3: Geneva International Consulting Firm A management consultancy near Geneva's Place des Nations serves clients from international organizations, NGOs, and multinationals — communication in English and French. Kubera AI builds a bilingual AI assistant for their website and email, an automated qualification flow, and HubSpot integration. The team moves from managing intake to focusing on project delivery. Scenario 4: Swiss E-commerce Brand (Luxury Outdoor) A Zurich-based premium outdoor gear brand sells across Switzerland, Germany, Austria, and France. Customer support receives 300+ messages per week — 65% are shipping, returns, and product inquiries. Kubera AI deploys a quadrilingual AI support assistant. Standard inquiries in German, French, Italian, and English handled automatically; complex cases escalated. Scenario 5: Ticino Hotel & Spa (Italian Switzerland) A luxury hotel in Ticino receives guests from Switzerland, Italy, and Germany. Reception manages inquiries in three languages. Kubera AI deploys a multilingual WhatsApp AI assistant that handles standard guest communication in Italian, German, and English — escalating to the human team only for special requests."
         ]
       },
       {
@@ -2722,214 +1265,49 @@ export const generatedGeoPages = [
       },
       {
         "title": "Why Irish Businesses Are Investing in AI Automation Now",
-        "blocks": []
-      },
-      {
-        "title": "Ireland's own official statistics make the case compelling:",
         "blocks": [
+          "Ireland's own official statistics make the case compelling:",
           "AI adoption tripled in two years: 8% (2023) → 20% (2025). CSO's Information Society Statistics Enterprises 2025 (published February 2026) confirms this trajectory — one of the fastest adoption curves in Europe. Large enterprises adopt at 58% vs. small enterprises at 17%. The productivity gap between large and small businesses in Ireland is widening. Irish SMEs that automate now close this gap rather than fall further behind. (CSO 2025) Ireland is on par with EU average (20%) but behind EU leaders Denmark (42%) and Finland (38%). The competitive standard is moving — Irish SMEs need to move with it. (CSO Business in Ireland 2025, March 2026) Ireland leads EMEA in AI strategy integration — one in four Irish firms has a Chief AI Officer, per Deloitte research (October 2025). At enterprise level, Ireland is an AI leader. The opportunity for SMEs to match this standard is significant. Ireland appointed its first-ever Minister for Artificial Intelligence in January 2025 — signaling government-level commitment to AI adoption as national economic policy. Regulatory and funding support for AI adoption is actively developing."
         ]
       },
       {
         "title": "Why Irish Businesses Choose Kubera AI",
         "blocks": [
-          "Irish companies need a practical automation partner who can move fast, deliver results in weeks (not months), and build systems that scale with ambitious growth trajectories."
+          "Irish companies need a practical automation partner who can move fast, deliver results in weeks (not months), and build systems that scale with ambitious growth trajectories.",
+          "GDPR-compliant by design, EU-based infrastructure English-language first, with multilingual support for international operations Custom workflow architecture — not generic templates Integration with Salesforce, HubSpot, Pipedrive, Shopify, Xero, Sage Ireland, and major Irish business tools SME-focused: systems scaled for 5–200 employees Fast implementation: most projects go live in 2–4 weeks Understanding of Irish business culture: relationship-first, results-oriented"
         ]
-      },
-      {
-        "title": "GDPR-compliant by design, EU-based infrastructure",
-        "blocks": []
-      },
-      {
-        "title": "English-language first, with multilingual support for international operations",
-        "blocks": []
-      },
-      {
-        "title": "Custom workflow architecture — not generic templates",
-        "blocks": [
-          "Integration with Salesforce, HubSpot, Pipedrive, Shopify, Xero, Sage Ireland, and major Irish business tools"
-        ]
-      },
-      {
-        "title": "SME-focused: systems scaled for 5–200 employees",
-        "blocks": []
-      },
-      {
-        "title": "Fast implementation: most projects go live in 2–4 weeks",
-        "blocks": []
-      },
-      {
-        "title": "Understanding of Irish business culture: relationship-first, results-oriented",
-        "blocks": []
       },
       {
         "title": "AI Automation in Ireland: Key Market Trends",
         "blocks": [
-          "AI use by Irish enterprises: 8% (2023) → 20% (2025). A 2.5x increase in two years. (CSO ISSE 2025, February 2026) Large enterprises (58%) vs. small enterprises (17%). The size gap is a competitive threat for Irish SMEs who don't automate. (CSO Business in Ireland 2025) Business administrative processes (7.8%) is the #1 use case for AI in Ireland. This is exactly the workflow automation that Kubera AI delivers. (CSO 2025) Ireland leads EMEA for AI strategy integration at enterprise level. The business culture supports AI adoption — the question is whether SMEs keep pace. (Deloitte, October 2025) Government appointed first Minister for AI in January 2025. Ireland's national AI strategy is actively developing regulatory infrastructure to support responsible AI adoption."
-        ]
-      },
-      {
-        "title": "AI Automation vs. Hiring Additional Staff",
-        "blocks": [
-          "TaskHiring a Staff MemberAI AutomationLead qualificationNew hire; weeks of onboardingAutomated within daysCRM updatesRelies on rep discipline100% consistent, real-timeWeekly reporting2–4 hours manualAuto-generated and deliveredCustomer support (routine)Full-time hire requiredAI handles 60–80% of volume 24/7European market outreachMultilingual staff neededAI assistant in EN/DE/FR/otherFollow-up sequencesDepends on rep memoryTriggered automaticallyCost€35,000–€65,000/yearFrom €1,800 setup + €350/monthOnboarding time4–12 weeks2–4 weeks to go liveAvailabilityBusiness hours24/7/365"
-        ]
-      },
-      {
-        "title": "Manual Process vs. AI Automation: What Changes",
-        "blocks": [
-          "ProcessManualWith AI AutomationNew lead via website contact formManually reviewed, CRM entry, rep callCaptured, enriched, CRM record, rep notified in 90 secondsFollow-up after sales callRep adds to to-do list (sometimes)Automated sequence triggered immediatelyStandard customer support inquiryStaff response within hoursAI responds in seconds, complex cases escalatedWeekly pipeline reportManager manually aggregatesAuto-generated and delivered Monday morningNew client onboardingManual email chain, doc requestsAutomated: welcome, documents, calendar bookingLead goes cold in SalesforceStays cold until noticedRe-engagement sequence triggered automatically"
+          "AI use by Irish enterprises: 8% (2023) → 20% (2025). A 2.5x increase in two years. (CSO ISSE 2025, February 2026) Large enterprises (58%) vs. small enterprises (17%). The size gap is a competitive threat for Irish SMEs who don't automate. (CSO Business in Ireland 2025) Business administrative processes (7.8%) is the #1 use case for AI in Ireland. This is exactly the workflow automation that Kubera AI delivers. (CSO 2025) Ireland leads EMEA for AI strategy integration at enterprise level. The business culture supports AI adoption — the question is whether SMEs keep pace. (Deloitte, October 2025) Government appointed first Minister for AI in January 2025. Ireland's national AI strategy is actively developing regulatory infrastructure to support responsible AI adoption.",
+          "AI Automation vs. Hiring Additional Staff TaskHiring a Staff MemberAI AutomationLead qualificationNew hire; weeks of onboardingAutomated within daysCRM updatesRelies on rep discipline100% consistent, real-timeWeekly reporting2–4 hours manualAuto-generated and deliveredCustomer support (routine)Full-time hire requiredAI handles 60–80% of volume 24/7European market outreachMultilingual staff neededAI assistant in EN/DE/FR/otherFollow-up sequencesDepends on rep memoryTriggered automaticallyCost€35,000–€65,000/yearFrom €1,800 setup + €350/monthOnboarding time4–12 weeks2–4 weeks to go liveAvailabilityBusiness hours24/7/365",
+          "Manual Process vs. AI Automation: What Changes ProcessManualWith AI AutomationNew lead via website contact formManually reviewed, CRM entry, rep callCaptured, enriched, CRM record, rep notified in 90 secondsFollow-up after sales callRep adds to to-do list (sometimes)Automated sequence triggered immediatelyStandard customer support inquiryStaff response within hoursAI responds in seconds, complex cases escalatedWeekly pipeline reportManager manually aggregatesAuto-generated and delivered Monday morningNew client onboardingManual email chain, doc requestsAutomated: welcome, documents, calendar bookingLead goes cold in SalesforceStays cold until noticedRe-engagement sequence triggered automatically"
         ]
       },
       {
         "title": "AI Automation Opportunities in Ireland",
         "blocks": [
-          "Ireland's specific market — English-first, internationally ambitious, tech-savvy, export-oriented — creates clear automation opportunities:"
+          "Ireland's specific market — English-first, internationally ambitious, tech-savvy, export-oriented — creates clear automation opportunities:",
+          "CRM automation integrated with Salesforce, HubSpot, Pipedrive, Xero, Sage Ireland Lead generation and qualification systems for professional services, technology, and agri-food companies scaling through digital channels Customer support automation for Irish companies serving customers across Europe Multilingual AI assistants for Irish exporters serving French, German, and other European markets Professional services intake automation — accounting firms, law firms, consulting practices in Dublin and Cork E-commerce automation for Irish brands selling across Europe and globally Reporting automation for management teams currently spending hours on manual data aggregation"
         ]
-      },
-      {
-        "title": "CRM automation integrated with Salesforce, HubSpot, Pipedrive, Xero, Sage Ireland",
-        "blocks": [
-          "Lead generation and qualification systems for professional services, technology, and agri-food companies scaling through digital channels"
-        ]
-      },
-      {
-        "title": "Customer support automation for Irish companies serving customers across Europe",
-        "blocks": [
-          "Multilingual AI assistants for Irish exporters serving French, German, and other European markets Professional services intake automation — accounting firms, law firms, consulting practices in Dublin and Cork"
-        ]
-      },
-      {
-        "title": "E-commerce automation for Irish brands selling across Europe and globally",
-        "blocks": []
-      },
-      {
-        "title": "Reporting automation for management teams currently spending hours on manual data aggregation",
-        "blocks": []
       },
       {
         "title": "Relevant Industries",
-        "blocks": []
-      },
-      {
-        "title": "Technology & SaaS (Dublin Silicon Docks, Cork, Galway)",
         "blocks": [
-          "Ireland's technology sector spans indigenous Irish startups and subsidiaries of global tech companies. Onboarding automation, trial nurturing, churn prevention, multilingual support for European expansion."
-        ]
-      },
-      {
-        "title": "Professional Services — Accounting, Legal, Consulting (Dublin, Cork, Limerick)",
-        "blocks": [
-          "Ireland's dense professional services sector. Client intake automation, scheduling, document workflows, GDPR-compliant data collection."
-        ]
-      },
-      {
-        "title": "Agri-food & Beverage (nationwide)",
-        "blocks": [
-          "Ireland's world-famous dairy, meat, and beverage exports. International distributor communication, trade show follow-up, export lead management."
-        ]
-      },
-      {
-        "title": "Financial Services & Fintech (Dublin IFSC)",
-        "blocks": [
-          "Dublin's International Financial Services Centre and growing fintech ecosystem. Lead qualification, compliance-aware client onboarding, automated reporting."
-        ]
-      },
-      {
-        "title": "Tourism & Hospitality (Dublin, Galway, Kerry, West Coast)",
-        "blocks": [
-          "Ireland receives millions of international visitors annually. Hotels, experiences, tour operators: booking automation, multilingual guest communication, upsell sequences."
-        ]
-      },
-      {
-        "title": "Real Estate (Dublin, Cork, Galway)",
-        "blocks": [
-          "Ireland's active property market. Buyer lead management, inquiry automation, viewing scheduling, follow-up sequences."
-        ]
-      },
-      {
-        "title": "Construction & Property Development",
-        "blocks": [
-          "Lead qualification, project inquiry management, contractor communications."
-        ]
-      },
-      {
-        "title": "Education Technology",
-        "blocks": [
-          "Ireland has a growing EdTech sector. Student enrollment automation, lead nurturing, multilingual support."
+          "Technology & SaaS (Dublin Silicon Docks, Cork, Galway) Ireland's technology sector spans indigenous Irish startups and subsidiaries of global tech companies. Onboarding automation, trial nurturing, churn prevention, multilingual support for European expansion. Professional Services — Accounting, Legal, Consulting (Dublin, Cork, Limerick) Ireland's dense professional services sector. Client intake automation, scheduling, document workflows, GDPR-compliant data collection. Agri-food & Beverage (nationwide) Ireland's world-famous dairy, meat, and beverage exports. International distributor communication, trade show follow-up, export lead management. Financial Services & Fintech (Dublin IFSC) Dublin's International Financial Services Centre and growing fintech ecosystem. Lead qualification, compliance-aware client onboarding, automated reporting. Tourism & Hospitality (Dublin, Galway, Kerry, West Coast) Ireland receives millions of international visitors annually. Hotels, experiences, tour operators: booking automation, multilingual guest communication, upsell sequences. Real Estate (Dublin, Cork, Galway) Ireland's active property market. Buyer lead management, inquiry automation, viewing scheduling, follow-up sequences. Construction & Property Development Lead qualification, project inquiry management, contractor communications. Education Technology Ireland has a growing EdTech sector. Student enrollment automation, lead nurturing, multilingual support."
         ]
       },
       {
         "title": "Kubera AI Solutions for the Irish Market",
-        "blocks": []
-      },
-      {
-        "title": "CRM Automation",
         "blocks": [
-          "Connect your CRM (Salesforce, HubSpot, Pipedrive, or custom) to automated workflows. Lead capture, enrichment, assignment, and follow-up — fully automatic. Deals that go silent trigger re-engagement. Pipeline data stays accurate without manual effort."
-        ]
-      },
-      {
-        "title": "AI Sales Assistant",
-        "blocks": [
-          "An English-language AI assistant (with multilingual capability for European market expansion) handling first-touch lead qualification, information requests, and appointment booking — passing warm leads to your team with full context."
-        ]
-      },
-      {
-        "title": "Customer Support Automation",
-        "blocks": [
-          "AI-powered support handling up to 70% of routine inquiries without human intervention. Escalation routes complex issues to the right person with full conversation context."
-        ]
-      },
-      {
-        "title": "Lead Generation System (GPT-NTI)",
-        "blocks": [
-          "A complete lead capture and nurturing system: landing page, AI chatbot, CRM integration, and automated multichannel follow-up. For Irish companies wanting to convert digital traffic into qualified pipeline."
-        ]
-      },
-      {
-        "title": "Professional Services Automation",
-        "blocks": [
-          "For Irish accounting firms, law offices, and consulting practices: automated client intake, GDPR-compliant data collection, appointment scheduling, document request sequences, and reminder notifications."
-        ]
-      },
-      {
-        "title": "Reporting & Analytics Automation",
-        "blocks": [
-          "Replace manual reporting with automated weekly management reports. Pull data from Salesforce, HubSpot, Google Ads, and business tools — delivered on schedule."
+          "CRM Automation Connect your CRM (Salesforce, HubSpot, Pipedrive, or custom) to automated workflows. Lead capture, enrichment, assignment, and follow-up — fully automatic. Deals that go silent trigger re-engagement. Pipeline data stays accurate without manual effort. AI Sales Assistant An English-language AI assistant (with multilingual capability for European market expansion) handling first-touch lead qualification, information requests, and appointment booking — passing warm leads to your team with full context. Customer Support Automation AI-powered support handling up to 70% of routine inquiries without human intervention. Escalation routes complex issues to the right person with full conversation context. Lead Generation System (GPT-NTI) A complete lead capture and nurturing system: landing page, AI chatbot, CRM integration, and automated multichannel follow-up. For Irish companies wanting to convert digital traffic into qualified pipeline. Professional Services Automation For Irish accounting firms, law offices, and consulting practices: automated client intake, GDPR-compliant data collection, appointment scheduling, document request sequences, and reminder notifications. Reporting & Analytics Automation Replace manual reporting with automated weekly management reports. Pull data from Salesforce, HubSpot, Google Ads, and business tools — delivered on schedule."
         ]
       },
       {
         "title": "Example Automation Scenarios",
-        "blocks": []
-      },
-      {
-        "title": "Scenario 1: Dublin Professional Services Firm",
         "blocks": [
-          "A 20-person Dublin accountancy practice generates leads through referrals and online. Initial inquiry handling — answering questions, scheduling discovery calls, sending onboarding documents — takes significant admin time. Kubera AI builds an automated intake system: AI chatbot for initial qualification, CRM integration with HubSpot, automated document collection sequence, and calendar booking. The team focuses on client work, not intake management."
-        ]
-      },
-      {
-        "title": "Scenario 2: Cork Agri-food Exporter",
-        "blocks": [
-          "A Cork-based premium dairy brand exports to Germany, France, and Belgium. European distributor inquiries come in English, German, and French — managed manually by the export manager. Kubera AI deploys a multilingual AI assistant that handles initial distributor inquiry in the appropriate language, sends correct product and pricing information, and creates a CRM record. The export manager focuses on relationships and deal closure."
-        ]
-      },
-      {
-        "title": "Scenario 3: Dublin SaaS Startup",
-        "blocks": [
-          "A B2B SaaS company in Dublin's tech ecosystem generates trial signups from LinkedIn and conference leads. No structured nurturing exists — most trials expire without meaningful sales engagement. Kubera AI builds a behavior-triggered sequence: English welcome, in-app activity-based emails, Slack alert when a trial shows high engagement, automated WhatsApp message at day 10. Trial-to-paid conversion improves significantly."
-        ]
-      },
-      {
-        "title": "Scenario 4: Galway Hospitality Group",
-        "blocks": [
-          "A boutique hotel group in Galway and the West of Ireland serves 70% international guests (US, UK, European). Guest communication via email and WhatsApp is managed by front-desk staff. Kubera AI deploys a multilingual WhatsApp AI assistant handling standard pre-arrival and in-stay inquiries automatically."
-        ]
-      },
-      {
-        "title": "Scenario 5: Dublin Law Firm",
-        "blocks": [
-          "A commercial law firm with 15 solicitors receives inquiries from UK, Irish, and European clients. Intake is manual — email reviewed, initial consultation scheduled by the practice manager. Kubera AI automates the intake flow: qualification chatbot, CRM integration, automated document request, and calendar booking. Solicitors focus on billable work; the practice manager on client relationships."
+          "Scenario 1: Dublin Professional Services Firm A 20-person Dublin accountancy practice generates leads through referrals and online. Initial inquiry handling — answering questions, scheduling discovery calls, sending onboarding documents — takes significant admin time. Kubera AI builds an automated intake system: AI chatbot for initial qualification, CRM integration with HubSpot, automated document collection sequence, and calendar booking. The team focuses on client work, not intake management. Scenario 2: Cork Agri-food Exporter A Cork-based premium dairy brand exports to Germany, France, and Belgium. European distributor inquiries come in English, German, and French — managed manually by the export manager. Kubera AI deploys a multilingual AI assistant that handles initial distributor inquiry in the appropriate language, sends correct product and pricing information, and creates a CRM record. The export manager focuses on relationships and deal closure. Scenario 3: Dublin SaaS Startup A B2B SaaS company in Dublin's tech ecosystem generates trial signups from LinkedIn and conference leads. No structured nurturing exists — most trials expire without meaningful sales engagement. Kubera AI builds a behavior-triggered sequence: English welcome, in-app activity-based emails, Slack alert when a trial shows high engagement, automated WhatsApp message at day 10. Trial-to-paid conversion improves significantly. Scenario 4: Galway Hospitality Group A boutique hotel group in Galway and the West of Ireland serves 70% international guests (US, UK, European). Guest communication via email and WhatsApp is managed by front-desk staff. Kubera AI deploys a multilingual WhatsApp AI assistant handling standard pre-arrival and in-stay inquiries automatically. Scenario 5: Dublin Law Firm A commercial law firm with 15 solicitors receives inquiries from UK, Irish, and European clients. Intake is manual — email reviewed, initial consultation scheduled by the practice manager. Kubera AI automates the intake flow: qualification chatbot, CRM integration, automated document request, and calendar booking. Solicitors focus on billable work; the practice manager on client relationships."
         ]
       },
       {
@@ -3007,214 +1385,49 @@ export const generatedGeoPages = [
       },
       {
         "title": "Why Cypriot Businesses Are Investing in AI Automation Now",
-        "blocks": []
-      },
-      {
-        "title": "Cyprus's data creates a uniquely compelling case for automation investment:",
         "blocks": [
+          "Cyprus's data creates a uniquely compelling case for automation investment:",
           "9.27% enterprise AI adoption — near EU bottom. (Eurostat / Cyprus Statistical Service, 2025) Companies that automate now operate more efficiently than 90% of their Cypriot business competitors. First-mover advantage in Cyprus is exceptional. 44.2% of Cypriots use generative AI personally — 3rd highest in EU. (Eurostat 2025) The workforce is ready. The culture is comfortable with AI. The missing piece is business implementation — which Kubera AI provides. 86% of Cypriot SMEs have yet to integrate AI. The addressable opportunity is enormous. (AI for Business Cyprus, 2025) €300 million in estimated untapped market value from AI automation across the Cypriot business economy. (AI for Business Cyprus, 2025) EU Digital Decade 2025 Cyprus Country Report specifically calls for sustained efforts on SME AI adoption as a national digital priority. Government-level support for AI adoption is building."
         ]
       },
       {
         "title": "Why Cypriot Businesses Choose Kubera AI",
         "blocks": [
-          "Cypriot companies need an automation partner who understands the island's specific context — the international business community, the multilingual client base, the tourism-heavy economy, and the fact that most Cypriot businesses are small companies with limited technical capacity."
+          "Cypriot companies need an automation partner who understands the island's specific context — the international business community, the multilingual client base, the tourism-heavy economy, and the fact that most Cypriot businesses are small companies with limited technical capacity.",
+          "GDPR-compliant by design, EU-based infrastructure Greek and English language support (plus Russian, Arabic, and other languages for international operations) Custom workflow architecture — not generic templates Integration with Cypriot business tools: SOFTONE, EasyPay, HubSpot, Salesforce, Pipedrive SME-focused: systems scaled for 5–150 employees Fast implementation: 2–4 weeks to go live Understanding of Cyprus's international business and tourism context"
         ]
-      },
-      {
-        "title": "GDPR-compliant by design, EU-based infrastructure",
-        "blocks": [
-          "Greek and English language support (plus Russian, Arabic, and other languages for international operations)"
-        ]
-      },
-      {
-        "title": "Custom workflow architecture — not generic templates",
-        "blocks": []
-      },
-      {
-        "title": "Integration with Cypriot business tools: SOFTONE, EasyPay, HubSpot, Salesforce, Pipedrive",
-        "blocks": []
-      },
-      {
-        "title": "SME-focused: systems scaled for 5–150 employees",
-        "blocks": []
-      },
-      {
-        "title": "Fast implementation: 2–4 weeks to go live",
-        "blocks": []
-      },
-      {
-        "title": "Understanding of Cyprus's international business and tourism context",
-        "blocks": []
       },
       {
         "title": "AI Automation in Cyprus: Key Market Trends",
         "blocks": [
-          "9.27% enterprise AI adoption — near EU bottom, creating extraordinary first-mover opportunity. (Eurostat / Cyprus Statistical Service, 2025) 44.2% personal AI adoption — 3rd highest in EU. A ready workforce waiting for business implementation. (Eurostat 2025) 76.5% youth AI adoption — highest in EU. Cyprus's next generation of business leaders and employees are already AI-native. (Eurostat 2025) 86% of Cypriot SMEs have yet to integrate AI — the competitive window is wide open. (AI for Business Cyprus) EU Digital Decade 2025 Cyprus Report identifies SME AI adoption as a specific national priority, signaling regulatory and funding support ahead. AI Factory Antenna established in Cyprus as part of EU EuroHPC programme — national AI infrastructure investment underway."
-        ]
-      },
-      {
-        "title": "AI Automation vs. Hiring Additional Staff",
-        "blocks": [
-          "TaskHiring a Staff MemberAI AutomationLead qualificationNew hire; weeks of onboardingAutomated within daysCRM updatesRelies on rep discipline100% consistent, real-timeMultilingual client communicationRequires GR/EN/RU/AR staffAI handles all languages nativelyWeekly reporting2–4 hours manualDelivered automaticallyCustomer support (routine)Full-time hireAI handles 60–80% of volume 24/7Seasonal demand spikesTemporary hiring or overtimeAutomation handles volume without headcountCost€15,000–€35,000/yearFrom €1,800 setup + €350/monthOnboarding time4–12 weeks2–4 weeks to go liveAvailabilityBusiness hours24/7/365"
-        ]
-      },
-      {
-        "title": "Manual Process vs. AI Automation: What Changes",
-        "blocks": [
-          "ProcessManualWith AI AutomationInternational buyer inquiry arrivesStaff response next day (if available)AI responds in buyer's language instantlyTourist asks about services via WhatsAppReception responds manuallyAI handles instantly, 24 hours a dayPost-property-viewing follow-upAgent remembers (sometimes)Automated sequence triggered for every viewingWeekly revenue reportManual aggregationAuto-generated and deliveredNew client onboardingManual emails, document requestsAutomated: welcome, documents, calendarLead goes cold in CRMStays cold indefinitelyRe-engagement triggered automatically"
+          "9.27% enterprise AI adoption — near EU bottom, creating extraordinary first-mover opportunity. (Eurostat / Cyprus Statistical Service, 2025) 44.2% personal AI adoption — 3rd highest in EU. A ready workforce waiting for business implementation. (Eurostat 2025) 76.5% youth AI adoption — highest in EU. Cyprus's next generation of business leaders and employees are already AI-native. (Eurostat 2025) 86% of Cypriot SMEs have yet to integrate AI — the competitive window is wide open. (AI for Business Cyprus) EU Digital Decade 2025 Cyprus Report identifies SME AI adoption as a specific national priority, signaling regulatory and funding support ahead. AI Factory Antenna established in Cyprus as part of EU EuroHPC programme — national AI infrastructure investment underway.",
+          "AI Automation vs. Hiring Additional Staff TaskHiring a Staff MemberAI AutomationLead qualificationNew hire; weeks of onboardingAutomated within daysCRM updatesRelies on rep discipline100% consistent, real-timeMultilingual client communicationRequires GR/EN/RU/AR staffAI handles all languages nativelyWeekly reporting2–4 hours manualDelivered automaticallyCustomer support (routine)Full-time hireAI handles 60–80% of volume 24/7Seasonal demand spikesTemporary hiring or overtimeAutomation handles volume without headcountCost€15,000–€35,000/yearFrom €1,800 setup + €350/monthOnboarding time4–12 weeks2–4 weeks to go liveAvailabilityBusiness hours24/7/365",
+          "Manual Process vs. AI Automation: What Changes ProcessManualWith AI AutomationInternational buyer inquiry arrivesStaff response next day (if available)AI responds in buyer's language instantlyTourist asks about services via WhatsAppReception responds manuallyAI handles instantly, 24 hours a dayPost-property-viewing follow-upAgent remembers (sometimes)Automated sequence triggered for every viewingWeekly revenue reportManual aggregationAuto-generated and deliveredNew client onboardingManual emails, document requestsAutomated: welcome, documents, calendarLead goes cold in CRMStays cold indefinitelyRe-engagement triggered automatically"
         ]
       },
       {
         "title": "AI Automation Opportunities in Cyprus",
-        "blocks": []
-      },
-      {
-        "title": "Cyprus's specific market characteristics create high-value automation targets:",
         "blocks": [
-          "Tourism automation — the single highest-volume use case for Cypriot businesses; hotels, resorts, experience operators serving international guests in multiple languages Real estate lead management — Limassol and Paphos international buyer funnels for Russian, UK, Israeli, and European buyers Multilingual AI assistants (GR/EN/RU/AR/DE) for businesses serving Cyprus's international community"
+          "Cyprus's specific market characteristics create high-value automation targets:",
+          "Tourism automation — the single highest-volume use case for Cypriot businesses; hotels, resorts, experience operators serving international guests in multiple languages Real estate lead management — Limassol and Paphos international buyer funnels for Russian, UK, Israeli, and European buyers Multilingual AI assistants (GR/EN/RU/AR/DE) for businesses serving Cyprus's international community Financial services and wealth management — Limassol's international financial services cluster Shipping and maritime — Limassol's significant shipping sector Professional services intake — Cypriot law firms, accountants, corporate services companies CRM automation integrated with SOFTONE, HubSpot, Salesforce, Pipedrive"
         ]
-      },
-      {
-        "title": "Financial services and wealth management — Limassol's international financial services cluster",
-        "blocks": []
-      },
-      {
-        "title": "Shipping and maritime — Limassol's significant shipping sector",
-        "blocks": []
-      },
-      {
-        "title": "Professional services intake — Cypriot law firms, accountants, corporate services companies",
-        "blocks": []
-      },
-      {
-        "title": "CRM automation integrated with SOFTONE, HubSpot, Salesforce, Pipedrive",
-        "blocks": []
       },
       {
         "title": "Relevant Industries",
-        "blocks": []
-      },
-      {
-        "title": "Tourism & Hospitality (Limassol, Ayia Napa, Paphos, Larnaca, Protaras)",
         "blocks": [
-          "Cyprus's tourism sector contributes approximately 15% of GDP and is overwhelmingly international. Hotels, resorts, villa operators, tour companies: multilingual WhatsApp automation, booking confirmation, upsell sequences, guest communication, review generation."
-        ]
-      },
-      {
-        "title": "Real Estate (Limassol, Paphos, Larnaca)",
-        "blocks": [
-          "Cyprus attracts international property buyers — Russian, British, Israeli, German, Chinese. Multilingual lead management, automated follow-up, viewing scheduling, international buyer nurturing."
-        ]
-      },
-      {
-        "title": "Financial Services (Limassol — Financial Services Hub)",
-        "blocks": [
-          "Limassol's significant international financial services and wealth management community. Lead qualification, client onboarding, compliance document collection, KYC workflows."
-        ]
-      },
-      {
-        "title": "Shipping & Maritime (Limassol)",
-        "blocks": [
-          "Cyprus is one of Europe's largest ship registries. Shipping companies: operational communication automation, partner updates, documentation workflows."
-        ]
-      },
-      {
-        "title": "Professional Services — Legal, Accounting, Corporate Services (Nicosia, Limassol)",
-        "blocks": [
-          "Cypriot law firms, accounting companies, corporate services providers serving international clients: multilingual intake, document workflows, scheduling."
-        ]
-      },
-      {
-        "title": "Technology & Startups (Nicosia, Limassol)",
-        "blocks": [
-          "Cyprus's growing tech scene, including companies that chose Cyprus for its EU membership and international business environment."
-        ]
-      },
-      {
-        "title": "Retail & E-commerce",
-        "blocks": [
-          "Cypriot retail brands selling domestically and internationally: customer support automation, post-purchase flows, multilingual communication."
+          "Tourism & Hospitality (Limassol, Ayia Napa, Paphos, Larnaca, Protaras) Cyprus's tourism sector contributes approximately 15% of GDP and is overwhelmingly international. Hotels, resorts, villa operators, tour companies: multilingual WhatsApp automation, booking confirmation, upsell sequences, guest communication, review generation. Real Estate (Limassol, Paphos, Larnaca) Cyprus attracts international property buyers — Russian, British, Israeli, German, Chinese. Multilingual lead management, automated follow-up, viewing scheduling, international buyer nurturing. Financial Services (Limassol — Financial Services Hub) Limassol's significant international financial services and wealth management community. Lead qualification, client onboarding, compliance document collection, KYC workflows. Shipping & Maritime (Limassol) Cyprus is one of Europe's largest ship registries. Shipping companies: operational communication automation, partner updates, documentation workflows. Professional Services — Legal, Accounting, Corporate Services (Nicosia, Limassol) Cypriot law firms, accounting companies, corporate services providers serving international clients: multilingual intake, document workflows, scheduling. Technology & Startups (Nicosia, Limassol) Cyprus's growing tech scene, including companies that chose Cyprus for its EU membership and international business environment. Retail & E-commerce Cypriot retail brands selling domestically and internationally: customer support automation, post-purchase flows, multilingual communication."
         ]
       },
       {
         "title": "Kubera AI Solutions for the Cypriot Market",
-        "blocks": []
-      },
-      {
-        "title": "Multilingual AI Assistant (GR/EN/RU/AR/DE/other)",
         "blocks": [
-          "Cyprus's most critical automation need. An AI assistant communicating in Greek, English, Russian, Arabic, and German — essential for businesses serving Cyprus's international community, tourist sector, and real estate market."
-        ]
-      },
-      {
-        "title": "Tourism & Hospitality Automation",
-        "blocks": [
-          "Complete tourism guest lifecycle automation: booking confirmation, pre-arrival information, WhatsApp-first communication, upsell sequences, check-in instructions, post-stay review requests, repeat guest incentives."
-        ]
-      },
-      {
-        "title": "Real Estate Lead Management",
-        "blocks": [
-          "International buyer funnel automation: multilingual first response, qualification questions in buyer's language, CRM record creation, automated follow-up sequences in Greek, English, Russian, and other languages."
-        ]
-      },
-      {
-        "title": "CRM Automation (Cypriot-stack compatible)",
-        "blocks": [
-          "Connect SOFTONE, HubSpot, Salesforce, or Pipedrive to automated workflows. Lead capture, enrichment, CRM records, and follow-up — automatically."
-        ]
-      },
-      {
-        "title": "Financial Services Automation",
-        "blocks": [
-          "GDPR-compliant client intake, KYC document collection, onboarding workflows — designed for Limassol's international financial services context."
-        ]
-      },
-      {
-        "title": "Lead Generation System (GPT-NTI)",
-        "blocks": [
-          "Complete lead capture system: Greek and English landing page, AI chatbot, CRM integration, automated multichannel follow-up."
+          "Multilingual AI Assistant (GR/EN/RU/AR/DE/other) Cyprus's most critical automation need. An AI assistant communicating in Greek, English, Russian, Arabic, and German — essential for businesses serving Cyprus's international community, tourist sector, and real estate market. Tourism & Hospitality Automation Complete tourism guest lifecycle automation: booking confirmation, pre-arrival information, WhatsApp-first communication, upsell sequences, check-in instructions, post-stay review requests, repeat guest incentives. Real Estate Lead Management International buyer funnel automation: multilingual first response, qualification questions in buyer's language, CRM record creation, automated follow-up sequences in Greek, English, Russian, and other languages. CRM Automation (Cypriot-stack compatible) Connect SOFTONE, HubSpot, Salesforce, or Pipedrive to automated workflows. Lead capture, enrichment, CRM records, and follow-up — automatically. Financial Services Automation GDPR-compliant client intake, KYC document collection, onboarding workflows — designed for Limassol's international financial services context. Lead Generation System (GPT-NTI) Complete lead capture system: Greek and English landing page, AI chatbot, CRM integration, automated multichannel follow-up."
         ]
       },
       {
         "title": "Example Automation Scenarios",
-        "blocks": []
-      },
-      {
-        "title": "Scenario 1: Limassol Luxury Real Estate Agency",
         "blocks": [
-          "A Limassol agency sells premium properties to international buyers — Russian, British, Israeli, and German clients. Inquiries arrive in four languages; the team speaks two. Response times are slow and follow-up is inconsistent. Kubera AI deploys a multilingual AI assistant that responds instantly in the buyer's language, qualifies intent, sends relevant property information, and creates a CRM record. Agents wake up to organized pipeline."
-        ]
-      },
-      {
-        "title": "Scenario 2: Paphos Resort & Spa",
-        "blocks": [
-          "A 5-star Paphos resort receives 300+ WhatsApp and email messages weekly from guests in Russian, English, German, and Hebrew — mostly about spa bookings, room upgrades, and local recommendations. Reception spends hours on messages that don't require human judgment. Kubera AI deploys a multilingual AI assistant handling standard communication automatically, escalating only for complex requests."
-        ]
-      },
-      {
-        "title": "Scenario 3: Limassol Financial Services Firm",
-        "blocks": [
-          "A boutique wealth management firm serves international clients. New client intake — qualification, document collection, KYC — is managed by one relationship manager. Kubera AI implements an automated intake flow: multilingual qualification chatbot, GDPR-compliant document collection sequence, calendar booking, and reminder notifications."
-        ]
-      },
-      {
-        "title": "Scenario 4: Nicosia Law Firm (Corporate Services)",
-        "blocks": [
-          "A corporate law firm in Nicosia serves international companies using Cyprus for EU incorporation. Inquiry volume is high, many in English, some in Russian and Greek. Kubera AI automates the intake flow: AI qualification, CRM integration, document request sequence, scheduling — the firm handles more clients with the same team."
-        ]
-      },
-      {
-        "title": "Scenario 5: Cypriot E-commerce Brand (EU Expansion)",
-        "blocks": [
-          "A Nicosia-based consumer brand selling across Cyprus, Greece, and UK receives 200+ customer messages weekly. Kubera AI deploys a trilingual AI support assistant (Greek/English/Russian) handling standard shipping, returns, and product inquiries automatically."
-        ]
-      },
-      {
-        "title": "Scenario 6: Ayia Napa Experience & Tourism Operator",
-        "blocks": [
-          "A seasonal tourism experience company manages 500+ inquiries during peak summer. Two staff members handle everything manually — and some inquiries get missed. Kubera AI implements a multilingual WhatsApp AI assistant active 24/7 handling booking inquiries, pricing questions, and experience details in English, Russian, German, and Hebrew."
+          "Scenario 1: Limassol Luxury Real Estate Agency A Limassol agency sells premium properties to international buyers — Russian, British, Israeli, and German clients. Inquiries arrive in four languages; the team speaks two. Response times are slow and follow-up is inconsistent. Kubera AI deploys a multilingual AI assistant that responds instantly in the buyer's language, qualifies intent, sends relevant property information, and creates a CRM record. Agents wake up to organized pipeline. Scenario 2: Paphos Resort & Spa A 5-star Paphos resort receives 300+ WhatsApp and email messages weekly from guests in Russian, English, German, and Hebrew — mostly about spa bookings, room upgrades, and local recommendations. Reception spends hours on messages that don't require human judgment. Kubera AI deploys a multilingual AI assistant handling standard communication automatically, escalating only for complex requests. Scenario 3: Limassol Financial Services Firm A boutique wealth management firm serves international clients. New client intake — qualification, document collection, KYC — is managed by one relationship manager. Kubera AI implements an automated intake flow: multilingual qualification chatbot, GDPR-compliant document collection sequence, calendar booking, and reminder notifications. Scenario 4: Nicosia Law Firm (Corporate Services) A corporate law firm in Nicosia serves international companies using Cyprus for EU incorporation. Inquiry volume is high, many in English, some in Russian and Greek. Kubera AI automates the intake flow: AI qualification, CRM integration, document request sequence, scheduling — the firm handles more clients with the same team. Scenario 5: Cypriot E-commerce Brand (EU Expansion) A Nicosia-based consumer brand selling across Cyprus, Greece, and UK receives 200+ customer messages weekly. Kubera AI deploys a trilingual AI support assistant (Greek/English/Russian) handling standard shipping, returns, and product inquiries automatically. Scenario 6: Ayia Napa Experience & Tourism Operator A seasonal tourism experience company manages 500+ inquiries during peak summer. Two staff members handle everything manually — and some inquiries get missed. Kubera AI implements a multilingual WhatsApp AI assistant active 24/7 handling booking inquiries, pricing questions, and experience details in English, Russian, German, and Hebrew."
         ]
       },
       {
@@ -3292,218 +1505,48 @@ export const generatedGeoPages = [
       },
       {
         "title": "Why Finnish Businesses Are Investing in AI Automation Now",
-        "blocks": []
-      },
-      {
-        "title": "Finland's market data reflects a country that has already embraced AI at scale:",
         "blocks": [
+          "Finland's market data reflects a country that has already embraced AI at scale:",
           "37.8% enterprise AI adoption — 2nd highest in Europe. Finland trails only Denmark among EU countries. (Eurostat, December 2025) +13.5 percentage point increase in one year — Finland recorded the second-highest single-year growth in enterprise AI adoption in the EU in 2025. The acceleration is real. (Eurostat 2025) 46% of Finnish individuals use generative AI — 4th highest in Europe alongside Estonia. (Eurostat individuals survey, 2025) A workforce already comfortable with AI tools accelerates enterprise adoption. Nordic structural labour shortages will persist through 2035. The Nordic Council's State of the Nordic Region 2024 confirms that ageing populations and baby boomer retirement waves create sustained workforce gaps. Automation is a structural response, not a temporary workaround. Finland's Cloud First infrastructure — Finland has the EU's highest cloud computing adoption at 79% of enterprises (CSO Ireland data reference; Finland leads EU in cloud). A cloud-native business population is ideally positioned for AI automation deployment."
         ]
       },
       {
         "title": "Why Finnish Businesses Choose Kubera AI",
         "blocks": [
-          "Finnish companies need automation partners who understand the Nordic business context — direct communication culture, high technical sophistication, strong privacy requirements, and operational precision."
+          "Finnish companies need automation partners who understand the Nordic business context — direct communication culture, high technical sophistication, strong privacy requirements, and operational precision.",
+          "GDPR-compliant by design, EU-based infrastructure Finnish and English language support (and Swedish for Nordic cross-border operations) Custom workflow architecture — not generic templates Integration with Finnish business tools: Visma, Procountor, Netvisor, HubSpot, Salesforce, Microsoft Dynamics SME-focused: systems scaled for 5–200 employees Fast implementation: 2–4 weeks to go live Direct communication style — no fluff, measurable outcomes"
         ]
-      },
-      {
-        "title": "GDPR-compliant by design, EU-based infrastructure",
-        "blocks": []
-      },
-      {
-        "title": "Finnish and English language support (and Swedish for Nordic cross-border operations)",
-        "blocks": []
-      },
-      {
-        "title": "Custom workflow architecture — not generic templates",
-        "blocks": [
-          "Integration with Finnish business tools: Visma, Procountor, Netvisor, HubSpot, Salesforce, Microsoft Dynamics"
-        ]
-      },
-      {
-        "title": "SME-focused: systems scaled for 5–200 employees",
-        "blocks": []
-      },
-      {
-        "title": "Fast implementation: 2–4 weeks to go live",
-        "blocks": []
-      },
-      {
-        "title": "Direct communication style — no fluff, measurable outcomes",
-        "blocks": []
       },
       {
         "title": "AI Automation in Finland: Key Market Trends",
         "blocks": [
-          "37.8% enterprise AI adoption in 2025 — 2nd in Europe. (Eurostat)"
-        ]
-      },
-      {
-        "title": "+13.5 pp increase in one year — 2nd largest single-year jump in EU. (Eurostat 2025)",
-        "blocks": []
-      },
-      {
-        "title": "46% of Finns use generative AI — among Europe's highest individual adoption rates. (Eurostat)",
-        "blocks": [
-          "Finland leads EU in cloud computing adoption at 79% of enterprises — ideal infrastructure for AI automation deployment. Nordic demographic challenge: ageing workforce, baby boomer retirement wave through 2035, creating sustained operational capacity shortfalls. (Nordic Council, 2024)"
-        ]
-      },
-      {
-        "title": "AI Automation vs. Hiring Additional Staff",
-        "blocks": [
-          "TaskHiring a Staff MemberAI AutomationLead qualificationNew hire; weeks of onboardingAutomated within daysCRM updatesRelies on rep discipline100% consistent, real-timeWeekly reporting2–4 hours manualDelivered automaticallyCustomer support (routine)Full-time hire requiredAI handles 60–80% of volume 24/7Nordic/European market communicationMultilingual staff neededAI handles FI/EN/SV nativelyFollow-up sequencesDepends on rep memoryTriggered automatically, never missedCost€40,000–€70,000/yearFrom €1,800 setup + €350/monthOnboarding time4–12 weeks2–4 weeks to go liveAvailabilityBusiness hours24/7/365"
-        ]
-      },
-      {
-        "title": "Manual Process vs. AI Automation: What Changes",
-        "blocks": [
-          "ProcessManualWith AI AutomationNew lead arrives from ScandinaviaManual CRM entry, rep assignedInstant capture, enrichment, CRM record, notificationFollow-up after proposalRep remembers (sometimes)Automated 3-touch sequence over 7 daysClient asks FAQ in FinnishStaff responds within hoursAI responds in Finnish in secondsWeekly KPI reportManual aggregation from multiple toolsAuto-generated and deliveredNew customer onboardingManual email chainAutomated: documents, welcome, calendarLead goes coldStays cold until noticedRe-engagement sequence triggered automatically"
+          "37.8% enterprise AI adoption in 2025 — 2nd in Europe. (Eurostat) +13.5 pp increase in one year — 2nd largest single-year jump in EU. (Eurostat 2025) 46% of Finns use generative AI — among Europe's highest individual adoption rates. (Eurostat) Finland leads EU in cloud computing adoption at 79% of enterprises — ideal infrastructure for AI automation deployment. Nordic demographic challenge: ageing workforce, baby boomer retirement wave through 2035, creating sustained operational capacity shortfalls. (Nordic Council, 2024)",
+          "AI Automation vs. Hiring Additional Staff TaskHiring a Staff MemberAI AutomationLead qualificationNew hire; weeks of onboardingAutomated within daysCRM updatesRelies on rep discipline100% consistent, real-timeWeekly reporting2–4 hours manualDelivered automaticallyCustomer support (routine)Full-time hire requiredAI handles 60–80% of volume 24/7Nordic/European market communicationMultilingual staff neededAI handles FI/EN/SV nativelyFollow-up sequencesDepends on rep memoryTriggered automatically, never missedCost€40,000–€70,000/yearFrom €1,800 setup + €350/monthOnboarding time4–12 weeks2–4 weeks to go liveAvailabilityBusiness hours24/7/365",
+          "Manual Process vs. AI Automation: What Changes ProcessManualWith AI AutomationNew lead arrives from ScandinaviaManual CRM entry, rep assignedInstant capture, enrichment, CRM record, notificationFollow-up after proposalRep remembers (sometimes)Automated 3-touch sequence over 7 daysClient asks FAQ in FinnishStaff responds within hoursAI responds in Finnish in secondsWeekly KPI reportManual aggregation from multiple toolsAuto-generated and deliveredNew customer onboardingManual email chainAutomated: documents, welcome, calendarLead goes coldStays cold until noticedRe-engagement sequence triggered automatically"
         ]
       },
       {
         "title": "AI Automation Opportunities in Finland",
         "blocks": [
-          "CRM automation integrated with Visma, Procountor, Netvisor, HubSpot, Salesforce, Microsoft Dynamics"
-        ]
-      },
-      {
-        "title": "Finnish-language AI assistants for domestic customer-facing operations",
-        "blocks": []
-      },
-      {
-        "title": "Nordic cross-border automation — Finnish, English, Swedish for Nordic regional operations",
-        "blocks": [
-          "Technology and SaaS automation — trial nurturing, onboarding, churn prevention for Helsinki's tech ecosystem"
-        ]
-      },
-      {
-        "title": "Manufacturing and clean tech automation — B2B inquiry management, supplier communications",
-        "blocks": []
-      },
-      {
-        "title": "Professional services intake — Finnish legal, accounting, and consulting firms",
-        "blocks": [
-          "Reporting automation for management teams currently aggregating data from multiple systems manually"
+          "CRM automation integrated with Visma, Procountor, Netvisor, HubSpot, Salesforce, Microsoft Dynamics Finnish-language AI assistants for domestic customer-facing operations Nordic cross-border automation — Finnish, English, Swedish for Nordic regional operations Technology and SaaS automation — trial nurturing, onboarding, churn prevention for Helsinki's tech ecosystem Manufacturing and clean tech automation — B2B inquiry management, supplier communications Professional services intake — Finnish legal, accounting, and consulting firms Reporting automation for management teams currently aggregating data from multiple systems manually"
         ]
       },
       {
         "title": "Relevant Industries",
-        "blocks": []
-      },
-      {
-        "title": "Technology & SaaS (Helsinki, Espoo, Tampere)",
         "blocks": [
-          "Finland's world-class technology ecosystem. Onboarding automation, trial nurturing, churn prevention, Nordic market expansion automation. Companies like F-Secure, Wolt (acquired), and hundreds of growth-stage startups."
-        ]
-      },
-      {
-        "title": "Manufacturing & Engineering (Tampere, Turku, Seinäjoki)",
-        "blocks": [
-          "Finnish precision engineering, paper machinery, and industrial equipment companies: B2B inquiry automation, order workflow management, supplier communication."
-        ]
-      },
-      {
-        "title": "Clean Technology & Energy (nationwide)",
-        "blocks": [
-          "Finland's rapidly growing clean tech sector: investor communication automation, partnership outreach, project inquiry management."
-        ]
-      },
-      {
-        "title": "Professional Services — Legal, Accounting (Helsinki, Tampere)",
-        "blocks": [
-          "Finnish law firms, accounting firms (Visma ecosystem): client intake automation, scheduling, document workflows."
-        ]
-      },
-      {
-        "title": "Logistics & Trade (Turku, Helsinki port area)",
-        "blocks": [
-          "Finnish logistics companies managing Baltic and Nordic trade: shipment communication automation, partner updates, documentation workflows."
-        ]
-      },
-      {
-        "title": "Healthcare & Wellness (nationwide)",
-        "blocks": [
-          "Finnish healthcare sector: appointment booking, patient communication, reminder sequences."
-        ]
-      },
-      {
-        "title": "Tourism & Hospitality (Helsinki, Lapland, archipelago)",
-        "blocks": [
-          "Finland attracts significant international tourism, particularly for Lapland experiences. Booking automation, multilingual guest communication, international marketing automation."
+          "Technology & SaaS (Helsinki, Espoo, Tampere) Finland's world-class technology ecosystem. Onboarding automation, trial nurturing, churn prevention, Nordic market expansion automation. Companies like F-Secure, Wolt (acquired), and hundreds of growth-stage startups. Manufacturing & Engineering (Tampere, Turku, Seinäjoki) Finnish precision engineering, paper machinery, and industrial equipment companies: B2B inquiry automation, order workflow management, supplier communication. Clean Technology & Energy (nationwide) Finland's rapidly growing clean tech sector: investor communication automation, partnership outreach, project inquiry management. Professional Services — Legal, Accounting (Helsinki, Tampere) Finnish law firms, accounting firms (Visma ecosystem): client intake automation, scheduling, document workflows. Logistics & Trade (Turku, Helsinki port area) Finnish logistics companies managing Baltic and Nordic trade: shipment communication automation, partner updates, documentation workflows. Healthcare & Wellness (nationwide) Finnish healthcare sector: appointment booking, patient communication, reminder sequences. Tourism & Hospitality (Helsinki, Lapland, archipelago) Finland attracts significant international tourism, particularly for Lapland experiences. Booking automation, multilingual guest communication, international marketing automation."
         ]
       },
       {
         "title": "Kubera AI Solutions for the Finnish Market",
-        "blocks": []
-      },
-      {
-        "title": "CRM Automation (Visma/Procountor-compatible)",
         "blocks": [
-          "Integrate with Finnish accounting and CRM ecosystems. Automated lead capture, enrichment, CRM records, and follow-up — in Finnish and English."
-        ]
-      },
-      {
-        "title": "Finnish-Language AI Assistant",
-        "blocks": [
-          "An AI assistant handling first-touch communication in Finnish, with English capability for international operations. Direct, efficient communication style matching Finnish business norms."
-        ]
-      },
-      {
-        "title": "Nordic Market Automation",
-        "blocks": [
-          "For Finnish companies operating across Sweden, Norway, and Denmark: AI-powered communication systems in Finnish, English, and Swedish with appropriate Nordic business culture calibration."
-        ]
-      },
-      {
-        "title": "Technology Startup Automation",
-        "blocks": [
-          "For Helsinki and Espoo's tech ecosystem: behavior-triggered trial nurturing, onboarding sequences, churn detection workflows, and sales qualification automation."
-        ]
-      },
-      {
-        "title": "Lead Generation System (GPT-NTI)",
-        "blocks": [
-          "A complete lead capture system with Finnish-language landing page, AI chatbot, CRM integration, and automated follow-up. For Finnish companies converting digital traffic into qualified pipeline."
-        ]
-      },
-      {
-        "title": "Reporting & Analytics Automation",
-        "blocks": [
-          "Automated weekly KPI reports pulling from your CRM, marketing tools, and business systems. Delivered on schedule — no manual aggregation."
+          "CRM Automation (Visma/Procountor-compatible) Integrate with Finnish accounting and CRM ecosystems. Automated lead capture, enrichment, CRM records, and follow-up — in Finnish and English. Finnish-Language AI Assistant An AI assistant handling first-touch communication in Finnish, with English capability for international operations. Direct, efficient communication style matching Finnish business norms. Nordic Market Automation For Finnish companies operating across Sweden, Norway, and Denmark: AI-powered communication systems in Finnish, English, and Swedish with appropriate Nordic business culture calibration. Technology Startup Automation For Helsinki and Espoo's tech ecosystem: behavior-triggered trial nurturing, onboarding sequences, churn detection workflows, and sales qualification automation. Lead Generation System (GPT-NTI) A complete lead capture system with Finnish-language landing page, AI chatbot, CRM integration, and automated follow-up. For Finnish companies converting digital traffic into qualified pipeline. Reporting & Analytics Automation Automated weekly KPI reports pulling from your CRM, marketing tools, and business systems. Delivered on schedule — no manual aggregation."
         ]
       },
       {
         "title": "Example Automation Scenarios",
-        "blocks": []
-      },
-      {
-        "title": "Scenario 1: Helsinki B2B SaaS Company",
         "blocks": [
-          "A 15-person Helsinki SaaS company generates trial signups from LinkedIn and Nordic conferences. Most trials expire without meaningful sales engagement because the team lacks capacity to follow up individually. Kubera AI builds a behavior-triggered nurturing system: Finnish welcome sequence, feature-adoption emails based on in-app activity, Slack alert when high-engagement behavior is detected, and automated demo offer at day 10."
-        ]
-      },
-      {
-        "title": "Scenario 2: Tampere Industrial Equipment Manufacturer",
-        "blocks": [
-          "A 60-person machinery manufacturer in Tampere receives 40–60 RFQs per month from Nordic and European buyers. Proposal follow-up is inconsistent. Kubera AI builds an automated post-proposal sequence: 3 touchpoints over 10 days in Finnish (Nordic leads) and English (international), triggered automatically when a proposal is sent in CRM."
-        ]
-      },
-      {
-        "title": "Scenario 3: Finnish Law Firm (Helsinki)",
-        "blocks": [
-          "A commercial law firm with 12 lawyers serves Finnish companies and international clients. Intake scheduling and document collection takes significant admin time. Kubera AI automates the intake flow: AI qualification on website, GDPR-compliant document collection, automated scheduling, and reminder sequences."
-        ]
-      },
-      {
-        "title": "Scenario 4: Lapland Tourism Company",
-        "blocks": [
-          "A Rovaniemi-based tourism company serving international visitors (German, UK, Chinese, Japanese guests) manages inquiries in English, German, and increasingly Chinese. Kubera AI deploys a multilingual AI assistant handling booking inquiries, experience questions, and package requests — escalating only for custom bookings. The operations team focuses on experience delivery, not inbox management."
-        ]
-      },
-      {
-        "title": "Scenario 5: Finnish Clean Tech Startup",
-        "blocks": [
-          "A Helsinki-based clean energy startup manages investor and partnership outreach across Nordic and European markets. Follow-up after investor meetings and partnership inquiries is inconsistent. Kubera AI builds automated follow-up sequences triggered after every logged meeting, maintaining consistent engagement with a pipeline of 50+ active investor and partner relationships."
+          "Scenario 1: Helsinki B2B SaaS Company A 15-person Helsinki SaaS company generates trial signups from LinkedIn and Nordic conferences. Most trials expire without meaningful sales engagement because the team lacks capacity to follow up individually. Kubera AI builds a behavior-triggered nurturing system: Finnish welcome sequence, feature-adoption emails based on in-app activity, Slack alert when high-engagement behavior is detected, and automated demo offer at day 10. Scenario 2: Tampere Industrial Equipment Manufacturer A 60-person machinery manufacturer in Tampere receives 40–60 RFQs per month from Nordic and European buyers. Proposal follow-up is inconsistent. Kubera AI builds an automated post-proposal sequence: 3 touchpoints over 10 days in Finnish (Nordic leads) and English (international), triggered automatically when a proposal is sent in CRM. Scenario 3: Finnish Law Firm (Helsinki) A commercial law firm with 12 lawyers serves Finnish companies and international clients. Intake scheduling and document collection takes significant admin time. Kubera AI automates the intake flow: AI qualification on website, GDPR-compliant document collection, automated scheduling, and reminder sequences. Scenario 4: Lapland Tourism Company A Rovaniemi-based tourism company serving international visitors (German, UK, Chinese, Japanese guests) manages inquiries in English, German, and increasingly Chinese. Kubera AI deploys a multilingual AI assistant handling booking inquiries, experience questions, and package requests — escalating only for custom bookings. The operations team focuses on experience delivery, not inbox management. Scenario 5: Finnish Clean Tech Startup A Helsinki-based clean energy startup manages investor and partnership outreach across Nordic and European markets. Follow-up after investor meetings and partnership inquiries is inconsistent. Kubera AI builds automated follow-up sequences triggered after every logged meeting, maintaining consistent engagement with a pipeline of 50+ active investor and partner relationships."
         ]
       },
       {
@@ -3584,197 +1627,40 @@ export const generatedGeoPages = [
       {
         "title": "Why Swedish Businesses Choose Kubera AI",
         "blocks": [
-          "Swedish companies are direct, data-driven, and expect measurable results. They need automation partners who communicate clearly, deliver on time, and prove ROI."
+          "Swedish companies are direct, data-driven, and expect measurable results. They need automation partners who communicate clearly, deliver on time, and prove ROI.",
+          "GDPR-compliant by design, EU-based infrastructure Swedish and English language support (and Nordic languages for cross-border operations) Custom workflow architecture — measurable outcomes, not generic templates Integration with Swedish business tools: Fortnox, Visma Sweden, HubSpot, Salesforce, Teamtailor, Superoffice SME-focused: systems scaled for 5–200 employees Fast implementation: 2–4 weeks to go live Data-driven approach: clear KPIs defined before implementation"
         ]
-      },
-      {
-        "title": "GDPR-compliant by design, EU-based infrastructure",
-        "blocks": []
-      },
-      {
-        "title": "Swedish and English language support (and Nordic languages for cross-border operations)",
-        "blocks": []
-      },
-      {
-        "title": "Custom workflow architecture — measurable outcomes, not generic templates",
-        "blocks": [
-          "Integration with Swedish business tools: Fortnox, Visma Sweden, HubSpot, Salesforce, Teamtailor, Superoffice"
-        ]
-      },
-      {
-        "title": "SME-focused: systems scaled for 5–200 employees",
-        "blocks": []
-      },
-      {
-        "title": "Fast implementation: 2–4 weeks to go live",
-        "blocks": []
-      },
-      {
-        "title": "Data-driven approach: clear KPIs defined before implementation",
-        "blocks": []
       },
       {
         "title": "AI Automation in Sweden: Key Market Trends",
         "blocks": [
-          "35.04% enterprise AI adoption in 2025 — 3rd highest in EU. (Eurostat)"
-        ]
-      },
-      {
-        "title": "35% of Swedish individuals use generative AI — among Europe's highest. (Eurostat)",
-        "blocks": [
-          "Sweden's startup ecosystem (Stockholm) produces more billion-dollar companies per capita than any region outside Silicon Valley — and operational automation is a standard growth infrastructure in this ecosystem. Nordic demographic challenge — ageing workforce and structural labour shortages through 2035. (Nordic Council, 2024) EU's Apply AI Strategy (October 2025) and Sweden's own national digitalization agenda actively support SME AI adoption."
-        ]
-      },
-      {
-        "title": "AI Automation vs. Hiring Additional Staff",
-        "blocks": [
-          "TaskHiring a Staff MemberAI AutomationLead qualificationNew hire; weeks of onboardingAutomated within daysCRM updatesRelies on rep discipline100% consistent, real-timeNordic market communicationRequires multilingual staffAI handles SV/EN/NO/DK/FIWeekly reporting2–4 hours manualDelivered automaticallyCustomer support (routine)Full-time hireAI handles 60–80% of volume 24/7Follow-up sequencesDepends on rep memoryTriggered automaticallyCostSEK 450,000–750,000/yearFrom €1,800 setup + €350/monthOnboarding time4–12 weeks2–4 weeks to go liveAvailabilityBusiness hours24/7/365"
-        ]
-      },
-      {
-        "title": "Manual Process vs. AI Automation: What Changes",
-        "blocks": [
-          "ProcessManualWith AI AutomationB2B lead arrives from Norwegian companyManual CRM entry, rep assignmentInstant capture, enrichment, Swedish/English acknowledgmentPost-event follow-upSome contacts followed, most forgottenAutomated sequence for every contactClient asks standard FAQStaff responds within hoursAI responds in secondsWeekly management reportManual aggregation in Google SheetsAuto-generated and delivered MondayNew customer onboardingManual email, document requestsAutomated: welcome, docs, calendarLead in Pipedrive goes coldStays coldRe-engagement sequence triggered automatically"
+          "35.04% enterprise AI adoption in 2025 — 3rd highest in EU. (Eurostat) 35% of Swedish individuals use generative AI — among Europe's highest. (Eurostat) Sweden's startup ecosystem (Stockholm) produces more billion-dollar companies per capita than any region outside Silicon Valley — and operational automation is a standard growth infrastructure in this ecosystem. Nordic demographic challenge — ageing workforce and structural labour shortages through 2035. (Nordic Council, 2024) EU's Apply AI Strategy (October 2025) and Sweden's own national digitalization agenda actively support SME AI adoption.",
+          "AI Automation vs. Hiring Additional Staff TaskHiring a Staff MemberAI AutomationLead qualificationNew hire; weeks of onboardingAutomated within daysCRM updatesRelies on rep discipline100% consistent, real-timeNordic market communicationRequires multilingual staffAI handles SV/EN/NO/DK/FIWeekly reporting2–4 hours manualDelivered automaticallyCustomer support (routine)Full-time hireAI handles 60–80% of volume 24/7Follow-up sequencesDepends on rep memoryTriggered automaticallyCostSEK 450,000–750,000/yearFrom €1,800 setup + €350/monthOnboarding time4–12 weeks2–4 weeks to go liveAvailabilityBusiness hours24/7/365",
+          "Manual Process vs. AI Automation: What Changes ProcessManualWith AI AutomationB2B lead arrives from Norwegian companyManual CRM entry, rep assignmentInstant capture, enrichment, Swedish/English acknowledgmentPost-event follow-upSome contacts followed, most forgottenAutomated sequence for every contactClient asks standard FAQStaff responds within hoursAI responds in secondsWeekly management reportManual aggregation in Google SheetsAuto-generated and delivered MondayNew customer onboardingManual email, document requestsAutomated: welcome, docs, calendarLead in Pipedrive goes coldStays coldRe-engagement sequence triggered automatically"
         ]
       },
       {
         "title": "AI Automation Opportunities in Sweden",
         "blocks": [
-          "CRM automation integrated with Fortnox, Visma Sweden, HubSpot, Salesforce, Superoffice, Pipedrive Nordic market automation — Swedish, English, Norwegian, Danish, Finnish for cross-border Nordic operations Technology startup infrastructure — Stockholm's world-class startup ecosystem: trial nurturing, onboarding, churn prevention"
-        ]
-      },
-      {
-        "title": "Manufacturing and engineering automation — Gothenburg's automotive and industrial cluster",
-        "blocks": []
-      },
-      {
-        "title": "Professional services intake — Stockholm law firms, management consultancies, accounting firms",
-        "blocks": []
-      },
-      {
-        "title": "E-commerce automation for Swedish brands selling to Nordic and European markets",
-        "blocks": [
-          "Clean tech and sustainability sector — investor communications, partner outreach, grant management workflows"
+          "CRM automation integrated with Fortnox, Visma Sweden, HubSpot, Salesforce, Superoffice, Pipedrive Nordic market automation — Swedish, English, Norwegian, Danish, Finnish for cross-border Nordic operations Technology startup infrastructure — Stockholm's world-class startup ecosystem: trial nurturing, onboarding, churn prevention Manufacturing and engineering automation — Gothenburg's automotive and industrial cluster Professional services intake — Stockholm law firms, management consultancies, accounting firms E-commerce automation for Swedish brands selling to Nordic and European markets Clean tech and sustainability sector — investor communications, partner outreach, grant management workflows"
         ]
       },
       {
         "title": "Relevant Industries",
-        "blocks": []
-      },
-      {
-        "title": "Technology & SaaS (Stockholm — Kista, Stureplan startup ecosystem)",
         "blocks": [
-          "Stockholm is Europe's most prolific startup hub per capita. Trial nurturing, onboarding automation, churn prevention, multilingual support for international expansion."
-        ]
-      },
-      {
-        "title": "Automotive & Manufacturing (Gothenburg)",
-        "blocks": [
-          "Volvo, SSAB, and their supply ecosystems. RFQ automation, supplier communications, B2B inquiry management."
-        ]
-      },
-      {
-        "title": "Retail & E-commerce (Stockholm, nationwide)",
-        "blocks": [
-          "Swedish retail brands (H&M ecosystem, IKEA supply chain, premium brands): post-purchase automation, customer support, multilingual European market communication."
-        ]
-      },
-      {
-        "title": "Professional Services (Stockholm, Gothenburg)",
-        "blocks": [
-          "Advokatbyråer, consulting firms, audit firms: client intake automation, scheduling, document workflows."
-        ]
-      },
-      {
-        "title": "Fintech & Banking (Stockholm)",
-        "blocks": [
-          "Klarna, Swish ecosystem, and Sweden's strong fintech sector: lead qualification, compliance document collection, onboarding automation."
-        ]
-      },
-      {
-        "title": "Life Sciences & Pharma (Stockholm, Uppsala)",
-        "blocks": [
-          "AstraZeneca, medtech companies: partner communication, regulatory documentation, conference follow-up."
-        ]
-      },
-      {
-        "title": "Clean Tech & Energy (Gothenburg, nationwide)",
-        "blocks": [
-          "Northvolt and Sweden's clean energy sector: investor communication, partnership management, project inquiry automation."
+          "Technology & SaaS (Stockholm — Kista, Stureplan startup ecosystem) Stockholm is Europe's most prolific startup hub per capita. Trial nurturing, onboarding automation, churn prevention, multilingual support for international expansion. Automotive & Manufacturing (Gothenburg) Volvo, SSAB, and their supply ecosystems. RFQ automation, supplier communications, B2B inquiry management. Retail & E-commerce (Stockholm, nationwide) Swedish retail brands (H&M ecosystem, IKEA supply chain, premium brands): post-purchase automation, customer support, multilingual European market communication. Professional Services (Stockholm, Gothenburg) Advokatbyråer, consulting firms, audit firms: client intake automation, scheduling, document workflows. Fintech & Banking (Stockholm) Klarna, Swish ecosystem, and Sweden's strong fintech sector: lead qualification, compliance document collection, onboarding automation. Life Sciences & Pharma (Stockholm, Uppsala) AstraZeneca, medtech companies: partner communication, regulatory documentation, conference follow-up. Clean Tech & Energy (Gothenburg, nationwide) Northvolt and Sweden's clean energy sector: investor communication, partnership management, project inquiry automation."
         ]
       },
       {
         "title": "Kubera AI Solutions for the Swedish Market",
-        "blocks": []
-      },
-      {
-        "title": "CRM Automation (Fortnox/Visma-compatible)",
         "blocks": [
-          "Connect your CRM to automated Swedish workflows. Fortnox, Visma Sweden, HubSpot, Salesforce, Superoffice — integrated and automated."
-        ]
-      },
-      {
-        "title": "Swedish-Language AI Assistant",
-        "blocks": [
-          "AI assistant handling first-touch communication in Swedish and English, with Nordic language capability for cross-border operations."
-        ]
-      },
-      {
-        "title": "Nordic Expansion Automation",
-        "blocks": [
-          "For Swedish companies managing operations across Norway, Denmark, Finland, and Iceland: AI-powered communication in all Nordic languages."
-        ]
-      },
-      {
-        "title": "Startup Growth Infrastructure",
-        "blocks": [
-          "For Stockholm's tech ecosystem: behavior-triggered trial nurturing, onboarding sequences, churn detection, and sales qualification automation — the operational backbone that lets startups scale without proportionally scaling their teams."
-        ]
-      },
-      {
-        "title": "Lead Generation System (GPT-NTI)",
-        "blocks": [
-          "Complete lead capture system: Swedish-language landing page, AI chatbot, CRM integration, automated multichannel follow-up."
-        ]
-      },
-      {
-        "title": "Reporting Automation",
-        "blocks": [
-          "Automated weekly KPI reports from your CRM, ad platforms, and business systems. No manual aggregation."
+          "CRM Automation (Fortnox/Visma-compatible) Connect your CRM to automated Swedish workflows. Fortnox, Visma Sweden, HubSpot, Salesforce, Superoffice — integrated and automated. Swedish-Language AI Assistant AI assistant handling first-touch communication in Swedish and English, with Nordic language capability for cross-border operations. Nordic Expansion Automation For Swedish companies managing operations across Norway, Denmark, Finland, and Iceland: AI-powered communication in all Nordic languages. Startup Growth Infrastructure For Stockholm's tech ecosystem: behavior-triggered trial nurturing, onboarding sequences, churn detection, and sales qualification automation — the operational backbone that lets startups scale without proportionally scaling their teams. Lead Generation System (GPT-NTI) Complete lead capture system: Swedish-language landing page, AI chatbot, CRM integration, automated multichannel follow-up. Reporting Automation Automated weekly KPI reports from your CRM, ad platforms, and business systems. No manual aggregation."
         ]
       },
       {
         "title": "Example Automation Scenarios",
-        "blocks": []
-      },
-      {
-        "title": "Scenario 1: Stockholm SaaS Scale-Up",
         "blocks": [
-          "A 25-person B2B SaaS company in Stockholm generates 80 trial signups monthly from LinkedIn, content, and conferences. Sales capacity allows meaningful engagement with maybe 20. Kubera AI builds a behavior-triggered nurturing system that engages all 80 appropriately — welcome sequence in Swedish/English, feature-adoption emails, Slack alerts for high-intent accounts, demo offer at day 12. Conversion improves significantly."
-        ]
-      },
-      {
-        "title": "Scenario 2: Gothenburg Automotive Tier-1 Supplier",
-        "blocks": [
-          "A 70-person parts manufacturer in Gothenburg manages RFQ responses for OEMs across Sweden, Germany, and the UK. Post-RFQ follow-up is inconsistent across a large BD team. Kubera AI builds an automated post-quote sequence triggered for every sent proposal: 3 touchpoints over 10 days in Swedish, German, or English based on the prospect's country."
-        ]
-      },
-      {
-        "title": "Scenario 3: Stockholm Law Firm (M&A Practice)",
-        "blocks": [
-          "A Stockholm Advokatbyrå with a strong M&A and corporate practice receives inquiries from Swedish companies and international investors. Intake is manual. Kubera AI implements a qualification chatbot (Swedish/English), CRM integration, automated document collection (GDPR-compliant), and calendar booking. Partners focus on billable hours."
-        ]
-      },
-      {
-        "title": "Scenario 4: Swedish Clean Tech Startup (Investor Relations)",
-        "blocks": [
-          "A Gothenburg clean energy startup manages 60+ investor and partner relationships across Europe. Follow-up after meetings is done manually by the CEO. Kubera AI builds an automated post-meeting follow-up system: personalized email sequences triggered after every logged investor meeting, maintaining consistent engagement without CEO time."
-        ]
-      },
-      {
-        "title": "Scenario 5: Swedish E-commerce Brand (Nordic + European)",
-        "blocks": [
-          "A Stockholm premium consumer brand sells across Sweden, Norway, Denmark, Finland, and Germany. Customer support receives 400+ messages per week. Kubera AI deploys a multilingual AI support assistant — Swedish, Norwegian, Danish, Finnish, German — handling standard inquiries automatically."
+          "Scenario 1: Stockholm SaaS Scale-Up A 25-person B2B SaaS company in Stockholm generates 80 trial signups monthly from LinkedIn, content, and conferences. Sales capacity allows meaningful engagement with maybe 20. Kubera AI builds a behavior-triggered nurturing system that engages all 80 appropriately — welcome sequence in Swedish/English, feature-adoption emails, Slack alerts for high-intent accounts, demo offer at day 12. Conversion improves significantly. Scenario 2: Gothenburg Automotive Tier-1 Supplier A 70-person parts manufacturer in Gothenburg manages RFQ responses for OEMs across Sweden, Germany, and the UK. Post-RFQ follow-up is inconsistent across a large BD team. Kubera AI builds an automated post-quote sequence triggered for every sent proposal: 3 touchpoints over 10 days in Swedish, German, or English based on the prospect's country. Scenario 3: Stockholm Law Firm (M&A Practice) A Stockholm Advokatbyrå with a strong M&A and corporate practice receives inquiries from Swedish companies and international investors. Intake is manual. Kubera AI implements a qualification chatbot (Swedish/English), CRM integration, automated document collection (GDPR-compliant), and calendar booking. Partners focus on billable hours. Scenario 4: Swedish Clean Tech Startup (Investor Relations) A Gothenburg clean energy startup manages 60+ investor and partner relationships across Europe. Follow-up after meetings is done manually by the CEO. Kubera AI builds an automated post-meeting follow-up system: personalized email sequences triggered after every logged investor meeting, maintaining consistent engagement without CEO time. Scenario 5: Swedish E-commerce Brand (Nordic + European) A Stockholm premium consumer brand sells across Sweden, Norway, Denmark, Finland, and Germany. Customer support receives 400+ messages per week. Kubera AI deploys a multilingual AI support assistant — Swedish, Norwegian, Danish, Finnish, German — handling standard inquiries automatically."
         ]
       },
       {
@@ -3852,224 +1738,48 @@ export const generatedGeoPages = [
       },
       {
         "title": "Why Danish Businesses Are Investing in AI Automation Now",
-        "blocks": []
-      },
-      {
-        "title": "Denmark's own market data drives the investment case:",
         "blocks": [
+          "Denmark's own market data drives the investment case:",
           "42.03% enterprise AI adoption — EU #1. (Eurostat December 2025) Denmark's businesses have validated AI as the operational standard — not an experiment. +14.45 percentage point increase in one year — the highest single-year increase in enterprise AI adoption in the EU in 2025. (Eurostat 2025) The acceleration is faster in Denmark than anywhere else in Europe. 48% of Danish individuals use generative AI — highest in the EU. (Eurostat individual usage survey, 2025) A workforce entirely comfortable with AI tools dramatically reduces adoption friction in Danish companies. In approximately 1 in 4 Danish recruitments, companies cannot find qualified candidates. (BusinessEurope 2023/EURES Denmark) Structural labour shortages make automation a workforce strategy, not just a technology project. Denmark's Digital Growth Strategy 2025 invested specifically in building a highly-skilled digital talent pool. The government has created infrastructure — companies need to use it."
         ]
       },
       {
         "title": "Why Danish Businesses Choose Kubera AI",
         "blocks": [
-          "Danish companies value directness, efficiency, and measurable results. They don't need to be convinced about AI — they need an implementation partner who delivers without unnecessary complexity."
+          "Danish companies value directness, efficiency, and measurable results. They don't need to be convinced about AI — they need an implementation partner who delivers without unnecessary complexity.",
+          "GDPR-compliant by design, EU-based infrastructure Danish and English language support (and Nordic languages for cross-border) Custom workflow architecture with defined KPIs — no vague \"transformation\" promises Integration with Danish business tools: e-conomic, Dinero, Billy, HubSpot, Salesforce, Microsoft Dynamics SME-focused: systems scaled for 5–200 employees Fast implementation: 2–4 weeks to go live Direct: we define outcomes before starting, not after"
         ]
-      },
-      {
-        "title": "GDPR-compliant by design, EU-based infrastructure",
-        "blocks": []
-      },
-      {
-        "title": "Danish and English language support (and Nordic languages for cross-border)",
-        "blocks": []
-      },
-      {
-        "title": "Custom workflow architecture with defined KPIs — no vague \"transformation\" promises",
-        "blocks": [
-          "Integration with Danish business tools: e-conomic, Dinero, Billy, HubSpot, Salesforce, Microsoft Dynamics"
-        ]
-      },
-      {
-        "title": "SME-focused: systems scaled for 5–200 employees",
-        "blocks": []
-      },
-      {
-        "title": "Fast implementation: 2–4 weeks to go live",
-        "blocks": []
-      },
-      {
-        "title": "Direct: we define outcomes before starting, not after",
-        "blocks": []
       },
       {
         "title": "AI Automation in Denmark: Key Market Trends",
         "blocks": [
-          "42.03% enterprise AI adoption — EU #1. (Eurostat December 2025)"
-        ]
-      },
-      {
-        "title": "+14.45 pp increase in 2025 — highest single-year growth in EU. (Eurostat)",
-        "blocks": []
-      },
-      {
-        "title": "48% of Danish individuals use generative AI — EU's highest. (Eurostat 2025)",
-        "blocks": []
-      },
-      {
-        "title": "1 in 4 recruitments cannot find qualified candidates. (BusinessEurope/EURES Denmark)",
-        "blocks": [
-          "Denmark's Digital Growth Strategy 2025 — national investment in digital talent and AI infrastructure. Odense robotics cluster — symbol of Danish cultural comfort with automation as a productivity tool."
-        ]
-      },
-      {
-        "title": "AI Automation vs. Hiring Additional Staff",
-        "blocks": [
-          "TaskHiring a Staff MemberAI AutomationLead qualificationNew hire; weeks of onboardingAutomated within daysCRM updatesRelies on rep discipline100% consistent, real-timeNordic/European communicationMultilingual staff requiredAI handles DA/EN/SV/NO/DEWeekly reporting2–4 hours manualDelivered automaticallyCustomer support (routine)Full-time hireAI handles 60–80% of volume 24/7Follow-up sequencesDepends on rep memoryTriggered automatically, never missedCostDKK 450,000–700,000/yearFrom €1,800 setup + €350/monthOnboarding time4–12 weeks2–4 weeks to go liveAvailabilityBusiness hours24/7/365"
-        ]
-      },
-      {
-        "title": "Manual Process vs. AI Automation: What Changes",
-        "blocks": [
-          "ProcessManualWith AI AutomationB2B lead from German partner arrivesManual CRM entry, rep callInstant capture, German-language acknowledgment, CRM recordPost-trade-show follow-upInconsistentAutomated sequence for every contactClient asks FAQ in DanishStaff responds next dayAI responds in Danish in secondsWeekly KPI reportManual aggregationAuto-generated and delivered MondayNew customer onboardingManual email chainAutomated: welcome, docs, calendarLead in e-conomic/HubSpot goes silentStays silentRe-engagement triggered automatically"
+          "42.03% enterprise AI adoption — EU #1. (Eurostat December 2025) +14.45 pp increase in 2025 — highest single-year growth in EU. (Eurostat) 48% of Danish individuals use generative AI — EU's highest. (Eurostat 2025) 1 in 4 recruitments cannot find qualified candidates. (BusinessEurope/EURES Denmark) Denmark's Digital Growth Strategy 2025 — national investment in digital talent and AI infrastructure. Odense robotics cluster — symbol of Danish cultural comfort with automation as a productivity tool.",
+          "AI Automation vs. Hiring Additional Staff TaskHiring a Staff MemberAI AutomationLead qualificationNew hire; weeks of onboardingAutomated within daysCRM updatesRelies on rep discipline100% consistent, real-timeNordic/European communicationMultilingual staff requiredAI handles DA/EN/SV/NO/DEWeekly reporting2–4 hours manualDelivered automaticallyCustomer support (routine)Full-time hireAI handles 60–80% of volume 24/7Follow-up sequencesDepends on rep memoryTriggered automatically, never missedCostDKK 450,000–700,000/yearFrom €1,800 setup + €350/monthOnboarding time4–12 weeks2–4 weeks to go liveAvailabilityBusiness hours24/7/365",
+          "Manual Process vs. AI Automation: What Changes ProcessManualWith AI AutomationB2B lead from German partner arrivesManual CRM entry, rep callInstant capture, German-language acknowledgment, CRM recordPost-trade-show follow-upInconsistentAutomated sequence for every contactClient asks FAQ in DanishStaff responds next dayAI responds in Danish in secondsWeekly KPI reportManual aggregationAuto-generated and delivered MondayNew customer onboardingManual email chainAutomated: welcome, docs, calendarLead in e-conomic/HubSpot goes silentStays silentRe-engagement triggered automatically"
         ]
       },
       {
         "title": "AI Automation Opportunities in Denmark",
         "blocks": [
-          "CRM automation integrated with e-conomic, Dinero, Billy, HubSpot, Salesforce, Microsoft Dynamics"
+          "CRM automation integrated with e-conomic, Dinero, Billy, HubSpot, Salesforce, Microsoft Dynamics Danish and Nordic language AI assistants for domestic and cross-border operations Export and international market automation — Danish companies managing German, UK, and Nordic client communications Robotics and manufacturing automation support — Odense's robotic ecosystem and Danish precision manufacturing Professional services intake — Copenhagen law firms, accounting firms, consulting practices Life sciences and pharma — Øresund region biotech and medtech: partner communications, regulatory workflows Technology startup growth infrastructure — Copenhagen's growing tech ecosystem"
         ]
-      },
-      {
-        "title": "Danish and Nordic language AI assistants for domestic and cross-border operations",
-        "blocks": [
-          "Export and international market automation — Danish companies managing German, UK, and Nordic client communications Robotics and manufacturing automation support — Odense's robotic ecosystem and Danish precision manufacturing"
-        ]
-      },
-      {
-        "title": "Professional services intake — Copenhagen law firms, accounting firms, consulting practices",
-        "blocks": [
-          "Life sciences and pharma — Øresund region biotech and medtech: partner communications, regulatory workflows"
-        ]
-      },
-      {
-        "title": "Technology startup growth infrastructure — Copenhagen's growing tech ecosystem",
-        "blocks": []
       },
       {
         "title": "Relevant Industries",
-        "blocks": []
-      },
-      {
-        "title": "Technology & SaaS (Copenhagen, Aarhus)",
         "blocks": [
-          "Denmark's growing tech sector alongside established global companies. Onboarding automation, trial nurturing, churn prevention, Nordic market expansion."
-        ]
-      },
-      {
-        "title": "Robotics & Advanced Manufacturing (Odense)",
-        "blocks": [
-          "Universal Robots and Odense's world-class robotics cluster. B2B partner communication, RFQ automation, supplier management."
-        ]
-      },
-      {
-        "title": "Life Sciences & Pharma (Copenhagen — Øresund region)",
-        "blocks": [
-          "Novo Nordisk, LEO Pharma, and their ecosystems. Partner communications, regulatory documentation, conference follow-up automation."
-        ]
-      },
-      {
-        "title": "Professional Services (Copenhagen, Aarhus)",
-        "blocks": [
-          "Danish law firms, accounting practices, management consultancies: client intake, scheduling, document workflows."
-        ]
-      },
-      {
-        "title": "Shipping & Logistics (Copenhagen, Esbjerg, Aarhus)",
-        "blocks": [
-          "Danish maritime and logistics companies: shipment status automation, partner communications, documentation workflows."
-        ]
-      },
-      {
-        "title": "Design & Architecture (Copenhagen)",
-        "blocks": [
-          "Denmark's world-famous design sector: international client communication, project inquiry automation, portfolio follow-up."
-        ]
-      },
-      {
-        "title": "Agri-food & Dairy (Jutland)",
-        "blocks": [
-          "Danish dairy and food exporters: international distributor communication, trade show follow-up, lead management."
-        ]
-      },
-      {
-        "title": "Tourism & Hospitality (Copenhagen, Jutland, Bornholm)",
-        "blocks": [
-          "Copenhagen's international tourism scene: booking automation, multilingual guest communication, review sequences."
+          "Technology & SaaS (Copenhagen, Aarhus) Denmark's growing tech sector alongside established global companies. Onboarding automation, trial nurturing, churn prevention, Nordic market expansion. Robotics & Advanced Manufacturing (Odense) Universal Robots and Odense's world-class robotics cluster. B2B partner communication, RFQ automation, supplier management. Life Sciences & Pharma (Copenhagen — Øresund region) Novo Nordisk, LEO Pharma, and their ecosystems. Partner communications, regulatory documentation, conference follow-up automation. Professional Services (Copenhagen, Aarhus) Danish law firms, accounting practices, management consultancies: client intake, scheduling, document workflows. Shipping & Logistics (Copenhagen, Esbjerg, Aarhus) Danish maritime and logistics companies: shipment status automation, partner communications, documentation workflows. Design & Architecture (Copenhagen) Denmark's world-famous design sector: international client communication, project inquiry automation, portfolio follow-up. Agri-food & Dairy (Jutland) Danish dairy and food exporters: international distributor communication, trade show follow-up, lead management. Tourism & Hospitality (Copenhagen, Jutland, Bornholm) Copenhagen's international tourism scene: booking automation, multilingual guest communication, review sequences."
         ]
       },
       {
         "title": "Kubera AI Solutions for the Danish Market",
-        "blocks": []
-      },
-      {
-        "title": "CRM Automation (e-conomic/Dinero-compatible)",
         "blocks": [
-          "Integrate with Danish accounting and business systems. e-conomic, Dinero, Billy, HubSpot, Salesforce — automated and connected."
-        ]
-      },
-      {
-        "title": "Danish-Language AI Assistant",
-        "blocks": [
-          "AI handling first-touch communication in Danish, with English and Nordic language support for international operations."
-        ]
-      },
-      {
-        "title": "Nordic and European Market Automation",
-        "blocks": [
-          "For Danish companies managing relationships across Sweden, Norway, Germany, and UK: AI-powered communication in appropriate languages."
-        ]
-      },
-      {
-        "title": "Industrial and Robotics Sector Automation",
-        "blocks": [
-          "For Odense's manufacturing and robotics companies: B2B inquiry routing, partner communication automation, RFQ follow-up sequences."
-        ]
-      },
-      {
-        "title": "Lead Generation System (GPT-NTI)",
-        "blocks": [
-          "Complete lead capture system with Danish landing page, AI chatbot, CRM integration, automated follow-up."
-        ]
-      },
-      {
-        "title": "Reporting Automation",
-        "blocks": [
-          "Automated KPI reports from your CRM, marketing tools, and business systems — delivered on schedule."
+          "CRM Automation (e-conomic/Dinero-compatible) Integrate with Danish accounting and business systems. e-conomic, Dinero, Billy, HubSpot, Salesforce — automated and connected. Danish-Language AI Assistant AI handling first-touch communication in Danish, with English and Nordic language support for international operations. Nordic and European Market Automation For Danish companies managing relationships across Sweden, Norway, Germany, and UK: AI-powered communication in appropriate languages. Industrial and Robotics Sector Automation For Odense's manufacturing and robotics companies: B2B inquiry routing, partner communication automation, RFQ follow-up sequences. Lead Generation System (GPT-NTI) Complete lead capture system with Danish landing page, AI chatbot, CRM integration, automated follow-up. Reporting Automation Automated KPI reports from your CRM, marketing tools, and business systems — delivered on schedule."
         ]
       },
       {
         "title": "Example Automation Scenarios",
-        "blocks": []
-      },
-      {
-        "title": "Scenario 1: Copenhagen Fintech Startup",
         "blocks": [
-          "A 20-person Copenhagen fintech company generates leads from LinkedIn and European fintech events. Most leads receive one follow-up email and then nothing. Kubera AI builds a behavior-triggered nurturing system: Danish/English welcome, feature-adoption emails, Slack alert when high-engagement behavior detected, automated demo offer at day 10. Conversion from trial to paying improves significantly."
-        ]
-      },
-      {
-        "title": "Scenario 2: Odense Robotics Company",
-        "blocks": [
-          "A robotics components company in Odense manages international distribution partnerships across Germany, France, and the UK. Post-trade-show follow-up is done manually by the sales director. Kubera AI builds an automated post-show sequence triggered for every scanned contact: personalized email in Danish, German, French, or English — based on origin country — within 24 hours of the show ending."
-        ]
-      },
-      {
-        "title": "Scenario 3: Aarhus B2B Design Agency",
-        "blocks": [
-          "A strategic design agency in Aarhus serves Danish corporate clients and growing international accounts. Intake is managed by the founding partners — qualification calls, proposal briefings, document collection. Kubera AI automates the intake flow: website AI chatbot, HubSpot integration, automated briefing document collection, calendar booking. Partners focus on creative work."
-        ]
-      },
-      {
-        "title": "Scenario 4: Copenhagen Life Sciences SME",
-        "blocks": [
-          "A 15-person Copenhagen biotech company manages 30+ active partner and investor relationships across Europe. Meeting follow-up is inconsistent — the CEO handles it manually. Kubera AI builds an automated post-meeting sequence: personalized emails in English (and German/French where relevant) triggered after every logged meeting, maintaining relationship momentum without CEO time."
-        ]
-      },
-      {
-        "title": "Scenario 5: Danish Agri-food Exporter (Jutland)",
-        "blocks": [
-          "A Jutland dairy company exports premium products to Germany, the UK, and France. International buyer inquiries arrive in English, German, and French — handled manually by the export team. Kubera AI deploys a multilingual AI assistant for first-response, CRM integration with automatic contact enrichment, and a 4-touch multilingual follow-up sequence."
+          "Scenario 1: Copenhagen Fintech Startup A 20-person Copenhagen fintech company generates leads from LinkedIn and European fintech events. Most leads receive one follow-up email and then nothing. Kubera AI builds a behavior-triggered nurturing system: Danish/English welcome, feature-adoption emails, Slack alert when high-engagement behavior detected, automated demo offer at day 10. Conversion from trial to paying improves significantly. Scenario 2: Odense Robotics Company A robotics components company in Odense manages international distribution partnerships across Germany, France, and the UK. Post-trade-show follow-up is done manually by the sales director. Kubera AI builds an automated post-show sequence triggered for every scanned contact: personalized email in Danish, German, French, or English — based on origin country — within 24 hours of the show ending. Scenario 3: Aarhus B2B Design Agency A strategic design agency in Aarhus serves Danish corporate clients and growing international accounts. Intake is managed by the founding partners — qualification calls, proposal briefings, document collection. Kubera AI automates the intake flow: website AI chatbot, HubSpot integration, automated briefing document collection, calendar booking. Partners focus on creative work. Scenario 4: Copenhagen Life Sciences SME A 15-person Copenhagen biotech company manages 30+ active partner and investor relationships across Europe. Meeting follow-up is inconsistent — the CEO handles it manually. Kubera AI builds an automated post-meeting sequence: personalized emails in English (and German/French where relevant) triggered after every logged meeting, maintaining relationship momentum without CEO time. Scenario 5: Danish Agri-food Exporter (Jutland) A Jutland dairy company exports premium products to Germany, the UK, and France. International buyer inquiries arrive in English, German, and French — handled manually by the export team. Kubera AI deploys a multilingual AI assistant for first-response, CRM integration with automatic contact enrichment, and a 4-touch multilingual follow-up sequence."
         ]
       },
       {
@@ -4150,199 +1860,40 @@ export const generatedGeoPages = [
       {
         "title": "Why Polish Businesses Choose Kubera AI",
         "blocks": [
-          "Polish companies need a practical automation partner who delivers measurable results at SME budgets — not expensive enterprise consulting."
+          "Polish companies need a practical automation partner who delivers measurable results at SME budgets — not expensive enterprise consulting.",
+          "GDPR-compliant by design, EU-based infrastructure Polish and English language support (and German for German market operations) Custom workflow architecture — not off-the-shelf templates Integration with Polish business tools: Symfonia, Optima (Comarch), Subiekt, HubSpot, Salesforce, Pipedrive SME-focused: systems scaled for 5–200 employees Fast implementation: 2–4 weeks to go live CEE-appropriate pricing: strong ROI at Polish market investment levels"
         ]
-      },
-      {
-        "title": "GDPR-compliant by design, EU-based infrastructure",
-        "blocks": []
-      },
-      {
-        "title": "Polish and English language support (and German for German market operations)",
-        "blocks": []
-      },
-      {
-        "title": "Custom workflow architecture — not off-the-shelf templates",
-        "blocks": [
-          "Integration with Polish business tools: Symfonia, Optima (Comarch), Subiekt, HubSpot, Salesforce, Pipedrive"
-        ]
-      },
-      {
-        "title": "SME-focused: systems scaled for 5–200 employees",
-        "blocks": []
-      },
-      {
-        "title": "Fast implementation: 2–4 weeks to go live",
-        "blocks": []
-      },
-      {
-        "title": "CEE-appropriate pricing: strong ROI at Polish market investment levels",
-        "blocks": []
       },
       {
         "title": "AI Automation in Poland: Key Market Trends",
         "blocks": [
-          "8.4% enterprise AI adoption in 2025 — significant first-mover window. (Eurostat December 2025) Poland is 3rd lowest in EU for enterprise AI adoption — directly behind Romania and Bulgaria. Baltic neighbor Lithuania jumped +12.5 pp in one year — demonstrating that Eastern European markets can accelerate adoption rapidly. (Eurostat 2025) Poland's minimum wage has roughly doubled in five years — rising labour costs are making the economics of automation increasingly compelling. EU's Apply AI Strategy (October 2025) and Polish government digitalization programmes are actively creating regulatory and funding support for SME AI adoption."
-        ]
-      },
-      {
-        "title": "AI Automation vs. Hiring Additional Staff",
-        "blocks": [
-          "TaskHiring a Staff MemberAI AutomationLead qualificationNew hire; weeks of onboardingAutomated within daysCRM updatesRelies on rep discipline100% consistent, real-timeGerman market communicationRequires German-speaking staffAI handles PL/EN/DEWeekly reporting2–4 hours manualDelivered automaticallyCustomer support (routine)Full-time hireAI handles 60–80% of volume 24/7Follow-up sequencesDepends on rep memoryTriggered automaticallyCostPLN 60,000–120,000/yearFrom €1,800 setup + €350/monthOnboarding time4–12 weeks2–4 weeks to go liveAvailabilityBusiness hours24/7/365"
-        ]
-      },
-      {
-        "title": "Manual Process vs. AI Automation: What Changes",
-        "blocks": [
-          "ProcessManualWith AI AutomationB2B lead from Germany arrivesStaff translates and responds next dayAI responds in German instantly, CRM record createdPost-proposal follow-upRep remembers (sometimes)Automated 3-touch sequence over 7 daysClient asks FAQ in PolishStaff responds within hoursAI responds in Polish in secondsWeekly management reportManual aggregationAuto-generated and deliveredNew client onboardingManual email chainAutomated: documents, welcome, calendarLead goes cold in CRMStays coldRe-engagement sequence triggered automatically"
+          "8.4% enterprise AI adoption in 2025 — significant first-mover window. (Eurostat December 2025) Poland is 3rd lowest in EU for enterprise AI adoption — directly behind Romania and Bulgaria. Baltic neighbor Lithuania jumped +12.5 pp in one year — demonstrating that Eastern European markets can accelerate adoption rapidly. (Eurostat 2025) Poland's minimum wage has roughly doubled in five years — rising labour costs are making the economics of automation increasingly compelling. EU's Apply AI Strategy (October 2025) and Polish government digitalization programmes are actively creating regulatory and funding support for SME AI adoption.",
+          "AI Automation vs. Hiring Additional Staff TaskHiring a Staff MemberAI AutomationLead qualificationNew hire; weeks of onboardingAutomated within daysCRM updatesRelies on rep discipline100% consistent, real-timeGerman market communicationRequires German-speaking staffAI handles PL/EN/DEWeekly reporting2–4 hours manualDelivered automaticallyCustomer support (routine)Full-time hireAI handles 60–80% of volume 24/7Follow-up sequencesDepends on rep memoryTriggered automaticallyCostPLN 60,000–120,000/yearFrom €1,800 setup + €350/monthOnboarding time4–12 weeks2–4 weeks to go liveAvailabilityBusiness hours24/7/365",
+          "Manual Process vs. AI Automation: What Changes ProcessManualWith AI AutomationB2B lead from Germany arrivesStaff translates and responds next dayAI responds in German instantly, CRM record createdPost-proposal follow-upRep remembers (sometimes)Automated 3-touch sequence over 7 daysClient asks FAQ in PolishStaff responds within hoursAI responds in Polish in secondsWeekly management reportManual aggregationAuto-generated and deliveredNew client onboardingManual email chainAutomated: documents, welcome, calendarLead goes cold in CRMStays coldRe-engagement sequence triggered automatically"
         ]
       },
       {
         "title": "AI Automation Opportunities in Poland",
         "blocks": [
-          "CRM automation integrated with Symfonia, Optima (Comarch), Subiekt, HubSpot, Salesforce, Pipedrive"
+          "CRM automation integrated with Symfonia, Optima (Comarch), Subiekt, HubSpot, Salesforce, Pipedrive Polish and German language AI assistants for domestic and German market operations Manufacturing and production automation — B2B inquiry management, supplier communications, RFQ workflows Shared services and BPO automation — Warsaw and Kraków's large shared services sector IT and technology company automation — trial nurturing, onboarding, churn prevention Professional services intake — Polish law firms, accounting practices, consulting companies E-commerce automation for Polish brands selling domestically and across EU"
         ]
-      },
-      {
-        "title": "Polish and German language AI assistants for domestic and German market operations",
-        "blocks": [
-          "Manufacturing and production automation — B2B inquiry management, supplier communications, RFQ workflows"
-        ]
-      },
-      {
-        "title": "Shared services and BPO automation — Warsaw and Kraków's large shared services sector",
-        "blocks": []
-      },
-      {
-        "title": "IT and technology company automation — trial nurturing, onboarding, churn prevention",
-        "blocks": []
-      },
-      {
-        "title": "Professional services intake — Polish law firms, accounting practices, consulting companies",
-        "blocks": []
-      },
-      {
-        "title": "E-commerce automation for Polish brands selling domestically and across EU",
-        "blocks": []
       },
       {
         "title": "Relevant Industries",
-        "blocks": []
-      },
-      {
-        "title": "Technology & IT Services (Warsaw, Kraków, Wrocław)",
         "blocks": [
-          "Poland's booming tech sector. Software houses, IT outsourcing, SaaS companies: trial nurturing, client onboarding, project inquiry automation."
-        ]
-      },
-      {
-        "title": "Manufacturing & Engineering (Silesia, Łódź, Poznań)",
-        "blocks": [
-          "Poland's industrial heartland. B2B inquiry automation, order workflow management, German market communication."
-        ]
-      },
-      {
-        "title": "Shared Services & BPO (Kraków, Wrocław, Warsaw)",
-        "blocks": [
-          "Major centers for European shared services. Internal process automation, client communication workflows."
-        ]
-      },
-      {
-        "title": "Professional Services — Legal, Accounting (Warsaw, Kraków)",
-        "blocks": [
-          "Polish law firms and accounting practices serving domestic and international clients: intake automation, scheduling, document workflows."
-        ]
-      },
-      {
-        "title": "Logistics & Transport (Warsaw, Łódź, Tri-City)",
-        "blocks": [
-          "Poland's central EU logistics position. Shipment status automation, partner communications, documentation workflows."
-        ]
-      },
-      {
-        "title": "E-commerce (Warsaw, nationwide)",
-        "blocks": [
-          "Polish brands selling across Poland, Germany, Czech Republic, and broader EU: customer support automation, post-purchase flows."
-        ]
-      },
-      {
-        "title": "Real Estate (Warsaw, Kraków, Wrocław)",
-        "blocks": [
-          "Polish property market serving domestic and foreign investors: lead management, inquiry automation, viewing scheduling."
+          "Technology & IT Services (Warsaw, Kraków, Wrocław) Poland's booming tech sector. Software houses, IT outsourcing, SaaS companies: trial nurturing, client onboarding, project inquiry automation. Manufacturing & Engineering (Silesia, Łódź, Poznań) Poland's industrial heartland. B2B inquiry automation, order workflow management, German market communication. Shared Services & BPO (Kraków, Wrocław, Warsaw) Major centers for European shared services. Internal process automation, client communication workflows. Professional Services — Legal, Accounting (Warsaw, Kraków) Polish law firms and accounting practices serving domestic and international clients: intake automation, scheduling, document workflows. Logistics & Transport (Warsaw, Łódź, Tri-City) Poland's central EU logistics position. Shipment status automation, partner communications, documentation workflows. E-commerce (Warsaw, nationwide) Polish brands selling across Poland, Germany, Czech Republic, and broader EU: customer support automation, post-purchase flows. Real Estate (Warsaw, Kraków, Wrocław) Polish property market serving domestic and foreign investors: lead management, inquiry automation, viewing scheduling."
         ]
       },
       {
         "title": "Kubera AI Solutions for the Polish Market",
-        "blocks": []
-      },
-      {
-        "title": "CRM Automation (Polish software-compatible)",
         "blocks": [
-          "Connect Symfonia, Optima (Comarch), Subiekt, or international CRM platforms to automated workflows. Lead capture, enrichment, CRM records, and follow-up in Polish, English, or German."
-        ]
-      },
-      {
-        "title": "Polish-Language AI Sales Assistant",
-        "blocks": [
-          "First-touch qualification in Polish, with German and English support for export-oriented businesses."
-        ]
-      },
-      {
-        "title": "German Market Communication Automation",
-        "blocks": [
-          "For Polish manufacturers and service providers with German clients: AI-powered German-language first response, follow-up sequences, and CRM integration — without hiring German-speaking staff."
-        ]
-      },
-      {
-        "title": "Technology Company Automation",
-        "blocks": [
-          "For Warsaw and Kraków's tech ecosystem: behavior-triggered trial nurturing, onboarding sequences, churn detection."
-        ]
-      },
-      {
-        "title": "Lead Generation System (GPT-NTI)",
-        "blocks": [
-          "Complete lead capture system: Polish landing page, AI chatbot, CRM integration, automated multichannel follow-up."
-        ]
-      },
-      {
-        "title": "Reporting Automation",
-        "blocks": [
-          "Automated weekly management reports replacing manual data aggregation from CRM, marketing, and business systems."
+          "CRM Automation (Polish software-compatible) Connect Symfonia, Optima (Comarch), Subiekt, or international CRM platforms to automated workflows. Lead capture, enrichment, CRM records, and follow-up in Polish, English, or German. Polish-Language AI Sales Assistant First-touch qualification in Polish, with German and English support for export-oriented businesses. German Market Communication Automation For Polish manufacturers and service providers with German clients: AI-powered German-language first response, follow-up sequences, and CRM integration — without hiring German-speaking staff. Technology Company Automation For Warsaw and Kraków's tech ecosystem: behavior-triggered trial nurturing, onboarding sequences, churn detection. Lead Generation System (GPT-NTI) Complete lead capture system: Polish landing page, AI chatbot, CRM integration, automated multichannel follow-up. Reporting Automation Automated weekly management reports replacing manual data aggregation from CRM, marketing, and business systems."
         ]
       },
       {
         "title": "Example Automation Scenarios",
-        "blocks": []
-      },
-      {
-        "title": "Scenario 1: Warsaw Technology Company",
         "blocks": [
-          "A 25-person Warsaw software house generates leads from Polish and German companies via LinkedIn and web. German client inquiries are handled manually — slowly. Kubera AI builds a multilingual AI assistant (Polish/German/English), CRM integration with HubSpot, and a 5-touch lead nurturing sequence. German market conversion rate improves."
-        ]
-      },
-      {
-        "title": "Scenario 2: Silesian Manufacturing Company",
-        "blocks": [
-          "A Katowice-based precision parts manufacturer serves German automotive clients. RFQ responses and delivery confirmations are managed manually. Kubera AI automates the inquiry-to-quote workflow: instant German-language acknowledgment, categorization, rep notification, and post-quote follow-up sequence."
-        ]
-      },
-      {
-        "title": "Scenario 3: Kraków Accounting Firm",
-        "blocks": [
-          "A 12-person Kraków accounting firm serves Polish companies and international investors. Client intake — scheduling, document collection, onboarding — is manual and time-consuming. Kubera AI automates the full intake flow: GDPR-compliant booking, document request sequences, reminder notifications."
-        ]
-      },
-      {
-        "title": "Scenario 4: Gdańsk Logistics Company",
-        "blocks": [
-          "A Baltic logistics company manages shipment communications with clients across Poland, Sweden, and Germany. Status updates and exception notifications are sent manually. Kubera AI builds automated shipment communication workflows in Polish, German, and English — clients receive proactive updates without the operations team manually triggering each notification."
-        ]
-      },
-      {
-        "title": "Scenario 5: Warsaw E-commerce Brand (EU Expansion)",
-        "blocks": [
-          "A Warsaw consumer brand selling across Poland, Germany, and Czech Republic receives 500+ customer messages per week — mostly about shipping and returns. Kubera AI deploys a trilingual AI support assistant (Polish/German/Czech) handling standard inquiries automatically."
+          "Scenario 1: Warsaw Technology Company A 25-person Warsaw software house generates leads from Polish and German companies via LinkedIn and web. German client inquiries are handled manually — slowly. Kubera AI builds a multilingual AI assistant (Polish/German/English), CRM integration with HubSpot, and a 5-touch lead nurturing sequence. German market conversion rate improves. Scenario 2: Silesian Manufacturing Company A Katowice-based precision parts manufacturer serves German automotive clients. RFQ responses and delivery confirmations are managed manually. Kubera AI automates the inquiry-to-quote workflow: instant German-language acknowledgment, categorization, rep notification, and post-quote follow-up sequence. Scenario 3: Kraków Accounting Firm A 12-person Kraków accounting firm serves Polish companies and international investors. Client intake — scheduling, document collection, onboarding — is manual and time-consuming. Kubera AI automates the full intake flow: GDPR-compliant booking, document request sequences, reminder notifications. Scenario 4: Gdańsk Logistics Company A Baltic logistics company manages shipment communications with clients across Poland, Sweden, and Germany. Status updates and exception notifications are sent manually. Kubera AI builds automated shipment communication workflows in Polish, German, and English — clients receive proactive updates without the operations team manually triggering each notification. Scenario 5: Warsaw E-commerce Brand (EU Expansion) A Warsaw consumer brand selling across Poland, Germany, and Czech Republic receives 500+ customer messages per week — mostly about shipping and returns. Kubera AI deploys a trilingual AI support assistant (Polish/German/Czech) handling standard inquiries automatically."
         ]
       },
       {
@@ -4423,155 +1974,34 @@ export const generatedGeoPages = [
       {
         "title": "Why Lithuanian Businesses Choose Kubera AI",
         "blocks": [
-          "Lithuanian companies need a practical automation partner who understands the Baltic context — the lean SME structure, the multilingual Baltic-Nordic business environment, the GDPR requirements, and the ambition to scale regionally."
+          "Lithuanian companies need a practical automation partner who understands the Baltic context — the lean SME structure, the multilingual Baltic-Nordic business environment, the GDPR requirements, and the ambition to scale regionally.",
+          "GDPR-compliant by design, EU-based infrastructure Lithuanian and English language support (plus Latvian, Estonian, Russian for Baltic operations) Custom workflow architecture — not generic templates Integration with Lithuanian business tools: Rivile, Pragma, HubSpot, Salesforce, Pipedrive SME-focused: systems scaled for 5–150 employees Fast implementation: 2–4 weeks to go live Baltic-first approach: we understand the regional business context"
         ]
-      },
-      {
-        "title": "GDPR-compliant by design, EU-based infrastructure",
-        "blocks": [
-          "Lithuanian and English language support (plus Latvian, Estonian, Russian for Baltic operations)"
-        ]
-      },
-      {
-        "title": "Custom workflow architecture — not generic templates",
-        "blocks": []
-      },
-      {
-        "title": "Integration with Lithuanian business tools: Rivile, Pragma, HubSpot, Salesforce, Pipedrive",
-        "blocks": []
-      },
-      {
-        "title": "SME-focused: systems scaled for 5–150 employees",
-        "blocks": []
-      },
-      {
-        "title": "Fast implementation: 2–4 weeks to go live",
-        "blocks": []
-      },
-      {
-        "title": "Baltic-first approach: we understand the regional business context",
-        "blocks": []
       },
       {
         "title": "AI Automation in Lithuania: Key Market Trends",
-        "blocks": []
-      },
-      {
-        "title": "+12.54 pp enterprise AI adoption growth in 2025 — 3rd highest in EU. (Eurostat)",
         "blocks": [
-          "52% of Lithuanian individuals use AI — Baltic digital leader alongside Latvia and Estonia. (Cybernews 2025) Microsoft AI Diffusion Report 2025 identifies the Baltic states as Europe's digital frontrunners — Lithuania at 21% AI adoption in its methodology. Minimum wage increased to €1,038 in January 2025 — rising labour costs strengthen automation ROI. (EURES Lithuania) Vilnius fintech ecosystem growing rapidly — companies like Vinted (unicorn), Hostinger, and a strong pipeline of scale-ups demonstrating Lithuanian digital ambition."
-        ]
-      },
-      {
-        "title": "AI Automation vs. Hiring Additional Staff",
-        "blocks": [
-          "TaskHiring a Staff MemberAI AutomationLead qualificationNew hire; weeks of onboardingAutomated within daysCRM updatesRelies on rep discipline100% consistent, real-timeBaltic/Nordic communicationRequires multilingual staffAI handles LT/EN/LV/ET/RUWeekly reporting2–4 hours manualDelivered automaticallyCustomer support (routine)Full-time hireAI handles 60–80% of volume 24/7Follow-up sequencesDepends on rep memoryTriggered automaticallyCost€15,000–€35,000/yearFrom €1,800 setup + €350/monthOnboarding time4–12 weeks2–4 weeks to go liveAvailabilityBusiness hours24/7/365"
-        ]
-      },
-      {
-        "title": "Manual Process vs. AI Automation: What Changes",
-        "blocks": [
-          "ProcessManualWith AI AutomationBaltic B2B lead arrivesManual review, CRM entryInstant capture, enrichment, CRM record, notificationPost-meeting follow-upRep sends some, forgets othersAutomated sequence triggered for every logged meetingClient asks FAQ in LithuanianStaff responds within hoursAI responds in secondsWeekly management reportManual aggregationAuto-generated and deliveredNew customer onboardingManual email, doc requestsAutomated: welcome, documents, calendarLead goes coldStays coldRe-engagement triggered automatically"
+          "+12.54 pp enterprise AI adoption growth in 2025 — 3rd highest in EU. (Eurostat) 52% of Lithuanian individuals use AI — Baltic digital leader alongside Latvia and Estonia. (Cybernews 2025) Microsoft AI Diffusion Report 2025 identifies the Baltic states as Europe's digital frontrunners — Lithuania at 21% AI adoption in its methodology. Minimum wage increased to €1,038 in January 2025 — rising labour costs strengthen automation ROI. (EURES Lithuania) Vilnius fintech ecosystem growing rapidly — companies like Vinted (unicorn), Hostinger, and a strong pipeline of scale-ups demonstrating Lithuanian digital ambition.",
+          "AI Automation vs. Hiring Additional Staff TaskHiring a Staff MemberAI AutomationLead qualificationNew hire; weeks of onboardingAutomated within daysCRM updatesRelies on rep discipline100% consistent, real-timeBaltic/Nordic communicationRequires multilingual staffAI handles LT/EN/LV/ET/RUWeekly reporting2–4 hours manualDelivered automaticallyCustomer support (routine)Full-time hireAI handles 60–80% of volume 24/7Follow-up sequencesDepends on rep memoryTriggered automaticallyCost€15,000–€35,000/yearFrom €1,800 setup + €350/monthOnboarding time4–12 weeks2–4 weeks to go liveAvailabilityBusiness hours24/7/365",
+          "Manual Process vs. AI Automation: What Changes ProcessManualWith AI AutomationBaltic B2B lead arrivesManual review, CRM entryInstant capture, enrichment, CRM record, notificationPost-meeting follow-upRep sends some, forgets othersAutomated sequence triggered for every logged meetingClient asks FAQ in LithuanianStaff responds within hoursAI responds in secondsWeekly management reportManual aggregationAuto-generated and deliveredNew customer onboardingManual email, doc requestsAutomated: welcome, documents, calendarLead goes coldStays coldRe-engagement triggered automatically"
         ]
       },
       {
         "title": "AI Automation Opportunities in Lithuania",
-        "blocks": []
-      },
-      {
-        "title": "CRM automation integrated with Rivile, Pragma, HubSpot, Salesforce, Pipedrive",
-        "blocks": []
-      },
-      {
-        "title": "Lithuanian, Latvian, and Estonian language AI assistants for Baltic regional operations",
         "blocks": [
-          "Fintech and technology company automation — Vilnius ecosystem: trial nurturing, onboarding, client communication"
+          "CRM automation integrated with Rivile, Pragma, HubSpot, Salesforce, Pipedrive Lithuanian, Latvian, and Estonian language AI assistants for Baltic regional operations Fintech and technology company automation — Vilnius ecosystem: trial nurturing, onboarding, client communication Manufacturing and logistics automation — Kaunas and Klaipėda industrial and maritime sectors Professional services intake — Lithuanian law firms and accounting companies E-commerce automation for Lithuanian brands selling across the Baltic and EU"
         ]
-      },
-      {
-        "title": "Manufacturing and logistics automation — Kaunas and Klaipėda industrial and maritime sectors",
-        "blocks": []
-      },
-      {
-        "title": "Professional services intake — Lithuanian law firms and accounting companies",
-        "blocks": []
-      },
-      {
-        "title": "E-commerce automation for Lithuanian brands selling across the Baltic and EU",
-        "blocks": []
       },
       {
         "title": "Relevant Industries",
-        "blocks": []
-      },
-      {
-        "title": "Fintech & Technology (Vilnius)",
         "blocks": [
-          "Vinted, Hostinger, and hundreds of emerging Lithuanian tech companies. Trial nurturing, onboarding automation, churn prevention, Baltic market expansion."
-        ]
-      },
-      {
-        "title": "Manufacturing & Engineering (Kaunas)",
-        "blocks": [
-          "Lithuania's industrial sector. B2B inquiry management, order workflow automation, supplier communications."
-        ]
-      },
-      {
-        "title": "Logistics & Maritime (Klaipėda)",
-        "blocks": [
-          "Baltic sea trade. Shipment communications, partner updates, documentation workflows."
-        ]
-      },
-      {
-        "title": "Professional Services (Vilnius, Kaunas)",
-        "blocks": [
-          "Law firms, accounting practices: client intake, scheduling, document workflows, GDPR-compliant data collection."
-        ]
-      },
-      {
-        "title": "E-commerce (Vilnius)",
-        "blocks": [
-          "Lithuanian brands selling across Baltic and European markets: customer support automation, post-purchase flows."
-        ]
-      },
-      {
-        "title": "Tourism & Hospitality (Vilnius Old Town, nationwide)",
-        "blocks": [
-          "Vilnius's growing tourism sector and Lithuanian countryside hospitality: booking automation, multilingual guest communication."
+          "Fintech & Technology (Vilnius) Vinted, Hostinger, and hundreds of emerging Lithuanian tech companies. Trial nurturing, onboarding automation, churn prevention, Baltic market expansion. Manufacturing & Engineering (Kaunas) Lithuania's industrial sector. B2B inquiry management, order workflow automation, supplier communications. Logistics & Maritime (Klaipėda) Baltic sea trade. Shipment communications, partner updates, documentation workflows. Professional Services (Vilnius, Kaunas) Law firms, accounting practices: client intake, scheduling, document workflows, GDPR-compliant data collection. E-commerce (Vilnius) Lithuanian brands selling across Baltic and European markets: customer support automation, post-purchase flows. Tourism & Hospitality (Vilnius Old Town, nationwide) Vilnius's growing tourism sector and Lithuanian countryside hospitality: booking automation, multilingual guest communication."
         ]
       },
       {
         "title": "Example Automation Scenarios",
-        "blocks": []
-      },
-      {
-        "title": "Scenario 1: Vilnius Fintech Scale-Up",
         "blocks": [
-          "A 30-person Vilnius fintech generates leads from European fintech events and LinkedIn. Sales engagement is inconsistent. Kubera AI builds a behavior-triggered nurturing system: English welcome sequence, feature-adoption emails, Slack alerts for high-intent accounts, automated demo offer at day 10. Sales velocity increases."
-        ]
-      },
-      {
-        "title": "Scenario 2: Kaunas Manufacturer (German Export)",
-        "blocks": [
-          "A 40-person Kaunas precision manufacturing company supplies German industrial clients. Inquiry responses are slow and inconsistent. Kubera AI automates inquiry routing, German-language acknowledgment, and post-quote follow-up."
-        ]
-      },
-      {
-        "title": "Scenario 3: Vilnius Law Firm",
-        "blocks": [
-          "A 10-person commercial law firm serves Lithuanian and international clients. Client intake is manual. Kubera AI implements an AI qualification chatbot (Lithuanian/English), CRM integration, automated document collection, and calendar booking."
-        ]
-      },
-      {
-        "title": "Scenario 4: Lithuanian E-commerce Brand (Baltic Expansion)",
-        "blocks": [
-          "A Vilnius consumer brand sells across Lithuania, Latvia, Estonia, and Poland. Customer support in four languages overwhelms the small team. Kubera AI deploys a multilingual AI assistant handling standard inquiries in Lithuanian, Latvian, Estonian, and English automatically."
-        ]
-      },
-      {
-        "title": "Scenario 5: Klaipėda Logistics Company",
-        "blocks": [
-          "A Baltic freight company manages shipment communications across the Baltic states and to Germany. Manual status updates consume hours daily. Kubera AI automates shipment notification sequences in Lithuanian, Latvian, and German."
+          "Scenario 1: Vilnius Fintech Scale-Up A 30-person Vilnius fintech generates leads from European fintech events and LinkedIn. Sales engagement is inconsistent. Kubera AI builds a behavior-triggered nurturing system: English welcome sequence, feature-adoption emails, Slack alerts for high-intent accounts, automated demo offer at day 10. Sales velocity increases. Scenario 2: Kaunas Manufacturer (German Export) A 40-person Kaunas precision manufacturing company supplies German industrial clients. Inquiry responses are slow and inconsistent. Kubera AI automates inquiry routing, German-language acknowledgment, and post-quote follow-up. Scenario 3: Vilnius Law Firm A 10-person commercial law firm serves Lithuanian and international clients. Client intake is manual. Kubera AI implements an AI qualification chatbot (Lithuanian/English), CRM integration, automated document collection, and calendar booking. Scenario 4: Lithuanian E-commerce Brand (Baltic Expansion) A Vilnius consumer brand sells across Lithuania, Latvia, Estonia, and Poland. Customer support in four languages overwhelms the small team. Kubera AI deploys a multilingual AI assistant handling standard inquiries in Lithuanian, Latvian, Estonian, and English automatically. Scenario 5: Klaipėda Logistics Company A Baltic freight company manages shipment communications across the Baltic states and to Germany. Manual status updates consume hours daily. Kubera AI automates shipment notification sequences in Lithuanian, Latvian, and German."
         ]
       },
       {
@@ -4652,203 +2082,40 @@ export const generatedGeoPages = [
       {
         "title": "Why Latvian Businesses Choose Kubera AI",
         "blocks": [
-          "Latvian companies need an automation partner who understands the Baltic context — lean SME operations, multilingual Baltic requirements, GDPR compliance, and the ambition to compete regionally and internationally."
+          "Latvian companies need an automation partner who understands the Baltic context — lean SME operations, multilingual Baltic requirements, GDPR compliance, and the ambition to compete regionally and internationally.",
+          "GDPR-compliant by design, EU-based infrastructure Latvian and English language support (plus Lithuanian, Estonian, Russian for Baltic operations) Custom workflow architecture — not templates Integration with Latvian business tools: Grāmatvedības programmas (e.g., Jumis, Horizon), HubSpot, Salesforce, Pipedrive SME-focused: systems scaled for 5–150 employees Fast implementation: 2–4 weeks to go live Baltic regional expertise"
         ]
-      },
-      {
-        "title": "GDPR-compliant by design, EU-based infrastructure",
-        "blocks": [
-          "Latvian and English language support (plus Lithuanian, Estonian, Russian for Baltic operations)"
-        ]
-      },
-      {
-        "title": "Custom workflow architecture — not templates",
-        "blocks": [
-          "Integration with Latvian business tools: Grāmatvedības programmas (e.g., Jumis, Horizon), HubSpot, Salesforce, Pipedrive"
-        ]
-      },
-      {
-        "title": "SME-focused: systems scaled for 5–150 employees",
-        "blocks": []
-      },
-      {
-        "title": "Fast implementation: 2–4 weeks to go live",
-        "blocks": []
-      },
-      {
-        "title": "Baltic regional expertise",
-        "blocks": []
       },
       {
         "title": "AI Automation in Latvia: Key Market Trends",
-        "blocks": []
-      },
-      {
-        "title": "Latvia ranks 4th globally in individual AI adoption at 55%. (Cybernews AI Adoption Index 2025)",
         "blocks": [
-          "93% of Latvian enterprises are micro-companies — lean businesses needing maximum operational leverage. (EURES Latvia) Structural labour shortages deepening — ageing population and emigration creating sustained workforce gaps. (EURES Latvia 2024) AI Factory Antenna established in Latvia (EU EuroHPC programme) — national AI infrastructure investment underway. Latvia's digital infrastructure consistently ranks among Europe's strongest, supporting seamless AI automation deployment."
-        ]
-      },
-      {
-        "title": "AI Automation vs. Hiring Additional Staff",
-        "blocks": [
-          "TaskHiring a Staff MemberAI AutomationLead qualificationNew hire; weeks of onboardingAutomated within daysCRM updatesRelies on rep discipline100% consistent, real-timeBaltic market communicationRequires multilingual staffAI handles LV/EN/LT/ET/RUWeekly reporting2–4 hours manualDelivered automaticallyCustomer support (routine)Full-time hireAI handles 60–80% of volume 24/7Follow-up sequencesDepends on rep memoryTriggered automaticallyCost€12,000–€30,000/yearFrom €1,800 setup + €350/monthOnboarding time4–12 weeks2–4 weeks to go liveAvailabilityBusiness hours24/7/365"
-        ]
-      },
-      {
-        "title": "Manual Process vs. AI Automation: What Changes",
-        "blocks": [
-          "ProcessManualWith AI AutomationBaltic B2B lead arrivesManual review, CRM entryInstant capture, enrichment, notificationFollow-up after meetingRep sends if they rememberAutomated sequence triggered for every logged meetingClient asks FAQ in LatvianStaff responds within hoursAI responds in secondsWeekly management reportManual aggregationAuto-generated and deliveredNordic client sends English inquiryDelayed manual responseAI responds instantly in EnglishLead goes cold in CRMStays coldRe-engagement triggered automatically"
+          "Latvia ranks 4th globally in individual AI adoption at 55%. (Cybernews AI Adoption Index 2025) 93% of Latvian enterprises are micro-companies — lean businesses needing maximum operational leverage. (EURES Latvia) Structural labour shortages deepening — ageing population and emigration creating sustained workforce gaps. (EURES Latvia 2024) AI Factory Antenna established in Latvia (EU EuroHPC programme) — national AI infrastructure investment underway. Latvia's digital infrastructure consistently ranks among Europe's strongest, supporting seamless AI automation deployment.",
+          "AI Automation vs. Hiring Additional Staff TaskHiring a Staff MemberAI AutomationLead qualificationNew hire; weeks of onboardingAutomated within daysCRM updatesRelies on rep discipline100% consistent, real-timeBaltic market communicationRequires multilingual staffAI handles LV/EN/LT/ET/RUWeekly reporting2–4 hours manualDelivered automaticallyCustomer support (routine)Full-time hireAI handles 60–80% of volume 24/7Follow-up sequencesDepends on rep memoryTriggered automaticallyCost€12,000–€30,000/yearFrom €1,800 setup + €350/monthOnboarding time4–12 weeks2–4 weeks to go liveAvailabilityBusiness hours24/7/365",
+          "Manual Process vs. AI Automation: What Changes ProcessManualWith AI AutomationBaltic B2B lead arrivesManual review, CRM entryInstant capture, enrichment, notificationFollow-up after meetingRep sends if they rememberAutomated sequence triggered for every logged meetingClient asks FAQ in LatvianStaff responds within hoursAI responds in secondsWeekly management reportManual aggregationAuto-generated and deliveredNordic client sends English inquiryDelayed manual responseAI responds instantly in EnglishLead goes cold in CRMStays coldRe-engagement triggered automatically"
         ]
       },
       {
         "title": "AI Automation Opportunities in Latvia",
-        "blocks": []
-      },
-      {
-        "title": "CRM automation integrated with Jumis, Horizon, HubSpot, Salesforce, Pipedrive",
-        "blocks": []
-      },
-      {
-        "title": "Baltic multilingual AI assistants — Latvian, Estonian, Lithuanian, Russian, English",
         "blocks": [
-          "Logistics and transit trade automation — Riga's strategic position for Baltic and EU trade flows"
+          "CRM automation integrated with Jumis, Horizon, HubSpot, Salesforce, Pipedrive Baltic multilingual AI assistants — Latvian, Estonian, Lithuanian, Russian, English Logistics and transit trade automation — Riga's strategic position for Baltic and EU trade flows Technology and IT services automation — Riga's growing tech sector Manufacturing automation — B2B inquiry management, supplier communications Professional services intake — Latvian law firms, accounting practices E-commerce automation for Latvian brands selling across Baltic and European markets"
         ]
-      },
-      {
-        "title": "Technology and IT services automation — Riga's growing tech sector",
-        "blocks": []
-      },
-      {
-        "title": "Manufacturing automation — B2B inquiry management, supplier communications",
-        "blocks": []
-      },
-      {
-        "title": "Professional services intake — Latvian law firms, accounting practices",
-        "blocks": []
-      },
-      {
-        "title": "E-commerce automation for Latvian brands selling across Baltic and European markets",
-        "blocks": []
       },
       {
         "title": "Relevant Industries",
-        "blocks": []
-      },
-      {
-        "title": "Technology & IT Services (Riga)",
         "blocks": [
-          "Latvia's growing tech sector. Trial nurturing, onboarding automation, multilingual customer support for Baltic and European clients."
-        ]
-      },
-      {
-        "title": "Logistics & Transit (Riga, Liepāja, Ventspils)",
-        "blocks": [
-          "Latvia's strategic logistics position for East-West trade. Shipment communication automation, partner updates, documentation workflows."
-        ]
-      },
-      {
-        "title": "Manufacturing (Riga, regional)",
-        "blocks": [
-          "Latvian manufacturing companies: B2B inquiry management, order confirmations, supplier communications."
-        ]
-      },
-      {
-        "title": "Professional Services (Riga)",
-        "blocks": [
-          "Law firms, accounting practices: client intake, scheduling, document workflows, GDPR-compliant data collection."
-        ]
-      },
-      {
-        "title": "Finance & Fintech (Riga)",
-        "blocks": [
-          "Riga's growing fintech sector: lead qualification, client onboarding, compliance document collection."
-        ]
-      },
-      {
-        "title": "Tourism & Hospitality (Riga, Jūrmala, nationwide)",
-        "blocks": [
-          "Latvia's tourism sector, including Riga's internationally popular city tourism: booking automation, multilingual guest communication."
-        ]
-      },
-      {
-        "title": "Real Estate (Riga)",
-        "blocks": [
-          "Latvian property market for domestic and international investors: lead management, inquiry automation."
+          "Technology & IT Services (Riga) Latvia's growing tech sector. Trial nurturing, onboarding automation, multilingual customer support for Baltic and European clients. Logistics & Transit (Riga, Liepāja, Ventspils) Latvia's strategic logistics position for East-West trade. Shipment communication automation, partner updates, documentation workflows. Manufacturing (Riga, regional) Latvian manufacturing companies: B2B inquiry management, order confirmations, supplier communications. Professional Services (Riga) Law firms, accounting practices: client intake, scheduling, document workflows, GDPR-compliant data collection. Finance & Fintech (Riga) Riga's growing fintech sector: lead qualification, client onboarding, compliance document collection. Tourism & Hospitality (Riga, Jūrmala, nationwide) Latvia's tourism sector, including Riga's internationally popular city tourism: booking automation, multilingual guest communication. Real Estate (Riga) Latvian property market for domestic and international investors: lead management, inquiry automation."
         ]
       },
       {
         "title": "Kubera AI Solutions for the Latvian Market",
-        "blocks": []
-      },
-      {
-        "title": "CRM Automation (Latvian-stack compatible)",
         "blocks": [
-          "Integrate with Latvian business systems or modern CRM platforms. Lead capture, CRM records, follow-up sequences — in Latvian, English, and Baltic languages."
-        ]
-      },
-      {
-        "title": "Baltic Multilingual AI Assistant",
-        "blocks": [
-          "An AI assistant communicating in Latvian, English, Estonian, Lithuanian, and Russian — essential for Baltic regional operations."
-        ]
-      },
-      {
-        "title": "Logistics Automation",
-        "blocks": [
-          "For Riga-area logistics companies: automated shipment status communications, exception alerts, partner update sequences."
-        ]
-      },
-      {
-        "title": "Lead Generation System (GPT-NTI)",
-        "blocks": [
-          "Complete lead capture: Latvian landing page, AI chatbot, CRM integration, automated follow-up."
-        ]
-      },
-      {
-        "title": "Professional Services Automation",
-        "blocks": [
-          "Client intake, scheduling, document request sequences in Latvian and English."
-        ]
-      },
-      {
-        "title": "Reporting Automation",
-        "blocks": [
-          "Automated weekly management reports replacing manual data aggregation."
+          "CRM Automation (Latvian-stack compatible) Integrate with Latvian business systems or modern CRM platforms. Lead capture, CRM records, follow-up sequences — in Latvian, English, and Baltic languages. Baltic Multilingual AI Assistant An AI assistant communicating in Latvian, English, Estonian, Lithuanian, and Russian — essential for Baltic regional operations. Logistics Automation For Riga-area logistics companies: automated shipment status communications, exception alerts, partner update sequences. Lead Generation System (GPT-NTI) Complete lead capture: Latvian landing page, AI chatbot, CRM integration, automated follow-up. Professional Services Automation Client intake, scheduling, document request sequences in Latvian and English. Reporting Automation Automated weekly management reports replacing manual data aggregation."
         ]
       },
       {
         "title": "Example Automation Scenarios",
-        "blocks": []
-      },
-      {
-        "title": "Scenario 1: Riga Technology Company",
         "blocks": [
-          "A 20-person Riga software company generates leads from Baltic and Nordic conferences. Sales engagement is inconsistent. Kubera AI builds a multilingual nurturing system — Latvian for Baltic leads, English for Nordic — with behavior triggers and automated demo offers."
-        ]
-      },
-      {
-        "title": "Scenario 2: Riga Logistics Company (Baltic Transit)",
-        "blocks": [
-          "A freight company handling Riga-Stockholm and Riga-Warsaw corridors manages client updates manually. Kubera AI automates shipment status communications in Latvian, Swedish, and Polish — clients receive proactive updates automatically."
-        ]
-      },
-      {
-        "title": "Scenario 3: Latvian Manufacturing Company",
-        "blocks": [
-          "A Riga-based manufacturer supplying Estonian and Finnish clients manages inquiry responses manually, often slowly. Kubera AI automates inquiry routing, multilingual acknowledgment (Latvian/Estonian/Finnish), and post-quote follow-up."
-        ]
-      },
-      {
-        "title": "Scenario 4: Riga Law Firm",
-        "blocks": [
-          "An 8-person commercial law firm serves Latvian and international clients. Kubera AI implements AI qualification, CRM integration, document collection, and calendar booking — recovering 3+ hours per lawyer per week."
-        ]
-      },
-      {
-        "title": "Scenario 5: Latvian E-commerce Brand (Baltic + Nordics)",
-        "blocks": [
-          "A Riga consumer brand sells across Latvia, Estonia, Lithuania, and Finland. Customer support in four languages overwhelms the small team. Kubera AI deploys a multilingual AI assistant handling standard inquiries automatically."
+          "Scenario 1: Riga Technology Company A 20-person Riga software company generates leads from Baltic and Nordic conferences. Sales engagement is inconsistent. Kubera AI builds a multilingual nurturing system — Latvian for Baltic leads, English for Nordic — with behavior triggers and automated demo offers. Scenario 2: Riga Logistics Company (Baltic Transit) A freight company handling Riga-Stockholm and Riga-Warsaw corridors manages client updates manually. Kubera AI automates shipment status communications in Latvian, Swedish, and Polish — clients receive proactive updates automatically. Scenario 3: Latvian Manufacturing Company A Riga-based manufacturer supplying Estonian and Finnish clients manages inquiry responses manually, often slowly. Kubera AI automates inquiry routing, multilingual acknowledgment (Latvian/Estonian/Finnish), and post-quote follow-up. Scenario 4: Riga Law Firm An 8-person commercial law firm serves Latvian and international clients. Kubera AI implements AI qualification, CRM integration, document collection, and calendar booking — recovering 3+ hours per lawyer per week. Scenario 5: Latvian E-commerce Brand (Baltic + Nordics) A Riga consumer brand sells across Latvia, Estonia, Lithuania, and Finland. Customer support in four languages overwhelms the small team. Kubera AI deploys a multilingual AI assistant handling standard inquiries automatically."
         ]
       },
       {

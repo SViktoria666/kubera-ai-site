@@ -9,13 +9,13 @@
 
 ## Pair comparison
 
-The hypothesis is CONFIRMED: every country has a canonical CountryPage model and a markdown-backed GeoPage entry. The canonical family has three populated sections per country. The markdown family is the affected family: 17 of 18 routes contain parser-created empty/title-only/thin section records; Spain is the unflagged exception under the existing classifier.
+The hypothesis is CONFIRMED: every country has a canonical CountryPage model and a markdown-backed GeoPage entry. The canonical family has three populated sections per country. Before remediation, 17 of 18 markdown routes contained parser-created empty/title-only records; after the shared parser fix, no GEO route emits empty or title-only sections. Thin records remain separately reported for owner/content review.
 
 ## Root-cause chain
 
 src/content/geo/*.md → scripts/generate-geo-kb.mjs → src/content/geo/generated.ts → src/content/geo/loader.ts → GeoPageData.sections → GeoPage.
 
-The source prose is present. The shared parser’s fallback rule treats a short line that does not end in punctuation as a section heading. Lists, short subheadings, and other content-bearing lines therefore become title-only sections. The generator and runtime loader share this parsing shape. GeoPage then renders every parsed section as a visible panel, including an empty blocks array. This is parser/schema loss amplified by the renderer’s unconditional panel contract, not missing authoring and not a CSS-only issue.
+The source prose is present. The former shared parser fallback treated a short line that did not end in punctuation as a section heading. Lists, short subheadings, and other content-bearing lines therefore became title-only sections. The generator and runtime loader shared this parsing shape. GeoPage also rendered every parsed section as a visible panel, including an empty blocks array. The remediation removes the unsafe fallback in both parser paths and adds a renderer fail-safe; this is parser/schema loss amplified by rendering, not missing authoring and not a CSS-only issue.
 
 ## Historical evidence
 
@@ -30,7 +30,7 @@ The source prose is present. The shared parser’s fallback rule treats a short 
 - NEVER AUTHORED: 0 confirmed.
 - AUTHORED THEN LOST: 0 confirmed.
 - SOURCE EXISTS / GENERATOR LOST: 0 confirmed.
-- GENERATED EXISTS / PARSER LOST: 155 empty + 58 structural title-only records; 17 affected pages.
+- GENERATED EXISTS / PARSER LOST BEFORE FIX: 155 empty + 58 structural title-only records; 17 affected pages.
 - PARSER EXISTS / RENDERER LOST: 0 confirmed.
 - INTENTIONAL SHORT: 86 thin records require content-owner review; they are not automatically defects.
 - STRUCTURAL PLACEHOLDER: 58.
@@ -42,7 +42,7 @@ Build/SEO validation checks route presence, metadata, source shape, and generate
 
 ## Production impact
 
-The same source/parser/renderer chain is used by real GEO routes, so the issue is production-relevant by code path. This task performed no production mutation or external crawl. The exact current-source affected set is 17 of 18 markdown family routes; canonical country pages are source-complete.
+The same source/parser/renderer chain is used by real GEO routes, so the issue is production-relevant by code path. The local remediation now produces zero empty/title-only GEO sections. External production parity remains unverified in this wave; no production mutation was performed.
 
 See the JSON evidence for every route, item, source field, generated field, parser field, and rendered field.
 

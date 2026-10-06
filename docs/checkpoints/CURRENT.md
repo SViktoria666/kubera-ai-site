@@ -609,3 +609,19 @@ Owner reviews the five representative Neon families locally. Separately plan a G
 ## EXACT NEXT STEP
 
 Owner reviews the forensic evidence and authorizes one bounded GEO parser-fidelity remediation wave. Do not write copy, change production, alter SEO/sitemap, deploy, or resume full owner review before that authorization.
+
+## GEO PARSER FIDELITY + CONTENT COMPLETENESS PROTECTION - 2026-10-06
+
+- Baseline verified at `8389407b1e2f5bb4048217d796563c90af26f451`; branch `neon-owner-forensic-20261006` remained isolated and `origin/main` remained unchanged.
+- Fixed the shared GEO parser contract in `src/content/geo/loader.ts` and `scripts/generate-geo-kb.mjs`: short non-terminal authored lines are no longer treated as headings by the unsafe length fallback. No country-specific exception or source copy change was made.
+- Added component-aware renderer protection in `GeoPage`: empty parsed sections are not emitted as visually empty content panels, while structural placeholders remain separately represented in the forensic history.
+- Added the permanent gate (`npm run validate:content`) and controlled failure suite (`npm run test:content`). It catches missing required bodies, title-only commercial cards, source/generated parity loss, and empty generated GEO sections without enforcing arbitrary word counts.
+- Full recheck: 211 real indexable user-facing routes; 211 healthy, 0 remaining affected. All 17 former high GEO defects are cleared at the parser/render contract level. Historical before counts remain: 155 empty, 213 title-only, 58 structural placeholders, and 86 thin/provisional records; no thin content was expanded and no placeholder was converted into copy.
+- GEO source/generated/parser parity passes for all 18 legacy markdown sources. Browser fidelity passes 90/90 checks across all 18 affected routes at 390/768/1024/1366/1440; no empty GEO copy, overflow, hydration, or page errors. External sandbox network noise is recorded and excluded as non-application noise. D1 remains 24/24.
+- SEO validation remains PASS (229 generated pages, 213 built indexable routes, 0 warnings); typecheck, build, content gate, and controlled tests pass. Production read-only verification remains `BLOCKED/UNKNOWN`; no production behavior is inferred from local evidence.
+- Permanent engineering rule documented: `TECHNICALLY VALID ≠ CONTENT COMPLETE ≠ USER READY` in `docs/design-engineering/KUBERA_CONTENT_COMPLETENESS_GATE.md`; incident recorded in `docs/incidents/2026-10-06-geo-parser-content-completeness.md`.
+- Evidence includes `reports/KUBERA_GEO_BROWSER_CONTENT_FIDELITY_2026-10-06.json` and `reports/geo-browser-fidelity/`, plus the updated GEO/site-wide forensic reports. No production, main, SEO, sitemap, design, or marketing content was modified.
+
+## EXACT NEXT STEP
+
+The GEO parser incident is technically closed for the identified parser defects. Owner content review is still required for the separate 86 thin/provisional records and 58 structural placeholders before any copy-remediation wave; do not invent or restore copy in this task.

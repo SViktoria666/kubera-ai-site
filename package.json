@@ -5,6 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "validate:blog": "node scripts/validate-blog-content.mjs",
+    "validate:content": "node scripts/validate-content-completeness.mjs",
     "validate:seo": "npm run build && node scripts/validate-seo-content.mjs",
     "generate:geo-kb": "node scripts/generate-geo-kb.mjs",
     "prebuild": "npm run validate:blog && npm run generate:geo-kb",
@@ -16,7 +17,8 @@
     "browser:test:seo": "playwright test tests/browser/seo.spec.ts",
     "browser:local": "node scripts/browser-gate.mjs local",
     "browser:preview": "node scripts/browser-gate.mjs preview",
-    "browser:production": "node scripts/browser-gate.mjs production"
+    "browser:production": "node scripts/browser-gate.mjs production",
+    "test:content": "node --test tests/content-completeness.test.mjs"
   },
   "dependencies": {
     "@sohumsuthar/liquid-glass": "^3.1.0",

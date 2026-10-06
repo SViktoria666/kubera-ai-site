@@ -72,7 +72,15 @@ function isSectionHeading(line: string, locale: "en" | "es") {
     return normalized.startsWith("introduccion") || normalized.startsWith("desafios del mercado") || normalized.startsWith("por que ");
   }
 
-  return normalized.length < 95 && !/[.?!]$/.test(normalized) && !/^\d+\./.test(normalized);
+  if (/^ai automation vs hiring additional staff$/.test(normalized)) return true;
+  if (/^manual process vs ai automation/.test(normalized)) return true;
+  if (/^which .* industries benefit most from ai automation$/.test(normalized)) return true;
+  if (/^why .* businesses choose kubera ai:?$/.test(normalized)) return true;
+
+  // Only explicit semantic section forms are top-level sections. Short
+  // content lines are valid authored prose/list labels and must remain in the
+  // current section rather than becoming title-only panels.
+  return false;
 }
 
 function isSubHeading(line: string) {

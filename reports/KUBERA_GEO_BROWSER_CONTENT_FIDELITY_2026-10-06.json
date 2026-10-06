@@ -1,0 +1,1637 @@
+{
+  "generatedAt": "2026-10-06T18:08:57.811Z",
+  "server": "http://127.0.0.1:3105",
+  "routes": 18,
+  "viewports": [
+    390,
+    768,
+    1024,
+    1366,
+    1440
+  ],
+  "checks": 90,
+  "failures": 0,
+  "results": [
+    {
+      "route": "/ai-automation-germany",
+      "width": 390,
+      "status": 200,
+      "h1": "AI Automation for German Businesses: Precision Systems That Actually Work",
+      "panelCount": 13,
+      "geoCopyCount": 12,
+      "emptyGeoCopy": 0,
+      "overflow": false,
+      "assistantCount": 0,
+      "hydrationError": false,
+      "consoleErrors": [
+        "Failed to load resource: net::ERR_NETWORK_ACCESS_DENIED",
+        "Failed to load resource: net::ERR_NETWORK_ACCESS_DENIED"
+      ],
+      "pageErrors": [],
+      "applicationConsoleErrors": []
+    },
+    {
+      "route": "/ai-automation-germany",
+      "width": 768,
+      "status": 200,
+      "h1": "AI Automation for German Businesses: Precision Systems That Actually Work",
+      "panelCount": 13,
+      "geoCopyCount": 12,
+      "emptyGeoCopy": 0,
+      "overflow": false,
+      "assistantCount": 0,
+      "hydrationError": false,
+      "consoleErrors": [
+        "Failed to load resource: net::ERR_NETWORK_ACCESS_DENIED",
+        "Failed to load resource: net::ERR_NETWORK_ACCESS_DENIED"
+      ],
+      "pageErrors": [],
+      "applicationConsoleErrors": []
+    },
+    {
+      "route": "/ai-automation-germany",
+      "width": 1024,
+      "status": 200,
+      "h1": "AI Automation for German Businesses: Precision Systems That Actually Work",
+      "panelCount": 13,
+      "geoCopyCount": 12,
+      "emptyGeoCopy": 0,
+      "overflow": false,
+      "assistantCount": 0,
+      "hydrationError": false,
+      "consoleErrors": [
+        "Failed to load resource: net::ERR_NETWORK_ACCESS_DENIED",
+        "Failed to load resource: net::ERR_NETWORK_ACCESS_DENIED"
+      ],
+      "pageErrors": [],
+      "applicationConsoleErrors": []
+    },
+    {
+      "route": "/ai-automation-germany",
+      "width": 1366,
+      "status": 200,
+      "h1": "AI Automation for German Businesses: Precision Systems That Actually Work",
+      "panelCount": 13,
+      "geoCopyCount": 12,
+      "emptyGeoCopy": 0,
+      "overflow": false,
+      "assistantCount": 0,
+      "hydrationError": false,
+      "consoleErrors": [
+        "Failed to load resource: net::ERR_NETWORK_ACCESS_DENIED",
+        "Failed to load resource: net::ERR_NETWORK_ACCESS_DENIED"
+      ],
+      "pageErrors": [],
+      "applicationConsoleErrors": []
+    },
+    {
+      "route": "/ai-automation-germany",
+      "width": 1440,
+      "status": 200,
+      "h1": "AI Automation for German Businesses: Precision Systems That Actually Work",
+      "panelCount": 13,
+      "geoCopyCount": 12,
+      "emptyGeoCopy": 0,
+      "overflow": false,
+      "assistantCount": 0,
+      "hydrationError": false,
+      "consoleErrors": [
+        "Failed to load resource: net::ERR_NETWORK_ACCESS_DENIED",
+        "Failed to load resource: net::ERR_NETWORK_ACCESS_DENIED"
+      ],
+      "pageErrors": [],
+      "applicationConsoleErrors": []
+    },
+    {
+      "route": "/ai-automation-netherlands",
+      "width": 390,
+      "status": 200,
+      "h1": "AI Automation for Dutch Businesses: Work Smarter, Scale Faster, Stay Ahead",
+      "panelCount": 13,
+      "geoCopyCount": 12,
+      "emptyGeoCopy": 0,
+      "overflow": false,
+      "assistantCount": 0,
+      "hydrationError": false,
+      "consoleErrors": [
+        "Failed to load resource: net::ERR_NETWORK_ACCESS_DENIED",
+        "Failed to load resource: net::ERR_NETWORK_ACCESS_DENIED"
+      ],
+      "pageErrors": [],
+      "applicationConsoleErrors": []
+    },
+    {
+      "route": "/ai-automation-netherlands",
+      "width": 768,
+      "status": 200,
+      "h1": "AI Automation for Dutch Businesses: Work Smarter, Scale Faster, Stay Ahead",
+      "panelCount": 13,
+      "geoCopyCount": 12,
+      "emptyGeoCopy": 0,
+      "overflow": false,
+      "assistantCount": 0,
+      "hydrationError": false,
+      "consoleErrors": [
+        "Failed to load resource: net::ERR_NETWORK_ACCESS_DENIED",
+        "Failed to load resource: net::ERR_NETWORK_ACCESS_DENIED"
+      ],
+      "pageErrors": [],
+      "applicationConsoleErrors": []
+    },
+    {
+      "route": "/ai-automation-netherlands",
+      "width": 1024,
+      "status": 200,
+      "h1": "AI Automation for Dutch Businesses: Work Smarter, Scale Faster, Stay Ahead",
+      "panelCount": 13,
+      "geoCopyCount": 12,
+      "emptyGeoCopy": 0,
+      "overflow": false,
+      "assistantCount": 0,
+      "hydrationError": false,
+      "consoleErrors": [
+        "Failed to load resource: net::ERR_NETWORK_ACCESS_DENIED",
+        "Failed to load resource: net::ERR_NETWORK_ACCESS_DENIED"
+      ],
+      "pageErrors": [],
+      "applicationConsoleErrors": []
+    },
+    {
+      "route": "/ai-automation-netherlands",
+      "width": 1366,
+      "status": 200,
+      "h1": "AI Automation for Dutch Businesses: Work Smarter, Scale Faster, Stay Ahead",
+      "panelCount": 13,
+      "geoCopyCount": 12,
+      "emptyGeoCopy": 0,
+      "overflow": false,
+      "assistantCount": 0,
+      "hydrationError": false,
+      "consoleErrors": [
+        "Failed to load resource: net::ERR_NETWORK_ACCESS_DENIED",
+        "Failed to load resource: net::ERR_NETWORK_ACCESS_DENIED"
+      ],
+      "pageErrors": [],
+      "applicationConsoleErrors": []
+    },
+    {
+      "route": "/ai-automation-netherlands",
+      "width": 1440,
+      "status": 200,
+      "h1": "AI Automation for Dutch Businesses: Work Smarter, Scale Faster, Stay Ahead",
+      "panelCount": 13,
+      "geoCopyCount": 12,
+      "emptyGeoCopy": 0,
+      "overflow": false,
+      "assistantCount": 0,
+      "hydrationError": false,
+      "consoleErrors": [
+        "Failed to load resource: net::ERR_NETWORK_ACCESS_DENIED",
+        "Failed to load resource: net::ERR_NETWORK_ACCESS_DENIED"
+      ],
+      "pageErrors": [],
+      "applicationConsoleErrors": []
+    },
+    {
+      "route": "/ai-automation-portugal",
+      "width": 390,
+      "status": 200,
+      "h1": "AI Automation for Portuguese Businesses: From Startup Nation to Automated Operation",
+      "panelCount": 12,
+      "geoCopyCount": 11,
+      "emptyGeoCopy": 0,
+      "overflow": false,
+      "assistantCount": 0,
+      "hydrationError": false,
+      "consoleErrors": [
+        "Failed to load resource: net::ERR_NETWORK_ACCESS_DENIED",
+        "Failed to load resource: net::ERR_NETWORK_ACCESS_DENIED"
+      ],
+      "pageErrors": [],
+      "applicationConsoleErrors": []
+    },
+    {
+      "route": "/ai-automation-portugal",
+      "width": 768,
+      "status": 200,
+      "h1": "AI Automation for Portuguese Businesses: From Startup Nation to Automated Operation",
+      "panelCount": 12,
+      "geoCopyCount": 11,
+      "emptyGeoCopy": 0,
+      "overflow": false,
+      "assistantCount": 0,
+      "hydrationError": false,
+      "consoleErrors": [
+        "Failed to load resource: net::ERR_NETWORK_ACCESS_DENIED",
+        "Failed to load resource: net::ERR_NETWORK_ACCESS_DENIED"
+      ],
+      "pageErrors": [],
+      "applicationConsoleErrors": []
+    },
+    {
+      "route": "/ai-automation-portugal",
+      "width": 1024,
+      "status": 200,
+      "h1": "AI Automation for Portuguese Businesses: From Startup Nation to Automated Operation",
+      "panelCount": 12,
+      "geoCopyCount": 11,
+      "emptyGeoCopy": 0,
+      "overflow": false,
+      "assistantCount": 0,
+      "hydrationError": false,
+      "consoleErrors": [
+        "Failed to load resource: net::ERR_NETWORK_ACCESS_DENIED",
+        "Failed to load resource: net::ERR_NETWORK_ACCESS_DENIED"
+      ],
+      "pageErrors": [],
+      "applicationConsoleErrors": []
+    },
+    {
+      "route": "/ai-automation-portugal",
+      "width": 1366,
+      "status": 200,
+      "h1": "AI Automation for Portuguese Businesses: From Startup Nation to Automated Operation",
+      "panelCount": 12,
+      "geoCopyCount": 11,
+      "emptyGeoCopy": 0,
+      "overflow": false,
+      "assistantCount": 0,
+      "hydrationError": false,
+      "consoleErrors": [
+        "Failed to load resource: net::ERR_NETWORK_ACCESS_DENIED",
+        "Failed to load resource: net::ERR_NETWORK_ACCESS_DENIED"
+      ],
+      "pageErrors": [],
+      "applicationConsoleErrors": []
+    },
+    {
+      "route": "/ai-automation-portugal",
+      "width": 1440,
+      "status": 200,
+      "h1": "AI Automation for Portuguese Businesses: From Startup Nation to Automated Operation",
+      "panelCount": 12,
+      "geoCopyCount": 11,
+      "emptyGeoCopy": 0,
+      "overflow": false,
+      "assistantCount": 0,
+      "hydrationError": false,
+      "consoleErrors": [
+        "Failed to load resource: net::ERR_NETWORK_ACCESS_DENIED",
+        "Failed to load resource: net::ERR_NETWORK_ACCESS_DENIED"
+      ],
+      "pageErrors": [],
+      "applicationConsoleErrors": []
+    },
+    {
+      "route": "/ai-automation-estonia",
+      "width": 390,
+      "status": 200,
+      "h1": "AI Automation for Estonian Businesses: Built Here. Built for You.",
+      "panelCount": 13,
+      "geoCopyCount": 12,
+      "emptyGeoCopy": 0,
+      "overflow": false,
+      "assistantCount": 0,
+      "hydrationError": false,
+      "consoleErrors": [
+        "Failed to load resource: net::ERR_NETWORK_ACCESS_DENIED",
+        "Failed to load resource: net::ERR_NETWORK_ACCESS_DENIED"
+      ],
+      "pageErrors": [],
+      "applicationConsoleErrors": []
+    },
+    {
+      "route": "/ai-automation-estonia",
+      "width": 768,
+      "status": 200,
+      "h1": "AI Automation for Estonian Businesses: Built Here. Built for You.",
+      "panelCount": 13,
+      "geoCopyCount": 12,
+      "emptyGeoCopy": 0,
+      "overflow": false,
+      "assistantCount": 0,
+      "hydrationError": false,
+      "consoleErrors": [
+        "Failed to load resource: net::ERR_NETWORK_ACCESS_DENIED",
+        "Failed to load resource: net::ERR_NETWORK_ACCESS_DENIED"
+      ],
+      "pageErrors": [],
+      "applicationConsoleErrors": []
+    },
+    {
+      "route": "/ai-automation-estonia",
+      "width": 1024,
+      "status": 200,
+      "h1": "AI Automation for Estonian Businesses: Built Here. Built for You.",
+      "panelCount": 13,
+      "geoCopyCount": 12,
+      "emptyGeoCopy": 0,
+      "overflow": false,
+      "assistantCount": 0,
+      "hydrationError": false,
+      "consoleErrors": [
+        "Failed to load resource: net::ERR_NETWORK_ACCESS_DENIED",
+        "Failed to load resource: net::ERR_NETWORK_ACCESS_DENIED"
+      ],
+      "pageErrors": [],
+      "applicationConsoleErrors": []
+    },
+    {
+      "route": "/ai-automation-estonia",
+      "width": 1366,
+      "status": 200,
+      "h1": "AI Automation for Estonian Businesses: Built Here. Built for You.",
+      "panelCount": 13,
+      "geoCopyCount": 12,
+      "emptyGeoCopy": 0,
+      "overflow": false,
+      "assistantCount": 0,
+      "hydrationError": false,
+      "consoleErrors": [
+        "Failed to load resource: net::ERR_NETWORK_ACCESS_DENIED",
+        "Failed to load resource: net::ERR_NETWORK_ACCESS_DENIED"
+      ],
+      "pageErrors": [],
+      "applicationConsoleErrors": []
+    },
+    {
+      "route": "/ai-automation-estonia",
+      "width": 1440,
+      "status": 200,
+      "h1": "AI Automation for Estonian Businesses: Built Here. Built for You.",
+      "panelCount": 13,
+      "geoCopyCount": 12,
+      "emptyGeoCopy": 0,
+      "overflow": false,
+      "assistantCount": 0,
+      "hydrationError": false,
+      "consoleErrors": [
+        "Failed to load resource: net::ERR_NETWORK_ACCESS_DENIED",
+        "Failed to load resource: net::ERR_NETWORK_ACCESS_DENIED"
+      ],
+      "pageErrors": [],
+      "applicationConsoleErrors": []
+    },
+    {
+      "route": "/automatizacion-ia-espana",
+      "width": 390,
+      "status": 200,
+      "h1": "Automatización con IA para Empresas Españolas: Trabaja con Inteligencia, Crece sin Límites",
+      "panelCount": 9,
+      "geoCopyCount": 8,
+      "emptyGeoCopy": 0,
+      "overflow": false,
+      "assistantCount": 0,
+      "hydrationError": false,
+      "consoleErrors": [
+        "Failed to load resource: net::ERR_NETWORK_ACCESS_DENIED",
+        "Failed to load resource: net::ERR_NETWORK_ACCESS_DENIED"
+      ],
+      "pageErrors": [],
+      "applicationConsoleErrors": []
+    },
+    {
+      "route": "/automatizacion-ia-espana",
+      "width": 768,
+      "status": 200,
+      "h1": "Automatización con IA para Empresas Españolas: Trabaja con Inteligencia, Crece sin Límites",
+      "panelCount": 9,
+      "geoCopyCount": 8,
+      "emptyGeoCopy": 0,
+      "overflow": false,
+      "assistantCount": 0,
+      "hydrationError": false,
+      "consoleErrors": [
+        "Failed to load resource: net::ERR_NETWORK_ACCESS_DENIED",
+        "Failed to load resource: net::ERR_NETWORK_ACCESS_DENIED"
+      ],
+      "pageErrors": [],
+      "applicationConsoleErrors": []
+    },
+    {
+      "route": "/automatizacion-ia-espana",
+      "width": 1024,
+      "status": 200,
+      "h1": "Automatización con IA para Empresas Españolas: Trabaja con Inteligencia, Crece sin Límites",
+      "panelCount": 9,
+      "geoCopyCount": 8,
+      "emptyGeoCopy": 0,
+      "overflow": false,
+      "assistantCount": 0,
+      "hydrationError": false,
+      "consoleErrors": [
+        "Failed to load resource: net::ERR_NETWORK_ACCESS_DENIED",
+        "Failed to load resource: net::ERR_NETWORK_ACCESS_DENIED"
+      ],
+      "pageErrors": [],
+      "applicationConsoleErrors": []
+    },
+    {
+      "route": "/automatizacion-ia-espana",
+      "width": 1366,
+      "status": 200,
+      "h1": "Automatización con IA para Empresas Españolas: Trabaja con Inteligencia, Crece sin Límites",
+      "panelCount": 9,
+      "geoCopyCount": 8,
+      "emptyGeoCopy": 0,
+      "overflow": false,
+      "assistantCount": 0,
+      "hydrationError": false,
+      "consoleErrors": [
+        "Failed to load resource: net::ERR_NETWORK_ACCESS_DENIED",
+        "Failed to load resource: net::ERR_NETWORK_ACCESS_DENIED"
+      ],
+      "pageErrors": [],
+      "applicationConsoleErrors": []
+    },
+    {
+      "route": "/automatizacion-ia-espana",
+      "width": 1440,
+      "status": 200,
+      "h1": "Automatización con IA para Empresas Españolas: Trabaja con Inteligencia, Crece sin Límites",
+      "panelCount": 9,
+      "geoCopyCount": 8,
+      "emptyGeoCopy": 0,
+      "overflow": false,
+      "assistantCount": 0,
+      "hydrationError": false,
+      "consoleErrors": [
+        "Failed to load resource: net::ERR_NETWORK_ACCESS_DENIED",
+        "Failed to load resource: net::ERR_NETWORK_ACCESS_DENIED"
+      ],
+      "pageErrors": [],
+      "applicationConsoleErrors": []
+    },
+    {
+      "route": "/ai-automation-france",
+      "width": 390,
+      "status": 200,
+      "h1": "AI Automation for French Businesses: Systems That Work While You Focus on Growth",
+      "panelCount": 12,
+      "geoCopyCount": 11,
+      "emptyGeoCopy": 0,
+      "overflow": false,
+      "assistantCount": 0,
+      "hydrationError": false,
+      "consoleErrors": [
+        "Failed to load resource: net::ERR_NETWORK_ACCESS_DENIED",
+        "Failed to load resource: net::ERR_NETWORK_ACCESS_DENIED"
+      ],
+      "pageErrors": [],
+      "applicationConsoleErrors": []
+    },
+    {
+      "route": "/ai-automation-france",
+      "width": 768,
+      "status": 200,
+      "h1": "AI Automation for French Businesses: Systems That Work While You Focus on Growth",
+      "panelCount": 12,
+      "geoCopyCount": 11,
+      "emptyGeoCopy": 0,
+      "overflow": false,
+      "assistantCount": 0,
+      "hydrationError": false,
+      "consoleErrors": [
+        "Failed to load resource: net::ERR_NETWORK_ACCESS_DENIED",
+        "Failed to load resource: net::ERR_NETWORK_ACCESS_DENIED"
+      ],
+      "pageErrors": [],
+      "applicationConsoleErrors": []
+    },
+    {
+      "route": "/ai-automation-france",
+      "width": 1024,
+      "status": 200,
+      "h1": "AI Automation for French Businesses: Systems That Work While You Focus on Growth",
+      "panelCount": 12,
+      "geoCopyCount": 11,
+      "emptyGeoCopy": 0,
+      "overflow": false,
+      "assistantCount": 0,
+      "hydrationError": false,
+      "consoleErrors": [
+        "Failed to load resource: net::ERR_NETWORK_ACCESS_DENIED",
+        "Failed to load resource: net::ERR_NETWORK_ACCESS_DENIED"
+      ],
+      "pageErrors": [],
+      "applicationConsoleErrors": []
+    },
+    {
+      "route": "/ai-automation-france",
+      "width": 1366,
+      "status": 200,
+      "h1": "AI Automation for French Businesses: Systems That Work While You Focus on Growth",
+      "panelCount": 12,
+      "geoCopyCount": 11,
+      "emptyGeoCopy": 0,
+      "overflow": false,
+      "assistantCount": 0,
+      "hydrationError": false,
+      "consoleErrors": [
+        "Failed to load resource: net::ERR_NETWORK_ACCESS_DENIED",
+        "Failed to load resource: net::ERR_NETWORK_ACCESS_DENIED"
+      ],
+      "pageErrors": [],
+      "applicationConsoleErrors": []
+    },
+    {
+      "route": "/ai-automation-france",
+      "width": 1440,
+      "status": 200,
+      "h1": "AI Automation for French Businesses: Systems That Work While You Focus on Growth",
+      "panelCount": 12,
+      "geoCopyCount": 11,
+      "emptyGeoCopy": 0,
+      "overflow": false,
+      "assistantCount": 0,
+      "hydrationError": false,
+      "consoleErrors": [
+        "Failed to load resource: net::ERR_NETWORK_ACCESS_DENIED",
+        "Failed to load resource: net::ERR_NETWORK_ACCESS_DENIED"
+      ],
+      "pageErrors": [],
+      "applicationConsoleErrors": []
+    },
+    {
+      "route": "/ai-automation-italy",
+      "width": 390,
+      "status": 200,
+      "h1": "AI Automation for Italian Businesses: The Competitive Advantage Your Competitors Don't Have Yet",
+      "panelCount": 12,
+      "geoCopyCount": 11,
+      "emptyGeoCopy": 0,
+      "overflow": false,
+      "assistantCount": 0,
+      "hydrationError": false,
+      "consoleErrors": [
+        "Failed to load resource: net::ERR_NETWORK_ACCESS_DENIED",
+        "Failed to load resource: net::ERR_NETWORK_ACCESS_DENIED"
+      ],
+      "pageErrors": [],
+      "applicationConsoleErrors": []
+    },
+    {
+      "route": "/ai-automation-italy",
+      "width": 768,
+      "status": 200,
+      "h1": "AI Automation for Italian Businesses: The Competitive Advantage Your Competitors Don't Have Yet",
+      "panelCount": 12,
+      "geoCopyCount": 11,
+      "emptyGeoCopy": 0,
+      "overflow": false,
+      "assistantCount": 0,
+      "hydrationError": false,
+      "consoleErrors": [
+        "Failed to load resource: net::ERR_NETWORK_ACCESS_DENIED",
+        "Failed to load resource: net::ERR_NETWORK_ACCESS_DENIED"
+      ],
+      "pageErrors": [],
+      "applicationConsoleErrors": []
+    },
+    {
+      "route": "/ai-automation-italy",
+      "width": 1024,
+      "status": 200,
+      "h1": "AI Automation for Italian Businesses: The Competitive Advantage Your Competitors Don't Have Yet",
+      "panelCount": 12,
+      "geoCopyCount": 11,
+      "emptyGeoCopy": 0,
+      "overflow": false,
+      "assistantCount": 0,
+      "hydrationError": false,
+      "consoleErrors": [
+        "Failed to load resource: net::ERR_NETWORK_ACCESS_DENIED",
+        "Failed to load resource: net::ERR_NETWORK_ACCESS_DENIED"
+      ],
+      "pageErrors": [],
+      "applicationConsoleErrors": []
+    },
+    {
+      "route": "/ai-automation-italy",
+      "width": 1366,
+      "status": 200,
+      "h1": "AI Automation for Italian Businesses: The Competitive Advantage Your Competitors Don't Have Yet",
+      "panelCount": 12,
+      "geoCopyCount": 11,
+      "emptyGeoCopy": 0,
+      "overflow": false,
+      "assistantCount": 0,
+      "hydrationError": false,
+      "consoleErrors": [
+        "Failed to load resource: net::ERR_NETWORK_ACCESS_DENIED",
+        "Failed to load resource: net::ERR_NETWORK_ACCESS_DENIED"
+      ],
+      "pageErrors": [],
+      "applicationConsoleErrors": []
+    },
+    {
+      "route": "/ai-automation-italy",
+      "width": 1440,
+      "status": 200,
+      "h1": "AI Automation for Italian Businesses: The Competitive Advantage Your Competitors Don't Have Yet",
+      "panelCount": 12,
+      "geoCopyCount": 11,
+      "emptyGeoCopy": 0,
+      "overflow": false,
+      "assistantCount": 0,
+      "hydrationError": false,
+      "consoleErrors": [
+        "Failed to load resource: net::ERR_NETWORK_ACCESS_DENIED",
+        "Failed to load resource: net::ERR_NETWORK_ACCESS_DENIED"
+      ],
+      "pageErrors": [],
+      "applicationConsoleErrors": []
+    },
+    {
+      "route": "/ai-automation-belgium",
+      "width": 390,
+      "status": 200,
+      "h1": "AI Automation for Belgian Businesses: Multilingual by Design, Results by Default",
+      "panelCount": 12,
+      "geoCopyCount": 11,
+      "emptyGeoCopy": 0,
+      "overflow": false,
+      "assistantCount": 0,
+      "hydrationError": false,
+      "consoleErrors": [
+        "Failed to load resource: net::ERR_NETWORK_ACCESS_DENIED",
+        "Failed to load resource: net::ERR_NETWORK_ACCESS_DENIED"
+      ],
+      "pageErrors": [],
+      "applicationConsoleErrors": []
+    },
+    {
+      "route": "/ai-automation-belgium",
+      "width": 768,
+      "status": 200,
+      "h1": "AI Automation for Belgian Businesses: Multilingual by Design, Results by Default",
+      "panelCount": 12,
+      "geoCopyCount": 11,
+      "emptyGeoCopy": 0,
+      "overflow": false,
+      "assistantCount": 0,
+      "hydrationError": false,
+      "consoleErrors": [
+        "Failed to load resource: net::ERR_NETWORK_ACCESS_DENIED",
+        "Failed to load resource: net::ERR_NETWORK_ACCESS_DENIED"
+      ],
+      "pageErrors": [],
+      "applicationConsoleErrors": []
+    },
+    {
+      "route": "/ai-automation-belgium",
+      "width": 1024,
+      "status": 200,
+      "h1": "AI Automation for Belgian Businesses: Multilingual by Design, Results by Default",
+      "panelCount": 12,
+      "geoCopyCount": 11,
+      "emptyGeoCopy": 0,
+      "overflow": false,
+      "assistantCount": 0,
+      "hydrationError": false,
+      "consoleErrors": [
+        "Failed to load resource: net::ERR_NETWORK_ACCESS_DENIED",
+        "Failed to load resource: net::ERR_NETWORK_ACCESS_DENIED"
+      ],
+      "pageErrors": [],
+      "applicationConsoleErrors": []
+    },
+    {
+      "route": "/ai-automation-belgium",
+      "width": 1366,
+      "status": 200,
+      "h1": "AI Automation for Belgian Businesses: Multilingual by Design, Results by Default",
+      "panelCount": 12,
+      "geoCopyCount": 11,
+      "emptyGeoCopy": 0,
+      "overflow": false,
+      "assistantCount": 0,
+      "hydrationError": false,
+      "consoleErrors": [
+        "Failed to load resource: net::ERR_NETWORK_ACCESS_DENIED",
+        "Failed to load resource: net::ERR_NETWORK_ACCESS_DENIED"
+      ],
+      "pageErrors": [],
+      "applicationConsoleErrors": []
+    },
+    {
+      "route": "/ai-automation-belgium",
+      "width": 1440,
+      "status": 200,
+      "h1": "AI Automation for Belgian Businesses: Multilingual by Design, Results by Default",
+      "panelCount": 12,
+      "geoCopyCount": 11,
+      "emptyGeoCopy": 0,
+      "overflow": false,
+      "assistantCount": 0,
+      "hydrationError": false,
+      "consoleErrors": [
+        "Failed to load resource: net::ERR_NETWORK_ACCESS_DENIED",
+        "Failed to load resource: net::ERR_NETWORK_ACCESS_DENIED"
+      ],
+      "pageErrors": [],
+      "applicationConsoleErrors": []
+    },
+    {
+      "route": "/ai-automation-austria",
+      "width": 390,
+      "status": 200,
+      "h1": "AI Automation for Austrian Businesses: Engineered for Precision, Built to Scale",
+      "panelCount": 11,
+      "geoCopyCount": 10,
+      "emptyGeoCopy": 0,
+      "overflow": false,
+      "assistantCount": 0,
+      "hydrationError": false,
+      "consoleErrors": [
+        "Failed to load resource: net::ERR_NETWORK_ACCESS_DENIED",
+        "Failed to load resource: net::ERR_NETWORK_ACCESS_DENIED"
+      ],
+      "pageErrors": [],
+      "applicationConsoleErrors": []
+    },
+    {
+      "route": "/ai-automation-austria",
+      "width": 768,
+      "status": 200,
+      "h1": "AI Automation for Austrian Businesses: Engineered for Precision, Built to Scale",
+      "panelCount": 11,
+      "geoCopyCount": 10,
+      "emptyGeoCopy": 0,
+      "overflow": false,
+      "assistantCount": 0,
+      "hydrationError": false,
+      "consoleErrors": [
+        "Failed to load resource: net::ERR_NETWORK_ACCESS_DENIED",
+        "Failed to load resource: net::ERR_NETWORK_ACCESS_DENIED"
+      ],
+      "pageErrors": [],
+      "applicationConsoleErrors": []
+    },
+    {
+      "route": "/ai-automation-austria",
+      "width": 1024,
+      "status": 200,
+      "h1": "AI Automation for Austrian Businesses: Engineered for Precision, Built to Scale",
+      "panelCount": 11,
+      "geoCopyCount": 10,
+      "emptyGeoCopy": 0,
+      "overflow": false,
+      "assistantCount": 0,
+      "hydrationError": false,
+      "consoleErrors": [
+        "Failed to load resource: net::ERR_NETWORK_ACCESS_DENIED",
+        "Failed to load resource: net::ERR_NETWORK_ACCESS_DENIED"
+      ],
+      "pageErrors": [],
+      "applicationConsoleErrors": []
+    },
+    {
+      "route": "/ai-automation-austria",
+      "width": 1366,
+      "status": 200,
+      "h1": "AI Automation for Austrian Businesses: Engineered for Precision, Built to Scale",
+      "panelCount": 11,
+      "geoCopyCount": 10,
+      "emptyGeoCopy": 0,
+      "overflow": false,
+      "assistantCount": 0,
+      "hydrationError": false,
+      "consoleErrors": [
+        "Failed to load resource: net::ERR_NETWORK_ACCESS_DENIED",
+        "Failed to load resource: net::ERR_NETWORK_ACCESS_DENIED"
+      ],
+      "pageErrors": [],
+      "applicationConsoleErrors": []
+    },
+    {
+      "route": "/ai-automation-austria",
+      "width": 1440,
+      "status": 200,
+      "h1": "AI Automation for Austrian Businesses: Engineered for Precision, Built to Scale",
+      "panelCount": 11,
+      "geoCopyCount": 10,
+      "emptyGeoCopy": 0,
+      "overflow": false,
+      "assistantCount": 0,
+      "hydrationError": false,
+      "consoleErrors": [
+        "Failed to load resource: net::ERR_NETWORK_ACCESS_DENIED",
+        "Failed to load resource: net::ERR_NETWORK_ACCESS_DENIED"
+      ],
+      "pageErrors": [],
+      "applicationConsoleErrors": []
+    },
+    {
+      "route": "/ai-automation-switzerland",
+      "width": 390,
+      "status": 200,
+      "h1": "AI Automation for Swiss Businesses: Precision, Privacy, Performance",
+      "panelCount": 12,
+      "geoCopyCount": 11,
+      "emptyGeoCopy": 0,
+      "overflow": false,
+      "assistantCount": 0,
+      "hydrationError": false,
+      "consoleErrors": [
+        "Failed to load resource: net::ERR_NETWORK_ACCESS_DENIED",
+        "Failed to load resource: net::ERR_NETWORK_ACCESS_DENIED"
+      ],
+      "pageErrors": [],
+      "applicationConsoleErrors": []
+    },
+    {
+      "route": "/ai-automation-switzerland",
+      "width": 768,
+      "status": 200,
+      "h1": "AI Automation for Swiss Businesses: Precision, Privacy, Performance",
+      "panelCount": 12,
+      "geoCopyCount": 11,
+      "emptyGeoCopy": 0,
+      "overflow": false,
+      "assistantCount": 0,
+      "hydrationError": false,
+      "consoleErrors": [
+        "Failed to load resource: net::ERR_NETWORK_ACCESS_DENIED",
+        "Failed to load resource: net::ERR_NETWORK_ACCESS_DENIED"
+      ],
+      "pageErrors": [],
+      "applicationConsoleErrors": []
+    },
+    {
+      "route": "/ai-automation-switzerland",
+      "width": 1024,
+      "status": 200,
+      "h1": "AI Automation for Swiss Businesses: Precision, Privacy, Performance",
+      "panelCount": 12,
+      "geoCopyCount": 11,
+      "emptyGeoCopy": 0,
+      "overflow": false,
+      "assistantCount": 0,
+      "hydrationError": false,
+      "consoleErrors": [
+        "Failed to load resource: net::ERR_NETWORK_ACCESS_DENIED",
+        "Failed to load resource: net::ERR_NETWORK_ACCESS_DENIED"
+      ],
+      "pageErrors": [],
+      "applicationConsoleErrors": []
+    },
+    {
+      "route": "/ai-automation-switzerland",
+      "width": 1366,
+      "status": 200,
+      "h1": "AI Automation for Swiss Businesses: Precision, Privacy, Performance",
+      "panelCount": 12,
+      "geoCopyCount": 11,
+      "emptyGeoCopy": 0,
+      "overflow": false,
+      "assistantCount": 0,
+      "hydrationError": false,
+      "consoleErrors": [
+        "Failed to load resource: net::ERR_NETWORK_ACCESS_DENIED",
+        "Failed to load resource: net::ERR_NETWORK_ACCESS_DENIED"
+      ],
+      "pageErrors": [],
+      "applicationConsoleErrors": []
+    },
+    {
+      "route": "/ai-automation-switzerland",
+      "width": 1440,
+      "status": 200,
+      "h1": "AI Automation for Swiss Businesses: Precision, Privacy, Performance",
+      "panelCount": 12,
+      "geoCopyCount": 11,
+      "emptyGeoCopy": 0,
+      "overflow": false,
+      "assistantCount": 0,
+      "hydrationError": false,
+      "consoleErrors": [
+        "Failed to load resource: net::ERR_NETWORK_ACCESS_DENIED",
+        "Failed to load resource: net::ERR_NETWORK_ACCESS_DENIED"
+      ],
+      "pageErrors": [],
+      "applicationConsoleErrors": []
+    },
+    {
+      "route": "/ai-automation-ireland",
+      "width": 390,
+      "status": 200,
+      "h1": "AI Automation for Irish Businesses: From Smart Ambition to Scalable Operations",
+      "panelCount": 12,
+      "geoCopyCount": 11,
+      "emptyGeoCopy": 0,
+      "overflow": false,
+      "assistantCount": 0,
+      "hydrationError": false,
+      "consoleErrors": [
+        "Failed to load resource: net::ERR_NETWORK_ACCESS_DENIED",
+        "Failed to load resource: net::ERR_NETWORK_ACCESS_DENIED"
+      ],
+      "pageErrors": [],
+      "applicationConsoleErrors": []
+    },
+    {
+      "route": "/ai-automation-ireland",
+      "width": 768,
+      "status": 200,
+      "h1": "AI Automation for Irish Businesses: From Smart Ambition to Scalable Operations",
+      "panelCount": 12,
+      "geoCopyCount": 11,
+      "emptyGeoCopy": 0,
+      "overflow": false,
+      "assistantCount": 0,
+      "hydrationError": false,
+      "consoleErrors": [
+        "Failed to load resource: net::ERR_NETWORK_ACCESS_DENIED",
+        "Failed to load resource: net::ERR_NETWORK_ACCESS_DENIED"
+      ],
+      "pageErrors": [],
+      "applicationConsoleErrors": []
+    },
+    {
+      "route": "/ai-automation-ireland",
+      "width": 1024,
+      "status": 200,
+      "h1": "AI Automation for Irish Businesses: From Smart Ambition to Scalable Operations",
+      "panelCount": 12,
+      "geoCopyCount": 11,
+      "emptyGeoCopy": 0,
+      "overflow": false,
+      "assistantCount": 0,
+      "hydrationError": false,
+      "consoleErrors": [
+        "Failed to load resource: net::ERR_NETWORK_ACCESS_DENIED",
+        "Failed to load resource: net::ERR_NETWORK_ACCESS_DENIED"
+      ],
+      "pageErrors": [],
+      "applicationConsoleErrors": []
+    },
+    {
+      "route": "/ai-automation-ireland",
+      "width": 1366,
+      "status": 200,
+      "h1": "AI Automation for Irish Businesses: From Smart Ambition to Scalable Operations",
+      "panelCount": 12,
+      "geoCopyCount": 11,
+      "emptyGeoCopy": 0,
+      "overflow": false,
+      "assistantCount": 0,
+      "hydrationError": false,
+      "consoleErrors": [
+        "Failed to load resource: net::ERR_NETWORK_ACCESS_DENIED",
+        "Failed to load resource: net::ERR_NETWORK_ACCESS_DENIED"
+      ],
+      "pageErrors": [],
+      "applicationConsoleErrors": []
+    },
+    {
+      "route": "/ai-automation-ireland",
+      "width": 1440,
+      "status": 200,
+      "h1": "AI Automation for Irish Businesses: From Smart Ambition to Scalable Operations",
+      "panelCount": 12,
+      "geoCopyCount": 11,
+      "emptyGeoCopy": 0,
+      "overflow": false,
+      "assistantCount": 0,
+      "hydrationError": false,
+      "consoleErrors": [
+        "Failed to load resource: net::ERR_NETWORK_ACCESS_DENIED",
+        "Failed to load resource: net::ERR_NETWORK_ACCESS_DENIED"
+      ],
+      "pageErrors": [],
+      "applicationConsoleErrors": []
+    },
+    {
+      "route": "/ai-automation-cyprus",
+      "width": 390,
+      "status": 200,
+      "h1": "AI Automation for Cypriot Businesses: The Island's People Are Ready. Now It's Time for the Businesses.",
+      "panelCount": 12,
+      "geoCopyCount": 11,
+      "emptyGeoCopy": 0,
+      "overflow": false,
+      "assistantCount": 0,
+      "hydrationError": false,
+      "consoleErrors": [
+        "Failed to load resource: net::ERR_NETWORK_ACCESS_DENIED",
+        "Failed to load resource: net::ERR_NETWORK_ACCESS_DENIED"
+      ],
+      "pageErrors": [],
+      "applicationConsoleErrors": []
+    },
+    {
+      "route": "/ai-automation-cyprus",
+      "width": 768,
+      "status": 200,
+      "h1": "AI Automation for Cypriot Businesses: The Island's People Are Ready. Now It's Time for the Businesses.",
+      "panelCount": 12,
+      "geoCopyCount": 11,
+      "emptyGeoCopy": 0,
+      "overflow": false,
+      "assistantCount": 0,
+      "hydrationError": false,
+      "consoleErrors": [
+        "Failed to load resource: net::ERR_NETWORK_ACCESS_DENIED",
+        "Failed to load resource: net::ERR_NETWORK_ACCESS_DENIED"
+      ],
+      "pageErrors": [],
+      "applicationConsoleErrors": []
+    },
+    {
+      "route": "/ai-automation-cyprus",
+      "width": 1024,
+      "status": 200,
+      "h1": "AI Automation for Cypriot Businesses: The Island's People Are Ready. Now It's Time for the Businesses.",
+      "panelCount": 12,
+      "geoCopyCount": 11,
+      "emptyGeoCopy": 0,
+      "overflow": false,
+      "assistantCount": 0,
+      "hydrationError": false,
+      "consoleErrors": [
+        "Failed to load resource: net::ERR_NETWORK_ACCESS_DENIED",
+        "Failed to load resource: net::ERR_NETWORK_ACCESS_DENIED"
+      ],
+      "pageErrors": [],
+      "applicationConsoleErrors": []
+    },
+    {
+      "route": "/ai-automation-cyprus",
+      "width": 1366,
+      "status": 200,
+      "h1": "AI Automation for Cypriot Businesses: The Island's People Are Ready. Now It's Time for the Businesses.",
+      "panelCount": 12,
+      "geoCopyCount": 11,
+      "emptyGeoCopy": 0,
+      "overflow": false,
+      "assistantCount": 0,
+      "hydrationError": false,
+      "consoleErrors": [
+        "Failed to load resource: net::ERR_NETWORK_ACCESS_DENIED",
+        "Failed to load resource: net::ERR_NETWORK_ACCESS_DENIED"
+      ],
+      "pageErrors": [],
+      "applicationConsoleErrors": []
+    },
+    {
+      "route": "/ai-automation-cyprus",
+      "width": 1440,
+      "status": 200,
+      "h1": "AI Automation for Cypriot Businesses: The Island's People Are Ready. Now It's Time for the Businesses.",
+      "panelCount": 12,
+      "geoCopyCount": 11,
+      "emptyGeoCopy": 0,
+      "overflow": false,
+      "assistantCount": 0,
+      "hydrationError": false,
+      "consoleErrors": [
+        "Failed to load resource: net::ERR_NETWORK_ACCESS_DENIED",
+        "Failed to load resource: net::ERR_NETWORK_ACCESS_DENIED"
+      ],
+      "pageErrors": [],
+      "applicationConsoleErrors": []
+    },
+    {
+      "route": "/ai-automation-finland",
+      "width": 390,
+      "status": 200,
+      "h1": "AI Automation for Finnish Businesses: Engineered for Efficiency, Built to Scale",
+      "panelCount": 12,
+      "geoCopyCount": 11,
+      "emptyGeoCopy": 0,
+      "overflow": false,
+      "assistantCount": 0,
+      "hydrationError": false,
+      "consoleErrors": [
+        "Failed to load resource: net::ERR_NETWORK_ACCESS_DENIED",
+        "Failed to load resource: net::ERR_NETWORK_ACCESS_DENIED"
+      ],
+      "pageErrors": [],
+      "applicationConsoleErrors": []
+    },
+    {
+      "route": "/ai-automation-finland",
+      "width": 768,
+      "status": 200,
+      "h1": "AI Automation for Finnish Businesses: Engineered for Efficiency, Built to Scale",
+      "panelCount": 12,
+      "geoCopyCount": 11,
+      "emptyGeoCopy": 0,
+      "overflow": false,
+      "assistantCount": 0,
+      "hydrationError": false,
+      "consoleErrors": [
+        "Failed to load resource: net::ERR_NETWORK_ACCESS_DENIED",
+        "Failed to load resource: net::ERR_NETWORK_ACCESS_DENIED"
+      ],
+      "pageErrors": [],
+      "applicationConsoleErrors": []
+    },
+    {
+      "route": "/ai-automation-finland",
+      "width": 1024,
+      "status": 200,
+      "h1": "AI Automation for Finnish Businesses: Engineered for Efficiency, Built to Scale",
+      "panelCount": 12,
+      "geoCopyCount": 11,
+      "emptyGeoCopy": 0,
+      "overflow": false,
+      "assistantCount": 0,
+      "hydrationError": false,
+      "consoleErrors": [
+        "Failed to load resource: net::ERR_NETWORK_ACCESS_DENIED",
+        "Failed to load resource: net::ERR_NETWORK_ACCESS_DENIED"
+      ],
+      "pageErrors": [],
+      "applicationConsoleErrors": []
+    },
+    {
+      "route": "/ai-automation-finland",
+      "width": 1366,
+      "status": 200,
+      "h1": "AI Automation for Finnish Businesses: Engineered for Efficiency, Built to Scale",
+      "panelCount": 12,
+      "geoCopyCount": 11,
+      "emptyGeoCopy": 0,
+      "overflow": false,
+      "assistantCount": 0,
+      "hydrationError": false,
+      "consoleErrors": [
+        "Failed to load resource: net::ERR_NETWORK_ACCESS_DENIED",
+        "Failed to load resource: net::ERR_NETWORK_ACCESS_DENIED"
+      ],
+      "pageErrors": [],
+      "applicationConsoleErrors": []
+    },
+    {
+      "route": "/ai-automation-finland",
+      "width": 1440,
+      "status": 200,
+      "h1": "AI Automation for Finnish Businesses: Engineered for Efficiency, Built to Scale",
+      "panelCount": 12,
+      "geoCopyCount": 11,
+      "emptyGeoCopy": 0,
+      "overflow": false,
+      "assistantCount": 0,
+      "hydrationError": false,
+      "consoleErrors": [
+        "Failed to load resource: net::ERR_NETWORK_ACCESS_DENIED",
+        "Failed to load resource: net::ERR_NETWORK_ACCESS_DENIED"
+      ],
+      "pageErrors": [],
+      "applicationConsoleErrors": []
+    },
+    {
+      "route": "/ai-automation-sweden",
+      "width": 390,
+      "status": 200,
+      "h1": "AI Automation for Swedish Businesses: Scale Smarter in the Home of Innovation",
+      "panelCount": 12,
+      "geoCopyCount": 11,
+      "emptyGeoCopy": 0,
+      "overflow": false,
+      "assistantCount": 0,
+      "hydrationError": false,
+      "consoleErrors": [
+        "Failed to load resource: net::ERR_NETWORK_ACCESS_DENIED",
+        "Failed to load resource: net::ERR_NETWORK_ACCESS_DENIED"
+      ],
+      "pageErrors": [],
+      "applicationConsoleErrors": []
+    },
+    {
+      "route": "/ai-automation-sweden",
+      "width": 768,
+      "status": 200,
+      "h1": "AI Automation for Swedish Businesses: Scale Smarter in the Home of Innovation",
+      "panelCount": 12,
+      "geoCopyCount": 11,
+      "emptyGeoCopy": 0,
+      "overflow": false,
+      "assistantCount": 0,
+      "hydrationError": false,
+      "consoleErrors": [
+        "Failed to load resource: net::ERR_NETWORK_ACCESS_DENIED",
+        "Failed to load resource: net::ERR_NETWORK_ACCESS_DENIED"
+      ],
+      "pageErrors": [],
+      "applicationConsoleErrors": []
+    },
+    {
+      "route": "/ai-automation-sweden",
+      "width": 1024,
+      "status": 200,
+      "h1": "AI Automation for Swedish Businesses: Scale Smarter in the Home of Innovation",
+      "panelCount": 12,
+      "geoCopyCount": 11,
+      "emptyGeoCopy": 0,
+      "overflow": false,
+      "assistantCount": 0,
+      "hydrationError": false,
+      "consoleErrors": [
+        "Failed to load resource: net::ERR_NETWORK_ACCESS_DENIED",
+        "Failed to load resource: net::ERR_NETWORK_ACCESS_DENIED"
+      ],
+      "pageErrors": [],
+      "applicationConsoleErrors": []
+    },
+    {
+      "route": "/ai-automation-sweden",
+      "width": 1366,
+      "status": 200,
+      "h1": "AI Automation for Swedish Businesses: Scale Smarter in the Home of Innovation",
+      "panelCount": 12,
+      "geoCopyCount": 11,
+      "emptyGeoCopy": 0,
+      "overflow": false,
+      "assistantCount": 0,
+      "hydrationError": false,
+      "consoleErrors": [
+        "Failed to load resource: net::ERR_NETWORK_ACCESS_DENIED",
+        "Failed to load resource: net::ERR_NETWORK_ACCESS_DENIED"
+      ],
+      "pageErrors": [],
+      "applicationConsoleErrors": []
+    },
+    {
+      "route": "/ai-automation-sweden",
+      "width": 1440,
+      "status": 200,
+      "h1": "AI Automation for Swedish Businesses: Scale Smarter in the Home of Innovation",
+      "panelCount": 12,
+      "geoCopyCount": 11,
+      "emptyGeoCopy": 0,
+      "overflow": false,
+      "assistantCount": 0,
+      "hydrationError": false,
+      "consoleErrors": [
+        "Failed to load resource: net::ERR_NETWORK_ACCESS_DENIED",
+        "Failed to load resource: net::ERR_NETWORK_ACCESS_DENIED"
+      ],
+      "pageErrors": [],
+      "applicationConsoleErrors": []
+    },
+    {
+      "route": "/ai-automation-denmark",
+      "width": 390,
+      "status": 200,
+      "h1": "AI Automation for Danish Businesses: Europe's AI Leader Keeps Leading",
+      "panelCount": 12,
+      "geoCopyCount": 11,
+      "emptyGeoCopy": 0,
+      "overflow": false,
+      "assistantCount": 0,
+      "hydrationError": false,
+      "consoleErrors": [
+        "Failed to load resource: net::ERR_NETWORK_ACCESS_DENIED",
+        "Failed to load resource: net::ERR_NETWORK_ACCESS_DENIED"
+      ],
+      "pageErrors": [],
+      "applicationConsoleErrors": []
+    },
+    {
+      "route": "/ai-automation-denmark",
+      "width": 768,
+      "status": 200,
+      "h1": "AI Automation for Danish Businesses: Europe's AI Leader Keeps Leading",
+      "panelCount": 12,
+      "geoCopyCount": 11,
+      "emptyGeoCopy": 0,
+      "overflow": false,
+      "assistantCount": 0,
+      "hydrationError": false,
+      "consoleErrors": [
+        "Failed to load resource: net::ERR_NETWORK_ACCESS_DENIED",
+        "Failed to load resource: net::ERR_NETWORK_ACCESS_DENIED"
+      ],
+      "pageErrors": [],
+      "applicationConsoleErrors": []
+    },
+    {
+      "route": "/ai-automation-denmark",
+      "width": 1024,
+      "status": 200,
+      "h1": "AI Automation for Danish Businesses: Europe's AI Leader Keeps Leading",
+      "panelCount": 12,
+      "geoCopyCount": 11,
+      "emptyGeoCopy": 0,
+      "overflow": false,
+      "assistantCount": 0,
+      "hydrationError": false,
+      "consoleErrors": [
+        "Failed to load resource: net::ERR_NETWORK_ACCESS_DENIED",
+        "Failed to load resource: net::ERR_NETWORK_ACCESS_DENIED"
+      ],
+      "pageErrors": [],
+      "applicationConsoleErrors": []
+    },
+    {
+      "route": "/ai-automation-denmark",
+      "width": 1366,
+      "status": 200,
+      "h1": "AI Automation for Danish Businesses: Europe's AI Leader Keeps Leading",
+      "panelCount": 12,
+      "geoCopyCount": 11,
+      "emptyGeoCopy": 0,
+      "overflow": false,
+      "assistantCount": 0,
+      "hydrationError": false,
+      "consoleErrors": [
+        "Failed to load resource: net::ERR_NETWORK_ACCESS_DENIED",
+        "Failed to load resource: net::ERR_NETWORK_ACCESS_DENIED"
+      ],
+      "pageErrors": [],
+      "applicationConsoleErrors": []
+    },
+    {
+      "route": "/ai-automation-denmark",
+      "width": 1440,
+      "status": 200,
+      "h1": "AI Automation for Danish Businesses: Europe's AI Leader Keeps Leading",
+      "panelCount": 12,
+      "geoCopyCount": 11,
+      "emptyGeoCopy": 0,
+      "overflow": false,
+      "assistantCount": 0,
+      "hydrationError": false,
+      "consoleErrors": [
+        "Failed to load resource: net::ERR_NETWORK_ACCESS_DENIED",
+        "Failed to load resource: net::ERR_NETWORK_ACCESS_DENIED"
+      ],
+      "pageErrors": [],
+      "applicationConsoleErrors": []
+    },
+    {
+      "route": "/ai-automation-poland",
+      "width": 390,
+      "status": 200,
+      "h1": "AI Automation for Polish Businesses: First Movers Win. Poland Is Ready.",
+      "panelCount": 12,
+      "geoCopyCount": 11,
+      "emptyGeoCopy": 0,
+      "overflow": false,
+      "assistantCount": 0,
+      "hydrationError": false,
+      "consoleErrors": [
+        "Failed to load resource: net::ERR_NETWORK_ACCESS_DENIED",
+        "Failed to load resource: net::ERR_NETWORK_ACCESS_DENIED"
+      ],
+      "pageErrors": [],
+      "applicationConsoleErrors": []
+    },
+    {
+      "route": "/ai-automation-poland",
+      "width": 768,
+      "status": 200,
+      "h1": "AI Automation for Polish Businesses: First Movers Win. Poland Is Ready.",
+      "panelCount": 12,
+      "geoCopyCount": 11,
+      "emptyGeoCopy": 0,
+      "overflow": false,
+      "assistantCount": 0,
+      "hydrationError": false,
+      "consoleErrors": [
+        "Failed to load resource: net::ERR_NETWORK_ACCESS_DENIED",
+        "Failed to load resource: net::ERR_NETWORK_ACCESS_DENIED"
+      ],
+      "pageErrors": [],
+      "applicationConsoleErrors": []
+    },
+    {
+      "route": "/ai-automation-poland",
+      "width": 1024,
+      "status": 200,
+      "h1": "AI Automation for Polish Businesses: First Movers Win. Poland Is Ready.",
+      "panelCount": 12,
+      "geoCopyCount": 11,
+      "emptyGeoCopy": 0,
+      "overflow": false,
+      "assistantCount": 0,
+      "hydrationError": false,
+      "consoleErrors": [
+        "Failed to load resource: net::ERR_NETWORK_ACCESS_DENIED",
+        "Failed to load resource: net::ERR_NETWORK_ACCESS_DENIED"
+      ],
+      "pageErrors": [],
+      "applicationConsoleErrors": []
+    },
+    {
+      "route": "/ai-automation-poland",
+      "width": 1366,
+      "status": 200,
+      "h1": "AI Automation for Polish Businesses: First Movers Win. Poland Is Ready.",
+      "panelCount": 12,
+      "geoCopyCount": 11,
+      "emptyGeoCopy": 0,
+      "overflow": false,
+      "assistantCount": 0,
+      "hydrationError": false,
+      "consoleErrors": [
+        "Failed to load resource: net::ERR_NETWORK_ACCESS_DENIED",
+        "Failed to load resource: net::ERR_NETWORK_ACCESS_DENIED"
+      ],
+      "pageErrors": [],
+      "applicationConsoleErrors": []
+    },
+    {
+      "route": "/ai-automation-poland",
+      "width": 1440,
+      "status": 200,
+      "h1": "AI Automation for Polish Businesses: First Movers Win. Poland Is Ready.",
+      "panelCount": 12,
+      "geoCopyCount": 11,
+      "emptyGeoCopy": 0,
+      "overflow": false,
+      "assistantCount": 0,
+      "hydrationError": false,
+      "consoleErrors": [
+        "Failed to load resource: net::ERR_NETWORK_ACCESS_DENIED",
+        "Failed to load resource: net::ERR_NETWORK_ACCESS_DENIED"
+      ],
+      "pageErrors": [],
+      "applicationConsoleErrors": []
+    },
+    {
+      "route": "/ai-automation-lithuania",
+      "width": 390,
+      "status": 200,
+      "h1": "AI Automation for Lithuanian Businesses: Baltic Digital Leader, Now Operationally Unstoppable",
+      "panelCount": 11,
+      "geoCopyCount": 10,
+      "emptyGeoCopy": 0,
+      "overflow": false,
+      "assistantCount": 0,
+      "hydrationError": false,
+      "consoleErrors": [
+        "Failed to load resource: net::ERR_NETWORK_ACCESS_DENIED",
+        "Failed to load resource: net::ERR_NETWORK_ACCESS_DENIED"
+      ],
+      "pageErrors": [],
+      "applicationConsoleErrors": []
+    },
+    {
+      "route": "/ai-automation-lithuania",
+      "width": 768,
+      "status": 200,
+      "h1": "AI Automation for Lithuanian Businesses: Baltic Digital Leader, Now Operationally Unstoppable",
+      "panelCount": 11,
+      "geoCopyCount": 10,
+      "emptyGeoCopy": 0,
+      "overflow": false,
+      "assistantCount": 0,
+      "hydrationError": false,
+      "consoleErrors": [
+        "Failed to load resource: net::ERR_NETWORK_ACCESS_DENIED",
+        "Failed to load resource: net::ERR_NETWORK_ACCESS_DENIED"
+      ],
+      "pageErrors": [],
+      "applicationConsoleErrors": []
+    },
+    {
+      "route": "/ai-automation-lithuania",
+      "width": 1024,
+      "status": 200,
+      "h1": "AI Automation for Lithuanian Businesses: Baltic Digital Leader, Now Operationally Unstoppable",
+      "panelCount": 11,
+      "geoCopyCount": 10,
+      "emptyGeoCopy": 0,
+      "overflow": false,
+      "assistantCount": 0,
+      "hydrationError": false,
+      "consoleErrors": [
+        "Failed to load resource: net::ERR_NETWORK_ACCESS_DENIED",
+        "Failed to load resource: net::ERR_NETWORK_ACCESS_DENIED"
+      ],
+      "pageErrors": [],
+      "applicationConsoleErrors": []
+    },
+    {
+      "route": "/ai-automation-lithuania",
+      "width": 1366,
+      "status": 200,
+      "h1": "AI Automation for Lithuanian Businesses: Baltic Digital Leader, Now Operationally Unstoppable",
+      "panelCount": 11,
+      "geoCopyCount": 10,
+      "emptyGeoCopy": 0,
+      "overflow": false,
+      "assistantCount": 0,
+      "hydrationError": false,
+      "consoleErrors": [
+        "Failed to load resource: net::ERR_NETWORK_ACCESS_DENIED",
+        "Failed to load resource: net::ERR_NETWORK_ACCESS_DENIED"
+      ],
+      "pageErrors": [],
+      "applicationConsoleErrors": []
+    },
+    {
+      "route": "/ai-automation-lithuania",
+      "width": 1440,
+      "status": 200,
+      "h1": "AI Automation for Lithuanian Businesses: Baltic Digital Leader, Now Operationally Unstoppable",
+      "panelCount": 11,
+      "geoCopyCount": 10,
+      "emptyGeoCopy": 0,
+      "overflow": false,
+      "assistantCount": 0,
+      "hydrationError": false,
+      "consoleErrors": [
+        "Failed to load resource: net::ERR_NETWORK_ACCESS_DENIED",
+        "Failed to load resource: net::ERR_NETWORK_ACCESS_DENIED"
+      ],
+      "pageErrors": [],
+      "applicationConsoleErrors": []
+    },
+    {
+      "route": "/ai-automation-latvia",
+      "width": 390,
+      "status": 200,
+      "h1": "AI Automation for Latvian Businesses: Lean Teams, Powerful Systems, Baltic Scale",
+      "panelCount": 12,
+      "geoCopyCount": 11,
+      "emptyGeoCopy": 0,
+      "overflow": false,
+      "assistantCount": 0,
+      "hydrationError": false,
+      "consoleErrors": [
+        "Failed to load resource: net::ERR_NETWORK_ACCESS_DENIED",
+        "Failed to load resource: net::ERR_NETWORK_ACCESS_DENIED"
+      ],
+      "pageErrors": [],
+      "applicationConsoleErrors": []
+    },
+    {
+      "route": "/ai-automation-latvia",
+      "width": 768,
+      "status": 200,
+      "h1": "AI Automation for Latvian Businesses: Lean Teams, Powerful Systems, Baltic Scale",
+      "panelCount": 12,
+      "geoCopyCount": 11,
+      "emptyGeoCopy": 0,
+      "overflow": false,
+      "assistantCount": 0,
+      "hydrationError": false,
+      "consoleErrors": [
+        "Failed to load resource: net::ERR_NETWORK_ACCESS_DENIED",
+        "Failed to load resource: net::ERR_NETWORK_ACCESS_DENIED"
+      ],
+      "pageErrors": [],
+      "applicationConsoleErrors": []
+    },
+    {
+      "route": "/ai-automation-latvia",
+      "width": 1024,
+      "status": 200,
+      "h1": "AI Automation for Latvian Businesses: Lean Teams, Powerful Systems, Baltic Scale",
+      "panelCount": 12,
+      "geoCopyCount": 11,
+      "emptyGeoCopy": 0,
+      "overflow": false,
+      "assistantCount": 0,
+      "hydrationError": false,
+      "consoleErrors": [
+        "Failed to load resource: net::ERR_NETWORK_ACCESS_DENIED",
+        "Failed to load resource: net::ERR_NETWORK_ACCESS_DENIED"
+      ],
+      "pageErrors": [],
+      "applicationConsoleErrors": []
+    },
+    {
+      "route": "/ai-automation-latvia",
+      "width": 1366,
+      "status": 200,
+      "h1": "AI Automation for Latvian Businesses: Lean Teams, Powerful Systems, Baltic Scale",
+      "panelCount": 12,
+      "geoCopyCount": 11,
+      "emptyGeoCopy": 0,
+      "overflow": false,
+      "assistantCount": 0,
+      "hydrationError": false,
+      "consoleErrors": [
+        "Failed to load resource: net::ERR_NETWORK_ACCESS_DENIED",
+        "Failed to load resource: net::ERR_NETWORK_ACCESS_DENIED"
+      ],
+      "pageErrors": [],
+      "applicationConsoleErrors": []
+    },
+    {
+      "route": "/ai-automation-latvia",
+      "width": 1440,
+      "status": 200,
+      "h1": "AI Automation for Latvian Businesses: Lean Teams, Powerful Systems, Baltic Scale",
+      "panelCount": 12,
+      "geoCopyCount": 11,
+      "emptyGeoCopy": 0,
+      "overflow": false,
+      "assistantCount": 0,
+      "hydrationError": false,
+      "consoleErrors": [
+        "Failed to load resource: net::ERR_NETWORK_ACCESS_DENIED",
+        "Failed to load resource: net::ERR_NETWORK_ACCESS_DENIED"
+      ],
+      "pageErrors": [],
+      "applicationConsoleErrors": []
+    }
+  ],
+  "screenshots": "C:\\Users\\Admin\\kubera-ai-site\\.worktrees\\neon-owner-forensic-20261006\\reports\\geo-browser-fidelity"
+}
