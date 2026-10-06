@@ -4303,6 +4303,10 @@ body:has(.neon-preview) .home-design-prototype .calculator-panel {
   color: var(--neon-rollout-text);
 }
 
+body:has(.neon-preview-sitewide) {
+  background: #0c1726;
+}
+
 .neon-preview-sitewide .site-footer {
   border-top-color: rgba(180, 203, 208, 0.16);
   background: rgba(12, 23, 38, 0.94);
@@ -4347,6 +4351,11 @@ body:has(.neon-preview) .home-design-prototype .calculator-panel {
 
 .neon-preview-sitewide .solution-hero,
 .neon-preview-sitewide .solution-section,
+.neon-preview-sitewide .solution-mid-cta,
+.neon-preview-sitewide .solution-hero-card,
+.neon-preview-sitewide .solution-card,
+.neon-preview-sitewide .section-soft,
+.neon-preview-sitewide .section-dark,
 .neon-preview-sitewide .solution-final-cta,
 .neon-preview-sitewide .pricing-packages,
 .neon-preview-sitewide .contact-section,
@@ -4356,6 +4365,40 @@ body:has(.neon-preview) .home-design-prototype .calculator-panel {
   border-color: rgba(180, 203, 208, 0.2);
   background: linear-gradient(145deg, rgba(32, 52, 74, 0.68), rgba(12, 23, 38, 0.78));
   color: var(--neon-rollout-text);
+}
+
+/* These selectors intentionally match the specificity of the old
+   body:has(.neon-preview) family rules. Without that parity, the legacy
+   use-case/service gradients win even after the sitewide scope is present. */
+body:has(.neon-preview-sitewide) .neon-preview-sitewide .solution-section,
+body:has(.neon-preview-sitewide) .neon-preview-sitewide .solution-mid-cta,
+body:has(.neon-preview-sitewide) .neon-preview-sitewide .solution-hero-card,
+body:has(.neon-preview-sitewide) .neon-preview-sitewide .solution-card {
+  border-color: rgba(180, 203, 208, 0.2);
+  background: linear-gradient(145deg, rgba(32, 52, 74, 0.72), rgba(12, 23, 38, 0.9));
+  color: var(--neon-rollout-text);
+}
+
+body:has(.neon-preview-sitewide) .neon-preview-sitewide .section-soft {
+  background: #142136;
+}
+
+body:has(.neon-preview-sitewide) .neon-preview-sitewide .section-dark {
+  background: #0c1726;
+}
+
+body:has(.neon-preview-sitewide) .neon-preview-sitewide .solution-hero-card--workflow {
+  background:
+    radial-gradient(circle at 78% 18%, rgba(76, 229, 228, 0.12), transparent 36%),
+    linear-gradient(145deg, rgba(32, 52, 74, 0.72), rgba(12, 23, 38, 0.9));
+}
+
+body:has(.neon-preview-sitewide) .neon-preview-sitewide .neon-heading__accent {
+  color: #4ce5e4;
+}
+
+.neon-heading__accent {
+  color: inherit;
 }
 
 .neon-preview-sitewide .button:hover,

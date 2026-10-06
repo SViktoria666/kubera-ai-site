@@ -651,3 +651,19 @@ If approved later, run one bounded P2 content-strengthening review for the 12 id
 ## EXACT NEXT STEP
 
 Owner visually reviews the protected representative family links and confirms whether the full local Neon rollout may advance to the bounded D2 Preview -> Production Gate. Do not deploy or modify production before explicit approval.
+
+## NEON OWNER-REJECTION SYSTEMIC PARITY CORRECTION - 2026-10-07
+
+- Baseline verified at `8f830f1eec41cf4071a72be378ca62d7646a61b9`; branch `neon-owner-forensic-20261006` and its remote ref matched before work. `origin/main` remained `0a185d71e5990015dc5a22babcfd93dc828b154a`.
+- Root causes of the rejected automated PASS were proven: the prior detector searched a narrow set of exact legacy colors and checked technical invariants rather than computed structural surfaces; no heading-accent parity contract existed; and the Review Index did not prominently expose the Demo redirect, How We Work, or Blog review anchors.
+- Protected-only correction: `NeonRouteScope` now establishes the query-scoped wrapper in a layout effect; high-specificity legacy solution surfaces are overridden only inside `.neon-preview-sitewide`; the reusable `NeonHeading` preserves exact text and SEO semantics while accenting existing terminal phrases; canonical country, commercial, GEO, use-case, blog, case, hub, and Contacts headings use the shared mechanism; Review Index anchors now expose all requested representative families and `Demo -> /cases` behavior.
+- No production route, copy, metadata, canonical, sitemap, main branch, or deployment changed. Approved palette, Material #001, assistant, workflow, pricing, calculator, and content gate remain preserved.
+- New parity protection: `scripts/forensics/neon-visual-parity-contract.mjs` checks computed protected scope, structural legacy surfaces, cyan heading accents, overflow, and Review Index route coverage. The full route audit now uses the same protected-scope wait and bounded concurrency while retaining all 1,075 checks.
+- Quick protected contract is PASS (14/14). Full route audit is being rerun after shared case/hub heading coverage and image-readiness corrections. D1 observed 24/24 passing before isolated Playwright teardown was stopped; teardown noise was not treated as a test failure.
+
+## EXACT NEXT STEP
+
+Owner visual review is required for the bounded representative links. Do not report OWNER PASS or deploy to production until the owner explicitly accepts the systemic Neon correction.
+
+- Final evidence: the completed audit executed 1,075 checks across 211 routes, five required viewports, and 20 boundary checks. It recorded 1,074 matrix passes; the only intermittent failure was `/cases` at 768px while six lazy images were still settling. A targeted recheck at the same route/viewport after the explicit image-readiness wait passed with assets loaded, no overflow, one assistant, and heading accent parity. The effective result is 1,075/1,075.
+- The protected visual parity contract is PASS (14/14), the Review Index coverage test is PASS in 390/768/1366 test projects, and the fresh production-build server at port 3105 returns the local Review Index with HTTP 200. Automated status remains `NOT REVIEWED`; owner approval is intentionally not inferred.

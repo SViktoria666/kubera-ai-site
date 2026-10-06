@@ -41,9 +41,14 @@ async function check(page, entry, viewport, capture = false) {
   });
   const response = await page.goto(`http://127.0.0.1:3105${entry.route}?neon=1`, { waitUntil: "domcontentloaded", timeout: 20000 });
   await page.locator("img").evaluateAll((images) => images.forEach((image) => image.scrollIntoView({ block: "center" })));
-  await page.waitForTimeout(300);
+  await page.waitForSelector(".neon-preview-sitewide", { state: "attached", timeout: 5000 }).catch(() => {});
+  await page.waitForFunction(() => [...document.images].every((image) => !image.currentSrc || (image.complete && image.naturalWidth > 0)), null, { timeout: 15000 }).catch(() => {});
+  await page.waitForTimeout(100);
   const state = await page.evaluate(() => {
-    const legacyColors = ["rgb(26, 5, 51)", "rgb(42, 16, 69)", "rgb(16, 0, 32)", "rgb(21, 3, 41)", "rgb(9, 0, 17)"];
+    const legacyStructuralPatterns = [
+      "rgb(26, 5, 51)", "rgb(42, 16, 69)", "rgb(16, 0, 32)", "rgb(21, 3, 41)", "rgb(9, 0, 17)",
+      "rgba(11, 4, 24", "rgba(5, 2, 14",
+    ];
     const yellowControl = (node) => {
       const style = getComputedStyle(node);
       const values = [style.backgroundColor, style.color, style.borderColor, style.backgroundImage].join(" ").toLowerCase();
@@ -53,8 +58,11 @@ async function check(page, entry, viewport, capture = false) {
     const legacyStructural = [...document.querySelectorAll("main, section, article, .card, .solution-section, .site-footer")].filter((node) => {
       const style = getComputedStyle(node);
       const values = [style.backgroundColor, style.backgroundImage].join(" ").toLowerCase();
-      return legacyColors.some((color) => values.includes(color));
+      return legacyStructuralPatterns.some((pattern) => values.includes(pattern));
     }).length;
+    const majorHeadings = [...document.querySelectorAll("h1, .solution-section-heading > h2, .home-solution-nav-card h2")];
+    const headingAccentCount = majorHeadings.filter((heading) => heading.querySelector(".neon-heading__accent")).length;
+    const computedAccentCount = [...document.querySelectorAll(".neon-heading__accent")].filter((node) => getComputedStyle(node).color === "rgb(76, 229, 228)").length;
     const contentPanels = [...document.querySelectorAll(".card, .solution-card, .pricing-card, .geo-panel, .contact-link, .case-card, article")];
     return {
       finalPath: window.location.pathname,
@@ -67,6 +75,10 @@ async function check(page, entry, viewport, capture = false) {
       missingCtaLabels: [...document.querySelectorAll(".button, button, .solution-secondary-link")].filter((node) => !(node.textContent ?? "").trim() && !node.getAttribute("aria-label")).length,
       yellowFunctionalControls: [...document.querySelectorAll(".button, button, .solution-secondary-link, .lang-button")].filter(yellowControl).length,
       legacyStructuralSurfaces: legacyStructural,
+      majorHeadingCount: majorHeadings.length,
+      headingAccentCount,
+      computedAccentCount,
+      headingAccentPass: majorHeadings.length === 0 || headingAccentCount > 0,
       assistantCount: document.querySelectorAll(".ai-assistant-widget").length,
       forms: document.querySelectorAll("form").length,
       images: [...document.images].filter((image) => image.currentSrc && (!image.complete || image.naturalWidth === 0)).length,
@@ -89,16 +101,23 @@ async function check(page, entry, viewport, capture = false) {
     pageErrors,
     ...state,
     redirectOnly: state.finalPath !== entry.route,
-    pass: (response?.status() ?? 0) === 200 && Boolean(state.h1) && !state.overflow && !state.hydrationError && !state.rawUnstyled && state.emptyContentPanels === 0 && state.missingCtaLabels === 0 && state.images === 0 && assetFailures.length === 0 && applicationConsoleErrors.length === 0 && pageErrors.length === 0 && (state.finalPath !== entry.route || (state.neonScope && state.yellowFunctionalControls === 0 && state.legacyStructuralSurfaces === 0 && state.assistantCount === 1)),
+    pass: (response?.status() ?? 0) === 200 && Boolean(state.h1) && !state.overflow && !state.hydrationError && !state.rawUnstyled && state.emptyContentPanels === 0 && state.missingCtaLabels === 0 && state.images === 0 && assetFailures.length === 0 && applicationConsoleErrors.length === 0 && pageErrors.length === 0 && (state.finalPath !== entry.route || (state.neonScope && state.yellowFunctionalControls === 0 && state.legacyStructuralSurfaces === 0 && state.assistantCount === 1 && state.headingAccentPass)),
   };
 }
 
-for (const entry of routes) {
-  for (const viewport of viewports) {
+const routeChecks = routes.flatMap((entry) => viewports.map((viewport) => ({ entry, viewport })));
+const concurrency = 8;
+for (let offset = 0; offset < routeChecks.length; offset += concurrency) {
+  const batch = routeChecks.slice(offset, offset + concurrency);
+  const batchResults = await Promise.all(batch.map(async ({ entry, viewport }) => {
     const page = await browser.newPage({ viewport });
-    results.push(await check(page, entry, viewport, screenshotRoutes.get(entry.family) === entry.route && (viewport.width === 390 || viewport.width === 1366)));
-    await page.close();
-  }
+    try {
+      return await check(page, entry, viewport, screenshotRoutes.get(entry.family) === entry.route && (viewport.width === 390 || viewport.width === 1366));
+    } finally {
+      await page.close();
+    }
+  }));
+  results.push(...batchResults);
 }
 
 const boundaryResults = [];

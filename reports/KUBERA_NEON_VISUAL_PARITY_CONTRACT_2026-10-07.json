@@ -1,0 +1,251 @@
+{
+  "generatedAt": "2026-10-06T23:38:19.924Z",
+  "base": "http://127.0.0.1:3105",
+  "routes": [
+    {
+      "family": "Home",
+      "route": "/",
+      "status": 200,
+      "path": "/",
+      "scope": true,
+      "h1": "Systems that work.\nBusiness that grows.",
+      "headings": 3,
+      "accentHeadings": 3,
+      "accentStyles": [
+        "rgb(76, 229, 228)",
+        "rgb(76, 229, 228)",
+        "rgb(76, 229, 228)"
+      ],
+      "legacySurfaceCount": 0,
+      "legacySurfaces": [],
+      "overflow": false,
+      "pass": true
+    },
+    {
+      "family": "How We Work",
+      "route": "/how-we-work",
+      "status": 200,
+      "path": "/how-we-work",
+      "scope": true,
+      "h1": "From first conversation to a working system — 2–5 weeks",
+      "headings": 1,
+      "accentHeadings": 1,
+      "accentStyles": [
+        "rgb(76, 229, 228)"
+      ],
+      "legacySurfaceCount": 0,
+      "legacySurfaces": [],
+      "overflow": false,
+      "pass": true
+    },
+    {
+      "family": "Services",
+      "route": "/services",
+      "status": 200,
+      "path": "/services",
+      "scope": true,
+      "h1": "Digital workforce tailored to your business.",
+      "headings": 4,
+      "accentHeadings": 1,
+      "accentStyles": [
+        "rgb(76, 229, 228)"
+      ],
+      "legacySurfaceCount": 0,
+      "legacySurfaces": [],
+      "overflow": false,
+      "pass": true
+    },
+    {
+      "family": "Commercial",
+      "route": "/en/solutions/germany/whatsapp-automation",
+      "status": 200,
+      "path": "/en/solutions/germany/whatsapp-automation",
+      "scope": true,
+      "h1": "WhatsApp Automation for Businesses in Germany",
+      "headings": 11,
+      "accentHeadings": 1,
+      "accentStyles": [
+        "rgb(76, 229, 228)"
+      ],
+      "legacySurfaceCount": 0,
+      "legacySurfaces": [],
+      "overflow": false,
+      "pass": true
+    },
+    {
+      "family": "GEO",
+      "route": "/en/germany-automation",
+      "status": 200,
+      "path": "/en/germany-automation",
+      "scope": true,
+      "h1": "Business process automation for German companies",
+      "headings": 2,
+      "accentHeadings": 1,
+      "accentStyles": [
+        "rgb(76, 229, 228)"
+      ],
+      "legacySurfaceCount": 0,
+      "legacySurfaces": [],
+      "overflow": false,
+      "pass": true
+    },
+    {
+      "family": "Use Cases",
+      "route": "/use-cases/ai-customer-support-ecommerce",
+      "status": 200,
+      "path": "/use-cases/ai-customer-support-ecommerce",
+      "scope": true,
+      "h1": "AI Customer Support for E-commerce: Handle More Tickets Without Expanding the Team",
+      "headings": 20,
+      "accentHeadings": 1,
+      "accentStyles": [
+        "rgb(76, 229, 228)",
+        "rgb(76, 229, 228)",
+        "rgb(76, 229, 228)"
+      ],
+      "legacySurfaceCount": 0,
+      "legacySurfaces": [],
+      "overflow": false,
+      "pass": true
+    },
+    {
+      "family": "Cases",
+      "route": "/cases",
+      "status": 200,
+      "path": "/cases",
+      "scope": true,
+      "h1": "Digital employees that scale your business.",
+      "headings": 1,
+      "accentHeadings": 1,
+      "accentStyles": [
+        "rgb(76, 229, 228)"
+      ],
+      "legacySurfaceCount": 0,
+      "legacySurfaces": [],
+      "overflow": false,
+      "pass": true
+    },
+    {
+      "family": "Landing Pages",
+      "route": "/services/germany/landing-page-design",
+      "status": 200,
+      "path": "/services/germany/landing-page-design",
+      "scope": true,
+      "h1": "Landing Page Design for Businesses in Germany",
+      "headings": 10,
+      "accentHeadings": 8,
+      "accentStyles": [
+        "rgb(76, 229, 228)",
+        "rgb(76, 229, 228)",
+        "rgb(76, 229, 228)",
+        "rgb(76, 229, 228)",
+        "rgb(76, 229, 228)",
+        "rgb(76, 229, 228)",
+        "rgb(76, 229, 228)",
+        "rgb(76, 229, 228)",
+        "rgb(76, 229, 228)"
+      ],
+      "legacySurfaceCount": 0,
+      "legacySurfaces": [],
+      "overflow": false,
+      "pass": true
+    },
+    {
+      "family": "Blog index",
+      "route": "/blog",
+      "status": 200,
+      "path": "/blog",
+      "scope": true,
+      "h1": "Kubera AI Blog",
+      "headings": 1,
+      "accentHeadings": 1,
+      "accentStyles": [
+        "rgb(76, 229, 228)"
+      ],
+      "legacySurfaceCount": 0,
+      "legacySurfaces": [],
+      "overflow": false,
+      "pass": true
+    },
+    {
+      "family": "Blog article",
+      "route": "/blog/ai-agent-autonomy-human-in-the-loop",
+      "status": 200,
+      "path": "/blog/ai-agent-autonomy-human-in-the-loop",
+      "scope": true,
+      "h1": "How Much Autonomy Should an AI Agent Have Before a Human Steps In?",
+      "headings": 1,
+      "accentHeadings": 1,
+      "accentStyles": [
+        "rgb(76, 229, 228)"
+      ],
+      "legacySurfaceCount": 0,
+      "legacySurfaces": [],
+      "overflow": false,
+      "pass": true
+    },
+    {
+      "family": "Contacts",
+      "route": "/contacts",
+      "status": 200,
+      "path": "/contacts",
+      "scope": true,
+      "h1": "Tell us about your business.",
+      "headings": 1,
+      "accentHeadings": 1,
+      "accentStyles": [
+        "rgb(76, 229, 228)"
+      ],
+      "legacySurfaceCount": 0,
+      "legacySurfaces": [],
+      "overflow": false,
+      "pass": true
+    },
+    {
+      "family": "RU",
+      "route": "/ru",
+      "status": 200,
+      "path": "/ru",
+      "scope": true,
+      "h1": "Системы, которые работают.\nБизнес, который растёт.",
+      "headings": 1,
+      "accentHeadings": 1,
+      "accentStyles": [
+        "rgb(76, 229, 228)"
+      ],
+      "legacySurfaceCount": 0,
+      "legacySurfaces": [],
+      "overflow": false,
+      "pass": true
+    },
+    {
+      "family": "ES",
+      "route": "/automatizacion-ia-espana",
+      "status": 200,
+      "path": "/automatizacion-ia-espana",
+      "scope": true,
+      "h1": "Automatización con IA para Empresas Españolas: Trabaja con Inteligencia, Crece sin Límites",
+      "headings": 1,
+      "accentHeadings": 1,
+      "accentStyles": [
+        "rgb(76, 229, 228)"
+      ],
+      "legacySurfaceCount": 0,
+      "legacySurfaces": [],
+      "overflow": false,
+      "pass": true
+    },
+    {
+      "family": "Visual Review Index",
+      "route": "/design-lab/visual-review",
+      "protectedRouteLinks": 225,
+      "hasDemoDestination": true,
+      "hasBlogIndex": true,
+      "hasBlogArticle": true,
+      "hasHowWeWork": true,
+      "noindex": "noindex, nofollow, nocache",
+      "pass": true
+    }
+  ],
+  "failures": []
+}

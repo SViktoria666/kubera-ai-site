@@ -1,6 +1,7 @@
 import Link from "next/link";
 import type { BlogPost } from "@/content/blog";
 import { getBlogPublishedDate } from "@/content/blog/helpers";
+import { getNeonAccent, NeonHeading } from "@/components/core/NeonHeading";
 
 type BlogIndexPageProps = {
   locale: "en" | "en-GB" | "ru";
@@ -27,7 +28,7 @@ export function BlogIndexPage({ locale, posts }: BlogIndexPageProps) {
     <main className="section">
       <div className="container">
         <p className="eyebrow">{isRu ? "Блог" : "Blog"}</p>
-        <h1 className="section-title">{isRu ? "Kubera AI Blog" : "Kubera AI Blog"}</h1>
+        <NeonHeading as="h1" className="section-title" accent={getNeonAccent("Kubera AI Blog")}>Kubera AI Blog</NeonHeading>
         <p className="lead">
           {isRu
             ? "Статьи про AI-автоматизацию, n8n и практические бизнес-системы."

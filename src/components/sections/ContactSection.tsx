@@ -1,4 +1,5 @@
 import { ContactForm } from "@/components/forms/ContactForm";
+import { getNeonAccent, NeonHeading } from "@/components/core/NeonHeading";
 import { siteConfig } from "@/content/site";
 
 export function ContactSection({ locale }: { locale: "en" | "ru" }) {
@@ -8,7 +9,7 @@ export function ContactSection({ locale }: { locale: "en" | "ru" }) {
     <main className="section">
       <div className="container contact-layout">
         <div>
-          <h1 className="section-title">{isRu ? "Расскажите о вашем бизнесе." : "Tell us about your business."}</h1>
+          <NeonHeading as="h1" className="section-title" accent={getNeonAccent(isRu ? "Расскажите о вашем бизнесе." : "Tell us about your business.")}>{isRu ? "Расскажите о вашем бизнесе." : "Tell us about your business."}</NeonHeading>
           <div className="contact-links">
             <a
               className="contact-link"

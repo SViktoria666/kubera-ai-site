@@ -1,6 +1,7 @@
 import Link from "next/link";
 import type { IndustrySolution } from "@/content/industry-solutions";
 import { AmbientTechCloud } from "@/components/decorative/AmbientTechCloud";
+import { getNeonAccent, NeonHeading } from "@/components/core/NeonHeading";
 import { IndustryArrowIcon } from "./IndustryArrowIcon";
 
 export function IndustrySolutionHero({ solution }: { solution: IndustrySolution }) {
@@ -9,7 +10,7 @@ export function IndustrySolutionHero({ solution }: { solution: IndustrySolution 
       <AmbientTechCloud variant="solution" />
       <div className="solution-hero-copy">
         <p className="eyebrow">{solution.hero.label}</p>
-        <h1 className="solution-title">{solution.hero.title}</h1>
+        <NeonHeading as="h1" className="solution-title" accent={getNeonAccent(solution.hero.title)}>{solution.hero.title}</NeonHeading>
         <p className="lead solution-lead">{solution.hero.subtitle}</p>
         <p className="solution-trustline">{solution.hero.trustLine}</p>
 

@@ -1,6 +1,7 @@
 import Link from "next/link";
 import type { ReactNode } from "react";
 import { AmbientTechCloud } from "@/components/decorative/AmbientTechCloud";
+import { getNeonAccent, NeonHeading } from "@/components/core/NeonHeading";
 import type { GeoPageData } from "@/content/geo/types";
 import { siteConfig } from "@/content/site";
 import { getGeoCatalogItemByRoute } from "@/content/geo/catalog";
@@ -146,7 +147,7 @@ export function GeoPage({ page }: { page: GeoPageData }) {
         <AmbientTechCloud variant="compact" />
         <div className="container hero-content">
           <p className="eyebrow">GEO / AEO</p>
-          <h1 className="hero-title">{page.h1}</h1>
+          <NeonHeading as="h1" className="hero-title" accent={getNeonAccent(page.h1)}>{page.h1}</NeonHeading>
           <p className="lead">{page.metaDescription}</p>
           <div className="geo-hero-links">
             <Link className="button" href="/">

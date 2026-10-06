@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { getNeonAccent, NeonHeading } from "@/components/core/NeonHeading";
 import Link from "next/link";
 import type { ReactNode } from "react";
 import { AmbientTechCloud } from "@/components/decorative/AmbientTechCloud";
@@ -176,7 +177,7 @@ function LegacyCaseStudyPage({ caseStudy }: { caseStudy: CaseStudy }) {
         <AmbientTechCloud variant="compact" />
         <div className="container hero-content">
           <p className="eyebrow">{caseStudy.label}</p>
-          <h1 className="hero-title">{caseStudy.title}</h1>
+      <NeonHeading as="h1" className="hero-title" accent={getNeonAccent(caseStudy.title)}>{caseStudy.title}</NeonHeading>
           <p className="muted" style={{ margin: "18px 0 10px", fontSize: "1rem", letterSpacing: "0.02em" }}>
             {caseStudy.category}
           </p>
@@ -325,7 +326,7 @@ function DetailedCaseStudyPage({ caseStudy, locale }: CaseStudyPageProps) {
         <AmbientTechCloud variant="compact" />
         <div className="container hero-content">
           <p className="eyebrow">{content.label}</p>
-          <h1 className="hero-title">{content.heroTitle}</h1>
+          <NeonHeading as="h1" className="hero-title" accent={getNeonAccent(content.heroTitle)}>{content.heroTitle}</NeonHeading>
           <p className="muted" style={{ margin: "18px 0 10px", fontSize: "1rem", letterSpacing: "0.02em" }}>
             {content.category}
           </p>

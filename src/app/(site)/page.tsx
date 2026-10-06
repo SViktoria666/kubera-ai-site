@@ -28,6 +28,7 @@ export default function HomePage() {
     <main>
       <HeroSection
         title={"Systems that work.\nBusiness that grows."}
+        accent="Business that grows."
         lead="Kubera AI builds a digital workforce for companies that run on processes and are ready for the next level."
         ctaLabel="Discuss my project"
         ctaHref="/contacts"
@@ -44,7 +45,7 @@ export default function HomePage() {
           <div className="home-solution-nav-card">
             <div className="solution-section-heading">
               <p className="eyebrow">International use cases</p>
-              <h2 className="section-title">Explore practical automation examples</h2>
+              <h2 className="section-title"><span>Explore practical</span> <span className="neon-heading__accent">automation examples</span></h2>
               <p className="lead solution-section-lead">
                 Browse a compact set of real use cases before moving into the full services and solution catalogue.
               </p>
@@ -72,7 +73,7 @@ export default function HomePage() {
           <div className="home-solution-nav-card">
             <div className="solution-section-heading">
               <p className="eyebrow">Featured solution pages</p>
-              <h2 className="section-title">Explore AI automation solutions</h2>
+              <h2 className="section-title"><span>Explore AI</span> <span className="neon-heading__accent">automation solutions</span></h2>
               <p className="lead solution-section-lead">
                 Browse country-specific automation pages for hotels, real estate, recruitment, e-commerce, SaaS, clinics, and more.
               </p>

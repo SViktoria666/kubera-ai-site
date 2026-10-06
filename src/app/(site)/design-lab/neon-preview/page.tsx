@@ -21,8 +21,31 @@ const previews: ReviewRoute[] = [
   { href: "/design-lab/neon-preview/contacts", label: "Contacts / forms" },
   { href: "/design-lab/neon-preview/landing-page", label: "Landing-page / website-building - Germany" },
 ];
+const reviewAnchors: ReviewRoute[] = [
+  { href: "/", label: "HOME" },
+  { href: "/how-we-work", label: "HOW WE WORK" },
+  { href: "/services", label: "SERVICES" },
+  { href: "/en/solutions/germany/whatsapp-automation", label: "COMMERCIAL / INDUSTRY" },
+  { href: "/en/germany-automation", label: "GEO / COUNTRY" },
+  { href: "/use-cases/ai-customer-support-ecommerce", label: "USE CASES" },
+  { href: "/cases", label: "CASES" },
+  { href: "/services/germany/landing-page-design", label: "LANDING PAGES" },
+  { href: "/blog", label: "BLOG INDEX" },
+  { href: "/blog/ai-agent-autonomy-human-in-the-loop", label: "BLOG ARTICLE" },
+  { href: "/contacts", label: "CONTACTS" },
+  { href: "/ru", label: "RU" },
+  { href: "/es/espana-automatizacion", label: "ES" },
+  { href: "/cases", label: "DEMO → /cases (redirect destination)" },
+];
 
 function label(href: string) { return href.replace(/^\//, "").replaceAll("/", " > "); }
+function protectedHref(href: string) {
+  // The dedicated reference pages are already isolated Neon surfaces; keep
+  // their established stable URLs for existing review/test links. Real site
+  // routes receive the local-only query scope.
+  if (href.startsWith("/design-lab/neon-preview/")) return href;
+  return `${href}${href.includes("?") ? "&" : "?"}neon=1`;
+}
 function unique(routes: ReviewRoute[]) {
   return [...new Map(routes.map((route) => [route.href, { ...route, status: route.status ?? "NOT REVIEWED" }])).values()].sort((a, b) => a.href.localeCompare(b.href));
 }
@@ -45,7 +68,7 @@ export default function NeonPreviewIndexPage() {
   const notReviewed = allRoutes.filter((route) => route.status === "NOT REVIEWED").length;
 
   return <NeonPreviewShell className="neon-preview-index"><main>
-    <section className="neon-preview-index__hero"><div className="container"><p className="eyebrow">Protected local review - Wave 1</p><h1 className="hero-title">Kubera Neon across real page families.</h1><p className="lead">Five protected Neon review surfaces appear first. The source-of-truth index below lists {total} indexable routes grouped for systematic local visual review. Normal public routes remain unchanged.</p><p className="neon-review-progress" aria-live="polite"><strong>{notReviewed}</strong> routes not reviewed yet. Status is route-level evidence; template coverage alone does not mark a route as passed.</p><div className="neon-preview-index__grid">{previews.map((route) => <Link className="card neon-preview-index__link" href={route.href} key={route.href}><strong>{route.label}</strong><small>{route.href}</small><span className="neon-review-status">NOT REVIEWED</span></Link>)}</div></div></section>
-    {groups.map((group) => <section className="container neon-review-group" key={group.name}><h2>{group.name} <span>({group.routes.length})</span></h2><div className="neon-review-group__routes">{group.routes.map((route) => { const protectedHref = `${route.href}${route.href.includes("?") ? "&" : "?"}neon=1`; return <Link href={protectedHref} key={route.href}>{route.label}<small>{route.href}</small><span className="neon-review-status">{route.status}</span></Link>; })}</div></section>)}
+    <section className="neon-preview-index__hero"><div className="container"><p className="eyebrow">Protected local review - systemic parity correction</p><h1 className="hero-title">Kubera Neon across real page families.</h1><p className="lead">The approved reference surfaces and the family anchors below are direct protected review links. The source-of-truth index lists {total} indexable routes for automated and later owner review. Normal public routes remain unchanged.</p><p className="neon-review-progress" aria-live="polite"><strong>{notReviewed}</strong> routes not reviewed yet. Status is route-level evidence; automated checks never become owner approval.</p><div className="neon-preview-index__grid">{[...previews, ...reviewAnchors].map((route, index) => <Link className="card neon-preview-index__link" href={protectedHref(route.href)} key={`${route.href}-${index}`}><strong>{route.label}</strong><small>{route.href === "/cases" && route.label.startsWith("DEMO") ? "Intentional /demo → /cases redirect" : route.href}</small><span className="neon-review-status">NOT REVIEWED</span></Link>)}</div></div></section>
+    {groups.map((group) => <section className="container neon-review-group" key={group.name}><h2>{group.name} <span>({group.routes.length})</span></h2><div className="neon-review-group__routes">{group.routes.map((route) => <Link href={protectedHref(route.href)} key={route.href}>{route.label}<small>{route.href}</small><span className="neon-review-status">{route.status}</span></Link>)}</div></section>)}
   </main></NeonPreviewShell>;
 }

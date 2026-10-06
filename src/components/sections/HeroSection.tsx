@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { AmbientTechCloud } from "@/components/decorative/AmbientTechCloud";
+import { getNeonAccent, NeonHeading } from "@/components/core/NeonHeading";
 
 type HeroSectionProps = {
   eyebrow?: string;
@@ -7,15 +8,16 @@ type HeroSectionProps = {
   lead?: string;
   ctaLabel?: string;
   ctaHref?: string;
+  accent?: string;
 };
 
-export function HeroSection({ eyebrow, title, lead, ctaLabel, ctaHref }: HeroSectionProps) {
+export function HeroSection({ eyebrow, title, lead, ctaLabel, ctaHref, accent }: HeroSectionProps) {
   return (
     <section className="hero">
       <AmbientTechCloud variant="hero" />
       <div className="container hero-content">
         {eyebrow ? <p className="eyebrow">{eyebrow}</p> : null}
-        <h1 className="hero-title">{title}</h1>
+        <NeonHeading as="h1" className="hero-title" accent={accent ?? getNeonAccent(title)}>{title}</NeonHeading>
         {lead ? <p className="lead">{lead}</p> : null}
         {ctaLabel && ctaHref ? (
           <Link

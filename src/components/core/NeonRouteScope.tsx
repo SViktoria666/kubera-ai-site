@@ -1,7 +1,7 @@
 "use client";
 
 import { usePathname } from "next/navigation";
-import { useEffect, useState, type ReactNode } from "react";
+import { useLayoutEffect, useState, type ReactNode } from "react";
 import { AiAssistantWidget } from "@/components/ai/AiAssistantWidget";
 
 type NeonRouteScopeProps = {
@@ -19,7 +19,7 @@ export function NeonRouteScope({ children, assistantEnabled }: NeonRouteScopePro
   const [enabled, setEnabled] = useState(false);
   const [needsAssistantFallback, setNeedsAssistantFallback] = useState(false);
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     const isNeonReview = new URLSearchParams(window.location.search).get("neon") === "1";
     setEnabled(isNeonReview);
     if (isNeonReview) {
