@@ -576,3 +576,19 @@ Leave the isolated local server on the Neon worktree available for owner review 
 ## EXACT NEXT STEP
 
 Owner reviews the protected Visual Review Index and the five corrected Neon family surfaces locally. Do not merge, deploy, modify production/main, change SEO/content/sitemap, or begin another implementation wave.
+
+## NEON SYSTEMIC CORRECTION + GEO CONTENT-GAP FORENSIC - 2026-10-06
+
+- Proven brightness result: Home retained the approved V5.1/V1.1 layered lighting; Landing Page was a real protected-preview regression caused by inherited legacy structural backgrounds (`#150329/#090011`, purple/blue overlays, and yellow secondary CTAs), not a need for a new visual direction.
+- Protected Neon correction fixed shared nested leaks in `PricingPackages`, solution explainer/comparison surfaces, architecture connectors, video framing, Landing Page structural surfaces, ambient cloud fields, and secondary CTA treatment. The approved dark navy depth, cyan functional accent, restrained violet atmosphere, and Material #001 button family remain preserved.
+- Landing Page now has a reusable preview-only semantic headline accent capability: the `Landing Page` prefix remains primary text and the remaining location-specific phrase receives the cyan accent without changing production rendering or copy.
+- Protected CTA spacing was corrected at shared preview wrappers: solution CTA groups use responsive semantic spacing and Home solution navigation actions receive a bounded separation from preceding card grids. Pricing card-bottom anchoring remains protected.
+- GEO forensic report: `reports/KUBERA_GEO_CONTENT_GAP_FORENSIC_2026-10-06.json`. It parses all 18 GEO source files through the current generated-data/template shape: 733 section items; 155 EMPTY content gaps; 86 THIN items (<120 characters); 434 ADEQUATE; 58 STRUCTURAL PLACEHOLDERS; 0 exact duplicate/boilerplate bodies; 0 rendering bugs. 17 routes are affected; Spain is the only route without a flagged item.
+- GEO root cause is source/data shape propagated through `src/content/geo/*.md` -> `scripts/generate-geo-kb.mjs` / `generated.ts` -> `GeoPage` parser -> `GeoPage` renderer. Empty headings become large visible panels because the shared renderer renders every parsed section. No marketing copy, claims, statistics, testimonials, or facts were added.
+- Added a bounded preview-only legacy-theme guard to `tests/browser/neon-preview-wave1.spec.ts`. It rejects old structural purple/yellow signatures in protected components while intentionally allowing approved violet atmosphere.
+- Validation: typecheck PASS; build PASS (229 generated pages); SEO PASS (213 built indexable routes, 0 warnings); D1 PASS (24/24); Neon suite PASS (31 passed, 2 boundary-only skips on non-desktop projects); UI Kit theme-delta/geometry PASS; assistant/asset/hydration matrix PASS for 25 family/viewport combinations.
+- Owner review remains paused pending review of the five representative corrected families. GEO requires a separate bounded content-remediation wave; no content remediation was performed here. Main, production, SEO, sitemap, Vercel, and the approved Material #001 source remain unchanged.
+
+## EXACT NEXT STEP
+
+Owner reviews the five representative Neon families locally. Separately plan a GEO content-remediation wave from the forensic JSON; do not resume the full 211-route review until the owner accepts the systemic Neon correction and decides whether/when to authorize GEO content work.

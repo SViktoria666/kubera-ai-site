@@ -99,7 +99,7 @@ function Section({ id, title, children, lead }: { id?: string; title: string; ch
   );
 }
 
-function renderLandingPageTitle(title: string): ReactNode {
+function renderLandingPageTitle(title: string, accentSuffix = false): ReactNode {
   const prefix = "Landing Page";
 
   if (!title.startsWith(prefix)) {
@@ -109,12 +109,12 @@ function renderLandingPageTitle(title: string): ReactNode {
   return (
     <>
       <span className="landing-page-title-nowrap">{prefix}</span>
-      {title.slice(prefix.length)}
+      <span className={accentSuffix ? "landing-page-title-accent" : undefined}>{title.slice(prefix.length)}</span>
     </>
   );
 }
 
-export function CommercialServicePage({ content }: { content: ServicePageContent }) {
+export function CommercialServicePage({ content, neonPreview = false }: { content: ServicePageContent; neonPreview?: boolean }) {
   const isLandingPageDesign = content.canonical.includes("/landing-page-design");
   const hasHeroVisual = Boolean(content.hero.imageSrc);
 
@@ -140,7 +140,7 @@ export function CommercialServicePage({ content }: { content: ServicePageContent
               >
                 {content.hero.headline}
               </p>
-              <h1 className="solution-title">{isLandingPageDesign ? renderLandingPageTitle(content.h1) : content.h1}</h1>
+              <h1 className="solution-title">{isLandingPageDesign ? renderLandingPageTitle(content.h1, neonPreview) : content.h1}</h1>
               <p className="lead solution-lead">{content.hero.subheadline}</p>
               <p className="solution-trustline">{content.hero.trustStrip}</p>
               <div className="solution-hero-actions">

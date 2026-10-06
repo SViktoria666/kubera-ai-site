@@ -101,6 +101,47 @@ test("GEO preview exposes CTA source state and the local review harness includes
   await expect(page.getByRole("button", { name: "Open Kubera AI assistant" })).toBeVisible();
 });
 
+test("Neon preview guard rejects legacy structural theme leaks while allowing atmosphere", async ({ page }) => {
+  const routes = ["/design-lab/neon-preview/commercial", "/design-lab/neon-preview/landing-page"];
+  const selectors = [
+    "main.solutions-page",
+    ".pricing-packages",
+    ".solution-hero",
+    ".solution-section",
+    ".solution-final-cta",
+    ".solution-explainer-card",
+    ".solution-comparison-row",
+    ".solution-architecture-connector",
+    ".solution-secondary-link",
+    ".video-showcase-card",
+  ];
+  const prohibited = [
+    "rgb(36, 8, 63)",
+    "rgb(16, 0, 32)",
+    "rgb(21, 3, 41)",
+    "rgb(9, 0, 17)",
+    "rgb(11, 4, 24)",
+    "rgb(5, 2, 14)",
+    "rgb(255, 184, 0)",
+    "rgb(255, 217, 95)",
+    "rgba(114, 66, 255, 0.07)",
+    "rgba(114, 66, 255, 0.08)",
+  ];
+
+  for (const route of routes) {
+    await page.goto(route, { waitUntil: "networkidle" });
+    const leaks = await page.evaluate(({ selectors: targetSelectors, prohibited: forbidden }) => targetSelectors.flatMap((selector) => [...document.querySelectorAll(selector)].map((element) => {
+      const style = getComputedStyle(element);
+      const serialized = `${style.backgroundImage} ${style.backgroundColor} ${style.color}`;
+      return forbidden.some((value) => serialized.includes(value)) ? `${selector}: ${serialized}` : null;
+    }).filter((value): value is string => Boolean(value))), { selectors, prohibited });
+    expect(leaks, `legacy structural appearance leak on ${route}`).toEqual([]);
+  }
+
+  await page.goto("/design-lab/neon-preview/landing-page", { waitUntil: "networkidle" });
+  await expect(page.locator(".landing-page-title-accent")).toHaveCount(1);
+});
+
 test("Visual Review Index is local-only and exposes route-level review state", async ({ page }) => {
   await page.goto("/design-lab/visual-review", { waitUntil: "networkidle" });
   await expect(page.locator("h1")).toHaveCount(1);

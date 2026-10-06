@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 export default function NeonLandingPagePreviewPage() {
   return (
     <NeonPreviewShell className="neon-preview-landing-page">
-      <CommercialServicePage content={germanyLandingPageDesignPage} />
+      <CommercialServicePage content={germanyLandingPageDesignPage} neonPreview />
     </NeonPreviewShell>
   );
 }

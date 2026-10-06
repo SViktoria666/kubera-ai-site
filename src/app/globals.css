@@ -4286,6 +4286,104 @@ body:has(.neon-preview) .home-design-prototype .calculator-panel {
   }
 }
 
+/* Neon systemic correction: nested production primitives must inherit the
+   approved appearance roles inside protected previews. This scope deliberately
+   does not alter normal production pages. */
+body:has(.neon-preview) .neon-preview .pricing-packages {
+  background:
+    radial-gradient(circle at 8% 14%, rgba(76, 229, 228, 0.14), transparent 30%),
+    radial-gradient(circle at 88% 18%, rgba(88, 70, 220, 0.12), transparent 34%),
+    linear-gradient(145deg, #0c1726, #0c1a2d 52%, #10152e);
+}
+
+body:has(.neon-preview) .neon-preview .pricing-packages::before {
+  border-color: rgba(76, 229, 228, 0.16);
+  box-shadow: none;
+}
+
+body:has(.neon-preview) .neon-preview .solution-explainer-card,
+body:has(.neon-preview) .neon-preview .solution-comparison-row {
+  border-color: rgba(180, 203, 208, 0.2);
+  background: linear-gradient(145deg, rgba(32, 52, 74, 0.66), rgba(12, 23, 38, 0.78));
+  color: var(--theme-text-primary);
+}
+
+body:has(.neon-preview) .neon-preview .solution-architecture-connector {
+  background: linear-gradient(var(--theme-accent), var(--theme-accent-muted));
+}
+
+body:has(.neon-preview) .neon-preview .solution-secondary-link {
+  border-color: rgba(76, 229, 228, 0.42);
+  background: rgba(12, 23, 38, 0.58);
+  color: var(--theme-text-primary);
+  box-shadow: inset 0 1px 0 rgba(245, 246, 247, 0.08);
+}
+
+body:has(.neon-preview) .neon-preview .solution-secondary-link:hover,
+body:has(.neon-preview) .neon-preview .solution-secondary-link:focus-visible {
+  border-color: var(--theme-accent);
+  background: rgba(20, 52, 74, 0.72);
+  color: var(--theme-text-primary);
+}
+
+body:has(.neon-preview) .neon-preview .video-showcase-card {
+  border-color: rgba(76, 229, 228, 0.28);
+  background: linear-gradient(145deg, rgba(20, 33, 54, 0.84), rgba(8, 20, 33, 0.92));
+  box-shadow: 0 22px 52px rgba(0, 0, 0, 0.34), inset 0 1px 0 rgba(245, 246, 247, 0.1);
+}
+
+body:has(.neon-preview) .neon-preview .video-showcase-card__frame,
+body:has(.neon-preview) .neon-preview .video-showcase-card__placeholder {
+  background:
+    radial-gradient(circle at 32% 24%, rgba(76, 229, 228, 0.12), transparent 26%),
+    linear-gradient(145deg, #0c1726, #081421);
+}
+
+body:has(.neon-preview) .neon-preview-landing-page .solutions-page {
+  background:
+    radial-gradient(ellipse 44% 34% at 8% 12%, rgba(76, 229, 228, 0.12), transparent 72%),
+    radial-gradient(ellipse 46% 38% at 92% 10%, rgba(88, 70, 220, 0.12), transparent 74%),
+    linear-gradient(145deg, #081421, #0c1a2d 50%, #10152e);
+}
+
+body:has(.neon-preview) .neon-preview-landing-page .solution-hero,
+body:has(.neon-preview) .neon-preview-landing-page .solution-section,
+body:has(.neon-preview) .neon-preview-landing-page .solution-final-cta {
+  border-color: rgba(180, 203, 208, 0.2);
+  background:
+    linear-gradient(110deg, rgba(245, 246, 247, 0.06), transparent 20%),
+    linear-gradient(145deg, rgba(32, 52, 74, 0.72), rgba(12, 23, 38, 0.9));
+  box-shadow: 0 22px 52px rgba(3, 10, 20, 0.34), inset 0 1px 0 rgba(245, 246, 247, 0.1);
+}
+
+body:has(.neon-preview) .neon-preview-landing-page .solution-hero {
+  background:
+    radial-gradient(ellipse at 83% 9%, rgba(76, 229, 228, 0.16), transparent 24%),
+    radial-gradient(ellipse at 6% 94%, rgba(88, 70, 220, 0.14), transparent 30%),
+    linear-gradient(140deg, rgba(32, 52, 74, 0.78), rgba(12, 23, 38, 0.94) 70%);
+}
+
+body:has(.neon-preview) .neon-preview .ambient-tech-cloud__glow--left {
+  background: radial-gradient(circle, rgba(76, 229, 228, 0.14) 0%, rgba(76, 229, 228, 0.04) 42%, transparent 72%);
+}
+
+body:has(.neon-preview) .neon-preview .ambient-tech-cloud__glow--right {
+  background: radial-gradient(circle, rgba(88, 70, 220, 0.12) 0%, rgba(88, 70, 220, 0.04) 40%, transparent 74%);
+}
+
+body:has(.neon-preview) .neon-preview .landing-page-title-accent {
+  color: var(--theme-accent);
+}
+
+body:has(.neon-preview) .neon-preview .solution-hero-actions,
+body:has(.neon-preview) .neon-preview .solution-cta-actions {
+  margin-top: clamp(1.25rem, 2.4vw, 2rem);
+}
+
+body:has(.neon-preview) .neon-preview .home-solution-nav-actions {
+  margin-top: clamp(1.75rem, 3vw, 2.75rem);
+}
+
 /* Germany WhatsApp reference pilot: intentionally scoped until owner approval. */
 .germany-whatsapp-pilot {
   --pilot-bg-main: #0c1726;
