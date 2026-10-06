@@ -1,6 +1,6 @@
 "use client";
 
-import type { ReactNode } from "react";
+import { useEffect, useState, type ReactNode } from "react";
 import { AiAssistantWidget } from "@/components/ai/AiAssistantWidget";
 
 type NeonPreviewShellProps = {
@@ -14,10 +14,16 @@ type NeonPreviewShellProps = {
  * when the local owner-review server has that environment flag disabled.
  */
 export function NeonPreviewShell({ children, className }: NeonPreviewShellProps) {
+  const [needsAssistantFallback, setNeedsAssistantFallback] = useState(false);
+
+  useEffect(() => {
+    setNeedsAssistantFallback(!document.querySelector(".ai-assistant-widget"));
+  }, []);
+
   return (
     <>
       <div className={`neon-preview ${className}`}>{children}</div>
-      <AiAssistantWidget enabled />
+      {needsAssistantFallback ? <AiAssistantWidget enabled /> : null}
     </>
   );
 }

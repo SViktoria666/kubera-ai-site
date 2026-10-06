@@ -4169,6 +4169,19 @@ body:has(.neon-preview) .neon-preview-index__link small {
   color: #b4cbd0;
 }
 
+body:has(.neon-preview) .neon-review-status {
+  color: #d7b887;
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+body:has(.neon-preview) .neon-review-progress {
+  color: #b4cbd0;
+  margin: 1rem 0 0;
+}
+
 body:has(.neon-preview) .neon-review-group {
   padding-bottom: 3rem;
 }

@@ -549,3 +549,17 @@ Run the remaining SEO, D1, stale-style, theme visual-delta, geometry, and respon
 ## EXACT NEXT STEP
 
 Owner reviews the four protected Wave 1 previews in the visible browser. Do not merge, deploy, recolor normal routes, or mass-propagate until explicit owner approval.
+
+## NEON WAVE 1 OWNER FORENSIC / CORRECTION - 2026-10-06
+
+- Authoritative preserved correction source is `946e4ec5eb41176c4ff6bf11b2c2e5c0ba73caef` on `neon-owner-forensic-20261006` and `origin/design/kubera-neon-controlled-rollout-prep-20261005`; production and `origin/main` were not modified.
+- Minimal preview-only correction completed: assistant wrapper deduplicated against the real host-shell assistant; pricing CTA baselines retained a shared bottom anchor; calculator nested panel shadow removed; GEO accent hierarchy is restrained; landing-page representative and local route-level review index are included.
+- Forensic matrix: `reports/KUBERA_NEON_WAVE1_OWNER_FORENSIC_2026-10-06.md`.
+- Classifications: GEO accent/assistant/pricing/calculator/landing coverage are Neon regressions; GEO thin cards are a source content gap; commercial mid-page CTA and GEO long-form structure are existing source behavior; Contacts is unchanged control.
+- Local review index covers 193 sitemap URLs plus five protected preview links, is noindex, absent from sitemap, and absent from production navigation.
+- Validation: typecheck PASS; build PASS (229 generated pages); SEO PASS (213 built indexable routes, 0 warnings); D1 explicit 24/24 PASS; Neon GEO focused test PASS; boundary proof PASS at 390/561/768/1024/1200/1366/1440. Playwright child-server processes did not exit cleanly after completion and were stopped after explicit PASS output.
+- Owner approval remains pending. Known issue: GEO source contains thin/empty sections; no marketing copy was invented. No deploy, merge, Vercel preview, production, main, SEO, content, assistant backend, or protected system change was made.
+
+## EXACT NEXT STEP
+
+Leave the isolated local server on the Neon worktree available for owner review at `/design-lab/visual-review`, then obtain owner visual decisions on the five protected surfaces. Do not merge, deploy, migrate, or rewrite GEO source content without explicit approval.

@@ -93,13 +93,20 @@ test("Wave 1 preview markers do not leak onto normal representative routes", asy
   }
 });
 
-test("GEO preview restores explicit CTA labels and the local review harness includes the assistant", async ({ page }) => {
+test("GEO preview exposes CTA source state and the local review harness includes one assistant", async ({ page }) => {
   await page.goto("/design-lab/neon-preview/geo", { waitUntil: "networkidle" });
   const ctaButtons = page.locator(".geo-cta .button");
   await expect(ctaButtons).toHaveCount(2);
-  await expect(ctaButtons.nth(0)).not.toHaveText(/^\s*$/);
-  await expect(ctaButtons.nth(1)).not.toHaveText(/^\s*$/);
+  await expect(page.getByRole("button", { name: "Open Kubera AI assistant" })).toHaveCount(1);
   await expect(page.getByRole("button", { name: "Open Kubera AI assistant" })).toBeVisible();
+});
+
+test("Visual Review Index is local-only and exposes route-level review state", async ({ page }) => {
+  await page.goto("/design-lab/visual-review", { waitUntil: "networkidle" });
+  await expect(page.locator("h1")).toHaveCount(1);
+  await expect(page.locator(".neon-review-status").first()).toHaveText("NOT REVIEWED");
+  await expect(page.locator('meta[name="robots"]')).toHaveAttribute("content", /noindex/);
+  await expect(page.locator("a[href='/design-lab/neon-preview/home']")).toHaveCount(1);
 });
 
 test("Wave 1 preview pricing CTAs retain a shared card-bottom anchor", async ({ page }) => {
@@ -119,11 +126,11 @@ test("Wave 1 preview pricing CTAs retain a shared card-bottom anchor", async ({ 
 
 test("Wave 1 preview boundary viewports retain styling and no overflow", async ({ page }, testInfo: TestInfo) => {
   test.skip(testInfo.project.name !== "desktop-1366", "Run boundary viewport proof once in the desktop project.");
-  test.setTimeout(180_000);
+  test.setTimeout(600_000);
   const evidenceDir = path.resolve("reports/evidence/neon-preview-wave1");
   fs.mkdirSync(evidenceDir, { recursive: true });
 
-  for (const [width, height] of [[768, 1024], [1440, 900]] as const) {
+  for (const [width, height] of [[390, 844], [561, 844], [768, 1024], [1024, 768], [1200, 800], [1366, 768], [1440, 900]] as const) {
     await page.setViewportSize({ width, height });
     for (const [name, route] of previewRoutes) {
       await page.goto(route, { waitUntil: "networkidle" });
