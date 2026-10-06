@@ -592,3 +592,20 @@ Owner reviews the protected Visual Review Index and the five corrected Neon fami
 ## EXACT NEXT STEP
 
 Owner reviews the five representative Neon families locally. Separately plan a GEO content-remediation wave from the forensic JSON; do not resume the full 211-route review until the owner accepts the systemic Neon correction and decides whether/when to authorize GEO content work.
+
+## FULL GEO ROOT-CAUSE + SITE-WIDE CONTENT COMPLETENESS FORENSIC - 2026-10-06
+
+- Source-of-truth verification passed at baseline `b0e42d3254f6a4f70626afffe5ecd9b9ef525afc`; branch `neon-owner-forensic-20261006` and `origin/main` remained unchanged during this read-only audit.
+- GEO inventory is 36 URL paths across two 18-country families: canonical `/en/<country>-automation` country-model pages and markdown-backed `/ai-automation-*` / Spanish GEO pages. There are 19 non-redirect indexable GEO pages (18 canonical English country pages plus the Spanish markdown route), 17 legacy aliases, and 17 GEO middleware redirects.
+- The previous 18-route report was not a full inventory: it enumerated only `geoCatalog`. The owner’s approximately 36 count includes the separate `countries.ts` family.
+- Full GEO audit: 36 pages; 19 healthy; 17 affected; 155 empty records; 213 title-only records including 58 structural placeholders; 86 thin records; 488 adequate records when the 54 canonical country sections are included; 0 rendering failures and 0 duplicate/boilerplate records.
+- Root cause is parser/schema loss, not missing authoring: June 9–10 GEO source prose remains present and recoverable in Git. The shared `isSectionHeading` fallback in `scripts/generate-geo-kb.mjs` and `src/content/geo/loader.ts` classifies short non-terminal content lines as headings; `GeoPage` renders every parsed section, including empty blocks, as a visible panel. GEO engine/parser/renderer introduction is `8939e1a`; generation was added in `ea25de4`; Germany’s fuller authored source is verifiable at `d50286d`.
+- Historical classification: NEVER AUTHORED 0 confirmed; AUTHORED THEN LOST 0; SOURCE EXISTS / GENERATOR LOST 0; GENERATED EXISTS / PARSER LOST 155 empty + 58 structural title-only records; PARSER EXISTS / RENDERER LOST 0; UNKNOWN 0. No copy was written or restored.
+- Site-wide detector audited 211 real indexable user-facing routes: 194 healthy, 17 affected, all 17 in legacy markdown GEO; Home/shared 6, commercial/industry 54, landing pages 21, use cases 7, blog 49, cases 16, canonical country GEO 18, RU 21, ES 1. Build validator’s 213 includes `/demo` and `/ru/demo`, which remain excluded from the real-route audit.
+- Conclusion: MOSTLY-GEO, not site-wide systemic. Existing QA proved route/build/DOM/asset/hydration behavior but had no semantic body-population, title-only panel, or source-to-parser parity gate.
+- Evidence: `reports/KUBERA_FULL_GEO_CONTENT_ROOT_CAUSE_2026-10-06.md`, `reports/KUBERA_FULL_GEO_CONTENT_AUDIT_2026-10-06.json`, `reports/KUBERA_SITEWIDE_CONTENT_COMPLETENESS_AUDIT_2026-10-06.md`, `reports/KUBERA_SITEWIDE_CONTENT_COMPLETENESS_AUDIT_2026-10-06.json`, `reports/KUBERA_CONTENT_REMEDIATION_MAP_2026-10-06.md`, and `scripts/forensics/sitewide-content-completeness-audit.mjs`.
+- No production, main, SEO, sitemap, route, renderer, design, deployment, or content change was made. Next action is a separate bounded parser-fidelity/content-owner review wave; do not implement it or resume the 211-route owner review yet.
+
+## EXACT NEXT STEP
+
+Owner reviews the forensic evidence and authorizes one bounded GEO parser-fidelity remediation wave. Do not write copy, change production, alter SEO/sitemap, deploy, or resume full owner review before that authorization.
