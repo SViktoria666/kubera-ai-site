@@ -563,3 +563,16 @@ Owner reviews the four protected Wave 1 previews in the visible browser. Do not 
 ## EXACT NEXT STEP
 
 Leave the isolated local server on the Neon worktree available for owner review at `/design-lab/visual-review`, then obtain owner visual decisions on the five protected surfaces. Do not merge, deploy, migrate, or rewrite GEO source content without explicit approval.
+
+## NEON WAVE 1 REMOTE PERSISTENCE + REVIEW INDEX RECONCILIATION - 2026-10-06
+
+- GitHub write-path recovery completed without changing repository architecture: `gh auth setup-git --hostname github.com` installed the official GitHub CLI credential helper for the GitHub HTTPS host. Bounded transport diagnostics showed authenticated `git-receive-pack` reached GitHub; the earlier timeout was the large evidence pack upload, not rejected authorization.
+- Existing branch `neon-owner-forensic-20261006` is remotely preserved at `9f15bb4b12c0fda92f44091d39cc7bbba6fd28dd`; local HEAD matches the remote branch and `origin/main` remains `0a185d71e5990015dc5a22babcfd93dc828b154a`.
+- Fresh local build generated 229 pages: 226 concrete prerendered route entries plus two API routes and middleware in the build total. SEO validation remains PASS with 213 built indexable routes and zero warnings.
+- Sitemap contains 194 routes including `/`; the prior 193 count omitted the root due to path-only parsing. The 19 built routes absent from sitemap are the 17 intentional legacy GEO aliases (canonicalized to `/en/<country>-automation`) plus redirect-only `/demo` and `/ru/demo`. No SEO or sitemap change was made.
+- The protected Visual Review Index was corrected only to include the 17 real legacy GEO aliases. It now represents 211 owner-reviewable routes: 213 built routes minus the two redirect-only demos. Every route remains `NOT REVIEWED`; no route was auto-marked PASS.
+- Review index remains local-only, noindex, absent from sitemap and production navigation. Owner URL: `http://localhost:3105/design-lab/visual-review`.
+
+## EXACT NEXT STEP
+
+Owner reviews the protected Visual Review Index and the five corrected Neon family surfaces locally. Do not merge, deploy, modify production/main, change SEO/content/sitemap, or begin another implementation wave.

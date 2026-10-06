@@ -5,7 +5,6 @@ import { getAllBlogPosts } from "@/content/blog";
 import { caseStudies } from "@/content/cases";
 import { countries } from "@/content/countries/countries";
 import { geoRoutes } from "@/content/geo/catalog";
-import { legacyGeoRoutes, normalizeGeoRoute } from "@/content/geo/routes";
 import { industrySolutions } from "@/content/industry-solutions";
 
 export const metadata: Metadata = { title: "Kubera Neon Local Visual Review", robots: { index: false, follow: false, nocache: true } };
@@ -32,7 +31,7 @@ export default function NeonPreviewIndexPage() {
   const groups = [
     { name: "Home / shared", routes: [{ href: "/", label: "Home" }, { href: "/locations", label: "Locations" }, { href: "/services", label: "Services" }, { href: "/en/solutions", label: "Solutions" }, { href: "/how-we-work", label: "How we work" }] },
     { name: "Commercial / industry", routes: industrySolutions.map((item) => ({ href: item.url, label: item.hero.title })) },
-    { name: "GEO / regional / country", routes: [...countries.map((item) => ({ href: `/en/${item.slug}`, label: item.country })), ...geoRoutes.filter((route) => !legacyGeoRoutes.includes(route)).map((route) => ({ href: normalizeGeoRoute(route), label: label(normalizeGeoRoute(route)) }))] },
+    { name: "GEO / regional / country", routes: [...countries.map((item) => ({ href: `/en/${item.slug}`, label: item.country })), ...geoRoutes.map((route) => ({ href: route, label: label(route) }))] },
     { name: "Use cases", routes: useCaseRoutes.map((href) => ({ href, label: label(href) })) },
     { name: "Cases", routes: [{ href: "/cases", label: "Cases index" }, ...caseStudies.map((item) => ({ href: `/cases/${item.slug}`, label: item.title }))] },
     { name: "Landing-page / website-building", routes: landingPageRoutes.map((href) => ({ href, label: label(href) })) },
