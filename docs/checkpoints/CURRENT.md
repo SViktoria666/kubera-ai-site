@@ -681,3 +681,15 @@ Owner visual review is required for the bounded representative links. Do not rep
 ## EXACT NEXT STEP
 
 Commit and normally push this bounded protected correction if GitHub is reachable, then conduct the owner’s bounded distinct-page-type visual review at `http://localhost:3105/design-lab/visual-review`. Status remains **OWNER REVIEW REQUIRED**; do not deploy or recommend production before explicit owner approval.
+
+## FINAL HOME-REFERENCE SITE-WIDE NEON MIGRATION — 2026-10-07
+
+- Baseline `e16d4aea41dabc6a2ca05fd427b487b62e57299f` was clean on `neon-owner-forensic-20261006`; cached remote ref matched. Live fetch was network-blocked without showing a Git mismatch.
+- Approved protected Home remains the visual source. Shared `NeonHeading` now implements first `ceil(N / 2)` visible words white and final `floor(N / 2)` cyan, without changing source text or SEO wording.
+- Blog shells/articles, Case details, Commercial, GEO, Service, Landing and Use Case renderers inherit the shared H1 contract. Review Index is a protected 211-route inventory with owner-only statuses.
+- Evidence: H1 vectors 1–9 PASS; parity PASS (16); 16 shared templates × 5 viewports = 80 responsive checks, 0 failures; normal/hard/new-tab/hydration proof PASS. Only sandbox-blocked external Fonts/analytics requests remain.
+- Validation: typecheck PASS; build PASS (229 generated); SEO source validation PASS (213 indexable, 0 warnings); content completeness PASS. D1 was not rerun to protect final 3105 `.next` assets.
+
+## EXACT NEXT STEP
+
+Commit and normally push this bounded protected correction, verify remote SHA, and leave `http://localhost:3105/design-lab/visual-review` running for owner review. Status remains **OWNER REVIEW REQUIRED**. Do not deploy, merge main, or start D2.

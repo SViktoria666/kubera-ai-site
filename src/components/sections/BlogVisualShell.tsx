@@ -1,3 +1,5 @@
+import { NeonHeading } from "@/components/core/NeonHeading";
+
 export function BlogVisualShell({ locale }: { locale: "en" | "ru" }) {
   const isRu = locale === "ru";
 
@@ -5,7 +7,7 @@ export function BlogVisualShell({ locale }: { locale: "en" | "ru" }) {
     <main className="section">
       <div className="container">
         <p className="eyebrow">{isRu ? "Блог" : "Blog"}</p>
-        <h1 className="section-title">{isRu ? "Блог Kubera AI" : "Kubera AI Blog"}</h1>
+        <NeonHeading as="h1" className="section-title">{isRu ? "Блог Kubera AI" : "Kubera AI Blog"}</NeonHeading>
         <p className="lead">
           {isRu ? "Каркас для будущих материалов об автоматизации, AI и n8n." : "A visual shell for future automation, AI, and n8n articles."}
         </p>

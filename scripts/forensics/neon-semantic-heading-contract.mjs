@@ -2,10 +2,14 @@ import { chromium } from "playwright";
 
 const base = "http://127.0.0.1:3105";
 const browser = await chromium.launch({ headless: true });
+const splitVectors = Array.from({ length: 9 }, (_, index) => {
+  const words = index + 1;
+  return { words, white: Math.ceil(words / 2), cyan: Math.floor(words / 2) };
+});
 const checks = [
-  { name: "WhatsApp Germany", path: "/en/solutions/germany/whatsapp-automation", full: "WhatsApp Automation for Businesses in Germany", accent: "for Businesses in Germany" },
-  { name: "Landing Page Germany", path: "/services/germany/landing-page-design", accent: "for Businesses in Germany" },
-  { name: "Blog index", path: "/blog", accent: "AI Blog" },
+  { name: "WhatsApp Germany", path: "/en/solutions/germany/whatsapp-automation", full: "WhatsApp Automation for Businesses in Germany", accent: "Businesses in Germany" },
+  { name: "Landing Page Germany", path: "/services/germany/landing-page-design", accent: "Businesses in Germany" },
+  { name: "Blog index", path: "/blog", accent: "Blog" },
   { name: "RU cases gallery", path: "/ru/keysy", accent: "масштабируют ваш бизнес." },
   { name: "ES canonical page", path: "/automatizacion-ia-espana", accent: "Trabaja con Inteligencia, Crece sin Límites" },
 ];
@@ -51,5 +55,5 @@ results.push({ name: "Case detail", status: caseResponse?.status() ?? 0, ...case
 await casePage.close();
 await browser.close();
 
-console.log(JSON.stringify({ checked: results.length, failures: results.filter((item) => !item.pass), results }, null, 2));
+console.log(JSON.stringify({ rule: "first ceil(N / 2) white; final floor(N / 2) cyan", splitVectors, checked: results.length, failures: results.filter((item) => !item.pass), results }, null, 2));
 if (results.some((item) => !item.pass)) process.exitCode = 1;

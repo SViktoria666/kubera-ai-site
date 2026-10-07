@@ -5,13 +5,15 @@ import { chromium } from "playwright";
 const root = process.cwd();
 const inventory = JSON.parse(fs.readFileSync(path.join(root, "reports/KUBERA_SITEWIDE_CONTENT_COMPLETENESS_AUDIT_2026-10-06.json"), "utf8"));
 const routes = inventory.routes.map((entry) => ({ route: entry.route, family: entry.family }));
-const viewports = [
+const responsiveViewports = [
   { width: 390, height: 844 },
   { width: 768, height: 1024 },
   { width: 1024, height: 768 },
   { width: 1366, height: 768 },
   { width: 1440, height: 900 },
 ];
+const desktopOnly = process.argv.includes("--desktop-only");
+const viewports = desktopOnly ? responsiveViewports.filter((viewport) => viewport.width === 1366) : responsiveViewports;
 const boundaryWidths = [561, 1200];
 const results = [];
 const screenshotsDir = path.join(root, "reports", "evidence", "neon-full-rollout");
@@ -111,7 +113,7 @@ async function check(page, entry, viewport, capture = false) {
 const routeChecks = routes.flatMap((entry) => viewports.map((viewport) => ({ entry, viewport })));
 // Keep local browser fan-out bounded; the previous 8-page fan-out could
 // exhaust the Windows browser process pool before producing evidence.
-const concurrency = 6;
+const concurrency = desktopOnly ? 16 : 6;
 for (let offset = 0; offset < routeChecks.length; offset += concurrency) {
   const batch = routeChecks.slice(offset, offset + concurrency);
   const batchResults = await Promise.all(batch.map(async ({ entry, viewport }) => {
@@ -126,7 +128,7 @@ for (let offset = 0; offset < routeChecks.length; offset += concurrency) {
 }
 
 const boundaryResults = [];
-for (const entry of [...screenshotRoutes.values()]) {
+for (const entry of desktopOnly ? [] : [...screenshotRoutes.values()]) {
   for (const width of boundaryWidths) {
     const page = await browser.newPage({ viewport: { width, height: 900 } });
     boundaryResults.push(await check(page, { route: entry, family: [...screenshotRoutes.entries()].find(([, route]) => route === entry)?.[0] ?? "boundary" }, { width, height: 900 }));
@@ -142,7 +144,7 @@ const report = {
   sourceSha: "runtime verified against current local worktree before commit",
   routes: routes.length,
   viewports: viewports.map(({ width }) => width),
-  boundaryWidths,
+  boundaryWidths: desktopOnly ? [] : boundaryWidths,
   routeChecks: results.length,
   boundaryChecks: boundaryResults.length,
   totalChecks: all.length,

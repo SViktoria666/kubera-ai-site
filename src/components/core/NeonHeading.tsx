@@ -3,16 +3,33 @@ import type { ElementType, ReactNode } from "react";
 type NeonHeadingProps = {
   as: Extract<ElementType, "h1" | "h2" | "h3">;
   children: string;
-  /** Existing heading text selected by semantic presentation data. */
+  /** Explicit non-H1 accent treatment retained for approved Home-style H2/H3. */
   accentPhrase?: string;
   className?: string;
 };
 
 /**
- * Appearance-only heading emphasis. The complete source string remains in the
- * DOM in the same order; the accent phrase is existing text, never new copy.
+ * Appearance-only heading emphasis. Large page H1s have a deterministic
+ * owner-approved contract: first ceil(N / 2) visible words remain white and
+ * final floor(N / 2) visible words become cyan. The source string remains in
+ * the DOM in the same order and is never altered.
  */
 export function NeonHeading({ as: Tag, children, accentPhrase, className }: NeonHeadingProps) {
+  if (Tag === "h1") {
+    const words = [...children.matchAll(/\S+/g)];
+    const whiteWordCount = Math.ceil(words.length / 2);
+    const accentStart = words[whiteWordCount]?.index;
+
+    if (accentStart === undefined) {
+      return <Tag className={className}>{children}</Tag>;
+    }
+
+    return <Tag className={className}>
+      {children.slice(0, accentStart)}
+      <span className="neon-heading__accent">{children.slice(accentStart)}</span>
+    </Tag>;
+  }
+
   if (!accentPhrase || !children.includes(accentPhrase)) {
     return <Tag className={className}>{children}</Tag>;
   }
@@ -27,10 +44,8 @@ export function NeonHeading({ as: Tag, children, accentPhrase, className }: Neon
 }
 
 /**
- * Semantic presentation data only. Values are existing substrings of the
- * authored heading; this registry never changes textContent or SEO wording.
- * Unlisted headings intentionally remain white until an owner-reviewable
- * semantic phrase is specified.
+ * Explicit presentation data for the limited approved non-H1 accent uses.
+ * H1s deliberately do not use this registry: their split is deterministic.
  */
 const exactSemanticAccents: Record<string, string> = {
   "Business that grows.": "Business that grows.",

@@ -5,20 +5,20 @@ import { chromium } from "playwright";
 const root = process.cwd();
 const base = "http://127.0.0.1:3105";
 const routes = [
-  ["Home", "/", "Business that grows."],
-  ["How We Work", "/how-we-work", "working system"],
-  ["Services", "/services", "tailored to your business."],
-  ["Commercial", "/en/solutions/germany/whatsapp-automation", "for Businesses in Germany"],
-  ["GEO", "/en/germany-automation", "for German companies"],
-  ["Use Cases", "/use-cases/ai-customer-support-ecommerce", "for E-commerce"],
-  ["Cases", "/cases", "scale your business."],
-  ["Landing Pages", "/services/germany/landing-page-design", "for Businesses in Germany"],
-  ["Blog index", "/blog", "AI Blog"],
-  ["Blog article", "/blog/ai-agent-autonomy-human-in-the-loop", "Before a Human Steps In?"],
+  ["Home", "/"],
+  ["How We Work", "/how-we-work"],
+  ["Services", "/services"],
+  ["Commercial", "/en/solutions/germany/whatsapp-automation"],
+  ["GEO", "/en/germany-automation"],
+  ["Use Cases", "/use-cases/ai-customer-support-ecommerce"],
+  ["Cases", "/cases"],
+  ["Landing Pages", "/services/germany/landing-page-design"],
+  ["Blog index", "/blog"],
+  ["Blog article", "/blog/ai-agent-autonomy-human-in-the-loop"],
   ["Contacts", "/contacts"],
   ["RU", "/ru"],
   ["ES", "/automatizacion-ia-espana"],
-  ["Case detail", "/cases/customer-communications", "Wrong System Three Days Later"],
+  ["Case detail", "/cases/customer-communications"],
   ["RU cases", "/ru/keysy"],
 ];
 const forbidden = ["rgb(26, 5, 51)", "rgb(42, 16, 69)", "rgb(16, 0, 32)", "rgb(21, 3, 41)", "rgb(9, 0, 17)", "rgba(11, 4, 24", "rgba(5, 2, 14"];
@@ -44,6 +44,8 @@ for (const [family, route, expectedAccent] of routes) {
     const accentStyles = accentNodes.map((node) => getComputedStyle(node).color);
     const firstHeading = document.querySelector("h1");
     const accentText = firstHeading?.querySelector(".neon-heading__accent")?.textContent ?? "";
+    const headingWords = firstHeading?.textContent?.trim().match(/\S+/g) ?? [];
+    const expectedDeterministicAccent = headingWords.slice(Math.ceil(headingWords.length / 2)).join(" ");
     return {
       path: window.location.pathname,
       scope: Boolean(document.querySelector(".neon-preview-sitewide")),
@@ -53,14 +55,16 @@ for (const [family, route, expectedAccent] of routes) {
       accentStyles,
       headingText: firstHeading?.textContent ?? "",
       accentText,
-      expectedAccent: expectedAccent ?? null,
-      semanticAccentPass: expectedAccent ? accentText === expectedAccent && accentStyles.includes("rgb(76, 229, 228)") : true,
+      expectedAccent: expectedDeterministicAccent,
+      deterministicH1Pass: headingWords.length <= 1
+        ? accentText === ""
+        : accentText.trim() === expectedDeterministicAccent && accentStyles.includes("rgb(76, 229, 228)"),
       legacySurfaceCount: legacy.length,
       legacySurfaces: legacy.map((node) => ({ tag: node.tagName, className: String(node.className) })),
       overflow: document.documentElement.scrollWidth > window.innerWidth + 1,
     };
   }, { patterns: forbidden, expectedAccent });
-  results.push({ family, route, status: response?.status() ?? 0, ...state, pass: response?.status() === 200 && state.scope && state.legacySurfaceCount === 0 && state.semanticAccentPass && !state.overflow });
+  results.push({ family, route, status: response?.status() ?? 0, ...state, pass: response?.status() === 200 && state.scope && state.legacySurfaceCount === 0 && state.deterministicH1Pass && !state.overflow });
   await page.close();
 }
 
