@@ -5,30 +5,32 @@ import { chromium } from "playwright";
 const root = process.cwd();
 const base = "http://127.0.0.1:3105";
 const routes = [
-  ["Home", "/"],
-  ["How We Work", "/how-we-work"],
-  ["Services", "/services"],
-  ["Commercial", "/en/solutions/germany/whatsapp-automation"],
-  ["GEO", "/en/germany-automation"],
-  ["Use Cases", "/use-cases/ai-customer-support-ecommerce"],
-  ["Cases", "/cases"],
-  ["Landing Pages", "/services/germany/landing-page-design"],
-  ["Blog index", "/blog"],
-  ["Blog article", "/blog/ai-agent-autonomy-human-in-the-loop"],
+  ["Home", "/", "Business that grows."],
+  ["How We Work", "/how-we-work", "working system"],
+  ["Services", "/services", "tailored to your business."],
+  ["Commercial", "/en/solutions/germany/whatsapp-automation", "for Businesses in Germany"],
+  ["GEO", "/en/germany-automation", "for German companies"],
+  ["Use Cases", "/use-cases/ai-customer-support-ecommerce", "for E-commerce"],
+  ["Cases", "/cases", "scale your business."],
+  ["Landing Pages", "/services/germany/landing-page-design", "for Businesses in Germany"],
+  ["Blog index", "/blog", "AI Blog"],
+  ["Blog article", "/blog/ai-agent-autonomy-human-in-the-loop", "Before a Human Steps In?"],
   ["Contacts", "/contacts"],
   ["RU", "/ru"],
   ["ES", "/automatizacion-ia-espana"],
+  ["Case detail", "/cases/customer-communications", "Wrong System Three Days Later"],
+  ["RU cases", "/ru/keysy"],
 ];
 const forbidden = ["rgb(26, 5, 51)", "rgb(42, 16, 69)", "rgb(16, 0, 32)", "rgb(21, 3, 41)", "rgb(9, 0, 17)", "rgba(11, 4, 24", "rgba(5, 2, 14"];
 const browser = await chromium.launch({ headless: true });
 const results = [];
 
-for (const [family, route] of routes) {
+for (const [family, route, expectedAccent] of routes) {
   const page = await browser.newPage({ viewport: { width: 1366, height: 768 } });
   const response = await page.goto(`${base}${route}?neon=1`, { waitUntil: "domcontentloaded", timeout: 20000 });
   await page.waitForSelector(".neon-preview-sitewide", { state: "attached", timeout: 5000 }).catch(() => {});
   await page.waitForTimeout(100);
-  const state = await page.evaluate((patterns) => {
+  const state = await page.evaluate(({ patterns, expectedAccent }) => {
     const surfaces = [...document.querySelectorAll("main, section, article, aside, .card, .solution-section, .site-footer")];
     const legacy = surfaces.filter((node) => {
       const style = getComputedStyle(node);
@@ -38,7 +40,10 @@ for (const [family, route] of routes) {
     });
     const headings = [...document.querySelectorAll("h1, .solution-section-heading > h2, .home-solution-nav-card h2")];
     const accentHeadings = headings.filter((heading) => heading.querySelector(".neon-heading__accent"));
-    const accentStyles = [...document.querySelectorAll(".neon-heading__accent")].map((node) => getComputedStyle(node).color);
+    const accentNodes = [...document.querySelectorAll(".neon-heading__accent")];
+    const accentStyles = accentNodes.map((node) => getComputedStyle(node).color);
+    const firstHeading = document.querySelector("h1");
+    const accentText = firstHeading?.querySelector(".neon-heading__accent")?.textContent ?? "";
     return {
       path: window.location.pathname,
       scope: Boolean(document.querySelector(".neon-preview-sitewide")),
@@ -46,12 +51,16 @@ for (const [family, route] of routes) {
       headings: headings.length,
       accentHeadings: accentHeadings.length,
       accentStyles,
+      headingText: firstHeading?.textContent ?? "",
+      accentText,
+      expectedAccent: expectedAccent ?? null,
+      semanticAccentPass: expectedAccent ? accentText === expectedAccent && accentStyles.includes("rgb(76, 229, 228)") : true,
       legacySurfaceCount: legacy.length,
       legacySurfaces: legacy.map((node) => ({ tag: node.tagName, className: String(node.className) })),
       overflow: document.documentElement.scrollWidth > window.innerWidth + 1,
     };
-  }, forbidden);
-  results.push({ family, route, status: response?.status() ?? 0, ...state, pass: response?.status() === 200 && state.scope && state.legacySurfaceCount === 0 && (state.headings === 0 || state.accentHeadings > 0) && !state.overflow });
+  }, { patterns: forbidden, expectedAccent });
+  results.push({ family, route, status: response?.status() ?? 0, ...state, pass: response?.status() === 200 && state.scope && state.legacySurfaceCount === 0 && state.semanticAccentPass && !state.overflow });
   await page.close();
 }
 

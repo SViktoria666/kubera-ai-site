@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-06T23:38:19.924Z",
+  "generatedAt": "2026-10-07T15:24:22.922Z",
   "base": "http://127.0.0.1:3105",
   "routes": [
     {
@@ -16,6 +16,10 @@
         "rgb(76, 229, 228)",
         "rgb(76, 229, 228)"
       ],
+      "headingText": "Systems that work.\nBusiness that grows.",
+      "accentText": "Business that grows.",
+      "expectedAccent": "Business that grows.",
+      "semanticAccentPass": true,
       "legacySurfaceCount": 0,
       "legacySurfaces": [],
       "overflow": false,
@@ -33,6 +37,10 @@
       "accentStyles": [
         "rgb(76, 229, 228)"
       ],
+      "headingText": "From first conversation to a working system — 2–5 weeks",
+      "accentText": "working system",
+      "expectedAccent": "working system",
+      "semanticAccentPass": true,
       "legacySurfaceCount": 0,
       "legacySurfaces": [],
       "overflow": false,
@@ -50,6 +58,10 @@
       "accentStyles": [
         "rgb(76, 229, 228)"
       ],
+      "headingText": "Digital workforce tailored to your business.",
+      "accentText": "tailored to your business.",
+      "expectedAccent": "tailored to your business.",
+      "semanticAccentPass": true,
       "legacySurfaceCount": 0,
       "legacySurfaces": [],
       "overflow": false,
@@ -67,6 +79,10 @@
       "accentStyles": [
         "rgb(76, 229, 228)"
       ],
+      "headingText": "WhatsApp Automation for Businesses in Germany",
+      "accentText": "for Businesses in Germany",
+      "expectedAccent": "for Businesses in Germany",
+      "semanticAccentPass": true,
       "legacySurfaceCount": 0,
       "legacySurfaces": [],
       "overflow": false,
@@ -84,6 +100,10 @@
       "accentStyles": [
         "rgb(76, 229, 228)"
       ],
+      "headingText": "Business process automation for German companies",
+      "accentText": "for German companies",
+      "expectedAccent": "for German companies",
+      "semanticAccentPass": true,
       "legacySurfaceCount": 0,
       "legacySurfaces": [],
       "overflow": false,
@@ -99,10 +119,12 @@
       "headings": 20,
       "accentHeadings": 1,
       "accentStyles": [
-        "rgb(76, 229, 228)",
-        "rgb(76, 229, 228)",
         "rgb(76, 229, 228)"
       ],
+      "headingText": "AI Customer Support for E-commerce: Handle More Tickets Without Expanding the Team",
+      "accentText": "for E-commerce",
+      "expectedAccent": "for E-commerce",
+      "semanticAccentPass": true,
       "legacySurfaceCount": 0,
       "legacySurfaces": [],
       "overflow": false,
@@ -120,6 +142,10 @@
       "accentStyles": [
         "rgb(76, 229, 228)"
       ],
+      "headingText": "Digital employees that scale your business.",
+      "accentText": "scale your business.",
+      "expectedAccent": "scale your business.",
+      "semanticAccentPass": true,
       "legacySurfaceCount": 0,
       "legacySurfaces": [],
       "overflow": false,
@@ -133,18 +159,16 @@
       "scope": true,
       "h1": "Landing Page Design for Businesses in Germany",
       "headings": 10,
-      "accentHeadings": 8,
+      "accentHeadings": 2,
       "accentStyles": [
-        "rgb(76, 229, 228)",
-        "rgb(76, 229, 228)",
-        "rgb(76, 229, 228)",
-        "rgb(76, 229, 228)",
-        "rgb(76, 229, 228)",
-        "rgb(76, 229, 228)",
         "rgb(76, 229, 228)",
         "rgb(76, 229, 228)",
         "rgb(76, 229, 228)"
       ],
+      "headingText": "Landing Page Design for Businesses in Germany",
+      "accentText": "for Businesses in Germany",
+      "expectedAccent": "for Businesses in Germany",
+      "semanticAccentPass": true,
       "legacySurfaceCount": 0,
       "legacySurfaces": [],
       "overflow": false,
@@ -162,6 +186,10 @@
       "accentStyles": [
         "rgb(76, 229, 228)"
       ],
+      "headingText": "Kubera AI Blog",
+      "accentText": "AI Blog",
+      "expectedAccent": "AI Blog",
+      "semanticAccentPass": true,
       "legacySurfaceCount": 0,
       "legacySurfaces": [],
       "overflow": false,
@@ -179,6 +207,10 @@
       "accentStyles": [
         "rgb(76, 229, 228)"
       ],
+      "headingText": "How Much Autonomy Should an AI Agent Have Before a Human Steps In?",
+      "accentText": "Before a Human Steps In?",
+      "expectedAccent": "Before a Human Steps In?",
+      "semanticAccentPass": true,
       "legacySurfaceCount": 0,
       "legacySurfaces": [],
       "overflow": false,
@@ -192,10 +224,12 @@
       "scope": true,
       "h1": "Tell us about your business.",
       "headings": 1,
-      "accentHeadings": 1,
-      "accentStyles": [
-        "rgb(76, 229, 228)"
-      ],
+      "accentHeadings": 0,
+      "accentStyles": [],
+      "headingText": "Tell us about your business.",
+      "accentText": "",
+      "expectedAccent": null,
+      "semanticAccentPass": true,
       "legacySurfaceCount": 0,
       "legacySurfaces": [],
       "overflow": false,
@@ -209,10 +243,12 @@
       "scope": true,
       "h1": "Системы, которые работают.\nБизнес, который растёт.",
       "headings": 1,
-      "accentHeadings": 1,
-      "accentStyles": [
-        "rgb(76, 229, 228)"
-      ],
+      "accentHeadings": 0,
+      "accentStyles": [],
+      "headingText": "Системы, которые работают.\nБизнес, который растёт.",
+      "accentText": "",
+      "expectedAccent": null,
+      "semanticAccentPass": true,
       "legacySurfaceCount": 0,
       "legacySurfaces": [],
       "overflow": false,
@@ -230,6 +266,52 @@
       "accentStyles": [
         "rgb(76, 229, 228)"
       ],
+      "headingText": "Automatización con IA para Empresas Españolas: Trabaja con Inteligencia, Crece sin Límites",
+      "accentText": "Trabaja con Inteligencia, Crece sin Límites",
+      "expectedAccent": null,
+      "semanticAccentPass": true,
+      "legacySurfaceCount": 0,
+      "legacySurfaces": [],
+      "overflow": false,
+      "pass": true
+    },
+    {
+      "family": "Case detail",
+      "route": "/cases/customer-communications",
+      "status": 200,
+      "path": "/cases/customer-communications",
+      "scope": true,
+      "h1": "The Customer Wasn't Ignored. They Were Just Answered by the Wrong System Three Days Later",
+      "headings": 3,
+      "accentHeadings": 1,
+      "accentStyles": [
+        "rgb(76, 229, 228)"
+      ],
+      "headingText": "The Customer Wasn't Ignored. They Were Just Answered by the Wrong System Three Days Later",
+      "accentText": "Wrong System Three Days Later",
+      "expectedAccent": "Wrong System Three Days Later",
+      "semanticAccentPass": true,
+      "legacySurfaceCount": 0,
+      "legacySurfaces": [],
+      "overflow": false,
+      "pass": true
+    },
+    {
+      "family": "RU cases",
+      "route": "/ru/keysy",
+      "status": 200,
+      "path": "/ru/keysy",
+      "scope": true,
+      "h1": "Цифровые сотрудники, которые масштабируют ваш бизнес.",
+      "headings": 1,
+      "accentHeadings": 1,
+      "accentStyles": [
+        "rgb(76, 229, 228)"
+      ],
+      "headingText": "Цифровые сотрудники, которые масштабируют ваш бизнес.",
+      "accentText": "масштабируют ваш бизнес.",
+      "expectedAccent": null,
+      "semanticAccentPass": true,
       "legacySurfaceCount": 0,
       "legacySurfaces": [],
       "overflow": false,
@@ -238,7 +320,7 @@
     {
       "family": "Visual Review Index",
       "route": "/design-lab/visual-review",
-      "protectedRouteLinks": 225,
+      "protectedRouteLinks": 245,
       "hasDemoDestination": true,
       "hasBlogIndex": true,
       "hasBlogArticle": true,

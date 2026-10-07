@@ -1,7 +1,7 @@
 import Link from "next/link";
 import type { ReactNode } from "react";
 import { AmbientTechCloud } from "@/components/decorative/AmbientTechCloud";
-import { getNeonAccent, NeonHeading } from "@/components/core/NeonHeading";
+import { getSemanticHeadingAccent, NeonHeading } from "@/components/core/NeonHeading";
 import type { UseCaseFaqItem, UseCaseLinkCard } from "@/content/use-cases/ai-voice-agents-home-services";
 import { MarkdownRenderer } from "@/components/blog/MarkdownRenderer";
 import { siteConfig } from "@/content/site";
@@ -368,7 +368,7 @@ function CtaPanel({
   return (
     <section className="solution-final-cta">
       <p className="eyebrow">{eyebrow}</p>
-      <NeonHeading as="h2" className="section-title" accent={getNeonAccent(title)}>{title}</NeonHeading>
+      <NeonHeading as="h2" className="section-title" accentPhrase={getSemanticHeadingAccent(title)}>{title}</NeonHeading>
       <p className="lead solution-section-lead">{body}</p>
       <div className="solution-cta-actions">
         <Link
@@ -419,7 +419,7 @@ export function UseCaseLandingPage({
             <AmbientTechCloud variant="solution" />
             <div className="solution-hero-copy">
               <p className="eyebrow">International use case landing page</p>
-              <NeonHeading as="h1" className="solution-title" accent={getNeonAccent(hero.title)}>{hero.title}</NeonHeading>
+              <NeonHeading as="h1" className="solution-title" accentPhrase={getSemanticHeadingAccent(hero.title)}>{hero.title}</NeonHeading>
               <p className="lead solution-lead">{hero.lead}</p>
               <p className="solution-trustline">{hero.trustLine}</p>
               <div className="solution-hero-actions">

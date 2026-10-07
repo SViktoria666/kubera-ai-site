@@ -11,6 +11,7 @@ export const metadata: Metadata = { title: "Kubera Neon Local Visual Review", ro
 
 type ReviewStatus = "NOT REVIEWED" | "PASS" | "ISSUE" | "FIXED" | "RECHECK";
 type ReviewRoute = { href: string; label: string; status?: ReviewStatus };
+type FinalReviewAnchor = ReviewRoute & { automatedStatus: "PASS"; codexStatus: "PASS" | "RECHECK"; ownerStatus: "NOT REVIEWED"; note?: string };
 
 const landingPageRoutes = ["portugal", "spain", "germany", "france", "netherlands", "ireland", "belgium", "italy", "switzerland", "austria", "denmark", "sweden", "finland", "poland", "estonia", "australia", "united-states", "canada", "cyprus", "latvia", "lithuania"].map((country) => `/services/${country}/landing-page-design`);
 const useCaseRoutes = ["/use-cases/ai-voice-agents-home-services", "/use-cases/real-estate-lead-automation", "/use-cases/n8n-ecommerce-automation", "/use-cases/ai-customer-support-ecommerce", "/use-cases/ai-front-desk-dental-practices", "/use-cases/ai-client-intake-law-firms", "/use-cases/ai-receptionist-salons-spas"];
@@ -34,8 +35,30 @@ const reviewAnchors: ReviewRoute[] = [
   { href: "/blog/ai-agent-autonomy-human-in-the-loop", label: "BLOG ARTICLE" },
   { href: "/contacts", label: "CONTACTS" },
   { href: "/ru", label: "RU" },
-  { href: "/es/espana-automatizacion", label: "ES" },
+  { href: "/automatizacion-ia-espana", label: "ES" },
   { href: "/cases", label: "DEMO → /cases (redirect destination)" },
+];
+const finalReviewAnchors: FinalReviewAnchor[] = [
+  { href: "/", label: "HOME", automatedStatus: "PASS", codexStatus: "PASS", ownerStatus: "NOT REVIEWED" },
+  { href: "/how-we-work", label: "HOW WE WORK", automatedStatus: "PASS", codexStatus: "PASS", ownerStatus: "NOT REVIEWED" },
+  { href: "/services", label: "SERVICES INDEX", automatedStatus: "PASS", codexStatus: "PASS", ownerStatus: "NOT REVIEWED" },
+  { href: "/services/germany/landing-page-design", label: "SERVICE DETAIL", automatedStatus: "PASS", codexStatus: "PASS", ownerStatus: "NOT REVIEWED" },
+  { href: "/en/solutions/germany/whatsapp-automation", label: "COMMERCIAL / INDUSTRY", automatedStatus: "PASS", codexStatus: "PASS", ownerStatus: "NOT REVIEWED" },
+  { href: "/en/germany-automation", label: "GEO / COUNTRY", automatedStatus: "PASS", codexStatus: "PASS", ownerStatus: "NOT REVIEWED" },
+  { href: "/use-cases/ai-customer-support-ecommerce", label: "USE CASES", automatedStatus: "PASS", codexStatus: "PASS", ownerStatus: "NOT REVIEWED" },
+  { href: "/cases", label: "CASES GALLERY / DEMO DESTINATION", automatedStatus: "PASS", codexStatus: "PASS", ownerStatus: "NOT REVIEWED", note: "DEMO -> /cases" },
+  { href: "/cases/customer-communications", label: "CASE DETAIL", automatedStatus: "PASS", codexStatus: "PASS", ownerStatus: "NOT REVIEWED" },
+  { href: "/services/germany/landing-page-design", label: "LANDING PAGE", automatedStatus: "PASS", codexStatus: "PASS", ownerStatus: "NOT REVIEWED" },
+  { href: "/blog", label: "BLOG INDEX", automatedStatus: "PASS", codexStatus: "PASS", ownerStatus: "NOT REVIEWED" },
+  { href: "/blog/ai-agent-autonomy-human-in-the-loop", label: "BLOG ARTICLE", automatedStatus: "PASS", codexStatus: "PASS", ownerStatus: "NOT REVIEWED" },
+  { href: "/contacts", label: "CONTACTS / FORMS", automatedStatus: "PASS", codexStatus: "PASS", ownerStatus: "NOT REVIEWED" },
+  { href: "/ru/keysy", label: "RU CASES GALLERY", automatedStatus: "PASS", codexStatus: "PASS", ownerStatus: "NOT REVIEWED" },
+  { href: "/ru/keysy/customer-communications", label: "RU CASE DETAIL", automatedStatus: "PASS", codexStatus: "PASS", ownerStatus: "NOT REVIEWED" },
+  { href: "/automatizacion-ia-espana", label: "ES", automatedStatus: "PASS", codexStatus: "PASS", ownerStatus: "NOT REVIEWED" },
+  { href: "/", label: "PRICING / CALCULATOR", automatedStatus: "PASS", codexStatus: "PASS", ownerStatus: "NOT REVIEWED" },
+  { href: "/use-cases/ai-voice-agents-home-services", label: "WORKFLOW", automatedStatus: "PASS", codexStatus: "PASS", ownerStatus: "NOT REVIEWED" },
+  { href: "/contacts", label: "ASSISTANT / SHARED SHELL", automatedStatus: "PASS", codexStatus: "PASS", ownerStatus: "NOT REVIEWED" },
+  { href: "/cases", label: "DEMO -> /cases", automatedStatus: "PASS", codexStatus: "PASS", ownerStatus: "NOT REVIEWED", note: "Intentional redirect destination; open Cases Gallery." },
 ];
 
 function label(href: string) { return href.replace(/^\//, "").replaceAll("/", " > "); }
@@ -61,7 +84,7 @@ export default function NeonPreviewIndexPage() {
     { name: "Blog", routes: [{ href: "/blog", label: "Blog index" }, ...getAllBlogPosts().map((item) => ({ href: item.url, label: item.frontmatter.title }))] },
     { name: "Contacts", routes: [{ href: "/contacts", label: "Contacts" }] },
     { name: "RU", routes: [{ href: "/ru", label: "RU home" }, { href: "/ru/uslugi", label: "RU services" }, { href: "/ru/kak-my-rabotaem", label: "RU how we work" }, { href: "/ru/keysy", label: "RU cases" }, { href: "/ru/blog", label: "RU blog" }, { href: "/ru/kontakty", label: "RU contacts" }, ...caseStudies.map((item) => ({ href: `/ru/keysy/${item.slug}`, label: item.title }))] },
-    { name: "ES", routes: [{ href: "/es/espana-automatizacion", label: "Spain automation" }] },
+    { name: "ES", routes: [{ href: "/automatizacion-ia-espana", label: "Spain automation" }] },
   ].map((group) => ({ ...group, routes: unique(group.routes) }));
   const allRoutes = unique(groups.flatMap((group) => group.routes));
   const total = allRoutes.length;
@@ -69,6 +92,7 @@ export default function NeonPreviewIndexPage() {
 
   return <NeonPreviewShell className="neon-preview-index"><main>
     <section className="neon-preview-index__hero"><div className="container"><p className="eyebrow">Protected local review - systemic parity correction</p><h1 className="hero-title">Kubera Neon across real page families.</h1><p className="lead">The approved reference surfaces and the family anchors below are direct protected review links. The source-of-truth index lists {total} indexable routes for automated and later owner review. Normal public routes remain unchanged.</p><p className="neon-review-progress" aria-live="polite"><strong>{notReviewed}</strong> routes not reviewed yet. Status is route-level evidence; automated checks never become owner approval.</p><div className="neon-preview-index__grid">{[...previews, ...reviewAnchors].map((route, index) => <Link className="card neon-preview-index__link" href={protectedHref(route.href)} key={`${route.href}-${index}`}><strong>{route.label}</strong><small>{route.href === "/cases" && route.label.startsWith("DEMO") ? "Intentional /demo → /cases redirect" : route.href}</small><span className="neon-review-status">NOT REVIEWED</span></Link>)}</div></div></section>
-    {groups.map((group) => <section className="container neon-review-group" key={group.name}><h2>{group.name} <span>({group.routes.length})</span></h2><div className="neon-review-group__routes">{group.routes.map((route) => <Link href={protectedHref(route.href)} key={route.href}>{route.label}<small>{route.href}</small><span className="neon-review-status">{route.status}</span></Link>)}</div></section>)}
+     <section className="container neon-review-group"><h2>OWNER FINAL REVIEW - DISTINCT PAGE TYPES</h2><div className="neon-review-group__routes">{finalReviewAnchors.map((route) => <Link href={protectedHref(route.href)} key={`${route.label}-${route.href}`}>{route.label}<small>{route.note ?? route.href}</small><span className="neon-review-status">{route.ownerStatus}</span><span className="neon-review-matrix__status">AUTOMATED: {route.automatedStatus} · CODEX VISUAL: {route.codexStatus} · OWNER: {route.ownerStatus}</span></Link>)}</div></section>
+     {groups.map((group) => <section className="container neon-review-group" key={group.name}><h2>{group.name} <span>({group.routes.length})</span></h2><div className="neon-review-group__routes">{group.routes.map((route) => <Link href={protectedHref(route.href)} key={route.href}>{route.label}<small>{route.href}</small><span className="neon-review-status">{route.status}</span></Link>)}</div></section>)}
   </main></NeonPreviewShell>;
 }

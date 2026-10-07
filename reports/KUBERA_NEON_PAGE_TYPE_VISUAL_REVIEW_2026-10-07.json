@@ -1,0 +1,167 @@
+{
+  "generatedAt": "2026-10-07T15:10:50.279Z",
+  "entries": [
+    {
+      "name": "home",
+      "route": "/",
+      "status": 200,
+      "scope": true,
+      "heading": "Systems that work.\nBusiness that grows.",
+      "overflow": false,
+      "screenshot": "home-1366.png",
+      "pass": true
+    },
+    {
+      "name": "how-we-work",
+      "route": "/how-we-work",
+      "status": 200,
+      "scope": true,
+      "heading": "From first conversation to a working system — 2–5 weeks",
+      "overflow": false,
+      "screenshot": "how-we-work-1366.png",
+      "pass": true
+    },
+    {
+      "name": "services-index",
+      "route": "/services",
+      "status": 200,
+      "scope": true,
+      "heading": "Digital workforce tailored to your business.",
+      "overflow": false,
+      "screenshot": "services-index-1366.png",
+      "pass": true
+    },
+    {
+      "name": "service-detail",
+      "route": "/services/germany/landing-page-design",
+      "status": 200,
+      "scope": true,
+      "heading": "Landing Page Design for Businesses in Germany",
+      "overflow": false,
+      "screenshot": "service-detail-1366.png",
+      "pass": true
+    },
+    {
+      "name": "commercial",
+      "route": "/en/solutions/germany/whatsapp-automation",
+      "status": 200,
+      "scope": true,
+      "heading": "WhatsApp Automation for Businesses in Germany",
+      "overflow": false,
+      "screenshot": "commercial-1366.png",
+      "pass": true
+    },
+    {
+      "name": "geo",
+      "route": "/en/germany-automation",
+      "status": 200,
+      "scope": true,
+      "heading": "Business process automation for German companies",
+      "overflow": false,
+      "screenshot": "geo-1366.png",
+      "pass": true
+    },
+    {
+      "name": "use-case",
+      "route": "/use-cases/ai-customer-support-ecommerce",
+      "status": 200,
+      "scope": true,
+      "heading": "AI Customer Support for E-commerce: Handle More Tickets Without Expanding the Team",
+      "overflow": false,
+      "screenshot": "use-case-1366.png",
+      "pass": true
+    },
+    {
+      "name": "cases-gallery",
+      "route": "/cases",
+      "status": 200,
+      "scope": true,
+      "heading": "Digital employees that scale your business.",
+      "overflow": false,
+      "screenshot": "cases-gallery-1366.png",
+      "pass": true
+    },
+    {
+      "name": "case-detail",
+      "route": "/cases/customer-communications",
+      "status": 200,
+      "scope": true,
+      "heading": "The Customer Wasn't Ignored. They Were Just Answered by the Wrong System Three Days Later",
+      "overflow": false,
+      "screenshot": "case-detail-1366.png",
+      "pass": true
+    },
+    {
+      "name": "blog-index",
+      "route": "/blog",
+      "status": 200,
+      "scope": true,
+      "heading": "Kubera AI Blog",
+      "overflow": false,
+      "screenshot": "blog-index-1366.png",
+      "pass": true
+    },
+    {
+      "name": "blog-article",
+      "route": "/blog/ai-agent-autonomy-human-in-the-loop",
+      "status": 200,
+      "scope": true,
+      "heading": "How Much Autonomy Should an AI Agent Have Before a Human Steps In?",
+      "overflow": false,
+      "screenshot": "blog-article-1366.png",
+      "pass": true
+    },
+    {
+      "name": "contacts-form",
+      "route": "/contacts",
+      "status": 200,
+      "scope": true,
+      "heading": "Tell us about your business.",
+      "overflow": false,
+      "screenshot": "contacts-form-1366.png",
+      "pass": true
+    },
+    {
+      "name": "ru-gallery",
+      "route": "/ru/keysy",
+      "status": 200,
+      "scope": true,
+      "heading": "Цифровые сотрудники, которые масштабируют ваш бизнес.",
+      "overflow": false,
+      "screenshot": "ru-gallery-1366.png",
+      "pass": true
+    },
+    {
+      "name": "ru-detail",
+      "route": "/ru/keysy/customer-communications",
+      "status": 200,
+      "scope": true,
+      "heading": "Клиента не игнорировали. Ему просто ответила не та система — через три дня",
+      "overflow": false,
+      "screenshot": "ru-detail-1366.png",
+      "pass": true
+    },
+    {
+      "name": "es",
+      "route": "/automatizacion-ia-espana",
+      "status": 200,
+      "scope": true,
+      "heading": "Automatización con IA para Empresas Españolas: Trabaja con Inteligencia, Crece sin Límites",
+      "overflow": false,
+      "screenshot": "es-1366.png",
+      "pass": true
+    },
+    {
+      "name": "workflow",
+      "route": "/use-cases/ai-voice-agents-home-services",
+      "status": 200,
+      "scope": true,
+      "heading": "AI Voice Agents for Home Services: Handle More Calls and Automate Booking",
+      "overflow": false,
+      "screenshot": "workflow-1366.png",
+      "pass": true
+    }
+  ],
+  "failures": [],
+  "evidenceDir": "C:\\Users\\Admin\\kubera-ai-site\\.worktrees\\neon-owner-forensic-20261006\\reports\\evidence\\neon-page-types-2026-10-07"
+}

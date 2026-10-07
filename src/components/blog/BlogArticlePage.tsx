@@ -4,7 +4,7 @@ import { getBlogPublishedDate, getBlogSeoDescription } from "@/content/blog/help
 import { getBlogSolutionLinks } from "@/content/internal-linking";
 import { siteConfig } from "@/content/site";
 import { MarkdownRenderer } from "./MarkdownRenderer";
-import { getNeonAccent, NeonHeading } from "@/components/core/NeonHeading";
+import { getSemanticHeadingAccent, NeonHeading } from "@/components/core/NeonHeading";
 
 type BlogArticlePageProps = {
   post: BlogPost;
@@ -60,7 +60,7 @@ export function BlogArticlePage({ post }: BlogArticlePageProps) {
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(blogPosting) }} />
         <div className="blog-article-header">
           <p className="eyebrow">{post.frontmatter.category}</p>
-          <NeonHeading as="h1" className="section-title blog-article-title" accent={getNeonAccent(post.frontmatter.title)}>{post.frontmatter.title}</NeonHeading>
+          <NeonHeading as="h1" className="section-title blog-article-title" accentPhrase={getSemanticHeadingAccent(post.frontmatter.title)}>{post.frontmatter.title}</NeonHeading>
           <p className="lead blog-article-description">{post.frontmatter.description}</p>
           <div className="blog-article-meta">
             <time dateTime={getBlogPublishedDate(post)}>{formatDate(getBlogPublishedDate(post), dateLocale)}</time>

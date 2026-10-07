@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { getNeonAccent, NeonHeading } from "@/components/core/NeonHeading";
+import { getSemanticHeadingAccent, NeonHeading } from "@/components/core/NeonHeading";
 import { AmbientTechCloud } from "@/components/decorative/AmbientTechCloud";
 import type { CountryPageContent } from "@/content/types";
 import { getCountrySolutionHubCard, getCountrySolutionLinks } from "@/content/internal-linking";
@@ -28,7 +28,7 @@ export function CountryPage({ country }: { country: CountryPageContent }) {
         <AmbientTechCloud variant="compact" />
         <div className="container hero-content">
           <p className="eyebrow">GEO / AEO</p>
-          <NeonHeading as="h1" className="hero-title" accent={getNeonAccent(country.heading)}>{country.heading}</NeonHeading>
+          <NeonHeading as="h1" className="hero-title" accentPhrase={getSemanticHeadingAccent(country.heading)}>{country.heading}</NeonHeading>
           <p className="lead">{country.summary}</p>
           <div className="geo-hero-links">
             <Link className="button" href="/">

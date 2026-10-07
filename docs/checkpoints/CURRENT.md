@@ -667,3 +667,17 @@ Owner visual review is required for the bounded representative links. Do not rep
 
 - Final evidence: the completed audit executed 1,075 checks across 211 routes, five required viewports, and 20 boundary checks. It recorded 1,074 matrix passes; the only intermittent failure was `/cases` at 768px while six lazy images were still settling. A targeted recheck at the same route/viewport after the explicit image-readiness wait passed with assets loaded, no overflow, one assistant, and heading accent parity. The effective result is 1,075/1,075.
 - The protected visual parity contract is PASS (14/14), the Review Index coverage test is PASS in 390/768/1366 test projects, and the fresh production-build server at port 3105 returns the local Review Index with HTTP 200. Automated status remains `NOT REVIEWED`; owner approval is intentionally not inferred.
+
+## FINAL NEON VISUAL COMPLETION — 2026-10-07
+
+- Baseline: `adf9df775b895d98331f4a9ed3ab4beca49c302d` on `neon-owner-forensic-20261006`. The work remains local/protected (`?neon=1`); main, production, Vercel, SEO, canonicals, sitemap, and authored copy remain unchanged.
+- Removed the generic terminal-phrase accent authority. `NeonHeading` now accepts only explicit semantic existing-text phrases, with two documented template contracts for structured service/country qualifiers. The exact owner regression passes: `WhatsApp Automation` remains white and `for Businesses in Germany` is cyan while heading textContent is unchanged.
+- Added explicit localized presentation mappings for the current RU and ES representative headings, and tests for them. Unmapped content titles intentionally stay white rather than being guessed from word position.
+- Added semantic-heading, Blog Article, Case Detail, visual-page-type, Review Index and expanded computed-style parity protection. The local owner index now starts with direct links for distinct page types and explicitly documents `Demo -> /cases`.
+- Pixel inspection and screenshot evidence cover 16 distinct rendered page types (Home, How We Work, Services, commercial, GEO, use cases, cases, blog index/article, Contacts, RU, ES, workflow). Evidence: `reports/KUBERA_NEON_PAGE_TYPE_VISUAL_REVIEW_2026-10-07.json` and `reports/evidence/neon-page-types-2026-10-07/`.
+- Validation completed in this worktree: typecheck PASS; clean production build PASS (229 generated); SEO source validation PASS (213 indexable, zero warnings); content completeness PASS; semantic contract PASS (7 checks); visual parity contract PASS (16 checks); full route audit remains 1,075 effective passes after targeted image rechecks. The D1 runner was launched but its local web-server lifecycle overwrote `.next`; it was stopped before final server proof and must be rerun in an isolated build directory if a new D1 record is required.
+- Final review server recovery: the port-3200 D1 development server was stopped, a clean production build was generated, and port 3105 was restarted from this worktree. The Review Index, CSS and JS assets return HTTP 200. Do not use a server which shares `.next` with an active Playwright dev server.
+
+## EXACT NEXT STEP
+
+Commit and normally push this bounded protected correction if GitHub is reachable, then conduct the owner’s bounded distinct-page-type visual review at `http://localhost:3105/design-lab/visual-review`. Status remains **OWNER REVIEW REQUIRED**; do not deploy or recommend production before explicit owner approval.

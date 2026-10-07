@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import type { ReactNode } from "react";
 import { AmbientTechCloud } from "@/components/decorative/AmbientTechCloud";
-import { getNeonAccent, NeonHeading } from "@/components/core/NeonHeading";
+import { getSemanticHeadingAccent, NeonHeading } from "@/components/core/NeonHeading";
 import { siteConfig } from "@/content/site";
 import type { ServicePageContent } from "@/content/service-pages/types";
 
@@ -92,26 +92,11 @@ function Section({ id, title, children, lead }: { id?: string; title: string; ch
   return (
     <section className="solution-section" id={id}>
       <div className="solution-section-heading">
-        <NeonHeading as="h2" className="section-title" accent={getNeonAccent(title)}>{title}</NeonHeading>
+        <NeonHeading as="h2" className="section-title" accentPhrase={getSemanticHeadingAccent(title)}>{title}</NeonHeading>
         {lead ? <p className="lead solution-section-lead">{lead}</p> : null}
       </div>
       {children}
     </section>
-  );
-}
-
-function renderLandingPageTitle(title: string, accentSuffix = false): ReactNode {
-  const prefix = "Landing Page";
-
-  if (!title.startsWith(prefix)) {
-    return title;
-  }
-
-  return (
-    <>
-      <span className="landing-page-title-nowrap">{prefix}</span>
-      <span className={accentSuffix ? "landing-page-title-accent" : undefined}>{title.slice(prefix.length)}</span>
-    </>
   );
 }
 
@@ -142,9 +127,9 @@ export function CommercialServicePage({ content, neonPreview = false }: { conten
                 {content.hero.headline}
               </p>
               {isLandingPageDesign ? (
-                <h1 className="solution-title">{renderLandingPageTitle(content.h1, true)}</h1>
+                <NeonHeading as="h1" className="solution-title" accentPhrase={getSemanticHeadingAccent(content.h1)}>{content.h1}</NeonHeading>
               ) : (
-                <NeonHeading as="h1" className="solution-title" accent={getNeonAccent(content.h1)}>{content.h1}</NeonHeading>
+                <NeonHeading as="h1" className="solution-title" accentPhrase={getSemanticHeadingAccent(content.h1)}>{content.h1}</NeonHeading>
               )}
               <p className="lead solution-lead">{content.hero.subheadline}</p>
               <p className="solution-trustline">{content.hero.trustStrip}</p>
@@ -292,7 +277,7 @@ export function CommercialServicePage({ content, neonPreview = false }: { conten
           ) : null}
 
           <section className="solution-final-cta">
-            <NeonHeading as="h2" className="section-title" accent={getNeonAccent(content.finalCta.headline)}>{content.finalCta.headline}</NeonHeading>
+            <NeonHeading as="h2" className="section-title" accentPhrase={getSemanticHeadingAccent(content.finalCta.headline)}>{content.finalCta.headline}</NeonHeading>
             <p className="lead solution-section-lead">{content.finalCta.subtext}</p>
             <div className="solution-cta-actions">
               <Link className="button" href={content.finalCta.primaryHref}>

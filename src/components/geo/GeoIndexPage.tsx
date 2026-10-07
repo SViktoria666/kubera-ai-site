@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { getNeonAccent, NeonHeading } from "@/components/core/NeonHeading";
+import { getSemanticHeadingAccent, NeonHeading } from "@/components/core/NeonHeading";
 import { AmbientTechCloud } from "@/components/decorative/AmbientTechCloud";
 import { geoCatalog } from "@/content/geo/catalog";
 import { siteConfig } from "@/content/site";
@@ -12,7 +12,7 @@ export function GeoIndexPage() {
         <AmbientTechCloud variant="compact" />
         <div className="container hero-content">
           <p className="eyebrow">GEO / AEO</p>
-          <NeonHeading as="h1" className="hero-title" accent={getNeonAccent("AI Automation by Market")}>AI Automation by Market</NeonHeading>
+          <NeonHeading as="h1" className="hero-title" accentPhrase={getSemanticHeadingAccent("AI Automation by Market")}>AI Automation by Market</NeonHeading>
           <p className="lead">
             Explore all Kubera AI country pages. Each page uses source-of-truth content from <code>src/content/geo/</code> and is built to match the existing site system.
           </p>

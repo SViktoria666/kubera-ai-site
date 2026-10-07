@@ -1,0 +1,20 @@
+{
+  "rule": "Explicit semantic existing-text accent phrase; no terminal-word heuristic",
+  "textContentPreserved": true,
+  "templates": [
+    { "family": "Home", "template": "HeroSection", "heading": "Systems that work. Business that grows.", "accent": "Business that grows.", "rationale": "business outcome" },
+    { "family": "Home", "template": "home solution navigation", "heading": "Explore practical automation examples", "accent": "automation examples", "rationale": "solution promise" },
+    { "family": "Home", "template": "home solution navigation", "heading": "Explore AI automation solutions", "accent": "automation solutions", "rationale": "solution promise" },
+    { "family": "Commercial / Industry", "template": "IndustrySolutionHero", "heading": "WhatsApp Automation for Businesses in Germany", "accent": "for Businesses in Germany", "rationale": "commercial and geographic differentiator" },
+    { "family": "Landing Pages", "template": "CommercialServicePage", "heading": "Landing Page Design for Businesses in {country}", "accent": "for Businesses in {country}", "rationale": "service and market qualifier" },
+    { "family": "GEO / Country", "template": "CountryPage", "heading": "AI Automation for {market}", "accent": "for {market}", "rationale": "target market qualifier" },
+    { "family": "GEO / Regional", "template": "GeoIndexPage", "heading": "AI Automation by Market", "accent": "by Market", "rationale": "market scope" },
+    { "family": "Solutions index", "template": "solutions page", "heading": "AI Automation Solutions by Industry and Country", "accent": "by Industry and Country", "rationale": "scope qualifier" },
+    { "family": "Blog", "template": "BlogIndexPage", "heading": "Kubera AI Blog", "accent": "AI Blog", "rationale": "content product" },
+    { "family": "Blog", "template": "BlogArticlePage", "heading": "article title", "accent": null, "rationale": "no safe shared phrase; remains white until explicit per-title presentation data exists" },
+    { "family": "Cases", "template": "CaseStudyPage", "heading": "case title", "accent": null, "rationale": "case-specific differentiator requires explicit per-case data" },
+    { "family": "Contacts", "template": "ContactSection", "heading": "Tell us about your business.", "accent": null, "rationale": "short complete heading; no safe differentiating phrase" }
+  ],
+  "unresolved": ["Unmapped Blog article titles", "Unmapped Case detail titles", "Contact heading", "Unmapped How We Work heading variants"],
+  "authority": "src/components/core/NeonHeading.tsx"
+}

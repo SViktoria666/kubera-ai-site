@@ -1,0 +1,12 @@
+{
+  "ownerStatus": "OWNER REVIEW REQUIRED",
+  "entries": [
+    ["Home", "/", "PASS"], ["How We Work", "/how-we-work", "PASS"], ["Services index", "/services", "PASS"], ["Service detail", "/services/germany/landing-page-design", "PASS"], ["Commercial / Industry", "/en/solutions/germany/whatsapp-automation", "PASS"], ["GEO / Country", "/en/germany-automation", "PASS"], ["Use Cases", "/use-cases/ai-customer-support-ecommerce", "PASS"], ["Cases gallery / Demo destination", "/cases", "PASS"], ["Case detail", "/cases/customer-communications", "PASS"], ["Landing Page", "/services/germany/landing-page-design", "PASS"], ["Blog index", "/blog", "PASS"], ["Blog article", "/blog/ai-agent-autonomy-human-in-the-loop", "PASS"], ["Contacts", "/contacts", "PASS"], ["RU gallery", "/ru/keysy", "PASS"], ["RU detail", "/ru/keysy/customer-communications", "PASS"], ["ES", "/automatizacion-ia-espana", "PASS"], ["Pricing / calculator", "/", "PASS"], ["Forms", "/contacts", "PASS"], ["Workflow", "/use-cases/ai-voice-agents-home-services", "PASS"], ["AI assistant / shared shell", "/contacts", "PASS"]
+  ],
+  "automatedStatus": "PASS",
+  "codexVisualStatus": "PASS",
+  "ownerStatusPerEntry": "NOT REVIEWED",
+  "demo": { "source": "/demo", "behavior": "redirects to /cases", "reviewDestination": "/cases" },
+  "blogArticle": "/blog/ai-agent-autonomy-human-in-the-loop",
+  "caseDetail": "/cases/customer-communications"
+}
