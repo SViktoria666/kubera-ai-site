@@ -19,7 +19,8 @@ const checks = entries.flatMap(([name, route]) => viewports.map(([width, height]
 async function check({ name, route, width, height }) {
     const page = await browser.newPage({ viewport: { width, height } });
     try {
-    const response = await page.goto(`http://127.0.0.1:3105${route}?neon=1`, { waitUntil: "networkidle", timeout: 30000 });
+    const response = await page.goto(`http://127.0.0.1:3105${route}?neon=1`, { waitUntil: "domcontentloaded", timeout: 30000 });
+    await page.waitForSelector(".neon-preview-sitewide", { state: "attached", timeout: 5000 });
     await page.evaluate(() => window.scrollTo(0, 0));
     const screenshot = width === 1366 ? `${name}-1366.png` : undefined;
     if (screenshot) await page.screenshot({ path: path.join(evidenceDir, screenshot), fullPage: false });

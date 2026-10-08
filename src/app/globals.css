@@ -4393,7 +4393,8 @@ body:has(.neon-preview-sitewide) .neon-preview-sitewide .solution-hero-card--wor
     linear-gradient(145deg, rgba(32, 52, 74, 0.72), rgba(12, 23, 38, 0.9));
 }
 
-body:has(.neon-preview-sitewide) .neon-preview-sitewide .neon-heading__accent {
+body:has(.neon-preview) .neon-heading__accent,
+body:has(.neon-preview-sitewide) .neon-heading__accent {
   color: #4ce5e4;
 }
 

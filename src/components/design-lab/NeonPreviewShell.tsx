@@ -22,7 +22,7 @@ export function NeonPreviewShell({ children, className }: NeonPreviewShellProps)
 
   return (
     <>
-      <div className={`neon-preview ${className}`}>{children}</div>
+      <div className={`neon-preview neon-preview-sitewide ${className}`} data-neon-scope="local-review">{children}</div>
       {needsAssistantFallback ? <AiAssistantWidget enabled /> : null}
     </>
   );

@@ -1,7 +1,7 @@
 "use client";
 
 import { usePathname } from "next/navigation";
-import { useLayoutEffect, useState, type ReactNode } from "react";
+import { useEffect, useLayoutEffect, useState, type ReactNode } from "react";
 import { AiAssistantWidget } from "@/components/ai/AiAssistantWidget";
 
 type NeonRouteScopeProps = {
@@ -28,6 +28,29 @@ export function NeonRouteScope({ children, assistantEnabled }: NeonRouteScopePro
       setNeedsAssistantFallback(false);
     }
   }, [pathname]);
+
+  useEffect(() => {
+    if (!enabled) return;
+
+    const preservePreviewNavigation = () => {
+      document.querySelectorAll<HTMLAnchorElement>("a[href]").forEach((anchor) => {
+        const rawHref = anchor.getAttribute("href");
+        if (!rawHref || rawHref.startsWith("#") || rawHref.startsWith("mailto:") || rawHref.startsWith("tel:")) return;
+
+        const url = new URL(anchor.href, window.location.href);
+        if (url.origin !== window.location.origin || url.pathname.startsWith("/_next/") || url.pathname.startsWith("/api/")) return;
+
+        url.searchParams.set("neon", "1");
+        const previewHref = `${url.pathname}${url.search}${url.hash}`;
+        if (rawHref !== previewHref) anchor.setAttribute("href", previewHref);
+      });
+    };
+
+    preservePreviewNavigation();
+    const observer = new MutationObserver(preservePreviewNavigation);
+    observer.observe(document.body, { childList: true, subtree: true });
+    return () => observer.disconnect();
+  }, [enabled, pathname]);
 
   if (!enabled) return <>{children}</>;
 

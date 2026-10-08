@@ -693,3 +693,15 @@ Commit and normally push this bounded protected correction if GitHub is reachabl
 ## EXACT NEXT STEP
 
 Commit and normally push this bounded protected correction, verify remote SHA, and leave `http://localhost:3105/design-lab/visual-review` running for owner review. Status remains **OWNER REVIEW REQUIRED**. Do not deploy, merge main, or start D2.
+
+## UNIFIED NEON PREVIEW CORRECTION - 2026-10-08
+
+- Protected preview scope is now unified: dedicated `/design-lab/neon-preview/*` routes and real routes opened with `?neon=1` both use `.neon-preview-sitewide`; ordinary production URLs remain outside the scope.
+- Internal same-origin navigation in the protected preview preserves `?neon=1`, preventing silent fallback to legacy styling. The Review Index exposes protected links and remains `noindex`/excluded from production navigation.
+- Dedicated preview headings now receive the approved cyan accent under the same scoped rule. Home/reference values and the deterministic H1 contract remain unchanged.
+- Fresh production-build verification: 211/211 owner-reviewable routes passed the 1366 desktop crawl; 16 distinct page types × 5 viewports passed 80/80; navigation and Review Index contracts passed. External font/analytics network denials are sandbox noise only.
+- No content, SEO, route, canonical, sitemap, main, production, or Vercel state changed. Local review server is running from this worktree at port 3105.
+
+## EXACT NEXT STEP
+
+Owner visually reviews the protected Visual Review Index and representative Neon pages. Do not deploy, merge main, or infer owner approval.

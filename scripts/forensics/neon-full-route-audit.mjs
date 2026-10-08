@@ -113,7 +113,7 @@ async function check(page, entry, viewport, capture = false) {
 const routeChecks = routes.flatMap((entry) => viewports.map((viewport) => ({ entry, viewport })));
 // Keep local browser fan-out bounded; the previous 8-page fan-out could
 // exhaust the Windows browser process pool before producing evidence.
-const concurrency = desktopOnly ? 16 : 6;
+const concurrency = desktopOnly ? 4 : 6;
 for (let offset = 0; offset < routeChecks.length; offset += concurrency) {
   const batch = routeChecks.slice(offset, offset + concurrency);
   const batchResults = await Promise.all(batch.map(async ({ entry, viewport }) => {
