@@ -366,7 +366,7 @@ Run the Execution vs Judgment Model in this article on your highest-cost process
 
 ## Conclusion: The Answer Is Almost Always "Both"
 
-The question "can AI replace an employee" presupposes a binary that does not exist in practice. The real answer, for almost every role in almost every European small business, is that AI can replace the execution portion of what that person does - and the judgment portion is what the business should actually be paying them for.
+The question "can AI replace an employee" presupposes a binary that does not exist in practice. The real answer, for almost every role in almost every European small business, is that AI can replace the execution portion of what that person does - and the judgment portion is what the business should actually be paying them for. That judgment needs regular practice after automation, which is the focus of [AI and Skill Decay: How to Keep Your Team Sharp](/blog/ai-skill-resilience).
 
 The businesses getting this right are not replacing people with AI. They are restructuring what people do, removing the repetitive execution work from their plates, and directing their judgment toward the decisions and relationships that actually move the business forward.
 

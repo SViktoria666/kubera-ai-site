@@ -14,7 +14,7 @@ category: "AI Automation"
 
 # How AI Restructures Teams, Not Just Headcount
 
-When a business owner asks what AI means for their team, the question usually gets framed as a number: how many roles can this replace. That's the wrong starting point, and there's now real evidence it's an expensive one too. Evidence so far suggests that deeper workforce cuts do not, by themselves, predict better AI returns. The businesses seeing genuine value redesigned what their roles actually do, moved routine tasks onto AI, and rebuilt jobs around new combinations of skills that a task-by-task automation approach couldn't replicate on its own. That's a more interesting story than a layoff number, and it's already playing out at real companies on both sides of the Atlantic.
+When a business owner asks what AI means for their team, the question usually gets framed as a number: how many roles can this replace. That's the wrong starting point, and there's now real evidence it's an expensive one too. Evidence so far suggests that deeper workforce cuts do not, by themselves, predict better AI returns. The businesses seeing genuine value redesigned what their roles actually do, moved routine tasks onto AI, and rebuilt jobs around new combinations of skills that a task-by-task automation approach couldn't replicate on its own. That's a more interesting story than a layoff number, and it's already playing out at real companies on both sides of the Atlantic. That redesign also needs to protect the judgment people still have to exercise; our guide to [keeping teams sharp as automation grows](/blog/ai-skill-resilience) covers the practical safeguards.
 
 ## Why the headcount-first approach keeps disappointing
 
