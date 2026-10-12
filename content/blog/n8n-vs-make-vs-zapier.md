@@ -46,7 +46,7 @@ The tradeoff is cost and ceiling. Zapier prices by task. A workflow with one tri
 
 The tradeoff is a steeper entry curve than Zapier and no self-hosting option, which means your data lives in Make's cloud.
 
-[n8n](https://n8n.io/) is architecturally different from both. It is source-available, self-hostable, and prices by execution rather than by the number of steps inside a workflow. A workflow with fifty steps costs the same to run as one with two steps. At scale, that changes the unit economics of automation materially.
+[n8n](https://n8n.io/) is architecturally different from both. It is source-available, self-hostable, and prices by execution rather than by the number of steps inside a workflow. A workflow with fifty steps costs the same to run as one with two steps. At scale, that changes the unit economics of automation materially. For a broader comparison of execution, token, credit and outcome pricing, see [How to Read an AI Agent Price List](/blog/how-to-read-ai-agent-pricing).
 
 The tradeoff is the steepest learning curve of the three and a meaningful technical requirement for self-hosted deployment. n8n rewards businesses that have someone technical on the team, or are willing to bring in implementation help.
 

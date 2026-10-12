@@ -52,7 +52,7 @@ If you cannot document these before the build begins, the ROI calculation after 
 
 ## The Full Cost Picture: What Gets Left Out of Most Proposals
 
-The most common reason AI automation ROI calculations disappoint is that they undercount costs. A proposal that quotes setup fees and monthly platform costs is not giving you the full picture.
+The most common reason AI automation ROI calculations disappoint is that they undercount costs. A proposal that quotes setup fees and monthly platform costs is not giving you the full picture. When vendor quotes mix seats, credits, tokens or outcomes, our [guide to reading AI agent price lists](/blog/how-to-read-ai-agent-pricing) shows how to put the units on a comparable footing before calculating ROI.
 
 ### The Complete Cost Structure
 
