@@ -1,6 +1,7 @@
 import Link from "next/link";
 import type { ReactNode } from "react";
 import { AmbientTechCloud } from "@/components/decorative/AmbientTechCloud";
+import { NeonHeading } from "@/components/sections/NeonHeading";
 import type { UseCaseFaqItem, UseCaseLinkCard } from "@/content/use-cases/ai-voice-agents-home-services";
 import { MarkdownRenderer } from "@/components/blog/MarkdownRenderer";
 import { siteConfig } from "@/content/site";
@@ -418,7 +419,7 @@ export function UseCaseLandingPage({
             <AmbientTechCloud variant="solution" />
             <div className="solution-hero-copy">
               <p className="eyebrow">International use case landing page</p>
-              <h1 className="solution-title">{hero.title}</h1>
+              <h1 className="solution-title"><NeonHeading>{hero.title}</NeonHeading></h1>
               <p className="lead solution-lead">{hero.lead}</p>
               <p className="solution-trustline">{hero.trustLine}</p>
               <div className="solution-hero-actions">

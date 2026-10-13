@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { AmbientTechCloud } from "@/components/decorative/AmbientTechCloud";
+import { NeonHeading } from "@/components/sections/NeonHeading";
 import { createPageMetadata } from "@/content/seo";
 import { siteConfig } from "@/content/site";
 import {
@@ -92,7 +93,7 @@ export default function SolutionsHubPage() {
         <AmbientTechCloud variant="hero" />
         <div className="container hero-content">
           <p className="eyebrow">Solutions hub</p>
-          <h1 className="hero-title">AI Automation Solutions by Industry and Country</h1>
+          <h1 className="hero-title"><NeonHeading>AI Automation Solutions by Industry and Country</NeonHeading></h1>
           <p className="lead">
             Kubera AI builds commercial automation systems for specific industries across European markets. Use this hub to move from the homepage into the right solution page in two clicks or less.
           </p>

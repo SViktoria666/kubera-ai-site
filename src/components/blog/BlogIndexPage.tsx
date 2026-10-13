@@ -27,7 +27,7 @@ export function BlogIndexPage({ locale, posts }: BlogIndexPageProps) {
     <main className="section">
       <div className="container">
         <p className="eyebrow">{isRu ? "Блог" : "Blog"}</p>
-        <h1 className="section-title">{isRu ? "Kubera AI Blog" : "Kubera AI Blog"}</h1>
+        <h1 className="section-title blog-page-title">{isRu ? "Kubera AI Blog" : "Kubera AI Blog"}</h1>
         <p className="lead">
           {isRu
             ? "Статьи про AI-автоматизацию, n8n и практические бизнес-системы."

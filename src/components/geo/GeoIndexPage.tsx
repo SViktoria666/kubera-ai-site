@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { AmbientTechCloud } from "@/components/decorative/AmbientTechCloud";
+import { NeonHeading } from "@/components/sections/NeonHeading";
 import { geoCatalog } from "@/content/geo/catalog";
 import { siteConfig } from "@/content/site";
 import { normalizeGeoRoute } from "@/content/geo/routes";
@@ -11,7 +12,7 @@ export function GeoIndexPage() {
         <AmbientTechCloud variant="compact" />
         <div className="container hero-content">
           <p className="eyebrow">GEO / AEO</p>
-          <h1 className="hero-title">AI Automation by Market</h1>
+          <h1 className="hero-title"><NeonHeading>AI Automation by Market</NeonHeading></h1>
           <p className="lead">
             Explore all Kubera AI country pages. Each page uses source-of-truth content from <code>src/content/geo/</code> and is built to match the existing site system.
           </p>

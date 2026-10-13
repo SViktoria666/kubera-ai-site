@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import type { ReactNode } from "react";
 import { AmbientTechCloud } from "@/components/decorative/AmbientTechCloud";
+import { NeonHeading } from "@/components/sections/NeonHeading";
 import { siteConfig } from "@/content/site";
 import type { ServicePageContent } from "@/content/service-pages/types";
 
@@ -91,26 +92,13 @@ function Section({ id, title, children, lead }: { id?: string; title: string; ch
   return (
     <section className="solution-section" id={id}>
       <div className="solution-section-heading">
-        <h2 className="section-title">{title}</h2>
+        <h2 className="section-title">
+          <NeonHeading>{title}</NeonHeading>
+        </h2>
         {lead ? <p className="lead solution-section-lead">{lead}</p> : null}
       </div>
       {children}
     </section>
-  );
-}
-
-function renderLandingPageTitle(title: string): ReactNode {
-  const prefix = "Landing Page";
-
-  if (!title.startsWith(prefix)) {
-    return title;
-  }
-
-  return (
-    <>
-      <span className="landing-page-title-nowrap">{prefix}</span>
-      {title.slice(prefix.length)}
-    </>
   );
 }
 
@@ -140,7 +128,7 @@ export function CommercialServicePage({ content }: { content: ServicePageContent
               >
                 {content.hero.headline}
               </p>
-              <h1 className="solution-title">{isLandingPageDesign ? renderLandingPageTitle(content.h1) : content.h1}</h1>
+              <h1 className="solution-title"><NeonHeading nowrapFirstWords={isLandingPageDesign ? 2 : undefined}>{content.h1}</NeonHeading></h1>
               <p className="lead solution-lead">{content.hero.subheadline}</p>
               <p className="solution-trustline">{content.hero.trustStrip}</p>
               <div className="solution-hero-actions">

@@ -1,16 +1,24 @@
 @import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700;800&display=swap");
 
 :root {
-  --color-bg: #1a0533;
-  --color-bg-soft: #2a1045;
-  --color-bg-deep: #100020;
-  --color-text: #ffffff;
-  --color-muted: #d9d2e3;
-  --color-accent: #ffb800;
-  --color-accent-dark: #c9a84c;
-  --color-blue: #327aff;
-  --color-border: rgba(255, 255, 255, 0.18);
+  --color-bg: #0c1726;
+  --color-bg-soft: #142136;
+  --color-bg-deep: #081421;
+  --color-text: #f5f6f7;
+  --color-muted: #b4cbd0;
+  --color-accent: #4ce5e4;
+  --color-accent-dark: #1e5b6e;
+  --color-blue: #3495a0;
+  --color-border: rgba(180, 203, 208, 0.2);
   --max-width: 1120px;
+  --neon-surface: #20344a;
+  --neon-surface-soft: rgba(32, 52, 74, 0.72);
+  --neon-surface-quiet: rgba(12, 23, 38, 0.72);
+  --neon-cyan: #4ce5e4;
+  --neon-cyan-soft: #7af3ef;
+  --neon-violet: #6d78ff;
+  --neon-glow: rgba(76, 229, 228, 0.3);
+  --neon-gold: #d7b887;
 }
 
 * {
@@ -364,9 +372,9 @@ main {
   display: flex;
   align-items: center;
   background:
-    radial-gradient(circle at 18% 18%, rgba(114, 66, 255, 0.16), transparent 30%),
-    radial-gradient(circle at 84% 16%, rgba(50, 122, 255, 0.16), transparent 26%),
-    linear-gradient(180deg, #1a0533 0%, #100020 100%);
+    radial-gradient(circle at 18% 18%, rgba(76, 229, 228, 0.12), transparent 30%),
+    radial-gradient(circle at 84% 16%, rgba(52, 149, 160, 0.14), transparent 26%),
+    linear-gradient(180deg, #081421 0%, #0c1726 100%);
 }
 
 .ambient-tech-cloud {
@@ -659,9 +667,9 @@ main {
   position: relative;
   overflow: clip;
   background:
-    radial-gradient(circle at 14% 10%, rgba(50, 122, 255, 0.18), transparent 26%),
-    radial-gradient(circle at 82% 14%, rgba(114, 66, 255, 0.14), transparent 24%),
-    linear-gradient(180deg, #150329 0%, #090011 100%);
+    radial-gradient(circle at 14% 10%, rgba(76, 229, 228, 0.1), transparent 26%),
+    radial-gradient(circle at 82% 14%, rgba(109, 120, 255, 0.07), transparent 24%),
+    linear-gradient(180deg, #081421 0%, #0c1726 100%);
 }
 
 .solution-shell {
@@ -674,7 +682,7 @@ main {
   position: absolute;
   inset: 18px 0 auto;
   height: 1px;
-  background: linear-gradient(90deg, transparent, rgba(255, 184, 0, 0.35), rgba(114, 66, 255, 0.48), transparent);
+  background: linear-gradient(90deg, transparent, rgba(76, 229, 228, 0.3), rgba(52, 149, 160, 0.34), transparent);
 }
 
 .solution-container {
@@ -691,8 +699,8 @@ main {
   border: 1px solid rgba(255, 255, 255, 0.13);
   border-radius: 20px;
   background:
-    linear-gradient(180deg, rgba(114, 66, 255, 0.08), rgba(50, 122, 255, 0.04)),
-    linear-gradient(180deg, rgba(11, 4, 24, 0.88), rgba(5, 2, 14, 0.92));
+    linear-gradient(112deg, rgba(245, 246, 247, 0.055), transparent 24%),
+    linear-gradient(145deg, rgba(20, 33, 54, 0.9), rgba(8, 20, 33, 0.94));
   box-shadow: 0 24px 60px rgba(0, 0, 0, 0.24);
   backdrop-filter: blur(18px);
   animation: solution-rise 0.6s ease both;
@@ -700,14 +708,14 @@ main {
 
 .solution-container > .solution-section:nth-of-type(2n) {
   background:
-    linear-gradient(180deg, rgba(114, 66, 255, 0.07), rgba(50, 122, 255, 0.03)),
-    linear-gradient(180deg, rgba(11, 4, 24, 0.9), rgba(5, 2, 14, 0.94));
+    linear-gradient(112deg, rgba(76, 229, 228, 0.06), transparent 24%),
+    linear-gradient(145deg, rgba(18, 38, 58, 0.9), rgba(8, 20, 33, 0.94));
 }
 
 .solution-container > .solution-section:nth-of-type(2n + 1) {
   background:
-    linear-gradient(180deg, rgba(50, 122, 255, 0.07), rgba(114, 66, 255, 0.03)),
-    linear-gradient(180deg, rgba(11, 4, 24, 0.88), rgba(5, 2, 14, 0.92));
+    linear-gradient(112deg, rgba(52, 149, 160, 0.07), transparent 24%),
+    linear-gradient(145deg, rgba(20, 33, 54, 0.88), rgba(8, 20, 33, 0.94));
 }
 
 .solution-hero {
@@ -787,6 +795,14 @@ main {
 
 .landing-page-design-page .solution-hero-copy {
   gap: 8px;
+  grid-template-columns: minmax(0, 1fr);
+}
+
+.landing-page-design-page .solution-title {
+  min-width: 0;
+  max-width: 100%;
+  overflow-wrap: normal;
+  word-break: normal;
 }
 
 .landing-page-design-page .solution-lead {
@@ -844,10 +860,10 @@ main {
 }
 
 .landing-page-design-page .solution-secondary-link {
-  border-color: rgba(255, 229, 157, 0.9);
-  background: linear-gradient(180deg, #ffd95f 0%, #ffb800 100%);
-  color: #140f00;
-  box-shadow: 0 14px 30px rgba(255, 184, 0, 0.16);
+  border-color: rgba(76, 229, 228, 0.58);
+  background: linear-gradient(145deg, rgba(122, 243, 239, 0.2), rgba(32, 52, 74, 0.86));
+  color: var(--neon-cyan-soft);
+  box-shadow: 0 0 20px rgba(76, 229, 228, 0.16), inset 0 1px 0 rgba(255, 255, 255, 0.18);
 }
 
 .solution-secondary-link:hover {
@@ -857,10 +873,16 @@ main {
 }
 
 .landing-page-design-page .solution-secondary-link:hover {
-  border-color: rgba(255, 229, 157, 1);
-  background: linear-gradient(180deg, #ffe27d 0%, #ffc72f 100%);
-  color: #140f00;
-  box-shadow: 0 16px 34px rgba(255, 184, 0, 0.2);
+  border-color: rgba(138, 245, 239, 0.92);
+  background: linear-gradient(145deg, rgba(122, 243, 239, 0.3), rgba(32, 52, 74, 0.94));
+  color: #ffffff;
+  box-shadow: 0 0 28px rgba(76, 229, 228, 0.32), inset 0 1px 0 rgba(255, 255, 255, 0.28);
+}
+
+.landing-page-design-page .solution-secondary-link:active {
+  background: linear-gradient(145deg, rgba(30, 91, 110, 0.96), rgba(76, 229, 228, 0.4));
+  color: #ffffff;
+  transform: translateY(0);
 }
 
 .landing-page-design-page .solution-hero-actions > .button:focus-visible,
@@ -1896,8 +1918,8 @@ main {
   width: 560px;
   height: 560px;
   border-radius: 999px;
-  border: 1px solid rgba(114, 66, 255, 0.22);
-  box-shadow: 0 0 90px rgba(114, 66, 255, 0.14);
+  border: 1px solid rgba(76, 229, 228, 0.14);
+  box-shadow: 0 0 90px rgba(76, 229, 228, 0.1);
 }
 
 .hero-content {
@@ -3510,15 +3532,23 @@ input[type="range"] {
 }
 
 @media (max-width: 560px) {
+  .landing-page-design-page .solution-hero-copy {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
   .landing-page-design-page .solution-hero-actions {
-    flex-direction: column;
-    align-items: stretch;
-    flex-wrap: nowrap;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    width: auto;
+    min-width: 0;
+    max-width: none;
   }
 
   .landing-page-design-page .solution-hero-actions > .button,
   .landing-page-design-page .solution-hero-actions > .solution-secondary-link {
     width: 100%;
+    min-width: 0;
+    max-width: 100%;
   }
 
   .use-case-page .solution-container {
@@ -3750,4 +3780,504 @@ input[type="range"] {
     transition: none;
   }
 }
+}
+
+/* Kubera approved Neon/Glass production rollout.
+   Presentation-only cascade: existing markup, content, routes, and behaviors
+   remain the source of truth. Material #001 uses the approved cyan optical
+   surface with restrained blue/violet atmosphere and no new UI primitives. */
+html,
+body {
+  background: var(--color-bg);
+}
+
+body {
+  background:
+    radial-gradient(circle at 8% 18%, rgba(41, 215, 213, 0.07), transparent 28%),
+    radial-gradient(circle at 90% 8%, rgba(88, 70, 220, 0.1), transparent 32%),
+    linear-gradient(145deg, #081421, #0c1a2d 48%, #10152e);
+}
+
+.site-header {
+  border-bottom-color: rgba(180, 203, 208, 0.14);
+  background: rgba(3, 6, 8, 0.88);
+  -webkit-backdrop-filter: blur(18px) saturate(128%);
+  backdrop-filter: blur(18px) saturate(128%);
+}
+
+.main-nav .nav-link {
+  color: var(--color-muted);
+  transition: color 0.18s ease, text-shadow 0.18s ease;
+}
+
+.main-nav .nav-link:hover,
+.main-nav .nav-link:focus-visible,
+.main-nav .nav-link.is-active {
+  color: var(--neon-cyan);
+  text-shadow: 0 0 16px rgba(76, 229, 228, 0.28);
+}
+
+.main-nav .nav-link:hover::after,
+.main-nav .nav-link:focus-visible::after,
+.main-nav .nav-link.is-active::after {
+  background: var(--neon-cyan);
+  box-shadow: 0 0 12px var(--neon-glow);
+}
+
+.button,
+.header-actions .button,
+.home-solution-nav-button,
+.pricing-card-button {
+  position: relative;
+  overflow: hidden;
+  border-color: rgba(245, 246, 247, 0.72);
+  border-radius: 999px;
+  background: linear-gradient(145deg, var(--neon-cyan-soft), var(--neon-cyan) 52%, var(--color-blue));
+  box-shadow: 0 0 22px var(--neon-glow), 0 0 58px rgba(76, 229, 228, 0.12), inset 0 1px 0 rgba(255, 255, 255, 0.52);
+  color: #06131d;
+  transition: transform 0.18s ease, filter 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease;
+}
+
+.button::before,
+.header-actions .button::before,
+.home-solution-nav-button::before,
+.pricing-card-button::before {
+  position: absolute;
+  inset: 1px 12% auto;
+  height: 34%;
+  border-radius: inherit;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.52), transparent);
+  content: "";
+  opacity: 0.76;
+  pointer-events: none;
+}
+
+.button:hover,
+.button:focus-visible,
+.header-actions .button:hover,
+.header-actions .button:focus-visible,
+.home-solution-nav-button:hover,
+.home-solution-nav-button:focus-visible,
+.pricing-card-button:hover,
+.pricing-card-button:focus-visible {
+  border-color: #f5f6f7;
+  background: linear-gradient(145deg, #8af5ef, var(--neon-cyan) 54%, var(--color-blue));
+  box-shadow: 0 0 30px rgba(76, 229, 228, 0.48), 0 0 72px rgba(76, 229, 228, 0.18), inset 0 1px 0 rgba(255, 255, 255, 0.7);
+  filter: saturate(1.08) brightness(1.06);
+  transform: translateY(-1px);
+}
+
+.button:active,
+.home-solution-nav-button:active,
+.pricing-card-button:active {
+  background: linear-gradient(145deg, var(--color-accent-dark), var(--neon-cyan));
+  transform: translateY(0);
+}
+
+.lang-button {
+  min-height: 44px;
+  min-width: 44px;
+  border-color: rgba(76, 229, 228, 0.4);
+  border-radius: 11px;
+  background: rgba(12, 23, 38, 0.72);
+  color: var(--color-muted);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.08), 0 0 14px rgba(76, 229, 228, 0.08);
+}
+
+.lang-button:hover,
+.lang-button:focus-visible,
+.lang-button.is-current {
+  border-color: var(--neon-cyan);
+  background: rgba(76, 229, 228, 0.14);
+  color: var(--color-text);
+  box-shadow: 0 0 18px rgba(76, 229, 228, 0.18);
+}
+
+.hero,
+.section-dark,
+.section-soft,
+.solutions-page,
+.geo-stack,
+.contact-layout,
+.blog-shell,
+.blog-index-grid,
+.cases-grid {
+  position: relative;
+  isolation: isolate;
+}
+
+.hero::before,
+.solutions-page::before,
+.geo-stack::before,
+.contact-layout::before,
+.blog-shell::before,
+.blog-index-grid::before,
+.cases-grid::before {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background:
+    radial-gradient(circle at 10% 38%, rgba(41, 215, 213, 0.1), transparent 30%),
+    radial-gradient(circle at 88% 20%, rgba(88, 70, 220, 0.1), transparent 34%);
+  content: "";
+  pointer-events: none;
+}
+
+.hero-title,
+.section-title,
+.solution-title,
+.blog-article-title,
+.blog-index-title,
+.case-card h2,
+.case-card h3 {
+  color: var(--color-text);
+  letter-spacing: -0.035em;
+  text-shadow: 0 0 22px rgba(245, 246, 247, 0.08);
+}
+
+.hero-title .heading-word,
+.solution-title .heading-word {
+  display: inline;
+}
+
+.hero-title .heading-word--white,
+.solution-title .heading-word--white {
+  color: var(--color-text);
+}
+
+.hero-title .heading-word--cyan,
+.solution-title .heading-word--cyan {
+  color: var(--neon-cyan);
+  text-shadow: 0 0 22px rgba(76, 229, 228, 0.18);
+}
+
+.eyebrow,
+.pricing-price,
+.solution-card-link,
+.footer-link:hover,
+.footer-link:focus-visible,
+.contact-link:hover,
+.contact-link:focus-visible {
+  color: var(--neon-cyan);
+}
+
+.card,
+.service-card,
+.slider-box,
+.loss-result,
+.pricing-card,
+.case-card,
+.blog-card,
+.blog-index-card,
+.case-study-page .card,
+.geo-panel,
+.geo-link-card,
+.geo-location-card,
+.contact-link,
+.solution-card,
+.solution-matrix-card,
+.solution-note,
+.solution-faq-item,
+.solution-reading-link,
+.workflow-card {
+  border-color: rgba(180, 203, 208, 0.2);
+  background:
+    linear-gradient(112deg, rgba(245, 246, 247, 0.055), transparent 22%),
+    linear-gradient(145deg, rgba(32, 52, 74, 0.72), rgba(12, 23, 38, 0.78));
+  box-shadow: 0 18px 50px rgba(0, 0, 0, 0.22), inset 0 1px 0 rgba(245, 246, 247, 0.08);
+}
+
+.card:hover,
+.service-card:hover,
+.pricing-card:hover,
+.case-card:hover,
+.blog-index-card:hover,
+.solution-card:hover,
+.solution-matrix-card:hover,
+.solution-reading-link:hover,
+.contact-link:hover {
+  border-color: rgba(76, 229, 228, 0.48);
+  box-shadow: 0 0 28px rgba(76, 229, 228, 0.1), 0 22px 62px rgba(0, 0, 0, 0.28), inset 0 1px 0 rgba(245, 246, 247, 0.12);
+}
+
+.pricing-card--featured,
+.geo-cta,
+.contact-links {
+  border-color: rgba(76, 229, 228, 0.46);
+  box-shadow: 0 0 28px rgba(76, 229, 228, 0.12), 0 22px 62px rgba(0, 0, 0, 0.28), inset 0 1px 0 rgba(245, 246, 247, 0.12);
+}
+
+.solution-hero,
+.solution-section,
+.solution-final-cta,
+.solution-mid-cta {
+  border-color: rgba(180, 203, 208, 0.18);
+  background:
+    linear-gradient(112deg, rgba(245, 246, 247, 0.06), transparent 22%),
+    linear-gradient(145deg, rgba(20, 33, 54, 0.86), rgba(12, 23, 38, 0.8));
+  box-shadow: 0 24px 70px rgba(0, 0, 0, 0.2), inset 0 1px 0 rgba(245, 246, 247, 0.06);
+  -webkit-backdrop-filter: blur(10px) saturate(118%);
+  backdrop-filter: blur(10px) saturate(118%);
+}
+
+.solution-hero,
+.solution-final-cta {
+  background:
+    radial-gradient(circle at 12% 40%, rgba(41, 215, 213, 0.12), transparent 32%),
+    radial-gradient(circle at 90% 20%, rgba(88, 70, 220, 0.12), transparent 34%),
+    linear-gradient(145deg, #081421, #0c1a2d 48%, #10152e);
+}
+
+.input,
+.textarea,
+.select,
+.contact-layout input,
+.contact-layout textarea,
+.contact-layout select,
+.ai-assistant-form input {
+  border-color: rgba(180, 203, 208, 0.36);
+  border-width: 1px;
+  border-radius: 12px;
+  background: rgba(2, 8, 16, 0.52);
+  color: var(--color-text);
+}
+
+.input:focus-visible,
+.textarea:focus-visible,
+.select:focus-visible,
+.contact-layout input:focus-visible,
+.contact-layout textarea:focus-visible,
+.contact-layout select:focus-visible,
+.ai-assistant-form input:focus-visible {
+  border-color: var(--neon-cyan);
+  outline: 2px solid rgba(76, 229, 228, 0.7);
+  outline-offset: 3px;
+  box-shadow: 0 0 20px rgba(76, 229, 228, 0.16);
+}
+
+.site-footer {
+  border-top-color: rgba(180, 203, 208, 0.16);
+  background: rgba(12, 23, 38, 0.94);
+  color: var(--color-muted);
+}
+
+.ai-assistant-button {
+  border-color: rgba(76, 229, 228, 0.55);
+  background: linear-gradient(145deg, rgba(32, 52, 74, 0.92), rgba(12, 23, 38, 0.92));
+  box-shadow: 0 0 24px rgba(76, 229, 228, 0.2), 0 18px 44px rgba(0, 0, 0, 0.32), inset 0 1px 0 rgba(245, 246, 247, 0.16);
+}
+
+/* The launcher image already has transparency and its visual layer owns the
+   mascot glow. Keep the existing hit area and motion without a card behind it. */
+.ai-assistant-button {
+  border: 0;
+  background: transparent;
+  box-shadow: none;
+}
+
+.ai-assistant-button:hover,
+.ai-assistant-button:focus-visible,
+.ai-assistant-widget.is-open .ai-assistant-button {
+  border-color: var(--neon-cyan);
+  box-shadow: 0 0 30px rgba(76, 229, 228, 0.38), 0 22px 52px rgba(0, 0, 0, 0.36), inset 0 1px 0 rgba(245, 246, 247, 0.2);
+}
+
+.ai-assistant-button:hover,
+.ai-assistant-widget.is-open .ai-assistant-button {
+  border: 0;
+  background: transparent;
+  box-shadow: none;
+}
+
+.ai-assistant-button:focus-visible {
+  border: 0;
+  background: transparent;
+  box-shadow: none;
+}
+
+.blog-page-title {
+  color: var(--neon-cyan);
+  text-shadow: 0 0 18px rgba(76, 229, 228, 0.2);
+}
+
+.ai-assistant-panel {
+  border-color: rgba(76, 229, 228, 0.28);
+  background: linear-gradient(145deg, rgba(20, 33, 54, 0.96), rgba(8, 20, 33, 0.96));
+  box-shadow: 0 0 34px rgba(76, 229, 228, 0.12), 0 24px 70px rgba(0, 0, 0, 0.38);
+  -webkit-backdrop-filter: blur(18px) saturate(132%);
+  backdrop-filter: blur(18px) saturate(132%);
+}
+
+.ai-assistant-form button {
+  border: 1px solid rgba(245, 246, 247, 0.72);
+  background: linear-gradient(145deg, var(--neon-cyan-soft), var(--neon-cyan) 52%, var(--color-blue));
+  color: var(--color-bg-deep);
+  box-shadow: 0 0 18px rgba(76, 229, 228, 0.24), inset 0 1px 0 rgba(255, 255, 255, 0.52);
+  transition: transform 0.18s ease, filter 0.18s ease, box-shadow 0.18s ease;
+}
+
+.ai-assistant-form button:hover:not(:disabled),
+.ai-assistant-form button:focus-visible {
+  filter: brightness(1.06);
+  box-shadow: 0 0 24px rgba(76, 229, 228, 0.38), inset 0 1px 0 rgba(255, 255, 255, 0.62);
+}
+
+.ai-assistant-form button:active:not(:disabled) {
+  transform: translateY(1px);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .button,
+  .header-actions .button,
+  .home-solution-nav-button,
+  .pricing-card-button,
+  .main-nav .nav-link,
+  a,
+  .ai-assistant-button {
+    transition: none;
+  }
+}
+
+@media (max-width: 430px) {
+  /* Keep the existing Home solution cards inside the narrowest supported
+     viewport. The long tertiary CTA may wrap; its destination and behavior
+     are unchanged. */
+  .home-solution-nav-card .solution-section-heading,
+  .home-solution-nav-card .home-solution-nav-grid,
+  .home-solution-nav-card .home-solution-nav-actions {
+    min-width: 0;
+  }
+
+  .home-solution-nav-card .home-solution-nav-button {
+    white-space: normal;
+    text-align: center;
+  }
+}
+
+@media (max-width: 560px) {
+  .ai-assistant-widget {
+    right: max(8px, env(safe-area-inset-right));
+  }
+
+  .ai-assistant-widget.is-open .ai-assistant-panel {
+    position: fixed;
+    left: max(10px, env(safe-area-inset-left));
+    right: max(10px, env(safe-area-inset-right));
+    bottom: calc(var(--ai-assistant-base-bottom) + var(--ai-assistant-footer-lift, 0px));
+    width: auto;
+    max-width: none;
+    height: min(520px, calc(100dvh - var(--ai-assistant-base-bottom) - var(--ai-assistant-footer-lift, 0px) - 16px));
+  }
+}
+
+/* Final corrective cascade for the approved rollout. Keep these rules scoped
+   to the affected surfaces so the accepted Blog and Contacts treatments are
+   not collateral damage from the site-wide token cleanup. */
+.hero::after {
+  border-color: rgba(76, 229, 228, 0.14);
+  box-shadow: 0 0 90px rgba(76, 229, 228, 0.1);
+}
+
+.ambient-tech-cloud__glow--left {
+  background: radial-gradient(circle, rgba(76, 229, 228, 0.16) 0%, rgba(76, 229, 228, 0.05) 42%, transparent 72%);
+}
+
+.ambient-tech-cloud__glow--right {
+  background: radial-gradient(circle, rgba(52, 149, 160, 0.15) 0%, rgba(52, 149, 160, 0.045) 40%, transparent 74%);
+}
+
+.ambient-tech-cloud__icon {
+  color: rgba(210, 246, 245, 0.86);
+  filter:
+    drop-shadow(0 0 8px rgba(76, 229, 228, 0.12))
+    drop-shadow(0 0 18px rgba(52, 149, 160, 0.08));
+}
+
+.section-dark,
+.section-soft {
+  background:
+    radial-gradient(circle at 12% 8%, rgba(76, 229, 228, 0.06), transparent 28%),
+    linear-gradient(180deg, var(--color-bg-deep), var(--color-bg));
+}
+
+.solution-hero-card,
+.solution-explainer-card,
+.solution-mid-cta,
+.solution-final-cta {
+  background:
+    linear-gradient(112deg, rgba(245, 246, 247, 0.055), transparent 22%),
+    linear-gradient(145deg, rgba(32, 52, 74, 0.72), rgba(8, 20, 33, 0.9));
+}
+
+.solution-hero-visual-frame {
+  border-color: rgba(76, 229, 228, 0.34);
+  background:
+    linear-gradient(180deg, rgba(76, 229, 228, 0.06), rgba(52, 149, 160, 0.015)),
+    rgba(255, 255, 255, 0.015);
+  box-shadow:
+    0 1px 0 rgba(255, 255, 255, 0.04) inset,
+    0 12px 28px rgba(4, 43, 62, 0.2);
+}
+
+.solution-secondary-link {
+  border-color: rgba(76, 229, 228, 0.4);
+}
+
+.solution-secondary-link:hover {
+  border-color: rgba(76, 229, 228, 0.72);
+}
+
+.pricing-packages {
+  background:
+    radial-gradient(circle at 12% 10%, rgba(76, 229, 228, 0.11), transparent 34%),
+    radial-gradient(circle at 84% 14%, rgba(52, 149, 160, 0.1), transparent 30%),
+    linear-gradient(180deg, #081421 0%, #0c1726 100%);
+}
+
+.pricing-packages::before {
+  border-color: rgba(76, 229, 228, 0.14);
+}
+
+.pricing-card--featured {
+  border-color: rgba(76, 229, 228, 0.48);
+  background:
+    linear-gradient(145deg, rgba(76, 229, 228, 0.1), rgba(32, 52, 74, 0.72)),
+    rgba(12, 23, 38, 0.78);
+}
+
+.ai-placeholder {
+  background: var(--color-bg-deep);
+}
+
+/* Protected surfaces: retain their existing composition and hierarchy. */
+body:has(.blog-index-grid),
+body:has(.blog-article-layout),
+body:has(.contact-layout) {
+  background: var(--color-bg);
+}
+
+.blog-shell::before,
+.blog-index-grid::before,
+.contact-layout::before {
+  display: none;
+}
+
+.blog-index-card,
+.blog-article-body,
+.contact-link {
+  border-color: rgba(255, 255, 255, 0.14);
+  background: rgba(255, 255, 255, 0.06);
+  box-shadow: none;
+}
+
+.blog-index-card:hover,
+.contact-link:hover {
+  border-color: rgba(255, 255, 255, 0.16);
+  box-shadow: none;
+}
+
+.blog-article-title,
+.blog-index-title {
+  letter-spacing: normal;
+  text-shadow: none;
 }

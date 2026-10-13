@@ -11,7 +11,7 @@ export const siteAssets: SiteAsset[] = [
   {
     name: "kubera-logo-main",
     sourceUrl: "local",
-    localPath: "/assets/logo/kubera-ai-logo-source.png",
+    localPath: "/assets/logo/kubera-ai-logo-source.jpg",
     usage: "primary brand logo",
     notes: "User-provided black/gold logo with KUBERA AI text and Living Systems subtitle.",
   },

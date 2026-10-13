@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import type { ReactNode } from "react";
 import { AmbientTechCloud } from "@/components/decorative/AmbientTechCloud";
+import { NeonHeading } from "@/components/sections/NeonHeading";
 import type { CaseLocale, CaseStudy, CaseStudyType } from "@/content/cases";
 import { getCasePageContent } from "@/content/cases";
 import { getCaseSolutionLinks, getCaseUseCaseLinks } from "@/content/internal-linking";
@@ -176,7 +177,7 @@ function LegacyCaseStudyPage({ caseStudy }: { caseStudy: CaseStudy }) {
         <AmbientTechCloud variant="compact" />
         <div className="container hero-content">
           <p className="eyebrow">{caseStudy.label}</p>
-          <h1 className="hero-title">{caseStudy.title}</h1>
+          <h1 className="hero-title"><NeonHeading>{caseStudy.title}</NeonHeading></h1>
           <p className="muted" style={{ margin: "18px 0 10px", fontSize: "1rem", letterSpacing: "0.02em" }}>
             {caseStudy.category}
           </p>
@@ -325,7 +326,7 @@ function DetailedCaseStudyPage({ caseStudy, locale }: CaseStudyPageProps) {
         <AmbientTechCloud variant="compact" />
         <div className="container hero-content">
           <p className="eyebrow">{content.label}</p>
-          <h1 className="hero-title">{content.heroTitle}</h1>
+          <h1 className="hero-title"><NeonHeading>{content.heroTitle}</NeonHeading></h1>
           <p className="muted" style={{ margin: "18px 0 10px", fontSize: "1rem", letterSpacing: "0.02em" }}>
             {content.category}
           </p>
