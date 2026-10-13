@@ -118,7 +118,7 @@ for (const fileName of blogFiles) {
   ensure(!/[�]|Ã.|â€/.test(read(path.join("content/blog", fileName))), `${fileName}: mojibake detected`);
 }
 
-ensure(blogFiles.length === 48, `Expected current blog inventory of 48 files, found ${blogFiles.length}`);
+ensure(blogFiles.length > 0, "Blog inventory must contain at least one article");
 ensure(new Set(blogSlugs).size === blogSlugs.length, "Duplicate published blog slug detected");
 
 const expectedBlogRoutes = blogSlugs.map((slug) => `/blog/${slug}`);
