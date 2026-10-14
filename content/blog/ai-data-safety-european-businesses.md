@@ -177,6 +177,8 @@ For appointment reminder automation (clinic, salon, consultancy):
 
 For lead qualification automation:
 
+An Instagram example of the data-minimisation and human-handoff decisions is set out in [AI-Powered Social Inbox: Turn Instagram DMs and Comments Into Paying Customers](/blog/ai-social-inbox-instagram-dms-comments).
+
 - Lawful basis: legitimate interests, where the balance test supports processing for business development purposes
 - DPA signed with the AI provider
 - Data minimisation: pass only the enquiry content and contact details necessary for qualification; do not pass browsing history, device data, or other data not necessary for the task

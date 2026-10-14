@@ -23,6 +23,8 @@ An AI agent is designed for execution.
 
 That distinction matters because businesses do not lose time only when people ask questions. They lose time when leads are not followed up, appointments are not confirmed, data is not updated, and routine workflows require manual attention every day.
 
+For a channel-specific example of classification, CRM capture and human handoff, see [AI-Powered Social Inbox: Turn Instagram DMs and Comments Into Paying Customers](/blog/ai-social-inbox-instagram-dms-comments).
+
 ## What a chatbot does well
 
 A chatbot is best when the goal is communication.

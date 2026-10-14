@@ -18,6 +18,8 @@ A quick search for WhatsApp Business automation turns up a wall of vendor conten
 
 The right way to decide whether this fits your business isn't company size, it's the shape of your customer conversations. A smaller business fielding a high volume of repetitive, customer-initiated questions can get real value from automating this channel; a larger business with only a handful of WhatsApp conversations a week may not. If you are still deciding which automation should go first, [How to Choose Your First AI Automation Project](/blog/how-to-choose-first-ai-automation-project) is the right upstream framework. This article lays out the actual mechanics and the questions worth asking, rather than a size-based rule of thumb.
 
+Instagram conversations create a similar opportunity but add public comments and Meta's private-reply rules; the mechanics are explained in [AI-Powered Social Inbox: Turn Instagram DMs and Comments Into Paying Customers](/blog/ai-social-inbox-instagram-dms-comments).
+
 ## What "WhatsApp Business automation" actually means
 
 There are two different things people mean when they say this, and mixing them up causes most of the confusion in vendor content.

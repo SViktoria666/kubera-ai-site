@@ -17,6 +17,8 @@ A quote for software used to be a licence fee and a number of users. A quote for
 
 This is a buyer's guide to reading the price list, not to what a project costs in total, which we cover in [How Much Does AI Automation Cost in 2026?](/blog/how-much-does-ai-automation-cost), or how an agent compares with a hire, which is the subject of [AI Automation vs Hiring](/blog/ai-automation-vs-hiring-comparison). It is general information, not financial advice. Vendor figures were read from public pages in October 2026 and such pages change, so check the current version before relying on a number.
 
+For a worked example that connects usage, CRM handling and payback for an Instagram workflow, read [AI-Powered Social Inbox: Turn Instagram DMs and Comments Into Paying Customers](/blog/ai-social-inbox-instagram-dms-comments).
+
 ## Why quotes look so different now
 
 [Deloitte's 2026 technology predictions](https://www.deloitte.com/us/en/insights/industry/technology/technology-media-and-telecom-predictions/2026/saas-ai-agents.html), published in November 2025, say subscriptions and seat-based licensing "could give way to hybrid approaches that blend usage- and outcome-based pricing". Deloitte says standard practices could take years to emerge, if they ever do. These are predictions, not measurements, and so is the Gartner forecast it cites, that by 2030 at least 40% of enterprise SaaS spend will shift toward usage-, agent- or outcome-based pricing.
