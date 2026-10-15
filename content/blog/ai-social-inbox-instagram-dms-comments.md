@@ -31,7 +31,7 @@ It is closer to a switchboard than to a chatbot that tries to answer everything.
 | 5. Hand off | Complex or sensitive items go to a named person with the conversation attached | A task with a deadline |
 | 6. Report | A weekly summary of volume, handoffs and bookings by source | Input for improving the rules |
 
-The commercial point is the link between stages 4 and 5. A reply that does not end in a booking, a quote request or a CRM record is a conversation that the business cannot count.
+The commercial point is the link between stages 4 and 5. A reply that does not end in a booking, a quote request or a CRM record is a conversation that the business cannot count. The same human-confirmation principle applies when a conversation is turned into CRM work after a client meeting, as shown in [AI Meeting Automation: From Client Conversations to CRM Tasks and Follow-Ups](/blog/ai-meeting-automation-crm-follow-ups).
 
 ## Why this channel needs its own design
 

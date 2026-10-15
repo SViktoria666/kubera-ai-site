@@ -290,7 +290,7 @@ For organisations handling health data, financial services data, or information 
 
 The businesses that are gaining competitive advantage from AI automation in Europe are not the ones that assumed everything was fine and proceeded without thinking about data. And they are not the ones that assumed compliance was impossible and stopped before starting. They are the ones that classified their data correctly, matched the architecture to the data category, and built systems that are both operationally effective and legally defensible.
 
-That is the correct approach in 2026, and it is the approach every AI automation engagement at Kubera AI starts with.
+That is the correct approach in 2026, and it is the approach every AI automation engagement at Kubera AI starts with. The same classification and retention questions apply when meeting recordings or transcripts are turned into CRM tasks, as described in [AI Meeting Automation: From Client Conversations to CRM Tasks and Follow-Ups](/blog/ai-meeting-automation-crm-follow-ups).
 
 ## Working with Kubera AI
 

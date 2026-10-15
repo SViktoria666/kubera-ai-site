@@ -291,7 +291,7 @@ These qualitative factors should be named in any internal ROI discussion, but sh
 
 Well-scoped AI automation with a clear baseline and a measurable business objective can produce strong, measurable ROI. The businesses that demonstrate this consistently are not the ones with the largest budgets or the most advanced technology — they are the ones that approached automation as a business investment from the start, with the same rigour they would apply to any other capital decision.
 
-The calculation framework in this article is straightforward. The discipline required to apply it — measuring the baseline before the build, counting all costs, attributing improvement conservatively, reviewing performance regularly — is what separates automation that compounds value over time from automation that gets quietly switched off because nobody can explain what it returned.
+The calculation framework in this article is straightforward. The discipline required to apply it — measuring the baseline before the build, counting all costs, attributing improvement conservatively, reviewing performance regularly — is what separates automation that compounds value over time from automation that gets quietly switched off because nobody can explain what it returned. For a worked example based on time saved after client meetings, see [AI Meeting Automation: From Client Conversations to CRM Tasks and Follow-Ups](/blog/ai-meeting-automation-crm-follow-ups).
 
 One process, measured properly, creates the foundation for the next. That is how European service businesses build operational advantage from AI — not by automating everything at once, but by proving value clearly on the first project and expanding from there.
 
