@@ -14,6 +14,8 @@ category: "AI Automation"
 
 # Deepfake Fraud in 2026: How AI-Powered Automation Protects Your Company's Payments
 
+For the wider invoice-to-payment workflow and its authority boundaries, see [AI for Invoices and Payments: What Can Businesses Safely Automate in 2026?](/blog/ai-invoice-payment-automation-safe-2026).
+
 Picture a finance employee on a busy afternoon. A message arrives that looks like it's from the CEO, followed by a voice note that sounds exactly like the CEO, asking for an urgent payment to a new supplier and asking that it stay confidential. Ten years ago, an attacker needed skill, time, and luck to pull this off. Today, cloning a voice and writing a flawless message takes a fraction of that effort, which is exactly why 2026 security reporting keeps returning to the same theme.
 
 The useful part of that story is what the same data says about defense. The technology criminals use is also available to the companies they target, and the 2026 evidence suggests that well-designed security AI and automation can strengthen broader defensive operations, while payment-specific protection still depends on verification and approval controls that do not rely on recognizing a convincing fake. This article walks through what the latest data shows, three real attempts and what decided each outcome, one safeguard already built into European banking, and how a well-built automated payment workflow puts people and AI on the same side. It is general information, not security or legal advice, and a payment-security setup is worth designing together with your bank and IT security provider.

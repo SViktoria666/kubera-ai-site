@@ -14,6 +14,8 @@ category: "AI Automation"
 
 # What Happens When Your AI Automation Goes Down? A Business Recovery Plan
 
+For a payment-specific workflow that keeps a manual path and human approval in place, see [AI for Invoices and Payments: What Can Businesses Safely Automate in 2026?](/blog/ai-invoice-payment-automation-safe-2026).
+
 A customer writes on WhatsApp at 21:40 asking for a quote. The automation that normally qualifies the enquiry, creates a CRM record and sends a reply has been failing since 20:15 because the AI provider is returning errors. Nobody on the team knows. The customer waits, writes to a competitor, and the next morning the manager finds an empty queue and assumes it was a quiet evening.
 
 That is the usual shape of an automation failure. It is rarely dramatic. It is silent, partial and noticed late, and the expensive part is often not the outage itself but what surrounds it: messages that were not processed, orders created twice, payment links sent to the same person three times, a CRM that disagrees with the payment system.
