@@ -148,6 +148,8 @@ Decide in advance when the agent hands over to a person. How far an agent should
 
 These are design options to test, not measured savings. They fit best with a project that starts from a clear process, which is also the main reason projects stall, as we explain in [Why Most AI Projects Fail Before They Deliver Any ROI](/blog/why-most-ai-projects-fail).
 
+Security controls belong in the operating cost and ownership model too; [the October 2026 vulnerability wave](/blog/vulnerability-wave-october-2026-ai-automation-security) explains the patching and secret-rotation work behind a reliable AI stack.
+
 ## FAQ
 
 **Which is cheaper, seat-based, usage-based or outcome-based pricing?** None of them is cheaper in every case. The scenario above shows the cheapest quote changing between low and high use. The answer depends on your volume, your units per case and how well the agent performs, so compare the three-case table, not the headline rate.

@@ -232,6 +232,8 @@ This checklist is a practical planning tool, not legal advice. For organisations
 - AI Policy Desk — "Anthropic vs OpenAI: GDPR Compliance Differences", May 2026. Comparative analysis of provider DPA terms, data retention, and EU-region hosting availability. Used to support the provider comparison table.
 - Secure Privacy — "GDPR Compliance in 2026: The Complete Guide". Source for cumulative GDPR enforcement figures (approximately €5.88 billion since 2018) and overview of regulatory evolution.
 
+For a current example of supply-chain exposure in an AI gateway, see [the October 2026 vulnerability wave and what businesses should patch](/blog/vulnerability-wave-october-2026-ai-automation-security).
+
 ## FAQ
 
 1. **Can a European business use cloud AI services like ChatGPT or Claude and still be GDPR-compliant?**

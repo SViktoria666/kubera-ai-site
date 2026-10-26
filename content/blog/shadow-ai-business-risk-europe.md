@@ -61,6 +61,8 @@ If the honest answers here point to real exposure, that's the case for a proper 
 
 Illustrative scenario, not a specific Kubera client: a mid-size professional services firm discovers, during a routine security review, that several staff members have been using personal AI accounts to draft client correspondence and summarize meeting notes, including notes containing client financial details. Rather than banning AI tools outright, the firm rolls out a sanctioned AI assistant with a proper data processing agreement in place, scoped so staff can do the same drafting and summarizing work they were already doing, faster and with the same convenience, but inside a system the firm actually controls and can account for. In this illustrative scenario, usage of the old, unapproved tools drops sharply within weeks, not because anyone was told to stop, but because the sanctioned option was genuinely as good to use and came with none of the personal risk of being the one who caused a data incident.
 
+Unapproved tools can also become an incident path through leaked keys and packages; [the October 2026 vulnerability wave](/blog/vulnerability-wave-october-2026-ai-automation-security) shows why an inventory needs an owner.
+
 ## FAQ
 
 **Does this mean my business should ban AI tools until we have a formal policy?** The evidence suggests that's the less effective option. A ban without a usable, sanctioned alternative tends to reduce visibility into AI use rather than reduce the use itself. Providing a good, approved option tends to work better than prohibition alone.

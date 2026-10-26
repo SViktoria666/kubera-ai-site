@@ -156,6 +156,8 @@ Monitoring of heartbeats, error rates, queue depth and spending limits, with ale
 
 Treat any promise of zero downtime with suspicion. The credible commitments concern detection time, response time and quality of recovery. Kubera AI scopes monitoring and support in writing per project, with response commitments set out in the agreement. [AI automation readiness](/blog/ai-automation-readiness) checks whether the owners and processes exist that make any support arrangement work.
 
+Dependency compromise is one outage trigger worth planning for; [the October 2026 vulnerability wave](/blog/vulnerability-wave-october-2026-ai-automation-security) applies the recovery sequence to an AI gateway and its secrets.
+
 ## Frequently asked questions
 
 ### What should I do first when my AI automation stops?
