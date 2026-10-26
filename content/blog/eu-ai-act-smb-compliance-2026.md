@@ -136,4 +136,6 @@ This kind of gap-mapping is close to what we walk through in the [Kubera Readine
 
 If you are not sure which of these obligations actually touch your current or planned automation, that is exactly the kind of question worth working through before a project starts, not after it ships.
 
+Customer-feedback workflows are another useful case study: [AI customer feedback analysis and the Signal-to-Fix Loop](/blog/ai-customer-feedback-analysis-reviews-complaints) shows where human approval and data minimisation belong.
+
 [Discuss your automation project →](/contacts)

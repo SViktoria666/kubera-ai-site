@@ -296,6 +296,8 @@ That is the correct approach in 2026, and it is the approach every AI automation
 
 ## Working with Kubera AI
 
+For a practical example of applying these safeguards to reviews, complaints and customer records, see [AI customer feedback analysis: reviews into action](/blog/ai-customer-feedback-analysis-reviews-complaints).
+
 Every AI automation system we build for European clients starts with a data classification review using the Kubera Data Sovereignty Model. We identify which data tiers are involved, confirm the appropriate architecture (cloud with DPA, EU-region cloud, or self-hosted), and ensure that the implementation is designed with compliance built in rather than retrofitted afterward.
 
 We are not lawyers, and this article is not legal advice. For high-sensitivity data categories or regulated industries, we work alongside your legal counsel or your Data Protection Officer to ensure the implementation is both operationally effective and legally defensible.

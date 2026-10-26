@@ -301,6 +301,8 @@ Start there.
 
 ## Working With Kubera AI
 
+For a worked example using feedback volume, triage time and post-fix measurement, see [AI customer feedback analysis: reviews into action](/blog/ai-customer-feedback-analysis-reviews-complaints).
+
 Kubera AI helps European service businesses identify which processes are worth automating, estimate their expected value before any implementation begins, and design implementations with measurable outcomes built in from the start.
 
 If you want to assess the potential ROI of a specific process in your business — before committing to any build — we are happy to help you work through the calculation.

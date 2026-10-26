@@ -284,6 +284,8 @@ That is not a slow path to automation. It is the fast path to automation that ac
 
 ## Working With Kubera AI
 
+Once feedback handling is selected as the first process, [AI customer feedback analysis: reviews into action](/blog/ai-customer-feedback-analysis-reviews-complaints) provides a read-only 30-day starting plan.
+
 Kubera AI helps European service businesses identify which of their processes are the strongest candidates for automation, scope the implementation correctly, and build systems with measurable outcomes defined before development begins.
 
 If you want to assess which of your processes belongs at the top of your automation list - and what implementing it would involve - we can help you work through that evaluation before any budget is committed.
