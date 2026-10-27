@@ -21,6 +21,8 @@ That's a genuinely striking demonstration that a specific, low-stakes system can
 
 ## The three levels worth distinguishing
 
+If you are starting with a paid assistant rather than an autonomous workflow, the [four-week task test](/blog/ai-subscription-first-task-what-to-delegate) helps establish where human review belongs.
+
 This is commonly used governance vocabulary in enterprise AI discussion, though the exact definitions and boundaries between terms can vary somewhat between organizations and frameworks, so treat the three below as a useful shared starting point rather than a fixed, universal standard.
 
 Human-in-the-loop means a person approves a specific action before the agent executes it. The system pauses at a defined checkpoint and waits. This fits high-stakes, hard-to-reverse actions: financial disbursements, contract commitments, anything touching sensitive data. For a payment-specific example, see [Deepfake Fraud in 2026: How AI-Powered Automation Protects Your Company's Payments](/blog/deepfake-fraud-payment-protection-europe).

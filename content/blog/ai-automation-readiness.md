@@ -33,6 +33,8 @@ category: "AI Automation"
 
 ## The Assumption That Costs Businesses Thousands
 
+Before choosing a larger workflow, start with one familiar, checkable task and test it over several runs. The [Repeat-Task Scorecard](/blog/ai-subscription-first-task-what-to-delegate) is a practical way to make that first choice.
+
 There is a belief that drives more failed AI projects than any technology problem: the belief that AI will organise your business.
 
 Business owners hear that AI can handle customer enquiries, qualify leads, process invoices, and send reminders. They imagine a system that takes their current operations and, through some combination of intelligence and automation, transforms them into something faster and more consistent.

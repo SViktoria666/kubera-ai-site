@@ -24,6 +24,8 @@ This article is a recovery plan for that situation: what breaks, how the standar
 
 ## Failures are normal, and the tail is long
 
+Before a team automates an event-driven workflow, it can test a smaller recurring task with the [four-week plan for measuring real time saved](/blog/ai-subscription-first-task-what-to-delegate).
+
 Even the largest infrastructure providers publish post-mortems.
 
 On 19 and 20 October 2025, Amazon Web Services had an event in its US-EAST-1 region. AWS's own summary says it started at 11:48 PM PDT on 19 October and ended at 2:20 PM PDT on 20 October, about 14.5 hours. It names the root cause as "a latent race condition in the DynamoDB DNS management system". DynamoDB error rates were elevated for about 2 hours 52 minutes, but services built on top of it, including compute launches, load balancers and Lambda, took many more hours to recover.

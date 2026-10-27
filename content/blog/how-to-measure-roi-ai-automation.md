@@ -28,6 +28,8 @@ This article gives European service businesses a practical framework for doing e
 
 ## Why ROI Measurement Starts Before Deployment
 
+For a lightweight first measurement, use the [four-week repeat-task test](/blog/ai-subscription-first-task-what-to-delegate) before building a full automation business case.
+
 The most common measurement mistake is treating ROI as something you calculate after the system is live. By then, it is too late to establish a clean baseline.
 
 A baseline is the documented state of a process before automation touches it. It is not a rough estimate made in retrospect. It is a set of measurements — collected over a representative period (often two to six weeks, depending on how frequently the process runs) — that captures the current cost, speed, error rate, and output volume of the process you are about to automate.
