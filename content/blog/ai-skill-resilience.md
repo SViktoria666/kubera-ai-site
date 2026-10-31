@@ -74,6 +74,8 @@ Two points matter. First, the study concerns fatigue, not lost skill. Second, it
 
 ## Why resilience is the right frame
 
+For a concrete team routine, use the [Aim, Brief, Judge and Learn loop](/blog/why-ai-amplifies-people-differently) to keep judgment in the workflow rather than delegating it by default.
+
 If skills are what makes AI output safe to use, protecting them is part of the business case for automation, not a brake on it. Someone has to notice when a classification is wrong, when a draft misreads the client, or when an approved exception should have been refused. That ability comes from practice. As AI agents take on multi-step work, a person makes fewer small decisions along the way, which makes oversight skills valuable and easy to neglect. We cover how agents work in [What Is Agentic AI?](/blog/what-is-agentic-ai).
 
 The distinction between routine execution and judgment is the same one we draw in [Can AI Replace an Employee?](/blog/can-ai-replace-an-employee). Automate the execution, and keep judgment in regular use. Roles change as a result, which we discuss in [How AI Restructures Teams, Not Just Headcount](/blog/ai-restructures-teams-not-headcount). Beginners are a special case, because they have less judgment to protect and more to build, and we cover that in [Junior Roles and AI: How to Keep Your Talent Pipeline Alive](/blog/junior-roles-ai-talent-pipeline). This article is about the rest of the team, who can drift into approving what the system suggests because it is fluent and fast.

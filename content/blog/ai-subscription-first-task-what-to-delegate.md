@@ -24,6 +24,8 @@ This is not only a small-office problem. Eurostat reports that 19.95 percent of 
 
 ## Why trying everything does not work
 
+The same question applies after a team buys an assistant: the [Aim, Brief, Judge and Learn habits](/blog/why-ai-amplifies-people-differently) turn a subscription into a repeatable way of working.
+
 The usual advice is to experiment widely. It produces a pile of one-off impressions, because a single good answer says very little about whether the tool can be relied on for the same job next month.
 
 A field experiment on 758 consultants at Boston Consulting Group, published in [Organization Science](https://pubsonline.informs.org/doi/abs/10.1287/orsc.2025.21838), shows why. Participants used GPT-4 on tasks the model handled well and on one task designed to fall outside its reliable range. Inside that range, AI users completed about 12.2 percent more tasks, finished about 25.1 percent faster, and produced work graded roughly 32 percent higher in quality. On the task outside it, the control group got the right answer about 84.5 percent of the time, while the AI groups reached 60 percent and 70.6 percent. The paper's abstract describes the drop as 19 percent, while the body reports it as a difference in percentage points, so treat the exact figure with care. The important detail is that AI users' written recommendations were still rated as coherent. The model was not obviously wrong. It was convincingly wrong.

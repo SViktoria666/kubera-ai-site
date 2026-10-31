@@ -61,6 +61,8 @@ The practical reading doesn't depend on which study is right, and it isn't an ar
 
 ## How juniors use AI matters
 
+The [Direction Loop for AI work](/blog/why-ai-amplifies-people-differently) gives managers a practical way to let juniors use AI while keeping drafting, checking and learning visible.
+
 A second line of evidence concerns learning itself. In a randomized experiment published in 2026, Judy Hanwen Shen and Alex Tamkin, researchers affiliated with Anthropic, had 52 professional and freelance software developers learn an unfamiliar Python library, with or without an AI assistant, and then tested them without AI. The assistant in the study was built on GPT-4o. The AI-assisted group scored about 4.15 points lower on the quiz, a gap on a 27-point quiz that the authors describe as about a 17% score difference or roughly two grade points. Completion time didn't differ significantly between the groups. The largest gap showed up on debugging questions, and the result depended on how people used the tool: those who asked conceptual questions or requested explanations alongside generated code preserved their learning, while those who delegated coding or debugging to the AI scored much lower.
 
 It's one small, short-term experiment on a single task, using a one-hour session rather than months of work, so it doesn't show that AI causes long-term deskilling. Its useful lesson is practical: AI use isn't automatically good or bad for learning. The design of how a beginner works with it makes the difference, and that design is something a business controls.

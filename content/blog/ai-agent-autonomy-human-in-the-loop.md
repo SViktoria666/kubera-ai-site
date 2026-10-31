@@ -21,6 +21,8 @@ That's a genuinely striking demonstration that a specific, low-stakes system can
 
 ## The three levels worth distinguishing
 
+Before granting an agent more autonomy, teams can use the [Direction Loop](/blog/why-ai-amplifies-people-differently) to make human judgment and approval criteria explicit.
+
 If you are starting with a paid assistant rather than an autonomous workflow, the [four-week task test](/blog/ai-subscription-first-task-what-to-delegate) helps establish where human review belongs.
 
 This is commonly used governance vocabulary in enterprise AI discussion, though the exact definitions and boundaries between terms can vary somewhat between organizations and frameworks, so treat the three below as a useful shared starting point rather than a fixed, universal standard.
