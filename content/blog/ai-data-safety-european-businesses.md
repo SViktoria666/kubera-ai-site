@@ -14,7 +14,7 @@ category: "AI Automation"
 
 # Is Your Business Data Safe with AI? What Every European Company Should Know Before Automating
 
-For a concrete finance workflow applying these data and human-approval boundaries, see [AI for Invoices and Payments: What Can Businesses Safely Automate in 2026?](/blog/ai-invoice-payment-automation-safe-2026).
+For a concrete finance workflow applying these data and human-approval boundaries, see [AI for Invoices and Payments: What Can Businesses Safely Automate in 2026?](/blog/ai-invoice-payment-automation-safe-2026). If those controls are repeated in an agent workflow, [building a Codex or Claude Code skill](/blog/how-to-build-skills-codex-claude-code) explains how to keep the procedure reviewable.
 
 ## Table of Contents
 

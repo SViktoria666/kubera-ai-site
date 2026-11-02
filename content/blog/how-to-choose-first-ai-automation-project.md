@@ -38,7 +38,7 @@ Integration infrastructure. The connections built for the first automation - CRM
 
 Measurement discipline. The habit of baselining a process before deployment, and tracking performance against that baseline after, makes every subsequent ROI calculation more credible. For the full measurement approach, see [How to Measure ROI from AI Automation](/blog/how-to-measure-roi-ai-automation).
 
-Starting with a simpler, well-chosen project can help an organisation build reusable infrastructure and operating discipline before attempting more complex automation. The most visible or most painful process on your shortlist is often not the most suitable first candidate - and this framework exists to make that determination systematic rather than instinctive.
+Starting with a simpler, well-chosen project can help an organisation build reusable infrastructure and operating discipline before attempting more complex automation. The most visible or most painful process on your shortlist is often not the most suitable first candidate - and this framework exists to make that determination systematic rather than instinctive. If the first workflow is agent-facing, document its repeatable checks as a [Codex or Claude Code skill](/blog/how-to-build-skills-codex-claude-code) only after the process itself is understood.
 
 A first automation project succeeds when the process is sufficiently clear, measurable, connected to the right systems, and low enough in operational risk to learn safely. The purpose of project selection is to identify that combination before development begins.
 

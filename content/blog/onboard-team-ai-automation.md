@@ -38,7 +38,7 @@ None of that automatically transfers to a European team. Team structures, existi
 
 ## A framework for onboarding a team
 
-Start onboarding with the [four habits that separate useful AI outcomes](/blog/why-ai-amplifies-people-differently): a clear aim, a useful brief, explicit judging criteria and a shared lesson from each round.
+Start onboarding with the [four habits that separate useful AI outcomes](/blog/why-ai-amplifies-people-differently): a clear aim, a useful brief, explicit judging criteria and a shared lesson from each round. Teams can capture those recurring lessons as a reviewed [skill for Codex or Claude Code](/blog/how-to-build-skills-codex-claude-code) instead of repeating them in every session.
 
 This is a Kubera AI planning heuristic, not a universal benchmark, meant to structure a rollout rather than replace judgment about your specific team. Having a shared, plain-language vocabulary helps here too; [AI Automation Glossary](/blog/ai-automation-glossary) is written for exactly this kind of team-facing explanation rather than an engineering audience.
 
