@@ -433,6 +433,8 @@ The correct sequence is:
 
 The platform is the last decision, not the first.
 
+For a contrasting agent-first option, [Grok Bot versus workflow automation](/blog/grok-bot-explained-ai-agent-team-cost) explains where a flexible computer-using Bot is less predictable than a fixed workflow.
+
 ## Working with Kubera AI
 
 We build automation systems for small and mid-size businesses across Europe on all three platforms, selected per client based on the Platform Selection Model above, not on a default preference.

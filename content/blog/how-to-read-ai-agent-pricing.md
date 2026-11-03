@@ -150,6 +150,8 @@ These are design options to test, not measured savings. They fit best with a pro
 
 Security controls belong in the operating cost and ownership model too; [the October 2026 vulnerability wave](/blog/vulnerability-wave-october-2026-ai-automation-security) explains the patching and secret-rotation work behind a reliable AI stack.
 
+The same discipline applies to bundled agent subscriptions: [Grok Bot's team-of-ten example](/blog/grok-bot-explained-ai-agent-team-cost) separates seats, shared pools and metered overage instead of treating the headline price as the whole cost.
+
 ## FAQ
 
 **Which is cheaper, seat-based, usage-based or outcome-based pricing?** None of them is cheaper in every case. The scenario above shows the cheapest quote changing between low and high use. The answer depends on your volume, your units per case and how well the agent performs, so compare the three-case table, not the headline rate.

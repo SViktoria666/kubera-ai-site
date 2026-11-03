@@ -301,6 +301,8 @@ If you are evaluating whether a specific process in your business is worth autom
 
 Start there.
 
+For a worked pricing example involving shared usage pools and metered runs, see [Grok Bot team cost in euros](/blog/grok-bot-explained-ai-agent-team-cost).
+
 ## Working With Kubera AI
 
 For a worked example using feedback volume, triage time and post-fix measurement, see [AI customer feedback analysis: reviews into action](/blog/ai-customer-feedback-analysis-reviews-complaints).

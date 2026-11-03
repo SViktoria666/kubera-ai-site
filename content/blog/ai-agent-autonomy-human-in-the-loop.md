@@ -75,6 +75,8 @@ Illustrative scenario, not a specific Kubera client: a mid-size business deploys
 
 Security incidents also show why approval boundaries need an owner: [the October 2026 vulnerability wave](/blog/vulnerability-wave-october-2026-ai-automation-security) covers the keys and release permissions that should not be left to an agent.
 
+For a concrete product example, [Grok Bot's shared computer and approval model](/blog/grok-bot-explained-ai-agent-team-cost) shows why separate agents are not automatically separate security boundaries.
+
 ## FAQ
 
 Does the 1f916 case prove full agent autonomy is safe for business use? No. It demonstrates that this specific, low-stakes system could run with high autonomy and remain cheap to operate. It doesn't demonstrate that every action a business agent might take belongs at that same autonomy level, and reported coverage of the case describes at least one action, an autonomous financial payment, that would fit a stricter oversight category under the framework in this article, though that detail comes from reporting rather than a verified transaction log.
