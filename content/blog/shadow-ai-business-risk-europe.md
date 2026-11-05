@@ -87,6 +87,6 @@ Unapproved tools can also become an incident path through leaked keys and packag
 
 **How does this connect to onboarding a team to a new AI tool?** Directly. A sanctioned tool only reduces shadow AI risk if people actually adopt it in practice, which is the same adoption challenge we cover in [How to Onboard Your Team to AI Automation](/blog/onboard-team-ai-automation).
 
-If you're trying to work out how much shadow AI exposure your business already has, and what a properly governed rollout would actually look like, that's exactly the kind of assessment worth doing now rather than after an incident forces the question.
+If you're trying to work out how much shadow AI exposure your business already has, and what a properly governed rollout would actually look like, that's exactly the kind of assessment worth doing now rather than after an incident forces the question. For teams that already coordinate agents, [the AI agent order-channel test](/blog/ai-agents-taking-orders-from-other-agents) is a practical next step.
 
 [Discuss your automation project →](/contacts)

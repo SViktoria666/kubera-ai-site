@@ -30,7 +30,7 @@ Three ideas set it apart from a chatbot:
 - It persists. The cloud computer stays on, so a job continues when your laptop is closed.
 - It has a role. A Bot has a name, a job and its own context.
 
-SpaceXSI's [Grok Bot documentation](https://docs.x.ai/grok-bot/overview) confirms the architecture. Every Bot on your account uses one persistent cloud computer and shares its files, browser sessions and logins, while each Bot gets its own screen. This matters for both cost and security, and it comes back below.
+SpaceXSI's [Grok Bot documentation](https://docs.x.ai/grok-bot/overview) confirms the architecture. Every Bot on your account uses one persistent cloud computer and shares its files, browser sessions and logins, while each Bot gets its own screen. This matters for both cost and security, and it comes back below. For the specific question of when one agent's message should be treated as an instruction, see [When One AI Agent Gives Orders to Another](/blog/ai-agents-taking-orders-from-other-agents).
 
 ## What a Bot can do
 

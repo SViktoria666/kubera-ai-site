@@ -108,6 +108,6 @@ Build and test the single-agent version of the task first. If a specific, identi
 
 Several unconnected automations running independently isn't a multi-agent system. The defining feature is coordination, agents that hand off context and decisions to each other as part of a single, managed workflow, not just multiple automated tasks that happen to run in the same business.
 
-If you're trying to work out whether your use case genuinely needs multiple coordinated agents or would be better served by a single, well-scoped one, that's exactly the kind of assessment worth doing before committing to the more complex build.
+If you're trying to work out whether your use case genuinely needs multiple coordinated agents or would be better served by a single, well-scoped one, that's exactly the kind of assessment worth doing before committing to the more complex build. Once agents coordinate, [the Order Channel Map and five infrastructure controls](/blog/ai-agents-taking-orders-from-other-agents) are useful safeguards against one agent treating another's message as an unchecked command.
 
 [Discuss your automation project →](/contacts)

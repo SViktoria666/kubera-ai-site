@@ -75,7 +75,7 @@ Illustrative scenario, not a specific Kubera client: a mid-size business deploys
 
 Security incidents also show why approval boundaries need an owner: [the October 2026 vulnerability wave](/blog/vulnerability-wave-october-2026-ai-automation-security) covers the keys and release permissions that should not be left to an agent.
 
-For a concrete product example, [Grok Bot's shared computer and approval model](/blog/grok-bot-explained-ai-agent-team-cost) shows why separate agents are not automatically separate security boundaries.
+For a concrete product example, [Grok Bot's shared computer and approval model](/blog/grok-bot-explained-ai-agent-team-cost) shows why separate agents are not automatically separate security boundaries. The related [multi-agent order-channel guide](/blog/ai-agents-taking-orders-from-other-agents) turns that boundary into a testable design exercise.
 
 ## FAQ
 

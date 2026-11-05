@@ -296,7 +296,7 @@ The businesses that are gaining competitive advantage from AI automation in Euro
 
 That is the correct approach in 2026, and it is the approach every AI automation engagement at Kubera AI starts with. The same classification and retention questions apply when meeting recordings or transcripts are turned into CRM tasks, as described in [AI Meeting Automation: From Client Conversations to CRM Tasks and Follow-Ups](/blog/ai-meeting-automation-crm-follow-ups).
 
-The same questions arise when a product gives several agents one shared computer; [Grok Bot's data and access model](/blog/grok-bot-explained-ai-agent-team-cost) is a useful example to review before a team connects customer data.
+The same questions arise when a product gives several agents one shared computer; [Grok Bot's data and access model](/blog/grok-bot-explained-ai-agent-team-cost) is a useful example to review before a team connects customer data. For message boundaries and approvals between agents, see [the Kubera Order Channel Map](/blog/ai-agents-taking-orders-from-other-agents).
 
 ## Working with Kubera AI
 
