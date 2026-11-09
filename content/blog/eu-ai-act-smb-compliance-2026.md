@@ -14,6 +14,8 @@ category: "AI Automation"
 
 # EU AI Act 2026: What SMBs Actually Need to Do Now
 
+For the updated post-Omnibus dates and the Article 50 label decision path, see [EU AI Act after the Omnibus](/blog/eu-ai-act-after-omnibus-2-december-2026).
+
 A version of this conversation has been happening in a lot of European businesses this year. Someone reads that the EU AI Act's high-risk rules got delayed by more than a year, and the takeaway becomes: we can put this off until 2027, no need to think about it now.
 
 That conclusion feels reasonable. It is also incomplete, and the gap between "delayed" and "fully off the table" is exactly where a business can end up out of compliance without realizing it. The rules that got pushed back are the heaviest ones, built for hiring tools, credit scoring, and biometric identification. But two other obligations, ones far more likely to touch a typical service business running a chatbot or using AI tools day to day, were never delayed at all. One of them has technically applied since February 2025.
