@@ -176,7 +176,7 @@ The official documentation describes approvals and a shared cloud computer. Othe
 - Bank and card connections through Plaid as read-only.
 - Training opt-out following Cursor privacy settings.
 
-Treat any Bot with access to money, customer data or publishing as a system that needs least privilege, not as a trusted employee. For the wider principle, see [AI agent autonomy and human-in-the-loop](/blog/ai-agent-autonomy-human-in-the-loop).
+Treat any Bot with access to money, customer data or publishing as a system that needs least privilege, not as a trusted employee. For the wider principle, see [AI agent autonomy and human-in-the-loop](/blog/ai-agent-autonomy-human-in-the-loop). When those agents visit a customer-facing business, [identity, permissions and agent purchase liability](/blog/customers-ai-agents-identity-permissions-liability) become the next boundary to design.
 
 ## Data protection for European businesses
 

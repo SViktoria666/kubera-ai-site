@@ -141,7 +141,7 @@ The work for this company is two labels, one disclosure line, one documented rev
 - Before 2 December. Test as a customer would: see the disclosure at first message, see the label on an image without any tool.
 - After 2 December. Keep the inventory current. Review it when you change a model, since a new model can change what the output looks like and how it is marked.
 
-For wider guidance on safe handling of data in these tools, see [AI data safety for European businesses](/blog/ai-data-safety-european-businesses). If you are adding agents to your workflows, [what agentic AI is](/blog/what-is-agentic-ai) explains the building blocks.
+For wider guidance on safe handling of data in these tools, see [AI data safety for European businesses](/blog/ai-data-safety-european-businesses). If you are adding agents to your workflows, [what agentic AI is](/blog/what-is-agentic-ai) explains the building blocks. If those agents will act for customers, [the Agent Door Policy](/blog/customers-ai-agents-identity-permissions-liability) maps identity to permissions and confirmation.
 
 For a broader implementation readiness check, see [AI automation readiness](/blog/ai-automation-readiness), and use [how to measure the ROI of AI automation](/blog/how-to-measure-roi-ai-automation) when you turn the review into a documented business case.
 

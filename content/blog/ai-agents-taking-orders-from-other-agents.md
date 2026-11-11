@@ -115,7 +115,7 @@ Keep the numbers as your own baseline. Small runs show a pattern, not a rate, so
 
 ## Multi-agent products and shared computers
 
-Some products make the channel question concrete. [Grok Bot's documentation](/blog/grok-bot-explained-ai-agent-team-cost) says Bots can message each other and share context in threads or group chats, and that every Bot on an account shares one cloud computer with its files, browser sessions and logins. The same documentation says not to use separate Bots as a security boundary. In that design, a message from another Bot arrives next to your logins, so the Order Channel Map matters more, not less. For the broader idea of how agent teams are structured, see [what a multi-agent AI system is](/blog/what-is-a-multi-agent-ai-system).
+Some products make the channel question concrete. [Grok Bot's documentation](/blog/grok-bot-explained-ai-agent-team-cost) says Bots can message each other and share context in threads or group chats, and that every Bot on an account shares one cloud computer with its files, browser sessions and logins. The same documentation says not to use separate Bots as a security boundary. In that design, a message from another Bot arrives next to your logins, so the Order Channel Map matters more, not less. For the broader idea of how agent teams are structured, see [what a multi-agent AI system is](/blog/what-is-a-multi-agent-ai-system). The customer-facing counterpart is [the Agent Door Policy for visitors' identity and permissions](/blog/customers-ai-agents-identity-permissions-liability).
 
 ## Data protection and security duties
 

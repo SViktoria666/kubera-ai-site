@@ -24,7 +24,7 @@ This shift from answering to acting is what the term "agentic" describes. Agenti
 
 This article explains what agentic AI is, how it relates to the AI tools most businesses already use, what multi-agent systems add on top, and how to think about when each architecture makes sense for a service business.
 
-If those systems face customers or publish AI-assisted material, [the EU AI Act after the Digital Omnibus](/blog/eu-ai-act-after-omnibus-2-december-2026) explains the transparency questions to check.
+If those systems face customers or publish AI-assisted material, [the EU AI Act after the Digital Omnibus](/blog/eu-ai-act-after-omnibus-2-december-2026) explains the transparency questions to check. For customer-owned agents arriving at a shop or portal, [identity and permission lanes](/blog/customers-ai-agents-identity-permissions-liability) show how to keep read, prepare and commit actions distinct.
 
 ## The Four Layers: LLM, Workflow, AI Agent, Multi-Agent System
 
