@@ -123,6 +123,8 @@ An undeclared agent that behaves like a customer is a customer's tool. The aim i
 
 For your own staff's AI tools, see [shadow AI risk](/blog/shadow-ai-business-risk-europe), and for where approval steps belong, [AI agent autonomy and human-in-the-loop](/blog/ai-agent-autonomy-human-in-the-loop). The [AI agent security guide](/blog/ai-agents-taking-orders-from-other-agents) applies the same command, data and signal distinction to agents working together. For data-handling controls, see [AI data safety for European businesses](/blog/ai-data-safety-european-businesses).
 
+Before you choose an agent framework for this boundary, check its licence and hosting terms with the [AI agent and automation licence check](/blog/is-it-really-open-source-ai-agent-licence-check).
+
 ## The disclosure side
 
 Agents are expected to tell people when they speak for a customer. Under [EU AI Act Article 50](https://eur-lex.europa.eu/eli/reg/2024/1689/2026-07-27/eng), the provider must design direct-interaction systems such as AI agents to inform people they are interacting with AI, subject to the statutory obviousness exception. The [Commission's Article 50 guidance](https://digital-strategy.ec.europa.eu/en/policies/guidelines-ai-transparency-obligations) explains the scope and says the obligations apply from 2 August 2026. The agent's disclosure of who it acts for is a practical guidance point, not a new allocation of payment liability. We explained the wider dates in [EU AI Act after the Omnibus](/blog/eu-ai-act-after-omnibus-2-december-2026), and the broader building blocks in [what agentic AI is](/blog/what-is-agentic-ai).

@@ -79,6 +79,8 @@ Security incidents also show why approval boundaries need an owner: [the October
 
 For a concrete product example, [Grok Bot's shared computer and approval model](/blog/grok-bot-explained-ai-agent-team-cost) shows why separate agents are not automatically separate security boundaries. The related [multi-agent order-channel guide](/blog/ai-agents-taking-orders-from-other-agents) turns that boundary into a testable design exercise. For agents arriving from customers, [the Agent Door Policy](/blog/customers-ai-agents-identity-permissions-liability) applies the same approval logic at the business boundary.
 
+The software behind that policy also carries permissions of its own. Check the repository licence and commercial restrictions before standardising on an agent stack with this [licence check for AI agent and automation tools](/blog/is-it-really-open-source-ai-agent-licence-check).
+
 ## FAQ
 
 Does the 1f916 case prove full agent autonomy is safe for business use? No. It demonstrates that this specific, low-stakes system could run with high autonomy and remain cheap to operate. It doesn't demonstrate that every action a business agent might take belongs at that same autonomy level, and reported coverage of the case describes at least one action, an autonomous financial payment, that would fit a stricter oversight category under the framework in this article, though that detail comes from reporting rather than a verified transaction log.
