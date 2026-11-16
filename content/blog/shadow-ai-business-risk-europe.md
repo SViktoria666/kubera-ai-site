@@ -42,6 +42,8 @@ For a European business, there's a specific legal reason this matters beyond gen
 
 The practical fix isn't complicated, and it isn't a ban. It's giving your team a sanctioned set of AI tools, with a proper data processing agreement under GDPR Article 28 in place with the provider, scoped access appropriate to each role, and a clear, short policy stating what can and can't be entered into which tool. This is close to what we walk through when onboarding a team to a new AI tool, covered in more depth in [How to Onboard Your Team to AI Automation](/blog/onboard-team-ai-automation): people who already want to use AI to do their jobs faster generally adopt a good, sanctioned option readily, once it's actually available and not slower or more restrictive than what they were using on their own.
 
+The sanctioned-tools list should also record where a provider is available; use this [supported-regions eligibility check](/blog/anthropic-supported-regions-policy-europe-check) when staff travel or ownership changes.
+
 ## For context: how this looks in the US market
 
 Since much of the available data on shadow AI prevalence comes from US-focused surveys, it's worth being explicit about that rather than assuming the specific figures transfer directly to Europe. US enterprises report some of the highest unsanctioned-tool usage rates currently measured, and a wave of governance tooling launched in the US market in August 2026 alone, including Okta Agent SSO, IBM AgentOps, and Broadcom AgentMinder, aimed specifically at giving IT teams visibility into which AI tools and agents are actually running inside their organizations.

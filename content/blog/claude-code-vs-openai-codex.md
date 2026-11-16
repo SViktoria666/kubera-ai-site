@@ -149,6 +149,8 @@ If you are trying to automate a larger business process rather than a single cod
 
 For related context, see [What Is an AI Agent?](/blog/what-is-an-ai-agent), [AI Agent vs Chatbot](/blog/ai-agent-vs-chatbot), [How AI Automation Saves Time](/blog/how-ai-automation-saves-time), and [Claude vs ChatGPT vs Gemini vs Qwen vs DeepSeek](/blog/claude-vs-chatgpt-vs-gemini-vs-qwen-vs-deepseek).
 
+Before standardising on either provider, check the [supported-regions policy for European teams](/blog/anthropic-supported-regions-policy-europe-check) alongside the technical comparison.
+
 ## The Practical Bottom Line
 
 Claude Code usually saves more time when the work is messy, multi-file, and evolves over weeks.

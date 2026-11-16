@@ -36,6 +36,8 @@ One older event shows what to avoid. In its summary of the 7 December 2021 event
 
 Two conclusions follow. You cannot predict the day, but you can plan for the outage. And the end of the provider's incident is not the end of yours, because backlogs and half-finished work remain.
 
+Continuity planning should include provider access rules as well as uptime; the [Anthropic supported-regions check](/blog/anthropic-supported-regions-policy-europe-check) gives one example of a change that can affect access without an outage.
+
 ## Where an AI automation can fail
 
 | Layer | What breaks | What the customer or team sees | First control |

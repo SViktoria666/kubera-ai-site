@@ -140,6 +140,8 @@ Run this before you adopt a tool for anything beyond a quick test.
 
 For the data your agents will touch, see [AI data safety for European businesses](/blog/ai-data-safety-european-businesses). If you are unsure what an agent is, [what agentic AI is](/blog/what-is-agentic-ai) covers the basics. For permission boundaries, [AI agent autonomy and human-in-the-loop](/blog/ai-agent-autonomy-human-in-the-loop) is the companion guide.
 
+Regional terms are another part of the vendor check: [Anthropic's supported-regions policy](/blog/anthropic-supported-regions-policy-europe-check) shows why a licence review and an access review belong together.
+
 When you turn a licence decision into a business case, [how to measure the ROI of AI automation](/blog/how-to-measure-roi-ai-automation) gives you a way to record the implementation and supervision cost as well.
 
 ## Illustrative scenario
