@@ -103,6 +103,6 @@ Does adding human oversight slow an automation down too much to be worth it? Not
 
 How is this different from the general question of whether to use a multi-agent system? They're related but distinct. Multi-agent design, covered in [What Is a Multi-Agent AI System?](/blog/what-is-a-multi-agent-ai-system), is about how many agents coordinate on a task. Autonomy design is about how much of any given agent's action, single or multi-agent, happens without a person checking first. A multi-agent system still needs the same action-by-action autonomy analysis this article covers.
 
-If you're trying to work out which specific actions in an automated workflow genuinely need a person to sign off, and which are safe to let run on their own, that's exactly the kind of design decision worth making deliberately before a system goes live.
+If you're trying to work out which specific actions in an automated workflow genuinely need a person to sign off, and which are safe to let run on their own, that's exactly the kind of design decision worth making deliberately before a system goes live. The same review discipline applies when a provider changes workspace defaults; see [Claude Whiteboards, Sheets and Data for admins](/blog/claude-whiteboards-sheets-data-admin-defaults).
 
 [Discuss your automation project →](/contacts)

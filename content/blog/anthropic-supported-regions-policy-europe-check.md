@@ -203,4 +203,6 @@ There is no reason to stop on the basis of this policy if your people, entities 
 - [Anthropic terms for serverless third-party models on Amazon Bedrock](https://aws.amazon.com/legal/bedrock/third-party-models/)
 - [Service Specific Terms, Google Cloud](https://cloud.google.com/terms/service-terms)
 
+If your Claude rollout expands into shared artifacts, [Claude Whiteboards, Sheets and Data](/blog/claude-whiteboards-sheets-data-admin-defaults) explains the settings admins should record.
+
 [Discuss your automation project →](/contacts)

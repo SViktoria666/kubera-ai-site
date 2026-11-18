@@ -140,7 +140,7 @@ A loss of availability can be a personal data breach. Article 4(12) defines a pe
 
 NIS2 may apply, and size is not the only test. The NIS2 Directive applies to entities of the types listed in its Annexes I and II that are at least medium-sized. Article 2 also brings some entities in regardless of size, for example certain providers of electronic communications, trust services and DNS services, and entities whose disruption could have a significant effect on public safety or create systemic risk. It excludes some activities, and classifies in-scope entities as essential or important, with different supervision. Implementation differs by country, so check the national law. Article 21(2) lists business continuity, such as backup management and disaster recovery, and supply chain security among required measures. The reporting deadlines in Article 23 (early warning within 24 hours, incident notification within 72 hours, final report within one month) apply to significant incidents, those causing or capable of causing severe operational disruption or financial loss, or considerable damage to others. They do not apply to every outage. If you are in scope, your AI providers and automation partners are part of your supply chain.
 
-Related data protection points are in [AI data safety for European businesses](/blog/ai-data-safety-european-businesses).
+Related data protection points are in [AI data safety for European businesses](/blog/ai-data-safety-european-businesses). Provider feature changes are another continuity trigger; [the Claude admin-defaults review](/blog/claude-whiteboards-sheets-data-admin-defaults) shows a small register to keep current.
 
 ## Where this goes wrong in practice
 
