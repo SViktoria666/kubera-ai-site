@@ -191,4 +191,6 @@ Kubera AI helps European service businesses design and execute AI automation pro
 
 If you want to build a roadmap for your business - one grounded in your actual processes, your current data environment, and a realistic budget model - we can help you think through it before any development begins.
 
+When a new model is proposed, [Qwen4-Max: a European buyer's evidence check](/blog/qwen4-max-european-buyer-evidence-check) is a concrete example of testing claims before switching.
+
 [Discuss your automation project ->](/contacts)

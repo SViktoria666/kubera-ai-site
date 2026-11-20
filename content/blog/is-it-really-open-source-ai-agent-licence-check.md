@@ -225,4 +225,6 @@ Only partly. Article 2(12) provides a limited open-source exclusion, but Article
 - [The EU AI Act: application to open-source projects, Orrick](https://www.orrick.com/en/Insights/2024/08/The-EU-AI-Act-Application-to-Open-Source-Projects)
 - [Article 53, EU AI Act navigator, Mishcon de Reya](https://www.mishcon.com/news/article-53-of-the-eu-ai-act)
 
+If you are comparing open weights with hosted model access, [Qwen4-Max: a European buyer's evidence check](/blog/qwen4-max-european-buyer-evidence-check) shows the evidence and exit questions to record.
+
 [Discuss your automation project →](/contacts)

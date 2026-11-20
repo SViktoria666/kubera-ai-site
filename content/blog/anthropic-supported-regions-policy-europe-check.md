@@ -205,4 +205,6 @@ There is no reason to stop on the basis of this policy if your people, entities 
 
 If your Claude rollout expands into shared artifacts, [Claude Whiteboards, Sheets and Data](/blog/claude-whiteboards-sheets-data-admin-defaults) explains the settings admins should record.
 
+For a separate model-switch decision, [Qwen4-Max: a European buyer's evidence check](/blog/qwen4-max-european-buyer-evidence-check) separates regional access from inference scope.
+
 [Discuss your automation project →](/contacts)

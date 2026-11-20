@@ -310,4 +310,6 @@ We are not lawyers, and this article is not legal advice. For high-sensitivity d
 
 If you want to understand what the right architecture looks like for your specific processes and data — and what compliance steps are actually required before you can deploy — the next step is a structured conversation.
 
+For a model-specific storage and retention check, see [Qwen4-Max: a European buyer's evidence check](/blog/qwen4-max-european-buyer-evidence-check).
+
 Book a strategy call →
