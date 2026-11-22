@@ -133,6 +133,8 @@ A 40-person online retailer in Spain, with all details invented for illustration
 
 The work for this company is two labels, one disclosure line, one documented review process and one vendor letter. That is a week of effort for a small team, and it is better started now than on 1 December.
 
+For a concrete example of how a future capability can raise an Article 50 question without being a product launch, see [Microsoft's live speech and lip patent application](/blog/microsoft-live-speech-lip-patent-application-eu-check).
+
 ## A three-week plan to 2 December
 
 - By 15 November. List every AI use and run the label path on each. Mark which ones face customers or the public.

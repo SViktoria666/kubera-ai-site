@@ -14,7 +14,7 @@ category: "AI Automation"
 
 # Is Your Business Data Safe with AI? What Every European Company Should Know Before Automating
 
-The EU AI Act's current transparency dates and the distinction between provider and deployer add another check to this data review; see [what applies after the Digital Omnibus](/blog/eu-ai-act-after-omnibus-2-december-2026).
+The EU AI Act's current transparency dates and the distinction between provider and deployer add another check to this data review; see [what applies after the Digital Omnibus](/blog/eu-ai-act-after-omnibus-2-december-2026). For a bounded example involving synthetic voice and video, see [Microsoft's live speech and lip patent application](/blog/microsoft-live-speech-lip-patent-application-eu-check).
 
 For a concrete finance workflow applying these data and human-approval boundaries, see [AI for Invoices and Payments: What Can Businesses Safely Automate in 2026?](/blog/ai-invoice-payment-automation-safe-2026). If those controls are repeated in an agent workflow, [building a Codex or Claude Code skill](/blog/how-to-build-skills-codex-claude-code) explains how to keep the procedure reviewable.
 
