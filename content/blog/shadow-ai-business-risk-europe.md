@@ -93,4 +93,6 @@ Unapproved tools can also become an incident path through leaked keys and packag
 
 If you're trying to work out how much shadow AI exposure your business already has, and what a properly governed rollout would actually look like, that's exactly the kind of assessment worth doing now rather than after an incident forces the question. For teams that already coordinate agents, [the AI agent order-channel test](/blog/ai-agents-taking-orders-from-other-agents) is a practical next step. When a sanctioned Claude workspace gains new artifact features, [this admin defaults review](/blog/claude-whiteboards-sheets-data-admin-defaults) shows what to check.
 
+When staff want to reach an agent from personal phones, [the Hermes Mobile security check](/blog/hermes-mobile-app-business-security-check) shows why approval and exit controls belong in the rollout.
+
 [Discuss your automation project →](/contacts)

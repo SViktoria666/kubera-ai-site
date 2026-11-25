@@ -196,4 +196,6 @@ With one page: list each agent, each channel it reads, and the role you assign t
 - [Regulation (EU) 2016/679, GDPR](https://eur-lex.europa.eu/eli/reg/2016/679/oj), Articles 28 and 32
 - [Directive (EU) 2022/2555, NIS2](https://eur-lex.europa.eu/eli/dir/2022/2555/oj), Article 21
 
+The same identity and permission boundary matters when an agent is controlled from a phone; see [the Hermes Mobile phone-to-host security check](/blog/hermes-mobile-app-business-security-check).
+
 [Discuss your automation project →](/contacts)

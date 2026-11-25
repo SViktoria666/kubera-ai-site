@@ -312,4 +312,6 @@ If you want to understand what the right architecture looks like for your specif
 
 For a model-specific storage and retention check, see [Qwen4-Max: a European buyer's evidence check](/blog/qwen4-max-european-buyer-evidence-check).
 
+For a concrete example of the host, access path and exit questions around a mobile agent client, see [the Hermes Mobile security check](/blog/hermes-mobile-app-business-security-check).
+
 Book a strategy call →

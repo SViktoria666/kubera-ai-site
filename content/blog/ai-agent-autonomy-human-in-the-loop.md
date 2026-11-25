@@ -105,4 +105,6 @@ How is this different from the general question of whether to use a multi-agent 
 
 If you're trying to work out which specific actions in an automated workflow genuinely need a person to sign off, and which are safe to let run on their own, that's exactly the kind of design decision worth making deliberately before a system goes live. The same review discipline applies when a provider changes workspace defaults; see [Claude Whiteboards, Sheets and Data for admins](/blog/claude-whiteboards-sheets-data-admin-defaults).
 
+For teams considering mobile control of a hosted or self-managed agent, see [Hermes Mobile: the phone-to-host security check](/blog/hermes-mobile-app-business-security-check).
+
 [Discuss your automation project →](/contacts)
