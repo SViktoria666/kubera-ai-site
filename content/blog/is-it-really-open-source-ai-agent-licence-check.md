@@ -227,4 +227,6 @@ Only partly. Article 2(12) provides a limited open-source exclusion, but Article
 
 If you are comparing open weights with hosted model access, [Qwen4-Max: a European buyer's evidence check](/blog/qwen4-max-european-buyer-evidence-check) shows the evidence and exit questions to record.
 
+For a practical fallback inventory that separates model licences from hardware and operational readiness, see [the open-weight AI fallback guide](/blog/open-weights-fallback-stack-european-business-check).
+
 [Discuss your automation project →](/contacts)

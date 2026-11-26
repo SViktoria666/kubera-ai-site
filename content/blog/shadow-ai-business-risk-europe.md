@@ -95,4 +95,6 @@ If you're trying to work out how much shadow AI exposure your business already h
 
 When staff want to reach an agent from personal phones, [the Hermes Mobile security check](/blog/hermes-mobile-app-business-security-check) shows why approval and exit controls belong in the rollout.
 
+An unowned downloaded model can create the same governance gap, so [the open-weight fallback guide](/blog/open-weights-fallback-stack-european-business-check) shows the licence and ownership checks before a local stack is sanctioned.
+
 [Discuss your automation project →](/contacts)

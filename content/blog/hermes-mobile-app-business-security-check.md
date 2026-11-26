@@ -142,6 +142,8 @@ The terms address processing but omit points a European buyer normally checks. W
 
 Hermes Agent itself uses the MIT licence, according to the official site and repository. Our [licence check for AI agents](/blog/is-it-really-open-source-ai-agent-licence-check) explains what that does and does not cover, and the native phone app's licence has not been stated. Staff who install agent apps on their own phones raise the [shadow AI question](/blog/shadow-ai-business-risk-europe), which we cover in shadow AI in European businesses.
 
+If the model provider or hosted service becomes a continuity risk, [the open-weight fallback guide](/blog/open-weights-fallback-stack-european-business-check) explains why a downloaded model still needs a licence, hardware test and owner.
+
 ## From the check to a project
 
 The four questions are most useful when they become written deliverables. When we scope an agent project for a business, we use the Phone-to-Host Control Check as a planning heuristic and turn it into four documents:

@@ -314,4 +314,6 @@ For a model-specific storage and retention check, see [Qwen4-Max: a European buy
 
 For a concrete example of the host, access path and exit questions around a mobile agent client, see [the Hermes Mobile security check](/blog/hermes-mobile-app-business-security-check).
 
+When a business considers keeping a local model as a fallback, [this open-weight licence, hardware and GDPR check](/blog/open-weights-fallback-stack-european-business-check) separates infrastructure control from licence and data obligations.
+
 Book a strategy call →
